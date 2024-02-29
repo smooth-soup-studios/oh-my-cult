@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="myroot" style="flex-grow: 0; background-color: rgba(0, 212, 255, 0); left: 0; top: 0; right: 0; bottom: 0; width: 100%; height: 100%;">
+        <ui:VisualElement style="flex-grow: 0; height: 95%; background-color: rgb(255, 0, 0); min-width: auto; width: 95%; margin-top: auto; margin-right: auto; margin-bottom: 2.5%; margin-left: auto; align-self: auto; justify-content: flex-start;" />
+    </ui:VisualElement>
+</ui:UXML>

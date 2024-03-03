@@ -18,6 +18,5 @@ public class MovementController : MonoBehaviour {
 		var input = InputManager.Instance.Move;
 		_rigidbody.velocity = input * speed;
 	}
-
 }
 }

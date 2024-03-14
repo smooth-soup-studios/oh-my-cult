@@ -14,11 +14,10 @@ public class UnityMenu {
     private static void OpenFileManager(string folderPath) {
         folderPath = Path.GetFullPath(folderPath);
         if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows)) {
-
             // Windows
             Process.Start(new ProcessStartInfo {
                 FileName = $"explorer",
-                Arguments = $"{folderPath.Replace("/", "\\")}", // WHY THE FUCK DOES EVERYTHING IN WINDOWS RECOGNIZE BOTH SLASHES AS PATHS EXEPT THE ONE APPLICATION THAT SHOULD!@
+                Arguments = $"\"{folderPath.Replace("/", "\\")}\"", // WHY THE FUCK DOES EVERYTHING IN WINDOWS RECOGNIZE BOTH SLASHES AS PATHS EXEPT THE ONE APPLICATION THAT SHOULD!@
                 UseShellExecute = true
             });
         }
@@ -26,14 +25,14 @@ public class UnityMenu {
             // macOS
             Process.Start(new ProcessStartInfo {
                 FileName = "open",
-                Arguments = folderPath
+                Arguments = $"\"{folderPath}\""
             });
         }
         else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux)) {
             // Linux
             Process.Start(new ProcessStartInfo {
                 FileName = "xdg-open",
-                Arguments = folderPath
+                Arguments = $"\"{folderPath}\""
             });
         }
     }

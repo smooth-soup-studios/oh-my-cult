@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerIdleState : BaseState
 {
-	public PlayerIdleState (string name, Statemachine sm): base (name, sm) {	}
+	public PlayerIdleState (string name, StateMachine sm): base (name, sm) {	}
 	public override void EnterState() {
 
 	}

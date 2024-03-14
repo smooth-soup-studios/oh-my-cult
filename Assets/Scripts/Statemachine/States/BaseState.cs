@@ -6,9 +6,9 @@ using UnityEngine;
 public abstract class BaseState
 {
 	public string Name;
-	protected Statemachine Sm;
+	protected StateMachine Sm;
 
-	public BaseState(string name, Statemachine sm){
+	public BaseState(string name, StateMachine sm){
 		Name = name;
 		Sm = sm;
 	}

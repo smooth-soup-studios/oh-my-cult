@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Statemachine : MonoBehaviour {
+public class StateMachine : MonoBehaviour {
 	private BaseState _currentState;
 	private List<BaseState> _states;
 

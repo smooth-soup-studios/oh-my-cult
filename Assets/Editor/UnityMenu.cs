@@ -5,7 +5,9 @@ using UnityEngine;
 using System.IO;
 using System;
 
-public class UnityMenu {
+public static class UnityMenu {
+	private static string _logname = "EditorTools";
+
     [MenuItem("Tools/Open Savedata folder")]
     private static void OpenSaveData() {
         OpenFileManager(Application.persistentDataPath);
@@ -49,17 +51,17 @@ public class UnityMenu {
 
                 foreach (string filePath in wdfFiles) {
                     File.Delete(filePath);
-                    Logger.Log("EditorTools", $"Deleted: {filePath}");
+                    Logger.Log(_logname, $"Deleted: {filePath}");
                 }
 
-                Logger.Log("EditorTools", "Deletion complete.");
+                Logger.Log(_logname, "Deletion complete.");
             }
             else {
-                Logger.LogError("EditorTools", $"Directory not found: {directoryPath}");
+                Logger.LogError(_logname, $"Directory not found: {directoryPath}");
             }
         }
         catch (Exception ex) {
-            Logger.LogError("EditorTools", $"An error occurred: {ex.Message}");
+            Logger.LogError(_logname, $"An error occurred: {ex.Message}");
         }
     }
 }

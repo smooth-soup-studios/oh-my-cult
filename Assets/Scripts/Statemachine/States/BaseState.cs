@@ -1,16 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEngine;
-
-public abstract class BaseState
-{
+public abstract class BaseState {
 	public string Name;
-	protected StateMachine Sm;
+	protected StateMachine StateMachine;
 
-	public BaseState(string name, StateMachine sm){
+	protected BaseState(string name, StateMachine stateMachine) {
 		Name = name;
-		Sm = sm;
+		StateMachine = stateMachine;
 	}
 
 	public abstract void EnterState();

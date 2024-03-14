@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public abstract class State
+public abstract class BaseState
 {
 	public string Name;
 	protected Statemachine Sm;
 
-	public State(string name, Statemachine sm){
+	public BaseState(string name, Statemachine sm){
 		Name = name;
 		Sm = sm;
 	}

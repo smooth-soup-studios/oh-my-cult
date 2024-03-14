@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Idle : State
+public class PlayerIdleState : BaseState
 {
-	public Idle (string name, Statemachine sm): base (name, sm) {	}
+	public PlayerIdleState (string name, Statemachine sm): base (name, sm) {	}
 	public override void EnterState() {
 
 	}

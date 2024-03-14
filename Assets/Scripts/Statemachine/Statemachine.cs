@@ -4,13 +4,13 @@ using System.Linq;
 using UnityEngine;
 
 public class Statemachine : MonoBehaviour {
-	private State _currentState;
-	private List<State> _states;
+	private BaseState _currentState;
+	private List<BaseState> _states;
 
 
 	void Start() {
-		_states = new List<State>{
-			new Idle("Idle", this)
+		_states = new List<BaseState>{
+			new PlayerIdleState("Idle", this)
 		};
 		_currentState = _states.FirstOrDefault(x => x.Name == "Idle");
 	}

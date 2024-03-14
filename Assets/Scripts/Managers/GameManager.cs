@@ -1,9 +1,6 @@
 ﻿using System;
-using System.IO;
-using Data;
-using MessagePack;
-using MessagePack.Resolvers;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Managers {
 public class GameManager : MonoBehaviour {
@@ -17,37 +14,27 @@ public class GameManager : MonoBehaviour {
 
 		Instance = this;
 		DontDestroyOnLoad(gameObject);
-		InitMessagePackResolver();
-		LoadGame();
 	}
 
-	void InitMessagePackResolver() {
-		MessagePackSerializer.DefaultOptions = MessagePackSerializer.DefaultOptions.WithResolver(GeneratedResolver.Instance);
-	}
-
-	//TODO: Should be called with an event
 	void LoadScene(string scene) {
-		throw new NotImplementedException();
+		if (DoesSceneExist(scene)) SceneManager.LoadScene(scene);
 	}
 
-	void SaveGame(GameData data) {
-		var bytes = MessagePackSerializer.Serialize(data);
-		var path = Application.persistentDataPath + "/game-data.bin";
-		File.WriteAllBytes(path, bytes);
-		Debug.Log($"Data saved to: {path}");
-	}
-
-	GameData LoadGame() {
-		var path = Application.persistentDataPath + "/game-data.bin";
-		if (!File.Exists(path)) {
-			Debug.LogError("Save file not found.");
-			return null;
+	static bool DoesSceneExist(string name){
+		if (string.IsNullOrEmpty(name)) {
+			return false;
 		}
 
-		var bytes = File.ReadAllBytes(path);
-		var loadedGameData = MessagePackSerializer.Deserialize<GameData>(bytes);
-		Debug.Log($"Data loaded from: {path}");
-		return loadedGameData;
+		for (var i = 0; i < SceneManager.sceneCountInBuildSettings; i++) {
+			var scenePath = SceneUtility.GetScenePathByBuildIndex(i);
+			var lastSlash = scenePath.LastIndexOf("/", StringComparison.Ordinal);
+			var sceneName = scenePath.Substring(lastSlash + 1, scenePath.LastIndexOf(".", StringComparison.Ordinal) - lastSlash - 1);
+
+			if (string.Compare(name, sceneName, StringComparison.OrdinalIgnoreCase) == 0) {
+				return true;
+			}
+		}
+		return false;
 	}
 }
 }

@@ -25,16 +25,7 @@ public class GameManager : MonoBehaviour {
 			return false;
 		}
 
-		for (var i = 0; i < SceneManager.sceneCountInBuildSettings; i++) {
-			var scenePath = SceneUtility.GetScenePathByBuildIndex(i);
-			var lastSlash = scenePath.LastIndexOf("/", StringComparison.Ordinal);
-			var sceneName = scenePath.Substring(lastSlash + 1, scenePath.LastIndexOf(".", StringComparison.Ordinal) - lastSlash - 1);
-
-			if (string.Compare(name, sceneName, StringComparison.OrdinalIgnoreCase) == 0) {
-				return true;
-			}
-		}
-		return false;
+		return SceneManager.GetSceneByName(name).IsValid() || SceneManager.GetSceneByBuildIndex(int.Parse(name)).IsValid();
 	}
 }
 }

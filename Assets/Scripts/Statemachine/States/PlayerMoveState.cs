@@ -9,20 +9,22 @@ public class PlayerMoveState : BaseState {
 
 	public override void EnterState() {
 		EventBus.Subscribe<bool>(EventType.DASH, OnDash);
+
 	}
 
 	public override void UpdateState() {
 		StateMachine.transform.Translate(Movement * _speed * Time.deltaTime);
-		// if(_dash){
-		// 	StateMachine.SwitchState("Dash");
-		// }
+		if (_dash) {
+			_dash = false;
+			StateMachine.SwitchState("Dash");
+		}
 	}
 
 	public override void ExitState() {
 		EventBus.Unsubscribe<bool>(EventType.DASH, OnDash);
 	}
 
-	private void OnDash(bool dash){
+	private void OnDash(bool dash) {
 		_dash = dash;
 	}
 }

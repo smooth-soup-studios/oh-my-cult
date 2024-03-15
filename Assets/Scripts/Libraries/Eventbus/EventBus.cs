@@ -58,19 +58,19 @@ public class EventBus : MonoBehaviour {
 	/// <param name="eventName"></param>
 	/// <param name="listener"></param>
 	public static void Subscribe<T>(EventType eventName, UnityAction<T> listener) {
-		UnityEvent<T> thisEvent;
+		UnityEvent<T> newEvent;
 
 		string key = GetKey<T>(eventName);
 
 		if (Instance._eventHash.ContainsKey(key)) {
-			thisEvent = (UnityEvent<T>)Instance._eventHash[key];
-			thisEvent.AddListener(listener);
-			Instance._eventHash[eventName] = thisEvent;
+			newEvent = (UnityEvent<T>)Instance._eventHash[key];
+			newEvent.AddListener(listener);
+			Instance._eventHash[eventName] = newEvent;
 		}
 		else {
-			thisEvent = new UnityEvent<T>();
-			thisEvent.AddListener(listener);
-			Instance._eventHash.Add(key, thisEvent);
+			newEvent = new UnityEvent<T>();
+			newEvent.AddListener(listener);
+			Instance._eventHash.Add(key, newEvent);
 		}
 	}
 
@@ -88,17 +88,17 @@ public class EventBus : MonoBehaviour {
 	/// <param name="eventName"></param>
 	/// <param name="listener"></param>
 	public static void Subscribe(EventType eventName, UnityAction listener) {
-		UnityEvent thisEvent;
+		UnityEvent newEvent;
 
 		if (Instance._eventHash.ContainsKey(eventName)) {
-			thisEvent = (UnityEvent)Instance._eventHash[eventName];
-			thisEvent.AddListener(listener);
-			Instance._eventHash[eventName] = thisEvent;
+			newEvent = (UnityEvent)Instance._eventHash[eventName];
+			newEvent.AddListener(listener);
+			Instance._eventHash[eventName] = newEvent;
 		}
 		else {
-			thisEvent = new UnityEvent();
-			thisEvent.AddListener(listener);
-			Instance._eventHash.Add(eventName, thisEvent);
+			newEvent = new UnityEvent();
+			newEvent.AddListener(listener);
+			Instance._eventHash.Add(eventName, newEvent);
 		}
 	}
 
@@ -117,12 +117,12 @@ public class EventBus : MonoBehaviour {
 	/// <param name="eventName"></param>
 	/// <param name="listener"></param>
 	public static void Unsubscribe<T>(EventType eventName, UnityAction<T> listener) {
-		UnityEvent<T> thisEvent;
+		UnityEvent<T> newEvent;
 		string key = GetKey<T>(eventName);
 
 		if (Instance._eventHash.ContainsKey(key)) {
-			thisEvent = (UnityEvent<T>)Instance._eventHash[key];
-			thisEvent.RemoveListener(listener);
+			newEvent = (UnityEvent<T>)Instance._eventHash[key];
+			newEvent.RemoveListener(listener);
 		}
 	}
 
@@ -139,11 +139,11 @@ public class EventBus : MonoBehaviour {
 	/// <param name="eventName"></param>
 	/// <param name="listener"></param>
 	public static void Unsubscribe(EventType eventName, UnityAction listener) {
-		UnityEvent thisEvent;
+		UnityEvent newEvent;
 
 		if (Instance._eventHash.ContainsKey(eventName)) {
-			thisEvent = (UnityEvent)Instance._eventHash[eventName];
-			thisEvent.RemoveListener(listener);
+			newEvent = (UnityEvent)Instance._eventHash[eventName];
+			newEvent.RemoveListener(listener);
 		}
 	}
 
@@ -160,12 +160,12 @@ public class EventBus : MonoBehaviour {
 	/// <param name="eventName"></param>
 	/// <param name="listener"></param>
 	public static void TriggerEvent<T>(EventType eventName, T val) {
-		UnityEvent<T> thisEvent;
+		UnityEvent<T> newEvent;
 		string key = GetKey<T>(eventName);
 
 		if (Instance._eventHash.ContainsKey(key)) {
-			thisEvent = (UnityEvent<T>)Instance._eventHash[key];
-			thisEvent.Invoke(val);
+			newEvent = (UnityEvent<T>)Instance._eventHash[key];
+			newEvent.Invoke(val);
 		}
 	}
 
@@ -182,11 +182,11 @@ public class EventBus : MonoBehaviour {
 	/// <param name="eventName"></param>
 	/// <param name="listener"></param>
 	public static void TriggerEvent(EventType eventName) {
-		UnityEvent thisEvent;
+		UnityEvent newEvent;
 
 		if (Instance._eventHash.ContainsKey(eventName)) {
-			thisEvent = (UnityEvent)Instance._eventHash[eventName];
-			thisEvent.Invoke();
+			newEvent = (UnityEvent)Instance._eventHash[eventName];
+			newEvent.Invoke();
 		}
 	}
 

@@ -1,5 +1,5 @@
 ﻿namespace Controllers.AI {
-public class Enemy {
+public class EnemyAI {
 
 }
 }

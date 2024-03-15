@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class EventBus : MonoBehaviour {
 	[Header("Debug settings")]
 	[SerializeField] private bool _showLogging = false;
-	private string _logname = "EventBus";
+	private static string _logname = "EventBus";
 
 
 	private Hashtable _eventHash = new();
@@ -17,7 +17,7 @@ public class EventBus : MonoBehaviour {
 				_eventBus = FindAnyObjectByType<EventBus>();
 
 				if (!_eventBus) {
-					Logger.Log("EventBus", "No EventBus found in the scene!");
+					Logger.Log(_logname, "No EventBus found in the scene!");
 				}
 				else {
 					_eventBus.Init();
@@ -47,6 +47,12 @@ public class EventBus : MonoBehaviour {
 	/// Subscribes a method to the specified Event with parameter T.
 	/// <br/>
 	/// The method should have a parameter of the same type as T.
+	/// 	<para>
+	/// 		Usage:
+	/// 		<example>
+	/// 			<c> EventBus.Subscribe&lt;Vector2&gt;(EventType.MOVEMENT, UpdateMovement) </c>
+	/// 		</example>
+	/// 	</para>
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <param name="eventName"></param>
@@ -71,9 +77,13 @@ public class EventBus : MonoBehaviour {
 	/// <summary>
 	/// Subscribes a method to the specified Event.
 	/// <br/>
-	/// This version contains no parameters. Use <see cref="Subscribe{T}">
-	/// Subscribe &lt;T&gt;
-	/// </see>
+	/// This version contains no parameters. Use <see cref="Subscribe{T}">the generic version of this method instead.</see>
+	/// <para>
+	/// 	Usage:
+	/// 	<example>
+	/// 		<c> EventBus.Subscribe(EventType.MOVEMENT, UpdateMovement) </c>
+	/// 	</example>
+	/// </para>
 	/// </summary>
 	/// <param name="eventName"></param>
 	/// <param name="listener"></param>
@@ -92,6 +102,20 @@ public class EventBus : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Unsubscribes a method from the specified Event.
+	/// <br/>
+	/// The T parameter should match the type of the subscribe call
+	/// <para>
+	/// 	Usage:
+	/// 	<example>
+	/// 		<c> EventBus.Unsubscribe&lt;Vector2&gt;(EventType.MOVEMENT, UpdateMovement) </c>
+	/// 	</example>
+	/// </para>
+	/// </summary>
+	/// <typeparam name="T"></typeparam>
+	/// <param name="eventName"></param>
+	/// <param name="listener"></param>
 	public static void Unsubscribe<T>(EventType eventName, UnityAction<T> listener) {
 		UnityEvent<T> thisEvent;
 		string key = GetKey<T>(eventName);
@@ -102,6 +126,18 @@ public class EventBus : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Unsubscribes a method from the specified Event.
+	/// <para>
+	/// 	Usage:
+	/// 	<example>
+	/// 		<c> EventBus.Unsubscribe(EventType.MOVEMENT, UpdateMovement) </c>
+	/// 	</example>
+	/// </para>
+	/// </summary>
+	/// <typeparam name="T"></typeparam>
+	/// <param name="eventName"></param>
+	/// <param name="listener"></param>
 	public static void Unsubscribe(EventType eventName, UnityAction listener) {
 		UnityEvent thisEvent;
 
@@ -111,6 +147,18 @@ public class EventBus : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Invokes the specified Event with the supplied value.
+	/// <para>
+	/// 	Usage:
+	/// 	<example>
+	/// 		<c> EventBus.TriggerEvent&lt;Vector2&gt;(EventType.MOVEMENT) </c>
+	/// 	</example>
+	/// </para>
+	/// </summary>
+	/// <typeparam name="T"></typeparam>
+	/// <param name="eventName"></param>
+	/// <param name="listener"></param>
 	public static void TriggerEvent<T>(EventType eventName, T val) {
 		UnityEvent<T> thisEvent;
 		string key = GetKey<T>(eventName);
@@ -121,6 +169,18 @@ public class EventBus : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Invokes the specified Event.
+	/// <para>
+	/// 	Usage:
+	/// 	<example>
+	/// 		<c> EventBus.TriggerEvent(EventType.MOVEMENT) </c>
+	/// 	</example>
+	/// </para>
+	/// </summary>
+	/// <typeparam name="T"></typeparam>
+	/// <param name="eventName"></param>
+	/// <param name="listener"></param>
 	public static void TriggerEvent(EventType eventName) {
 		UnityEvent thisEvent;
 
@@ -130,7 +190,7 @@ public class EventBus : MonoBehaviour {
 		}
 	}
 
-	public static string GetKey<T>(EventType eventtype) {
+	private static string GetKey<T>(EventType eventtype) {
 		Type type = typeof(T);
 		return $"{type}_{eventtype}";
 	}

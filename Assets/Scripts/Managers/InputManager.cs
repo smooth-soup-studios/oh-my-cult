@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour {
-	private string _logname = "InputManager";
+	private static string _logname = "InputManager";
 	public static InputManager Instance;
 
 	private void Awake() {

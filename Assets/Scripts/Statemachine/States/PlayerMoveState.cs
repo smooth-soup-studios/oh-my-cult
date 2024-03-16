@@ -13,7 +13,10 @@ public class PlayerMoveState : BaseState {
 	}
 
 	public override void UpdateState() {
-		StateMachine.transform.Translate(Movement * _speed * Time.deltaTime);
+		StateMachine.transform.Translate(_speed * Time.deltaTime * Movement);
+		if (Movement == Vector2.zero) {
+			StateMachine.SwitchState("Idle");
+		}
 		if (_dash) {
 			_dash = false;
 			StateMachine.SwitchState("Dash");

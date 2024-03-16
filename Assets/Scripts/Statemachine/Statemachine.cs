@@ -11,7 +11,8 @@ public class StateMachine : MonoBehaviour {
 	void Start() {
 		_states = new List<BaseState> {
 			new PlayerIdleState("Idle", this),
-			new PlayerMoveState("Move", this)
+			new PlayerMoveState("Move", this),
+			new PlayerDashState("Dash", this)
 		};
 		SwitchState("Idle");
 	}

@@ -12,7 +12,10 @@ public class PlayerMoveState : BaseState {
 	}
 
 	public override void UpdateState() {
-		StateMachine.transform.Translate(Movement * _speed * Time.deltaTime);
+		StateMachine.transform.Translate(_speed * Time.deltaTime * Movement);
+		if (Movement == Vector2.zero) {
+			StateMachine.SwitchState("Idle");
+		}
 		// if(_dash){
 		// 	StateMachine.SwitchState("Dash");
 		// }
@@ -22,7 +25,7 @@ public class PlayerMoveState : BaseState {
 		EventBus.Unsubscribe<bool>(EventType.DASH, OnDash);
 	}
 
-	private void OnDash(bool dash){
+	private void OnDash(bool dash) {
 		_dash = dash;
 	}
 }

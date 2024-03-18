@@ -1,14 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMoveState : BaseState {
 
 	bool _dash = false;
 	float _speed = 10;
+	bool _dashCooldown = false;
 	public PlayerMoveState(string name, StateMachine stateMachine) : base(name, stateMachine) {
 	}
 
 	public override void EnterState() {
 		EventBus.Subscribe<bool>(EventType.DASH, OnDash);
+		StateMachine.StartCoroutine(DashCooldown());
 
 	}
 
@@ -17,9 +21,12 @@ public class PlayerMoveState : BaseState {
 		if (Movement == Vector2.zero) {
 			StateMachine.SwitchState("Idle");
 		}
-		if (_dash) {
-			_dash = false;
-			StateMachine.SwitchState("Dash");
+		if (!_dashCooldown) {
+			if (_dash) {
+				_dash = false;
+				StateMachine.SwitchState("Dash");
+
+			}
 		}
 	}
 
@@ -29,5 +36,10 @@ public class PlayerMoveState : BaseState {
 
 	private void OnDash(bool dash) {
 		_dash = dash;
+	}
+	public IEnumerator DashCooldown() {
+		_dashCooldown = true;
+		yield return new WaitForSecondsRealtime(1);
+		_dashCooldown = false;
 	}
 }

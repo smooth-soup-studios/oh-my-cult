@@ -16,11 +16,11 @@ public class EventBus : MonoBehaviour {
 			if (!_eventBus) {
 				_eventBus = FindAnyObjectByType<EventBus>();
 
-				if (!_eventBus) {
-					Logger.Log(_logname, "No EventBus found in the scene!");
+				if (_eventBus) {
+					_eventBus.Init();
 				}
 				else {
-					_eventBus.Init();
+					Logger.Log(_logname, "No EventBus found in the scene!");
 				}
 			}
 			return _eventBus;
@@ -57,7 +57,7 @@ public class EventBus : MonoBehaviour {
 	/// <typeparam name="T"></typeparam>
 	/// <param name="eventName"></param>
 	/// <param name="listener"></param>
-	public static void Subscribe<T>(EventType eventName, UnityAction<T> listener) {
+	public void Subscribe<T>(EventType eventName, UnityAction<T> listener) {
 		UnityEvent<T> newEvent;
 
 		string key = GetKey<T>(eventName);
@@ -87,7 +87,7 @@ public class EventBus : MonoBehaviour {
 	/// </summary>
 	/// <param name="eventName"></param>
 	/// <param name="listener"></param>
-	public static void Subscribe(EventType eventName, UnityAction listener) {
+	public void Subscribe(EventType eventName, UnityAction listener) {
 		UnityEvent newEvent;
 
 		if (Instance._eventHash.ContainsKey(eventName)) {
@@ -116,7 +116,7 @@ public class EventBus : MonoBehaviour {
 	/// <typeparam name="T"></typeparam>
 	/// <param name="eventName"></param>
 	/// <param name="listener"></param>
-	public static void Unsubscribe<T>(EventType eventName, UnityAction<T> listener) {
+	public void Unsubscribe<T>(EventType eventName, UnityAction<T> listener) {
 		UnityEvent<T> newEvent;
 		string key = GetKey<T>(eventName);
 
@@ -138,7 +138,7 @@ public class EventBus : MonoBehaviour {
 	/// <typeparam name="T"></typeparam>
 	/// <param name="eventName"></param>
 	/// <param name="listener"></param>
-	public static void Unsubscribe(EventType eventName, UnityAction listener) {
+	public void Unsubscribe(EventType eventName, UnityAction listener) {
 		UnityEvent newEvent;
 
 		if (Instance._eventHash.ContainsKey(eventName)) {
@@ -159,7 +159,7 @@ public class EventBus : MonoBehaviour {
 	/// <typeparam name="T"></typeparam>
 	/// <param name="eventName"></param>
 	/// <param name="listener"></param>
-	public static void TriggerEvent<T>(EventType eventName, T val) {
+	public void TriggerEvent<T>(EventType eventName, T val) {
 		UnityEvent<T> newEvent;
 		string key = GetKey<T>(eventName);
 
@@ -181,7 +181,7 @@ public class EventBus : MonoBehaviour {
 	/// <typeparam name="T"></typeparam>
 	/// <param name="eventName"></param>
 	/// <param name="listener"></param>
-	public static void TriggerEvent(EventType eventName) {
+	public void TriggerEvent(EventType eventName) {
 		UnityEvent newEvent;
 
 		if (Instance._eventHash.ContainsKey(eventName)) {
@@ -190,7 +190,7 @@ public class EventBus : MonoBehaviour {
 		}
 	}
 
-	private static string GetKey<T>(EventType eventtype) {
+	private string GetKey<T>(EventType eventtype) {
 		Type type = typeof(T);
 		return $"{type}_{eventtype}";
 	}

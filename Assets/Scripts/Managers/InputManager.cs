@@ -18,15 +18,15 @@ public class InputManager : MonoBehaviour {
 	}
 
 	public void OnMove(InputValue value) {
-		EventBus.TriggerEvent(EventType.MOVEMENT, value.Get<Vector2>());
+		EventBus.Instance.TriggerEvent(EventType.MOVEMENT, value.Get<Vector2>());
 	}
 
 	public void OnAttack(InputValue value) {
-		EventBus.TriggerEvent(EventType.ATTACK, value.isPressed);
+		EventBus.Instance.TriggerEvent(EventType.ATTACK, value.isPressed);
 	}
 
 	public void OnDash(InputValue value) {
-		EventBus.TriggerEvent(EventType.DASH, value.isPressed);
+		EventBus.Instance.TriggerEvent(EventType.DASH, value.isPressed);
 	}
 
 }

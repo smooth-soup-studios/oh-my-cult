@@ -10,7 +10,7 @@ public abstract class BaseState {
 	protected BaseState(string name, StateMachine stateMachine) {
 		Name = name;
 		StateMachine = stateMachine;
-		EventBus.Subscribe<Vector2>(EventType.MOVEMENT, move => Movement = move);
+		EventBus.Instance.Subscribe<Vector2>(EventType.MOVEMENT, move => Movement = move);
 	}
 
 	public abstract void EnterState();

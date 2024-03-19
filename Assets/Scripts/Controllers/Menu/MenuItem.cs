@@ -4,11 +4,11 @@ using UnityEditor;
 using UnityEngine;
 
 namespace Controllers.Menu{
-    public abstract class Menuitem : MonoBehaviour
+    public abstract class Menuitem
     {
         // Start is called before the first frame update
-        public Menuitem();
+        public Menuitem(){}
 
-        private void OnMouseUp();
+        public abstract void OnMouseUp();
     }
 }

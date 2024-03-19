@@ -1,9 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<engine:UXML
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:engine="UnityEngine.UIElements"
-    xmlns:editor="UnityEditor.UIElements"
-    xsi:noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd"
->
-    
-</engine:UXML>
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/UXML/USS/style.uss?fileID=7433441132597879392&amp;guid=d50132b4dc93f1b4c94b9ecbe5a74a00&amp;type=3#style" />
+    <ui:VisualElement name="dialog-box" class="closed" style="bottom: 0; position: absolute; left: 0; right: 0; overflow: visible; height: 50%; transition-timing-function: ease-out-cubic; transition-duration: 0.5s; background-color: rgb(0, 0, 0);">
+        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" class="nomargin" style="position: absolute; bottom: 0; transition-duration: 0.5s; transition-timing-function: ease-out-cubic; color: rgb(255, 255, 255);" />
+    </ui:VisualElement>
+</ui:UXML>

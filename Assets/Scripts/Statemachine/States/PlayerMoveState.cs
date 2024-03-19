@@ -1,9 +1,11 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerMoveState : BaseState {
 
 	bool _dash = false;
 	float _speed = 10;
+	bool _dashCooldown = false;
 	public PlayerMoveState(string name, StateMachine stateMachine) : base(name, stateMachine) {
 	}
 
@@ -17,7 +19,8 @@ public class PlayerMoveState : BaseState {
 		if (Movement == Vector2.zero) {
 			StateMachine.SwitchState("Idle");
 		}
-		if (_dash) {
+		if (!_dashCooldown && _dash) {
+			StateMachine.StartCoroutine(DashCooldown());
 			_dash = false;
 			StateMachine.SwitchState("Dash");
 		}
@@ -29,5 +32,10 @@ public class PlayerMoveState : BaseState {
 
 	private void OnDash(bool dash) {
 		_dash = dash;
+	}
+	public IEnumerator DashCooldown() {
+		_dashCooldown = true;
+		yield return new WaitForSecondsRealtime(1.25f);
+		_dashCooldown = false;
 	}
 }

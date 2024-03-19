@@ -1,32 +1,32 @@
-﻿using UnityEngine;
+using UnityEngine;
+using UnityEngine.InputSystem;
 
-namespace Managers {
 public class InputManager : MonoBehaviour {
-	public static InputManager Instance { get; set; }
-	Controls Controls { get; set; }
-	public Vector2 Move { get; private set; }
+	private static string _logname = "InputManager";
+	public static InputManager Instance;
 
-	void Awake() {
-		if (Instance != null && Instance != this) {
-			Controls?.Disable();
-			Destroy(gameObject);
+	private void Awake() {
+		if (Instance == null) {
+			Instance = this;
+		}
+		else {
+			Logger.LogWarning("InputManager", "Multiple Instances found! Exiting..");
+			Destroy(this);
 			return;
 		}
-
-		Instance = this;
-		DontDestroyOnLoad(gameObject);
-		Controls = new Controls();
-
-		Controls.Player.Move.performed += ctx => Move = ctx.ReadValue<Vector2>();
-		Controls.Player.Move.canceled += ctx => Move = Vector2.zero;
+		DontDestroyOnLoad(Instance);
 	}
 
-	void OnEnable() {
-		Controls?.Enable();
+	public void OnMove(InputValue value) {
+		EventBus.Instance.TriggerEvent(EventType.MOVEMENT, value.Get<Vector2>());
 	}
 
-	void OnDisable() {
-		Controls?.Disable();
+	public void OnAttack(InputValue value) {
+		EventBus.Instance.TriggerEvent(EventType.ATTACK, value.isPressed);
 	}
-}
+
+	public void OnDash(InputValue value) {
+		EventBus.Instance.TriggerEvent(EventType.DASH, value.isPressed);
+	}
+
 }

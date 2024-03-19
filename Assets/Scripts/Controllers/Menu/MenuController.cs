@@ -37,7 +37,8 @@ namespace Controllers.Menu{
 
         //Navigate back to the main menu
         void quitToMainMenu(){
-
+            //return to the scene where the main menu 
+            SceneManager.LoadScene(0);
         }
     }
 }

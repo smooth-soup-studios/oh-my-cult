@@ -1,17 +1,14 @@
-namespace Managers
-{
-    public class UIManager : MonoBehaviour
-    {
+using UnityEngine;
+
+namespace Managers {
+    public class UIManager : MonoBehaviour {
         public static UIManager Instance { get; private set; }
 
-        private void Awake()
-        {
-            if (Instance == null)
-            {
+        private void Awake() {
+            if (Instance == null) {
                 Instance = this;
             }
-            else
-            {
+            else {
                 Destroy(gameObject);
             }
         }

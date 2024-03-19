@@ -6,6 +6,10 @@ using UnityEngine.Events;
 public class EventBus : MonoBehaviour {
 	[Header("Debug settings")]
 	[SerializeField] private bool _showLogging = false;
+
+	[SerializeField, Tooltip("Enables logging of subscription calls")] private bool _showSubscriptionLogs = false;
+	[SerializeField, Tooltip("Enables logging of event triggers")] private bool _showTriggerLogs = false;
+
 	private static string _logname = "EventBus";
 
 
@@ -13,6 +17,7 @@ public class EventBus : MonoBehaviour {
 	private static EventBus _eventBus;
 	public static EventBus Instance {
 		get {
+			// Check if an instance exists. if not grab the one (which should be) present in the scene.
 			if (!_eventBus) {
 				_eventBus = FindAnyObjectByType<EventBus>();
 
@@ -20,7 +25,7 @@ public class EventBus : MonoBehaviour {
 					_eventBus.Init();
 				}
 				else {
-					Logger.Log(_logname, "No EventBus found in the scene!");
+					Logger.LogError(_logname, "No EventBus found in the scene!");
 				}
 			}
 			return _eventBus;
@@ -36,7 +41,7 @@ public class EventBus : MonoBehaviour {
 			_eventBus = this;
 		}
 		else {
-			Logger.LogWarning(_logname, "Multiple Instances found! Exiting..");
+			Logger.LogWarning(_logname, "Multiple Instances found! Exiting...");
 			Destroy(this);
 			return;
 		}
@@ -72,6 +77,10 @@ public class EventBus : MonoBehaviour {
 			newEvent.AddListener(listener);
 			Instance._eventHash.Add(key, newEvent);
 		}
+
+		if (_showSubscriptionLogs) {
+			sendToLogger($"{listener.Target} subscribed to event {eventName}<{typeof(T).Name}>");
+		}
 	}
 
 	/// <summary>
@@ -100,6 +109,10 @@ public class EventBus : MonoBehaviour {
 			newEvent.AddListener(listener);
 			Instance._eventHash.Add(eventName, newEvent);
 		}
+
+		if (_showSubscriptionLogs) {
+			sendToLogger($"{listener} subscribed to event {eventName}");
+		}
 	}
 
 	/// <summary>
@@ -123,6 +136,10 @@ public class EventBus : MonoBehaviour {
 		if (Instance._eventHash.ContainsKey(key)) {
 			newEvent = (UnityEvent<T>)Instance._eventHash[key];
 			newEvent.RemoveListener(listener);
+
+			if (_showSubscriptionLogs) {
+				sendToLogger($"{listener.Target} unsubscribed from event {eventName}<{typeof(T).Name}>");
+			}
 		}
 	}
 
@@ -143,6 +160,10 @@ public class EventBus : MonoBehaviour {
 		if (Instance._eventHash.ContainsKey(eventName)) {
 			newEvent = (UnityEvent)Instance._eventHash[eventName];
 			newEvent.RemoveListener(listener);
+
+			if (_showSubscriptionLogs) {
+				sendToLogger($"{listener} unsubscribed from event {eventName}");
+			}
 		}
 	}
 
@@ -165,6 +186,10 @@ public class EventBus : MonoBehaviour {
 		if (Instance._eventHash.ContainsKey(key)) {
 			newEvent = (UnityEvent<T>)Instance._eventHash[key];
 			newEvent.Invoke(val);
+
+			if (_showTriggerLogs) {
+				sendToLogger($"Event {eventName} was triggerd with value {typeof(T).Name}({val})");
+			}
 		}
 	}
 
@@ -184,11 +209,21 @@ public class EventBus : MonoBehaviour {
 		if (Instance._eventHash.ContainsKey(eventName)) {
 			newEvent = (UnityEvent)Instance._eventHash[eventName];
 			newEvent.Invoke();
+
+			if (_showTriggerLogs) {
+				sendToLogger($"Event {eventName} was triggerd");
+			}
 		}
 	}
 
 	private string GetKey<T>(EventType eventtype) {
 		Type type = typeof(T);
 		return $"{type}_{eventtype}";
+	}
+
+	private void sendToLogger(string text) {
+		if (_showLogging) {
+			Logger.Log(_logname, text);
+		}
 	}
 }

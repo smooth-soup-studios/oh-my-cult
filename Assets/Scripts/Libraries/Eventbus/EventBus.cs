@@ -16,11 +16,11 @@ public class EventBus : MonoBehaviour {
 			if (!_eventBus) {
 				_eventBus = FindAnyObjectByType<EventBus>();
 
-				if (!_eventBus) {
-					Logger.Log(_logname, "No EventBus found in the scene!");
+				if (_eventBus) {
+					_eventBus.Init();
 				}
 				else {
-					_eventBus.Init();
+					Logger.Log(_logname, "No EventBus found in the scene!");
 				}
 			}
 			return _eventBus;
@@ -44,20 +44,20 @@ public class EventBus : MonoBehaviour {
 	}
 
 	/// <summary>
-	/// Subscribes a method to the specified Event with parameter T.
+	/// Subscribes a method to the specified Event with a value of type T.
 	/// <br/>
 	/// The method should have a parameter of the same type as T.
 	/// 	<para>
 	/// 		Usage:
 	/// 		<example>
-	/// 			<c> EventBus.Subscribe&lt;Vector2&gt;(EventType.MOVEMENT, UpdateMovement) </c>
+	/// 			<c> EventBus.Instance.Subscribe&lt;Vector2&gt;(EventType.MOVEMENT, UpdateMovement) </c>
 	/// 		</example>
 	/// 	</para>
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <param name="eventName"></param>
 	/// <param name="listener"></param>
-	public static void Subscribe<T>(EventType eventName, UnityAction<T> listener) {
+	public void Subscribe<T>(EventType eventName, UnityAction<T> listener) {
 		UnityEvent<T> newEvent;
 
 		string key = GetKey<T>(eventName);
@@ -77,17 +77,17 @@ public class EventBus : MonoBehaviour {
 	/// <summary>
 	/// Subscribes a method to the specified Event.
 	/// <br/>
-	/// This version contains no parameters. Use <see cref="Subscribe{T}">the generic version of this method instead.</see>
+	/// This version cannot recieve values! Use <see cref="Subscribe{T}">the generic version of this method instead.</see>
 	/// <para>
 	/// 	Usage:
 	/// 	<example>
-	/// 		<c> EventBus.Subscribe(EventType.MOVEMENT, UpdateMovement) </c>
+	/// 		<c> EventBus.Instance.Subscribe(EventType.MOVEMENT, UpdateMovement) </c>
 	/// 	</example>
 	/// </para>
 	/// </summary>
 	/// <param name="eventName"></param>
 	/// <param name="listener"></param>
-	public static void Subscribe(EventType eventName, UnityAction listener) {
+	public void Subscribe(EventType eventName, UnityAction listener) {
 		UnityEvent newEvent;
 
 		if (Instance._eventHash.ContainsKey(eventName)) {
@@ -105,18 +105,18 @@ public class EventBus : MonoBehaviour {
 	/// <summary>
 	/// Unsubscribes a method from the specified Event.
 	/// <br/>
-	/// The T parameter should match the type of the subscribe call
+	/// The type T should match the type of the subscribe call
 	/// <para>
 	/// 	Usage:
 	/// 	<example>
-	/// 		<c> EventBus.Unsubscribe&lt;Vector2&gt;(EventType.MOVEMENT, UpdateMovement) </c>
+	/// 		<c> EventBus.Instance.Unsubscribe&lt;Vector2&gt;(EventType.MOVEMENT, UpdateMovement) </c>
 	/// 	</example>
 	/// </para>
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <param name="eventName"></param>
 	/// <param name="listener"></param>
-	public static void Unsubscribe<T>(EventType eventName, UnityAction<T> listener) {
+	public void Unsubscribe<T>(EventType eventName, UnityAction<T> listener) {
 		UnityEvent<T> newEvent;
 		string key = GetKey<T>(eventName);
 
@@ -131,14 +131,13 @@ public class EventBus : MonoBehaviour {
 	/// <para>
 	/// 	Usage:
 	/// 	<example>
-	/// 		<c> EventBus.Unsubscribe(EventType.MOVEMENT, UpdateMovement) </c>
+	/// 		<c> EventBus.Instance.Unsubscribe(EventType.MOVEMENT, UpdateMovement) </c>
 	/// 	</example>
 	/// </para>
 	/// </summary>
-	/// <typeparam name="T"></typeparam>
 	/// <param name="eventName"></param>
 	/// <param name="listener"></param>
-	public static void Unsubscribe(EventType eventName, UnityAction listener) {
+	public void Unsubscribe(EventType eventName, UnityAction listener) {
 		UnityEvent newEvent;
 
 		if (Instance._eventHash.ContainsKey(eventName)) {
@@ -152,14 +151,14 @@ public class EventBus : MonoBehaviour {
 	/// <para>
 	/// 	Usage:
 	/// 	<example>
-	/// 		<c> EventBus.TriggerEvent&lt;Vector2&gt;(EventType.MOVEMENT) </c>
+	/// 		<c> EventBus.Instance.TriggerEvent&lt;Vector2&gt;(EventType.MOVEMENT) </c>
 	/// 	</example>
 	/// </para>
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <param name="eventName"></param>
-	/// <param name="listener"></param>
-	public static void TriggerEvent<T>(EventType eventName, T val) {
+	/// <param name="val"></param>
+	public void TriggerEvent<T>(EventType eventName, T val) {
 		UnityEvent<T> newEvent;
 		string key = GetKey<T>(eventName);
 
@@ -174,14 +173,12 @@ public class EventBus : MonoBehaviour {
 	/// <para>
 	/// 	Usage:
 	/// 	<example>
-	/// 		<c> EventBus.TriggerEvent(EventType.MOVEMENT) </c>
+	/// 		<c> EventBus.Instance.TriggerEvent(EventType.MOVEMENT) </c>
 	/// 	</example>
 	/// </para>
 	/// </summary>
-	/// <typeparam name="T"></typeparam>
 	/// <param name="eventName"></param>
-	/// <param name="listener"></param>
-	public static void TriggerEvent(EventType eventName) {
+	public void TriggerEvent(EventType eventName) {
 		UnityEvent newEvent;
 
 		if (Instance._eventHash.ContainsKey(eventName)) {
@@ -190,7 +187,7 @@ public class EventBus : MonoBehaviour {
 		}
 	}
 
-	private static string GetKey<T>(EventType eventtype) {
+	private string GetKey<T>(EventType eventtype) {
 		Type type = typeof(T);
 		return $"{type}_{eventtype}";
 	}

@@ -10,7 +10,7 @@ public class PlayerMoveState : BaseState {
 	}
 
 	public override void EnterState() {
-		EventBus.Subscribe<bool>(EventType.DASH, OnDash);
+		EventBus.Instance.Subscribe<bool>(EventType.DASH, OnDash);
 
 	}
 
@@ -27,7 +27,7 @@ public class PlayerMoveState : BaseState {
 	}
 
 	public override void ExitState() {
-		EventBus.Unsubscribe<bool>(EventType.DASH, OnDash);
+		EventBus.Instance.Unsubscribe<bool>(EventType.DASH, OnDash);
 	}
 
 	private void OnDash(bool dash) {

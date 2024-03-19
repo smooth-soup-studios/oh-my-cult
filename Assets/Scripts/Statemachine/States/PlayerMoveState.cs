@@ -12,7 +12,6 @@ public class PlayerMoveState : BaseState {
 
 	public override void EnterState() {
 		EventBus.Subscribe<bool>(EventType.DASH, OnDash);
-		StateMachine.StartCoroutine(DashCooldown());
 
 	}
 
@@ -21,12 +20,10 @@ public class PlayerMoveState : BaseState {
 		if (Movement == Vector2.zero) {
 			StateMachine.SwitchState("Idle");
 		}
-		if (!_dashCooldown) {
-			if (_dash) {
-				_dash = false;
-				StateMachine.SwitchState("Dash");
-
-			}
+		if (!_dashCooldown && _dash) {
+			StateMachine.StartCoroutine(DashCooldown());
+			_dash = false;
+			StateMachine.SwitchState("Dash");
 		}
 	}
 
@@ -39,7 +36,7 @@ public class PlayerMoveState : BaseState {
 	}
 	public IEnumerator DashCooldown() {
 		_dashCooldown = true;
-		yield return new WaitForSecondsRealtime(1);
+		yield return new WaitForSecondsRealtime(1.25f);
 		_dashCooldown = false;
 	}
 }

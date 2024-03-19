@@ -9,6 +9,7 @@ namespace Controllers.Menu{
         // Start is called before the first frame update
         public Menuitem(){}
 
+        // This method will define the action on mous click
         public abstract void OnMouseUp();
     }
 }

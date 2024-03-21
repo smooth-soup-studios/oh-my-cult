@@ -8,3 +8,18 @@
     margin-top: 0;
     margin-bottom: 0;
 }
+
+Label {
+    padding: 0;
+    -unity-font-definition: url("project://database/Assets/Fonts/Nunito-Regular%20SDF.asset");
+}
+
+Label.title {
+    -unity-font-definition: url("project://database/Assets/Fonts/Nunito-Black%20SDF.asset");
+    font-size: 20px;
+}
+
+#dialog-box Label {
+    color: white;
+    white-space: normal;
+}

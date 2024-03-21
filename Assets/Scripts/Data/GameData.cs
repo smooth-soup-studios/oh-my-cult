@@ -1,9 +1,9 @@
-﻿using MessagePack;
+﻿using System;
 
-namespace Data {
-
-[MessagePackObject]
+[Serializable]
 public class GameData {
-	//TODO: Define all the data to be used and saved
+	public int Test { get; set; }
+
+	public string TestString { get; set; }
 }
-}
+

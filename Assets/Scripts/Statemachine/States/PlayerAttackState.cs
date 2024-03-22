@@ -25,6 +25,7 @@ public class PlayerAttackState : BaseState {
 	}
 
 	public override void ExitState() {
+		Debug.Log("Byeee");
 	}
 
 	private IEnumerator AttackSpeed() {

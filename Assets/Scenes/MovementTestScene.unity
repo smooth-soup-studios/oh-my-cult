@@ -768,11 +768,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AttackSpeed: 0.5
   _damage: 10
-  _attackRange: 0.5
+  _attackRange: 10
   _attackPoint: {fileID: 1542114195}
   _enemyLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 64
 --- !u!1 &1562461509
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,7 +938,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f0d07869b7ad747b46fdf13457c82e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
 --- !u!70 &1652630310
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

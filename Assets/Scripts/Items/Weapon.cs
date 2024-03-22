@@ -19,7 +19,6 @@ public class Weapon : MonoBehaviour {
 	void onAttack() {
 		Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(_attackPoint.position, _attackRange, _enemyLayer);
 		foreach (Collider2D Enemy in hitEnemies) {
-			Debug.Log(Enemy.name);
 			if (Enemy.TryGetComponent<EnemyHealthController>(out EnemyHealthController opponent)) {
 				opponent.TakeDamage(_damage);
 			}

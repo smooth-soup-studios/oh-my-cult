@@ -1,4 +1,4 @@
 public interface IDataManager {
-	public void Save();
-	public void Load(GameData data);
+	public GameData Load();
+	public void Save(GameData data);
 }

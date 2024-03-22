@@ -1,13 +1,21 @@
 using UnityEngine;
 
 public class SaveManager : MonoBehaviour {
-	private static string _logname = "SaveManager";
+
+	[Header("Saving settings")]
+	[SerializeField, Tooltip("Toggles save file encryption")] private bool _useEncryption = false;
+	[SerializeField, ] private bool _enableSaving = true;
+    [SerializeField] private bool _initializeData = false;
+    [SerializeField] private bool _saveOnQuit = false;
+
+
+	private readonly static string _logname = "SaveManager";
 	private static string _saveName = "OhMyCult";
+	private IDataManager _dataManager;
 
 	private static SaveManager _saveManager;
 	public static SaveManager Instance {
 		get {
-			// Check if an instance exists. if not grab the one (which should be) present in the scene.
 			if (!_saveManager) {
 				_saveManager = FindAnyObjectByType<SaveManager>();
 
@@ -21,7 +29,7 @@ public class SaveManager : MonoBehaviour {
 
 
 	private void Awake() {
-		if (_saveManager == null ) {
+		if (_saveManager == null) {
 			_saveManager = this;
 		}
 		else {
@@ -30,5 +38,11 @@ public class SaveManager : MonoBehaviour {
 			return;
 		}
 		DontDestroyOnLoad(Instance);
+
+		#if UNITY_EDITOR // Make sure debugging savefiles don't fuck up production saves
+			_saveName += "-debug";
+		#endif
+		_dataManager = new FileDataManager(Application.persistentDataPath, _saveName + ".WDF", _useEncryption);
 	}
+
 }

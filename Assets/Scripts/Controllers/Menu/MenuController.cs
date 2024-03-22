@@ -43,6 +43,7 @@ namespace Controllers.Menu{
         //Navigate back to the main menu
         public void quitToMainMenu(){
             //return to the scene whith the main menu 
+            //First an unload scene?
             SceneManager.LoadScene(0);
         }
     }

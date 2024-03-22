@@ -768,7 +768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AttackSpeed: 0.5
   _damage: 10
-  _attackRange: 10
+  _attackRange: 0.5
   _attackPoint: {fileID: 1542114195}
   _enemyLayer:
     serializedVersion: 2

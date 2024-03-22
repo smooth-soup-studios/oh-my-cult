@@ -2,8 +2,9 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class StateMachine : MonoBehaviour {
+public class StateMachine : MonoBehaviour, ISaveable{
 	[SerializeField] private TextMeshProUGUI _stateText;
 	private BaseState _currentState;
 	private List<BaseState> _states;
@@ -28,4 +29,15 @@ public class StateMachine : MonoBehaviour {
 		_currentState?.EnterState();
 	}
 
+	public void LoadData(GameData data) {
+		Vector3 savedPos = data.PlayerData.PlayerPosition;
+		if(savedPos != Vector3.zero){
+			transform.position = savedPos;
+		}
+	}
+
+	public void SaveData(GameData data) {
+		data.PlayerData.PlayerPosition = transform.position;
+		data.PlayerData.SceneName = SceneManager.GetActiveScene().name;
+	}
 }

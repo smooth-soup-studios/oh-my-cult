@@ -47,7 +47,7 @@ public static class UnityMenu {
     private static void DeleteSaveFiles(string directoryPath) {
         try {
             if (Directory.Exists(directoryPath)) {
-                string[] dataFiles = Directory.GetFiles(directoryPath, "*.bin");
+                string[] dataFiles = Directory.GetFiles(directoryPath, "*.WDF", SearchOption.AllDirectories);
 
                 foreach (string filePath in dataFiles) {
                     File.Delete(filePath);

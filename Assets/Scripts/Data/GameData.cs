@@ -1,9 +1,15 @@
 ﻿using System;
+using UnityEngine;
 
 [Serializable]
 public class GameData {
-	public int Test { get; set; }
-
-	public string TestString { get; set; }
+	public PlayerData PlayerData = new();
 }
 
+
+[Serializable]
+public class PlayerData {
+	public Vector3 PlayerPosition = Vector3.zero;
+	public string SceneName = "";
+
+}

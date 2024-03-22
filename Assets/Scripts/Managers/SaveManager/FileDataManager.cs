@@ -1,6 +1,9 @@
 using System;
 using System.IO;
+using System.Collections.Generic;
+
 using UnityEngine;
+using System.Linq;
 
 public class FileDataManager : IDataManager {
 	private static string _logname = "FileDataManager";
@@ -18,8 +21,9 @@ public class FileDataManager : IDataManager {
 		_encrypt = encrypt;
 	}
 
-	public GameData Load() {
-		string savePath = Path.Combine(_saveDirectory, _fileName);
+	public GameData Load(string profileId) {
+
+		string savePath = Path.Combine(_saveDirectory, profileId, _fileName);
 		try {
 			if (File.Exists(savePath)) {
 				SendToLogger($"Save file found at {savePath}");
@@ -42,9 +46,9 @@ public class FileDataManager : IDataManager {
 		return null;
 	}
 
-	public void Save(GameData data) {
+	public void Save(GameData data, string profileId) {
 
-		string savePath = Path.Combine(_saveDirectory, _fileName);
+		string savePath = Path.Combine(_saveDirectory, profileId, _fileName);
 
 		try {
 			Directory.CreateDirectory(Path.GetDirectoryName(savePath));
@@ -71,6 +75,33 @@ public class FileDataManager : IDataManager {
 			result += (char)(data[i] ^ _superSecretKey[i % _superSecretKey.Length]);
 		}
 		return result;
+	}
+
+
+	// <ProfileId, profileData>
+	public Dictionary<string, GameData> LoadAllSaveSlots() {
+		Dictionary<string, GameData> saveSlotDict = new();
+
+		IEnumerable<DirectoryInfo> dirInfoList = new DirectoryInfo(_saveDirectory).EnumerateDirectories();
+		foreach (DirectoryInfo dirInfo in dirInfoList) {
+			string profileId = dirInfo.Name;
+			string fullPath = Path.Combine(_saveDirectory, profileId, _fileName);
+			if (!File.Exists(fullPath)) {
+				SendToLogger($"Directory {profileId} skipped becouse it contains no savedata");
+				continue;
+			}
+			GameData profileData = Load(profileId);
+
+			if (profileData != null) {
+				saveSlotDict.Add(profileId, profileData);
+			}
+			else {
+				Logger.LogError(_logname, $"Couldn't load profile {profileId}! The save might be corrupted");
+			}
+		}
+
+
+		return saveSlotDict;
 	}
 
 	private void SendToLogger(string text) {

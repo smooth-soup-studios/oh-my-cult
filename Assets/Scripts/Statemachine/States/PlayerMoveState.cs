@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerMoveState : BaseState {
 
 	bool _dash = false;
+	bool _attack = false;
 	float _speed = 10;
 	bool _dashCooldown = false;
 	public PlayerMoveState(string name, StateMachine stateMachine) : base(name, stateMachine) {
@@ -11,6 +12,7 @@ public class PlayerMoveState : BaseState {
 
 	public override void EnterState() {
 		EventBus.Instance.Subscribe<bool>(EventType.DASH, OnDash);
+		EventBus.Instance.Subscribe<bool>(EventType.ATTACK, OnAttack);
 
 	}
 
@@ -19,15 +21,20 @@ public class PlayerMoveState : BaseState {
 		if (Movement == Vector2.zero) {
 			StateMachine.SwitchState("Idle");
 		}
-		if (!_dashCooldown && _dash) {
+		else if (!_dashCooldown && _dash) {
 			StateMachine.StartCoroutine(DashCooldown());
 			_dash = false;
 			StateMachine.SwitchState("Dash");
+		}
+		else if (_attack){
+			StateMachine.SwitchState("Attack");
+			_attack =false;
 		}
 	}
 
 	public override void ExitState() {
 		EventBus.Instance.Unsubscribe<bool>(EventType.DASH, OnDash);
+		EventBus.Instance.Unsubscribe<bool>(EventType.ATTACK,OnAttack);
 	}
 
 	private void OnDash(bool dash) {
@@ -37,5 +44,8 @@ public class PlayerMoveState : BaseState {
 		_dashCooldown = true;
 		yield return new WaitForSecondsRealtime(1.25f);
 		_dashCooldown = false;
+	}
+		private void OnAttack(bool attack) {
+		_attack = attack;
 	}
 }

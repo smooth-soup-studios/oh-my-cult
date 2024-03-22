@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class StateMachine : MonoBehaviour {
 	[SerializeField] private TextMeshProUGUI _stateText;
+	[SerializeField] public Weapon Weapon; 
 	private BaseState _currentState;
 	private List<BaseState> _states;
 
@@ -12,7 +13,8 @@ public class StateMachine : MonoBehaviour {
 		_states = new List<BaseState> {
 			new PlayerIdleState("Idle", this),
 			new PlayerMoveState("Move", this),
-			new PlayerDashState("Dash", this)
+			new PlayerDashState("Dash", this),
+			new PlayerAttackState("Attack", this)
 		};
 		SwitchState("Idle");
 	}

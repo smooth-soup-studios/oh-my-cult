@@ -13,10 +13,6 @@ public class Weapon : MonoBehaviour {
 
 
 	public void Attack() {
-		onAttack();
-	}
-
-	void onAttack() {
 		Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(_attackPoint.position, _attackRange, _enemyLayer);
 		foreach (Collider2D Enemy in hitEnemies) {
 			if (Enemy.TryGetComponent<EnemyHealthController>(out EnemyHealthController opponent)) {

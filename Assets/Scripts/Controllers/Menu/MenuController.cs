@@ -19,10 +19,10 @@ namespace Controllers.Menu{
     //     }
 
         //Start a game without a save file
-        public void startNewGame(){
+        public void StartNewGame(){
             //SceneManager will load the specified scene to start the gameplay
             // can be made to load the next scene instead of a fixed one
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(3);
             //throw new System.NotImplementedException();
         }
 
@@ -33,7 +33,7 @@ namespace Controllers.Menu{
         }
 
         //Quit the application
-        public void quitToDesktop(){
+        public void QuitToDesktop(){
             //Debug print to show it works within unity
             Debug.Log("Quit!");
             // This wont work in unity itself but it does with a build
@@ -41,10 +41,6 @@ namespace Controllers.Menu{
         }
 
         //Navigate back to the main menu
-        public void quitToMainMenu(){
-            //return to the scene whith the main menu 
-            //First an unload scene?
-            SceneManager.LoadScene(0);
-        }
+        
     }
 }

@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class SettingsMenuController : MonoBehaviour
-{
-    public AudioMixer audioMixer;
-    public void setMasterVolume(float volume){
-        audioMixer.SetFloat("masterVolume", volume);
+namespace Controllers.Menu{
+    public class SettingsMenuController : MonoBehaviour
+    {
+        public AudioMixer AudioMixer;
+        public void SetMasterVolume(float volume){
+            AudioMixer.SetFloat("masterVolume", volume);
+        }
     }
 }

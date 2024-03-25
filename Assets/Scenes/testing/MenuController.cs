@@ -20,9 +20,10 @@ public class MenuController : MonoBehaviour, ISaveable {
         DisableButtons();
         Logger.Log("MenuController", "Starting new game");
 
+		SaveManager.Instance.ChangeSelectedProfileId("1");
+
         // Loads the default savestate, overwriting existing files.
         SaveManager.Instance.NewGame();
-
         SaveManager.Instance.SaveGame();
         SceneManager.LoadSceneAsync(1);
     }
@@ -30,6 +31,8 @@ public class MenuController : MonoBehaviour, ISaveable {
     public void OnContinue() {
         DisableButtons();
         Logger.Log("MenuController", "Loading Savefile");
+
+		SaveManager.Instance.ChangeSelectedProfileId("1");
 
         // Works w/ Savemanager OnSceneLoaded() to load the game.
         SaveManager.Instance.SaveGame();

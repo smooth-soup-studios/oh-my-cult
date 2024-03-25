@@ -4,4 +4,9 @@
         <ui:Label tabindex="-1" text="Dialog title" parse-escape-sequences="true" display-tooltip-when-elided="true" name="dialog-title" class="nomargin title" style="position: relative; margin-bottom: 8px; font-size: 80px;" />
         <ui:Label tabindex="-1" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." parse-escape-sequences="true" display-tooltip-when-elided="true" name="dialog-content" class="nomargin" style="position: relative; transition-duration: 0.5s; transition-timing-function: ease-out-cubic; color: rgb(255, 255, 255); font-size: 40px;" />
     </ui:VisualElement>
+    <ui:VisualElement name="hud" style="flex-grow: 1;">
+        <ui:VisualElement name="health-bar-base" style="height: 32px; position: absolute; left: 0; top: 0; margin-top: 16px; margin-left: 16px; width: 256px; background-color: rgb(128, 128, 128); border-top-left-radius: 16px; border-top-right-radius: 16px; border-bottom-right-radius: 16px; border-bottom-left-radius: 16px; overflow: hidden;">
+            <ui:VisualElement name="health-bar-value" style="flex-grow: 1; position: relative; width: 50%; background-color: rgb(255, 0, 0); transition-duration: 0.15s; transition-timing-function: ease-out-cubic;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
 </ui:UXML>

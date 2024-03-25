@@ -20,7 +20,7 @@ public class SaveManager : MonoBehaviour {
 	private string _selectedProfile = "";
 	private List<ISaveable> _saveables;
 	private GameData _gameData;
-	private IDataManager _dataManager;
+	protected IDataManager DataManager;
 
 	private static SaveManager _saveManager;
 	public static SaveManager Instance {
@@ -51,7 +51,7 @@ public class SaveManager : MonoBehaviour {
 #if UNITY_EDITOR // Make sure debugging savefiles don't fuck up production saves
 		_saveName += "-debug";
 #endif
-		_dataManager = new FileDataManager(Application.persistentDataPath, _saveName + ".WDF", _useEncryption);
+		DataManager = new FileDataManager(Application.persistentDataPath, _saveName + ".WDF", _useEncryption);
 	}
 
 	private void OnEnable() {
@@ -96,7 +96,7 @@ public class SaveManager : MonoBehaviour {
 	public void LoadGame() {
 		if (_enableSaving) {
 			SendToLogger("Loading game, looking for saves.");
-			_gameData = _dataManager.Load(_selectedProfile);
+			_gameData = DataManager.Load(_selectedProfile);
 
 			if (_gameData == null && _initializeData) {
 				SendToLogger("No save found, initializing new game.");
@@ -127,7 +127,7 @@ public class SaveManager : MonoBehaviour {
 
 			SendToLogger("Saving game.");
 			_saveables.ForEach(saveable => saveable?.SaveData(_gameData));
-			_dataManager.Save(_gameData, _selectedProfile);
+			DataManager.Save(_gameData, _selectedProfile);
 		}
 	}
 
@@ -143,7 +143,7 @@ public class SaveManager : MonoBehaviour {
 	}
 
 	public Dictionary<string, GameData> GetAllSaveSlotData() {
-		return _dataManager.LoadAllSaveSlots();
+		return DataManager.LoadAllSaveSlots();
 	}
 
 	public bool HasGameData() {

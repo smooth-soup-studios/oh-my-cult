@@ -1,5 +1,5 @@
 .closed {
-    translate: 0 100%;
+    translate: 0 120%;
 }
 
 .nomargin {
@@ -22,4 +22,13 @@ Label.title {
 #dialog-box Label {
     color: white;
     white-space: normal;
+}
+
+#dialog-box {
+    transition-timing-function: ease-out-cubic;
+    transition-duration: 0.5s;
+}
+
+#dialog-box.closed {
+    transition-timing-function: ease-in-cubic;
 }

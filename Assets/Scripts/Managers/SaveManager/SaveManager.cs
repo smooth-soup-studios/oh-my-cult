@@ -58,8 +58,7 @@ public class SaveManager : MonoBehaviour {
 		SceneManager.sceneLoaded += OnSceneLoaded;
 	}
 
-	// Subscribes to the sceneloaded unity event to ensure
-	public void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+	private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
 		_saveables = FindAllSaveables();
 		LoadGame();
 	}
@@ -74,15 +73,26 @@ public class SaveManager : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Changes the currently selected saveslot to the specified Id
+	/// </summary>
+	/// <param name="newProfileId"></param>
 	public void ChangeSelectedProfileId(string newProfileId) {
 		_selectedProfile = newProfileId;
 		LoadGame();
 	}
 
+	/// <summary>
+	/// Overwrites the locally stored data with a clean instance of GameData. </br>
+	///
+	/// </summary>
 	public void NewGame() {
 		_gameData = new GameData();
 	}
 
+	/// <summary>
+	/// Calls the LoadData method in each ISavable with the currently stored GameData instance
+	/// </summary>
 	public void LoadGame() {
 		if (_enableSaving) {
 			SendToLogger("Loading game, looking for saves.");
@@ -104,6 +114,10 @@ public class SaveManager : MonoBehaviour {
 
 	}
 
+	/// <summary>
+	/// Calls the SaveData method in each ISavable to save their data to the local GameData instance </br>
+	/// Writes the local GameData to disk afterwarts
+	/// </summary>
 	public void SaveGame() {
 		if (_enableSaving) {
 			if (_gameData == null) {
@@ -118,11 +132,13 @@ public class SaveManager : MonoBehaviour {
 	}
 
 
-
-	private List<ISaveable> FindAllSaveables() {
+	/// <summary>
+	/// Searches for all classes of defined types implementing the ISaveable interface
+	/// </summary>
+	/// <returns></returns>
+	protected List<ISaveable> FindAllSaveables() {
 		List<ISaveable> saveables = new();
 		saveables.AddRange(FindObjectsOfType<MonoBehaviour>().OfType<ISaveable>());
-		// saveables.AddRange(FindObjectsOfType<Object>().OfType<ISaveable>());
 		return saveables;
 	}
 

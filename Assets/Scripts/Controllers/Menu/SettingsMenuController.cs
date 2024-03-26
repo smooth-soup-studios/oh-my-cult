@@ -10,5 +10,9 @@ namespace Controllers.Menu{
         public void SetMasterVolume(float volume){
             AudioMixer.SetFloat("masterVolume", volume);
         }
+
+        public void SetMusicVolume(float volume){
+            AudioMixer.SetFloat("musicVolume", volume);
+        }
     }
 }

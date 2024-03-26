@@ -22,7 +22,7 @@ namespace Controllers.Menu{
         public void StartNewGame(){
             //SceneManager will load the specified scene to start the gameplay
             // can be made to load the next scene instead of a fixed one
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(1);
             //throw new System.NotImplementedException();
         }
 

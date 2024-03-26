@@ -215,8 +215,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1414724062}
-        m_TargetAssemblyTypeName: SettingsMenuController, Assembly-CSharp
-        m_MethodName: setMasterVolume
+        m_TargetAssemblyTypeName: Controllers.Menu.SettingsMenuController, Assembly-CSharp
+        m_MethodName: SetMasterVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -998,7 +998,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1581744364}
         m_TargetAssemblyTypeName: Controllers.Menu.MenuController, Assembly-CSharp
-        m_MethodName: quitToDesktop
+        m_MethodName: QuitToDesktop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1619,7 +1619,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1581744364}
         m_TargetAssemblyTypeName: Controllers.Menu.MenuController, Assembly-CSharp
-        m_MethodName: startNewGame
+        m_MethodName: StartNewGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1793,7 +1793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd03bd792c42e8419f404274933fae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioMixer: {fileID: 0}
+  AudioMixer: {fileID: 24100000, guid: b4749c34e5ea8cf42bb532fa0d3d2857, type: 2}
 --- !u!1 &1431805432
 GameObject:
   m_ObjectHideFlags: 0

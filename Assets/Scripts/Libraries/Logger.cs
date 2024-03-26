@@ -19,9 +19,9 @@ public static class Logger {
 
     public static void LogError(string name, string message) {
 		#if UNITY_EDITOR
-			Debug.Log($"<color=silver>[  <color=red>{name}</color>  ]: " + message + "</color>");
+			Debug.LogError($"<color=silver>[  <color=red>{name}</color>  ]: " + message + "</color>");
 		#else
-			Debug.Log($"[{name}]: {message}");
+			Debug.LogError($"[{name}]: {message}");
 		#endif
     }
 }

@@ -1,9 +1,15 @@
-﻿using MessagePack;
+﻿using System;
+using UnityEngine;
 
-namespace Data {
-
-[MessagePackObject]
+[Serializable]
 public class GameData {
-	//TODO: Define all the data to be used and saved
+	public PlayerData PlayerData = new();
 }
+
+
+[Serializable]
+public class PlayerData {
+	public Vector3 PlayerPosition = Vector3.zero;
+	public string SceneName = "";
+
 }

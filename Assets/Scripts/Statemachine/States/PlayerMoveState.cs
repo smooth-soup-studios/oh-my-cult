@@ -1,0 +1,53 @@
+using System.Collections;
+using UnityEngine;
+
+public class PlayerMoveState : BaseState {
+
+	bool _dash = false;
+	bool _attack = false;
+	float _speed = 10;
+	bool _dashCooldown = false;
+	public PlayerMoveState(string name, StateMachine stateMachine) : base(name, stateMachine) {
+	}
+
+	public override void EnterState() {
+		EventBus.Instance.Subscribe<bool>(EventType.DASH, OnDash);
+		EventBus.Instance.Subscribe<bool>(EventType.ATTACK, OnAttack);
+
+	}
+
+	public override void UpdateState() {
+		StateMachine.transform.Translate(_speed * Time.deltaTime * Movement);
+		if (Movement == Vector2.zero) {
+			StateMachine.SwitchState("Idle");
+		}
+		else if (!_dashCooldown && _dash) {
+			StateMachine.StartCoroutine(DashCooldown());
+			_dash = false;
+			StateMachine.SwitchState("Dash");
+		}
+		else if (_attack){
+			StateMachine.SwitchState("Attack");
+			_attack =false;
+		}
+	}
+
+	public override void ExitState() {
+		EventBus.Instance.Unsubscribe<bool>(EventType.DASH, OnDash);
+		EventBus.Instance.Unsubscribe<bool>(EventType.ATTACK,OnAttack);
+	}
+
+	private void OnDash(bool dash) {
+		if (!_dashCooldown) {
+			_dash = dash;
+		}
+	}
+	public IEnumerator DashCooldown() {
+		_dashCooldown = true;
+		yield return new WaitForSecondsRealtime(1.25f);
+		_dashCooldown = false;
+	}
+		private void OnAttack(bool attack) {
+		_attack = attack;
+	}
+}

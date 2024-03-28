@@ -8,7 +8,7 @@ using UnityEngine;
 /// </summary>
 public class ScreenShakeController : MonoBehaviour
 {
-    public static ScreenShakeController Instance;
+    public static ScreenShakeController Instance { get; private set; };
 
     private float? _shakeStart;
 
@@ -16,7 +16,14 @@ public class ScreenShakeController : MonoBehaviour
 
     void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame

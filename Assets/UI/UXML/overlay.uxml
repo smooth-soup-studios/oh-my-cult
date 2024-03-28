@@ -8,5 +8,6 @@
         <ui:VisualElement name="health-bar-base" style="height: 32px; position: absolute; left: 0; top: 0; margin-top: 16px; margin-left: 16px; width: 256px; background-color: rgb(128, 128, 128); border-top-left-radius: 16px; border-top-right-radius: 16px; border-bottom-right-radius: 16px; border-bottom-left-radius: 16px; overflow: hidden;">
             <ui:VisualElement name="health-bar-value" style="flex-grow: 1; position: relative; width: 50%; background-color: rgb(255, 0, 0); transition-duration: 0.15s; transition-timing-function: ease-out-cubic;" />
         </ui:VisualElement>
+        <ui:VisualElement name="key-indicator" style="flex-grow: 1; position: absolute; right: 16px; top: 16px; width: 64px; height: 64px; background-image: url(&quot;project://database/Assets/Art/Sprites/Objects/Key.png?fileID=2800000&amp;guid=d1bd523128efa3847ba2f3d94536aa5d&amp;type=3#Key&quot;); -unity-background-scale-mode: scale-to-fit;" />
     </ui:VisualElement>
 </ui:UXML>

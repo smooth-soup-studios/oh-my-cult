@@ -3,24 +3,25 @@ using System.Linq;
 using UnityEngine;
 
 public class StateMachine : MonoBehaviour {
-	BaseState _currentState;
-	List<BaseState> _states;
+    public bool HasPlaytestKey = false;
 
+    BaseState _currentState;
+    List<BaseState> _states;
 
-	void Start() {
-		_states = new List<BaseState> {
-			new PlayerIdleState("Idle", this)
-		};
-		_currentState = _states.FirstOrDefault(x => x.Name == "Idle");
-	}
+    void Start() {
+        _states = new List<BaseState> {
+            new PlayerIdleState("Idle", this)
+        };
+        _currentState = _states.FirstOrDefault(x => x.Name == "Idle");
+    }
 
-	public void SwitchState(string name) {
-		_currentState.ExitState();
-		_currentState = _states.FirstOrDefault(x => x.Name == name);
-		_currentState.EnterState();
-	}
+    public void SwitchState(string name) {
+        _currentState.ExitState();
+        _currentState = _states.FirstOrDefault(x => x.Name == name);
+        _currentState.EnterState();
+    }
 
-	void Update() {
-		_currentState.UpdateState();
-	}
+    void Update() {
+        _currentState.UpdateState();
+    }
 }

@@ -7,13 +7,11 @@ using UnityEngine.UI;
 public class MenuController : MonoBehaviour, ISaveable {
 	[SerializeField] private Button _newGameButton;
     [SerializeField] private Button _continueButton;
-    [SerializeField] private Button _loadGameButton;
     private string _lastSceneLoaded = "MovementTestScene";
 
     private void Start() {
         if (!SaveManager.Instance.HasGameData()) {
             _continueButton.interactable = false;
-            _loadGameButton.interactable = false;
         }
     }
 

@@ -42,7 +42,7 @@ public class ScreenShakeController : MonoBehaviour
         var x = Math.Cos(rad) * amp;
         var y = Math.Sin(rad) * amp;
 
-        transform.localPosition = new Vector3((float)x, (float)y, 0);
+        transform.localPosition = new Vector3(x, y, 0);
     }
 
     /// <summary>

@@ -13,8 +13,8 @@ public class MenuController : MonoBehaviour, ISaveable {
     private void Start() {
         if (!SaveManager.Instance.HasGameData()) {
             _continueButton.interactable = false;
-            _loadGameButton.interactable = false;
         }
+        _loadGameButton.interactable = false;
     }
 
 

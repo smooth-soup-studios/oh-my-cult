@@ -40,8 +40,8 @@ public class ScreenShakeController : MonoBehaviour {
         var rad = elapsedTime * _options.Rps * 360 * Mathf.Deg2Rad;
         var amp = (1 - elapsedTime / _options.Duration) * _options.Amplitude;
 
-        var x = (float)Math.Cos(rad) * amp;
-        var y = (float)Math.Sin(rad) * amp;
+        var x = Mathf.Cos(rad) * amp;
+        var y = Mathf.Sin(rad) * amp;
 
         transform.localPosition = new Vector3(x, y, 0);
     }

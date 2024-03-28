@@ -30,7 +30,7 @@ namespace Managers {
         }
 
         private void Update() {
-            _healthBarValue.style.width = new StyleLength(new Length(_debugHealth * 100, LengthUnit.Percent));
+            _healthBarValue.style.width = new StyleLength(new Length(PlayerStateMachine.Health * 100, LengthUnit.Percent));
             _keyIndicator.style.visibility = PlayerStateMachine.HasPlaytestKey ? Visibility.Visible : Visibility.Hidden;
         }
 

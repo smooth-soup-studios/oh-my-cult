@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StateMachine : MonoBehaviour {
     public bool HasPlaytestKey = false;
+    public float Health = 1f;
 
     BaseState _currentState;
     List<BaseState> _states;

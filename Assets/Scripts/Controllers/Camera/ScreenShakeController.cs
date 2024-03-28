@@ -6,27 +6,32 @@ using UnityEngine;
 /// <para />
 /// There is only one instance of this class in the game (as it is a singleton). This means that the latest GameObject to which this script is attached will be the only one to control the screen shake.
 /// </summary>
-public class ScreenShakeController : MonoBehaviour {
+public class ScreenShakeController : MonoBehaviour
+{
     public static ScreenShakeController Instance;
 
     private float? _shakeStart;
 
     private ScreenShakeOptions _options = new();
 
-    void Awake() {
+    void Awake()
+    {
         Instance = this;
     }
 
     // Update is called once per frame
-    void Update() {
-        if (!_shakeStart.HasValue) {
+    void Update()
+    {
+        if (!_shakeStart.HasValue)
+        {
             ResetShake();
             return;
         }
 
         var elapsedTime = Time.time - _shakeStart.Value;
 
-        if (elapsedTime > _options.Duration) {
+        if (elapsedTime > _options.Duration)
+        {
             ResetShake();
             return;
         }
@@ -46,7 +51,8 @@ public class ScreenShakeController : MonoBehaviour {
     /// <para/>Amplitude: .5f
     /// <para/>Rps: 15f
     /// </summary>
-    public void StartShake() {
+    public void StartShake()
+    {
         _shakeStart = Time.time;
         _options = _defaultScreenShakeOptions;
     }
@@ -56,9 +62,11 @@ public class ScreenShakeController : MonoBehaviour {
     /// <para/>Amplitude: .5f
     /// <para/>Rps: 15f
     /// </summary>
-    public void StartShake(float duration) {
+    public void StartShake(float duration)
+    {
         _shakeStart = Time.time;
-        _options = new ScreenShakeOptions() {
+        _options = new ScreenShakeOptions()
+        {
             Duration = duration
         };
     }
@@ -67,9 +75,11 @@ public class ScreenShakeController : MonoBehaviour {
     /// Start screen shake with default rps.
     /// <para/>Rps: 15f
     /// </summary>
-    public void StartShake(float duration, float amplitude) {
+    public void StartShake(float duration, float amplitude)
+    {
         _shakeStart = Time.time;
-        _options = new ScreenShakeOptions() {
+        _options = new ScreenShakeOptions()
+        {
             Duration = duration,
             Amplitude = amplitude
         };
@@ -78,7 +88,8 @@ public class ScreenShakeController : MonoBehaviour {
     /// <summary>
     /// Start screen shake with custom options.
     /// </summary>
-    public void StartShake(ScreenShakeOptions options) {
+    public void StartShake(ScreenShakeOptions options)
+    {
         _shakeStart = Time.time;
         _options = options;
     }
@@ -86,7 +97,8 @@ public class ScreenShakeController : MonoBehaviour {
     /// <summary>
     /// Reset & stop screen shake.
     /// </summary>
-    public void ResetShake() {
+    public void ResetShake()
+    {
         _shakeStart = null;
         transform.localPosition = Vector3.zero;
     }
@@ -94,8 +106,10 @@ public class ScreenShakeController : MonoBehaviour {
     private readonly ScreenShakeOptions _defaultScreenShakeOptions = new();
 }
 
-public class ScreenShakeOptions {
-    public ScreenShakeOptions() {
+public class ScreenShakeOptions
+{
+    public ScreenShakeOptions()
+    {
         Duration = .5f;
         Amplitude = .5f;
         Rps = 15f;

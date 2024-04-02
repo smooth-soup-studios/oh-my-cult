@@ -4,12 +4,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StateMachine : MonoBehaviour, ISaveable{
+public class StateMachine : MonoBehaviour, ISaveable {
 	[SerializeField] private TextMeshProUGUI _stateText;
 	[SerializeField] public Weapon Weapon;
+
 	private BaseState _currentState;
 	private List<BaseState> _states;
-	
+
 
 	void Start() {
 		_states = new List<BaseState> {
@@ -34,7 +35,7 @@ public class StateMachine : MonoBehaviour, ISaveable{
 
 	public void LoadData(GameData data) {
 		Vector3 savedPos = data.PlayerData.PlayerPosition;
-		if(savedPos != Vector3.zero){
+		if (savedPos != Vector3.zero) {
 			transform.position = savedPos;
 		}
 	}

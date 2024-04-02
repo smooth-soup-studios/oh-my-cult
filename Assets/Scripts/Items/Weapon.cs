@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using Controllers.AI;
 using UnityEngine;
 
 
 public class Weapon : MonoBehaviour {
 	public float AttackSpeed = 0.5f;
 	[SerializeField] private float _damage = 10f;
-	[SerializeField] private float _attackRange = 10f;
+	[SerializeField] private float _attackRange = 0.5f;
 	[SerializeField] private Transform _attackPoint;
 	[SerializeField] private LayerMask _enemyLayer;
 

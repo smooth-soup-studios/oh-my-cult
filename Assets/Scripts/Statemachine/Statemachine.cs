@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class StateMachine : MonoBehaviour, ISaveable{
 	[SerializeField] private TextMeshProUGUI _stateText;
-	[SerializeField] public Weapon Weapon; 
+	[SerializeField] public Weapon Weapon;
 	private BaseState _currentState;
 	private List<BaseState> _states;
+	
 
 	void Start() {
 		_states = new List<BaseState> {

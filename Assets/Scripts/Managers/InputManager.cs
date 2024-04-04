@@ -10,7 +10,7 @@ public class InputManager : MonoBehaviour {
 			Instance = this;
 		}
 		else {
-			Logger.LogWarning("InputManager", "Multiple Instances found! Exiting..");
+			Logger.LogWarning(_logname, "Multiple Instances found! Exiting..");
 			Destroy(this);
 			return;
 		}

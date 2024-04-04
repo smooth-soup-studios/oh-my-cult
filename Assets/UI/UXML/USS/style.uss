@@ -1,0 +1,34 @@
+.closed {
+    translate: 0 120%;
+}
+
+.nomargin {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+Label {
+    padding: 0;
+    -unity-font-definition: url("project://database/Assets/Fonts/Nunito-Regular%20SDF.asset?fileID=11400000&guid=567f51ed8cb86e248aab188637d932be&type=2#Nunito-Regular SDF");
+}
+
+Label.title {
+    -unity-font-definition: url("project://database/Assets/Fonts/Nunito-Black%20SDF.asset?fileID=11400000&guid=038122f9aba4e6646bdbc114c27046a5&type=2#Nunito-Black SDF");
+    font-size: 20px;
+}
+
+#dialog-box Label {
+    color: white;
+    white-space: normal;
+}
+
+#dialog-box {
+    transition-timing-function: ease-out-cubic;
+    transition-duration: 0.5s;
+}
+
+#dialog-box.closed {
+    transition-timing-function: ease-in-cubic;
+}

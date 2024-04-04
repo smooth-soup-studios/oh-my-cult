@@ -8,6 +8,9 @@ public class Enemy : MonoBehaviour {
 	public EnemyBaseState CurrentState;
 [SerializeField] public Weapon Weapon;
 
+public Vector2 TargetPosition;
+public Vector2 StartingPosition;
+
 	public Rigidbody2D Rb;
 	private string _logname = "AI controller";
 
@@ -19,7 +22,7 @@ public class Enemy : MonoBehaviour {
 
 	public bool PlayerDetect = false;
 
-
+	
 
 	private List<EnemyBaseState> _states;
 	public EnemyStatsSO Stats;
@@ -84,6 +87,7 @@ public class Enemy : MonoBehaviour {
 			return;
 		Gizmos.DrawWireSphere(ObjectDetection.position, Stats.ObstacleDetectDistance);
 		Gizmos.DrawWireSphere(ObjectDetection.position, Stats.PlayerDetectDistance);
+				Gizmos.DrawWireSphere(ObjectDetection.position, Stats.MeleeDetectDistance);
 	}
 	public void CheckForPlayer() {
 		// RaycastHit2D hitPlayer = Physics2D.Raycast(ObjectDetection.position, Vector2.right, PlayerDetectDistance, PlayerLayer);

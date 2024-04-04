@@ -19,10 +19,10 @@ public class EnemyAttackState : EnemyBaseState {
 
 	public override void UpdateState() {
 		if (Enemy.PlayerDetect == false) {
-			Enemy.SwitchState("Patrol");
+			Enemy.SwitchState("Charge");
 		}
 	}
 	public override void ExitState() {
-
+		Enemy.AttackMelee = false;
 	}
 }

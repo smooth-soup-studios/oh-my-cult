@@ -8,11 +8,12 @@ public class EnemyChargeState : EnemyBaseState {
 
 
 	public override void EnterState() {
+
 	}
 
 	public override void UpdateState() {
 		Logger.Log(Name, "Charge");
-		Charge();
+			Charge();
 		Enemy.CheckForMeleeRange();
 		if (Enemy.PlayerDetect == false) {
 			Enemy.SwitchState("Patrol");
@@ -28,6 +29,8 @@ public class EnemyChargeState : EnemyBaseState {
 	}
 
 	void Charge() {
-		Enemy.Rb.velocity = new Vector2(Enemy.Stats.ChargeSpeed * Enemy.FacingRight, Enemy.Rb.velocity.y);
+		Enemy.TargetPosition = GameObject.Find("PlayerBlob").transform.position;
+		Enemy.StartingPosition = Enemy.transform.position;
+		Enemy.transform.position = Vector2.MoveTowards(Enemy.transform.position, Enemy.TargetPosition, Enemy.Stats.Speed * Time.deltaTime);
 	}
 }

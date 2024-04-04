@@ -1,0 +1,42 @@
+fileFormatVersion: 2
+guid: cf009c0e213d56b499ae4e2548e4284a
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: f3268c876daf4890b6af6cd462063137, type: 3}
+  _reimportOnDependencyChange: 1
+  _pixelsPerUnit: 16
+  _sprites:
+  - name: Kopie_van_Sword_Outlined_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 200
+      width: 200
+      height: 200
+    spriteID: 028caed4b97b78143a1be361664f0b08
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Kopie_van_Sword_Outlined_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 563984d4de8d3bf4fb4de3bda2bbabcb
+    spriteOutline: []
+    tessellationDetail: 0
+  _secondaryTextures: []

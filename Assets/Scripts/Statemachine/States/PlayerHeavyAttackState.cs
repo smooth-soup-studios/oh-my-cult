@@ -2,20 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class PlayerAttackState : BaseState {
+public class PlayerHeavyAttackState : BaseState
+{
 	float _speed = 10;
-	private bool _onAttack = true;
-	public PlayerAttackState(string name, StateMachine stateMachine) : base(name, stateMachine) { }
-	public override void EnterState() {
+	private bool _onHeavyAttack = true;
+	public PlayerHeavyAttackState(string name, StateMachine stateMachine) : base(name, stateMachine) { }
+
+public override void EnterState() {
 
 		StateMachine.StartCoroutine(AttackSpeed());
-		StateMachine.Weapon.DeafaultAttack();
+		StateMachine.Weapon.HeavyAttack();
 	}
 
 	public override void UpdateState() {
 		StateMachine.transform.Translate(_speed * Time.deltaTime * Movement);
-		if (!_onAttack) {
+		if (!_onHeavyAttack) {
 			StateMachine.SwitchState("Idle");
 		}
 		else if (Movement == Vector2.zero) {
@@ -23,13 +24,11 @@ public class PlayerAttackState : BaseState {
 		}
 
 	}
-
-	public override void ExitState() {
+		public override void ExitState() {
 	}
-
-	private IEnumerator AttackSpeed() {
-		_onAttack = true;
+		private IEnumerator AttackSpeed() {
+		_onHeavyAttack = true;
 		yield return new WaitForSecondsRealtime(StateMachine.Weapon.AttackSpeed);
-		_onAttack = false;
+		_onHeavyAttack = false;
 	}
 }

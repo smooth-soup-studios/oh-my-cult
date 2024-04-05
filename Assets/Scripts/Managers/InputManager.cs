@@ -28,5 +28,8 @@ public class InputManager : MonoBehaviour {
 	public void OnDash(InputValue value) {
 		EventBus.Instance.TriggerEvent(EventType.DASH, value.isPressed);
 	}
+		public void OnHeavyAttack(InputValue value) {
+		EventBus.Instance.TriggerEvent(EventType.HEAVYATTACK, value.isPressed);
+	}
 
 }

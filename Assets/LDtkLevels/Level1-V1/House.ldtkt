@@ -1,0 +1,33 @@
+{
+  "Rects": null,
+  "Def": {
+    "__cHei": 6,
+    "__cWid": 4,
+    "cachedPixelData": {
+      "opaqueTiles": "000001100000000011111111",
+      "averageColors": "0b238b238b230b238b23fd22fd228b23fd22ff00ff00fd22fc96fc96fc96fc96fcdcf864f864fcdcfc96f864f864fc96"
+    },
+    "customData": [
+
+    ],
+    "embedAtlas": null,
+    "enumTags": [
+
+    ],
+    "identifier": "House",
+    "padding": 0,
+    "pxHei": 1200,
+    "pxWid": 800,
+    "relPath": "LevelAssets/Level1Assets/House.png",
+    "savedSelections": [
+
+    ],
+    "spacing": 0,
+    "tags": [
+
+    ],
+    "tagsSourceEnumUid": null,
+    "tileGridSize": 200,
+    "uid": 23
+  }
+}

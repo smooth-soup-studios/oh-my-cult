@@ -1,0 +1,33 @@
+{
+  "Rects": null,
+  "Def": {
+    "__cHei": 2,
+    "__cWid": 2,
+    "cachedPixelData": {
+      "opaqueTiles": "0000",
+      "averageColors": "46a64595a495a484"
+    },
+    "customData": [
+
+    ],
+    "embedAtlas": null,
+    "enumTags": [
+
+    ],
+    "identifier": "Kopie_van_Bush_Fruitless_V5",
+    "padding": 0,
+    "pxHei": 400,
+    "pxWid": 400,
+    "relPath": "LevelAssets/Level1Assets/Kopie van Bush-Fruitless-V5.png",
+    "savedSelections": [
+
+    ],
+    "spacing": 0,
+    "tags": [
+
+    ],
+    "tagsSourceEnumUid": null,
+    "tileGridSize": 200,
+    "uid": 12
+  }
+}

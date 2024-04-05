@@ -6,4 +6,5 @@ public enum EventType {
 	ATTACK,
 	PAUSE,
 	DASH,
+	HEAVYATTACK
 }

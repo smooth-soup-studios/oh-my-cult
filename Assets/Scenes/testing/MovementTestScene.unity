@@ -264,7 +264,7 @@ MonoBehaviour:
   AttackSpeed: 0.5
   _damage: 10
   _heavyDamage: 15
-  _attackRange: 0.5
+  _attackRange: 1
   _attackPoint: {fileID: 101425421}
   _enemyLayer:
     serializedVersion: 2
@@ -659,6 +659,7 @@ GameObject:
   - component: {fileID: 651934441}
   - component: {fileID: 651934439}
   - component: {fileID: 651934443}
+  - component: {fileID: 651934444}
   m_Layer: 0
   m_Name: PlayerBlob
   m_TagString: Untagged
@@ -793,6 +794,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5, y: 8}
   m_EdgeRadius: 0
+--- !u!114 &651934444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651934438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f0d07869b7ad747b46fdf13457c82e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &994417218
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,14 +1502,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bbd1af342d80be4d8d9343b9314b2e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Weapon: {fileID: 0}
+  Weapon: {fileID: 101425422}
   TargetPosition: {x: 0, y: 0}
   StartingPosition: {x: 0, y: 0}
   Rb: {fileID: 1652630314}
   ObjectDetection: {fileID: 269206714}
   GroundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   PlayerLayer:
     serializedVersion: 2
     m_Bits: 1

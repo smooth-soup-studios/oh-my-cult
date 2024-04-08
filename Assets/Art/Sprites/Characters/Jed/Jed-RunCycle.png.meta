@@ -1,0 +1,655 @@
+fileFormatVersion: 2
+guid: 8d8d1d2f14b9d36349d9b6a1cf98a455
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jed-RunCycle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2400
+        width: 408.33334
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a97c218178e33ca128694d256207afd0
+      internalID: -1883174767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-RunCycle_1
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 2400
+        width: 408.33334
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4184a538ef96e6087bb9cf67ecea958a
+      internalID: -486846705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-RunCycle_2
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 2400
+        width: 408.33334
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9394219fc7ee0ca00bbe5789e690f3df
+      internalID: 724126239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-RunCycle_3
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 2400
+        width: 408.33334
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ccf0692c361bb9fa538acad2d29d9a
+      internalID: -1838666239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-RunCycle_4
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 2400
+        width: 408.33334
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3201d5149b4c2e157a68a0cbe846adcd
+      internalID: -692199101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-RunCycle_5
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 2400
+        width: 408.33334
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3bafa57e3e6f2232afeefad76e1f05d
+      internalID: -420193867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-RunCycle_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1600
+        width: 408.33334
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a9a1fdddb276e49cbc1849b411d9141
+      internalID: -1058241246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-RunCycle_7
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 1600
+        width: 408.33334
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ed5f44c3f3123e894737a13f79830c
+      internalID: -1494544578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-RunCycle_8
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 1600
+        width: 408.33334
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78873da2e3a71e0ce8305b1448386354
+      internalID: 1616517991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-RunCycle_9
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 1600
+        width: 408.33334
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ecd094f3c87b6f3393ad26d1f036f72
+      internalID: 1431870372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-RunCycle_10
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1600
+        width: 408.33334
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e17b3f553007a313c8874ba8310a35c1
+      internalID: 2025987322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-RunCycle_11
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 1600
+        width: 408.33334
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cfa0d4d137688634bd05df1525670e9
+      internalID: -561117232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-RunCycle_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 408.33334
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8778ffcba03c3ab5b0313d0b725ab8a
+      internalID: 1570291035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-RunCycle_13
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 800
+        width: 408.33334
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c422f4ac91e01ff392d02b76ce73710
+      internalID: 2037934832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-RunCycle_14
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 800
+        width: 408.33334
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50682943a0d96fc4d8c69313221a62ba
+      internalID: 196623736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-RunCycle_15
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 800
+        width: 408.33334
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de8b42b0e4a62c3ffbd25690002b4d79
+      internalID: -1000278572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-RunCycle_16
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 800
+        width: 408.33334
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c39919b0be096957b8d1497d61273b4
+      internalID: 1620886869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-RunCycle_17
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 800
+        width: 408.33334
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76405ce318198cf2fa279385ccc07faa
+      internalID: 793563637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-RunCycle_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 408.33334
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c3c70cb1590827d197b514437246965
+      internalID: -1948400462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-RunCycle_19
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 0
+        width: 408.33334
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eadd04d2b328f343abbebaad51ffde4
+      internalID: 1156456631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-RunCycle_20
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 0
+        width: 408.33334
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0efb4f138a8d67aa664e9229f20089
+      internalID: -646230182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-RunCycle_21
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 0
+        width: 408.33334
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee51b39a85fb902584124a2022d7a3b
+      internalID: -1487726950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-RunCycle_22
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 0
+        width: 408.33334
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84b8faaff3303550a5eaef6f2c0152e
+      internalID: -1993463661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-RunCycle_23
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 0
+        width: 408.33334
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 620826d8eb5f9195898d2e16f3098bb0
+      internalID: -1987125801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Jed-RunCycle_0: -1883174767
+      Jed-RunCycle_1: -486846705
+      Jed-RunCycle_10: 2025987322
+      Jed-RunCycle_11: -561117232
+      Jed-RunCycle_12: 1570291035
+      Jed-RunCycle_13: 2037934832
+      Jed-RunCycle_14: 196623736
+      Jed-RunCycle_15: -1000278572
+      Jed-RunCycle_16: 1620886869
+      Jed-RunCycle_17: 793563637
+      Jed-RunCycle_18: -1948400462
+      Jed-RunCycle_19: 1156456631
+      Jed-RunCycle_2: 724126239
+      Jed-RunCycle_20: -646230182
+      Jed-RunCycle_21: -1487726950
+      Jed-RunCycle_22: -1993463661
+      Jed-RunCycle_23: -1987125801
+      Jed-RunCycle_3: -1838666239
+      Jed-RunCycle_4: -692199101
+      Jed-RunCycle_5: -420193867
+      Jed-RunCycle_6: -1058241246
+      Jed-RunCycle_7: -1494544578
+      Jed-RunCycle_8: 1616517991
+      Jed-RunCycle_9: 1431870372
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

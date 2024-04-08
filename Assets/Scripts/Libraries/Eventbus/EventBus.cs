@@ -194,7 +194,8 @@ public class EventBus : MonoBehaviour {
 	}
 
 	/// <summary>
-	/// Invokes the specified Event.
+	/// Invokes the specified Event. <br/>
+	/// Non-Generic version of this method
 	/// <para>
 	/// 	Usage:
 	/// 	<example>

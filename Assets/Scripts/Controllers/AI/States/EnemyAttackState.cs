@@ -16,7 +16,6 @@ public class EnemyAttackState : EnemyBaseState {
 		}
 	}
 
-
 	public override void UpdateState() {
 		if (Enemy.AttackMelee == false) {
 			Enemy.SwitchState("Charge");
@@ -24,7 +23,6 @@ public class EnemyAttackState : EnemyBaseState {
 		if(Enemy.PlayerDetect == false ){
 			Enemy.SwitchState("Patrol");
 		}
-
 
 	}
 	public override void ExitState() {
@@ -38,5 +36,4 @@ public class EnemyAttackState : EnemyBaseState {
 		yield return new WaitForSecondsRealtime(Enemy.Stats.AttackCooldown);
 		_attackCooldown = false;
 	}
-
 }

@@ -7,7 +7,6 @@ public class PlayerDetectedState : EnemyBaseState {
 
 	public override void EnterState() {
 		Logger.Log(Name, "Hello");
-		// base.EnterState();
 	}
 
 	public override void UpdateState() {
@@ -22,7 +21,6 @@ public class PlayerDetectedState : EnemyBaseState {
 		}
 	}
 	public override void ExitState() {
-		// Enemy.PlayerDetect= false;
 	}
 
 	IEnumerator PlayerDetected() {
@@ -36,5 +34,4 @@ public class PlayerDetectedState : EnemyBaseState {
 		yield return new WaitForSeconds(1);
 		Enemy.PlayerDetect = false;
 	}
-
 }

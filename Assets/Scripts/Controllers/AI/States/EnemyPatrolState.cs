@@ -19,6 +19,5 @@ public class EnemyPatrolState : EnemyBaseState {
 		}
 	}
 	public override void ExitState() {
-
 	}
 }

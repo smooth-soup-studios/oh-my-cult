@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerDashState : BaseState {
-	private float _dashSpeed = 25;
+	private float _dashSpeedModifier = 2.5f;
 	private bool _dash = true;
 	public PlayerDashState(string name, StateMachine stateMachine) : base(name, stateMachine) {
 	}
@@ -14,7 +14,7 @@ public class PlayerDashState : BaseState {
 
 	public override void UpdateState() {
 
-		StateMachine.transform.Translate(Movement * _dashSpeed * Time.deltaTime);
+		StateMachine.transform.Translate(StateMachine.BaseSpeed * _dashSpeedModifier * StateMachine.SpeedModifier * Time.deltaTime * Movement);
 		if (!_dash) {
 			StateMachine.SwitchState("Move");
 		}

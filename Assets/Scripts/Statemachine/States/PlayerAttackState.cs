@@ -4,9 +4,10 @@ using UnityEngine;
 
 
 public class PlayerAttackState : BaseState {
-	float _speed = 10;
 	private bool _onAttack = true;
+
 	public PlayerAttackState(string name, StateMachine stateMachine) : base(name, stateMachine) { }
+	
 	public override void EnterState() {
 
 		StateMachine.StartCoroutine(AttackSpeed());
@@ -14,18 +15,16 @@ public class PlayerAttackState : BaseState {
 	}
 
 	public override void UpdateState() {
-		StateMachine.transform.Translate(_speed * Time.deltaTime * Movement);
+		StateMachine.transform.Translate(StateMachine.BaseSpeed * StateMachine.SpeedModifier * Time.deltaTime * Movement);
 		if (!_onAttack) {
 			StateMachine.SwitchState("Idle");
 		}
 		else if (Movement == Vector2.zero) {
 			StateMachine.SwitchState("Move");
 		}
-
 	}
 
-	public override void ExitState() {
-	}
+	public override void ExitState() {}
 
 	private IEnumerator AttackSpeed() {
 		_onAttack = true;

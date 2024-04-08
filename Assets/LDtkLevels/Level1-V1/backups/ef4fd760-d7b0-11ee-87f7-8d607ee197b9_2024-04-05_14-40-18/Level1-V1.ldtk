@@ -38,7 +38,10 @@
 	"backupRelPath": null,
 	"levelNamePattern": "Level_%idx",
 	"tutorialDesc": null,
-	"customCommands": [],
+	"customCommands": [{
+		"command": "../../Library/LDtkTilesetExporter/ExportTilesetDefinition.exe \"Level1-V1\"",
+		"when": "AfterSave"
+	}],
 	"flags": [],
 	"defs": { "layers": [
 		{
@@ -4339,7 +4342,12 @@
 						{ "px": [2800,3000], "src": [0,0], "f": 0, "t": 0, "d": [314], "a": 1 },
 						{ "px": [3000,3000], "src": [200,0], "f": 0, "t": 1, "d": [315], "a": 1 },
 						{ "px": [2800,3200], "src": [0,200], "f": 0, "t": 2, "d": [334], "a": 1 },
-						{ "px": [3000,3200], "src": [200,200], "f": 0, "t": 3, "d": [335], "a": 1 }
+						{ "px": [3000,3200], "src": [200,200], "f": 0, "t": 3, "d": [335], "a": 1 },
+						{ "px": [2800,3800], "src": [0,0], "f": 0, "t": 0, "d": [394], "a": 1 },
+						{ "px": [3000,3800], "src": [0,0], "f": 0, "t": 0, "d": [395], "a": 1 },
+						{ "px": [3200,3800], "src": [0,0], "f": 0, "t": 0, "d": [396], "a": 1 },
+						{ "px": [3400,3800], "src": [0,0], "f": 0, "t": 0, "d": [397], "a": 1 },
+						{ "px": [3600,3800], "src": [0,0], "f": 0, "t": 0, "d": [398], "a": 1 }
 					],
 					"entityInstances": []
 				},

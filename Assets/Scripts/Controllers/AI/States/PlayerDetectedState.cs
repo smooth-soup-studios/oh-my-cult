@@ -12,27 +12,27 @@ public class PlayerDetectedState : EnemyBaseState {
 
 	public override void UpdateState() {
 		Enemy.CheckForPlayer();
-			Enemy.StartCoroutine(PlayerDetected());
+		Enemy.StartCoroutine(PlayerDetected());
 
-			if(Enemy.PlayerDetect == false){
-				Enemy.SwitchState("Patrol");
-			}
-			else if (Enemy.PlayerDetect == true){
-				Enemy.SwitchState("Charge");
-			}
+		if (Enemy.PlayerDetect == false) {
+			Enemy.SwitchState("Patrol");
+		}
+		else if (Enemy.PlayerDetect == true) {
+			Enemy.SwitchState("Charge");
+		}
 	}
 	public override void ExitState() {
-
+		// Enemy.PlayerDetect= false;
 	}
 
-		IEnumerator PlayerDetected() {
+	IEnumerator PlayerDetected() {
 		Enemy.Rb.velocity = Vector2.zero;
 
 		Logger.Log(Name, $"Player detected");
 		yield return new WaitForSeconds(Enemy.Stats.DetectionPauseTime);
 		Enemy.StartCoroutine(PlayerNotDetected());
 	}
-		public IEnumerator PlayerNotDetected() {
+	public IEnumerator PlayerNotDetected() {
 		yield return new WaitForSeconds(1);
 		Enemy.PlayerDetect = false;
 	}

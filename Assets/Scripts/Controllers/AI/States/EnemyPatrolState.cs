@@ -11,7 +11,6 @@ public class EnemyPatrolState : EnemyBaseState {
 	}
 
 	public override void UpdateState() {
-		// base.UpdateState();
 		Enemy.CheckForObstacles();
 		Enemy.CheckForPlayer();
 		Enemy.EnemyMovement();

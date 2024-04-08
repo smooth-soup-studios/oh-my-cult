@@ -19,6 +19,7 @@ public class EnemyStatsSO : ScriptableObject {
 	public float ChargeSpeed;
 	public float MeleeDetectDistance;
 
-	[Header ("Attack State")]
+	[Header("Attack State")]
 	public float DamageAmount;
+	public float AttackCooldown;
 }

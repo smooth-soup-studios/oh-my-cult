@@ -5,24 +5,38 @@ using UnityEngine;
 public class EnemyAttackState : EnemyBaseState {
 	public EnemyAttackState(Enemy enemy, string name) : base(enemy, name) { }
 
+	private bool _attackCooldown = true;
 	public override void EnterState() {
 		Logger.Log(Name, "Attack");
-		Collider2D[] hitMeleeTarget = Physics2D.OverlapCircleAll(Enemy.ObjectDetection.position, Enemy.Stats.MeleeDetectDistance, Enemy.PlayerLayer);
-		foreach (Collider2D hitCollider in hitMeleeTarget) {
-			IDamageable damageable = hitCollider.GetComponent<IDamageable>();
 
-			if (damageable != null) {
-				Enemy.Weapon.Attack();
-			}
+		Enemy.StartCoroutine(AttackSpeed());
+		Enemy.StartCoroutine(AttackCooldown());
+		if (_attackCooldown) {
+			Enemy.Weapon.DeafaultAttack();
 		}
 	}
 
+
 	public override void UpdateState() {
-		if (Enemy.PlayerDetect == false) {
+		if (Enemy.AttackMelee == false) {
 			Enemy.SwitchState("Charge");
 		}
+		if(Enemy.PlayerDetect == false ){
+			Enemy.SwitchState("Patrol");
+		}
+
+
 	}
 	public override void ExitState() {
 		Enemy.AttackMelee = false;
 	}
+	private IEnumerator AttackSpeed() {
+		yield return new WaitForSecondsRealtime(Enemy.Weapon.AttackSpeed);
+	}
+
+	private IEnumerator AttackCooldown() {
+		yield return new WaitForSecondsRealtime(Enemy.Stats.AttackCooldown);
+		_attackCooldown = false;
+	}
+
 }

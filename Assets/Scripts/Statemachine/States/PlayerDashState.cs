@@ -10,6 +10,7 @@ public class PlayerDashState : BaseState {
 	}
 	public override void EnterState() {
 		StateMachine.StartCoroutine(dashTime());
+		StateMachine.EchoDashController.StartEcho();
 	}
 
 	public override void UpdateState() {
@@ -21,6 +22,7 @@ public class PlayerDashState : BaseState {
 	}
 
 	public override void ExitState() {
+		StateMachine.EchoDashController.StopEcho();
 	}
 
 

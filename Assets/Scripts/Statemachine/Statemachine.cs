@@ -13,6 +13,8 @@ public class StateMachine : MonoBehaviour, ISaveable {
 	[SerializeField] private TextMeshProUGUI _stateText;
 	[SerializeField] public Weapon Weapon;
 
+	[HideInInspector] public EchoDashController EchoDashController;
+
 	[HideInInspector] public PlayerAnimationManager PlayerAnimator;
 	private BaseState _currentState;
 	private List<BaseState> _states;
@@ -29,6 +31,8 @@ public class StateMachine : MonoBehaviour, ISaveable {
 			new PlayerHeavyAttackState("HeavyAttack", this)
 		};
 		SwitchState("Idle");
+
+		EchoDashController = GetComponent<EchoDashController>();
 	}
 
 	void Update() {

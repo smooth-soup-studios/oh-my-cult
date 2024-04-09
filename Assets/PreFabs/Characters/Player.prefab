@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7474330799362213706}
   - component: {fileID: 4072784352789340470}
   - component: {fileID: 8530993155805609580}
+  - component: {fileID: 6290169931406716255}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -104,6 +105,7 @@ MonoBehaviour:
   BaseSpeed: 10
   _stateText: {fileID: 0}
   Weapon: {fileID: 294953526858250600}
+  EchoDashController: {fileID: 0}
 --- !u!61 &4072784352789340470
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -170,6 +172,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6290169931406716255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6908342227108556609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 143308678153da34ea09cf80b8830776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EchoGhostPrefab: {fileID: 5036995826059190279, guid: 16f811ba2291dad49a846047cacecc97, type: 3}
+  EchoDelay: 0.05
+  EchoLifetime: 0.5
 --- !u!1 &7208551151754622344
 GameObject:
   m_ObjectHideFlags: 0

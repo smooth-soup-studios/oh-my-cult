@@ -5,12 +5,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class StateMachine : MonoBehaviour, ISaveable {
+	private readonly string _logname = "StateMachine";
+	[Header("Debug settings")]
+	[SerializeField] private bool _changeStateLogging = false;
+
 	[Header("Movement Settings")]
 	public float SpeedModifier = 1;
 	public float BaseSpeed = 10;
 
+
 	[Header("Testing Refs")]
-	[SerializeField] private TextMeshProUGUI _stateText;
 	[SerializeField] public Weapon Weapon;
 
 	[HideInInspector] public PlayerAnimationManager PlayerAnimator;
@@ -37,9 +41,17 @@ public class StateMachine : MonoBehaviour, ISaveable {
 	}
 
 	public void SwitchState(string name) {
+		if (_changeStateLogging) {
+			Logger.Log(_logname, $"Exiting {_currentState}");
+		}
+
 		_currentState?.ExitState();
 		_currentState = _states.FirstOrDefault(x => x.Name == name);
-		_stateText?.SetText(_currentState.Name);
+
+		if (_changeStateLogging) {
+			Logger.Log(_logname, $"Entering {_currentState}");
+		}
+
 		_currentState?.EnterState();
 	}
 

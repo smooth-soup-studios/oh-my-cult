@@ -5,21 +5,22 @@ public class PlayerMoveState : BaseState {
 
 	bool _dash = false;
 	bool _attack = false;
-	float _speed = 10;
 	bool _dashCooldown = false;
-		bool _heavyAttack = false;
-	public PlayerMoveState(string name, StateMachine stateMachine) : base(name, stateMachine) {
-	}
+	bool _heavyAttack = false;
+
+	public PlayerMoveState(string name, StateMachine stateMachine) : base(name, stateMachine) { }
 
 	public override void EnterState() {
 		EventBus.Instance.Subscribe<bool>(EventType.DASH, OnDash);
 		EventBus.Instance.Subscribe<bool>(EventType.ATTACK, OnAttack);
 		EventBus.Instance.Subscribe<bool>(EventType.HEAVYATTACK, OnAttack);
-
 	}
 
 	public override void UpdateState() {
-		StateMachine.transform.Translate(_speed * Time.deltaTime * Movement);
+		StateMachine.transform.Translate(StateMachine.BaseSpeed * StateMachine.SpeedModifier * Time.deltaTime * Movement);
+		StateMachine.PlayerAnimator.Play("PlayerRun", MovementDirection);
+
+
 		if (Movement == Vector2.zero) {
 			StateMachine.SwitchState("Idle");
 		}
@@ -32,9 +33,9 @@ public class PlayerMoveState : BaseState {
 			StateMachine.SwitchState("Attack");
 			_attack = false;
 		}
-		else if (_heavyAttack){
+		else if (_heavyAttack) {
 			StateMachine.SwitchState("HeavyAttack");
-			_heavyAttack = false; 
+			_heavyAttack = false;
 		}
 	}
 
@@ -57,7 +58,7 @@ public class PlayerMoveState : BaseState {
 	private void OnAttack(bool attack) {
 		_attack = attack;
 	}
-	private void OnHeavyAttack(bool heavyAttack){
+	private void OnHeavyAttack(bool heavyAttack) {
 		_heavyAttack = heavyAttack;
 	}
 }

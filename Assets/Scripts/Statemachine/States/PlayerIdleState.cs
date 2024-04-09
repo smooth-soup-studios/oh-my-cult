@@ -15,6 +15,8 @@ public class PlayerIdleState : BaseState {
 	}
 
 	public override void UpdateState() {
+		StateMachine.PlayerAnimator.Play("PlayerIdle", MovementDirection);
+
 		if (Movement != Vector2.zero) {
 			StateMachine.SwitchState("Move");
 		}

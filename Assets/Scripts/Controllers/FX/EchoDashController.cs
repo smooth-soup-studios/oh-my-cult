@@ -8,10 +8,6 @@ public class EchoDashController : MonoBehaviour {
 
 	bool _doEcho = false;
 
-	void Awake() {
-		// _playerStateMachine = GetComponent<StateMachine>();
-	}
-
 	IEnumerator EchoCoroutine() {
 		while (_doEcho) {
 			GameObject echo = Instantiate(EchoGhostPrefab, transform.position, transform.rotation);

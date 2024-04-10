@@ -13,7 +13,7 @@ public class StateMachine : MonoBehaviour, ISaveable {
 	[SerializeField] private TextMeshProUGUI _stateText;
 	[SerializeField] public Weapon Weapon;
 
-	[HideInInspector] public EchoDashController EchoDashController;
+	[HideInInspector] public EchoDashController EchoDashController { get; private set; }
 
 	[HideInInspector] public PlayerAnimationManager PlayerAnimator;
 	private BaseState _currentState;

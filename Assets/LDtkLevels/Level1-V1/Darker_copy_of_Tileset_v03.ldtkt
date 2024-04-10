@@ -1,0 +1,33 @@
+{
+  "Rects": null,
+  "Def": {
+    "__cHei": 5,
+    "__cWid": 6,
+    "cachedPixelData": {
+      "opaqueTiles": "111111111111111111111111111111",
+      "averageColors": "f463f664f463f050f050f052f664f875f664f050f050f151f463f664f453f363f050f353f765f765f050f050f050f050f765f765f050f050f050f050"
+    },
+    "customData": [
+
+    ],
+    "embedAtlas": null,
+    "enumTags": [
+
+    ],
+    "identifier": "Darker_copy_of_Tileset_v03",
+    "padding": 0,
+    "pxHei": 1000,
+    "pxWid": 1200,
+    "relPath": "LevelAssets/Level1Assets/Darker copy of Tileset_v03.png",
+    "savedSelections": [
+
+    ],
+    "spacing": 0,
+    "tags": [
+
+    ],
+    "tagsSourceEnumUid": null,
+    "tileGridSize": 200,
+    "uid": 5
+  }
+}

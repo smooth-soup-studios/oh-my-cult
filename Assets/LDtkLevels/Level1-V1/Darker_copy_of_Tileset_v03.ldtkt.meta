@@ -1,0 +1,434 @@
+fileFormatVersion: 2
+guid: be0fd1a2ff57b584cbc210552fdac249
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: f3268c876daf4890b6af6cd462063137, type: 3}
+  _reimportOnDependencyChange: 1
+  _pixelsPerUnit: 16
+  _sprites:
+  - name: Darker_copy_of_Tileset_v03_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 800
+      width: 200
+      height: 200
+    spriteID: f53978a0261120540921b1f7215930bb
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 800
+      width: 200
+      height: 200
+    spriteID: b44a3c0df0a373543a05002d45c190e0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 400
+      y: 800
+      width: 200
+      height: 200
+    spriteID: bb2b923251eb27e40971d5395cb81406
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 800
+      width: 200
+      height: 200
+    spriteID: de1c2a1f6bce45049af4adec8990d585
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 800
+      y: 800
+      width: 200
+      height: 200
+    spriteID: b5d572d3e9371484d858d9b2787f70e6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 800
+      width: 200
+      height: 200
+    spriteID: 63985719ce59fee4ab7e0ce6e5151c07
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 600
+      width: 200
+      height: 200
+    spriteID: 802437960beb4254a9d7c1f467552750
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 600
+      width: 200
+      height: 200
+    spriteID: 9891888fe6548864cb7d388f5d9b858b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 400
+      y: 600
+      width: 200
+      height: 200
+    spriteID: b347270b6e426e04abfdfc880391d693
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 600
+      width: 200
+      height: 200
+    spriteID: 656ae39040494f14598d9d23b722ffc8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 800
+      y: 600
+      width: 200
+      height: 200
+    spriteID: 9e385c22d1700f84bb6205d61ca674c4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_11
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 600
+      width: 200
+      height: 200
+    spriteID: ce03f6f052040b941801fa3fd514104a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 400
+      width: 200
+      height: 200
+    spriteID: 755cd7a9c65ba1b4f86c209b51885385
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_13
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 400
+      width: 200
+      height: 200
+    spriteID: cf97b2feaf907724ca6d89264f90e33e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_14
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 400
+      y: 400
+      width: 200
+      height: 200
+    spriteID: 6291030fbe5e0434597e79105021bdef
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_15
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 400
+      width: 200
+      height: 200
+    spriteID: 3f8483db5e2dfe84295ec6d8ca02b2bb
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_16
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 800
+      y: 400
+      width: 200
+      height: 200
+    spriteID: 5a1af5bd3c70f684e914da52683a8d5c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_17
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 400
+      width: 200
+      height: 200
+    spriteID: bb9d87552fc88364f978938dc1caf6a4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_18
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 200
+      width: 200
+      height: 200
+    spriteID: 984b0620087bee040adb17d0b0b08be9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_19
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 200
+      width: 200
+      height: 200
+    spriteID: 49aa6c28f00744540b9f67b2c4d05d05
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_20
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 400
+      y: 200
+      width: 200
+      height: 200
+    spriteID: cef1d0997a8442144bc31145b2e86c54
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_21
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 200
+      width: 200
+      height: 200
+    spriteID: 014172080045398469d2b9af268e68b0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_22
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 800
+      y: 200
+      width: 200
+      height: 200
+    spriteID: 029d847b7edc4294585727635f80c1d3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_23
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 200
+      width: 200
+      height: 200
+    spriteID: 8dea53b858ad5dc44b104f0e57ee92a7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_24
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 90799e9293a30ed4ca153c249c4b6790
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_25
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 0a363eec5b383fe43b9dabe1827c2372
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_26
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 400
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 243b207ffa7c91243976f45fff88da68
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_27
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 0
+      width: 200
+      height: 200
+    spriteID: dbd9a323c72352b4ca6f25657be2392a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_28
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 800
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 258bb011d7127e4488eab604a42cdb60
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Darker_copy_of_Tileset_v03_29
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 1612f93106975d340a0bd828f889586b
+    spriteOutline: []
+    tessellationDetail: 0
+  _secondaryTextures: []

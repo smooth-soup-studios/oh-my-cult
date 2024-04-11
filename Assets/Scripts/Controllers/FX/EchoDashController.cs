@@ -14,11 +14,14 @@ public class EchoDashController : MonoBehaviour {
 
 			echo.GetComponent<EchoGhostController>().Lifetime = EchoLifetime;
 
-			echo.GetComponent<SpriteRenderer>().sprite = GetComponent<SpriteRenderer>().sprite;
-			echo.GetComponent<SpriteRenderer>().transform.localScale = GetComponent<SpriteRenderer>().transform.localScale;
-			echo.GetComponent<SpriteRenderer>().flipX = GetComponent<SpriteRenderer>().flipX;
-			echo.GetComponent<SpriteRenderer>().flipY = GetComponent<SpriteRenderer>().flipY;
-			echo.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.5f);
+			var echoRenderer = echo.GetComponent<SpriteRenderer>();
+			var playerRenderer = GetComponent<SpriteRenderer>();
+
+			echoRenderer.sprite = playerRenderer.sprite;
+			echoRenderer.transform.localScale = playerRenderer.transform.localScale;
+			echoRenderer.flipX = playerRenderer.flipX;
+			echoRenderer.flipY = playerRenderer.flipY;
+			echoRenderer.color = new Color(1, 1, 1, 0.5f);
 
 			yield return new WaitForSeconds(EchoDelay);
 		}
@@ -31,6 +34,8 @@ public class EchoDashController : MonoBehaviour {
 	}
 
 	public void StopEcho() {
+		StopCoroutine(EchoCoroutine());
+
 		_doEcho = false;
 	}
 }

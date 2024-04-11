@@ -46,7 +46,7 @@
 	"defs": { "layers": [
 		{
 			"__type": "IntGrid",
-			"identifier": "House_Collision",
+			"identifier": "Collider_Layer",
 			"type": "IntGrid",
 			"uid": 50,
 			"doc": null,
@@ -54,8 +54,8 @@
 			"gridSize": 200,
 			"guideGridWid": 0,
 			"guideGridHei": 0,
-			"displayOpacity": 1,
-			"inactiveOpacity": 1,
+			"displayOpacity": 0.25,
+			"inactiveOpacity": 0.25,
 			"hideInList": false,
 			"hideFieldsWhenInactive": false,
 			"canSelectWhenInactive": true,
@@ -70,7 +70,7 @@
 			"autoTilesKilledByOtherLayerUid": null,
 			"uiFilterTags": [],
 			"useAsyncRender": false,
-			"intGridValues": [{ "value": 1, "identifier": null, "color": "#000000", "tile": null, "groupUid": 0 }],
+			"intGridValues": [{ "value": 1, "identifier": "Collider", "color": "#27F227", "tile": null, "groupUid": 0 }],
 			"intGridValuesGroups": [],
 			"autoRuleGroups": [],
 			"autoSourceLayerDefUid": null,

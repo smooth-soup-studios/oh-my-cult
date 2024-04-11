@@ -11,7 +11,7 @@
 	"iid": "ef4fd760-d7b0-11ee-87f7-8d607ee197b9",
 	"jsonVersion": "1.5.3",
 	"appBuildId": 473703,
-	"nextUid": 48,
+	"nextUid": 49,
 	"identifierStyle": "Capitalize",
 	"toc": [],
 	"worldLayout": "Free",
@@ -375,16 +375,16 @@
 			"spacing": 0,
 			"padding": 0,
 			"tags": [],
-			"tagsSourceEnumUid": null,
-			"enumTags": [],
+			"tagsSourceEnumUid": 48,
+			"enumTags": [{ "enumValueId": "Colllider", "tileIds": [16,17,18,19,20,21,22,23] }],
 			"customData": [],
 			"savedSelections": [],
 			"cachedPixelData": {
-				"opaqueTiles": "000001100000000011111111",
-				"averageColors": "0b238b238b230b238b23fd22fd228b23fd22ff00ff00fd22fc96fc96fc96fc96fcdcf864f864fcdcfc96f864f864fc96"
+				"opaqueTiles": "000000000110011001100000",
+				"averageColors": "00000000000000001baab866a8661baae955f732f732e855f854f843f843f844e965f853f853e865d976f865f865d976"
 			}
 		}
-	], "enums": [], "externalEnums": [], "levelFields": [] },
+	], "enums": [{ "identifier": "Enum", "uid": 48, "values": [{ "id": "Colllider", "tileRect": null, "color": 12470831 }], "iconTilesetUid": 23, "externalRelPath": null, "externalFileChecksum": null, "tags": [] }], "externalEnums": [], "levelFields": [] },
 	"levels": [
 		{
 			"identifier": "Level_0",

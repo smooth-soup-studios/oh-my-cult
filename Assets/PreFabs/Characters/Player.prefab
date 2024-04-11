@@ -103,7 +103,7 @@ MonoBehaviour:
   SpeedModifier: 5
   BaseSpeed: 10
   _stateText: {fileID: 0}
-  Weapon: {fileID: 294953526858250600}
+  Weapon: {fileID: 0}
 --- !u!61 &4072784352789340470
 BoxCollider2D:
   m_ObjectHideFlags: 0

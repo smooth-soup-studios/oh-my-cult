@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHealthController : MonoBehaviour {
 	private string _logname = "Health controller";
-	float _maxHealth = 100;
+	[SerializeField] float _maxHealth = 100;
 	float _currentHealth;
 	// Start is called before the first frame update
 	void Start() {

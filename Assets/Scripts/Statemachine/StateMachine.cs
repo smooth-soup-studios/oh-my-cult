@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class StateMachine : MonoBehaviour, ISaveable {
 	private readonly string _logname = "StateMachine";
-	
+
 	[Header("Debug settings")]
 	[SerializeField] private bool _changeStateLogging = false;
 	public PlayerAnimationManager PlayerAnimator;
@@ -21,6 +21,9 @@ public class StateMachine : MonoBehaviour, ISaveable {
 	[Header("Testing Refs")]
 	[SerializeField] public Weapon Weapon;
 
+	[HideInInspector] public EchoDashController EchoDashController { get; private set; }
+
+	[HideInInspector] public PlayerAnimationManager PlayerAnimator;
 	private BaseState _currentState;
 	private List<BaseState> _states;
 
@@ -37,6 +40,8 @@ public class StateMachine : MonoBehaviour, ISaveable {
 			new PlayerHeavyAttackState("HeavyAttack", this)
 		};
 		SwitchState("Idle");
+
+		EchoDashController = GetComponent<EchoDashController>();
 	}
 
 	void Update() {
@@ -56,6 +61,11 @@ public class StateMachine : MonoBehaviour, ISaveable {
 		}
 
 		_currentState?.EnterState();
+	}
+
+	public void HandleMovement(Vector2 movement) {
+		Rigidbody2D _RigidBody = GetComponent<Rigidbody2D>();
+		_RigidBody.MovePosition(_RigidBody.position + movement);
 	}
 
 	private void SwitchSpriteOnMove(Vector2 movement) {

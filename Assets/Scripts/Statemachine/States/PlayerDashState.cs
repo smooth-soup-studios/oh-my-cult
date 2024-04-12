@@ -10,17 +10,19 @@ public class PlayerDashState : BaseState {
 	}
 	public override void EnterState() {
 		StateMachine.StartCoroutine(dashTime());
+		StateMachine.EchoDashController.StartEcho();
 	}
 
 	public override void UpdateState() {
+		StateMachine.HandleMovement(StateMachine.BaseSpeed * _dashSpeedModifier * StateMachine.SpeedModifier * Time.deltaTime * Movement.normalized);
 
-		StateMachine.transform.Translate(StateMachine.BaseSpeed * _dashSpeedModifier * StateMachine.SpeedModifier * Time.deltaTime * Movement);
 		if (!_dash) {
 			StateMachine.SwitchState("Move");
 		}
 	}
 
 	public override void ExitState() {
+		StateMachine.EchoDashController.StopEcho();
 	}
 
 

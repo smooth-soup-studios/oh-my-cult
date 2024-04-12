@@ -39,11 +39,8 @@ public class EnemyPatrolState : EnemyBaseState {
 
 	IEnumerator RestAtPoint() {
 		Enemy.IsResting = true;
-
 		yield return new WaitForSeconds(Enemy.RestTime);
-
 		// Move to next point or reset to start of the route
-
 		if (Enemy.RouteIndex == Enemy.Route.Length - 1) {
 			//Enemy.RouteIndex--;
 			Enemy.EndReached = true;
@@ -59,10 +56,6 @@ public class EnemyPatrolState : EnemyBaseState {
 		else if (Enemy.EndReached) {
 			Enemy.RouteIndex--;
 		}
-
-
-Logger.Log(Name, $"{Enemy.RouteIndex}");
-
 		// And make sure to set isResting back to false to allow the coroutine to start again at the next point.
 		Enemy.IsResting = false;
 	}

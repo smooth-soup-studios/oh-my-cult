@@ -8,22 +8,19 @@ public class Enemy : MonoBehaviour {
 
 	public EnemyBaseState CurrentState;
 	[SerializeField] public Weapon Weapon;
-	public Vector2 TargetPosition;
-	public Vector2 StartingPosition;
+
 	public Rigidbody2D Rb;
-	private string _logname = "AI controller";
 	public LayerMask GroundLayer, PlayerLayer;
-	public bool PlayerDetect = false;
+	[HideInInspector] public bool PlayerDetect = false;
 	private List<EnemyBaseState> _states;
 	public EnemyStatsSO Stats;
-	public bool AttackMelee = false;
+	[HideInInspector] public bool AttackMelee = false;
 	[SerializeField] public Transform[] Route;
 	public Transform Player;
-	public NavMeshAgent Agent;
-	public int RouteIndex = 0;
+	[HideInInspector] public int RouteIndex = 0;
 	[SerializeField] public float RestTime;
-	public bool IsResting = false;
-	public bool EndReached = false;
+	[HideInInspector] public bool IsResting = false;
+	[HideInInspector] public bool EndReached = false;
 
 
 	void Start() {
@@ -35,7 +32,7 @@ public class Enemy : MonoBehaviour {
 		};
 		SwitchState("Patrol");
 		Rb = GetComponent<Rigidbody2D>();
-		Agent = GetComponent<NavMeshAgent>();
+
 	}
 	public void SwitchState(string name) {
 		CurrentState?.ExitState();
@@ -47,25 +44,6 @@ public class Enemy : MonoBehaviour {
 		CurrentState.UpdateState();
 
 	}
-
-	public void EnemyMovement() {
-		if (!PlayerDetect) {
-			if (transform.position != Route[RouteIndex].position) {
-				// Move towards next point.
-				transform.position = Vector3.MoveTowards(
-				transform.position,
-				Route[RouteIndex].position,
-				Stats.Speed * Time.deltaTime);
-			}
-			else {
-				if (!IsResting) {
-					Logger.Log(name, "Rest");
-					StartCoroutine(RestAtPoint());
-				}
-			}
-		}
-	}
-
 
 	private void OnDrawGizmos() {
 		if (transform == null)
@@ -87,19 +65,5 @@ public class Enemy : MonoBehaviour {
 		if (hitMeleeTarget.Length >= 1) {
 			AttackMelee = true;
 		}
-	}
-	IEnumerator RestAtPoint() {
-		IsResting = true;
-		Logger.Log(name, "Rest");
-		yield return new WaitForSeconds(RestTime);
-
-		if (RouteIndex == Route.Length - 1) {
-			//RouteIndex = 0;
-		}
-		else {
-			RouteIndex++;
-		}
-
-		IsResting = false;
 	}
 }

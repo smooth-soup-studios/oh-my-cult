@@ -24,10 +24,6 @@ public class EnemyChargeState : EnemyBaseState {
 	}
 
 	void Charge() {
-		// Enemy.TargetPosition = GameObject.Find("Player").transform.position;
-		// Enemy.StartingPosition = Enemy.transform.position;
-		// Enemy.transform.position = Vector2.MoveTowards(Enemy.transform.position, Enemy.TargetPosition, Enemy.Stats.ChargeSpeed * Time.deltaTime* 2);
-
-		        Enemy.transform.position = Vector3.MoveTowards(Enemy.transform.position, Enemy.Player.position, Enemy.Stats.ChargeSpeed * Time.deltaTime* 2);
+		Enemy.transform.position = Vector3.MoveTowards(Enemy.transform.position, Enemy.Player.position, Enemy.Stats.ChargeSpeed * Time.deltaTime * 2);
 	}
 }

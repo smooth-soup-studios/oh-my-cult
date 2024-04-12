@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c1cbc21133971504c8fc0a5f543ae601
+guid: 058cdecb37edbee4f9bb07aab1f03f97
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -9,18 +9,16 @@ ScriptedImporter:
   assetBundleVariant: 
   script: {fileID: 11500000, guid: aaa16bfc62c086f4fb45da87b6acf9b1, type: 3}
   _reimportOnDependencyChange: 1
-  _jsonFile: {fileID: -164016180542632921, guid: c1cbc21133971504c8fc0a5f543ae601, type: 3}
+  _jsonFile: {instanceID: 0}
   _pixelsPerUnit: 16
   _customLevelPrefab: {instanceID: 0}
   _intGridValueColorsVisible: 0
   _useCompositeCollider: 1
-  _geometryType: 1
+  _geometryType: 0
   _createBackgroundColor: 1
   _createLevelBoundsTrigger: 0
-  _intGridValues:
-  - _key: Collider_Layer_1
-    _asset: {fileID: 11400000, guid: b824373bb8ff10d45a323b4058099d72, type: 2}
+  _intGridValues: []
   _entities: []
-  _enumGenerate: 1
+  _enumGenerate: 0
   _enumPath: 
   _enumNamespace: 

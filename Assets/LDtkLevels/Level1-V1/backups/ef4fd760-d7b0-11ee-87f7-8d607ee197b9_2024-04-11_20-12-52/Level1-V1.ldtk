@@ -46,7 +46,7 @@
 	"defs": { "layers": [
 		{
 			"__type": "IntGrid",
-			"identifier": "Collider_Layer",
+			"identifier": "House_Collision",
 			"type": "IntGrid",
 			"uid": 50,
 			"doc": null,
@@ -54,8 +54,8 @@
 			"gridSize": 200,
 			"guideGridWid": 0,
 			"guideGridHei": 0,
-			"displayOpacity": 0.25,
-			"inactiveOpacity": 0.25,
+			"displayOpacity": 1,
+			"inactiveOpacity": 1,
 			"hideInList": false,
 			"hideFieldsWhenInactive": false,
 			"canSelectWhenInactive": true,
@@ -70,7 +70,7 @@
 			"autoTilesKilledByOtherLayerUid": null,
 			"uiFilterTags": [],
 			"useAsyncRender": false,
-			"intGridValues": [{ "value": 1, "identifier": "Collider", "color": "#27F227", "tile": null, "groupUid": 0 }],
+			"intGridValues": [{ "value": 1, "identifier": null, "color": "#000000", "tile": null, "groupUid": 0 }],
 			"intGridValuesGroups": [],
 			"autoRuleGroups": [],
 			"autoSourceLayerDefUid": null,
@@ -410,8 +410,8 @@
 			"spacing": 0,
 			"padding": 0,
 			"tags": [],
-			"tagsSourceEnumUid": null,
-			"enumTags": [],
+			"tagsSourceEnumUid": 48,
+			"enumTags": [{ "enumValueId": "Colllider", "tileIds": [16,17,18,19,20,21,22,23] }],
 			"customData": [],
 			"savedSelections": [],
 			"cachedPixelData": {
@@ -419,7 +419,7 @@
 				"averageColors": "00000000000000001baab866a8661baae955f732f732e855f854f843f843f844e965f853f853e865d976f865f865d976"
 			}
 		}
-	], "enums": [], "externalEnums": [], "levelFields": [] },
+	], "enums": [{ "identifier": "Enum", "uid": 48, "values": [{ "id": "Colllider", "tileRect": null, "color": 12470831 }], "iconTilesetUid": 23, "externalRelPath": null, "externalFileChecksum": null, "tags": [] }], "externalEnums": [], "levelFields": [] },
 	"levels": [
 		{
 			"identifier": "Level_0",
@@ -4037,8 +4037,8 @@
 						0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 						0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 						0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-						1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,
-						0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+						1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,
+						0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 						0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 						0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 						0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

@@ -23,7 +23,6 @@ public class StateMachine : MonoBehaviour, ISaveable {
 
 	[HideInInspector] public EchoDashController EchoDashController { get; private set; }
 
-	[HideInInspector] public PlayerAnimationManager PlayerAnimator;
 	private BaseState _currentState;
 	private List<BaseState> _states;
 

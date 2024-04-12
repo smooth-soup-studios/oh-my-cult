@@ -19,6 +19,20 @@ public class StateMachine : MonoBehaviour, ISaveable {
 	private BaseState _currentState;
 	private List<BaseState> _states;
 
+	[Header("Latest Door")]
+	public int LatestDoor = 0;
+
+	void Awake() {
+		GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+		foreach (GameObject player in players) {
+			if (player != gameObject) {
+				Destroy(gameObject);
+			}
+		}
+
+		DontDestroyOnLoad(this);
+	}
+
 	void Start() {
 		PlayerAnimator = new(GetComponent<Animator>());
 		EventBus.Instance.Subscribe<Vector2>(EventType.MOVEMENT, SwitchSpriteOnMove);

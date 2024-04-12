@@ -10,7 +10,7 @@ public class PlayerAnimationManager {
 	public void Play(string animationName, MovementDirection direction) {
 		string animation = animationName + "-" + ConvertMovementToAnimation(direction);
 		_animator.Play(animation);
-		Logger.Log(_logname, animation);
+		// Logger.Log(_logname, animation);
 	}
 
 	public void Play(string animationName) {

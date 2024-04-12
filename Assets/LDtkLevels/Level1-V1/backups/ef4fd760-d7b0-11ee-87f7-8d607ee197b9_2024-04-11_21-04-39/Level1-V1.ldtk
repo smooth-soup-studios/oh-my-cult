@@ -46,7 +46,7 @@
 	"defs": { "layers": [
 		{
 			"__type": "IntGrid",
-			"identifier": "Collider_Layer",
+			"identifier": "House_Collision",
 			"type": "IntGrid",
 			"uid": 50,
 			"doc": null,

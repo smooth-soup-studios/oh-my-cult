@@ -14,8 +14,8 @@ public class PlayerDashState : BaseState {
 	}
 
 	public override void UpdateState() {
+		StateMachine.HandleMovement(StateMachine.BaseSpeed * _dashSpeedModifier * StateMachine.SpeedModifier * Time.deltaTime * Movement.normalized);
 
-		StateMachine.transform.Translate(StateMachine.BaseSpeed * _dashSpeedModifier * StateMachine.SpeedModifier * Time.deltaTime * Movement);
 		if (!_dash) {
 			StateMachine.SwitchState("Move");
 		}

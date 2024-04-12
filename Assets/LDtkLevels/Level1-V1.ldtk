@@ -10,7 +10,7 @@
 	},
 	"iid": "ef4fd760-d7b0-11ee-87f7-8d607ee197b9",
 	"jsonVersion": "1.5.3",
-	"appBuildId": 475644,
+	"appBuildId": 473703,
 	"nextUid": 48,
 	"identifierStyle": "Capitalize",
 	"toc": [],
@@ -39,7 +39,7 @@
 	"levelNamePattern": "Level_%idx",
 	"tutorialDesc": null,
 	"customCommands": [{
-		"command": "../../Library/LDtkTilesetExporterForLinux/ExportTilesetDefinitionNetCore \"Level1-V1\"",
+		"command": "../../Library/LDtkTilesetExporter/ExportTilesetDefinition.exe \"Level1-V1\"",
 		"when": "AfterSave"
 	}],
 	"flags": [],
@@ -202,10 +202,7 @@
 			"enumTags": [],
 			"customData": [],
 			"savedSelections": [],
-			"cachedPixelData": {
-				"opaqueTiles": "111111111111111111111111111111",
-				"averageColors": "f463f664f463f050f050f052f664f875f664f050f050f151f463f664f453f363f050f353f765f765f050f050f050f050f765f765f050f050f050f050"
-			}
+			"cachedPixelData": null
 		},
 		{
 			"__cWid": 1,
@@ -224,7 +221,7 @@
 			"enumTags": [],
 			"customData": [],
 			"savedSelections": [],
-			"cachedPixelData": { "opaqueTiles": "0", "averageColors": "6987" }
+			"cachedPixelData": null
 		},
 		{
 			"__cWid": 1,
@@ -243,7 +240,7 @@
 			"enumTags": [],
 			"customData": [],
 			"savedSelections": [],
-			"cachedPixelData": { "opaqueTiles": "0", "averageColors": "8987" }
+			"cachedPixelData": null
 		},
 		{
 			"__cWid": 1,
@@ -262,7 +259,7 @@
 			"enumTags": [],
 			"customData": [],
 			"savedSelections": [],
-			"cachedPixelData": { "opaqueTiles": "00", "averageColors": "48986888" }
+			"cachedPixelData": null
 		},
 		{
 			"__cWid": 1,
@@ -281,7 +278,7 @@
 			"enumTags": [],
 			"customData": [],
 			"savedSelections": [],
-			"cachedPixelData": { "opaqueTiles": "0", "averageColors": "6bb8" }
+			"cachedPixelData": null
 		},
 		{
 			"__cWid": 3,
@@ -300,10 +297,7 @@
 			"enumTags": [],
 			"customData": [],
 			"savedSelections": [],
-			"cachedPixelData": {
-				"opaqueTiles": "000010010010000000",
-				"averageColors": "39996aa939998a87f9757a879b98fa748b98cb86fa63bb979a87eb758a986ca9dca85ca9"
-			}
+			"cachedPixelData": null
 		},
 		{
 			"__cWid": 1,
@@ -322,7 +316,7 @@
 			"enumTags": [],
 			"customData": [],
 			"savedSelections": [],
-			"cachedPixelData": { "opaqueTiles": "0", "averageColors": "6696" }
+			"cachedPixelData": null
 		},
 		{
 			"__cWid": 2,
@@ -341,7 +335,7 @@
 			"enumTags": [],
 			"customData": [],
 			"savedSelections": [],
-			"cachedPixelData": { "opaqueTiles": "0000", "averageColors": "46a64595a495a484" }
+			"cachedPixelData": null
 		},
 		{
 			"__cWid": 2,
@@ -360,7 +354,7 @@
 			"enumTags": [],
 			"customData": [],
 			"savedSelections": [],
-			"cachedPixelData": { "opaqueTiles": "0000", "averageColors": "46a64595a495a484" }
+			"cachedPixelData": null
 		},
 		{
 			"__cWid": 4,
@@ -379,10 +373,7 @@
 			"enumTags": [],
 			"customData": [],
 			"savedSelections": [],
-			"cachedPixelData": {
-				"opaqueTiles": "000001100000000011111111",
-				"averageColors": "0b238b238b230b238b23fd22fd228b23fd22ff00ff00fd22fc96fc96fc96fc96fcdcf864f864fcdcfc96f864f864fc96"
-			}
+			"cachedPixelData": null
 		}
 	], "enums": [], "externalEnums": [], "levelFields": [] },
 	"levels": [

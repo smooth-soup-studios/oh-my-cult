@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24d2561a4a36f64468404933915b7b49, type: 3}
   m_Name: New Enemy Stats SO
   m_EditorClassIdentifier: 
-  Speed: 5
-  ObstacleDetectDistance: 0.5
+  Speed: 10
+  ObstacleDetectDistance: 4
   DetectionPauseTime: 0
-  PlayerDetectDistance: 3
-  ChargeSpeed: 7
-  MeleeDetectDistance: 1.5
+  PlayerDetectDistance: 25
+  ChargeSpeed: 15
+  MeleeDetectDistance: 12
   DamageAmount: 8
   AttackCooldown: 10
+  AttackRange: 0

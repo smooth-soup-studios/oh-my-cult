@@ -2,21 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour {
+
 	public EnemyBaseState CurrentState;
 	[SerializeField] public Weapon Weapon;
 	public Vector2 TargetPosition;
 	public Vector2 StartingPosition;
 	public Rigidbody2D Rb;
 	private string _logname = "AI controller";
-	public Transform ObjectDetection;
 	public LayerMask GroundLayer, PlayerLayer;
-	public int FacingRight = 1;
 	public bool PlayerDetect = false;
 	private List<EnemyBaseState> _states;
 	public EnemyStatsSO Stats;
 	public bool AttackMelee = false;
+	[SerializeField] public Transform[] Route;
+	public Transform Player;
+	public NavMeshAgent Agent;
+	public int RouteIndex = 0;
+	[SerializeField] public float RestTime;
+	public bool IsResting = false;
+	public bool EndReached = false;
+
 
 	void Start() {
 		_states = new List<EnemyBaseState>{
@@ -26,6 +34,8 @@ public class Enemy : MonoBehaviour {
 			new EnemyAttackState(this, "Attack")
 		};
 		SwitchState("Patrol");
+		Rb = GetComponent<Rigidbody2D>();
+		Agent = GetComponent<NavMeshAgent>();
 	}
 	public void SwitchState(string name) {
 		CurrentState?.ExitState();
@@ -35,51 +45,61 @@ public class Enemy : MonoBehaviour {
 
 	private void Update() {
 		CurrentState.UpdateState();
+
 	}
 
 	public void EnemyMovement() {
 		if (!PlayerDetect) {
-			if (FacingRight == 1) {
-				Rb.velocity = new Vector2(Stats.Speed, Rb.velocity.y);
+			if (transform.position != Route[RouteIndex].position) {
+				// Move towards next point.
+				transform.position = Vector3.MoveTowards(
+				transform.position,
+				Route[RouteIndex].position,
+				Stats.Speed * Time.deltaTime);
 			}
 			else {
-				Rb.velocity = new Vector2(-Stats.Speed, Rb.velocity.y);
+				if (!IsResting) {
+					Logger.Log(name, "Rest");
+					StartCoroutine(RestAtPoint());
+				}
 			}
 		}
 	}
 
-	public void CheckForObstacles() {
-		Collider2D[] hitObstacles = Physics2D.OverlapCircleAll(ObjectDetection.position, Stats.ObstacleDetectDistance, GroundLayer);
-
-		if (hitObstacles.Length >= 1) {
-			Logger.Log(_logname, $"Hit a wall");
-			Rotate();
-		}
-	}
 
 	private void OnDrawGizmos() {
-		if (ObjectDetection == null)
+		if (transform == null)
 			return;
-		Gizmos.DrawWireSphere(ObjectDetection.position, Stats.ObstacleDetectDistance);
-		Gizmos.DrawWireSphere(ObjectDetection.position, Stats.PlayerDetectDistance);
-		Gizmos.DrawWireSphere(ObjectDetection.position, Stats.MeleeDetectDistance);
+		Gizmos.DrawWireSphere(transform.position, Stats.ObstacleDetectDistance);
+		Gizmos.DrawWireSphere(transform.position, Stats.PlayerDetectDistance);
+		Gizmos.DrawWireSphere(transform.position, Stats.MeleeDetectDistance);
 	}
 	public void CheckForPlayer() {
-		Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(ObjectDetection.position, Stats.PlayerDetectDistance, PlayerLayer);
+		Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(transform.position, Stats.PlayerDetectDistance, PlayerLayer);
 
 		if (hitPlayers.Length >= 1) {
 			PlayerDetect = true;
 		}
 	}
 	public void CheckForMeleeRange() {
-		Collider2D[] hitMeleeTarget = Physics2D.OverlapCircleAll(ObjectDetection.position, Stats.MeleeDetectDistance, PlayerLayer);
+		Collider2D[] hitMeleeTarget = Physics2D.OverlapCircleAll(transform.position, Stats.MeleeDetectDistance, PlayerLayer);
 
 		if (hitMeleeTarget.Length >= 1) {
 			AttackMelee = true;
 		}
 	}
-	void Rotate() {
-		transform.Rotate(0, 180, 0);
-		FacingRight = -FacingRight;
+	IEnumerator RestAtPoint() {
+		IsResting = true;
+		Logger.Log(name, "Rest");
+		yield return new WaitForSeconds(RestTime);
+
+		if (RouteIndex == Route.Length - 1) {
+			//RouteIndex = 0;
+		}
+		else {
+			RouteIndex++;
+		}
+
+		IsResting = false;
 	}
 }

@@ -9,6 +9,7 @@ public class EnemyStatsSO : ScriptableObject {
 	public float ObstacleDetectDistance;
 
 
+
 	[Header("Player Detection")]
 
 	public float DetectionPauseTime;
@@ -22,4 +23,5 @@ public class EnemyStatsSO : ScriptableObject {
 	[Header("Attack State")]
 	public float DamageAmount;
 	public float AttackCooldown;
+	public float AttackRange; 
 }

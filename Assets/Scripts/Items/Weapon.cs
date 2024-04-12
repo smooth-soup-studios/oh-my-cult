@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour {
 	[SerializeField] private Transform _attackPoint;
 	[SerializeField] private LayerMask _enemyLayer;
 
-	public void DeafaultAttack() {
+	public void DefaultAttack() {
 		Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(_attackPoint.position, _attackRange, _enemyLayer);
 		foreach (Collider2D Enemy in hitEnemies) {
 			if (Enemy.TryGetComponent<EnemyHealthController>(out EnemyHealthController opponent)) {

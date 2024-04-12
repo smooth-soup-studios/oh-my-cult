@@ -39,7 +39,7 @@
 	"levelNamePattern": "Level_%idx",
 	"tutorialDesc": null,
 	"customCommands": [{
-		"command": "../../Library/LDtkTilesetExporter/ExportTilesetDefinition.exe \"Level1-V1\"",
+		"command": "../../Library/LDtkTilesetExporterForLinux/ExportTilesetDefinitionNetCore \"Level1-V1\"",
 		"when": "AfterSave"
 	}],
 	"flags": [],

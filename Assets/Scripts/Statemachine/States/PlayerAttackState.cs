@@ -7,11 +7,11 @@ public class PlayerAttackState : BaseState {
 	private bool _onAttack = true;
 
 	public PlayerAttackState(string name, StateMachine stateMachine) : base(name, stateMachine) { }
-	
+
 	public override void EnterState() {
 
 		StateMachine.StartCoroutine(AttackSpeed());
-		StateMachine.Weapon.DeafaultAttack();
+		StateMachine.Weapon.DefaultAttack();
 	}
 
 	public override void UpdateState() {

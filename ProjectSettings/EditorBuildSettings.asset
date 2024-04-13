@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/testing/Menu_Tim.unity
     guid: 7a5b3f44995ceed48a7c7d0f2fc92cc9
   - enabled: 1
-    path: Assets/Scenes/testing/TempKeybindingScene.unity
+    path: Assets/Scenes/testing/PllastestMenuScenes/TempKeybindingScene.unity
     guid: f071c88293b405745abac9b659f15e09
   - enabled: 1
-    path: Assets/Scenes/testing/TempTutorialScene.unity
+    path: Assets/Scenes/testing/PllastestMenuScenes/TempTutorialScene.unity
     guid: 51aee8ad44bf27b4d8b6f8521b635736
   - enabled: 1
     path: Assets/Scenes/testing/MovementTestScene.unity

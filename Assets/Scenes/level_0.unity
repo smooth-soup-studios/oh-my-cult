@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 91665163}
   - component: {fileID: 91665162}
   - component: {fileID: 91665161}
+  - component: {fileID: 91665164}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -245,8 +246,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef03c7747a5e200429fbc785a8aa2249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Stats: {fileID: 11400000, guid: 31ba062b28779dc41b17562ed19e959a, type: 2}
+  BossAttacks: {fileID: 91665164}
+  Player: {fileID: 1777830095}
   _animator: {fileID: 91665159}
-  _attackCooldown: 3
+  StateCounter: 0
+  Enemy: 0
 --- !u!114 &91665161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,6 +337,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 34.5625, y: 38.0625}
   m_EdgeRadius: 0
+--- !u!114 &91665164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91665156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1924c666996d55d4b8952fb747f82425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stats: {fileID: 11400000, guid: 31ba062b28779dc41b17562ed19e959a, type: 2}
+  EnemyLayer:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!1001 &146896846
 PrefabInstance:
   m_ObjectHideFlags: 0

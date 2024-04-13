@@ -21,7 +21,7 @@ public class PLaytestForm : MonoBehaviour
 
     void OnYesButton(){
         Logger.Log("Forms", "Opening the form");
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://forms.gle/xaRoFbseE2cSS3J69");
     }
 
     void OnNoButton(){

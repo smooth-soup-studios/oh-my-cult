@@ -4,23 +4,25 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerDashState : BaseState {
-	private float _dashSpeed = 25;
+	private float _dashSpeedModifier = 2.5f;
 	private bool _dash = true;
 	public PlayerDashState(string name, StateMachine stateMachine) : base(name, stateMachine) {
 	}
 	public override void EnterState() {
 		StateMachine.StartCoroutine(dashTime());
+		StateMachine.EchoDashController.StartEcho();
 	}
 
 	public override void UpdateState() {
+		StateMachine.HandleMovement(StateMachine.BaseSpeed * _dashSpeedModifier * StateMachine.SpeedModifier * Time.deltaTime * Movement.normalized);
 
-		StateMachine.transform.Translate(Movement * _dashSpeed * Time.deltaTime);
 		if (!_dash) {
 			StateMachine.SwitchState("Move");
 		}
 	}
 
 	public override void ExitState() {
+		StateMachine.EchoDashController.StopEcho();
 	}
 
 

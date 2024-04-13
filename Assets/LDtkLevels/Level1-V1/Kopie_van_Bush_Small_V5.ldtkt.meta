@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: 6b67061ebb9781a4e872a60fbc6a3704
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: f3268c876daf4890b6af6cd462063137, type: 3}
+  _reimportOnDependencyChange: 1
+  _pixelsPerUnit: 16
+  _sprites:
+  - name: Kopie_van_Bush_Small_V5_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 200
+      height: 200
+    spriteID: f5d589ec6d944fa42955017d5673df6b
+    spriteOutline: []
+    tessellationDetail: 0
+  _secondaryTextures: []

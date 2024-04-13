@@ -1,0 +1,33 @@
+{
+  "Rects": null,
+  "Def": {
+    "__cHei": 6,
+    "__cWid": 3,
+    "cachedPixelData": {
+      "opaqueTiles": "000010010010000000",
+      "averageColors": "39996aa939998a87f9757a879b98fa748b98cb86fa63bb979a87eb758a986ca9dca85ca9"
+    },
+    "customData": [
+
+    ],
+    "embedAtlas": null,
+    "enumTags": [
+
+    ],
+    "identifier": "Kopie_van_Jed_Front_Sprite_Idle",
+    "padding": 0,
+    "pxHei": 1200,
+    "pxWid": 600,
+    "relPath": "LevelAssets/Level1Assets/Kopie van Jed Front Sprite Idle.png",
+    "savedSelections": [
+
+    ],
+    "spacing": 0,
+    "tags": [
+
+    ],
+    "tagsSourceEnumUid": null,
+    "tileGridSize": 200,
+    "uid": 10
+  }
+}

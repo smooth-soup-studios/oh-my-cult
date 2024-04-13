@@ -188,7 +188,7 @@ MonoBehaviour:
   _mainMenuUI: {fileID: 1742622670}
   _keyBindingUI: {fileID: 1407111515}
   _optionsUI: {fileID: 60454131}
-  _baseVolume: 80
+  _baseVolume: 0
 --- !u!1 &173152224
 GameObject:
   m_ObjectHideFlags: 0

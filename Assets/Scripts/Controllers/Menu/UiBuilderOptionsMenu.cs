@@ -16,7 +16,8 @@ public class UiBuilderOptionsMenu : MonoBehaviour
     [SerializeField] private GameObject _mainMenuUI;
     [SerializeField] private GameObject _keyBindingUI;
     [SerializeField] private GameObject _optionsUI;
-    [SerializeField] private float _baseVolume = 0;
+    [SerializeField] private float _baseVolume = 0
+    ;
     VisualElement _root;
 
     // Start is called before the first frame update

@@ -16,6 +16,7 @@ public class WeaponPickupPoint : BaseInteractable {
 
 	public override void Interact(GameObject interactor) {
 		if (interactor.TryGetComponent(out Inventory inventory)) {
+			HotbarManager.AddItems(_item);
 			InventoryItem switchedItem = inventory.AddItem(_item);
 			_item = switchedItem;
 			UpdateSprite();
@@ -29,7 +30,6 @@ public class WeaponPickupPoint : BaseInteractable {
 		}
 		else {
 			_spriteRenderer.sprite = _item.ItemIcon;
-
 		}
 	}
 

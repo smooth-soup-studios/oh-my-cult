@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public static class Logger {
-    public static void Log(string name, string message) {
+    public static void Log(string name, object message) {
 		#if UNITY_EDITOR
 			Debug.Log($"<color=silver>[  <color=lime>{name}</color>  ]: " + message + "</color>");
 		#else
@@ -9,7 +9,7 @@ public static class Logger {
 		#endif
     }
 
-    public static void LogWarning(string name, string message) {
+    public static void LogWarning(string name, object message) {
 		#if UNITY_EDITOR
 			Debug.Log($"<color=silver>[  <color=orange>{name}</color>  ]: " + message + "</color>");
 		#else
@@ -17,7 +17,7 @@ public static class Logger {
 		#endif
     }
 
-    public static void LogError(string name, string message) {
+    public static void LogError(string name, object message) {
 		#if UNITY_EDITOR
 			Debug.LogError($"<color=silver>[  <color=red>{name}</color>  ]: " + message + "</color>");
 		#else

@@ -11,5 +11,6 @@ public class GameData {
 public class PlayerData {
 	public Vector3 PlayerPosition = Vector3.zero;
 	public string SceneName = "";
+	public bool BossDefeated = false;
 
 }

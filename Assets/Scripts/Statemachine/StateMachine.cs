@@ -4,35 +4,46 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(Animator), typeof(Rigidbody2D), typeof(Inventory)), RequireComponent(typeof(EchoDashController), typeof(PlayerInteractionChecker))]
 public class StateMachine : MonoBehaviour, ISaveable {
+	private readonly string _logname = "StateMachine";
+
+	[Header("Debug settings")]
+	[SerializeField] private TextMeshProUGUI _stateText;
+	[SerializeField] private bool _changeStateLogging = false;
+	public AnimationManager PlayerAnimator;
+
 	[Header("Movement Settings")]
-	public float SpeedModifier = 1;
+	public float SpeedModifier = 5;
 	public float BaseSpeed = 10;
 
-	[Header("Testing Refs")]
-	[SerializeField] private TextMeshProUGUI _stateText;
-	[SerializeField] public Weapon Weapon;
-
 	[HideInInspector] public EchoDashController EchoDashController { get; private set; }
+	[HideInInspector] public PlayerInteractionChecker PlayerInteractor { get; private set; }
+	[HideInInspector] public Inventory PlayerInventory { get; private set; }
 
-	[HideInInspector] public PlayerAnimationManager PlayerAnimator;
+
 	private BaseState _currentState;
 	private List<BaseState> _states;
 
 	void Start() {
+		PlayerInventory = GetComponent<Inventory>();
 		PlayerAnimator = new(GetComponent<Animator>());
+		EchoDashController = GetComponent<EchoDashController>();
+		PlayerInteractor = GetComponent<PlayerInteractionChecker>();
+
 		EventBus.Instance.Subscribe<Vector2>(EventType.MOVEMENT, SwitchSpriteOnMove);
+		// EventBus.Instance.Subscribe<GameObject>(EventType.DEATH, HandleDeath);
 
 		_states = new List<BaseState> {
 			new PlayerIdleState("Idle", this),
 			new PlayerMoveState("Move", this),
 			new PlayerDashState("Dash", this),
+			new PlayerInteractState("Interact",this),
 			new PlayerAttackState("Attack", this),
 			new PlayerHeavyAttackState("HeavyAttack", this)
 		};
 		SwitchState("Idle");
 
-		EchoDashController = GetComponent<EchoDashController>();
 	}
 
 	void Update() {
@@ -40,9 +51,18 @@ public class StateMachine : MonoBehaviour, ISaveable {
 	}
 
 	public void SwitchState(string name) {
+		if (_changeStateLogging) {
+			Logger.Log(_logname, $"Exiting {_currentState.Name}");
+		}
+
 		_currentState?.ExitState();
 		_currentState = _states.FirstOrDefault(x => x.Name == name);
 		_stateText?.SetText(_currentState.Name);
+
+		if (_changeStateLogging) {
+			Logger.Log(_logname, $"Entering {_currentState.Name}");
+		}
+
 		_currentState?.EnterState();
 	}
 
@@ -51,9 +71,13 @@ public class StateMachine : MonoBehaviour, ISaveable {
 		_RigidBody.MovePosition(_RigidBody.position + movement);
 	}
 
-	private void SwitchSpriteOnMove(Vector2 movement) {
-		// Default Position
+	public void HandleDeath(GameObject gameObject) {
+		if (gameObject == this.gameObject) {
+			SwitchState("Death");
+		}
+	}
 
+	private void SwitchSpriteOnMove(Vector2 movement) {
 		if (movement != Vector2.zero) {
 			// This should never default becouse it should never be V2.zero!
 			// Basically just here to initialize the value so vscode doesn't kill me.
@@ -62,7 +86,6 @@ public class StateMachine : MonoBehaviour, ISaveable {
 			if (movement.x > 0) {
 				currentDirection = MovementDirection.RIGHT;
 				GetComponent<SpriteRenderer>().flipX = true;
-
 			}
 			else if (movement.x < 0) {
 				currentDirection = MovementDirection.LEFT;

@@ -3,8 +3,10 @@
 /// </summary>
 public enum EventType {
 	MOVEMENT,
-	ATTACK,
 	PAUSE,
 	DASH,
-	HEAVYATTACK
+	INTERACT,
+	USE_PRIMARY,
+	USE_SECONDARY,
+	DEATH,
 }

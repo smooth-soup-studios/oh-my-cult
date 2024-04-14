@@ -11,7 +11,11 @@ public class HousePositionTeleportManager : MonoBehaviour {
 		if (plrsm.LatestDoor == -1) return;
 
 		switch (SceneManager.GetActiveScene().name) {
-			case "level_0_doors": // overworld
+			case "houses": // houses
+				plr.transform.position = new Vector3((float)plrsm.LatestDoor * 1000, 0, 0);
+				Logger.Log(_logName, "Teleported to house " + plrsm.LatestDoor);
+				break;
+			default: // overworld || special
 				GameObject[] doors = GameObject.FindGameObjectsWithTag("DoorInteractor");
 
 				foreach (GameObject door in doors) {
@@ -24,12 +28,9 @@ public class HousePositionTeleportManager : MonoBehaviour {
 					}
 				}
 				break;
-			default: // houses || special
-				plr.transform.position = new Vector3((float)plrsm.LatestDoor * 1000, 0, 0);
-				Logger.Log(_logName, "Teleported to house " + plrsm.LatestDoor);
-				break;
 		}
 
+		// Hacky way to reassign the camera follow target, but works for playtest purposes :D
 		GameObject.Find("Vcam-Player").GetComponent<Cinemachine.CinemachineVirtualCamera>().Follow = plr.transform;
 	}
 }

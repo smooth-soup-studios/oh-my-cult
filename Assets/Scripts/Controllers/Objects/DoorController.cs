@@ -13,19 +13,27 @@ public class DoorController : MonoBehaviour {
 
 	public bool RequiresKey = false;
 
+	[Tooltip("If true, this door is only used as a target to teleport to when the player enters this scene from another door, and cannot be used to teleport to another scene.")]
+	public bool NoEnter = false;
+
 	public bool AlreadyActivated = false;
 
 	private bool _isTransporting = false;
 
 	public void OnTriggerEnter2D(Collider2D col) {
-		if (AlreadyActivated) return;
+		if (AlreadyActivated || NoEnter) return;
 
 		if (col.gameObject.CompareTag("Player")) {
 			StateMachine sm = col.gameObject.GetComponent<StateMachine>();
 
-			if (RequiresKey && !sm.HasDoorKey) {
-				Logger.Log(_logName, "Player does not have key for door " + ArbitraryId);
-				return;
+			if (RequiresKey) {
+				if (!sm.HasDoorKey) {
+					Logger.Log(_logName, "Player does not have key for door " + ArbitraryId);
+					return;
+				}
+				else {
+					sm.HasDoorKey = false;
+				}
 			}
 
 			Logger.Log(_logName, "Player entered door " + ArbitraryId);
@@ -38,6 +46,7 @@ public class DoorController : MonoBehaviour {
 			GameManager.Instance.LoadScene(
 				TransportTo switch {
 					TransportDestination.House => "houses",
+					TransportDestination.Special => "boss_arenas",
 					_ => "level_0_doors"
 				}
 			);

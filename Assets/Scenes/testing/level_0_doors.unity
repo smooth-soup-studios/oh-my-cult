@@ -1963,7 +1963,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2545148786690275326, guid: 8f9e34a39549988479a744817a19b8d7, type: 3}
       propertyPath: ArbitraryId
-      value: 0
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545148786690275326, guid: 8f9e34a39549988479a744817a19b8d7, type: 3}
+      propertyPath: RequiresKey
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2545148786690275326, guid: 8f9e34a39549988479a744817a19b8d7, type: 3}
       propertyPath: TransportTo

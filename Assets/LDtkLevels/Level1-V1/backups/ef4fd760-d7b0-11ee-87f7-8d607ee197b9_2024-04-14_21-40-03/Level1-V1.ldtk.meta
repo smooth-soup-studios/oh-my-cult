@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/LDtkLevels/Level1-V1/backups/ef4fd760-d7b0-11ee-87f7-8d607ee197b9_2024-04-09_13-34-21/Level1-V1.ldtk.meta
-guid: 150e169308a578e42ad6823361be8c00
-=======
-guid: 6576299daff33ff46b036cda0eccdd8c
->>>>>>> dev:Assets/LDtkLevels/Level1-V1/backups/ef4fd760-d7b0-11ee-87f7-8d607ee197b9_2024-04-11_21-01-16/Level1-V1.ldtk.meta
+guid: 870220b7335e7f645bef72b9bb36394b
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}

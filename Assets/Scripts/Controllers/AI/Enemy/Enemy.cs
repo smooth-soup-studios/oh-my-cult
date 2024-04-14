@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour {
 	[HideInInspector] public bool AttackMelee = false;
 	[SerializeField] public Transform[] Route;
 	public Transform Player;
-	[HideInInspector] public int RouteIndex = 2;
+	[HideInInspector] public int RouteIndex = 0;
 	[SerializeField] public float RestTime;
 	[HideInInspector] public bool IsResting = false;
 	[HideInInspector] public bool EndReached = false;

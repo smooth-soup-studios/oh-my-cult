@@ -19,6 +19,7 @@ public class EnemyPatrolState : EnemyBaseState {
 		if (Enemy.PlayerDetect == true) {
 			Enemy.SwitchState("Detected");
 		}
+		Logger.Log(Name, $"{Enemy.RouteIndex}");
 	}
 	public override void ExitState() {
 	}

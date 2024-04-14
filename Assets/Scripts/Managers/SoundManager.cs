@@ -21,7 +21,7 @@ public class SoundManager : MonoBehaviour {
 		audioSource.Play();
 		float clipLength = audioSource.clip.length;
 
-		Destroy(audioSource, clipLength);
+		Destroy(audioSource.gameObject, clipLength);
 	}
 
 }

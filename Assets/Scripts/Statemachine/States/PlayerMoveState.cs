@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using Managers;
 
 public class PlayerMoveState : BaseState {
 
@@ -7,6 +8,7 @@ public class PlayerMoveState : BaseState {
 	bool _attack = false;
 	bool _dashCooldown = false;
 	bool _heavyAttack = false;
+	bool _walkSound = false;
 
 	public PlayerMoveState(string name, StateMachine stateMachine) : base(name, stateMachine) { }
 
@@ -20,6 +22,10 @@ public class PlayerMoveState : BaseState {
 		StateMachine.transform.Translate(StateMachine.BaseSpeed * StateMachine.SpeedModifier * Time.deltaTime * Movement);
 		StateMachine.PlayerAnimator.Play("PlayerRun", MovementDirection);
 
+		if(!_walkSound){
+			SoundManager.Instance.PlayClip(StateMachine.RunSoundClip, StateMachine.transform, 1f);
+			StateMachine.StartCoroutine(WalkSpeed());
+		}
 
 		if (Movement == Vector2.zero) {
 			StateMachine.SwitchState("Idle");
@@ -60,5 +66,11 @@ public class PlayerMoveState : BaseState {
 	}
 	private void OnHeavyAttack(bool heavyAttack) {
 		_heavyAttack = heavyAttack;
+	}
+
+	private IEnumerator WalkSpeed() {
+		_walkSound = true;
+		yield return new WaitForSecondsRealtime(StateMachine.RunSoundClip.length);
+		_walkSound = false;
 	}
 }

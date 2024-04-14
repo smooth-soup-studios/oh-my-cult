@@ -26,6 +26,11 @@ public class Enemy : MonoBehaviour {
 
 
 	void Start() {
+		EventBus.Instance.Subscribe<GameObject>(EventType.DEATH, obj => {
+			if (obj == gameObject) {
+				Destroy(gameObject);
+			}
+		});
 		_states = new List<EnemyBaseState>{
 			new EnemyPatrolState(this, "Patrol"),
 			new PlayerDetectedState(this, "Detected"),
@@ -68,7 +73,7 @@ public class Enemy : MonoBehaviour {
 		if (hitMeleeTarget.Length >= 1) {
 			AttackMelee = true;
 		}
-		else{
+		else {
 			AttackMelee = false;
 		}
 		Array.Clear(hitMeleeTarget, 0, hitMeleeTarget.Length);

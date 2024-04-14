@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 8530993155805609580}
   - component: {fileID: 6290169931406716255}
   - component: {fileID: 8440669220791414699}
+  - component: {fileID: 2607886220727919282}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -145,6 +146,7 @@ MonoBehaviour:
   WeaponHitbox: {fileID: 3173601029828910364}
   HitContainer: {fileID: 3053537212863230237}
   RunSoundClip: {fileID: 8300000, guid: a72f1d0baa8e4e9e8c5f841fcf512c44, type: 3}
+  AttackSoundClip: {fileID: 8300000, guid: ac4f3ad2ba8a2f64b92844effa87923e, type: 3}
 --- !u!114 &7464427908449370601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,6 +281,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa60292606897c345b756df85abb8ebd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2607886220727919282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6908342227108556609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f0d07869b7ad747b46fdf13457c82e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 100
 --- !u!1 &7355898901544246293
 GameObject:
   m_ObjectHideFlags: 0

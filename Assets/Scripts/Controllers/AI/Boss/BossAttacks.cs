@@ -16,7 +16,6 @@ public class BossAttacks : MonoBehaviour {
 		foreach (Collider2D Enemy in hitEnemies) {
 			if (Enemy.TryGetComponent<EnemyHealthController>(out EnemyHealthController opponent)) {
 				opponent.TakeDamage(Stats.SlamDamage);
-				Logger.Log(name, "SlamDamage");
 			}
 		}
 	}
@@ -29,7 +28,6 @@ public class BossAttacks : MonoBehaviour {
 		foreach (Collider2D Enemy in hitEnemies) {
 			if (Enemy.TryGetComponent<EnemyHealthController>(out EnemyHealthController opponent)) {
 				opponent.TakeDamage(Stats.RoarAttack);
-				Logger.Log(name, "Roardamage");
 			}
 		}
 	}
@@ -41,7 +39,6 @@ public class BossAttacks : MonoBehaviour {
 		foreach (Collider2D Enemy in hitEnemies) {
 			if (Enemy.TryGetComponent<EnemyHealthController>(out EnemyHealthController opponent)) {
 				opponent.TakeDamage(Stats.ChargeAttack);
-				Logger.Log(name, "ChargeDamage");
 			}
 		}
 	}

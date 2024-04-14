@@ -18,7 +18,6 @@ public class EnemyHealthController : MonoBehaviour {
 		if (_currentHealth <= 0) {
 			EventBus.Instance.TriggerEvent<GameObject>(EventType.DEATH, gameObject);
 			Logger.Log(_logname, $"The {name} is dead!");
-			Destroy(gameObject);
 		}
 	}
 

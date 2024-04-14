@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using Managers;
 
 public class PlayerAttackState : BaseState {
 	private bool _using = true;
@@ -16,13 +17,14 @@ public class PlayerAttackState : BaseState {
 		_currentItem.PrimaryAction(StateMachine);
 		if (_currentItem.ItemData.AnimationSet != null) {
 			StateMachine.PlayerAnimator.Play("Player" + _currentItem.ItemData.AnimationSet, MovementDirection);
+			SoundManager.Instance.PlayClip(StateMachine.AttackSoundClip, StateMachine.transform, 1f);
 		}
 	}
 
 	public override void UpdateState() {
 		StateMachine.transform.Translate(StateMachine.BaseSpeed * StateMachine.SpeedModifier * Time.deltaTime * Movement);
 		if (!_using) {
-			StateMachine.SwitchState("Move");
+			StateMachine.SwitchState("Idle");
 		}
 
 	}

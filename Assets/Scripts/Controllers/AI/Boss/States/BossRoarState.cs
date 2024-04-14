@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Managers;
 
 public class BossRoarState : BossBaseState {
 	public BossRoarState(Boss boss, string name) : base(boss, name) { }
@@ -9,6 +10,7 @@ public class BossRoarState : BossBaseState {
 		_switchState = false;
 		Boss.Animator.Play("Boss_Roar");
 		Boss.BossAttacks.RoarAttack();
+		SoundManager.Instance.PlayClip(Boss.RoarSoundClip, Boss.transform, 1f);
 		Boss.StartCoroutine(SwitchState());
 	}
 	public override void UpdateState() {

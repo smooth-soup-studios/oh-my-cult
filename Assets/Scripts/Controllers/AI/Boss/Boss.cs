@@ -6,6 +6,7 @@ using UnityEngine;
 public class Boss : MonoBehaviour {
 	public BossStatsSO Stats;
 	[SerializeField] public BossAttacks BossAttacks;
+	[SerializeField] public AudioClip RoarSoundClip;
 	public Transform Player;
 	public AnimationManager Animator;
 	public BossBaseState CurrentState;
@@ -17,6 +18,13 @@ public class Boss : MonoBehaviour {
 
 	void Start() {
 		Animator = new(GetComponent<Animator>());
+		
+		EventBus.Instance.Subscribe<GameObject>(EventType.DEATH, obj => {
+			if (obj == gameObject) {
+				Destroy(gameObject);
+			}
+		});
+
 
 		States = new List<BossBaseState>{
 			new BossSlamAttack(this, "Slam"),

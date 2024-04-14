@@ -3,7 +3,7 @@
 namespace Managers {
 public class SoundManager : MonoBehaviour {
 	public static SoundManager Instance;
-	[SerializeField] AudioSource soundObject;
+	[SerializeField] AudioSource _soundObject;
 	void Awake() {
 		if (Instance != null && Instance != this) {
 			Destroy(gameObject);
@@ -15,7 +15,7 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	public void PlayClip(AudioClip audioClip, Transform spawnTransform, float volume) {
-		AudioSource audioSource = Instantiate(soundObject, spawnTransform.position, Quaternion.identity);
+		AudioSource audioSource = Instantiate(_soundObject, spawnTransform.position, Quaternion.identity);
 		audioSource.clip = audioClip;
 		audioSource.volume = volume;
 		audioSource.Play();

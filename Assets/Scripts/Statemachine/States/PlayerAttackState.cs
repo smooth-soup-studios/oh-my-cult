@@ -1,34 +1,34 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-
 public class PlayerAttackState : BaseState {
-	private bool _onAttack = true;
+	private bool _using = true;
+	private InteractableItem _currentItem;
 
 	public PlayerAttackState(string name, StateMachine stateMachine) : base(name, stateMachine) { }
-	
-	public override void EnterState() {
 
-		StateMachine.StartCoroutine(AttackSpeed());
-		StateMachine.Weapon.DeafaultAttack();
+	public override void EnterState() {
+		if (StateMachine.PlayerInventory.GetSelectedItem() == null || !StateMachine.PlayerInventory.GetSelectedItem().ItemPrefab.TryGetComponent<InteractableItem>(out _currentItem)) {
+			_using = false;
+			return;
+		}
+		StateMachine.StartCoroutine(WaitForCooldown());
+		_currentItem.PrimaryAction(StateMachine.gameObject);
 	}
 
 	public override void UpdateState() {
 		StateMachine.transform.Translate(StateMachine.BaseSpeed * StateMachine.SpeedModifier * Time.deltaTime * Movement);
-		if (!_onAttack) {
-			StateMachine.SwitchState("Idle");
-		}
-		else if (Movement == Vector2.zero) {
+		if (!_using) {
 			StateMachine.SwitchState("Move");
 		}
+
 	}
 
-	public override void ExitState() {}
+	public override void ExitState() { }
 
-	private IEnumerator AttackSpeed() {
-		_onAttack = true;
-		yield return new WaitForSecondsRealtime(StateMachine.Weapon.AttackSpeed);
-		_onAttack = false;
+	private IEnumerator WaitForCooldown() {
+		_using = true;
+		yield return new WaitForSecondsRealtime(_currentItem.UsageCooldown);
+		_using = false;
 	}
 }

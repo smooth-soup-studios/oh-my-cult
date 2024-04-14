@@ -175,6 +175,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4114600175099707094, guid: e48e24e11fe9846f9a92885a8b07067b, type: 3}
+      propertyPath: _showLogging
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4114600175099707094, guid: e48e24e11fe9846f9a92885a8b07067b, type: 3}
+      propertyPath: _showTriggerLogs
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4114600175099707094, guid: e48e24e11fe9846f9a92885a8b07067b, type: 3}
+      propertyPath: _showSubscriptionLogs
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1765,18 +1777,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5190605175808683211, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 4.1081104
-      objectReference: {fileID: 0}
-    - target: {fileID: 5190605175808683211, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4.1081104
-      objectReference: {fileID: 0}
-    - target: {fileID: 5190605175808683211, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5190605175808683211, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
       propertyPath: m_LocalPosition.x
       value: 148.1
       objectReference: {fileID: 0}
@@ -1821,7 +1821,8 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7208551151754622344, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}

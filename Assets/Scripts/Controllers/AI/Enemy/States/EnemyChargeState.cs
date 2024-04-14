@@ -27,7 +27,7 @@ public class EnemyChargeState : EnemyBaseState {
 	}
 
 	void Charge() {
-		Enemy.Agent.destination = Vector3.MoveTowards(Enemy.transform.position, Enemy.Player.position, Enemy.Stats.ChargeSpeed * Time.deltaTime * 2);
+		// Enemy.Agent.destination = Vector3.MoveTowards(Enemy.transform.position, Enemy.Player.position, Enemy.Stats.ChargeSpeed * Time.deltaTime * 2);
 		Enemy.Agent.destination = Enemy.Player.position;
 	}
 }

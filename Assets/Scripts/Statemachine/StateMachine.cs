@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Managers;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -31,6 +32,20 @@ public class StateMachine : MonoBehaviour, ISaveable {
 	private BaseState _currentState;
 	private List<BaseState> _states;
 
+	[Header("Latest Door")]
+	public int LatestDoor = 0;
+	public bool HasDoorKey = false;
+
+	void Awake() {
+		GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+		foreach (GameObject player in players) {
+			if (player != gameObject) {
+				Destroy(gameObject);
+			}
+		}
+
+		DontDestroyOnLoad(this);
+	}
 
 	void Start() {
 		PlayerInventory = GetComponent<Inventory>();
@@ -55,6 +70,8 @@ public class StateMachine : MonoBehaviour, ISaveable {
 
 	void Update() {
 		_currentState.UpdateState();
+
+		UIManager.Instance.HasPlaytestKey = HasDoorKey;
 	}
 
 	public void SwitchState(string name) {

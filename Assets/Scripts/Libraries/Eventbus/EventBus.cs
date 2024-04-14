@@ -48,8 +48,7 @@ public class EventBus : MonoBehaviour {
 		DontDestroyOnLoad(Instance);
 	}
 
-	/// <summary>
-	/// Subscribes a method to the specified Event with a value of type T.
+	/// <summary> Subscribes a method to the specified Event with a value of type T.
 	/// <br/>
 	/// The method should have a parameter of the same type as T.
 	/// 	<para>

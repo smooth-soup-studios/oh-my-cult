@@ -133,13 +133,13 @@ GameObject:
   m_Component:
   - component: {fileID: 91665158}
   - component: {fileID: 91665157}
-  - component: {fileID: 91665159}
   - component: {fileID: 91665160}
+  - component: {fileID: 91665159}
   - component: {fileID: 91665163}
   - component: {fileID: 91665162}
   - component: {fileID: 91665161}
   - component: {fileID: 91665164}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,8 @@ MonoBehaviour:
   Stats: {fileID: 11400000, guid: 31ba062b28779dc41b17562ed19e959a, type: 2}
   BossAttacks: {fileID: 91665164}
   Player: {fileID: 1777830095}
-  _animator: {fileID: 91665159}
+  Animator:
+    _animationDebugLogging: 0
   StateCounter: 0
   Enemy: 0
 --- !u!114 &91665161

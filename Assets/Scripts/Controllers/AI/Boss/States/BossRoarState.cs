@@ -6,8 +6,8 @@ public class BossRoarState : BossBaseState {
 	public BossRoarState(Boss boss, string name) : base(boss, name) { }
 	private bool _switchState = false;
 	public override void EnterState() {
-		Logger.Log(Name, "Roar");
 		_switchState = false;
+		Boss.Animator.Play("Boss_Roar");
 		Boss.BossAttacks.RoarAttack();
 		Boss.StartCoroutine(SwitchState());
 	}

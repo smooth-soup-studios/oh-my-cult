@@ -6,8 +6,8 @@ public class BossSlamAttack : BossBaseState {
 	private bool _switchState = false;
 	public BossSlamAttack(Boss boss, string name) : base(boss, name) { }
 	public override void EnterState() {
-		Logger.Log(Name, "Slam");
 		_switchState = false;
+		Boss.Animator.Play("Boss_Slam");
 		Boss.BossAttacks.SlamAttack();
 		Boss.StartCoroutine(SwitchState());
 	}

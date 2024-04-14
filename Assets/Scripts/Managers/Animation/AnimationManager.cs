@@ -3,7 +3,7 @@ using UnityEngine;
 
 [Serializable]
 public class AnimationManager {
-	private string _logname = "PlayerAnimator";
+	private string _logname = "AnimationManager";
 	private Animator _animator;
 
 	[Header("Debug logging")]
@@ -11,6 +11,7 @@ public class AnimationManager {
 
 	public AnimationManager(Animator animator) {
 		_animator = animator;
+		_logname = $"{_logname}:{_animator.gameObject.name}"; ;
 	}
 	public AnimationManager(Animator animator, bool debug) : this(animator) {
 		_animationDebugLogging = debug;

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad654a4e863aa6418f08104dc751fe1, type: 3}
   m_Name: Boss Stats SO
   m_EditorClassIdentifier: 
-  SwitchTime: 10
+  SwitchTime: 2
   ChargeSpeed: 5
   ChargeTime: 5
   ChargeRange: 25

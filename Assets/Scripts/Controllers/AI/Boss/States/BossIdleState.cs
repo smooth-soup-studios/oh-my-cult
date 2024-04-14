@@ -7,12 +7,10 @@ public class BossIdleState : BossBaseState {
 	private bool _switchState = false;
 	public override void EnterState() {
 		_switchState = false;
-		Logger.Log(Name, "Idle");
 		Boss.StateCounter = Random.Range(0, Boss.States.Count - 1);
+		Boss.Animator.Play("Boss_Idle");
 
 		Boss.StartCoroutine(SwitchTime());
-
-		Logger.Log(Name,$"{_switchState}");
 	}
 	public override void UpdateState() {
 		if (_switchState) {

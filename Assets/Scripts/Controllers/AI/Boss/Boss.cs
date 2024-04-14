@@ -7,7 +7,7 @@ public class Boss : MonoBehaviour {
 	public BossStatsSO Stats;
 	[SerializeField] public BossAttacks BossAttacks;
 	public Transform Player;
-	[SerializeField] private Animator _animator;
+	public AnimationManager Animator;
 	public BossBaseState CurrentState;
 	public List<BossBaseState> States;
 	[HideInInspector] public int StateCounter = 0;
@@ -16,6 +16,8 @@ public class Boss : MonoBehaviour {
 	// Start is called before the first frame update
 
 	void Start() {
+		Animator = new(GetComponent<Animator>());
+
 		States = new List<BossBaseState>{
 			new BossSlamAttack(this, "Slam"),
 			new BossChargeState(this, "Charge"),

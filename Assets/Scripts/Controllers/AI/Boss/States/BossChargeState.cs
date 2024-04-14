@@ -7,16 +7,16 @@ public class BossChargeState : BossBaseState {
 	public BossChargeState(Boss boss, string name) : base(boss, name) { }
 	private bool _charge;
 	public override void EnterState() {
-		Logger.Log(Name, "Charge");
 		Boss.StartCoroutine(ChargeTime());
+		Boss.Animator.Play("Boss_Down");
+
 	}
 	public override void UpdateState() {
 		Boss.CheckForPlayer();
 		if (_charge == true) {
 			ChargeAttack();
-			Logger.Log(Name, "Charging");
 		}
-		else if(Boss.Enemy == true){
+		else if (Boss.Enemy == true) {
 			Boss.BossAttacks.ChargeAttack();
 			Boss.SwitchState("Idle");
 		}

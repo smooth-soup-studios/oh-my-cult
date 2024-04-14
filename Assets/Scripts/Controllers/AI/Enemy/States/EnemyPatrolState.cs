@@ -19,7 +19,6 @@ public class EnemyPatrolState : EnemyBaseState {
 		if (Enemy.PlayerDetect == true) {
 			Enemy.SwitchState("Detected");
 		}
-		Logger.Log(Name, $"{Enemy.RouteIndex}");
 	}
 	public override void ExitState() {
 	}
@@ -46,7 +45,6 @@ public class EnemyPatrolState : EnemyBaseState {
 		if (Enemy.RouteIndex == Enemy.Route.Length - 1) {
 			//Enemy.RouteIndex--;
 			Enemy.EndReached = true;
-			Logger.Log(Name, "EndReached");
 		}
 		else if (Enemy.RouteIndex == 0) {
 			Enemy.EndReached = false;

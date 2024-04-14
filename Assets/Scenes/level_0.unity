@@ -2805,6 +2805,10 @@ PrefabInstance:
       propertyPath: Route.Array.data[2]
       value: 
       objectReference: {fileID: 2043992595}
+    - target: {fileID: 4849591457620503528, guid: eb6bcb867272c7f4db2dc1b3ce0a2d95, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6731496170037079614, guid: eb6bcb867272c7f4db2dc1b3ce0a2d95, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.23
@@ -2971,7 +2975,7 @@ Transform:
   m_GameObject: {fileID: 1603196271}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -60.88148, y: 67.83506, z: -1.2193887}
+  m_LocalPosition: {x: -60.88148, y: 67.83506, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3103,7 +3107,7 @@ Transform:
   m_GameObject: {fileID: 1998498062}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 462.62915, y: -18.427223, z: 21.219389}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -9,7 +9,6 @@ public class EnemyAttackState : EnemyBaseState {
 	private bool _switchState = false;
 	public override void EnterState() {
 		Enemy.StartCoroutine(AttackSpeed());
-		Logger.Log(Name, "Attack");
 		_switchState = false;
 		Enemy.StartCoroutine(SwitchTime());
 	}

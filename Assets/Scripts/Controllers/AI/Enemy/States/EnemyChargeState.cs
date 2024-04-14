@@ -8,9 +8,6 @@ public class EnemyChargeState : EnemyBaseState {
 
 
 	public override void EnterState() {
-		Logger.Log(Name, "Charge");
-
-
 	}
 
 	public override void UpdateState() {
@@ -33,6 +30,4 @@ public class EnemyChargeState : EnemyBaseState {
 		Enemy.Agent.destination = Vector3.MoveTowards(Enemy.transform.position, Enemy.Player.position, Enemy.Stats.ChargeSpeed * Time.deltaTime * 2);
 		Enemy.Agent.destination = Enemy.Player.position;
 	}
-
-
 }

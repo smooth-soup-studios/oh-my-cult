@@ -47,7 +47,6 @@ public class Enemy : MonoBehaviour {
 
 	private void Update() {
 		CurrentState.UpdateState();
-
 	}
 
 	private void OnDrawGizmos() {

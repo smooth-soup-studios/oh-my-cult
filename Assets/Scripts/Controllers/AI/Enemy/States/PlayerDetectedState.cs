@@ -23,7 +23,6 @@ public class PlayerDetectedState : EnemyBaseState {
 	}
 
 	IEnumerator PlayerDetected() {
-		Logger.Log(Name, $"Player detected");
 		yield return new WaitForSeconds(Enemy.Stats.DetectionPauseTime);
 		Enemy.StartCoroutine(PlayerNotDetected());
 	}

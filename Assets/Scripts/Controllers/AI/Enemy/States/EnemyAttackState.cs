@@ -9,14 +9,10 @@ public class EnemyAttackState : EnemyBaseState {
 	private bool _switchState = false;
 	public override void EnterState() {
 		Enemy.StartCoroutine(AttackSpeed());
-		// Enemy.StartCoroutine(AttackCooldown());
-		// _attackCooldown = false;
-
 		Logger.Log(Name, "Attack");
 		_switchState = false;
 		Enemy.StartCoroutine(SwitchTime());
 	}
-
 	public override void UpdateState() {
 		Enemy.CheckForMeleeRange();
 		if (_attackCooldown) {

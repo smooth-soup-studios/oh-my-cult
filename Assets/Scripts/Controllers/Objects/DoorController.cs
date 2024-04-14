@@ -11,7 +11,8 @@ public class DoorController : MonoBehaviour {
 
 	public int ArbitraryId = 0;
 
-	// []
+	public bool RequiresKey = false;
+
 	public bool AlreadyActivated = false;
 
 	private bool _isTransporting = false;
@@ -20,8 +21,16 @@ public class DoorController : MonoBehaviour {
 		if (AlreadyActivated) return;
 
 		if (col.gameObject.CompareTag("Player")) {
+			StateMachine sm = col.gameObject.GetComponent<StateMachine>();
+
+			if (RequiresKey && !sm.HasDoorKey) {
+				Logger.Log(_logName, "Player does not have key for door " + ArbitraryId);
+				return;
+			}
+
 			Logger.Log(_logName, "Player entered door " + ArbitraryId);
-			col.gameObject.GetComponent<StateMachine>().LatestDoor = ArbitraryId;
+
+			sm.LatestDoor = ArbitraryId;
 
 			AlreadyActivated = true;
 			_isTransporting = true;

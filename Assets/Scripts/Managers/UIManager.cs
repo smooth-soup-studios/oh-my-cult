@@ -8,7 +8,6 @@ namespace Managers {
 		[SerializeField] private bool _hasPlaytestKey = false;
 		[SerializeField] private float _debugHealth = .5f;
 
-
 		private VisualElement _root;
 		private VisualElement _healthBarValue;
 		private VisualElement _keyIndicator;

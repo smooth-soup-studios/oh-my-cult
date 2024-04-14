@@ -21,7 +21,6 @@ public class HousePositionTeleportManager : MonoBehaviour {
 						plr.transform.position = door.transform.position;
 
 						Logger.Log(_logName, "Teleported to door " + plrsm.LatestDoor + " at " + plr.transform.position);
-						return;
 					}
 				}
 				break;
@@ -30,5 +29,7 @@ public class HousePositionTeleportManager : MonoBehaviour {
 				Logger.Log(_logName, "Teleported to house " + plrsm.LatestDoor);
 				break;
 		}
+
+		GameObject.Find("Vcam-Player").GetComponent<Cinemachine.CinemachineVirtualCamera>().Follow = plr.transform;
 	}
 }

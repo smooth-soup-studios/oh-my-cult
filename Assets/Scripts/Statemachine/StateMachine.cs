@@ -21,6 +21,7 @@ public class StateMachine : MonoBehaviour, ISaveable {
 
 	[Header("Latest Door")]
 	public int LatestDoor = 0;
+	public bool HasDoorKey = false;
 
 	void Awake() {
 		GameObject[] players = GameObject.FindGameObjectsWithTag("Player");

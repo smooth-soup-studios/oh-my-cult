@@ -48,7 +48,7 @@ public class PlayerMoveState : BaseState {
 	public override void ExitState() {
 		EventBus.Instance.Unsubscribe<bool>(EventType.DASH, OnDash);
 		EventBus.Instance.Unsubscribe<bool>(EventType.ATTACK, OnAttack);
-		EventBus.Instance.Subscribe<bool>(EventType.HEAVYATTACK, OnAttack);
+		EventBus.Instance.Unsubscribe<bool>(EventType.HEAVYATTACK, OnAttack);
 	}
 
 	private void OnDash(bool dash) {

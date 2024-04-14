@@ -12,6 +12,7 @@ public class Boss : MonoBehaviour {
 	public List<BossBaseState> States;
 	[HideInInspector] public int StateCounter = 0;
 	[HideInInspector] public bool Enemy = false;
+	[HideInInspector] public bool Charge;
 
 	// Start is called before the first frame update
 
@@ -53,6 +54,7 @@ public class Boss : MonoBehaviour {
 
 		if (hitEnemies.Length >= 1) {
 			Enemy = true;
+			Charge = false;
 		}
 	}
 }

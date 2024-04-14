@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BossChargeState : BossBaseState {
 	public BossChargeState(Boss boss, string name) : base(boss, name) { }
-	private bool _charge;
+
 	public override void EnterState() {
 		Boss.StartCoroutine(ChargeTime());
 		Boss.Animator.Play("Boss_Down");
@@ -13,7 +13,7 @@ public class BossChargeState : BossBaseState {
 	}
 	public override void UpdateState() {
 		Boss.CheckForPlayer();
-		if (_charge == true) {
+		 if (Boss.Charge == true) {
 			ChargeAttack();
 		}
 		else if (Boss.Enemy == true) {
@@ -30,11 +30,12 @@ public class BossChargeState : BossBaseState {
 
 	private void ChargeAttack() {
 		Boss.transform.position = Vector3.MoveTowards(Boss.transform.position, Boss.Player.position, Boss.Stats.ChargeSpeed * Time.deltaTime * 2);
+		Boss.CheckForPlayer();
 	}
 
 	IEnumerator ChargeTime() {
-		_charge = true;
+		Boss.Charge = true;
 		yield return new WaitForSeconds(Boss.Stats.ChargeTime);
-		_charge = false;
+		Boss.Charge = false;
 	}
 }

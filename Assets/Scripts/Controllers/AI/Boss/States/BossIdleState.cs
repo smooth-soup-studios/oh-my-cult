@@ -28,7 +28,6 @@ public class BossIdleState : BossBaseState {
 		}
 	}
 	public override void ExitState() {
-
 	}
 
 	IEnumerator SwitchTime() {

@@ -237,10 +237,7 @@
 			"enumTags": [],
 			"customData": [],
 			"savedSelections": [],
-			"cachedPixelData": {
-				"opaqueTiles": "111111111111111111111111111111",
-				"averageColors": "f463f664f463f050f050f052f664f875f664f050f050f151f463f664f453f363f050f353f765f765f050f050f050f050f765f765f050f050f050f050"
-			}
+			"cachedPixelData": null
 		},
 		{
 			"__cWid": 1,
@@ -259,7 +256,7 @@
 			"enumTags": [],
 			"customData": [],
 			"savedSelections": [],
-			"cachedPixelData": { "opaqueTiles": "0", "averageColors": "6987" }
+			"cachedPixelData": null
 		},
 		{
 			"__cWid": 1,
@@ -278,7 +275,7 @@
 			"enumTags": [],
 			"customData": [],
 			"savedSelections": [],
-			"cachedPixelData": { "opaqueTiles": "0", "averageColors": "8987" }
+			"cachedPixelData": null
 		},
 		{
 			"__cWid": 1,
@@ -297,7 +294,7 @@
 			"enumTags": [],
 			"customData": [],
 			"savedSelections": [],
-			"cachedPixelData": { "opaqueTiles": "00", "averageColors": "48986888" }
+			"cachedPixelData": null
 		},
 		{
 			"__cWid": 1,
@@ -316,7 +313,7 @@
 			"enumTags": [],
 			"customData": [],
 			"savedSelections": [],
-			"cachedPixelData": { "opaqueTiles": "0", "averageColors": "6bb8" }
+			"cachedPixelData": null
 		},
 		{
 			"__cWid": 3,
@@ -335,10 +332,7 @@
 			"enumTags": [],
 			"customData": [],
 			"savedSelections": [],
-			"cachedPixelData": {
-				"opaqueTiles": "000010010010000000",
-				"averageColors": "39996aa939998a87f9757a879b98fa748b98cb86fa63bb979a87eb758a986ca9dca85ca9"
-			}
+			"cachedPixelData": null
 		},
 		{
 			"__cWid": 1,
@@ -357,7 +351,7 @@
 			"enumTags": [],
 			"customData": [],
 			"savedSelections": [],
-			"cachedPixelData": { "opaqueTiles": "0", "averageColors": "6696" }
+			"cachedPixelData": null
 		},
 		{
 			"__cWid": 2,
@@ -376,7 +370,7 @@
 			"enumTags": [],
 			"customData": [],
 			"savedSelections": [],
-			"cachedPixelData": { "opaqueTiles": "0000", "averageColors": "46a64595a495a484" }
+			"cachedPixelData": null
 		},
 		{
 			"__cWid": 2,
@@ -395,7 +389,7 @@
 			"enumTags": [],
 			"customData": [],
 			"savedSelections": [],
-			"cachedPixelData": { "opaqueTiles": "0000", "averageColors": "46a64595a495a484" }
+			"cachedPixelData": null
 		},
 		{
 			"__cWid": 4,

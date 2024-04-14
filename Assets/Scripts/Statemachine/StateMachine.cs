@@ -17,6 +17,7 @@ public class StateMachine : MonoBehaviour, ISaveable {
 	public float SpeedModifier = 5;
 	public float BaseSpeed = 10;
 
+
 	[Header("Tempforplaytest")]
 	public WeaponHitbox WeaponHitbox;
 	public GameObject HitContainer;
@@ -28,6 +29,7 @@ public class StateMachine : MonoBehaviour, ISaveable {
 	[SerializeField] public AudioClip RunSoundClip;
 	private BaseState _currentState;
 	private List<BaseState> _states;
+
 
 	void Start() {
 		PlayerInventory = GetComponent<Inventory>();

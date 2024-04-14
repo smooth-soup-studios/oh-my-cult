@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/LDtkLevels/Level1-V1/backups/ef4fd760-d7b0-11ee-87f7-8d607ee197b9_2024-04-09_13-33-47/Level1-V1.ldtk.meta
+guid: 4eba7def663106c49bcdddf3dc3b79a3
+=======
+guid: 4738022f605f70d4fa0ffe63ff07ae17
+>>>>>>> dev:Assets/LDtkLevels/Level1-V1/backups/ef4fd760-d7b0-11ee-87f7-8d607ee197b9_2024-04-11_20-46-13/Level1-V1.ldtk.meta
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: aaa16bfc62c086f4fb45da87b6acf9b1, type: 3}
+  _reimportOnDependencyChange: 1
+  _jsonFile: {instanceID: 0}
+  _pixelsPerUnit: 16
+  _customLevelPrefab: {instanceID: 0}
+  _intGridValueColorsVisible: 0
+  _useCompositeCollider: 1
+  _geometryType: 0
+  _createBackgroundColor: 1
+  _createLevelBoundsTrigger: 0
+  _intGridValues: []
+  _entities: []
+  _enumGenerate: 0
+  _enumPath: 
+  _enumNamespace: 

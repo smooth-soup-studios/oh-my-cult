@@ -3,10 +3,7 @@
   "Def": {
     "__cHei": 2,
     "__cWid": 1,
-    "cachedPixelData": {
-      "opaqueTiles": "00",
-      "averageColors": "48986888"
-    },
+    "cachedPixelData": null,
     "customData": [
 
     ],

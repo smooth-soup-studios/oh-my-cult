@@ -31,6 +31,10 @@ public class Enemy : MonoBehaviour {
 				Destroy(gameObject);
 			}
 		});
+
+		Player = GameObject.FindGameObjectWithTag("Player").transform;
+
+
 		_states = new List<EnemyBaseState>{
 			new EnemyPatrolState(this, "Patrol"),
 			new PlayerDetectedState(this, "Detected"),

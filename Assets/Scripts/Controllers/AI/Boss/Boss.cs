@@ -13,7 +13,7 @@ public class Boss : MonoBehaviour {
 	public List<BossBaseState> States;
 	[HideInInspector] public int StateCounter = 0;
 	[HideInInspector] public bool Enemy = false;
-	[HideInInspector]	public  bool Charge;
+	[HideInInspector] public bool Charge;
 
 	// Start is called before the first frame update
 
@@ -25,6 +25,8 @@ public class Boss : MonoBehaviour {
 				Destroy(gameObject);
 			}
 		});
+
+		Player = GameObject.FindGameObjectWithTag("Player").transform;
 
 
 		States = new List<BossBaseState>{

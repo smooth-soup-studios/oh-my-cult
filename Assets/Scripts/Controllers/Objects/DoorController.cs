@@ -48,7 +48,7 @@ public class DoorController : MonoBehaviour {
 				TransportTo switch {
 					TransportDestination.House => "houses",
 					TransportDestination.Special => "boss_arenas",
-					_ => "level_0_doors"
+					_ => "level_0"
 				}
 			);
 		}

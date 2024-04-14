@@ -377,10 +377,10 @@ MonoBehaviour:
   Rb: {fileID: 4849591457620503528}
   GroundLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   PlayerLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 64
   PlayerDetect: 0
   Stats: {fileID: 11400000, guid: 92dfd2c317e63fe4da1892b43786968b, type: 2}
   AttackMelee: 0
@@ -389,7 +389,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   Player: {fileID: 0}
-  RouteIndex: 2
+  RouteIndex: 0
   RestTime: 0
   IsResting: 0
   EndReached: 0

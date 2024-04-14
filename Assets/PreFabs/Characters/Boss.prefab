@@ -110,6 +110,7 @@ MonoBehaviour:
     _animationDebugLogging: 0
   StateCounter: 0
   Enemy: 0
+  Charge: 0
 --- !u!95 &2343263200439949227
 Animator:
   serializedVersion: 5
@@ -231,4 +232,4 @@ MonoBehaviour:
   Stats: {fileID: 11400000, guid: 31ba062b28779dc41b17562ed19e959a, type: 2}
   EnemyLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 64

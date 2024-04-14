@@ -7,7 +7,7 @@ namespace Managers {
 
 		// [SerializeField] private bool _hasPlaytestKey = false;
 		public bool HasPlaytestKey = false;
-		[SerializeField] private float _debugHealth = .5f;
+		public float Health = 1;
 
 		private VisualElement _root;
 		private VisualElement _healthBarValue;
@@ -28,7 +28,7 @@ namespace Managers {
 		}
 
 		private void Update() {
-			_healthBarValue.style.width = new StyleLength(new Length(_debugHealth * 100, LengthUnit.Percent));
+			_healthBarValue.style.width = new StyleLength(new Length(Health * 100, LengthUnit.Percent));
 			_keyIndicator.style.visibility = HasPlaytestKey ? Visibility.Visible : Visibility.Hidden;
 		}
 
@@ -63,7 +63,7 @@ namespace Managers {
 		}
 
 		public void DebugCycleHealth() {
-			_debugHealth = 1 - ((1 - _debugHealth + .1f) % 1);
+			Health = 1 - ((1 - Health + .1f) % 1);
 		}
 	}
 }

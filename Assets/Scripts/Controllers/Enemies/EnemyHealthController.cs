@@ -1,12 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyHealthController : MonoBehaviour {
 	private string _logname = "Health controller";
 	[SerializeField] float _maxHealth = 100;
 	float _currentHealth;
-	// Start is called before the first frame update
+
 	void Start() {
 		_currentHealth = _maxHealth;
 	}
@@ -19,6 +18,10 @@ public class EnemyHealthController : MonoBehaviour {
 			EventBus.Instance.TriggerEvent<GameObject>(EventType.DEATH, gameObject);
 			Logger.Log(_logname, $"The {name} is dead!");
 		}
+	}
+
+	public float GetCurrentHealth() {
+		return _currentHealth;
 	}
 
 	IEnumerator FlashRed() {

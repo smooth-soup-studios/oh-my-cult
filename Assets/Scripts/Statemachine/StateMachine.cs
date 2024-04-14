@@ -72,6 +72,7 @@ public class StateMachine : MonoBehaviour, ISaveable {
 		_currentState.UpdateState();
 
 		UIManager.Instance.HasPlaytestKey = HasDoorKey;
+		UIManager.Instance.Health = GetComponent<EnemyHealthController>().GetCurrentHealth();
 	}
 
 	public void SwitchState(string name) {

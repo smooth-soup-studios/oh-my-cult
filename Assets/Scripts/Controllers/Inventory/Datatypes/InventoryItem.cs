@@ -7,7 +7,7 @@ public class InventoryItem : ScriptableObject {
 	public Sprite ItemIcon;
 	public GameObject ItemPrefab;
 	public InventoryItemType ItemType;
-
+	public string AnimationSet;
 
 	[TextArea]
 	public string Description;

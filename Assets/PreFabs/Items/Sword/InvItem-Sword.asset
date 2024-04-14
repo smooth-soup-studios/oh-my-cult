@@ -16,4 +16,5 @@ MonoBehaviour:
   ItemIcon: {fileID: 21300000, guid: 5487e875b2327d441bc5727976642e8f, type: 3}
   ItemPrefab: {fileID: 6458623882520386215, guid: 73f704797938366419d8190a387a5fab, type: 3}
   ItemType: 1
+  AnimationSet: Sword
   Description: Long ass description of a pointy stick

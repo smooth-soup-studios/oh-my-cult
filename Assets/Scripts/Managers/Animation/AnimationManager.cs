@@ -18,7 +18,7 @@ public class AnimationManager {
 	}
 
 	public void Play(string animationName, MovementDirection direction) {
-		string animation = animationName + "-" + ConvertMovementToAnimation(direction);
+		string animation = animationName + "_" + ConvertMovementToAnimation(direction);
 		_animator.Play(animation);
 		if (_animationDebugLogging) {
 			Logger.Log(_logname, $"Playing animation {animation} on {_animator.gameObject.name}");

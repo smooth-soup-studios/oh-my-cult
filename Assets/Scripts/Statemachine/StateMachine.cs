@@ -17,6 +17,10 @@ public class StateMachine : MonoBehaviour, ISaveable {
 	public float SpeedModifier = 5;
 	public float BaseSpeed = 10;
 
+	[Header("Tempforplaytest")]
+	public WeaponHitbox WeaponHitbox;
+	public GameObject HitContainer;
+
 	[HideInInspector] public EchoDashController EchoDashController { get; private set; }
 	[HideInInspector] public PlayerInteractionChecker PlayerInteractor { get; private set; }
 	[HideInInspector] public Inventory PlayerInventory { get; private set; }
@@ -32,7 +36,7 @@ public class StateMachine : MonoBehaviour, ISaveable {
 		PlayerInteractor = GetComponent<PlayerInteractionChecker>();
 
 		EventBus.Instance.Subscribe<Vector2>(EventType.MOVEMENT, SwitchSpriteOnMove);
-		// EventBus.Instance.Subscribe<GameObject>(EventType.DEATH, HandleDeath);
+		EventBus.Instance.Subscribe<GameObject>(EventType.DEATH, HandleDeath);
 
 		_states = new List<BaseState> {
 			new PlayerIdleState("Idle", this),
@@ -86,16 +90,23 @@ public class StateMachine : MonoBehaviour, ISaveable {
 			if (movement.x > 0) {
 				currentDirection = MovementDirection.RIGHT;
 				GetComponent<SpriteRenderer>().flipX = true;
+				HitContainer.transform.rotation = Quaternion.Euler(0, 0, 0);
 			}
 			else if (movement.x < 0) {
 				currentDirection = MovementDirection.LEFT;
 				GetComponent<SpriteRenderer>().flipX = false;
+				HitContainer.transform.rotation = Quaternion.Euler(0, 0, 180);
+
 			}
 			else if (movement.y > 0) {
 				currentDirection = MovementDirection.UP;
+				HitContainer.transform.rotation = Quaternion.Euler(0, 0, 90);
+
 			}
 			else if (movement.y < 0) {
 				currentDirection = MovementDirection.DOWN;
+				HitContainer.transform.rotation = Quaternion.Euler(0, 0, -90);
+
 			}
 			EventBus.Instance.TriggerEvent<MovementDirection>(EventType.MOVEMENT, currentDirection);
 		}

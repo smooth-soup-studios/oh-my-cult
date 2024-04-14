@@ -1,0 +1,1711 @@
+fileFormatVersion: 2
+guid: 6605b66ff3c56d74c81410908993c654
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jed-FullCharSet_0
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 2422
+        width: 171
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7667ebe872f87564b9830cdd9df9e4f0
+      internalID: -1519902638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_1
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 2422
+        width: 170
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf9f671cab1e0641895213c56b2a0a0
+      internalID: 1146674920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_2
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 2422
+        width: 171
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 030b0f4a88ac06d4291a5f2866dc9466
+      internalID: -1890803228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_3
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 2422
+        width: 170
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f568a80b2e13a345b30316d08ab6090
+      internalID: 758052647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_4
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 2422
+        width: 170
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 723142321be793e43bbada015c404d5a
+      internalID: -1597772168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_5
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 2422
+        width: 170
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b227ecd21f9ffa42ab86ae6f8e833e4
+      internalID: 1940712858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_6
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 2422
+        width: 171
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53b0a19c1c9b669488fd8879233c5115
+      internalID: 290355050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_7
+      rect:
+        serializedVersion: 2
+        x: 2180
+        y: 2422
+        width: 170
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ce9fc11b0edfa5448cb4d1ee56d08a2
+      internalID: -1076159431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_8
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 2146
+        width: 170
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e1661e1b39395a468ca23d816cb125b
+      internalID: -938127591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_9
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 2130
+        width: 171
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e89fb0028e371f249a2e9ca8a119da71
+      internalID: -1560894535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_10
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 2123
+        width: 170
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f989d1167553e54eb43393e0cdbac3e
+      internalID: -1205468233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_11
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 2129
+        width: 170
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89b5404b3f41f044cb7ef626eee41244
+      internalID: -1134084295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_12
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 2146
+        width: 171
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee54dcc3f84c94742bb3d7628fe212c7
+      internalID: -1494392333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_13
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 2130
+        width: 171
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56bd815f8643d784a8456cb6de5a4de5
+      internalID: -1167453602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_14
+      rect:
+        serializedVersion: 2
+        x: 1883
+        y: 2123
+        width: 170
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544abe81793e8d34bbc20ccf2966c1b6
+      internalID: 763492339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_15
+      rect:
+        serializedVersion: 2
+        x: 2182
+        y: 2129
+        width: 171
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f36d31792ccab64e8afeda4379191ec
+      internalID: -828446311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_16
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 1844
+        width: 169
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 307013e37ab8bb441b7245a7b553591f
+      internalID: -1246122970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_17
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 1829
+        width: 169
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 429b03a413e6cf64fb587592ef81a13c
+      internalID: -2100206088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_18
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 1822
+        width: 169
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b7d05428c76e284c8b3631423480eae
+      internalID: -2090293337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_19
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 1829
+        width: 169
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d4d535f5c61fde4b894125eed92c7f2
+      internalID: 1999894289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_20
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 1844
+        width: 169
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ecaf6c96c4e68c48aaed49e1761acfc
+      internalID: 1596240674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_21
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 1829
+        width: 169
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a31c103848b81b45a51d4a17fb9eee9
+      internalID: -2139339178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_22
+      rect:
+        serializedVersion: 2
+        x: 1879
+        y: 1822
+        width: 169
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ed761395c119a489793cdd270bf2b5
+      internalID: -1329135433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_23
+      rect:
+        serializedVersion: 2
+        x: 2181
+        y: 1829
+        width: 169
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 191824736a7781f439e6031a3d000caf
+      internalID: -714659089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_24
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1546
+        width: 177
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c98919df509512429aea160cd396041
+      internalID: 1075091442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_25
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1537
+        width: 161
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae81c836562f414b88d571db539a4fd
+      internalID: 651049650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_26
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 1529
+        width: 152
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caeebc0bfce2f744494c6bf116d18124
+      internalID: -535431418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_27
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 1531
+        width: 160
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e575b32b63d2d8142a5ebdd9dc7b8858
+      internalID: 1145368999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_28
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 1546
+        width: 178
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f1c701b877e9b249822beeeae69b616
+      internalID: -2128678287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_29
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 1537
+        width: 161
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 726700705e36a5d4db822ce00ccc2b9d
+      internalID: -1664022721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_30
+      rect:
+        serializedVersion: 2
+        x: 1875
+        y: 1529
+        width: 152
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108062634fcf49644a1e970c332ea061
+      internalID: -177002306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_31
+      rect:
+        serializedVersion: 2
+        x: 2164
+        y: 1531
+        width: 161
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52d5096b8aed8b547ac0fbefaeda1c62
+      internalID: -145349888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_32
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 1250
+        width: 176
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 547d667e41d68c846aaaccb8ac8d5b54
+      internalID: -2143297919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_33
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 1241
+        width: 161
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52181d43efc91824b81078b0ab89295d
+      internalID: 1509720706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_34
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 1233
+        width: 152
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c73ca29eed6d2274e8ceec55d77af91b
+      internalID: -1832574999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_35
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 1235
+        width: 161
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fef1cde848117304d866eabd631934e0
+      internalID: -1022068152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_36
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 1250
+        width: 178
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8d513a4284f14347b0757e854247a7a
+      internalID: 649449847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_37
+      rect:
+        serializedVersion: 2
+        x: 1607
+        y: 1241
+        width: 161
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf8c9814fb29f0f4db2b47f867c9472a
+      internalID: -749692268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_38
+      rect:
+        serializedVersion: 2
+        x: 1908
+        y: 1233
+        width: 152
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18f8ce591928e5a48ae1bd982f5e7e7d
+      internalID: -610147194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_39
+      rect:
+        serializedVersion: 2
+        x: 2207
+        y: 1235
+        width: 161
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d810732643eca804bb5038d7602143b9
+      internalID: 1870022620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_40
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 943
+        width: 156
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94dcef12e96075e4f98b080adba11d8e
+      internalID: 110240589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_41
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 937
+        width: 156
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69d03d4584bcfea4189d58636cc687dd
+      internalID: 219687829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_42
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 929
+        width: 157
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69cb37e0b8a6e934bbcc1dc0a06473bc
+      internalID: -1583487704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_43
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 945
+        width: 156
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a7662139258cf47be24553c3697bbc
+      internalID: 1350429370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_44
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 954
+        width: 171
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e02b796986a7c9e40991f6349b7fa019
+      internalID: 543251559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_45
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 951
+        width: 156
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 307ad4324f6db8d469733e49c9373c04
+      internalID: 634953393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_46
+      rect:
+        serializedVersion: 2
+        x: 1902
+        y: 937
+        width: 156
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5819395f2c370bd45961ff220025a8ea
+      internalID: 337196810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_47
+      rect:
+        serializedVersion: 2
+        x: 2201
+        y: 943
+        width: 157
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e986d14a55748a04dae663694fe543cf
+      internalID: 502991526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_48
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 631
+        width: 157
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79135338c83a2cd4798709d969521b27
+      internalID: -1014073110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_49
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 626
+        width: 157
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b703190e71050a4ab42832a827b0b35
+      internalID: 2018571884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_50
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 620
+        width: 157
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e62cb7cf39561c141a5f4a119243b88a
+      internalID: 679744969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_51
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 634
+        width: 157
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514b98d247e19c145891fab1cfd1dd1b
+      internalID: 653649832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_52
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 643
+        width: 172
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a127fb6c376d743aeca813ff850542
+      internalID: 1810013055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_53
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 639
+        width: 157
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af605d8959c1b0d46aaeb635ba21b750
+      internalID: -187151598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_54
+      rect:
+        serializedVersion: 2
+        x: 1883
+        y: 626
+        width: 157
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2da4a552da6c4f3409ea64ef894c7a58
+      internalID: -985768489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_55
+      rect:
+        serializedVersion: 2
+        x: 2182
+        y: 631
+        width: 157
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd2967bf759b794db5ef9a1aafa410a
+      internalID: 893953304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_56
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 352
+        width: 156
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 631582a8e48e8834dbffbe568cfd8cae
+      internalID: -1373811103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_57
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 349
+        width: 156
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2e78ab339b394d439047091bb849b8b
+      internalID: -1939769205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_58
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 345
+        width: 155
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 481f6e22cb0013d42a08d9d9a44eda59
+      internalID: -566812152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_59
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 338
+        width: 155
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 539e4e45d4cb87e4494f322362895d3b
+      internalID: 2006623710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_60
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 341
+        width: 156
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9cf607ff5c5a7c44b6ea9f9d4d0a342
+      internalID: -1511075916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_61
+      rect:
+        serializedVersion: 2
+        x: 1607
+        y: 345
+        width: 156
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd6ca465ba78e94096236dc3030f776
+      internalID: -834971009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_62
+      rect:
+        serializedVersion: 2
+        x: 1908
+        y: 339
+        width: 154
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c9fb616dcc138448bfda2ddb9ca4b9d
+      internalID: -1624014013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_63
+      rect:
+        serializedVersion: 2
+        x: 2207
+        y: 349
+        width: 155
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a4e3a8d7820ba479b8b1b65172b0d2
+      internalID: -1674626235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_64
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 59
+        width: 154
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d4187351782474390387167bc37cc4
+      internalID: 523197367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_65
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 55
+        width: 156
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da7ab87f41b84c64fbf4a93b18cef11b
+      internalID: -2093401521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_66
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 51
+        width: 154
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e375903cbd732d64193a7ee03590c140
+      internalID: 1500891259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_67
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 44
+        width: 156
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f249dc20332a2f140a9522d8d71e342f
+      internalID: -1197820403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_68
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 49
+        width: 155
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 252daac7c301bb348be14d696673073e
+      internalID: 637366536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_69
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 53
+        width: 155
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c95a77825140f40abfdd252b4f3a7a
+      internalID: 1541583488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_70
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 46
+        width: 155
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5c9db8cad18d664ebb0f21e9b937f09
+      internalID: 830566649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-FullCharSet_71
+      rect:
+        serializedVersion: 2
+        x: 2178
+        y: 55
+        width: 156
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f15e72b3cfbd9b04a9fc4cda4b52764f
+      internalID: 669479633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Jed-FullCharSet_0: -1519902638
+      Jed-FullCharSet_1: 1146674920
+      Jed-FullCharSet_10: -1205468233
+      Jed-FullCharSet_11: -1134084295
+      Jed-FullCharSet_12: -1494392333
+      Jed-FullCharSet_13: -1167453602
+      Jed-FullCharSet_14: 763492339
+      Jed-FullCharSet_15: -828446311
+      Jed-FullCharSet_16: -1246122970
+      Jed-FullCharSet_17: -2100206088
+      Jed-FullCharSet_18: -2090293337
+      Jed-FullCharSet_19: 1999894289
+      Jed-FullCharSet_2: -1890803228
+      Jed-FullCharSet_20: 1596240674
+      Jed-FullCharSet_21: -2139339178
+      Jed-FullCharSet_22: -1329135433
+      Jed-FullCharSet_23: -714659089
+      Jed-FullCharSet_24: 1075091442
+      Jed-FullCharSet_25: 651049650
+      Jed-FullCharSet_26: -535431418
+      Jed-FullCharSet_27: 1145368999
+      Jed-FullCharSet_28: -2128678287
+      Jed-FullCharSet_29: -1664022721
+      Jed-FullCharSet_3: 758052647
+      Jed-FullCharSet_30: -177002306
+      Jed-FullCharSet_31: -145349888
+      Jed-FullCharSet_32: -2143297919
+      Jed-FullCharSet_33: 1509720706
+      Jed-FullCharSet_34: -1832574999
+      Jed-FullCharSet_35: -1022068152
+      Jed-FullCharSet_36: 649449847
+      Jed-FullCharSet_37: -749692268
+      Jed-FullCharSet_38: -610147194
+      Jed-FullCharSet_39: 1870022620
+      Jed-FullCharSet_4: -1597772168
+      Jed-FullCharSet_40: 110240589
+      Jed-FullCharSet_41: 219687829
+      Jed-FullCharSet_42: -1583487704
+      Jed-FullCharSet_43: 1350429370
+      Jed-FullCharSet_44: 543251559
+      Jed-FullCharSet_45: 634953393
+      Jed-FullCharSet_46: 337196810
+      Jed-FullCharSet_47: 502991526
+      Jed-FullCharSet_48: -1014073110
+      Jed-FullCharSet_49: 2018571884
+      Jed-FullCharSet_5: 1940712858
+      Jed-FullCharSet_50: 679744969
+      Jed-FullCharSet_51: 653649832
+      Jed-FullCharSet_52: 1810013055
+      Jed-FullCharSet_53: -187151598
+      Jed-FullCharSet_54: -985768489
+      Jed-FullCharSet_55: 893953304
+      Jed-FullCharSet_56: -1373811103
+      Jed-FullCharSet_57: -1939769205
+      Jed-FullCharSet_58: -566812152
+      Jed-FullCharSet_59: 2006623710
+      Jed-FullCharSet_6: 290355050
+      Jed-FullCharSet_60: -1511075916
+      Jed-FullCharSet_61: -834971009
+      Jed-FullCharSet_62: -1624014013
+      Jed-FullCharSet_63: -1674626235
+      Jed-FullCharSet_64: 523197367
+      Jed-FullCharSet_65: -2093401521
+      Jed-FullCharSet_66: 1500891259
+      Jed-FullCharSet_67: -1197820403
+      Jed-FullCharSet_68: 637366536
+      Jed-FullCharSet_69: 1541583488
+      Jed-FullCharSet_7: -1076159431
+      Jed-FullCharSet_70: 830566649
+      Jed-FullCharSet_71: 669479633
+      Jed-FullCharSet_8: -938127591
+      Jed-FullCharSet_9: -1560894535
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

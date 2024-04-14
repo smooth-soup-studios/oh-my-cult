@@ -9,16 +9,16 @@ EditorBuildSettings:
     path: Assets/Scenes/testing/Menu_Tim.unity
     guid: 7a5b3f44995ceed48a7c7d0f2fc92cc9
   - enabled: 1
-    path: Assets/Scenes/testing/PllastestMenuScenes/TempKeybindingScene.unity
+    path: Assets/Scenes/testing/PlaystestMenuScenes/TempKeybindingScene.unity
     guid: f071c88293b405745abac9b659f15e09
   - enabled: 1
-    path: Assets/Scenes/testing/PllastestMenuScenes/TempTutorialScene.unity
+    path: Assets/Scenes/testing/PlaystestMenuScenes/TempTutorialScene.unity
     guid: 51aee8ad44bf27b4d8b6f8521b635736
   - enabled: 1
-    path: Assets/Scenes/testing/MovementTestScene.unity
-    guid: 928082ad62523299e9d93bd88e47bb01
-  - enabled: 0
-    path: Assets/Scenes/main_menu.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/level_0.unity
+    guid: 901def803149442488e8ecf757f1cd22
+  - enabled: 1
+    path: Assets/Scenes/testing/PlaystestMenuScenes/OutroScene.unity
+    guid: 24ba1b75f3014964ba5b591e90ec3d06
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 97c6fb9fe5c305894859831c3341101e, type: 2}

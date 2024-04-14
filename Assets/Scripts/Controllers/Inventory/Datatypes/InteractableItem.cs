@@ -5,6 +5,6 @@ public abstract class InteractableItem : MonoBehaviour {
 	public float UsageCooldown;
 
 	public InventoryItem GetInventoryItem() => ItemData;
-	public abstract void PrimaryAction(GameObject source);
-	public abstract void SecondaryAction(GameObject source);
+	public abstract void PrimaryAction(StateMachine source);
+	public abstract void SecondaryAction(StateMachine source);
 }

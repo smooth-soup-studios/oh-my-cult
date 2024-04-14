@@ -13,7 +13,10 @@ public class PlayerHeavyAttackState : BaseState {
 			return;
 		}
 		StateMachine.StartCoroutine(WaitForCooldown());
-		_currentItem.SecondaryAction(StateMachine.gameObject);
+		_currentItem.SecondaryAction(StateMachine);
+		if (_currentItem.ItemData.AnimationSet != null) {
+			StateMachine.PlayerAnimator.Play("Player" + _currentItem.ItemData.AnimationSet, MovementDirection);
+		}
 	}
 
 	public override void UpdateState() {

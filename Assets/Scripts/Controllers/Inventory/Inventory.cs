@@ -82,11 +82,9 @@ public class Inventory : MonoBehaviour, ISaveable {
 
 
 	public void LoadData(GameData data) {
-		throw new System.NotImplementedException();
 	}
 
 	public void SaveData(GameData data) {
-		throw new System.NotImplementedException();
 	}
 
 	private void Update() {

@@ -19,5 +19,5 @@ MonoBehaviour:
   ChargeSpeed: 15
   MeleeDetectDistance: 15
   DamageAmount: 8
-  AttackCooldown: 10
+  AttackCooldown: 4
   AttackRange: 0

@@ -28,7 +28,7 @@ namespace Managers {
 		}
 
 		private void Update() {
-			_healthBarValue.style.width = new StyleLength(new Length(Health * 100, LengthUnit.Percent));
+			_healthBarValue.style.width = new StyleLength(new Length(Health , LengthUnit.Percent));
 			_keyIndicator.style.visibility = HasPlaytestKey ? Visibility.Visible : Visibility.Hidden;
 		}
 

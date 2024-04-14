@@ -62,7 +62,8 @@ public class StateMachine : MonoBehaviour, ISaveable {
 			new PlayerDashState("Dash", this),
 			new PlayerInteractState("Interact",this),
 			new PlayerAttackState("Attack", this),
-			new PlayerHeavyAttackState("HeavyAttack", this)
+			new PlayerHeavyAttackState("HeavyAttack", this),
+			new PlayerDeathState("Death", this)
 		};
 		SwitchState("Idle");
 

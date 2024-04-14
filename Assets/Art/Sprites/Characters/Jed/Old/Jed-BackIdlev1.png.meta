@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 75227192fddd3a944b4dbfebe851257a
+guid: 91eef017a8d6aec46921d78e870bcf8f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -113,10 +113,10 @@ TextureImporter:
       name: Jed-BackIdle_0
       rect:
         serializedVersion: 2
-        x: 121
-        y: 66
-        width: 168
-        height: 271
+        x: 128
+        y: 73
+        width: 154
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52ee8b2f191f62f4fa39e73dface8a17
-      internalID: -1020360900
+      spriteID: aa63ad2457e9f2e4189c39b739cebaa7
+      internalID: -1212504207
       vertices: []
       indices: 
       edges: []
@@ -134,10 +134,10 @@ TextureImporter:
       name: Jed-BackIdle_1
       rect:
         serializedVersion: 2
-        x: 317
-        y: 66
-        width: 168
-        height: 273
+        x: 324
+        y: 73
+        width: 154
+        height: 259
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6a8ae43706f3924893e95fd0e587460
-      internalID: 235101829
+      spriteID: b1681fdedf4355d4d8ecdaa522440f95
+      internalID: -436575639
       vertices: []
       indices: 
       edges: []
@@ -155,10 +155,10 @@ TextureImporter:
       name: Jed-BackIdle_2
       rect:
         serializedVersion: 2
-        x: 519
-        y: 66
-        width: 168
-        height: 275
+        x: 526
+        y: 73
+        width: 154
+        height: 261
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 500499f280d6a204c9b3529c578d3739
-      internalID: -2117148192
+      spriteID: 6586b7fed35db794097a6fa0101ed0e4
+      internalID: -519257942
       vertices: []
       indices: 
       edges: []
@@ -176,10 +176,10 @@ TextureImporter:
       name: Jed-BackIdle_3
       rect:
         serializedVersion: 2
-        x: 717
-        y: 66
-        width: 168
-        height: 275
+        x: 724
+        y: 73
+        width: 154
+        height: 261
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 130172a38614e3d4aa17182d492c48d5
-      internalID: 368331627
+      spriteID: 522e8fbf3151b8a489e2a3fa1d3b42f8
+      internalID: -1022141189
       vertices: []
       indices: 
       edges: []
@@ -197,10 +197,10 @@ TextureImporter:
       name: Jed-BackIdle_4
       rect:
         serializedVersion: 2
-        x: 917
-        y: 66
-        width: 168
-        height: 275
+        x: 924
+        y: 73
+        width: 154
+        height: 261
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b45b4563bbbb2c1408d21d75786361c0
-      internalID: -1517052909
+      spriteID: a6574bc5cb2a0ad4081ab2f0e741d418
+      internalID: 1536416112
       vertices: []
       indices: 
       edges: []
@@ -218,10 +218,10 @@ TextureImporter:
       name: Jed-BackIdle_5
       rect:
         serializedVersion: 2
-        x: 1115
-        y: 66
-        width: 168
-        height: 273
+        x: 1122
+        y: 73
+        width: 154
+        height: 259
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f66d34a795a72794097b7dd60f26dc01
-      internalID: -756551734
+      spriteID: 4fce08bdd9385e34584b12c8c33f1498
+      internalID: 993681436
       vertices: []
       indices: 
       edges: []
@@ -239,10 +239,10 @@ TextureImporter:
       name: Jed-BackIdle_6
       rect:
         serializedVersion: 2
-        x: 1317
-        y: 66
-        width: 168
-        height: 269
+        x: 1324
+        y: 73
+        width: 154
+        height: 255
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 128387ae80bd59042883f806f55a72db
-      internalID: -317605800
+      spriteID: 80c516cb467669c49bfdd367307be447
+      internalID: 635673698
       vertices: []
       indices: 
       edges: []
@@ -260,10 +260,10 @@ TextureImporter:
       name: Jed-BackIdle_7
       rect:
         serializedVersion: 2
-        x: 1517
-        y: 66
-        width: 168
-        height: 267
+        x: 1524
+        y: 73
+        width: 154
+        height: 253
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e30f06d4eedce8a4ab7a1eae06f56e86
-      internalID: -730376950
+      spriteID: 7de514a9e6fa33e4a8440788067fc0c5
+      internalID: -2099042257
       vertices: []
       indices: 
       edges: []
@@ -288,14 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Jed-BackIdle_0: -1020360900
-      Jed-BackIdle_1: 235101829
-      Jed-BackIdle_2: -2117148192
-      Jed-BackIdle_3: 368331627
-      Jed-BackIdle_4: -1517052909
-      Jed-BackIdle_5: -756551734
-      Jed-BackIdle_6: -317605800
-      Jed-BackIdle_7: -730376950
+      Jed-BackIdle_0: -1212504207
+      Jed-BackIdle_1: -436575639
+      Jed-BackIdle_2: -519257942
+      Jed-BackIdle_3: -1022141189
+      Jed-BackIdle_4: 1536416112
+      Jed-BackIdle_5: 993681436
+      Jed-BackIdle_6: 635673698
+      Jed-BackIdle_7: -2099042257
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

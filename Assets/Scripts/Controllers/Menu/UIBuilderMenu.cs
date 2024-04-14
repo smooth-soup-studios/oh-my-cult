@@ -44,7 +44,7 @@ public class UIBuilderMenu : MonoBehaviour
     // Update is called once per frame
     // void Update()
     // {
-        
+
     // }
 
     void OnNewGame() {
@@ -60,14 +60,14 @@ public class UIBuilderMenu : MonoBehaviour
     }
 
     public void OnContinue() {
-        DisableButtons();
-        Logger.Log("MenuController", "Loading Savefile");
+        // DisableButtons();
+        // Logger.Log("MenuController", "Loading Savefile");
 
-		SaveManager.Instance.ChangeSelectedProfileId("1");
+		// SaveManager.Instance.ChangeSelectedProfileId("1");
 
-        // Works w/ Savemanager OnSceneLoaded() to load the game.
-        SaveManager.Instance.SaveGame();
-        SceneManager.LoadSceneAsync(_lastSceneLoaded);
+        // // Works w/ Savemanager OnSceneLoaded() to load the game.
+        // SaveManager.Instance.SaveGame();
+        // SceneManager.LoadSceneAsync(_lastSceneLoaded);
     }
 
     public void QuitGame() {

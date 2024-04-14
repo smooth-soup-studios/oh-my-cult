@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Managers;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -52,6 +53,8 @@ public class StateMachine : MonoBehaviour, ISaveable {
 
 	void Update() {
 		_currentState.UpdateState();
+
+		UIManager.Instance.HasPlaytestKey = HasDoorKey;
 	}
 
 	public void SwitchState(string name) {

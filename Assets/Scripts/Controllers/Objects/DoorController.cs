@@ -28,6 +28,7 @@ public class DoorController : MonoBehaviour {
 
 			if (RequiresKey) {
 				if (!sm.HasDoorKey) {
+					UIManager.Instance.ShowDialogBox("Locked Door", "You need a key to unlock this door.", 2f);
 					Logger.Log(_logName, "Player does not have key for door " + ArbitraryId);
 					return;
 				}

@@ -19,7 +19,7 @@ public class PlayerMoveState : BaseState {
 	}
 
 	public override void UpdateState() {
-		StateMachine.transform.Translate(StateMachine.BaseSpeed * StateMachine.SpeedModifier * Time.deltaTime * Movement);
+		StateMachine.HandleMovement(StateMachine.BaseSpeed * StateMachine.SpeedModifier * Time.deltaTime * Movement.normalized);
 		StateMachine.PlayerAnimator.Play("PlayerRun", MovementDirection);
 
 		if(!_walkSound){

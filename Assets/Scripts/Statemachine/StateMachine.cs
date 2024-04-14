@@ -44,6 +44,11 @@ public class StateMachine : MonoBehaviour, ISaveable {
 		_currentState?.EnterState();
 	}
 
+	public void HandleMovement(Vector2 movement) {
+		Rigidbody2D _RigidBody = GetComponent<Rigidbody2D>();
+		_RigidBody.MovePosition(_RigidBody.position + movement);
+	}
+
 	private void SwitchSpriteOnMove(Vector2 movement) {
 		// Default Position
 

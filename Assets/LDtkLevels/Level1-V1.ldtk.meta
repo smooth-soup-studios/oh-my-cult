@@ -14,11 +14,13 @@ ScriptedImporter:
   _customLevelPrefab: {instanceID: 0}
   _intGridValueColorsVisible: 0
   _useCompositeCollider: 1
-  _geometryType: 0
+  _geometryType: 1
   _createBackgroundColor: 1
   _createLevelBoundsTrigger: 0
-  _intGridValues: []
+  _intGridValues:
+  - _key: Collider_Layer_1
+    _asset: {fileID: 11400000, guid: b824373bb8ff10d45a323b4058099d72, type: 2}
   _entities: []
-  _enumGenerate: 0
+  _enumGenerate: 1
   _enumPath: 
   _enumNamespace: 

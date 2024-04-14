@@ -24,7 +24,7 @@ public class PlayerAttackState : BaseState {
 	public override void UpdateState() {
 		StateMachine.transform.Translate(StateMachine.BaseSpeed * StateMachine.SpeedModifier * Time.deltaTime * Movement);
 		if (!_using) {
-			StateMachine.SwitchState("Move");
+			StateMachine.SwitchState("Idle");
 		}
 
 	}

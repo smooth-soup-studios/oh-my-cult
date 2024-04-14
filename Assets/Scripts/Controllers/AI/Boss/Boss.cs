@@ -6,6 +6,7 @@ using UnityEngine;
 public class Boss : MonoBehaviour {
 	public BossStatsSO Stats;
 	[SerializeField] public BossAttacks BossAttacks;
+	[SerializeField] public AudioClip RoarSoundClip;
 	public Transform Player;
 	public AnimationManager Animator;
 	public BossBaseState CurrentState;

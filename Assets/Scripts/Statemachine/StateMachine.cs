@@ -25,7 +25,7 @@ public class StateMachine : MonoBehaviour, ISaveable {
 	[HideInInspector] public PlayerInteractionChecker PlayerInteractor { get; private set; }
 	[HideInInspector] public Inventory PlayerInventory { get; private set; }
 
-
+	[SerializeField] public AudioClip RunSoundClip;
 	private BaseState _currentState;
 	private List<BaseState> _states;
 

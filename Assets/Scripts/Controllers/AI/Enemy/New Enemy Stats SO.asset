@@ -17,7 +17,7 @@ MonoBehaviour:
   DetectionPauseTime: 0
   PlayerDetectDistance: 25
   ChargeSpeed: 15
-  MeleeDetectDistance: 12
+  MeleeDetectDistance: 15
   DamageAmount: 8
   AttackCooldown: 10
   AttackRange: 0

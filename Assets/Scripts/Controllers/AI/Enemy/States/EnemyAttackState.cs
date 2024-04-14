@@ -5,23 +5,27 @@ using UnityEngine;
 public class EnemyAttackState : EnemyBaseState {
 	public EnemyAttackState(Enemy enemy, string name) : base(enemy, name) { }
 
-	private bool _attackCooldown = false;
+	private bool _attackCooldown = true;
+	private bool _switchState = false;
 	public override void EnterState() {
-		Logger.Log(Name, "Attack");
-
 		Enemy.StartCoroutine(AttackSpeed());
-		Enemy.StartCoroutine(AttackCooldown());
-		if (_attackCooldown) {
-			Enemy.Weapon.DefaultAttack();
-		}
+		// Enemy.StartCoroutine(AttackCooldown());
+		// _attackCooldown = false;
+
+		Logger.Log(Name, "Attack");
+		_switchState = false;
+		Enemy.StartCoroutine(SwitchTime());
 	}
 
 	public override void UpdateState() {
+		Enemy.CheckForMeleeRange();
+		if (_attackCooldown) {
+			Enemy.Weapon.DefaultAttack();
+			Enemy.StartCoroutine(AttackCooldown());
+		}
+
 		if (Enemy.AttackMelee == false) {
 			Enemy.SwitchState("Charge");
-		}
-		if (Enemy.PlayerDetect == false) {
-			Enemy.SwitchState("Patrol");
 		}
 	}
 	public override void ExitState() {
@@ -32,7 +36,13 @@ public class EnemyAttackState : EnemyBaseState {
 	}
 
 	private IEnumerator AttackCooldown() {
+		_attackCooldown = false;
 		yield return new WaitForSecondsRealtime(Enemy.Stats.AttackCooldown);
 		_attackCooldown = true;
+
+	}
+	IEnumerator SwitchTime() {
+		yield return new WaitForSecondsRealtime(Enemy.Stats.AttackCooldown);
+		_switchState = true;
 	}
 }

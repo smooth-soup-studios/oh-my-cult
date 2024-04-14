@@ -11,26 +11,28 @@ public class EnemyPatrolState : EnemyBaseState {
 	public EnemyStatsSO Stats;
 
 	public override void EnterState() {
-		Logger.Log(Name, "Patrol");
 	}
 
 	public override void UpdateState() {
-		// Enemy.CheckForObstacles();
 		Enemy.CheckForPlayer();
 		EnemyMovement();
 		if (Enemy.PlayerDetect == true) {
 			Enemy.SwitchState("Detected");
 		}
+		Logger.Log(Name, $"{Enemy.RouteIndex}");
 	}
 	public override void ExitState() {
 	}
 
 	private void EnemyMovement() {
-		if (Enemy.transform.position != Enemy.Route[Enemy.RouteIndex].position) {
-			// Move towards next point.
-			Enemy.transform.position = Vector3.MoveTowards(Enemy.transform.position, Enemy.Route[Enemy.RouteIndex].position, Enemy.Stats.Speed * Time.deltaTime);
-		}
-		else {
+		// if (Enemy.Agent.destination == Enemy.Route[Enemy.RouteIndex].position) {
+		// 	// Move towards next point.
+		// 	// Enemy.Agent.destination = Vector3.MoveTowards(Enemy.transform.position, Enemy.Route[Enemy.RouteIndex].position, Enemy.Stats.Speed * Time.deltaTime);
+		// 	Enemy.Agent.destination = Enemy.Route[Enemy.RouteIndex].position;
+		// }
+
+	Enemy.Agent.destination = Enemy.Route[Enemy.RouteIndex].position;
+		if(!Enemy.Agent.pathPending && Enemy.Agent.remainingDistance < 0.5f) {
 			if (!Enemy.IsResting) {
 				Enemy.StartCoroutine(RestAtPoint());
 			}

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,17 +6,22 @@ using UnityEngine;
 public class EnemyChargeState : EnemyBaseState {
 	public EnemyChargeState(Enemy enemy, string name) : base(enemy, name) { }
 
+
 	public override void EnterState() {
 		Logger.Log(Name, "Charge");
+
+
 	}
 
 	public override void UpdateState() {
-		Charge();
+		if (Enemy.PlayerDetect == true) {
+			Charge();
+		}
 		Enemy.CheckForMeleeRange();
 		if (Enemy.PlayerDetect == false) {
 			Enemy.SwitchState("Patrol");
 		}
-		if (Enemy.AttackMelee == true) {
+		if (Enemy.AttackMelee == true ) {
 			Enemy.SwitchState("Attack");
 		}
 	}
@@ -24,6 +30,9 @@ public class EnemyChargeState : EnemyBaseState {
 	}
 
 	void Charge() {
-		Enemy.transform.position = Vector3.MoveTowards(Enemy.transform.position, Enemy.Player.position, Enemy.Stats.ChargeSpeed * Time.deltaTime * 2);
+		Enemy.Agent.destination = Vector3.MoveTowards(Enemy.transform.position, Enemy.Player.position, Enemy.Stats.ChargeSpeed * Time.deltaTime * 2);
+		Enemy.Agent.destination = Enemy.Player.position;
 	}
+
+
 }

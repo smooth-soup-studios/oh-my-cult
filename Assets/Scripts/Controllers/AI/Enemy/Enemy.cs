@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,10 +18,11 @@ public class Enemy : MonoBehaviour {
 	[HideInInspector] public bool AttackMelee = false;
 	[SerializeField] public Transform[] Route;
 	public Transform Player;
-	[HideInInspector] public int RouteIndex = 0;
+	[HideInInspector] public int RouteIndex = 2;
 	[SerializeField] public float RestTime;
 	[HideInInspector] public bool IsResting = false;
 	[HideInInspector] public bool EndReached = false;
+	public NavMeshAgent Agent;
 
 
 	void Start() {
@@ -32,7 +34,10 @@ public class Enemy : MonoBehaviour {
 		};
 		SwitchState("Patrol");
 		Rb = GetComponent<Rigidbody2D>();
-
+		Rb.isKinematic = true;
+		Agent = GetComponent<NavMeshAgent>();
+		Agent.updateRotation = false;
+		Agent.updateUpAxis = false;
 	}
 	public void SwitchState(string name) {
 		CurrentState?.ExitState();
@@ -48,7 +53,6 @@ public class Enemy : MonoBehaviour {
 	private void OnDrawGizmos() {
 		if (transform == null)
 			return;
-		Gizmos.DrawWireSphere(transform.position, Stats.ObstacleDetectDistance);
 		Gizmos.DrawWireSphere(transform.position, Stats.PlayerDetectDistance);
 		Gizmos.DrawWireSphere(transform.position, Stats.MeleeDetectDistance);
 	}
@@ -65,5 +69,9 @@ public class Enemy : MonoBehaviour {
 		if (hitMeleeTarget.Length >= 1) {
 			AttackMelee = true;
 		}
+		else{
+			AttackMelee = false;
+		}
+		Array.Clear(hitMeleeTarget, 0, hitMeleeTarget.Length);
 	}
 }

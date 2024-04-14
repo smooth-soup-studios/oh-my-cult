@@ -6,7 +6,6 @@ public class PlayerDetectedState : EnemyBaseState {
 	public PlayerDetectedState(Enemy enemy, string name) : base(enemy, name) { }
 
 	public override void EnterState() {
-		Logger.Log(Name, "Hello");
 	}
 
 	public override void UpdateState() {
@@ -24,8 +23,6 @@ public class PlayerDetectedState : EnemyBaseState {
 	}
 
 	IEnumerator PlayerDetected() {
-		Enemy.Rb.velocity = Vector2.zero;
-
 		Logger.Log(Name, $"Player detected");
 		yield return new WaitForSeconds(Enemy.Stats.DetectionPauseTime);
 		Enemy.StartCoroutine(PlayerNotDetected());

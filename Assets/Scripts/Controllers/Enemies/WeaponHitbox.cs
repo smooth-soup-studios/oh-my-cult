@@ -5,6 +5,8 @@ using UnityEngine;
 public class WeaponHitbox : MonoBehaviour {
 	private List<GameObject> _objectsInCollider = new();
 	private void OnTriggerEnter2D(Collider2D other) {
+		if (other.gameObject.GetComponentsInChildren<WeaponHitbox>().Contains(this))
+			return;
 		_objectsInCollider.Add(other.gameObject);
 	}
 

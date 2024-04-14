@@ -4689,6 +4689,26 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 3053537212863230237, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4569954610330161128, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4569954610330161128, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4569954610330161128, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4569954610330161128, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5190605175808683211, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -4749,9 +4769,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6908342227108556609, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 7355898901544246293, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7355898901544246293, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7474330799362213706, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
       propertyPath: AttackSoundClip

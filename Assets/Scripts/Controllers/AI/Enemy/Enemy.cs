@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour, ISaveable {
 
 	void Start() {
 		if (!_isAlive) {
-			Destroy(gameObject);
+			gameObject.SetActive(false);
 		}
 
 		EventBus.Instance.Subscribe<GameObject>(EventType.DEATH, obj => {

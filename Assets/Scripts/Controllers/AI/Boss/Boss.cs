@@ -22,7 +22,7 @@ public class Boss : MonoBehaviour, ISaveable {
 
 	void Start() {
 		if (!_isAlive) {
-			Destroy(gameObject);
+			gameObject.SetActive(false);
 		}
 
 		Animator = new(GetComponent<Animator>());

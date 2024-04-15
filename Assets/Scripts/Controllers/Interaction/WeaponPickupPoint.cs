@@ -51,6 +51,6 @@ public class WeaponPickupPoint : BaseInteractable {
 	}
 
 	public override void SaveData(GameData data) {
-		data.SceneData.ArbitraryTriggers.Add("SwordExists", _enabled);
+		data.SceneData.ArbitraryTriggers["SwordExists"] = _enabled;
 	}
 }

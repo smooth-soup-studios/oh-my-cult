@@ -13,7 +13,7 @@
             <ui:VisualElement name="RightSide" style="flex-grow: 1; width: 50%; height: 100%; flex-direction: column; align-items: center; font-size: 64px; color: rgb(143, 202, 173);">
                 <ui:Label tabindex="-1" text="E - Pick Up Items" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 50%; height: 20%; right: 10%;" />
                 <ui:Label tabindex="-1" text="Space - Attack" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 50%; height: 20%; right: 10%;" />
-                <ui:Label tabindex="-1" text="Escape - Menu" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 50%; height: 25%; right: 10%;" />
+                <ui:Label tabindex="-1" text="Left Shift - Dash" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 50%; height: 25%; right: 10%;" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="Footer" style="flex-grow: 1; height: 20%; width: 100%;">

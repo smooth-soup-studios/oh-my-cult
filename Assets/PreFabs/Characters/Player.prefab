@@ -147,7 +147,7 @@ MonoBehaviour:
   WeaponHitbox: {fileID: 3173601029828910364}
   HitContainer: {fileID: 3053537212863230237}
   RunSoundClip: {fileID: 8300000, guid: a72f1d0baa8e4e9e8c5f841fcf512c44, type: 3}
-  AttackSoundClip: {fileID: 8300000, guid: ac4f3ad2ba8a2f64b92844effa87923e, type: 3}
+  AttackSoundClip: {fileID: 8300000, guid: d456821e55ccca74a91d03031cde7299, type: 3}
   LatestDoor: -1
   HasDoorKey: 0
 --- !u!114 &7464427908449370601

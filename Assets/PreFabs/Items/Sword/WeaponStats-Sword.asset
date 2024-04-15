@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ebe9f6770ae358489e1c29453354299, type: 3}
   m_Name: WeaponStats-Sword
   m_EditorClassIdentifier: 
-  Damage: 10
-  AttackSpeed: 5
-  Range: 5
+  WeaponData:
+    Damage: 10
+    AttackSpeed: 0.5
+    Range: 5

@@ -23,6 +23,9 @@ public class PlayerData {
 public class SceneData {
 	public Dict<string, bool> ArbitraryTriggers = new();
 	public Dict<string, float> HealthValues = new();
+	public Dict<string, WeaponData> InvWeaponVals = new();
+	public Dict<string, InvData> InvItemVals = new();
+
 
 
 }

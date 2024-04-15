@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour, ISaveable {
@@ -82,9 +83,21 @@ public class Inventory : MonoBehaviour, ISaveable {
 
 
 	public void LoadData(GameData data) {
+		List<InventoryItem> newInv = new();
+		data.SceneData.InvItemVals.Keys.ToList().ForEach(key => {
+			InventoryItem newItem = ScriptableObject.CreateInstance<InventoryItem>();
+			newItem.InvData = data.SceneData.InvItemVals[key];
+			newInv.Add(newItem);
+		});
+		if (newInv.Count > 0) {
+			_currentInventory = newInv;
+		}
 	}
 
 	public void SaveData(GameData data) {
+		_currentInventory.ForEach(x => {
+			data.SceneData.InvItemVals[x.name] = x.InvData;
+		});
 	}
 
 }

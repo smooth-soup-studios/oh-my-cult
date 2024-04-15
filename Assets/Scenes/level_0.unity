@@ -227,7 +227,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2069321049771282331, guid: 3e2be099de849f5c3a61954883b6d4f7, type: 3}
       propertyPath: _initializeData
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5020171767887303805, guid: 3e2be099de849f5c3a61954883b6d4f7, type: 3}
       propertyPath: m_Name
@@ -5853,14 +5853,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 7474330799362213706, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
-      propertyPath: LatestDoor
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7474330799362213706, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
-      propertyPath: AttackSoundClip
-      value: 
-      objectReference: {fileID: 8300000, guid: d456821e55ccca74a91d03031cde7299, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7208551151754622344, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}

@@ -22,7 +22,6 @@ public class UIBuilderMenu : MonoBehaviour
     {
         _root = GetComponent<UIDocument>().rootVisualElement;
         Logger.Log("MainMenu", _optionsUI.name);
-        //_optionsUI.SetActive(false);
         // if (!SaveManager.Instance.HasGameData()) {
         //     _continueButton.interactable = false;
         // }
@@ -35,10 +34,12 @@ public class UIBuilderMenu : MonoBehaviour
         _quit = _root.Q<Button>("QuitButton");
 
         _newGameButton.clicked += OnNewGame;
-        _continueButton.clicked += OnContinue;
+        //_continueButton.clicked += OnContinue;
         //_loadGameButton.clicked += LoadData;
         _optionsButton.clicked += OnOptions;
         _quit.clicked += QuitGame;
+
+        DisableButtons();
     }
 
     // Update is called once per frame
@@ -76,8 +77,12 @@ public class UIBuilderMenu : MonoBehaviour
     }
 
     public void DisableButtons() {
-        // _newGameButton.interactable = false;
-        // _continueButton.interactable = false;
+        if (!SaveManager.Instance.HasGameData()) {
+            _loadGameButton.style.unityBackgroundImageTintColor = new Color(255f,255f,255f,.5f);
+            _continueButton.style.unityBackgroundImageTintColor = new Color(255f,255f,255f,.5f);
+            //_loadGameButton.SetEnabled(false);
+            //_continueButton.SetEnabled(false);
+        }
     }
 
     public void LoadData(GameData data) {

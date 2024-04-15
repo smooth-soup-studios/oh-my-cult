@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Boss : MonoBehaviour, ISaveable {
 	public BossStatsSO Stats;
@@ -30,6 +31,8 @@ public class Boss : MonoBehaviour, ISaveable {
 			if (obj == gameObject) {
 				_isAlive = false;
 				gameObject.SetActive(false);
+				SceneManager.LoadScene("OutroScene");
+
 			}
 		});
 

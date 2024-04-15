@@ -20,6 +20,7 @@ public class InvData {
 }
 
 
+[Serializable]
 public enum InventoryItemType {
 	Consumable,
 	Weapon,

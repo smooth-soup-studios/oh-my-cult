@@ -87,13 +87,4 @@ public class Inventory : MonoBehaviour, ISaveable {
 	public void SaveData(GameData data) {
 	}
 
-	private void Update() {
-		if (Input.GetKeyDown(KeyCode.P)) {
-			Logger.Log("Inventory", _currentInventory.Count);
-		}
-	}
-
-
-
-
 }

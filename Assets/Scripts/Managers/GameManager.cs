@@ -32,6 +32,7 @@ namespace Managers {
 
 		public void LoadScene(string scene) {
 			Debug.Log("Does scene exist: " + DoesSceneExist(scene));
+			SaveManager.Instance.SaveGame();
 			if (DoesSceneExist(scene)) SceneManager.LoadScene(scene);
 		}
 

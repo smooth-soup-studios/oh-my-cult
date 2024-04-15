@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[SerializeField]
 public abstract class InteractableItem : MonoBehaviour {
 	public InventoryItem ItemData;
 	public float UsageCooldown;

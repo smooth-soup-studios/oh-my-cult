@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 2607886220727919282}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,7 +68,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.32, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 714397128736290338}
@@ -148,6 +148,8 @@ MonoBehaviour:
   HitContainer: {fileID: 3053537212863230237}
   RunSoundClip: {fileID: 8300000, guid: a72f1d0baa8e4e9e8c5f841fcf512c44, type: 3}
   AttackSoundClip: {fileID: 8300000, guid: ac4f3ad2ba8a2f64b92844effa87923e, type: 3}
+  LatestDoor: -1
+  HasDoorKey: 0
 --- !u!114 &7464427908449370601
 MonoBehaviour:
   m_ObjectHideFlags: 0

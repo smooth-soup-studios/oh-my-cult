@@ -8,14 +8,14 @@ public class PlayerHeavyAttackState : BaseState {
 	public PlayerHeavyAttackState(string name, StateMachine stateMachine) : base(name, stateMachine) { }
 
 	public override void EnterState() {
-		if (StateMachine.PlayerInventory.GetSelectedItem() == null || !StateMachine.PlayerInventory.GetSelectedItem().ItemPrefab.TryGetComponent<InteractableItem>(out _currentItem)) {
+		if (StateMachine.PlayerInventory.GetSelectedItem() == null || !StateMachine.PlayerInventory.GetSelectedItem().InvData.ItemPrefab.TryGetComponent<InteractableItem>(out _currentItem)) {
 			_using = false;
 			return;
 		}
 		StateMachine.StartCoroutine(WaitForCooldown());
 		_currentItem.SecondaryAction(StateMachine);
-		if (_currentItem.ItemData.AnimationSet != null) {
-			StateMachine.PlayerAnimator.Play("Player" + _currentItem.ItemData.AnimationSet, MovementDirection);
+		if (_currentItem.ItemData.InvData.AnimationSet != null) {
+			StateMachine.PlayerAnimator.Play("Player" + _currentItem.ItemData.InvData.AnimationSet, MovementDirection);
 		}
 	}
 

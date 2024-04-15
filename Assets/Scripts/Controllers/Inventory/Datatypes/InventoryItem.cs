@@ -1,7 +1,13 @@
+using System;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "new InventoryItem", menuName = "OhMyCult/Items/new InventoryItem", order = 0)]
 public class InventoryItem : ScriptableObject {
+	public InvData InvData;
+}
+
+[Serializable]
+public class InvData {
 	[Header("Inventroy information")]
 	public string ItemName;
 	public Sprite ItemIcon;

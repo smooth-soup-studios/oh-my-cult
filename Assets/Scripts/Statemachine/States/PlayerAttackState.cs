@@ -9,14 +9,14 @@ public class PlayerAttackState : BaseState {
 	public PlayerAttackState(string name, StateMachine stateMachine) : base(name, stateMachine) { }
 
 	public override void EnterState() {
-		if (StateMachine.PlayerInventory.GetSelectedItem() == null || !StateMachine.PlayerInventory.GetSelectedItem().ItemPrefab.TryGetComponent<InteractableItem>(out _currentItem)) {
+		if (StateMachine.PlayerInventory.GetSelectedItem() == null || !StateMachine.PlayerInventory.GetSelectedItem().InvData.ItemPrefab.TryGetComponent<InteractableItem>(out _currentItem)) {
 			_using = false;
 			return;
 		}
 		StateMachine.StartCoroutine(WaitForCooldown());
 		_currentItem.PrimaryAction(StateMachine);
-		if (_currentItem.ItemData.AnimationSet != null) {
-			StateMachine.PlayerAnimator.Play("Player" + _currentItem.ItemData.AnimationSet, MovementDirection);
+		if (_currentItem.ItemData.InvData.AnimationSet != null) {
+			StateMachine.PlayerAnimator.Play("Player" + _currentItem.ItemData.InvData.AnimationSet, MovementDirection);
 			SoundManager.Instance.PlayClip(StateMachine.AttackSoundClip, StateMachine.transform, 1f);
 		}
 	}

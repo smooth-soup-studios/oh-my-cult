@@ -43,7 +43,7 @@ public class DoorController : MonoBehaviour {
 
 			AlreadyActivated = true;
 			_isTransporting = true;
-
+			
 			GameManager.Instance.LoadScene(
 				TransportTo switch {
 					TransportDestination.House => "houses",

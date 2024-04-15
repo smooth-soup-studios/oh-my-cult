@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public abstract class BaseInteractable : MonoBehaviour {
+public abstract class BaseInteractable : MonoBehaviour, ISaveable {
 	[SerializeField] public float InteractionRange;
 	[SerializeField] protected bool AutoTrigger;
 
@@ -15,5 +15,14 @@ public abstract class BaseInteractable : MonoBehaviour {
 			Gizmos.color = Color.magenta;
 		}
 		Gizmos.DrawWireSphere(transform.position, InteractionRange);
+	}
+
+	public virtual void LoadData(GameData data) {
+		Logger.LogWarning("Test", name + " Loaded");
+	}
+
+	public virtual void SaveData(GameData data) {
+		Logger.LogWarning("Test", name + " Saved");
+
 	}
 }

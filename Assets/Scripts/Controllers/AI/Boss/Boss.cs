@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Boss : MonoBehaviour {
+public class Boss : MonoBehaviour, ISaveable {
 	public BossStatsSO Stats;
 	[SerializeField] public BossAttacks BossAttacks;
 	[SerializeField] public AudioClip RoarSoundClip;
@@ -15,14 +15,21 @@ public class Boss : MonoBehaviour {
 	[HideInInspector] public bool Enemy = false;
 	[HideInInspector] public bool Charge;
 
+	private bool _isAlive = true;
+
 	// Start is called before the first frame update
 
 	void Start() {
+		if (!_isAlive) {
+			Destroy(gameObject);
+		}
+
 		Animator = new(GetComponent<Animator>());
 
 		EventBus.Instance.Subscribe<GameObject>(EventType.DEATH, obj => {
 			if (obj == gameObject) {
-				Destroy(gameObject);
+				_isAlive = false;
+				gameObject.SetActive(false);
 			}
 		});
 
@@ -66,5 +73,15 @@ public class Boss : MonoBehaviour {
 			Enemy = true;
 			Charge = false;
 		}
+	}
+
+	public void LoadData(GameData data) {
+		if (data.SceneData.ArbitraryTriggers.ContainsKey("BossDead")) {
+			data.SceneData.ArbitraryTriggers.TryGetValue("BossDead", out _isAlive);
+		}
+	}
+
+	public void SaveData(GameData data) {
+		data.SceneData.ArbitraryTriggers["BossDead"] = isActiveAndEnabled;
 	}
 }

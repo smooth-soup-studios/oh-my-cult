@@ -5,7 +5,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour {
+public class Enemy : MonoBehaviour, ISaveable {
 
 	public EnemyBaseState CurrentState;
 	[SerializeField] public Weapon Weapon;
@@ -24,11 +24,19 @@ public class Enemy : MonoBehaviour {
 	[HideInInspector] public bool EndReached = false;
 	public NavMeshAgent Agent;
 
+	private bool _isAlive = true;
+
+
 
 	void Start() {
+		if (!_isAlive) {
+			Destroy(gameObject);
+		}
+
 		EventBus.Instance.Subscribe<GameObject>(EventType.DEATH, obj => {
 			if (obj == gameObject) {
-				Destroy(gameObject);
+				_isAlive = false;
+				gameObject.SetActive(false);
 			}
 		});
 
@@ -81,5 +89,15 @@ public class Enemy : MonoBehaviour {
 			AttackMelee = false;
 		}
 		Array.Clear(hitMeleeTarget, 0, hitMeleeTarget.Length);
+	}
+
+	public void LoadData(GameData data) {
+		if (data.SceneData.ArbitraryTriggers.ContainsKey("EnemyDead")) {
+			data.SceneData.ArbitraryTriggers.TryGetValue("EnemyDead", out _isAlive);
+		}
+	}
+
+	public void SaveData(GameData data) {
+		data.SceneData.ArbitraryTriggers["EnemyDead"] = isActiveAndEnabled;
 	}
 }

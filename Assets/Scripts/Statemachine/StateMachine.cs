@@ -33,18 +33,18 @@ public class StateMachine : MonoBehaviour, ISaveable {
 	private List<BaseState> _states;
 
 	[Header("Latest Door")]
-	public int LatestDoor = 0;
+	public int LatestDoor = -1;
 	public bool HasDoorKey = false;
 
 	void Awake() {
-		GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-		foreach (GameObject player in players) {
-			if (player != gameObject) {
-				Destroy(gameObject);
-			}
-		}
+		// GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+		// foreach (GameObject player in players) {
+		// 	if (player != gameObject) {
+		// 		Destroy(gameObject);
+		// 	}
+		// }
 
-		DontDestroyOnLoad(this);
+		// DontDestroyOnLoad(this);
 	}
 
 	void Start() {
@@ -139,9 +139,13 @@ public class StateMachine : MonoBehaviour, ISaveable {
 		if (savedPos != Vector3.zero) {
 			transform.position = savedPos;
 		}
+		HasDoorKey = data.PlayerData.HasDoorKey;
+		LatestDoor = data.PlayerData.LatestDoor;
 	}
 
 	public void SaveData(GameData data) {
+		data.PlayerData.LatestDoor = LatestDoor;
+		data.PlayerData.HasDoorKey = HasDoorKey;
 		data.PlayerData.PlayerPosition = transform.position;
 		data.PlayerData.SceneName = SceneManager.GetActiveScene().name;
 	}

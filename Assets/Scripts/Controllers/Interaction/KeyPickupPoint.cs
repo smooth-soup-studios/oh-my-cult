@@ -1,3 +1,4 @@
+using Managers;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
@@ -13,6 +14,8 @@ public class KeyPickupPoint : BaseInteractable {
 		Exists = false;
 		interactor.GetComponent<StateMachine>().HasDoorKey = true;
 		Destroy(gameObject);
+
+		UIManager.Instance.ShowDialogBox("You picked up a key!", "Use this to unlock the church door.", 5f);
 	}
 
 	public override void OnDeselect() {

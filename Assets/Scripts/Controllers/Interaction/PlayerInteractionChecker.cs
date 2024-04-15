@@ -16,6 +16,9 @@ public class PlayerInteractionChecker : MonoBehaviour {
 				}
 			});
 		}
+		if (closestInteractable != null) {
+			closestInteractable.OnSelect();
+		}
 	}
 
 	public BaseInteractable GetCurrentInteractable() {

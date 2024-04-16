@@ -22,7 +22,7 @@ public class Outro : MonoBehaviour, ISaveable
     }
 
     void OnYesButton(){
-        SceneManager.LoadSceneAsync(3);
+        SceneManager.LoadSceneAsync(0);
     }
     void OnNoButton(){
         _deadUI.SetActive(false);
@@ -34,7 +34,6 @@ public class Outro : MonoBehaviour, ISaveable
             _formUI.SetActive(false);
             _deadUI.SetActive(true);
         }
-		throw new System.NotImplementedException();
 	}
 
 	public void SaveData(GameData data) {

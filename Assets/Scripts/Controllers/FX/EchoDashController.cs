@@ -14,8 +14,8 @@ public class EchoDashController : MonoBehaviour {
 
 			echo.GetComponent<EchoGhostController>().Lifetime = EchoLifetime;
 
-			var echoRenderer = echo.GetComponent<SpriteRenderer>();
-			var playerRenderer = GetComponent<SpriteRenderer>();
+			SpriteRenderer echoRenderer = echo.GetComponent<SpriteRenderer>();
+			SpriteRenderer playerRenderer = GetComponent<SpriteRenderer>();
 
 			echoRenderer.sprite = playerRenderer.sprite;
 			echoRenderer.transform.localScale = playerRenderer.transform.localScale;

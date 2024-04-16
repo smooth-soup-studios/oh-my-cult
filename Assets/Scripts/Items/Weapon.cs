@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Controllers.AI;
 using UnityEngine;
 using Managers;
 
@@ -15,7 +14,7 @@ public class Weapon : MonoBehaviour {
 	[SerializeField] private AudioClip _attackSoundClip;
 
 
-	public void DeafaultAttack() {
+	public void DefaultAttack() {
 		SoundManager.Instance.PlayClip(_attackSoundClip, transform, 1f);
 		Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(_attackPoint.position, _attackRange, _enemyLayer);
 		foreach (Collider2D Enemy in hitEnemies) {
@@ -24,8 +23,7 @@ public class Weapon : MonoBehaviour {
 			}
 		}
 	}
-
-	public void HeavyAttack(){
+	public void HeavyAttack() {
 		Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(_attackPoint.position, _attackRange, _enemyLayer);
 		foreach (Collider2D Enemy in hitEnemies) {
 			if (Enemy.TryGetComponent<EnemyHealthController>(out EnemyHealthController opponent)) {

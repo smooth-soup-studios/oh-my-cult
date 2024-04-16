@@ -21,15 +21,20 @@ public class InputManager : MonoBehaviour {
 		EventBus.Instance.TriggerEvent(EventType.MOVEMENT, value.Get<Vector2>());
 	}
 
-	public void OnAttack(InputValue value) {
-		EventBus.Instance.TriggerEvent(EventType.ATTACK, value.isPressed);
-	}
-
 	public void OnDash(InputValue value) {
 		EventBus.Instance.TriggerEvent(EventType.DASH, value.isPressed);
 	}
-		public void OnHeavyAttack(InputValue value) {
-		EventBus.Instance.TriggerEvent(EventType.HEAVYATTACK, value.isPressed);
+
+	public void OnInteract(InputValue value) {
+		EventBus.Instance.TriggerEvent(EventType.INTERACT, value.isPressed);
+	}
+
+	public void OnPrimary(InputValue value) {
+		EventBus.Instance.TriggerEvent(EventType.USE_PRIMARY, value.isPressed);
+	}
+
+	public void OnSecondary(InputValue value) {
+		EventBus.Instance.TriggerEvent(EventType.USE_SECONDARY, value.isPressed);
 	}
 
 }

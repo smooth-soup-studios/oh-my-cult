@@ -10,11 +10,11 @@ public class UIDemoTrigger : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            Managers.UIManager.Instance.ToggleDialogBox();
-        }
-        if (Input.GetKeyDown(KeyCode.H)) {
-            Managers.UIManager.Instance.DebugCycleHealth();
-        }
+        // if (Input.GetKeyDown(KeyCode.Space)) {
+        //     Managers.UIManager.Instance.ToggleDialogBox();
+        // }
+        // if (Input.GetKeyDown(KeyCode.H)) {
+        //     Managers.UIManager.Instance.DebugCycleHealth();
+        // }
     }
 }

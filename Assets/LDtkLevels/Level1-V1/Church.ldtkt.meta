@@ -1,0 +1,1274 @@
+fileFormatVersion: 2
+guid: d073a442da11ad1429c30c4cc5aa3f00
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: f3268c876daf4890b6af6cd462063137, type: 3}
+  _reimportOnDependencyChange: 1
+  _pixelsPerUnit: 16
+  _sprites:
+  - name: Church_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 1600
+      width: 200
+      height: 200
+    spriteID: 2f841a834de17bb4e816c80417fff4de
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 1600
+      width: 200
+      height: 200
+    spriteID: 0b6a9613593affd4d89e7773fedea7ce
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 400
+      y: 1600
+      width: 200
+      height: 200
+    spriteID: 202dbea5df8f8d9479dbe54b3acbb5c6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 1600
+      width: 200
+      height: 200
+    spriteID: 55b02414da318f24f813b64189afd606
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 800
+      y: 1600
+      width: 200
+      height: 200
+    spriteID: 2fed1de72c00fe646807fca247eb6693
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 1600
+      width: 200
+      height: 200
+    spriteID: 864a3c343e4334642b53bfb58edf9077
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1200
+      y: 1600
+      width: 200
+      height: 200
+    spriteID: bd889d4f133ed7544bbc76c909ad70d0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1400
+      y: 1600
+      width: 200
+      height: 200
+    spriteID: 6f0da6d08c3b7b74d8ad61bd0580fdca
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1600
+      y: 1600
+      width: 200
+      height: 200
+    spriteID: 2ab48161526a49741af454d2fa789300
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1800
+      y: 1600
+      width: 200
+      height: 200
+    spriteID: 625bc40217fbf2e4dae9eb2e30672aa3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 1400
+      width: 200
+      height: 200
+    spriteID: ef9cfb17022dd3c42ba6141c43d64c26
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_11
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 1400
+      width: 200
+      height: 200
+    spriteID: 77919944507ecdf44990d2b559b35802
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 400
+      y: 1400
+      width: 200
+      height: 200
+    spriteID: 9312bab29d22c6643a131b4f7ffbb8e3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_13
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 1400
+      width: 200
+      height: 200
+    spriteID: 8e1280a5588b49f46b5fff8270837537
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_14
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 800
+      y: 1400
+      width: 200
+      height: 200
+    spriteID: 0fae76abc071124488d973c38a1d3024
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_15
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 1400
+      width: 200
+      height: 200
+    spriteID: d8f8bc6251764da488a52e97bf98398f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_16
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1200
+      y: 1400
+      width: 200
+      height: 200
+    spriteID: a746cc92ba883ca46ba3b0c1bf32d207
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_17
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1400
+      y: 1400
+      width: 200
+      height: 200
+    spriteID: 0019a3dca94966b4093a147cba056e2f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_18
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1600
+      y: 1400
+      width: 200
+      height: 200
+    spriteID: aa158af686434d740a74777530029a7e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_19
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1800
+      y: 1400
+      width: 200
+      height: 200
+    spriteID: ea76d576ee3993b4cb74a377d903d882
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_20
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 1200
+      width: 200
+      height: 200
+    spriteID: 1be660b1b1d52f948a0b44940531b005
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_21
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 1200
+      width: 200
+      height: 200
+    spriteID: 4d937c7529dba9645a1f50e4f183dae7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_22
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 400
+      y: 1200
+      width: 200
+      height: 200
+    spriteID: 8f2fd61946a188b4eb74fc44b8a3d8d1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_23
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 1200
+      width: 200
+      height: 200
+    spriteID: 177769afe5caff74397ec6ba2a206e81
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_24
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 800
+      y: 1200
+      width: 200
+      height: 200
+    spriteID: e4cb4a1f48b5d134e9b64da2f021a2e7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_25
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 1200
+      width: 200
+      height: 200
+    spriteID: 8d2b075401a2a704a93eff6ac301df75
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_26
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1200
+      y: 1200
+      width: 200
+      height: 200
+    spriteID: 0da0823b6c4da2542a774bd975d8c036
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_27
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1400
+      y: 1200
+      width: 200
+      height: 200
+    spriteID: 33c5cc255c58c1d449c8915ce682529a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_28
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1600
+      y: 1200
+      width: 200
+      height: 200
+    spriteID: b71066567cbc64e45a6bcffcb469134c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_29
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1800
+      y: 1200
+      width: 200
+      height: 200
+    spriteID: e8b6dd62f54768243abadbf5325658da
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_30
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 1000
+      width: 200
+      height: 200
+    spriteID: 5a02a2f1b8321344181d85c6a755d569
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_31
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 1000
+      width: 200
+      height: 200
+    spriteID: 2edfa648d3f07f44f8527e142433d84d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_32
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 400
+      y: 1000
+      width: 200
+      height: 200
+    spriteID: 060ca99e049d58b4f8e18959a302ba86
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_33
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 1000
+      width: 200
+      height: 200
+    spriteID: 7ec19c3f872ef764d966f8f5d2dec7ed
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_34
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 800
+      y: 1000
+      width: 200
+      height: 200
+    spriteID: 8cd2840ea4d332042b171019e198df21
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_35
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 1000
+      width: 200
+      height: 200
+    spriteID: 4d6d9d96b79109f4287d6e0a7684ab2d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_36
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1200
+      y: 1000
+      width: 200
+      height: 200
+    spriteID: bc55d89f6983f194aa66200afbe61e36
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_37
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1400
+      y: 1000
+      width: 200
+      height: 200
+    spriteID: 463834e9bbd2a39499eacde208ef3a2a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_38
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1600
+      y: 1000
+      width: 200
+      height: 200
+    spriteID: fe3a4a22fc802e845a05ced959aba4bf
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_39
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1800
+      y: 1000
+      width: 200
+      height: 200
+    spriteID: 8f28e47f84029f64faa70afb0b8b6815
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_40
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 800
+      width: 200
+      height: 200
+    spriteID: 5cea1022ba6bb8b43ba05a27d6d0ed8f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_41
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 800
+      width: 200
+      height: 200
+    spriteID: 9be7a3b434d0d42499478c9fc746ea48
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_42
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 400
+      y: 800
+      width: 200
+      height: 200
+    spriteID: f445f0daaeacce24e9962b928fa0f8a9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_43
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 800
+      width: 200
+      height: 200
+    spriteID: 9045586a55ff39a47adaa21a1a83b605
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_44
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 800
+      y: 800
+      width: 200
+      height: 200
+    spriteID: 5b53190fc34c62244be2b8aaa184630d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_45
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 800
+      width: 200
+      height: 200
+    spriteID: ff374a247df6ca143bc3996361d7e6e8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_46
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1200
+      y: 800
+      width: 200
+      height: 200
+    spriteID: 4b7b6fae392d599468977ec998858053
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_47
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1400
+      y: 800
+      width: 200
+      height: 200
+    spriteID: 510470787ddc05d47a4ccd84f680811c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_48
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1600
+      y: 800
+      width: 200
+      height: 200
+    spriteID: 02f85ed906ed51c4d9a40987ad0ffd5d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_49
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1800
+      y: 800
+      width: 200
+      height: 200
+    spriteID: 7be3cb8a224f80748ae716eeef338758
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_50
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 600
+      width: 200
+      height: 200
+    spriteID: 689afcca8145b664d885a49854e0af40
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_51
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 600
+      width: 200
+      height: 200
+    spriteID: 8e4456a1e7988e14fa9e995d20f3e4d7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_52
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 400
+      y: 600
+      width: 200
+      height: 200
+    spriteID: 4f3c2c76f088c8a48bacd4772678c2fd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_53
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 600
+      width: 200
+      height: 200
+    spriteID: 79c4c22502646fa419579a75b9f9cbe8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_54
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 800
+      y: 600
+      width: 200
+      height: 200
+    spriteID: fdcd460a811080e42a4c243fac2990a2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_55
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 600
+      width: 200
+      height: 200
+    spriteID: 3814a04c718606b43ae9ffa25293df5a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_56
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1200
+      y: 600
+      width: 200
+      height: 200
+    spriteID: 3f102b064650b2c41a999c8ef654faf3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_57
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1400
+      y: 600
+      width: 200
+      height: 200
+    spriteID: 08c4e02825a86aa44856c91e72d79f35
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_58
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1600
+      y: 600
+      width: 200
+      height: 200
+    spriteID: 97d1f2ac42bc29444972d0083775fc1e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_59
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1800
+      y: 600
+      width: 200
+      height: 200
+    spriteID: 292b73cd0e4ed4a4db36e0ec940bf199
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_60
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 400
+      width: 200
+      height: 200
+    spriteID: a5b309ccedc307a4ca6d8914a55ed49b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_61
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 400
+      width: 200
+      height: 200
+    spriteID: a2011d9cf3048be4b974818a3b208e65
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_62
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 400
+      y: 400
+      width: 200
+      height: 200
+    spriteID: 383945ede06e764458fe440a00827053
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_63
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 400
+      width: 200
+      height: 200
+    spriteID: 1b821904bb1a3694680e2c085a4aff40
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_64
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 800
+      y: 400
+      width: 200
+      height: 200
+    spriteID: 4babab981383a624e89f6b6f0b247d7e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_65
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 400
+      width: 200
+      height: 200
+    spriteID: d4fc941bf4f48a1498a3c80bbd0e19b9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_66
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1200
+      y: 400
+      width: 200
+      height: 200
+    spriteID: 0265e6f53483f8b4daf1ef6a5fb788b3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_67
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1400
+      y: 400
+      width: 200
+      height: 200
+    spriteID: 83c8107c951201d43b6163bdc67a6d53
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_68
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1600
+      y: 400
+      width: 200
+      height: 200
+    spriteID: 94c04d029cb816c4fb01e5fb21ef3683
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_69
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1800
+      y: 400
+      width: 200
+      height: 200
+    spriteID: 35dd7743777559d42b8ad01fbea7862a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_70
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 200
+      width: 200
+      height: 200
+    spriteID: fd5f1cec5ef9f9d4a8d33a2a5764da92
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_71
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 200
+      width: 200
+      height: 200
+    spriteID: d5f535e19dd7fc245836ff1283d8bc9d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_72
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 400
+      y: 200
+      width: 200
+      height: 200
+    spriteID: ec20ee6e1a77aa34599d5b0179bc6739
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_73
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 200
+      width: 200
+      height: 200
+    spriteID: d7ac9ec06d8f22a4584956161f27c4e8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_74
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 800
+      y: 200
+      width: 200
+      height: 200
+    spriteID: ae845d335d9c5c04eac55be81c559a3a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_75
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 200
+      width: 200
+      height: 200
+    spriteID: 2f5a8086dca8191449977dc2946b9ecc
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_76
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1200
+      y: 200
+      width: 200
+      height: 200
+    spriteID: bf416b781afd0c840a5594d093aee760
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_77
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1400
+      y: 200
+      width: 200
+      height: 200
+    spriteID: 73136b8469130a2459527e71648949ad
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_78
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1600
+      y: 200
+      width: 200
+      height: 200
+    spriteID: 199ef8bb9625c504fb340a31463ab538
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_79
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1800
+      y: 200
+      width: 200
+      height: 200
+    spriteID: f56cc0a766617054fadfbce924c6f9b7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_80
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 9f1532a3577588649a60ad5156996fc5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_81
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 9c2feaad13b37b64d83e39dbd1e5b7fa
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_82
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 400
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 73fea09cb60fd5744b811a14fb28adde
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_83
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 73d0bc1c3fab26f438b5116114ecb8f2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_84
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 800
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 64b88a999af1dca4b93253387b46b8c4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_85
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 0
+      width: 200
+      height: 200
+    spriteID: a6b2f70204d9fab44aaf83e8d4b9716b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_86
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1200
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 8d17a7868d6f2b34cb59edcbc083cf1e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_87
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1400
+      y: 0
+      width: 200
+      height: 200
+    spriteID: c31982cc7b3b5514fae3de033ad92948
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_88
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1600
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 48c2fbf0f4383ac47b076a58c8c9643f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Church_89
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1800
+      y: 0
+      width: 200
+      height: 200
+    spriteID: acf5fa3ba14e6b240b43386664426d01
+    spriteOutline: []
+    tessellationDetail: 0
+  _secondaryTextures: []

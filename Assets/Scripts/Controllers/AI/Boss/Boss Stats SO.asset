@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad654a4e863aa6418f08104dc751fe1, type: 3}
+  m_Name: Boss Stats SO
+  m_EditorClassIdentifier: 
+  SwitchTime: 2
+  ChargeSpeed: 5
+  ChargeTime: 5
+  ChargeRange: 25
+  ChargeAttack: 25
+  SlamDamage: 18
+  SlamRange: 40
+  SlamTime: 5
+  RoarAttack: 10
+  RoarRange: 30
+  RoarTime: 5

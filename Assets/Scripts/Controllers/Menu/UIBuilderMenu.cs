@@ -15,6 +15,7 @@ public class UIBuilderMenu : MonoBehaviour {
 	[SerializeField] private GameObject _mainMenuUI;
 	[SerializeField] private GameObject _optionsUI;
 
+	private string _lastSceneLoaded = "level_0";
 	VisualElement _root;
 
 	private void OnEnable() {

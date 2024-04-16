@@ -14,16 +14,12 @@ public class UIBuilderMenu : MonoBehaviour {
 	[SerializeField] private Button _quit;
 	[SerializeField] private GameObject _mainMenuUI;
 	[SerializeField] private GameObject _optionsUI;
+
 	private string _lastSceneLoaded = "MovementTestScene";
 	VisualElement _root;
-	// Start is called before the first frame update
+
 	private void OnEnable() {
 		_root = GetComponent<UIDocument>().rootVisualElement;
-		Logger.Log("MainMenu", _optionsUI.name);
-		// if (!SaveManager.Instance.HasGameData()) {
-		//     _continueButton.interactable = false;
-		// }
-		// _loadGameButton.interactable = false;
 
 		_newGameButton = _root.Q<Button>("NewButton");
 		_continueButton = _root.Q<Button>("ContinueButton");
@@ -37,7 +33,6 @@ public class UIBuilderMenu : MonoBehaviour {
 		_optionsButton.clicked += OnOptions;
 		_quit.clicked += QuitGame;
 		DisableButtons();
-
 
 	}
 
@@ -73,12 +68,10 @@ public class UIBuilderMenu : MonoBehaviour {
 	}
 
 	public void DisableButtons() {
-		// if (!SaveManager.Instance.HasGameData()) {
-		// 	_loadGameButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .5f);
-		// 	_continueButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .5f);
-		// 	// 	//_loadGameButton.SetEnabled(false);
-		// 	// 	//_continueButton.SetEnabled(false);
-		// }
+		if (!SaveManager.Instance.HasGameData()) {
+			_loadGameButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .5f);
+			_continueButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .5f);
+		}
 	}
 
 	public void LoadData(GameData data) {

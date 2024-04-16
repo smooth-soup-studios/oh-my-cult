@@ -41,7 +41,7 @@ public class SaveManager : MonoBehaviour {
 		if (_saveManager == null) {
 			_saveManager = this;
 		}
-		else {
+		else if (_saveManager != this) {
 			Logger.LogWarning(_logname, "Multiple Instances found! Exiting...");
 			Destroy(gameObject);
 			return;

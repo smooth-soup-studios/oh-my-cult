@@ -1,0 +1,7 @@
+Button:hover{
+    -unity-background-image-tint-color: #cccccc
+}
+
+Button:active{
+    -unity-background-image-tint-color: #aaaaaa
+}

@@ -3,8 +3,9 @@ using UnityEngine.Events;
 
 public class EventIneractable : BaseInteractable {
 	[Header("Event Settings")]
-	[SerializeField] private UnityEvent<GameObject> _event = new();
 	[SerializeField] private bool _isSingleUse = false;
+	[SerializeField] private UnityEvent<GameObject> _event = new();
+
 	private bool _hasBeenUsed = false;
 
 	private void Start() {

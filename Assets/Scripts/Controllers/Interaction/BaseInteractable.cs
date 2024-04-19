@@ -17,6 +17,7 @@ public abstract class BaseInteractable : MonoBehaviour, ISaveable {
 			Transform playerPos = FindAnyObjectByType<StateMachine>().transform;
 			if (Vector3.Distance(playerPos.position, transform.position) <= InteractionRange) {
 				Interact(playerPos.gameObject);
+				AutoTrigger = false;
 			}
 		}
 	}
@@ -30,11 +31,13 @@ public abstract class BaseInteractable : MonoBehaviour, ISaveable {
 	}
 
 	public virtual void LoadData(GameData data) {
-		Logger.LogWarning("Test", name + " Loaded");
+		if (data.SceneData.InteractionData.ContainsKey(ObjectId + "AutoTrigger")) {
+			data.SceneData.InteractionData.TryGetValue(ObjectId + "AutoTrigger", out AutoTrigger);
+		}
 	}
 
 	public virtual void SaveData(GameData data) {
-		Logger.LogWarning("Test", name + " Saved");
+		data.SceneData.InteractionData[ObjectId + "AutoTrigger"] = AutoTrigger;
 
 	}
 

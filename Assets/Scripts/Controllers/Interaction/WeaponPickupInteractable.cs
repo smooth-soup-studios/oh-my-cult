@@ -10,7 +10,7 @@ public class WeaponPickupPoint : BaseInteractable {
 
 	private void Start() {
 		if (!_enabled) {
-			Destroy(gameObject);
+			gameObject.SetActive(false);
 		}
 		_spriteRenderer = GetComponent<SpriteRenderer>();
 		UpdateSprite();

@@ -444,6 +444,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 4d1825e3a48885e40b154d6ad3b7b531, type: 2}
     - target: {fileID: 1625781803088781141, guid: bcf36efebb1722348b900b3210ec3517, type: 3}
+      propertyPath: AutoTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625781803088781141, guid: bcf36efebb1722348b900b3210ec3517, type: 3}
       propertyPath: <Id>k__BackingField
       value: WeaponPickup-3166.921
       objectReference: {fileID: 0}

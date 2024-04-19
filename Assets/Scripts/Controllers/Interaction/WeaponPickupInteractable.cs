@@ -2,6 +2,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class WeaponPickupPoint : BaseInteractable {
+	[Header("Item settings")]
 	[SerializeField] private InventoryItem _item;
 	private SpriteRenderer _spriteRenderer;
 	private bool _enabled = true;
@@ -45,12 +46,12 @@ public class WeaponPickupPoint : BaseInteractable {
 	}
 
 	public override void LoadData(GameData data) {
-		if (data.SceneData.ArbitraryTriggers.ContainsKey("SwordExists")) {
-			data.SceneData.ArbitraryTriggers.TryGetValue("SwordExists", out _enabled);
+		if (data.SceneData.InteractionData.ContainsKey(ObjectId + "SwordExists")) {
+			data.SceneData.InteractionData.TryGetValue(ObjectId + "SwordExists", out _enabled);
 		}
 	}
 
 	public override void SaveData(GameData data) {
-		data.SceneData.ArbitraryTriggers["SwordExists"] = _enabled;
+		data.SceneData.InteractionData[ObjectId + "SwordExists"] = _enabled;
 	}
 }

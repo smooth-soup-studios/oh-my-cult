@@ -30,13 +30,12 @@ public class KeyPickupPoint : BaseInteractable {
 	}
 
 	public override void LoadData(GameData data) {
-		if (data.SceneData.ArbitraryTriggers.ContainsKey("KeyExists")) {
-			Logger.Log("Hi", "Krijg te dering");
-			data.SceneData.ArbitraryTriggers.TryGetValue("KeyExists", out _exists);
+		if (data.SceneData.ArbitraryTriggers.ContainsKey(ObjectId + "KeyExists")) {
+			data.SceneData.ArbitraryTriggers.TryGetValue(ObjectId + "KeyExists", out _exists);
 		}
 	}
 
 	public override void SaveData(GameData data) {
-		data.SceneData.ArbitraryTriggers["KeyExists"] = _exists;
+		data.SceneData.ArbitraryTriggers[ObjectId + "KeyExists"] = _exists;
 	}
 }

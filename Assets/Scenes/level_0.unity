@@ -189,14 +189,6 @@ PrefabInstance:
       propertyPath: _showLogging
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4114600175099707094, guid: e48e24e11fe9846f9a92885a8b07067b, type: 3}
-      propertyPath: _showTriggerLogs
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4114600175099707094, guid: e48e24e11fe9846f9a92885a8b07067b, type: 3}
-      propertyPath: _showSubscriptionLogs
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -226,8 +218,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2069321049771282331, guid: 3e2be099de849f5c3a61954883b6d4f7, type: 3}
+      propertyPath: _enableLogging
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069321049771282331, guid: 3e2be099de849f5c3a61954883b6d4f7, type: 3}
       propertyPath: _initializeData
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069321049771282331, guid: 3e2be099de849f5c3a61954883b6d4f7, type: 3}
+      propertyPath: _dataManagerLogging
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5020171767887303805, guid: 3e2be099de849f5c3a61954883b6d4f7, type: 3}
       propertyPath: m_Name
@@ -295,6 +295,14 @@ PrefabInstance:
       propertyPath: _item
       value: 
       objectReference: {fileID: 11400000, guid: 4d1825e3a48885e40b154d6ad3b7b531, type: 2}
+    - target: {fileID: 1625781803088781141, guid: bcf36efebb1722348b900b3210ec3517, type: 3}
+      propertyPath: <Id>k__BackingField
+      value: WeaponPickup-3166.921
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625781803088781141, guid: bcf36efebb1722348b900b3210ec3517, type: 3}
+      propertyPath: <ObjectId>k__BackingField
+      value: WeaponPickup-3166.921
+      objectReference: {fileID: 0}
     - target: {fileID: 2601442356323300049, guid: bcf36efebb1722348b900b3210ec3517, type: 3}
       propertyPath: m_Name
       value: WeaponPickup

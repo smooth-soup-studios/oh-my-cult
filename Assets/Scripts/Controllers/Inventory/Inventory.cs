@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Collections;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour, ISaveable {
@@ -85,9 +86,16 @@ public class Inventory : MonoBehaviour, ISaveable {
 	public void LoadData(GameData data) {
 		List<InventoryItem> newInv = new();
 		data.SceneData.InvItemVals.Keys.ToList().ForEach(key => {
-			InventoryItem newItem = ScriptableObject.CreateInstance<InventoryItem>();
-			newItem.InvData = data.SceneData.InvItemVals[key];
-			newInv.Add(newItem);
+			InvData storedData = data.SceneData.InvItemVals[key];
+			if (storedData.ItemType == InventoryItemType.Null) {
+				newInv.Add(null);
+			}
+			else {
+				InventoryItem newItem = ScriptableObject.CreateInstance<InventoryItem>();
+				newItem.name = storedData.ItemName;
+				newItem.InvData = storedData;
+				newInv.Add(newItem);
+			}
 		});
 		if (newInv.Count > 0) {
 			_currentInventory = newInv;
@@ -95,9 +103,20 @@ public class Inventory : MonoBehaviour, ISaveable {
 	}
 
 	public void SaveData(GameData data) {
-		_currentInventory.ForEach(x => {
-			data.SceneData.InvItemVals[x.name] = x.InvData;
-		});
+		// Hacky conversion between "true null" and object marked as nulltype for use in serialization
+		// itemtype should be checked in loadData and converted back to true null
+		for (int i = 0; i < _currentInventory.Count; i++) {
+			InventoryItem selectedItem = _currentInventory[i];
+			if (selectedItem == null) {
+				InvData emptyItem = new() {
+					ItemType = InventoryItemType.Null
+				};
+				data.SceneData.InvItemVals[i.ToString()] = emptyItem;
+			}
+			else {
+				data.SceneData.InvItemVals[i.ToString()] = selectedItem.InvData;
+			}
+		}
 	}
 
 }

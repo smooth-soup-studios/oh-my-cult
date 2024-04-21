@@ -1,0 +1,1166 @@
+fileFormatVersion: 2
+guid: a5653c6619e11454aabd1e973a057897
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: f3268c876daf4890b6af6cd462063137, type: 3}
+  _reimportOnDependencyChange: 1
+  _pixelsPerUnit: 16
+  _sprites:
+  - name: Fence_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 800
+      width: 200
+      height: 200
+    spriteID: 7f737ddeef030fd4f8edb38077d45c05
+    spriteOutline:
+    - shape:
+      - {x: 68, y: 63}
+      - {x: 61, y: 79}
+      - {x: 48, y: 87}
+      - {x: 24, y: 91}
+      - {x: -21, y: 91}
+      - {x: -29, y: 90}
+      - {x: -55, y: 81}
+      - {x: -63, y: 69}
+      - {x: -65, y: 62}
+      - {x: -65, y: -80}
+      - {x: -63, y: -85}
+      - {x: -55, y: -91}
+      - {x: -41, y: -98}
+      - {x: -30, y: -100}
+      - {x: 40, y: -100}
+      - {x: 61, y: -87}
+      - {x: 100, y: -75}
+      - {x: 100, y: 63}
+    tessellationDetail: 0.25
+  - name: Fence_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 800
+      width: 200
+      height: 200
+    spriteID: 678f1a33090761c4a974afee1a8d305e
+    spriteOutline:
+    - shape:
+      - {x: 100, y: 63}
+      - {x: 66, y: 69}
+      - {x: 58, y: 82}
+      - {x: 26, y: 90}
+      - {x: -30, y: 90}
+      - {x: -55, y: 81}
+      - {x: -65, y: 65}
+      - {x: -100, y: 63}
+      - {x: -100, y: -75}
+      - {x: -58, y: -91}
+      - {x: -39, y: -100}
+      - {x: 36, y: -100}
+      - {x: 62, y: -89}
+      - {x: 63, y: -77}
+      - {x: 100, y: -76}
+    tessellationDetail: 0.25
+  - name: Fence_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 400
+      y: 800
+      width: 200
+      height: 200
+    spriteID: b84049895c4a17a4499531a4b68cd3e1
+    spriteOutline:
+    - shape:
+      - {x: 65, y: -21}
+      - {x: 66, y: 54}
+      - {x: 66, y: 69}
+      - {x: 58, y: 83}
+      - {x: 28, y: 91}
+      - {x: -14, y: 91}
+      - {x: -29, y: 90}
+      - {x: -55, y: 82}
+      - {x: -65, y: 67}
+      - {x: -97, y: 64}
+      - {x: -100, y: 63}
+      - {x: -100, y: -76}
+      - {x: -66, y: -80}
+      - {x: -56, y: -93}
+      - {x: -31, y: -100}
+      - {x: 30, y: -100}
+      - {x: 45, y: -96}
+      - {x: 60, y: -86}
+      - {x: 63, y: -75}
+    tessellationDetail: 0.25
+  - name: Fence_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 800
+      width: 200
+      height: 200
+    spriteID: 0a7389cd9ba48ab458ec12707570a448
+    spriteOutline:
+    - shape:
+      - {x: 47, y: 54}
+      - {x: 38, y: 51}
+      - {x: 38, y: -81}
+      - {x: 44, y: -86}
+      - {x: 100, y: -86}
+      - {x: 100, y: 53}
+      - {x: 85, y: 54}
+    tessellationDetail: 0.25
+  - name: Fence_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 800
+      y: 800
+      width: 200
+      height: 200
+    spriteID: 92727807850210442b37d7abd168a626
+    spriteOutline:
+    - shape:
+      - {x: 28, y: 81}
+      - {x: -14, y: 81}
+      - {x: -29, y: 80}
+      - {x: -55, y: 72}
+      - {x: -65, y: 57}
+      - {x: -97, y: 54}
+      - {x: -100, y: 53}
+      - {x: -100, y: -86}
+      - {x: -59, y: -100}
+      - {x: 57, y: -100}
+      - {x: 66, y: -88}
+      - {x: 66, y: 60}
+      - {x: 58, y: 73}
+    tessellationDetail: 0.25
+  - name: Fence_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 800
+      width: 200
+      height: 200
+    spriteID: bf66c4e140caa6e4faf97e606af60a13
+    spriteOutline:
+    - shape:
+      - {x: 100, y: 67}
+      - {x: 56, y: 84}
+      - {x: 35, y: 92}
+      - {x: 23, y: 94}
+      - {x: -30, y: 94}
+      - {x: -55, y: 85}
+      - {x: -65, y: 69}
+      - {x: -65, y: -80}
+      - {x: -58, y: -87}
+      - {x: -39, y: -100}
+      - {x: 39, y: -100}
+      - {x: 60, y: -84}
+      - {x: 64, y: -73}
+      - {x: 100, y: -72}
+    tessellationDetail: 0.25
+  - name: Fence_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1200
+      y: 800
+      width: 200
+      height: 200
+    spriteID: 5593b672d3634ae438b2f4e3adb4d24a
+    spriteOutline:
+    - shape:
+      - {x: 58, y: 87}
+      - {x: 28, y: 95}
+      - {x: -34, y: 95}
+      - {x: -62, y: 81}
+      - {x: -64, y: 68}
+      - {x: -97, y: 68}
+      - {x: -100, y: 67}
+      - {x: -100, y: -72}
+      - {x: -66, y: -76}
+      - {x: -56, y: -89}
+      - {x: -37, y: -100}
+      - {x: 42, y: -100}
+      - {x: 62, y: -84}
+      - {x: 66, y: -28}
+      - {x: 66, y: 73}
+    tessellationDetail: 0.25
+  - name: Fence_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1400
+      y: 800
+      width: 200
+      height: 200
+    spriteID: f211c52bae1af9a4badd6a4323e61b6b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Fence_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1600
+      y: 800
+      width: 200
+      height: 200
+    spriteID: 2397cb9b78fc18d47b53252120edde81
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Fence_9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1800
+      y: 800
+      width: 116
+      height: 200
+    spriteID: 6bd43c180f7faff4a99c8ad4e80408f9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Fence_10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 600
+      width: 200
+      height: 200
+    spriteID: 1b8f6a0718a1a564e96a388e3870529e
+    spriteOutline:
+    - shape:
+      - {x: 68, y: 50}
+      - {x: 68, y: 73}
+      - {x: 60, y: 86}
+      - {x: 30, y: 94}
+      - {x: -12, y: 94}
+      - {x: -27, y: 93}
+      - {x: -43, y: 92}
+      - {x: -63, y: 75}
+      - {x: -63, y: -78}
+      - {x: -62, y: -84}
+      - {x: -41, y: -100}
+      - {x: 36, y: -100}
+      - {x: 63, y: -84}
+      - {x: 67, y: -53}
+      - {x: 66, y: -18}
+    tessellationDetail: 0.25
+  - name: Fence_11
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 600
+      width: 200
+      height: 200
+    spriteID: 29b1fbcdc580e9941910c603994d29ed
+    spriteOutline:
+    - shape:
+      - {x: 100, y: 65}
+      - {x: 77, y: 66}
+      - {x: 60, y: 82}
+      - {x: 35, y: 94}
+      - {x: 22, y: 95}
+      - {x: -30, y: 95}
+      - {x: -56, y: 85}
+      - {x: -64, y: 73}
+      - {x: -65, y: 64}
+      - {x: -66, y: 20}
+      - {x: -66, y: -83}
+      - {x: -42, y: -100}
+      - {x: 36, y: -100}
+      - {x: 60, y: -81}
+      - {x: 61, y: -74}
+      - {x: 100, y: -74}
+    tessellationDetail: 0.25
+  - name: Fence_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 400
+      y: 600
+      width: 200
+      height: 200
+    spriteID: c79335a9faae5874db8c06e5c4add1c9
+    spriteOutline:
+    - shape:
+      - {x: 65, y: 48}
+      - {x: 65, y: 72}
+      - {x: 57, y: 85}
+      - {x: 27, y: 93}
+      - {x: -15, y: 93}
+      - {x: -30, y: 92}
+      - {x: -45, y: 88}
+      - {x: -61, y: 78}
+      - {x: -65, y: 67}
+      - {x: -98, y: 66}
+      - {x: -100, y: 65}
+      - {x: -100, y: -74}
+      - {x: -66, y: -76}
+      - {x: -65, y: -84}
+      - {x: -43, y: -99}
+      - {x: -28, y: -100}
+      - {x: 32, y: -100}
+      - {x: 61, y: -86}
+      - {x: 62, y: -73}
+    tessellationDetail: 0.25
+  - name: Fence_13
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 600
+      width: 200
+      height: 200
+    spriteID: 96e2bdda05930964383c12a500f19a7f
+    spriteOutline:
+    - shape:
+      - {x: 100, y: -75}
+      - {x: 100, y: 64}
+      - {x: 99, y: 65}
+      - {x: 66, y: 65}
+      - {x: 62, y: 76}
+      - {x: 46, y: 88}
+      - {x: 22, y: 92}
+      - {x: -15, y: 92}
+      - {x: -34, y: 91}
+      - {x: -54, y: 82}
+      - {x: -62, y: 74}
+      - {x: -64, y: 67}
+      - {x: -64, y: 24}
+      - {x: -60, y: -81}
+      - {x: -54, y: -88}
+      - {x: -38, y: -99}
+      - {x: -21, y: -100}
+      - {x: 42, y: -100}
+      - {x: 67, y: -85}
+      - {x: 68, y: -75}
+    tessellationDetail: 0.25
+  - name: Fence_14
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 800
+      y: 600
+      width: 200
+      height: 200
+    spriteID: bccf3b5b961801a43b9f96f5bbaafbe4
+    spriteOutline:
+    - shape:
+      - {x: -100, y: 65}
+      - {x: -100, y: -75}
+      - {x: -36, y: -75}
+      - {x: -36, y: 61}
+      - {x: -41, y: 65}
+    - shape:
+      - {x: -52, y: 100}
+      - {x: -52, y: 96}
+      - {x: -28, y: 89}
+      - {x: 31, y: 89}
+      - {x: 50, y: 96}
+      - {x: 50, y: 100}
+    tessellationDetail: 0.25
+  - name: Fence_15
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 600
+      width: 200
+      height: 200
+    spriteID: 52959226107bedb4b810771f5d67bbb1
+    spriteOutline:
+    - shape:
+      - {x: 100, y: -74}
+      - {x: 100, y: 65}
+      - {x: 67, y: 71}
+      - {x: 58, y: 83}
+      - {x: 41, y: 100}
+      - {x: -38, y: 100}
+      - {x: -43, y: 87}
+      - {x: -59, y: 77}
+      - {x: -63, y: 66}
+      - {x: -64, y: 38}
+      - {x: -64, y: -83}
+      - {x: -48, y: -96}
+      - {x: -19, y: -100}
+      - {x: 25, y: -100}
+      - {x: 41, y: -97}
+      - {x: 62, y: -86}
+      - {x: 64, y: -75}
+    tessellationDetail: 0.25
+  - name: Fence_16
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1200
+      y: 600
+      width: 200
+      height: 200
+    spriteID: da7188673b1c68140a750c5d72c7aa3f
+    spriteOutline:
+    - shape:
+      - {x: 67, y: 67}
+      - {x: 63, y: 81}
+      - {x: 41, y: 100}
+      - {x: -39, y: 100}
+      - {x: -65, y: 70}
+      - {x: -100, y: 66}
+      - {x: -100, y: -74}
+      - {x: -64, y: -77}
+      - {x: -57, y: -88}
+      - {x: -40, y: -96}
+      - {x: -24, y: -99}
+      - {x: 19, y: -99}
+      - {x: 41, y: -97}
+      - {x: 62, y: -85}
+      - {x: 64, y: -73}
+      - {x: 67, y: 22}
+    tessellationDetail: 0.25
+  - name: Fence_17
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1400
+      y: 600
+      width: 200
+      height: 200
+    spriteID: 8b1757522fdb50a44a1c220fac25d382
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Fence_18
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1600
+      y: 600
+      width: 200
+      height: 200
+    spriteID: 5cf62886db03a5d449c32c694ea82143
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Fence_19
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1800
+      y: 600
+      width: 116
+      height: 200
+    spriteID: 95e5b509e53ce8f46b8280aa07d42f2d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Fence_20
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 400
+      width: 200
+      height: 200
+    spriteID: 45489d2751c4f5748aad803de5ed495d
+    spriteOutline:
+    - shape:
+      - {x: 67, y: 67}
+      - {x: 67, y: 76}
+      - {x: 58, y: 89}
+      - {x: 39, y: 100}
+      - {x: -41, y: 100}
+      - {x: -55, y: 90}
+      - {x: -64, y: 73}
+      - {x: -64, y: -80}
+      - {x: -41, y: -100}
+      - {x: 37, y: -100}
+      - {x: 62, y: -80}
+      - {x: 64, y: -68}
+      - {x: 66, y: -14}
+    tessellationDetail: 0.25
+  - name: Fence_21
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 400
+      width: 200
+      height: 200
+    spriteID: 41ccae21cfb634849b061054338ea2d9
+    spriteOutline:
+    - shape:
+      - {x: -41, y: 100}
+      - {x: -42, y: 81}
+      - {x: -42, y: -39}
+      - {x: -41, y: -70}
+      - {x: -37, y: -74}
+      - {x: 22, y: -74}
+      - {x: 35, y: -67}
+      - {x: 35, y: 100}
+    - shape:
+      - {x: 86, y: 75}
+      - {x: 86, y: -60}
+      - {x: 89, y: -61}
+      - {x: 100, y: -61}
+      - {x: 100, y: 75}
+    tessellationDetail: 0.25
+  - name: Fence_22
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 400
+      y: 400
+      width: 200
+      height: 200
+    spriteID: a94e7477a2fb96442835d0afe5f8522c
+    spriteOutline:
+    - shape:
+      - {x: 100, y: -62}
+      - {x: 100, y: 77}
+      - {x: 69, y: 85}
+      - {x: 48, y: 100}
+      - {x: -38, y: 100}
+      - {x: -54, y: 94}
+      - {x: -64, y: 79}
+      - {x: -100, y: 75}
+      - {x: -100, y: -61}
+      - {x: -64, y: -70}
+      - {x: -55, y: -81}
+      - {x: -26, y: -89}
+      - {x: 45, y: -89}
+      - {x: 69, y: -67}
+      - {x: 94, y: -63}
+    tessellationDetail: 0.25
+  - name: Fence_23
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 400
+      width: 200
+      height: 200
+    spriteID: 65b8df589799c2746a673582016bb995
+    spriteOutline:
+    - shape:
+      - {x: -34, y: 54}
+      - {x: -40, y: 47}
+      - {x: -40, y: -100}
+      - {x: 36, y: -100}
+      - {x: 36, y: 52}
+      - {x: 30, y: 54}
+    - shape:
+      - {x: -89, y: 72}
+      - {x: -94, y: 77}
+      - {x: -100, y: 77}
+      - {x: -100, y: -62}
+      - {x: -91, y: -62}
+      - {x: -88, y: -56}
+      - {x: -88, y: 40}
+    tessellationDetail: 0.25
+  - name: Fence_24
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 800
+      y: 400
+      width: 200
+      height: 200
+    spriteID: e57d4ba984d0233488bf9a2c60173462
+    spriteOutline:
+    - shape:
+      - {x: 65, y: 69}
+      - {x: 64, y: 76}
+      - {x: 56, y: 87}
+      - {x: 43, y: 93}
+      - {x: 16, y: 97}
+      - {x: -29, y: 97}
+      - {x: -55, y: 87}
+      - {x: -63, y: 75}
+      - {x: -64, y: 66}
+      - {x: -65, y: 22}
+      - {x: -65, y: -81}
+      - {x: -42, y: -93}
+      - {x: -40, y: -100}
+      - {x: 37, y: -100}
+      - {x: 60, y: -81}
+      - {x: 64, y: -74}
+      - {x: 65, y: -57}
+    tessellationDetail: 0.25
+  - name: Fence_25
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 400
+      width: 200
+      height: 200
+    spriteID: 127303487473e04498dfe7119d0ca563
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Fence_26
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1200
+      y: 400
+      width: 200
+      height: 200
+    spriteID: 710dbbfd334c5144c841244e799755d1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Fence_27
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1400
+      y: 400
+      width: 200
+      height: 200
+    spriteID: 497ba1b42c419024782845ce8c533d94
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Fence_28
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1600
+      y: 400
+      width: 200
+      height: 200
+    spriteID: 2690ad910f1bda7499b33914d918aaee
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Fence_29
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1800
+      y: 400
+      width: 116
+      height: 200
+    spriteID: 6fd54d9604b38ba47ad00bd5350c752c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Fence_30
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 200
+      width: 200
+      height: 200
+    spriteID: 276330f59e552fc4b937d8298f1b00bd
+    spriteOutline:
+    - shape:
+      - {x: 65, y: 52}
+      - {x: 65, y: 72}
+      - {x: 64, y: 77}
+      - {x: 56, y: 91}
+      - {x: 39, y: 100}
+      - {x: -41, y: 100}
+      - {x: -55, y: 90}
+      - {x: -65, y: 78}
+      - {x: -66, y: 51}
+      - {x: -66, y: -72}
+      - {x: -58, y: -85}
+      - {x: -32, y: -92}
+      - {x: 24, y: -92}
+      - {x: 44, y: -87}
+      - {x: 59, y: -77}
+      - {x: 62, y: -67}
+    - shape:
+      - {x: 95, y: 55}
+      - {x: 95, y: -64}
+      - {x: 98, y: -70}
+      - {x: 100, y: -70}
+      - {x: 100, y: 55}
+    tessellationDetail: 0.25
+  - name: Fence_31
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 200
+      width: 200
+      height: 200
+    spriteID: 0562d79e412c4aa47aa0fd5aaa8e3f49
+    spriteOutline:
+    - shape:
+      - {x: 100, y: -74}
+      - {x: 100, y: 62}
+      - {x: 99, y: 63}
+      - {x: 65, y: 71}
+      - {x: 42, y: 89}
+      - {x: -36, y: 89}
+      - {x: -64, y: 75}
+      - {x: -96, y: 64}
+      - {x: -100, y: 59}
+      - {x: -100, y: -71}
+      - {x: -99, y: -73}
+      - {x: -96, y: -76}
+      - {x: -47, y: -100}
+      - {x: 41, y: -100}
+      - {x: 58, y: -89}
+      - {x: 61, y: -78}
+      - {x: 94, y: -80}
+    tessellationDetail: 0.25
+  - name: Fence_32
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 400
+      y: 200
+      width: 200
+      height: 200
+    spriteID: 52e9b0b1923b25a439d1431bbf1c99b3
+    spriteOutline:
+    - shape:
+      - {x: 68, y: 64}
+      - {x: 68, y: 73}
+      - {x: 59, y: 86}
+      - {x: 36, y: 100}
+      - {x: -40, y: 100}
+      - {x: -52, y: 85}
+      - {x: -61, y: 73}
+      - {x: -63, y: 66}
+      - {x: -63, y: -76}
+      - {x: -57, y: -87}
+      - {x: -40, y: -100}
+      - {x: 38, y: -100}
+      - {x: 62, y: -82}
+      - {x: 65, y: -71}
+      - {x: 67, y: -17}
+    tessellationDetail: 0.25
+  - name: Fence_33
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 200
+      width: 200
+      height: 200
+    spriteID: f32a754bb77eca94aac46789a78e49cf
+    spriteOutline:
+    - shape:
+      - {x: 67, y: 10}
+      - {x: 67, y: 70}
+      - {x: 62, y: 82}
+      - {x: 36, y: 100}
+      - {x: -41, y: 100}
+      - {x: -63, y: 73}
+      - {x: -64, y: 66}
+      - {x: -64, y: -74}
+      - {x: -62, y: -81}
+      - {x: -46, y: -92}
+      - {x: -39, y: -94}
+      - {x: -20, y: -96}
+      - {x: 25, y: -96}
+      - {x: 47, y: -92}
+      - {x: 57, y: -85}
+      - {x: 63, y: -78}
+    tessellationDetail: 0.25
+  - name: Fence_34
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 800
+      y: 200
+      width: 200
+      height: 200
+    spriteID: fad1617de5a99de42bca5c50a2fee666
+    spriteOutline:
+    - shape:
+      - {x: 36, y: 100}
+      - {x: -40, y: 100}
+      - {x: -41, y: 82}
+      - {x: -41, y: -37}
+      - {x: -40, y: -68}
+      - {x: -38, y: -72}
+      - {x: 29, y: -72}
+      - {x: 32, y: -62}
+      - {x: 36, y: 65}
+    tessellationDetail: 0.25
+  - name: Fence_35
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 200
+      width: 200
+      height: 200
+    spriteID: fa4403513a51edb4aa4543f75438c8da
+    spriteOutline:
+    - shape:
+      - {x: 66, y: 81}
+      - {x: 63, y: 92}
+      - {x: 43, y: 100}
+      - {x: -42, y: 100}
+      - {x: -54, y: 93}
+      - {x: -65, y: 82}
+      - {x: -65, y: -72}
+      - {x: -64, y: -74}
+      - {x: -40, y: -100}
+      - {x: 34, y: -100}
+      - {x: 35, y: -98}
+      - {x: 62, y: -76}
+      - {x: 66, y: -32}
+    tessellationDetail: 0.25
+  - name: Fence_36
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1200
+      y: 200
+      width: 200
+      height: 200
+    spriteID: 37762a4abf8590943ab23fb6ca629f8b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Fence_37
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1400
+      y: 200
+      width: 200
+      height: 200
+    spriteID: 5c4442a052305ef4f8c063d106ed7f4d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Fence_38
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1600
+      y: 200
+      width: 200
+      height: 200
+    spriteID: 756441275ef3fac45896a0c58a2d097e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Fence_39
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1800
+      y: 200
+      width: 116
+      height: 200
+    spriteID: 6b50cdbf544dcf546876b81ca9744d99
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Fence_40
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 8ecc05f9b199f9c49b49eae2a7be972a
+    spriteOutline:
+    - shape:
+      - {x: 35, y: 67}
+      - {x: 32, y: 62}
+      - {x: 30, y: 3}
+      - {x: 30, y: -69}
+      - {x: 35, y: -72}
+      - {x: 76, y: -72}
+      - {x: 100, y: -71}
+      - {x: 100, y: 67}
+    tessellationDetail: 0.25
+  - name: Fence_41
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 0
+      width: 200
+      height: 200
+    spriteID: fa8ba1ee0d8721641b640394bdde85bf
+    spriteOutline:
+    - shape:
+      - {x: 100, y: 67}
+      - {x: 64, y: 73}
+      - {x: 56, y: 86}
+      - {x: 24, y: 94}
+      - {x: -32, y: 94}
+      - {x: -56, y: 84}
+      - {x: -62, y: 78}
+      - {x: -66, y: 68}
+      - {x: -100, y: 67}
+      - {x: -100, y: -71}
+      - {x: -60, y: -87}
+      - {x: -43, y: -95}
+      - {x: -28, y: -98}
+      - {x: 17, y: -98}
+      - {x: 38, y: -96}
+      - {x: 59, y: -84}
+      - {x: 61, y: -73}
+      - {x: 100, y: -72}
+    - shape:
+      - {x: -16, y: 100}
+      - {x: -15, y: 97}
+      - {x: 9, y: 97}
+      - {x: 11, y: 99}
+      - {x: 11, y: 100}
+    tessellationDetail: 0.25
+  - name: Fence_42
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 400
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 46166fd60ff0051419c7bd258bbe588a
+    spriteOutline:
+    - shape:
+      - {x: -100, y: -72}
+      - {x: -38, y: -72}
+      - {x: -34, y: -71}
+      - {x: -34, y: 70}
+      - {x: -99, y: 70}
+      - {x: -100, y: 69}
+    - shape:
+      - {x: -39, y: 100}
+      - {x: -39, y: 94}
+      - {x: 37, y: 94}
+      - {x: 37, y: 100}
+    tessellationDetail: 0.25
+  - name: Fence_43
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 7b1c09b779ac5af45a644700de979ab5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Fence_44
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 800
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 35ce8f3dc570e7f4f92df351051aaa16
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Fence_45
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 566564b7d993f584dbe9c8617807ba23
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Fence_46
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1200
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 80bbe56bbf5ad31429380aa0e70230d8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Fence_47
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1400
+      y: 0
+      width: 200
+      height: 200
+    spriteID: c34ce606cb34ab4498909de6a9f565ac
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Fence_48
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1600
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 421eae9e2fdd9854d8130f43ed3fad03
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Fence_49
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1800
+      y: 0
+      width: 116
+      height: 200
+    spriteID: d7d4bf0a99afb7e4283abab5c57f3cf1
+    spriteOutline: []
+    tessellationDetail: 0
+  _secondaryTextures: []

@@ -17,7 +17,7 @@ public class PlayerAttackState : BaseState {
 		_currentItem.PrimaryAction(StateMachine);
 		if (_currentItem.ItemData.InvData.AnimationSet != null) {
 			StateMachine.PlayerAnimator.Play("Player" + _currentItem.ItemData.InvData.AnimationSet, MovementDirection);
-			SoundManager.Instance.PlayClip(StateMachine.AttackSoundClip, StateMachine.transform, 1f);
+			AudioManager.Instance.PlayClip(StateMachine.AttackSoundClip, StateMachine.transform, 1f);
 		}
 	}
 

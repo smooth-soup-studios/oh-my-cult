@@ -1,0 +1,434 @@
+fileFormatVersion: 2
+guid: 5d56014f8d4248c44b26780e0ac78815
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: f3268c876daf4890b6af6cd462063137, type: 3}
+  _reimportOnDependencyChange: 1
+  _pixelsPerUnit: 16
+  _sprites:
+  - name: Dark_overworld_tileset_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 800
+      width: 200
+      height: 200
+    spriteID: bfae283450e769946bccd7c1341bd063
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 800
+      width: 200
+      height: 200
+    spriteID: 0310c63ec295da449ac9887529009360
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 400
+      y: 800
+      width: 200
+      height: 200
+    spriteID: f7ab2f6deafbc8143a1e27e70314017b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 800
+      width: 200
+      height: 200
+    spriteID: ad6a5c37d2aa22544ba30b1f5a299406
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 800
+      y: 800
+      width: 200
+      height: 200
+    spriteID: 3f88cf3e2e6586240bb3b437db45f690
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 800
+      width: 200
+      height: 200
+    spriteID: 62dc111277054344f95a4957ac9f9e24
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 600
+      width: 200
+      height: 200
+    spriteID: 5161fff9b79cd8e43b53fbfb886dd973
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 600
+      width: 200
+      height: 200
+    spriteID: 740fbfba5699a004cb71bb4dd69c4603
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 400
+      y: 600
+      width: 200
+      height: 200
+    spriteID: 20d26188960425344a6e0d73ce8b1eeb
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 600
+      width: 200
+      height: 200
+    spriteID: 4c4943ef15af854439dcfe57f507d08d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 800
+      y: 600
+      width: 200
+      height: 200
+    spriteID: 02ce2a51c50b0054d84c16f1907f7b0e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_11
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 600
+      width: 200
+      height: 200
+    spriteID: b1d78540a3a52164ea73e1372bbedd16
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 400
+      width: 200
+      height: 200
+    spriteID: b878ac9cbed5429439c079f05279faf8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_13
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 400
+      width: 200
+      height: 200
+    spriteID: 7eec94d2033136f4c9247bf30a620b49
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_14
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 400
+      y: 400
+      width: 200
+      height: 200
+    spriteID: 2aac79414689012418e2f5fafaa19899
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_15
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 400
+      width: 200
+      height: 200
+    spriteID: 8c4474c7bbca64a4da9924ad4f16ab68
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_16
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 800
+      y: 400
+      width: 200
+      height: 200
+    spriteID: b06f9eec0a416dc41b5aa499d075a823
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_17
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 400
+      width: 200
+      height: 200
+    spriteID: c9f1dc5f3d2007d41b04a490463174e4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_18
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 200
+      width: 200
+      height: 200
+    spriteID: 8279903ea5c87b245a325ea28b955e8c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_19
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 200
+      width: 200
+      height: 200
+    spriteID: 5c381adefb46c654eb5b9d7e9bb039d2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_20
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 400
+      y: 200
+      width: 200
+      height: 200
+    spriteID: 1c11a1ffe332d634c84478b634b7465b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_21
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 200
+      width: 200
+      height: 200
+    spriteID: a8f356087537da44c98b68f93954dbe8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_22
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 800
+      y: 200
+      width: 200
+      height: 200
+    spriteID: a51d5237cd97cf144ba74b365ac58ee1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_23
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 200
+      width: 200
+      height: 200
+    spriteID: 63eaaf7b4742f144eb8f90b3f68fdfb3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_24
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 200
+      height: 200
+    spriteID: a3fe03179e690d247b2877665962f857
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_25
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 6bdc495462c740443b07e19093fc9b91
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_26
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 400
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 44846264c81f31c48bfa7db46803c135
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_27
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 600
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 390472b276a4a574c91d7873aea53c72
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_28
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 800
+      y: 0
+      width: 200
+      height: 200
+    spriteID: f31ae4f6e9008464590aff76586fe8fd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Dark_overworld_tileset_29
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 954ba285894a44f449a819546ffa1add
+    spriteOutline: []
+    tessellationDetail: 0
+  _secondaryTextures: []

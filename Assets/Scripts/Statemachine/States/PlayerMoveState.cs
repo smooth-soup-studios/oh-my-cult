@@ -24,8 +24,8 @@ public class PlayerMoveState : BaseState {
 	public override void UpdateState() {
 		StateMachine.HandleMovement(StateMachine.BaseSpeed * StateMachine.SpeedModifier * Time.deltaTime * Movement.normalized);
 
-		if(!_walkSound && SoundManager.Instance != null){
-			SoundManager.Instance.PlayClip(StateMachine.RunSoundClip, StateMachine.transform, 1f);
+		if(!_walkSound && AudioManager.Instance != null){
+			AudioManager.Instance.PlayClip(StateMachine.RunSoundClip, StateMachine.transform, 1f);
 			StateMachine.StartCoroutine(WalkSpeed());
 		}
 

@@ -8,7 +8,9 @@ public class WeaponPickupPoint : BaseInteractable {
 	private bool _enabled = true;
 
 
-	private void Start() {
+	private new void Start() {
+		base.Start();
+
 		if (!_enabled) {
 			gameObject.SetActive(false);
 		}
@@ -20,6 +22,7 @@ public class WeaponPickupPoint : BaseInteractable {
 
 
 	public override void Interact(GameObject interactor) {
+		base.Interact(interactor);
 		if (interactor.TryGetComponent(out Inventory inventory)) {
 			InventoryItem switchedItem = inventory.AddItem(_item);
 			_item = switchedItem;
@@ -46,12 +49,14 @@ public class WeaponPickupPoint : BaseInteractable {
 	}
 
 	public override void LoadData(GameData data) {
+		base.LoadData(data);
 		if (data.SceneData.InteractionData.ContainsKey(ObjectId + "SwordExists")) {
 			data.SceneData.InteractionData.TryGetValue(ObjectId + "SwordExists", out _enabled);
 		}
 	}
 
 	public override void SaveData(GameData data) {
+		base.SaveData(data);
 		data.SceneData.InteractionData[ObjectId + "SwordExists"] = _enabled;
 	}
 }

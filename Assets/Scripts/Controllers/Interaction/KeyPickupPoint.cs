@@ -3,22 +3,18 @@ using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class KeyPickupPoint : BaseInteractable {
-	private bool _exists = true;
 	private SpriteRenderer _spriteRenderer;
 
 	void Awake() {
-		if (!_exists) {
-			Destroy(gameObject);
-		}
 		_spriteRenderer = GetComponent<SpriteRenderer>();
 	}
 
 	public override void Interact(GameObject interactor) {
-		_exists = false;
-		interactor.GetComponent<StateMachine>().HasDoorKey = true;
 
+		interactor.GetComponent<StateMachine>().HasDoorKey = true;
 		UIManager.Instance.ShowDialogBox("You picked up a key!", "Use this to unlock the church door.", 5f);
-		gameObject.SetActive(false);
+		base.Interact(interactor);
+
 	}
 
 	public override void OnDeselect() {
@@ -30,12 +26,14 @@ public class KeyPickupPoint : BaseInteractable {
 	}
 
 	public override void LoadData(GameData data) {
+		base.LoadData(data);
 		if (data.SceneData.ArbitraryTriggers.ContainsKey(ObjectId + "KeyExists")) {
-			data.SceneData.ArbitraryTriggers.TryGetValue(ObjectId + "KeyExists", out _exists);
+			data.SceneData.ArbitraryTriggers.TryGetValue(ObjectId + "KeyExists", out HasBeenUsed);
 		}
 	}
 
 	public override void SaveData(GameData data) {
-		data.SceneData.ArbitraryTriggers[ObjectId + "KeyExists"] = _exists;
+		base.SaveData(data);
+		data.SceneData.ArbitraryTriggers[ObjectId + "KeyExists"] = HasBeenUsed;
 	}
 }

@@ -65,7 +65,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: DoorInteractionPoint-11303.42
   InteractionRange: 15
   AutoTrigger: 0
-  _isSingleUse: 0
+  SingleUse: 0
   _event:
     m_PersistentCalls:
       m_Calls:

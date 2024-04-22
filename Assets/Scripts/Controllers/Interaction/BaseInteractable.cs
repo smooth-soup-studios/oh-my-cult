@@ -7,10 +7,21 @@ public abstract class BaseInteractable : MonoBehaviour, ISaveable {
 	[Header("General Settings")]
 	public float InteractionRange = 15;
 	[SerializeField] protected bool AutoTrigger = false;
+	[SerializeField] protected bool SingleUse = false;
+	protected bool HasBeenUsed = false;
 
-	public abstract void Interact(GameObject interactor);
-	public abstract void OnSelect();
-	public abstract void OnDeselect();
+	protected virtual void Start() {
+		if (SingleUse && HasBeenUsed) {
+			gameObject.SetActive(false);
+		}
+	}
+
+	public virtual void Interact(GameObject interactor) {
+		HasBeenUsed = true;
+		if (SingleUse && HasBeenUsed) {
+			gameObject.SetActive(false);
+		}
+	}
 
 	protected virtual void Update() {
 		if (AutoTrigger) {
@@ -18,9 +29,17 @@ public abstract class BaseInteractable : MonoBehaviour, ISaveable {
 			if (Vector3.Distance(playerPos.position, transform.position) <= InteractionRange) {
 				Interact(playerPos.gameObject);
 				AutoTrigger = false;
+				HasBeenUsed = true;
+				if (SingleUse) {
+					gameObject.SetActive(false);
+				}
 			}
 		}
 	}
+
+	public abstract void OnSelect();
+	public abstract void OnDeselect();
+
 
 	protected virtual void OnDrawGizmos() {
 		Gizmos.color = Color.red;
@@ -34,11 +53,14 @@ public abstract class BaseInteractable : MonoBehaviour, ISaveable {
 		if (data.SceneData.InteractionData.ContainsKey(ObjectId + "AutoTrigger")) {
 			data.SceneData.InteractionData.TryGetValue(ObjectId + "AutoTrigger", out AutoTrigger);
 		}
+		if (data.SceneData.InteractionData.ContainsKey(ObjectId + "HasBeenUsed")) {
+			data.SceneData.InteractionData.TryGetValue(ObjectId + "HasBeenUsed", out HasBeenUsed);
+		}
 	}
 
 	public virtual void SaveData(GameData data) {
 		data.SceneData.InteractionData[ObjectId + "AutoTrigger"] = AutoTrigger;
-
+		data.SceneData.InteractionData[ObjectId + "HasBeenUsed"] = HasBeenUsed;
 	}
 
 	private void OnValidate() {

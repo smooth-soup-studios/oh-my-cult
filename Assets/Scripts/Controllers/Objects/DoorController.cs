@@ -63,6 +63,11 @@ public class DoorController : MonoBehaviour {
 			AlreadyActivated = false;
 		}
 	}
+
+	private void OnDrawGizmos() {
+		Gizmos.color = Color.green;
+		Gizmos.DrawWireCube(transform.position, Vector3.one * 5);
+	}
 }
 
 public enum TransportDestination {

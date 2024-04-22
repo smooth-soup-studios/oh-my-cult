@@ -141,6 +141,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1051582263}
     m_Modifications:
+    - target: {fileID: 199730581324819286, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1999069826935955175, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 248.5
@@ -186,6 +190,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313275134783585123, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: <ObjectId>k__BackingField
       value: DoorInteractionPoint House2-87996.24
       objectReference: {fileID: 0}
@@ -221,11 +229,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1999069826935955175, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 349.3
+      value: 348.64
       objectReference: {fileID: 0}
     - target: {fileID: 1999069826935955175, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -100.2
+      value: -100.58
       objectReference: {fileID: 0}
     - target: {fileID: 1999069826935955175, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -265,7 +273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: DoorInteractionPoint House1-132050.5
+      value: DoorInteractionPoint House1-131666.2
       objectReference: {fileID: 0}
     - target: {fileID: 6036849210683475856, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: m_Name
@@ -5234,13 +5242,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1051582263}
     m_Modifications:
+    - target: {fileID: 199730581324819286, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
+      propertyPath: m_Size.x
+      value: 6.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 199730581324819286, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
+      propertyPath: m_Size.y
+      value: 5.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 199730581324819286, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 52daaa30e33c63a49a1dabba136a72ea, type: 3}
+    - target: {fileID: 199730581324819286, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199730581324819286, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1999069826935955175, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5171
+      objectReference: {fileID: 0}
     - target: {fileID: 1999069826935955175, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 636
       objectReference: {fileID: 0}
     - target: {fileID: 1999069826935955175, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 76
+      value: 74.653
       objectReference: {fileID: 0}
     - target: {fileID: 1999069826935955175, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5286,13 +5318,29 @@ PrefabInstance:
       propertyPath: TransportTo
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4848923730980274333, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.183953
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848923730980274333, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.026463
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848923730980274333, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.438
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848923730980274333, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.7632
+      objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: InteractionRange
       value: 17.1
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: DoorInteractionPoint-410273.1
+      value: DoorInteractionPoint-410070.1
       objectReference: {fileID: 0}
     - target: {fileID: 6036849210683475856, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: m_Name
@@ -5862,11 +5910,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1999069826935955175, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 149.2
+      value: 148.5
       objectReference: {fileID: 0}
     - target: {fileID: 1999069826935955175, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -104.1
+      value: -100.54
       objectReference: {fileID: 0}
     - target: {fileID: 1999069826935955175, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5902,7 +5950,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: DoorInteractionPoint House0-33098.5
+      value: DoorInteractionPoint House0-32161.59
       objectReference: {fileID: 0}
     - target: {fileID: 6036849210683475856, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: m_Name

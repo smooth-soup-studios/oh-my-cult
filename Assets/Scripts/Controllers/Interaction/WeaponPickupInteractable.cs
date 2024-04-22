@@ -35,9 +35,11 @@ public class WeaponPickupPoint : BaseInteractable {
 	}
 
 	public override void OnDeselect() {
+		_spriteRenderer.color = Color.white;
 	}
 
 	public override void OnSelect() {
+		_spriteRenderer.color = Color.green;
 	}
 
 	public override void LoadData(GameData data) {

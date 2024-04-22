@@ -181,6 +181,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2122883596594477127, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
+      propertyPath: ArbitraryId
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: <ObjectId>k__BackingField
       value: DoorInteractionPoint House2-87996.24
@@ -191,7 +195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6036849210683475856, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: m_TagString
-      value: DoorInteractor
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7568177150051911154, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: ArbitraryId
@@ -255,6 +259,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2122883596594477127, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
+      propertyPath: ArbitraryId
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: <ObjectId>k__BackingField
       value: DoorInteractionPoint House1-132050.5
@@ -265,7 +273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6036849210683475856, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: m_TagString
-      value: DoorInteractor
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7568177150051911154, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: ArbitraryId
@@ -5266,6 +5274,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2122883596594477127, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
+      propertyPath: RequiresKey
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2122883596594477127, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
+      propertyPath: TransportTo
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: InteractionRange
       value: 17.1
@@ -5280,7 +5296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6036849210683475856, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: m_TagString
-      value: DoorInteractor
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7568177150051911154, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: ArbitraryId
@@ -5887,10 +5903,6 @@ PrefabInstance:
     - target: {fileID: 6036849210683475856, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: m_Name
       value: DoorInteractionPoint House0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6036849210683475856, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
-      propertyPath: m_TagString
-      value: DoorInteractor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

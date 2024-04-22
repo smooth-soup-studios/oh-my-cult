@@ -22,7 +22,7 @@
                     <ui:VisualElement name="health-bar-value" style="flex-grow: 1; position: relative; width: 50%; background-color: rgb(255, 0, 0); transition-duration: 0.15s; transition-timing-function: ease-out-cubic;" />
                 </ui:VisualElement>
                 <ui:VisualElement name="Dash-cooldown-base" style="height: 40%; position: relative; left: 0; top: 10px; margin-top: 0; margin-left: 0; width: 100%; background-color: rgba(150, 200, 255, 0.59); border-top-left-radius: 16px; border-top-right-radius: 16px; border-bottom-right-radius: 16px; border-bottom-left-radius: 16px; overflow: hidden; right: auto; flex-shrink: 0;">
-                    <ui:VisualElement name="Dash-coldown-value" style="flex-grow: 1; position: relative; width: 50%; background-color: rgb(0, 127, 255); transition-duration: 0.15s; transition-timing-function: ease-out-cubic; color: rgb(127, 127, 127);" />
+                    <ui:VisualElement name="Dash-cooldown-value" style="flex-grow: 1; position: relative; width: 50%; background-color: rgb(0, 127, 255); transition-duration: 0.15s; transition-timing-function: ease-out-cubic; color: rgb(127, 127, 127);" />
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>

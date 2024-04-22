@@ -8,9 +8,13 @@ namespace Managers {
 		// [SerializeField] private bool _hasPlaytestKey = false;
 		public bool HasPlaytestKey = false;
 		public float Health = 1;
+		public float Dash = 1;
+
+		private float _speed = 0.3f;
 
 		private VisualElement _root;
 		private VisualElement _healthBarValue;
+		private VisualElement _dashBarValue;
 		private VisualElement _keyIndicator;
 
 		private void Awake() {
@@ -18,6 +22,7 @@ namespace Managers {
 				Instance = this;
 				_root = GetComponent<UIDocument>().rootVisualElement;
 				_healthBarValue = _root.Q<VisualElement>("health-bar-value");
+				_dashBarValue = _root.Q<VisualElement>("Dash-cooldown-value");
 				_keyIndicator = _root.Q<VisualElement>("key-indicator");
 			}
 			else {
@@ -29,7 +34,10 @@ namespace Managers {
 
 		private void Update() {
 			_healthBarValue.style.width = new StyleLength(new Length(Health , LengthUnit.Percent));
+			_dashBarValue.style.width = new StyleLength(new Length(Dash , LengthUnit.Percent));
 			_keyIndicator.style.visibility = HasPlaytestKey ? Visibility.Visible : Visibility.Hidden;
+
+			DashCheck();
 		}
 
 		public void ToggleDialogBox() {
@@ -64,6 +72,24 @@ namespace Managers {
 
 		public void DebugCycleHealth() {
 			Health = 1 - ((1 - Health + .1f) % 1);
+		}
+
+		public bool OnDash(bool dash){
+			
+			if (Dash >= 100f){
+				Dash = 1;
+				_dashBarValue.style.backgroundColor = new Color(0f, 0.5f, 1f);
+				return dash;
+			}
+			return false;
+		}
+
+		private void DashCheck(){
+			if(Dash < 100){
+				Dash = Mathf.MoveTowards(Dash, 100, _speed);
+			}else{
+				_dashBarValue.style.backgroundColor = new Color(1f, 1f, 0f);
+			}
 		}
 	}
 }

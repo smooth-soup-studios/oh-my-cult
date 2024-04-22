@@ -67,7 +67,7 @@ public class PlayerMoveState : BaseState {
 
 	private void OnDash(bool dash) {
 		if (!_dashCooldown) {
-			_dash = dash;
+			_dash = UIManager.Instance.OnDash(dash);
 		}
 	}
 	public IEnumerator DashCooldown() {

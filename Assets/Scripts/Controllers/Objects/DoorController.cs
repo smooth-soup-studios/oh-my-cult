@@ -20,7 +20,7 @@ public class DoorController : MonoBehaviour {
 	}
 
 	public void ActivateDoor(GameObject target) {
-		if (AlreadyActivated || NoEnter) return;
+		if (NoEnter) return;
 
 		if (target.CompareTag("Player")) {
 			StateMachine sm = target.GetComponent<StateMachine>();

@@ -5275,6 +5275,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2122883596594477127, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
+      propertyPath: ArbitraryId
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2122883596594477127, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: RequiresKey
       value: 1
       objectReference: {fileID: 0}

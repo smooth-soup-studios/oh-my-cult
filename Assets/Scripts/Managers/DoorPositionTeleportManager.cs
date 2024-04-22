@@ -32,5 +32,6 @@ public class HousePositionTeleportManager : MonoBehaviour {
 
 		// Hacky way to reassign the camera follow target, but works for playtest purposes :D
 		GameObject.Find("Vcam-Player").GetComponent<Cinemachine.CinemachineVirtualCamera>().Follow = plr.transform;
+		plrsm.LatestDoor = -1;
 	}
 }

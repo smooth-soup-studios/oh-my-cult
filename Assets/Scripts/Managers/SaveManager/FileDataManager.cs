@@ -21,6 +21,12 @@ public class FileDataManager : IDataManager {
 		_encrypt = encrypt;
 	}
 
+	public FileDataManager(string saveDirectory, string fileName, bool encrypt, bool enableLogging) : this(saveDirectory, fileName, encrypt) {
+		_enableLogging = enableLogging;
+	}
+
+
+
 	public GameData Load(string profileId) {
 
 		string savePath = Path.Combine(_saveDirectory, profileId, _fileName);

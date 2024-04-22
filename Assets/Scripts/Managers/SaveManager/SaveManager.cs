@@ -13,7 +13,7 @@ public class SaveManager : MonoBehaviour {
 
 	[Header("Debug settings")]
 	[SerializeField] private bool _enableLogging;
-
+	[SerializeField] private bool _dataManagerLogging;
 
 	private readonly static string _logname = "SaveManager";
 	private static string _saveName = "OhMyCult";
@@ -51,7 +51,7 @@ public class SaveManager : MonoBehaviour {
 #if UNITY_EDITOR // Make sure debugging savefiles don't fuck up production saves
 		_saveName += "-debug";
 #endif
-		DataManager = new FileDataManager(Application.persistentDataPath, _saveName + ".WDF", _useEncryption);
+		DataManager = new FileDataManager(Application.persistentDataPath, _saveName + ".WDF", _useEncryption, _dataManagerLogging);
 	}
 
 	private void OnEnable() {
@@ -87,6 +87,7 @@ public class SaveManager : MonoBehaviour {
 	///
 	/// </summary>
 	public void NewGame() {
+		SendToLogger("Starting new Game");
 		_gameData = new GameData();
 	}
 
@@ -99,7 +100,7 @@ public class SaveManager : MonoBehaviour {
 			_gameData = DataManager.Load(_selectedProfile);
 
 			if (_gameData == null && _initializeData) {
-				SendToLogger("No save found, initializing new game.");
+				SendToLogger("No save found. initializing new game.");
 				_selectedProfile = "debug";
 				NewGame();
 			}

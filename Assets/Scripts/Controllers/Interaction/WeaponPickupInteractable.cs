@@ -2,20 +2,17 @@ using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class WeaponPickupPoint : BaseInteractable {
+	[Header("Item settings")]
 	[SerializeField] private InventoryItem _item;
 	private SpriteRenderer _spriteRenderer;
-	private bool _enabled = true;
 
 
-	private void Start() {
-		if (!_enabled) {
-			Destroy(gameObject);
-		}
+	private new void Start() {
+		base.Start();
+
 		_spriteRenderer = GetComponent<SpriteRenderer>();
 		UpdateSprite();
 	}
-
-
 
 
 	public override void Interact(GameObject interactor) {
@@ -23,9 +20,8 @@ public class WeaponPickupPoint : BaseInteractable {
 			InventoryItem switchedItem = inventory.AddItem(_item);
 			_item = switchedItem;
 			UpdateSprite();
-			_enabled = false;
 		}
-
+		base.Interact(interactor);
 	}
 
 	private void UpdateSprite() {
@@ -45,12 +41,14 @@ public class WeaponPickupPoint : BaseInteractable {
 	}
 
 	public override void LoadData(GameData data) {
-		if (data.SceneData.ArbitraryTriggers.ContainsKey("SwordExists")) {
-			data.SceneData.ArbitraryTriggers.TryGetValue("SwordExists", out _enabled);
+		base.LoadData(data);
+		if (data.SceneData.InteractionData.ContainsKey(ObjectId + "SwordExists")) {
+			data.SceneData.InteractionData.TryGetValue(ObjectId + "SwordExists", out HasBeenUsed);
 		}
 	}
 
 	public override void SaveData(GameData data) {
-		data.SceneData.ArbitraryTriggers["SwordExists"] = _enabled;
+		base.SaveData(data);
+		data.SceneData.InteractionData[ObjectId + "SwordExists"] = HasBeenUsed;
 	}
 }

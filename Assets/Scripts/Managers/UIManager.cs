@@ -8,7 +8,7 @@ namespace Managers {
 		// [SerializeField] private bool _hasPlaytestKey = false;
 		public bool HasPlaytestKey = false;
 		public float Health = 1;
-		public float Dash = 1;
+		public float DashStart = -(PlayerDashState.DashCooldown + PlayerDashState.DashDuration);
 
 		private float _speed = 0.3f;
 
@@ -39,11 +39,10 @@ namespace Managers {
 		}
 
 		private void Update() {
-			_healthBarValue.style.width = new StyleLength(new Length(Health , LengthUnit.Percent));
-			_dashBarValue.style.width = new StyleLength(new Length(Dash , LengthUnit.Percent));
+			_healthBarValue.style.width = new StyleLength(new Length(Health, LengthUnit.Percent));
 			_keyIndicator.style.visibility = HasPlaytestKey ? Visibility.Visible : Visibility.Hidden;
 
-			DashCheck();
+			DashUpdate();
 			InvUpdate();
 		}
 
@@ -81,38 +80,33 @@ namespace Managers {
 			Health = 1 - ((1 - Health + .1f) % 1);
 		}
 
-		public bool OnDash(bool dash){
-			
-			if (Dash >= 100f){
-				Dash = 1;
-				_dashBarValue.style.backgroundColor = new Color(0f, 0.5f, 1f);
-				return dash;
-			}
-			return false;
+		private void DashUpdate() {
+			float timeSinceDash = Time.time - DashStart;
+			float dashValue = timeSinceDash switch {
+				float v when v < PlayerDashState.DashDuration => 100 - v / PlayerDashState.DashDuration * 100,
+				float v when
+					v >= PlayerDashState.DashDuration &&
+					v < PlayerDashState.DashDuration + PlayerDashState.DashCooldown =>
+					(v - PlayerDashState.DashDuration) / PlayerDashState.DashCooldown * 100,
+				_ => 100,
+			};
+
+			_dashBarValue.style.width = new StyleLength(new Length(dashValue, LengthUnit.Percent));
 		}
 
-		private void DashCheck(){
-			if(Dash < 100){
-				Dash = Mathf.MoveTowards(Dash, 100, _speed);
-			}else{
-				_dashBarValue.style.backgroundColor = new Color(1f, 1f, 0f);
-			}
-		}
-
-		private void InvUpdate(){
-			for(int i = 0;i <_hotbar.childCount ;i++){
+		private void InvUpdate() {
+			for (int i = 0; i < _hotbar.childCount; i++) {
 				Sprite sprite = null;
-				if(PlayerInventory.GetInventoryMaxSize() >= i)
-				{
-					if (PlayerInventory.GetItemByIndex(i) != null){
+				if (PlayerInventory.GetInventoryMaxSize() >= i) {
+					if (PlayerInventory.GetItemByIndex(i) != null) {
 						sprite = PlayerInventory.GetItemByIndex(i).InvData.ItemIcon;
 					}
 				}
 				Image item = new Image();
 				item.sprite = sprite;
 				VisualElement itemSlot = _hotbar[i];
-				if(itemSlot.childCount > 0){
-					for(int x = 0;x <itemSlot.childCount ;i++){
+				if (itemSlot.childCount > 0) {
+					for (int x = 0; x < itemSlot.childCount; i++) {
 						itemSlot.Remove(itemSlot[x]);
 					}
 				}

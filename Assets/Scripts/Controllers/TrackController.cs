@@ -19,7 +19,7 @@ public class TrackController : MonoBehaviour {
 	}
 
 	void OnPlayerEntersVillageArea() {
-		AudioManager.Instance.PlayTrack(villageMusic, 1f, 1f, 0f, 10f);
+		AudioManager.Instance.PlayTrack(villageMusic, 1f, 1f, 0f, 64f);
 	}
 }
 }

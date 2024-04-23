@@ -49,19 +49,6 @@ public abstract class BaseInteractable : MonoBehaviour, ISaveable {
 		Gizmos.DrawWireSphere(transform.position, InteractionRange);
 	}
 
-	public virtual void LoadData(GameData data) {
-		if (data.SceneData.InteractionData.ContainsKey(ObjectId + "AutoTrigger")) {
-			data.SceneData.InteractionData.TryGetValue(ObjectId + "AutoTrigger", out AutoTrigger);
-		}
-		if (data.SceneData.InteractionData.ContainsKey(ObjectId + "HasBeenUsed")) {
-			data.SceneData.InteractionData.TryGetValue(ObjectId + "HasBeenUsed", out HasBeenUsed);
-		}
-	}
-
-	public virtual void SaveData(GameData data) {
-		data.SceneData.InteractionData[ObjectId + "AutoTrigger"] = AutoTrigger;
-		data.SceneData.InteractionData[ObjectId + "HasBeenUsed"] = HasBeenUsed;
-	}
 
 	private void OnValidate() {
 		// Generates an unique ID based on the name & position of the gameobject.
@@ -69,5 +56,19 @@ public abstract class BaseInteractable : MonoBehaviour, ISaveable {
 		ObjectId = $"{name}-{Vector3.SqrMagnitude(transform.position)}";
 		UnityEditor.EditorUtility.SetDirty(this);
 #endif
+	}
+
+	public virtual void LoadData(GameData data) {
+		if (data.SceneData.InteractionData.ContainsKey($"{ObjectId}-AutoTrigger")) {
+			data.SceneData.InteractionData.TryGetValue($"{ObjectId}-AutoTrigger", out AutoTrigger);
+		}
+		if (data.SceneData.InteractionData.ContainsKey($"{ObjectId}-HasBeenUsed")) {
+			data.SceneData.InteractionData.TryGetValue($"{ObjectId}-HasBeenUsed", out HasBeenUsed);
+		}
+	}
+
+	public virtual void SaveData(GameData data) {
+		data.SceneData.InteractionData[$"{ObjectId}-AutoTrigger"] = AutoTrigger;
+		data.SceneData.InteractionData[$"{ObjectId}-HasBeenUsed"] = HasBeenUsed;
 	}
 }

@@ -7,6 +7,9 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour, ISaveable {
 
+	[field: SerializeField, Header("Object information")] public string ObjectId { get; private set; }
+
+
 	public EnemyBaseState CurrentState;
 	[SerializeField] public Weapon Weapon;
 
@@ -24,18 +27,14 @@ public class Enemy : MonoBehaviour, ISaveable {
 	[HideInInspector] public bool EndReached = false;
 	public NavMeshAgent Agent;
 
-	private bool _isAlive = true;
-
-
 
 	void Start() {
-		if (!_isAlive) {
-			gameObject.SetActive(false);
+		if (GetComponent<EnemyHealthController>().IsAlive()) {
+			gameObject.SetActive(true);
 		}
 
 		EventBus.Instance.Subscribe<GameObject>(EventType.DEATH, obj => {
 			if (obj == gameObject) {
-				_isAlive = false;
 				gameObject.SetActive(false);
 			}
 		});
@@ -91,13 +90,24 @@ public class Enemy : MonoBehaviour, ISaveable {
 		Array.Clear(hitMeleeTarget, 0, hitMeleeTarget.Length);
 	}
 
+	private void OnValidate() {
+		// Generates an unique ID based on the name & position of the gameobject.
+#if UNITY_EDITOR
+		ObjectId = $"{name}-{Vector3.SqrMagnitude(transform.position)}";
+		UnityEditor.EditorUtility.SetDirty(this);
+#endif
+	}
+
 	public void LoadData(GameData data) {
-		if (data.SceneData.ArbitraryTriggers.ContainsKey("EnemyDead")) {
-			data.SceneData.ArbitraryTriggers.TryGetValue("EnemyDead", out _isAlive);
+		if (data.ActorData.PositionValues.ContainsKey(ObjectId)) {
+			data.ActorData.PositionValues.TryGetValue(ObjectId, out Vector3 savedPos);
+			if (savedPos != Vector3.zero) {
+				transform.position = savedPos;
+			}
 		}
 	}
 
 	public void SaveData(GameData data) {
-		data.SceneData.ArbitraryTriggers["EnemyDead"] = isActiveAndEnabled;
+		data.ActorData.PositionValues[ObjectId] = transform.position;
 	}
 }

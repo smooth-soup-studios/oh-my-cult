@@ -44,13 +44,13 @@ public class WeaponPickupPoint : BaseInteractable {
 
 	public override void LoadData(GameData data) {
 		base.LoadData(data);
-		if (data.SceneData.InteractionData.ContainsKey(ObjectId + "SwordExists")) {
-			data.SceneData.InteractionData.TryGetValue(ObjectId + "SwordExists", out HasBeenUsed);
+		if (data.SceneData.InteractionData.ContainsKey($"{ObjectId}-SwordExists")) {
+			data.SceneData.InteractionData.TryGetValue($"{ObjectId}-SwordExists", out HasBeenUsed);
 		}
 	}
 
 	public override void SaveData(GameData data) {
 		base.SaveData(data);
-		data.SceneData.InteractionData[ObjectId + "SwordExists"] = HasBeenUsed;
+		data.SceneData.InteractionData[$"{ObjectId}-SwordExists"] = HasBeenUsed;
 	}
 }

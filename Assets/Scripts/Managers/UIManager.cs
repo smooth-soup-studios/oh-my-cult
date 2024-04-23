@@ -10,8 +10,6 @@ namespace Managers {
 		public float Health = 1;
 		public float DashStart = -(PlayerDashState.DashCooldown + PlayerDashState.DashDuration);
 
-		private float _speed = 0.3f;
-
 		[HideInInspector] public Inventory PlayerInventory { get; private set; }
 		public GameObject Player;
 

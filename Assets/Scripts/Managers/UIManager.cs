@@ -12,10 +12,13 @@ namespace Managers {
 
 		private float _speed = 0.3f;
 
+		[HideInInspector] public Inventory PlayerInventory { get; private set; }
+
 		private VisualElement _root;
 		private VisualElement _healthBarValue;
 		private VisualElement _dashBarValue;
 		private VisualElement _keyIndicator;
+		private VisualElement _hotbar;
 
 		private void Awake() {
 			if (Instance == null) {
@@ -24,6 +27,8 @@ namespace Managers {
 				_healthBarValue = _root.Q<VisualElement>("health-bar-value");
 				_dashBarValue = _root.Q<VisualElement>("Dash-cooldown-value");
 				_keyIndicator = _root.Q<VisualElement>("key-indicator");
+				_hotbar = _root.Q<VisualElement>("Hotbar");
+				PlayerInventory = GetComponent<Inventory>();
 			}
 			else {
 				Destroy(gameObject);
@@ -89,6 +94,21 @@ namespace Managers {
 				Dash = Mathf.MoveTowards(Dash, 100, _speed);
 			}else{
 				_dashBarValue.style.backgroundColor = new Color(1f, 1f, 0f);
+			}
+		}
+
+		private void InvUpdate(){
+			for(int i = 0;i <_hotbar.childCount ;i++){
+				Sprite sprite = PlayerInventory.GetItemByIndex(i).InvData.ItemIcon;
+				Image item = new Image();
+				item.sprite = sprite;
+				VisualElement itemSlot = _hotbar[i];
+				if(itemSlot.childCount > 0){
+					for(int x = 0;x <itemSlot.childCount ;i++){
+						itemSlot.Remove(itemSlot[i]);
+					}
+				}
+				itemSlot.Add(item);
 			}
 		}
 	}

@@ -13,6 +13,7 @@ namespace Managers {
 		private float _speed = 0.3f;
 
 		[HideInInspector] public Inventory PlayerInventory { get; private set; }
+		public GameObject Player;
 
 		private VisualElement _root;
 		private VisualElement _healthBarValue;
@@ -28,7 +29,7 @@ namespace Managers {
 				_dashBarValue = _root.Q<VisualElement>("Dash-cooldown-value");
 				_keyIndicator = _root.Q<VisualElement>("key-indicator");
 				_hotbar = _root.Q<VisualElement>("Hotbar");
-				PlayerInventory = GetComponent<Inventory>();
+				PlayerInventory = Player.GetComponent<Inventory>();
 			}
 			else {
 				Destroy(gameObject);
@@ -43,6 +44,7 @@ namespace Managers {
 			_keyIndicator.style.visibility = HasPlaytestKey ? Visibility.Visible : Visibility.Hidden;
 
 			DashCheck();
+			InvUpdate();
 		}
 
 		public void ToggleDialogBox() {
@@ -99,13 +101,19 @@ namespace Managers {
 
 		private void InvUpdate(){
 			for(int i = 0;i <_hotbar.childCount ;i++){
-				Sprite sprite = PlayerInventory.GetItemByIndex(i).InvData.ItemIcon;
+				Sprite sprite = null;
+				if(PlayerInventory.GetCurrentIndex() <= i)
+				{
+					if (PlayerInventory.GetItemByIndex(i) != null){
+						sprite = PlayerInventory.GetItemByIndex(i).InvData.ItemIcon;
+					}
+				}
 				Image item = new Image();
 				item.sprite = sprite;
 				VisualElement itemSlot = _hotbar[i];
 				if(itemSlot.childCount > 0){
 					for(int x = 0;x <itemSlot.childCount ;i++){
-						itemSlot.Remove(itemSlot[i]);
+						itemSlot.Remove(itemSlot[x]);
 					}
 				}
 				itemSlot.Add(item);

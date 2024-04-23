@@ -62,4 +62,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HasPlaytestKey: 0
-  _debugHealth: 0.5
+  Health: 1
+  Dash: 1

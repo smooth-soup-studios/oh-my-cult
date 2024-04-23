@@ -78,6 +78,10 @@ public class Inventory : MonoBehaviour, ISaveable {
 		return _selectedItemIndex;
 	}
 
+	public int GetInventoryMaxSize(){
+		return _maxInventorySize;
+	}
+
 
 
 

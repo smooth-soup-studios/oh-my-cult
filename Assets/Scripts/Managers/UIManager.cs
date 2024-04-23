@@ -102,7 +102,7 @@ namespace Managers {
 		private void InvUpdate(){
 			for(int i = 0;i <_hotbar.childCount ;i++){
 				Sprite sprite = null;
-				if(PlayerInventory.GetCurrentIndex() <= i)
+				if(PlayerInventory.GetInventoryMaxSize() >= i)
 				{
 					if (PlayerInventory.GetItemByIndex(i) != null){
 						sprite = PlayerInventory.GetItemByIndex(i).InvData.ItemIcon;

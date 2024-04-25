@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/UXML/USS/SceneWiper.uss?fileID=7433441132597879392&amp;guid=47bbb6293f5c31c40b5096ea572d86c4&amp;type=3#SceneWiper" />
+    <ui:VisualElement name="wiper-root" style="flex-grow: 1;">
+        <UIExtensions.FadeElement gradient-to="#00000000" gradient-direction="BottomToTop" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; translate: 0 -100%;" />
+        <ui:VisualElement name="wiper-solid" style="flex-grow: 1; background-color: rgb(0, 0, 0);" />
+        <UIExtensions.FadeElement gradient-to="#00000000" gradient-direction="TopToBottom" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; translate: 0 100%;" />
+    </ui:VisualElement>
+</ui:UXML>

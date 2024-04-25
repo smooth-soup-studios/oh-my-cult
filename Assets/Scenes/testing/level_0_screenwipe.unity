@@ -195,7 +195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: DoorInteractionPoint House2-87996,24
+      value: DoorInteractionPoint House2-87996.24
       objectReference: {fileID: 0}
     - target: {fileID: 6036849210683475856, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: m_Name
@@ -273,7 +273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: DoorInteractionPoint House1-131666,2
+      value: DoorInteractionPoint House1-131666.2
       objectReference: {fileID: 0}
     - target: {fileID: 6036849210683475856, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: m_Name
@@ -473,7 +473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1625781803088781141, guid: bcf36efebb1722348b900b3210ec3517, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: WeaponPickup-3166,921
+      value: WeaponPickup-3166.921
       objectReference: {fileID: 0}
     - target: {fileID: 2601442356323300049, guid: bcf36efebb1722348b900b3210ec3517, type: 3}
       propertyPath: m_Name
@@ -5402,7 +5402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: DoorInteractionPoint-410070,1
+      value: DoorInteractionPoint-410070.1
       objectReference: {fileID: 0}
     - target: {fileID: 6036849210683475856, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: m_Name
@@ -6012,7 +6012,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: DoorInteractionPoint House0-32161,59
+      value: DoorInteractionPoint House0-32161.59
       objectReference: {fileID: 0}
     - target: {fileID: 6036849210683475856, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: m_Name

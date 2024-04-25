@@ -21,7 +21,7 @@ public class DoorController : MonoBehaviour {
 	}
 
 	public void ActivateDoor(GameObject target) {
-		if (NoEnter) return;
+		if (NoEnter | _isTransporting) return;
 
 		if (target.CompareTag("Player")) {
 			StateMachine sm = target.GetComponent<StateMachine>();

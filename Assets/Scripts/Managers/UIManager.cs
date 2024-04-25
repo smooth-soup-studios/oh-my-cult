@@ -1,3 +1,4 @@
+using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -15,6 +16,9 @@ namespace Managers {
 		private VisualElement _dashBarValue;
 		private VisualElement _keyIndicator;
 		private VisualElement _hotbar;
+		private int _selectedItemIndex = 0;
+		private Color _borderColor = new Color(33f/255f, 15f/255f, 59f/255f);
+
 
 		private void Awake() {
 			if (Instance == null) {
@@ -101,12 +105,28 @@ namespace Managers {
 				item.sprite = sprite;
 				VisualElement itemSlot = _hotbar[i];
 				if (itemSlot.childCount > 0) {
-					for (int x = 0; x < itemSlot.childCount; i++) {
+					for (int x = 0; x < itemSlot.childCount; x++) {
 						itemSlot.Remove(itemSlot[x]);
 					}
 				}
 				itemSlot.Add(item);
+				HighlightSelectedItem(itemSlot, i);
 			}
+		}
+
+		private void HighlightSelectedItem(VisualElement itemSlot, int index){
+			if(index == _playerInventory.GetCurrentIndex()){
+					itemSlot.style.borderBottomColor = Color.green;
+					itemSlot.style.borderLeftColor = Color.green;
+					itemSlot.style.borderRightColor = Color.green;
+					itemSlot.style.borderTopColor = Color.green;
+				} 
+				if (itemSlot.resolvedStyle.borderBottomColor == Color.green && index != _playerInventory.GetCurrentIndex()){
+					itemSlot.style.borderBottomColor = _borderColor;
+					itemSlot.style.borderLeftColor = _borderColor;
+					itemSlot.style.borderRightColor = _borderColor;
+					itemSlot.style.borderTopColor = _borderColor;
+				}
 		}
 	}
 }

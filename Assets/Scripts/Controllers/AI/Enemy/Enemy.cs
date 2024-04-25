@@ -29,9 +29,6 @@ public class Enemy : MonoBehaviour, ISaveable {
 
 
 	void Start() {
-		if (GetComponent<EnemyHealthController>().IsAlive()) {
-			gameObject.SetActive(true);
-		}
 
 		EventBus.Instance.Subscribe<GameObject>(EventType.DEATH, obj => {
 			if (obj == gameObject) {

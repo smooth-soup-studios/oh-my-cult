@@ -10,8 +10,8 @@ namespace Managers {
 		public float Health = 1;
 		public float DashStart = -(PlayerDashState.DashCooldown + PlayerDashState.DashDuration);
 
-		[HideInInspector] public Inventory PlayerInventory { get; private set; }
-		public GameObject Player;
+		private Inventory _playerInventory;
+		//public GameObject Player;
 
 		private VisualElement _root;
 		private VisualElement _healthBarValue;
@@ -27,7 +27,7 @@ namespace Managers {
 				_dashBarValue = _root.Q<VisualElement>("Dash-cooldown-value");
 				_keyIndicator = _root.Q<VisualElement>("key-indicator");
 				_hotbar = _root.Q<VisualElement>("Hotbar");
-				PlayerInventory = Player.GetComponent<Inventory>();
+				_playerInventory = FindFirstObjectByType<StateMachine>().gameObject.GetComponent<Inventory>();
 			}
 			else {
 				Destroy(gameObject);
@@ -95,9 +95,9 @@ namespace Managers {
 		private void InvUpdate() {
 			for (int i = 0; i < _hotbar.childCount; i++) {
 				Sprite sprite = null;
-				if (PlayerInventory.GetInventoryMaxSize() >= i) {
-					if (PlayerInventory.GetItemByIndex(i) != null) {
-						sprite = PlayerInventory.GetItemByIndex(i).InvData.ItemIcon;
+				if (_playerInventory.GetInventoryMaxSize() >= i) {
+					if (_playerInventory.GetItemByIndex(i) != null) {
+						sprite = _playerInventory.GetItemByIndex(i).InvData.ItemIcon;
 					}
 				}
 				Image item = new Image();

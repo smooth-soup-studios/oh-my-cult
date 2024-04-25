@@ -44,8 +44,6 @@ public class DoorController : MonoBehaviour {
 			AlreadyActivated = true;
 			_isTransporting = true;
 
-			Debug.Log("dd, YAEH");
-
 			StartCoroutine(_loadDoor());
 
 			IEnumerator _loadDoor() {

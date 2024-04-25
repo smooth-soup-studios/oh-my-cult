@@ -5,14 +5,11 @@ namespace Managers {
 	public class UIManager : MonoBehaviour {
 		public static UIManager Instance { get; private set; }
 
-		// [SerializeField] private bool _hasPlaytestKey = false;
 		public bool HasPlaytestKey = false;
 		public float Health = 1;
 		public float DashStart = -(PlayerDashState.DashCooldown + PlayerDashState.DashDuration);
 
 		private Inventory _playerInventory;
-		//public GameObject Player;
-
 		private VisualElement _root;
 		private VisualElement _healthBarValue;
 		private VisualElement _dashBarValue;

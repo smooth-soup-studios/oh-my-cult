@@ -44,13 +44,13 @@ GameObject:
   - component: {fileID: 3242085015397341469}
   - component: {fileID: 7474330799362213706}
   - component: {fileID: 7464427908449370601}
+  - component: {fileID: 2607886220727919282}
   - component: {fileID: 3464190737083003022}
   - component: {fileID: 4072784352789340470}
   - component: {fileID: 661175975395288714}
   - component: {fileID: 8530993155805609580}
   - component: {fileID: 6290169931406716255}
   - component: {fileID: 8440669220791414699}
-  - component: {fileID: 2607886220727919282}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -164,6 +164,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxInventorySize: 1
   _selectedItemIndex: 0
+--- !u!114 &2607886220727919282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6908342227108556609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f0d07869b7ad747b46fdf13457c82e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: Player-28.3024
+  _isInvulnerable: 0
+  _maxHealth: 100
 --- !u!50 &3464190737083003022
 Rigidbody2D:
   serializedVersion: 4
@@ -319,21 +334,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa60292606897c345b756df85abb8ebd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2607886220727919282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6908342227108556609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76f0d07869b7ad747b46fdf13457c82e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: Player-28.3024
-  _isInvulnerable: 0
-  _maxHealth: 100
 --- !u!1 &7355898901544246293
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,8 +362,8 @@ Transform:
   m_GameObject: {fileID: 7355898901544246293}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 11.97, y: 0, z: 0}
-  m_LocalScale: {x: 19.36527, y: 19.36527, z: 19.36527}
+  m_LocalPosition: {x: 12, y: 0, z: 0}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 714397128736290338}

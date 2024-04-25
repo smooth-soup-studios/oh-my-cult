@@ -8,7 +8,10 @@ namespace Managers {
 
 		public bool HasPlaytestKey = false;
 		public float Health = 1;
-		public float DashStart = -(PlayerDashState.DashCooldown + PlayerDashState.DashDuration);
+		[HideInInspector]public float DashStart = -(PlayerDashState.DashCooldown + PlayerDashState.DashDuration);
+
+		[SerializeField] private Color _dashReadyColor = new Color(0f, 1f, 0.5f);
+		[SerializeField] private Color _dashUneadyColor = new Color(0f, 0.5f, 1f);
 
 		private Inventory _playerInventory;
 		private VisualElement _root;
@@ -80,7 +83,7 @@ namespace Managers {
 		}
 
 		private void DashUpdate() {
-			float timeSinceDash = Time.time - DashStart;
+			float timeSinceDash = Time.time - DashStart + 0.27f;
 			float dashValue = timeSinceDash switch {
 				float v when v < PlayerDashState.DashDuration => 100 - v / PlayerDashState.DashDuration * 100,
 				float v when
@@ -90,6 +93,11 @@ namespace Managers {
 				_ => 100,
 			};
 
+			if (dashValue == 100){
+				_dashBarValue.style.backgroundColor = _dashReadyColor;
+			}else{
+				_dashBarValue.style.backgroundColor = _dashUneadyColor;
+			}
 			_dashBarValue.style.width = new StyleLength(new Length(dashValue, LengthUnit.Percent));
 		}
 
@@ -116,10 +124,10 @@ namespace Managers {
 
 		private void HighlightSelectedItem(VisualElement itemSlot, int index){
 			if(index == _playerInventory.GetCurrentIndex()){
-					itemSlot.style.borderBottomColor = Color.green;
-					itemSlot.style.borderLeftColor = Color.green;
-					itemSlot.style.borderRightColor = Color.green;
-					itemSlot.style.borderTopColor = Color.green;
+					itemSlot.style.borderBottomColor = _dashReadyColor;
+					itemSlot.style.borderLeftColor = _dashReadyColor;
+					itemSlot.style.borderRightColor = _dashReadyColor;
+					itemSlot.style.borderTopColor = _dashReadyColor;
 				} 
 				if (itemSlot.resolvedStyle.borderBottomColor == Color.green && index != _playerInventory.GetCurrentIndex()){
 					itemSlot.style.borderBottomColor = _borderColor;

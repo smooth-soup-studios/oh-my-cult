@@ -22,7 +22,9 @@ ScriptedImporter:
     _asset: {instanceID: 0}
   - _key: Fence_collision_2
     _asset: {instanceID: 0}
-  _entities: []
+  _entities:
+  - _key: Key
+    _asset: {fileID: 6458623882520386215, guid: 73f704797938366419d8190a387a5fab, type: 3}
   _enumGenerate: 1
   _enumPath: 
   _enumNamespace: 

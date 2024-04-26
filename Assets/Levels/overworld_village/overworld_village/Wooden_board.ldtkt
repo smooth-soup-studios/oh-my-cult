@@ -5,7 +5,7 @@
     "__cWid": 1,
     "cachedPixelData": {
       "opaqueTiles": "0",
-      "averageColors": "8987"
+      "averageColors": "8877"
     },
     "customData": [
 
@@ -14,11 +14,11 @@
     "enumTags": [
 
     ],
-    "identifier": "Wooden_board",
+    "identifier": "WOODEN_BOARD",
     "padding": 0,
     "pxHei": 200,
     "pxWid": 200,
-    "relPath": "level_assets/wooden_board.png",
+    "relPath": "level_assets/waypoint_board.png",
     "savedSelections": [
 
     ],

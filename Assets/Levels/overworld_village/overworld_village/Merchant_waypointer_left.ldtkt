@@ -14,7 +14,7 @@
     "enumTags": [
 
     ],
-    "identifier": "Merchant_waypointer_left",
+    "identifier": "MERCHANT_WAYPOINTER_LEFT",
     "padding": 0,
     "pxHei": 200,
     "pxWid": 200,

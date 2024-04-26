@@ -26,26 +26,12 @@ public class StateMachine : MonoBehaviour, ISaveable {
 	[HideInInspector] public EchoDashController EchoDashController { get; private set; }
 	[HideInInspector] public PlayerInteractionChecker PlayerInteractor { get; private set; }
 	[HideInInspector] public Inventory PlayerInventory { get; private set; }
-
-	[SerializeField] public AudioClip RunSoundClip;
-	[SerializeField] public AudioClip AttackSoundClip;
 	private BaseState _currentState;
 	private List<BaseState> _states;
 
 	[Header("Latest Door")]
 	public int LatestDoor = -1;
 	public bool HasDoorKey = false;
-
-	void Awake() {
-		// GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-		// foreach (GameObject player in players) {
-		// 	if (player != gameObject) {
-		// 		Destroy(gameObject);
-		// 	}
-		// }
-
-		// DontDestroyOnLoad(this);
-	}
 
 	void Start() {
 		PlayerInventory = GetComponent<Inventory>();

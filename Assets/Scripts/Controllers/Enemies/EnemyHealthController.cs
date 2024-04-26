@@ -1,10 +1,13 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
+using Event = AK.Wwise.Event;
 
 public class EnemyHealthController : MonoBehaviour, ISaveable {
 	private string _logname = "Health controller";
 	[SerializeField] float _maxHealth = 100;
 	float _currentHealth;
+	[SerializeField] Event _actorDamaged;
 
 	void Awake() {
 		_currentHealth = _maxHealth;
@@ -18,6 +21,8 @@ public class EnemyHealthController : MonoBehaviour, ISaveable {
 
 	public void TakeDamage(float _damage) {
 		_currentHealth -= _damage;
+
+		_actorDamaged.Post(gameObject);
 		StartCoroutine(FlashRed());
 		Logger.Log(_logname, $"The {name} took {_damage} damage!");
 		if (_currentHealth <= 0) {

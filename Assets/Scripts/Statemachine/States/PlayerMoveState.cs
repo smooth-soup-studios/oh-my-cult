@@ -9,7 +9,6 @@ public class PlayerMoveState : BaseState {
 	bool _dashCooldown = false;
 	bool _heavyAttack = false;
 	private bool _interact = false;
-	private bool _walkSound = false;
 
 	public PlayerMoveState(string name, StateMachine stateMachine) : base(name, stateMachine) { }
 
@@ -23,12 +22,7 @@ public class PlayerMoveState : BaseState {
 
 	public override void UpdateState() {
 		StateMachine.HandleMovement(StateMachine.BaseSpeed * StateMachine.SpeedModifier * Time.deltaTime * Movement.normalized);
-
-		if(!_walkSound && AudioManager.Instance != null){
-			AudioManager.Instance.PlayClip(StateMachine.RunSoundClip, StateMachine.transform, 1f);
-			StateMachine.StartCoroutine(WalkSpeed());
-		}
-
+		//TODO: Replace the line this is on with call to WWISE event for moving
 		if (Movement == Vector2.zero) {
 			StateMachine.SwitchState("Idle");
 			return;
@@ -84,10 +78,5 @@ public class PlayerMoveState : BaseState {
 
 	private void OnInteract(bool value) {
 		_interact = value;
-	}
-	private IEnumerator WalkSpeed() {
-		_walkSound = true;
-		yield return new WaitForSecondsRealtime(StateMachine.RunSoundClip.length);
-		_walkSound = false;
 	}
 }

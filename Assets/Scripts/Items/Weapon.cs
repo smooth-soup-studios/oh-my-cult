@@ -15,7 +15,7 @@ public class Weapon : MonoBehaviour {
 
 
 	public void DefaultAttack() {
-		AudioManager.Instance.PlayClip(_attackSoundClip, transform, 1f);
+		//TODO: Replace line this is on with call to WWISE event
 		Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(_attackPoint.position, _attackRange, _enemyLayer);
 		foreach (Collider2D Enemy in hitEnemies) {
 			if (Enemy.TryGetComponent<EnemyHealthController>(out EnemyHealthController opponent)) {

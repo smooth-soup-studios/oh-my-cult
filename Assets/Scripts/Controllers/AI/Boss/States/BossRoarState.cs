@@ -10,7 +10,7 @@ public class BossRoarState : BossBaseState {
 		_switchState = false;
 		Boss.Animator.Play("Boss_Roar");
 		Boss.BossAttacks.RoarAttack();
-		AudioManager.Instance.PlayClip(Boss.RoarSoundClip, Boss.transform, 1f);
+		//TODO: Replace the line this is on with call to WWISE event ( roar )
 		Boss.StartCoroutine(SwitchState());
 	}
 	public override void UpdateState() {

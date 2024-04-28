@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 9145501983863175446}
   - component: {fileID: 4495825159916603111}
   - component: {fileID: 1843211728762744480}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,8 +171,8 @@ MonoBehaviour:
   _attackPoint: {fileID: 1268888446445211842}
   _enemyLayer:
     serializedVersion: 2
-    m_Bits: 1
-  _attackSoundClip: {fileID: 0}
+    m_Bits: 64
+  _attackSoundClip: {fileID: 8300000, guid: d456821e55ccca74a91d03031cde7299, type: 3}
 --- !u!1 &8507790943486014399
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 4849591457620503528}
   - component: {fileID: 7641483773983506728}
   - component: {fileID: 4221077239659566202}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,6 +312,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 100
+  _actorDamaged:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a8fb3c6a84a3a5f43bd252ce02dda50a, type: 2}
 --- !u!50 &4849591457620503528
 Rigidbody2D:
   serializedVersion: 4
@@ -320,7 +324,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8507790943486014399}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

@@ -18,7 +18,7 @@ public class Weapon : MonoBehaviour {
 		//TODO: Replace line this is on with call to WWISE event
 		Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(_attackPoint.position, _attackRange, _enemyLayer);
 		foreach (Collider2D Enemy in hitEnemies) {
-			if (Enemy.TryGetComponent<EnemyHealthController>(out EnemyHealthController opponent)) {
+			if (Enemy.TryGetComponent<HealthController>(out HealthController opponent)) {
 				opponent.TakeDamage(_damage);
 			}
 		}
@@ -26,7 +26,7 @@ public class Weapon : MonoBehaviour {
 	public void HeavyAttack() {
 		Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(_attackPoint.position, _attackRange, _enemyLayer);
 		foreach (Collider2D Enemy in hitEnemies) {
-			if (Enemy.TryGetComponent<EnemyHealthController>(out EnemyHealthController opponent)) {
+			if (Enemy.TryGetComponent<HealthController>(out HealthController opponent)) {
 				opponent.TakeDamage(_heavyDamage);
 			}
 		}

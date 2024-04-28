@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using Event = AK.Wwise.Event;
 
-public class EnemyHealthController : MonoBehaviour, ISaveable {
+public class HealthController : MonoBehaviour, ISaveable {
 	private string _logname = "Health controller";
 	[SerializeField] float _maxHealth = 100;
 	float _currentHealth;

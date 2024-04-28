@@ -14,7 +14,7 @@ public class BossAttacks : MonoBehaviour {
 	public void SlamAttack() {
 		Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, Stats.SlamRange, EnemyLayer);
 		foreach (Collider2D Enemy in hitEnemies) {
-			if (Enemy.TryGetComponent<EnemyHealthController>(out EnemyHealthController opponent)) {
+			if (Enemy.TryGetComponent<HealthController>(out HealthController opponent)) {
 				opponent.TakeDamage(Stats.SlamDamage);
 			}
 		}
@@ -26,7 +26,7 @@ public class BossAttacks : MonoBehaviour {
 	public void RoarAttack() {
 		Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, Stats.RoarRange, EnemyLayer);
 		foreach (Collider2D Enemy in hitEnemies) {
-			if (Enemy.TryGetComponent<EnemyHealthController>(out EnemyHealthController opponent)) {
+			if (Enemy.TryGetComponent<HealthController>(out HealthController opponent)) {
 				opponent.TakeDamage(Stats.RoarAttack);
 			}
 		}
@@ -37,7 +37,7 @@ public class BossAttacks : MonoBehaviour {
 		public void ChargeAttack() {
 		Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, Stats.ChargeRange, EnemyLayer);
 		foreach (Collider2D Enemy in hitEnemies) {
-			if (Enemy.TryGetComponent<EnemyHealthController>(out EnemyHealthController opponent)) {
+			if (Enemy.TryGetComponent<HealthController>(out HealthController opponent)) {
 				opponent.TakeDamage(Stats.ChargeAttack);
 			}
 		}

@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour, ISaveable {
 	private List<InventoryItem> _currentInventory = new();
-	[SerializeField] private int _maxInventorySize = 1;
-	[SerializeField] private int _selectedItemIndex = 0;
+	private int _maxInventorySize = 5;
+	private int _selectedItemIndex = 0;
 
 
 	private void Awake() {
@@ -77,6 +77,10 @@ public class Inventory : MonoBehaviour, ISaveable {
 
 	public int GetCurrentIndex() {
 		return _selectedItemIndex;
+	}
+
+	public int GetInventoryMaxSize(){
+		return _maxInventorySize;
 	}
 
 

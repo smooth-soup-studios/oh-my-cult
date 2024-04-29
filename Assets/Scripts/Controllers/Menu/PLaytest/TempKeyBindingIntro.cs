@@ -15,8 +15,6 @@ public class TempKeyBindingIntro : MonoBehaviour {
 	}
 
 	void OnStartButton() {
-		SaveManager.Instance.NewGame();
-		SaveManager.Instance.SaveGame();
 		SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 }

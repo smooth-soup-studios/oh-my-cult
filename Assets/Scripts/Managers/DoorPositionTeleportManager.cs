@@ -11,7 +11,7 @@ public class HousePositionTeleportManager : MonoBehaviour {
 		if (plrsm.LatestDoor == -1) return;
 
 		switch (SceneManager.GetActiveScene().name) {
-			case "houses": // houses
+			case SceneDefs.HouseInteriorLevel: // houses
 				plr.transform.position = new Vector3((float)plrsm.LatestDoor * 1000, 0, 0);
 				Logger.Log(_logName, "Teleported to house " + plrsm.LatestDoor);
 				break;

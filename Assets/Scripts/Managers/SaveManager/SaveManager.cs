@@ -83,11 +83,19 @@ public class SaveManager : MonoBehaviour {
 	}
 
 	/// <summary>
+	/// Changes the currently selected saveslot to the specified Id but doesn't automatically load the new savedata
+	/// </summary>
+	/// <param name="newProfileId"></param>
+	public void ChangeSelectedProfileIdNoLoad(string newProfileId) {
+		_selectedProfile = newProfileId;
+	}
+
+	/// <summary>
 	/// Overwrites the locally stored data with a clean instance of GameData. </br>
 	///
 	/// </summary>
 	public void NewGame() {
-		SendToLogger("Starting new Game");
+		SendToLogger("Starting new game. Creating default gamedata");
 		_gameData = new GameData();
 	}
 

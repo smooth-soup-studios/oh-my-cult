@@ -41,4 +41,7 @@ public class InputManager : MonoBehaviour {
 		// Get the value from the button & convert to index
 		EventBus.Instance.TriggerEvent(EventType.HOTBAR_SELECT, (int)value.Get<float>()-1);
 	}
+	public void OnHotbarSwitch(InputValue value) {
+		EventBus.Instance.TriggerEvent(EventType.HOTBAR_SWITCH, (int)value.Get<float>());
+	}
 }

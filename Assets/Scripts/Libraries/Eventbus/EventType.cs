@@ -9,5 +9,6 @@ public enum EventType {
 	USE_PRIMARY,
 	USE_SECONDARY,
 	HOTBAR_SELECT,
+	HOTBAR_SWITCH,
 	DEATH,
 }

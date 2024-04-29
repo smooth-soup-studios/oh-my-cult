@@ -8,5 +8,6 @@ public enum EventType {
 	INTERACT,
 	USE_PRIMARY,
 	USE_SECONDARY,
+	HOTBAR_SELECT,
 	DEATH,
 }

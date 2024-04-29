@@ -5447,14 +5447,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1843211728762744480, guid: eb6bcb867272c7f4db2dc1b3ce0a2d95, type: 3}
-      propertyPath: _attackSoundClip
-      value: 
-      objectReference: {fileID: 8300000, guid: d456821e55ccca74a91d03031cde7299, type: 3}
-    - target: {fileID: 1843211728762744480, guid: eb6bcb867272c7f4db2dc1b3ce0a2d95, type: 3}
-      propertyPath: _enemyLayer.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
     - target: {fileID: 3900021811099765187, guid: eb6bcb867272c7f4db2dc1b3ce0a2d95, type: 3}
       propertyPath: m_Layer
       value: 7

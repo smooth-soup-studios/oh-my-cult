@@ -21,7 +21,6 @@ public class Inventory : MonoBehaviour, ISaveable {
 				SelectPrevSlot();
 			}
 		});
-
 	}
 
 

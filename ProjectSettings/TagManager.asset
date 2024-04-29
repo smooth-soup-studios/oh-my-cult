@@ -50,7 +50,7 @@ TagManager:
   - name: BehindStructure
     uniqueID: 242412963
     locked: 0
-  - name: Structure
+  - name: Default
     uniqueID: 509012055
     locked: 0
   - name: Player

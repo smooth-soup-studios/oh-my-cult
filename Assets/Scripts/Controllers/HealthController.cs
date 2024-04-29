@@ -1,4 +1,7 @@
+using System;
 using System.Collections;
+using AK.Wwise;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Event = AK.Wwise.Event;
@@ -8,10 +11,15 @@ public class HealthController : MonoBehaviour, ISaveable {
 	[SerializeField] float _maxHealth = 100;
 	float _currentHealth;
 	[SerializeField] Event _actorDamaged;
+	[SerializeField] Event _lowHealth;
+	[SerializeField] RTPC _healthValue;
+	bool _isLowHealthEventPosted;
 
 	void Awake() {
 		_currentHealth = _maxHealth;
+		_healthValue.SetValue(gameObject, _currentHealth);
 	}
+
 	private void Start() {
 		if (_currentHealth <= 0) {
 			EventBus.Instance.TriggerEvent<GameObject>(EventType.DEATH, gameObject);
@@ -19,16 +27,40 @@ public class HealthController : MonoBehaviour, ISaveable {
 		}
 	}
 
-	public void TakeDamage(float _damage) {
-		_currentHealth -= _damage;
+	void Update() {
+		CheckLowHealth(() => {
+			if (_isLowHealthEventPosted) {
+				return;
+			}
+			_lowHealth.Post(gameObject);
+			_isLowHealthEventPosted = true;
+		});
+	}
+
+	void CheckLowHealth(Action callback) {
+		switch (_currentHealth) {
+			case <= 50 when !_isLowHealthEventPosted:
+				callback();
+				break;
+			case > 50:
+				_isLowHealthEventPosted = false;
+				break;
+		}
+	}
+
+	public void TakeDamage(float damage) {
+		_currentHealth -= damage;
 
 		_actorDamaged.Post(gameObject);
 		StartCoroutine(FlashRed());
-		Logger.Log(_logname, $"The {name} took {_damage} damage!");
+		Logger.Log(_logname, $"The {name} took {damage} damage!");
 		if (_currentHealth <= 0) {
 			EventBus.Instance.TriggerEvent<GameObject>(EventType.DEATH, gameObject);
 			Logger.Log(_logname, $"The {name} is dead!");
 		}
+
+		if (!gameObject.CompareTag("Player")) return;
+		_healthValue.SetValue(gameObject, _currentHealth);
 	}
 
 	public float GetCurrentHealth() {

@@ -3,33 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
-using System;
-using System.ComponentModel.Design.Serialization;
 
-public class UIBuilderMenu : MonoBehaviour {
-	private Button _newGameButton;
+public class UIBuilderInGameMenu : MonoBehaviour
+{
 	private Button _continueButton;
+    private Button _saveGameButton;
 	private Button _loadGameButton;
 	private Button _optionsButton;
 	private Button _quit;
-	
-	[SerializeField] private GameObject _mainMenuUI;
+
+	[SerializeField] private GameObject _inGameUI;
 	[SerializeField] private GameObject _optionsUI;
 
 	private string _lastSceneLoaded = "level_0";
 	VisualElement _root;
 
 	private void OnEnable() {
+        Time.timeScale = 0f;
 		_root = GetComponent<UIDocument>().rootVisualElement;
 
-		_newGameButton = _root.Q<Button>("NewButton");
 		_continueButton = _root.Q<Button>("ContinueButton");
+        _saveGameButton = _root.Q<Button>("SaveButton");
 		_loadGameButton = _root.Q<Button>("LoadButton");
 		_optionsButton = _root.Q<Button>("OptionsButton");
 		_quit = _root.Q<Button>("QuitButton");
 
-		_newGameButton.clicked += OnNewGame;
-		//_continueButton.clicked += OnContinue;
+		_continueButton.clicked += OnContinue;
+        _saveGameButton.clicked += OnSaveGame;
 		//_loadGameButton.clicked += LoadData;
 		_optionsButton.clicked += OnOptions;
 		_quit.clicked += QuitGame;
@@ -40,27 +40,21 @@ public class UIBuilderMenu : MonoBehaviour {
 
 
 
-	void OnNewGame() {
-		DisableButtons();
-		Logger.Log("MenuController", "Starting new game");
-
-		SaveManager.Instance.ChangeSelectedProfileId("1");
-
-		// Loads the default savestate, overwriting existing files.
-		SaveManager.Instance.NewGame();
-		SaveManager.Instance.SaveGame();
-		SceneManager.LoadSceneAsync(1);
-	}
-
-	public void OnContinue() {
+	void OnSaveGame() {
 		// DisableButtons();
-		// Logger.Log("MenuController", "Loading Savefile");
+		// Logger.Log("MenuController", "Starting new game");
 
 		// SaveManager.Instance.ChangeSelectedProfileId("1");
 
-		// // Works w/ Savemanager OnSceneLoaded() to load the game.
+		// // Loads the default savestate, overwriting existing files.
+		// SaveManager.Instance.NewGame();
 		// SaveManager.Instance.SaveGame();
-		// SceneManager.LoadSceneAsync(_lastSceneLoaded);
+		// SceneManager.LoadSceneAsync(1);
+	}
+
+	public void OnContinue() {
+        Time.timeScale = 1f;
+		_inGameUI.SetActive(false);
 	}
 
 	public void QuitGame() {
@@ -71,7 +65,6 @@ public class UIBuilderMenu : MonoBehaviour {
 	public void DisableButtons() {
 		if (!SaveManager.Instance.HasGameData()) {
 			_loadGameButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .5f);
-			_continueButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .5f);
 		}
 	}
 
@@ -85,8 +78,8 @@ public class UIBuilderMenu : MonoBehaviour {
 	}
 
 	void OnOptions() {
-		Logger.Log("MenuController", "Viewing options");
-		_mainMenuUI.SetActive(false);
+		Logger.Log("InGameController", "Viewing options");
+		_inGameUI.SetActive(false);
 		_optionsUI.SetActive(true);
 	}
 }

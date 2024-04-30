@@ -17,10 +17,12 @@ public class UIBuilderInGameMenu : MonoBehaviour
 
 	private string _lastSceneLoaded = "level_0";
 	VisualElement _root;
+    VisualElement _hud;
 
 	private void OnEnable() {
         EventBus.Instance.Subscribe<Vector2>(EventType.PAUSE, OnPause);
 		_root = GetComponent<UIDocument>().rootVisualElement;
+        _hud = Object.FindObjectOfType<UIDocument>().rootVisualElement;
 
 		_continueButton = _root.Q<Button>("ContinueButton");
         _saveGameButton = _root.Q<Button>("SaveButton");
@@ -85,10 +87,12 @@ public class UIBuilderInGameMenu : MonoBehaviour
 
     void OnPause(Vector2 vector2){
         if(Time.timeScale == 1){
+            _hud.visible = false;
             _inGameUI.GetComponent<UIDocument>().rootVisualElement.visible = true;
             Time.timeScale = 0;
         }
         else if(Time.timeScale == 0){
+            _hud.visible = true;
             _inGameUI.GetComponent<UIDocument>().rootVisualElement.visible = false;
             Time.timeScale = 1;
         }

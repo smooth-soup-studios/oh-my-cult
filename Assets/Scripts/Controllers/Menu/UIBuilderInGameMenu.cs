@@ -22,7 +22,7 @@ public class UIBuilderInGameMenu : MonoBehaviour
 	private void OnEnable() {
         EventBus.Instance.Subscribe<Vector2>(EventType.PAUSE, OnPause);
 		_root = GetComponent<UIDocument>().rootVisualElement;
-        _hud = Object.FindObjectOfType<UIDocument>().rootVisualElement;
+        _hud = GameObject.Find("HUD").GetComponent<UIDocument>().rootVisualElement;
 
 		_continueButton = _root.Q<Button>("ContinueButton");
         _saveGameButton = _root.Q<Button>("SaveButton");

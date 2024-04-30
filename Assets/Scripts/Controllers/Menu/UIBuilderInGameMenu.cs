@@ -19,7 +19,7 @@ public class UIBuilderInGameMenu : MonoBehaviour
 	VisualElement _root;
 
 	private void OnEnable() {
-        Time.timeScale = 0f;
+        EventBus.Instance.Subscribe<Vector2>(EventType.PAUSE, OnPause);
 		_root = GetComponent<UIDocument>().rootVisualElement;
 
 		_continueButton = _root.Q<Button>("ContinueButton");
@@ -82,4 +82,15 @@ public class UIBuilderInGameMenu : MonoBehaviour
 		_inGameUI.SetActive(false);
 		_optionsUI.SetActive(true);
 	}
+
+    void OnPause(Vector2 vector2){
+        if(Time.timeScale == 1){
+            _inGameUI.GetComponent<UIDocument>().rootVisualElement.visible = true;
+            Time.timeScale = 0;
+        }
+        else if(Time.timeScale == 0){
+            _inGameUI.GetComponent<UIDocument>().rootVisualElement.visible = false;
+            Time.timeScale = 1;
+        }
+    }
 }

@@ -32,6 +32,7 @@ namespace Managers {
         _keyIndicator = _root.Q<VisualElement>("key-indicator");
         _hotbar = _root.Q<VisualElement>("Hotbar");
         _playerInventory = FindFirstObjectByType<StateMachine>().gameObject.GetComponent<Inventory>();
+        GameObject.Find("PauseMenu").GetComponent<UIDocument>().rootVisualElement.visible = false;
       }
       else {
         Destroy(gameObject);

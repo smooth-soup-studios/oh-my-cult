@@ -37,4 +37,8 @@ public class InputManager : MonoBehaviour {
 		EventBus.Instance.TriggerEvent(EventType.USE_SECONDARY, value.isPressed);
 	}
 
+	public void OnToggleMenu(InputValue value) {
+		EventBus.Instance.TriggerEvent(EventType.PAUSE, value.isPressed);
+	}
+
 }

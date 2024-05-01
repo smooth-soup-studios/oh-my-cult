@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class UIBuilderInGameMenu : MonoBehaviour
 {
 	private Button _continueButton;
-    private Button _saveGameButton;
 	private Button _loadGameButton;
 	private Button _optionsButton;
 	private Button _quit;
@@ -25,33 +24,16 @@ public class UIBuilderInGameMenu : MonoBehaviour
         _hud = GameObject.Find("HUD").GetComponent<UIDocument>().rootVisualElement;
 
 		_continueButton = _root.Q<Button>("ContinueButton");
-        _saveGameButton = _root.Q<Button>("SaveButton");
 		_loadGameButton = _root.Q<Button>("LoadButton");
 		_optionsButton = _root.Q<Button>("OptionsButton");
 		_quit = _root.Q<Button>("QuitButton");
 
 		_continueButton.clicked += OnContinue;
-        _saveGameButton.clicked += OnSaveGame;
 		//_loadGameButton.clicked += LoadData;
 		_optionsButton.clicked += OnOptions;
 		_quit.clicked += QuitGame;
 		DisableButtons();
 
-	}
-
-
-
-
-	void OnSaveGame() {
-		// DisableButtons();
-		// Logger.Log("MenuController", "Starting new game");
-
-		// SaveManager.Instance.ChangeSelectedProfileId("1");
-
-		// // Loads the default savestate, overwriting existing files.
-		// SaveManager.Instance.NewGame();
-		// SaveManager.Instance.SaveGame();
-		// SceneManager.LoadSceneAsync(1);
 	}
 
 	public void OnContinue() {
@@ -74,9 +56,6 @@ public class UIBuilderInGameMenu : MonoBehaviour
 		if (!(data.PlayerData.SceneName == "" || data.PlayerData.SceneName == null)) {
 			_lastSceneLoaded = data.PlayerData.SceneName;
 		}
-	}
-
-	public void SaveData(GameData data) {
 	}
 
 	void OnOptions() {

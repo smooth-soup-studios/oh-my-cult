@@ -19,7 +19,7 @@ public class UIBuilderInGameMenu : MonoBehaviour
     VisualElement _hud;
 
 	private void OnEnable() {
-        EventBus.Instance.Subscribe<Vector2>(EventType.PAUSE, OnPause);
+        EventBus.Instance.Subscribe(EventType.PAUSE, OnPause);
 		_root = GetComponent<UIDocument>().rootVisualElement;
         _hud = GameObject.Find("HUD").GetComponent<UIDocument>().rootVisualElement;
 
@@ -37,8 +37,9 @@ public class UIBuilderInGameMenu : MonoBehaviour
 	}
 
 	public void OnContinue() {
-        Time.timeScale = 1f;
-		_inGameUI.SetActive(false);
+        _hud.visible = true;
+        _inGameUI.GetComponent<UIDocument>().rootVisualElement.visible = false;
+        Time.timeScale = 1;
 	}
 
 	public void QuitGame() {
@@ -60,11 +61,12 @@ public class UIBuilderInGameMenu : MonoBehaviour
 
 	void OnOptions() {
 		Logger.Log("InGameController", "Viewing options");
-		_inGameUI.SetActive(false);
-		_optionsUI.SetActive(true);
+		_inGameUI.GetComponent<UIDocument>().rootVisualElement.visible = false;
+		_optionsUI.GetComponent<UIDocument>().rootVisualElement.visible = true;
 	}
 
-    void OnPause(Vector2 vector2){
+    void OnPause(){
+        Logger.Log("InGameMenu", "On Pause2");  //Test to see if the menu becomes visible
         if(Time.timeScale == 1){
             _hud.visible = false;
             _inGameUI.GetComponent<UIDocument>().rootVisualElement.visible = true;

@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 14
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,7 +108,760 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: fence_tileset_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 56, y: -67}
+        - {x: 37, y: -87}
+        - {x: -1, y: -93}
+        - {x: -39, y: -89}
+        - {x: -56, y: -73}
+        - {x: -53, y: -10}
+        - {x: 100, y: -10}
+        - {x: 100, y: -67}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 663e8c922350f5c489010ad4851c2f2a
+      internalID: -150513604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 800
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 55, y: -67}
+        - {x: 49, y: -81}
+        - {x: 37, y: -88}
+        - {x: -1, y: -95}
+        - {x: -42, y: -87}
+        - {x: -59, y: -67}
+        - {x: -99, y: -65}
+        - {x: -99, y: -16}
+        - {x: 100, y: -16}
+        - {x: 100, y: -69}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e73bc3d94c7ec4f96f9498190c6a4b
+      internalID: -94401122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_2
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 800
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 46, y: -83}
+        - {x: 36, y: -89}
+        - {x: 20, y: -91}
+        - {x: 1, y: -93}
+        - {x: -23, y: -91}
+        - {x: -40, y: -86}
+        - {x: -52, y: -79}
+        - {x: -55, y: -74}
+        - {x: -58, y: -68}
+        - {x: -100, y: -68}
+        - {x: -99, y: -2}
+        - {x: 56, y: -2}
+        - {x: 54, y: -73}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158653d4faf2a5d49bd087dd9efba4fd
+      internalID: -626084098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_3
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 800
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93b11ebf63256d541aacd1b762b59954
+      internalID: 183421496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_4
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 800
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76423cf8c05aff446b83e894d4367241
+      internalID: -1505661548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_5
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 800
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -29, y: -100}
+        - {x: -30, y: -88}
+        - {x: -43, y: -81}
+        - {x: -54, y: -73}
+        - {x: -55, y: -14}
+        - {x: 100, y: -14}
+        - {x: 100, y: -64}
+        - {x: 55, y: -64}
+        - {x: 47, y: -79}
+        - {x: 29, y: -86}
+        - {x: 29, y: -100}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c08cdc8d56ace94dae73e7c1a9dbf76
+      internalID: 636606208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_6
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 800
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 44, y: -79}
+        - {x: 33, y: -85}
+        - {x: 31, y: -100}
+        - {x: -29, y: -100}
+        - {x: -30, y: -87}
+        - {x: -47, y: -79}
+        - {x: -55, y: -64}
+        - {x: -100, y: -62}
+        - {x: -100, y: -14}
+        - {x: 55, y: -15}
+        - {x: 53, y: -69}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 666e21b80e1afe5498389de4e5e778ec
+      internalID: -1087527891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -51, y: -5}
+        - {x: -54, y: -71}
+        - {x: -45, y: -79}
+        - {x: -31, y: -85}
+        - {x: -31, y: -100}
+        - {x: 27, y: -100}
+        - {x: 27, y: -87}
+        - {x: 43, y: -83}
+        - {x: 55, y: -71}
+        - {x: 58, y: -6}
+      tessellationDetail: 0.12
+      bones: []
+      spriteID: 46295c22f9edb3d45bcc6e52738ee9b9
+      internalID: -495770683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_8
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 600
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4341eff28fff46d4d8983a09eaad22b2
+      internalID: 1854082435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_9
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 600
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d4458b154dba4a4594e681966660527
+      internalID: 1932844783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_10
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 600
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 286ab14252155244983b4991678de1f3
+      internalID: 874617092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_11
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 600
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebace1ebdd1bb0b418e0ea91a601cb71
+      internalID: -334374580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_12
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 600
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 56, y: -66}
+        - {x: 53, y: -75}
+        - {x: 50, y: -78}
+        - {x: 39, y: -86}
+        - {x: 2, y: -92}
+        - {x: -28, y: -89}
+        - {x: -41, y: -84}
+        - {x: -52, y: -77}
+        - {x: -56, y: -72}
+        - {x: -55, y: -66}
+        - {x: -55, y: 59}
+        - {x: -45, y: 73}
+        - {x: -28, y: 80}
+        - {x: -29, y: 100}
+        - {x: 29, y: 100}
+        - {x: 29, y: 81}
+        - {x: 40, y: 78}
+        - {x: 49, y: 72}
+        - {x: 55, y: 67}
+        - {x: 58, y: 58}
+        - {x: 100, y: 57}
+        - {x: 100, y: -65}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ac452613ead6a4ca90b49f5ec797f8
+      internalID: 40911697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_13
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 600
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 30, y: 4}
+        - {x: 57, y: 4}
+        - {x: 53, y: -74}
+        - {x: 33, y: -88}
+        - {x: 3, y: -91}
+        - {x: -33, y: -87}
+        - {x: -49, y: -78}
+        - {x: -55, y: -72}
+        - {x: -57, y: -65}
+        - {x: -100, y: -65}
+        - {x: -100, y: 7}
+        - {x: -23, y: 6}
+        - {x: -23, y: 100}
+        - {x: 32, y: 100}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff623d9b311b48144ae419c673d52354
+      internalID: 540405315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 28, y: 7}
+        - {x: 28, y: 100}
+        - {x: -32, y: 100}
+        - {x: -32, y: 6}
+        - {x: -54, y: 5}
+        - {x: -55, y: -67}
+        - {x: -46, y: -76}
+        - {x: -33, y: -82}
+        - {x: -31, y: -100}
+        - {x: 28, y: -100}
+        - {x: 28, y: -83}
+        - {x: 44, y: -79}
+        - {x: 55, y: -69}
+        - {x: 57, y: 6}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b16a700dda8e34248be0142baadcde54
+      internalID: -667143072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_15
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 400
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b82fdaf0801e943448cae07e6fd0ecc0
+      internalID: -351928539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_16
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 400
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe12812843365945bf4ed0d3a8b55c8
+      internalID: -257264671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_17
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 400
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b18878e0d43944e4da531fb62f4bca9c
+      internalID: -2037916311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_18
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 400
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e9bfcd2477f4394c902ed658401a6cb
+      internalID: -1665588584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_19
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 400
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc85e06ced2aceb4bb34c688935f1534
+      internalID: -750980061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -4, y: -83}
+        - {x: -39, y: -77}
+        - {x: -58, y: -66}
+        - {x: -52, y: 9}
+        - {x: -32, y: 17}
+        - {x: -31, y: 99}
+        - {x: 27, y: 100}
+        - {x: 31, y: 16}
+        - {x: 54, y: 15}
+        - {x: 52, y: -66}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e741fe71aa3ab2b46940f7adf05a5ea8
+      internalID: 1599920205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_21
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 200
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f79eab8cbc6b8b345a81f3fbd491ba83
+      internalID: -506628204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_22
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 200
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b29e901ef072c3348b8d6314b85e1d46
+      internalID: 1664466483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_23
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 200
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26eaa286cd7ffca4eb5c0c7926a820d7
+      internalID: -428819598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_24
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 200
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f6bbc894ef37c4a8a0e08792cf6c5b
+      internalID: -1156057617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_25
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 200
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c161694fcfe4f546af0cd2525b72ca5
+      internalID: -498834883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc82bdd6b6eef8346839449c002d42e6
+      internalID: -1109883927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_27
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d339ab6cc25c8ff498765f1c9ee74b65
+      internalID: 474670897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_28
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ea7913bf125e947b1416b28801a37e
+      internalID: -1544537183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_tileset_29
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 200
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc69ab41d1e83944bd6a866fa99a3de
+      internalID: 406276419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +872,37 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fence_tileset_0: -150513604
+      fence_tileset_1: -94401122
+      fence_tileset_10: 874617092
+      fence_tileset_11: -334374580
+      fence_tileset_12: 40911697
+      fence_tileset_13: 540405315
+      fence_tileset_14: -667143072
+      fence_tileset_15: -351928539
+      fence_tileset_16: -257264671
+      fence_tileset_17: -2037916311
+      fence_tileset_18: -1665588584
+      fence_tileset_19: -750980061
+      fence_tileset_2: -626084098
+      fence_tileset_20: 1599920205
+      fence_tileset_21: -506628204
+      fence_tileset_22: 1664466483
+      fence_tileset_23: -428819598
+      fence_tileset_24: -1156057617
+      fence_tileset_25: -498834883
+      fence_tileset_26: -1109883927
+      fence_tileset_27: 474670897
+      fence_tileset_28: -1544537183
+      fence_tileset_29: 406276419
+      fence_tileset_3: 183421496
+      fence_tileset_4: -1505661548
+      fence_tileset_5: 636606208
+      fence_tileset_6: -1087527891
+      fence_tileset_7: -495770683
+      fence_tileset_8: 1854082435
+      fence_tileset_9: 1932844783
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

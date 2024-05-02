@@ -5,6 +5,7 @@ using BehaviorTree;
 
 public class CheckEnemyInAttackRange : Node
 {
+	private string name = "in range";
 
 
     private Transform _transform;
@@ -14,7 +15,7 @@ public class CheckEnemyInAttackRange : Node
         _transform = transform;
     }
 
-    public override NodeState Evaluate()
+	public override NodeState Evaluate(BehaviorTree.Tree tree) 
     {
         object t = GetData("target");
         if (t == null){
@@ -23,8 +24,8 @@ public class CheckEnemyInAttackRange : Node
         }
 
         Transform target = (Transform)t;
-        if(Vector3.Distance(_transform.position, target.position) <= EnemyBT.AttackRange){
-
+        if(Vector2.Distance(_transform.position, target.position) <= EnemyBT.AttackRange){
+			Logger.Log(name, "Attack");
             State = NodeState.SUCCESS;
             return State;
         }

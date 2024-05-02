@@ -2,16 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using BehaviorTree;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class CheckEnemyInRange : Node {
 
 	private static int _enemyLayerMask = 1 << 6;
 	private Transform _transform;
+
 	public CheckEnemyInRange(Transform transform) {
 		_transform = transform;
 	}
 
-	public override NodeState Evaluate() {
+	public override NodeState Evaluate(BehaviorTree.Tree tree) {
 		object t = GetData("target");
 		if (t == null) {
 			Collider2D[] colliders = Physics2D.OverlapCircleAll(_transform.position, EnemyBT.FovRange, _enemyLayerMask);

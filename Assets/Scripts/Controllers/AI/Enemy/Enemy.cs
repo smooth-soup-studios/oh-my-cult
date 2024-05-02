@@ -66,12 +66,12 @@ public class Enemy : MonoBehaviour, ISaveable {
 		CurrentState.UpdateState();
 	}
 
-	private void OnDrawGizmos() {
-		if (transform == null)
-			return;
-		Gizmos.DrawWireSphere(transform.position, Stats.PlayerDetectDistance);
-		Gizmos.DrawWireSphere(transform.position, Stats.MeleeDetectDistance);
-	}
+	// private void OnDrawGizmos() {
+	// 	if (transform == null)
+	// 		return;
+	// 	Gizmos.DrawWireSphere(transform.position, Stats.PlayerDetectDistance);
+	// 	Gizmos.DrawWireSphere(transform.position, Stats.MeleeDetectDistance);
+	// }
 	public void CheckForPlayer() {
 		Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(transform.position, Stats.PlayerDetectDistance, PlayerLayer);
 

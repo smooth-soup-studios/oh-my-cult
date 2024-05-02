@@ -19,7 +19,8 @@ public class TaskPatrol : Node {
 		_waypoints = waypoints;
 	}
 
-	public override NodeState Evaluate() {
+	public override NodeState Evaluate(BehaviorTree.Tree tree) {
+		EnemyBT.Agent.speed = 10f;
 		if (_waiting) {
 			_waitCounter += Time.deltaTime;
 			if (_waitCounter >= _waitTime) {
@@ -27,44 +28,29 @@ public class TaskPatrol : Node {
 			}
 		}
 		else {
-			if (Vector2.Distance(EnemyBT.Agent.transform.position, _waypoints[_currentWaypointIndex].transform.position) < 0.01f) {
 
+			// EnemyBT.Agent.destination = _waypoints[_currentWaypointIndex].position;\
+			if (Vector2.Distance(EnemyBT.Agent.transform.position, _waypoints[_waypoints.Length - 1].transform.position) < 0.01f) {
+				Logger.Log(name, "The End");
+				_waypoints = _waypoints.Reverse().ToArray();
+				_currentWaypointIndex = 1;
+				EnemyBT.Agent.destination = _waypoints[_currentWaypointIndex].position;
+			}
+			else if (Vector2.Distance(EnemyBT.Agent.transform.position, _waypoints[_currentWaypointIndex].transform.position) < 0.01f ) {
 				_waitCounter = 0;
 				_waiting = true;
-				Logger.Log(name, $"{_currentWaypointIndex}");
-				Logger.Log(name, $"{_endReached}");
 
-				// if (_currentWaypointIndex == 0) {
-				// 	_endReached = true;
-				// }
-				if (Vector2.Distance(EnemyBT.Agent.transform.position, _waypoints[_waypoints.Length - 1].transform.position) < 0.0001f) {
+				_currentWaypointIndex = (_currentWaypointIndex + 1) % _waypoints.Length;
 
-					_waypoints.Reverse();
-					_currentWaypointIndex = 0;
 				EnemyBT.Agent.destination = _waypoints[_currentWaypointIndex].position;
-				}
-				// if (!_endReached) {
-				// 	_currentWaypointIndex--;
-				// }
-				// else if (_endReached) {
-				// 	_currentWaypointIndex++;
-				// }
-
-
-				// if (_currentWaypointIndex >= 0) {
-				// 	_currentWaypointIndex++;
-				// }
-				_currentWaypointIndex++;
-				EnemyBT.Agent.destination = _waypoints[_currentWaypointIndex].position;
-				string log = "";
-				_waypoints.ToList().ForEach(w => log += w + " - ");
-				Logger.Log(name, $" {log}");
+				Logger.Log(name, "");
 			}
-			else {
+
 				EnemyBT.Agent.destination = _waypoints[_currentWaypointIndex].position;
-			}
+
+
+
 		}
-
 		State = NodeState.RUNNING;
 		return State;
 

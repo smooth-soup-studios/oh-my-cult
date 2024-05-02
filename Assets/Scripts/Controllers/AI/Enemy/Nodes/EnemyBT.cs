@@ -9,7 +9,7 @@ public class EnemyBT : Tree {
 	public static float Speed = 2f;
 
 	public static float FovRange = 30f;
-	public static float AttackRange = 2f;
+	public static float AttackRange = 20f;
 	public static NavMeshAgent Agent;
 
 
@@ -36,5 +36,12 @@ public class EnemyBT : Tree {
 		});
 
 		return root;
+	}
+
+		private void OnDrawGizmos() {
+		if (transform == null)
+			return;
+		UnityEngine.Gizmos.DrawWireSphere(transform.position, FovRange);
+
 	}
 }

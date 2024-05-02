@@ -165,8 +165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b7d333209dbd044a92f3ae32fea62c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxInventorySize: 1
-  _selectedItemIndex: 0
 --- !u!50 &3464190737083003022
 Rigidbody2D:
   serializedVersion: 4
@@ -307,7 +305,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 143308678153da34ea09cf80b8830776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EchoGhostPrefab: {fileID: 5036995826059190279, guid: 16f811ba2291dad49a846047cacecc97, type: 3}
+  EchoGhostPrefab: {fileID: 5036995826059190279, guid: 16f811ba2291dad49a846047cacecc97,
+    type: 3}
   EchoDelay: 0.05
   EchoLifetime: 0.5
 --- !u!114 &8440669220791414699
@@ -334,19 +333,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f0d07869b7ad747b46fdf13457c82e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: Player-28.3024
+  _isInvulnerable: 0
   _maxHealth: 100
   _actorDamaged:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a8fb3c6a84a3a5f43bd252ce02dda50a, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: a8fb3c6a84a3a5f43bd252ce02dda50a,
+      type: 2}
   _lowHealth:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 2670b879d1538374396bf292e07a0a97, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 2670b879d1538374396bf292e07a0a97,
+      type: 2}
   _healthValue:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: b4fafc037440ece48acff874b5495c28, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: b4fafc037440ece48acff874b5495c28,
+      type: 2}
 --- !u!114 &7966042172786487587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -440,7 +444,8 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a3774496f9be0154bbc74f33df879dfa, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: a3774496f9be0154bbc74f33df879dfa,
+      type: 2}
   decodeBank: 0
   overrideLoadSetting: 0
   loadAsynchronous: 0
@@ -523,7 +528,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

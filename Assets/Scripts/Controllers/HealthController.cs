@@ -8,6 +8,10 @@ using Event = AK.Wwise.Event;
 
 public class HealthController : MonoBehaviour, ISaveable {
 	private string _logname = "Health controller";
+	[field: SerializeField, Header("Object information")] public string ObjectId { get; private set; }
+
+	[Header("Settings")]
+	[SerializeField] private bool _isInvulnerable = false;
 	[SerializeField] float _maxHealth = 100;
 	float _currentHealth;
 	[SerializeField] Event _actorDamaged;
@@ -52,6 +56,15 @@ public class HealthController : MonoBehaviour, ISaveable {
 		_currentHealth -= damage;
 
 		_actorDamaged.Post(gameObject);
+
+		if (_isInvulnerable) {
+			Logger.Log(_logname, $"The {name} took no damage becouse it is invulnerable!");
+		}
+		else {
+			_currentHealth -= damage;
+			Logger.Log(_logname, $"The {name} took {damage} damage!");
+		}
+
 		StartCoroutine(FlashRed());
 		Logger.Log(_logname, $"The {name} took {damage} damage!");
 		if (_currentHealth <= 0) {
@@ -67,19 +80,32 @@ public class HealthController : MonoBehaviour, ISaveable {
 		return _currentHealth;
 	}
 
+	public bool IsAlive() {
+		return _currentHealth > 0;
+	}
+
 	IEnumerator FlashRed() {
 		GetComponent<SpriteRenderer>().color = Color.red;
 		yield return new WaitForSeconds(0.1f);
 		GetComponent<SpriteRenderer>().color = Color.white;
 	}
 
+
+	private void OnValidate() {
+		// Generates an unique ID based on the name & position of the gameobject.
+#if UNITY_EDITOR
+		ObjectId = $"{name}-{Vector3.SqrMagnitude(transform.position)}";
+		UnityEditor.EditorUtility.SetDirty(this);
+#endif
+	}
+
 	public void LoadData(GameData data) {
-		if (data.SceneData.HealthValues.ContainsKey(gameObject.name)) {
-			data.SceneData.HealthValues.TryGetValue(gameObject.name, out _currentHealth);
+		if (data.ActorData.HealthValues.ContainsKey(ObjectId)) {
+			data.ActorData.HealthValues.TryGetValue(ObjectId, out _currentHealth);
 		}
 	}
 
 	public void SaveData(GameData data) {
-		data.SceneData.HealthValues[gameObject.name] = _currentHealth;
+		data.ActorData.HealthValues[ObjectId] = _currentHealth;
 	}
 }

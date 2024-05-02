@@ -3,7 +3,6 @@ using System.IO;
 using System.Collections.Generic;
 
 using UnityEngine;
-using System.Linq;
 
 public class FileDataManager : IDataManager {
 	private static string _logname = "FileDataManager";
@@ -21,6 +20,12 @@ public class FileDataManager : IDataManager {
 		_encrypt = encrypt;
 	}
 
+	public FileDataManager(string saveDirectory, string fileName, bool encrypt, bool enableLogging) : this(saveDirectory, fileName, encrypt) {
+		_enableLogging = enableLogging;
+	}
+
+
+
 	public GameData Load(string profileId) {
 
 		string savePath = Path.Combine(_saveDirectory, profileId, _fileName);
@@ -31,7 +36,7 @@ public class FileDataManager : IDataManager {
 				using StreamReader reader = new(stream);
 				string json = reader.ReadToEnd();
 				if (_encrypt) {
-					json = Scramble(json); // Scramble the data to make editing saves more difficult
+					json = Scramble(json); // Uncramble
 				}
 				return JsonUtility.FromJson<GameData>(json);
 			}
@@ -53,10 +58,13 @@ public class FileDataManager : IDataManager {
 		try {
 			Directory.CreateDirectory(Path.GetDirectoryName(savePath));
 
-			string json = JsonUtility.ToJson(data, true);
+			string json;
 
 			if (_encrypt) {
-				json = Scramble(json); // Unscramble
+				json = Scramble(JsonUtility.ToJson(data, false)); // Scramble the data to make editing saves more difficult
+			}
+			else {
+				json = JsonUtility.ToJson(data, true);
 			}
 
 			using FileStream stream = new(savePath, FileMode.Create);

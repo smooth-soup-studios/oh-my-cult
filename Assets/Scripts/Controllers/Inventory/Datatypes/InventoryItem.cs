@@ -24,4 +24,5 @@ public class InvData {
 public enum InventoryItemType {
 	Consumable,
 	Weapon,
+	Null, // Here because I need a way to check if synced items are empty and can't use nulls becouse they fuck with the save system
 }

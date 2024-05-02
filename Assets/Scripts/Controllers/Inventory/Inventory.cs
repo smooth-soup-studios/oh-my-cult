@@ -1,16 +1,26 @@
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Collections;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour, ISaveable {
 	private List<InventoryItem> _currentInventory = new();
-	[SerializeField] private int _maxInventorySize = 1;
-	[SerializeField] private int _selectedItemIndex = 0;
+	private int _maxInventorySize = 5;
+	private int _selectedItemIndex = 0;
 
 
 	private void Awake() {
 		// Need to initialize the list with the max size. Should be overwritten by LoadData if we ever add expanding inventory space.
 		_currentInventory = new List<InventoryItem>(new InventoryItem[_maxInventorySize]);
+		EventBus.Instance.Subscribe<int>(EventType.HOTBAR_SELECT, SelectSlot);
+		EventBus.Instance.Subscribe<int>(EventType.HOTBAR_SWITCH, e => {
+			if (e > 0) {
+				SelectNextSlot();
+			}
+			else {
+				SelectPrevSlot();
+			}
+		});
 	}
 
 
@@ -78,16 +88,27 @@ public class Inventory : MonoBehaviour, ISaveable {
 		return _selectedItemIndex;
 	}
 
+	public int GetInventoryMaxSize() {
+		return _maxInventorySize;
+	}
+
 
 
 
 
 	public void LoadData(GameData data) {
 		List<InventoryItem> newInv = new();
-		data.SceneData.InvItemVals.Keys.ToList().ForEach(key => {
-			InventoryItem newItem = ScriptableObject.CreateInstance<InventoryItem>();
-			newItem.InvData = data.SceneData.InvItemVals[key];
-			newInv.Add(newItem);
+		data.PlayerData.InvItemVals.Keys.ToList().ForEach(key => {
+			InvData storedData = data.PlayerData.InvItemVals[key];
+			if (storedData.ItemType == InventoryItemType.Null) {
+				newInv.Add(null);
+			}
+			else {
+				InventoryItem newItem = ScriptableObject.CreateInstance<InventoryItem>();
+				newItem.name = storedData.ItemName;
+				newItem.InvData = storedData;
+				newInv.Add(newItem);
+			}
 		});
 		if (newInv.Count > 0) {
 			_currentInventory = newInv;
@@ -95,9 +116,20 @@ public class Inventory : MonoBehaviour, ISaveable {
 	}
 
 	public void SaveData(GameData data) {
-		_currentInventory.ForEach(x => {
-			data.SceneData.InvItemVals[x.name] = x.InvData;
-		});
+		// Hacky conversion between "true null" and object marked as nulltype for use in serialization
+		// itemtype should be checked in loadData and converted back to true null
+		for (int i = 0; i < _currentInventory.Count; i++) {
+			InventoryItem selectedItem = _currentInventory[i];
+			if (selectedItem == null) {
+				InvData emptyItem = new() {
+					ItemType = InventoryItemType.Null
+				};
+				data.PlayerData.InvItemVals[i.ToString()] = emptyItem;
+			}
+			else {
+				data.PlayerData.InvItemVals[i.ToString()] = selectedItem.InvData;
+			}
+		}
 	}
 
 }

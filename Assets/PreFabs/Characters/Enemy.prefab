@@ -311,6 +311,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f0d07869b7ad747b46fdf13457c82e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: Enemy-0.1013
+  _isInvulnerable: 0
   _maxHealth: 100
   _actorDamaged:
     idInternal: 0
@@ -377,6 +379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bbd1af342d80be4d8d9343b9314b2e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: Enemy-0.1013
   Weapon: {fileID: 1843211728762744480}
   Rb: {fileID: 4849591457620503528}
   GroundLayer:

@@ -66,7 +66,7 @@ public class PlayerMoveState : BaseState {
 	}
 	public IEnumerator DashCooldown() {
 		_dashCooldown = true;
-		yield return new WaitForSecondsRealtime(1.25f);
+		yield return new WaitForSecondsRealtime(PlayerDashState.DashCooldown);
 		_dashCooldown = false;
 	}
 	private void OnAttack(bool attack) {

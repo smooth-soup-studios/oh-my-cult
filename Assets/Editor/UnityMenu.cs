@@ -8,7 +8,7 @@ using System;
 public static class UnityMenu {
 	private static string _logname = "EditorTools";
 
-    [MenuItem("Tools/Open Savedata folder")]
+    [MenuItem("Tools/Open Savedata folder ^PGDN")]
     private static void OpenSaveData() {
         OpenFileManager(Application.persistentDataPath);
     }
@@ -39,7 +39,7 @@ public static class UnityMenu {
         }
     }
 
-    [MenuItem("Tools/Clear Savedata")]
+    [MenuItem("Tools/Clear Savedata ^END")]
     private static void ClearSaveData() {
         DeleteSaveFiles(Application.persistentDataPath);
     }

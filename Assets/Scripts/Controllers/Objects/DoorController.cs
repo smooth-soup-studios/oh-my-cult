@@ -1,8 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using Managers;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class DoorController : MonoBehaviour {
 	private static string _logName = "DoorController";
@@ -10,21 +8,23 @@ public class DoorController : MonoBehaviour {
 	public TransportDestination TransportTo = TransportDestination.House;
 
 	public int ArbitraryId = 0;
-
 	public bool RequiresKey = false;
 
 	[Tooltip("If true, this door is only used as a target to teleport to when the player enters this scene from another door, and cannot be used to teleport to another scene.")]
 	public bool NoEnter = false;
-
 	public bool AlreadyActivated = false;
-
 	private bool _isTransporting = false;
 
-	public void OnTriggerEnter2D(Collider2D col) {
-		if (AlreadyActivated || NoEnter) return;
 
-		if (col.gameObject.CompareTag("Player")) {
-			StateMachine sm = col.gameObject.GetComponent<StateMachine>();
+	public void OnTriggerEnter2D(Collider2D col) {
+		ActivateDoor(col.gameObject);
+	}
+
+	public void ActivateDoor(GameObject target) {
+		if (NoEnter | _isTransporting) return;
+
+		if (target.CompareTag("Player")) {
+			StateMachine sm = target.GetComponent<StateMachine>();
 
 			if (RequiresKey) {
 				if (!sm.HasDoorKey) {
@@ -43,22 +43,41 @@ public class DoorController : MonoBehaviour {
 
 			AlreadyActivated = true;
 			_isTransporting = true;
-			
-			GameManager.Instance.LoadScene(
-				TransportTo switch {
-					TransportDestination.House => "houses",
-					TransportDestination.Special => "boss_arenas",
-					_ => "level_0"
-				}
-			);
+
+			StartCoroutine(_loadDoor());
+
+			IEnumerator _loadDoor() {
+				SceneWipeManager.Instance.WipeIn();
+				yield return new WaitForSeconds(SceneWipeManager.WipeTime);
+				SceneWipeManager.Instance.ShouldWipeOffWhenStart = true;
+
+				_isTransporting = false;
+
+				GameManager.Instance.LoadScene(
+					TransportTo switch {
+						TransportDestination.House => SceneDefs.HouseInteriorLevel,
+						TransportDestination.Special => SceneDefs.BossArenaLevel,
+						_ => SceneDefs.VillageLevel
+					}
+				);
+			}
 		}
 	}
 
 	public void OnTriggerExit2D(Collider2D col) {
-		if (col.gameObject.CompareTag("Player") && !_isTransporting) {
-			col.GetComponent<StateMachine>().LatestDoor = -1;
+		ExitDoor(col.gameObject);
+	}
+
+	public void ExitDoor(GameObject target) {
+		if (target.CompareTag("Player") && !_isTransporting) {
+			target.GetComponent<StateMachine>().LatestDoor = -1;
 			AlreadyActivated = false;
 		}
+	}
+
+	private void OnDrawGizmos() {
+		Gizmos.color = Color.green;
+		Gizmos.DrawWireCube(transform.position, Vector3.one * 5);
 	}
 }
 

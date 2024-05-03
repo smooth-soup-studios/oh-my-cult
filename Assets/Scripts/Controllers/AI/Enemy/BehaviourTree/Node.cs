@@ -35,7 +35,7 @@ namespace BehaviorTree
             node.Parent = this;
             Children.Add(node);
         }
-        public virtual NodeState Evaluate(Tree tree) => NodeState.FAILURE;
+        public virtual NodeState Evaluate(EnemyBehaviourTree tree) => NodeState.FAILURE;
 
         public void SetData(string key, object value)
         {

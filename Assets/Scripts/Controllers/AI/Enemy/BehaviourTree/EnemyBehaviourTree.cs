@@ -5,7 +5,7 @@ namespace BehaviorTree
 {
 
 
-    public abstract class Tree : MonoBehaviour
+    public abstract class EnemyBehaviourTree : MonoBehaviour
     {
         private Node _root = null;
 

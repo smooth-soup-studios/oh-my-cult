@@ -13,7 +13,7 @@ public class CheckEnemyInRange : Node {
 		_transform = transform;
 	}
 
-	public override NodeState Evaluate(BehaviorTree.Tree tree) {
+	public override NodeState Evaluate(BehaviorTree.EnemyBehaviourTree tree) {
 		object t = GetData("target");
 		if (t == null) {
 			Collider2D[] colliders = Physics2D.OverlapCircleAll(_transform.position, EnemyBT.FovRange, _enemyLayerMask);

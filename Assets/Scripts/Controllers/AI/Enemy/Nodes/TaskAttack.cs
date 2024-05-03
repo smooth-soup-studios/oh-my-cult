@@ -18,7 +18,7 @@ public class TaskAttack : Node {
 		_enemy = GameObject.Find("Enemy").GetComponent<EnemyHealthController>();
 	}
 
-	public override NodeState Evaluate(BehaviorTree.Tree tree) {
+	public override NodeState Evaluate(BehaviorTree.EnemyBehaviourTree tree) {
 		Transform target = (Transform)GetData("target");
 		_enemyBiteAttack = tree.gameObject.GetComponent<EnemyBiteAttack>();
 

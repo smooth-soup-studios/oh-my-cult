@@ -19,7 +19,7 @@ public class TaskPatrol : Node {
 		_waypoints = waypoints;
 	}
 
-	public override NodeState Evaluate(BehaviorTree.Tree tree) {
+	public override NodeState Evaluate(BehaviorTree.EnemyBehaviourTree tree) {
 		EnemyBT.Agent.speed = 10f;
 		if (_waiting) {
 			_waitCounter += Time.deltaTime;

@@ -4,7 +4,7 @@ using BehaviorTree;
 using UnityEngine.AI;
 
 
-public class EnemyBT : Tree {
+public class EnemyBT : EnemyBehaviourTree {
 	public UnityEngine.Transform[] Waypoints;
 	public static float Speed = 2f;
 

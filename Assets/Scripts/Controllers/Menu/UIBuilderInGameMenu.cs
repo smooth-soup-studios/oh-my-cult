@@ -66,7 +66,6 @@ public class UIBuilderInGameMenu : MonoBehaviour
 	}
 
     void OnPause(){
-        Logger.Log("InGameMenu", "On Pause2");  //Test to see if the menu becomes visible
         if(Time.timeScale == 1){
             _hud.visible = false;
             _inGameUI.GetComponent<UIDocument>().rootVisualElement.visible = true;

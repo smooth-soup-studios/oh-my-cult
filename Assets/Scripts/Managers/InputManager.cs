@@ -42,6 +42,7 @@ public class InputManager : MonoBehaviour {
 		EventBus.Instance.TriggerEvent(EventType.HOTBAR_SELECT, (int)value.Get<float>()-1);
 	}
 	public void OnHotbarSwitch(InputValue value) {
+		// Is either 1 for next or -1 for prev
 		EventBus.Instance.TriggerEvent(EventType.HOTBAR_SWITCH, (int)value.Get<float>());
 	}
 }

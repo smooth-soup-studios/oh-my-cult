@@ -1,0 +1,70 @@
+fileFormatVersion: 2
+guid: 18380482c3e14d142a66c62faf8e02eb
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: f3268c876daf4890b6af6cd462063137, type: 3}
+  _reimportOnDependencyChange: 1
+  _pixelsPerUnit: 16
+  _sprites:
+  - name: Kopie_van_Bush_Fruitless_V1_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 200
+      width: 200
+      height: 200
+    spriteID: e56ebff7e07e6cb47b7cc2d149e18459
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Kopie_van_Bush_Fruitless_V1_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 200
+      width: 200
+      height: 200
+    spriteID: 71b85d65cb5206a48b9187ff6123dd0e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Kopie_van_Bush_Fruitless_V1_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 8fb2559681e782e48ba5992b8bccd9fe
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Kopie_van_Bush_Fruitless_V1_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 0
+      width: 200
+      height: 200
+    spriteID: 8ef7ca621b27dee4cb830ae4edf05751
+    spriteOutline: []
+    tessellationDetail: 0
+  _secondaryTextures: []

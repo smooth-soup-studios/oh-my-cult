@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Art/Logos/Intro-Background.png?fileID=2800000&amp;guid=0ec85d573667439fca94a2daef8f282f&amp;type=3#Intro-Background&quot;);">
+        <ui:VisualElement name="Header" style="flex-grow: 0; flex-shrink: 0; height: 20%; width: 100%;">
+            <ui:Label tabindex="-1" text="OH MY CULT!" parse-escape-sequences="true" display-tooltip-when-elided="true" style="height: 100%; width: 100%; -unity-text-align: middle-center; font-size: 72px; color: rgb(143, 202, 173); -unity-font-style: bold; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Body" style="flex-grow: 0; flex-shrink: 0; height: 60%; width: 100%;">
+            <ui:Label tabindex="-1" text="You overslept and missed the ritual of your village. &#10;Something went wrong and now they&apos;re out to kill you.  &#10;&#10;Look for weapons to defend yourself and &#10;get to the church to face the cult leader. &#10;&#10;You must escape!" parse-escape-sequences="true" display-tooltip-when-elided="true" name="IntroTekst" style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; height: 100%; width: 80%; align-items: center; justify-content: flex-start; color: rgb(143, 202, 173); font-size: 56px; align-self: center; -unity-text-align: upper-center;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Footer" style="flex-grow: 1; height: 20%; width: 100%; justify-content: flex-start; align-items: center; align-self: auto;">
+            <ui:Button text="Start" parse-escape-sequences="true" display-tooltip-when-elided="true" name="StartButton" style="align-items: auto; justify-content: flex-start; align-self: center; height: 65%; width: 25%; background-color: rgba(56, 56, 56, 0); background-image: url(&quot;project://database/Assets/Art/DeleteThisLater/Button-V1.png?fileID=2800000&amp;guid=6ea2eb79f968be648ab5d64b06533584&amp;type=3#Button-V1&quot;); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; font-size: 48px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -12,6 +12,7 @@ public class UiBuilderOptionsMenu : MonoBehaviour
     Slider _masterVolume;
     Slider _musicVolume;
     Slider _fxVolume;
+    DropdownField _quality;
     [SerializeField] private AudioMixer _audioMixer;
     [SerializeField] private GameObject _mainMenuUI;
     [SerializeField] private GameObject _keyBindingUI;
@@ -31,6 +32,7 @@ public class UiBuilderOptionsMenu : MonoBehaviour
         _masterVolume = _root.Q<Slider>("MasterVolume");
         _musicVolume = _root.Q<Slider>("MusicVolume");
         _fxVolume = _root.Q<Slider>("FXVolume");
+        _quality = _root.Q<DropdownField>("QualitySelection");
 
         _masterVolume.value = _baseVolume;
         OnMasterSound(_baseVolume);
@@ -52,6 +54,10 @@ public class UiBuilderOptionsMenu : MonoBehaviour
         _fxVolume.RegisterCallback<ChangeEvent<float>>((evt) =>
         {
             OnFXSound(evt.newValue);
+        });
+        _quality.RegisterCallback<ChangeEvent<int>>((evt) =>
+        {
+            OnQuality(evt.newValue);
         });
     }
 
@@ -77,6 +83,10 @@ public class UiBuilderOptionsMenu : MonoBehaviour
 
     void OnFXSound(float volume) {
         _audioMixer.SetFloat("soundFXVolume", volume);
+    }
+
+    void OnQuality(int QualityIndex){
+        QualitySettings.SetQualityLevel(QualityIndex);
     }
 
 }

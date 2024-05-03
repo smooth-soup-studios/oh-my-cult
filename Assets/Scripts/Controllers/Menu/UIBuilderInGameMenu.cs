@@ -11,17 +11,27 @@ public class UIBuilderInGameMenu : MonoBehaviour
 	private Button _optionsButton;
 	private Button _quit;
 
-	[SerializeField] private GameObject _inGameUI;
-	[SerializeField] private GameObject _optionsUI;
+	//[SerializeField] private GameObject _inGameUI;
+	//[SerializeField] private GameObject _optionsUI;
 
 	private string _lastSceneLoaded = "level_0";
 	VisualElement _root;
     VisualElement _hud;
+	VisualElement _keyBindings;
+	VisualElement _optionsUI;
+	VisualElement _pauseMenu;
 
 	private void OnEnable() {
         EventBus.Instance.Subscribe(EventType.PAUSE, OnPause);
 		_root = GetComponent<UIDocument>().rootVisualElement;
         _hud = GameObject.Find("HUD").GetComponent<UIDocument>().rootVisualElement;
+		_keyBindings = GameObject.Find("KeyBindings").GetComponent<UIDocument>().rootVisualElement;
+		_optionsUI = GameObject.Find("OptionsMenu").GetComponent<UIDocument>().rootVisualElement;
+		_pauseMenu = GameObject.Find("PauseMenu").GetComponent<UIDocument>().rootVisualElement;
+
+		//_keyBindings.visible = false;
+		_optionsUI.visible = false;
+		
 
 		_continueButton = _root.Q<Button>("ContinueButton");
 		_loadGameButton = _root.Q<Button>("LoadButton");
@@ -38,7 +48,7 @@ public class UIBuilderInGameMenu : MonoBehaviour
 
 	public void OnContinue() {
         _hud.visible = true;
-        _inGameUI.GetComponent<UIDocument>().rootVisualElement.visible = false;
+        _pauseMenu.visible = false;
         Time.timeScale = 1;
 	}
 
@@ -61,19 +71,19 @@ public class UIBuilderInGameMenu : MonoBehaviour
 
 	void OnOptions() {
 		Logger.Log("InGameController", "Viewing options");
-		_inGameUI.GetComponent<UIDocument>().rootVisualElement.visible = false;
-		_optionsUI.GetComponent<UIDocument>().rootVisualElement.visible = true;
+		_pauseMenu.visible = false;
+		_optionsUI.visible = true;
 	}
 
     void OnPause(){
         if(Time.timeScale == 1){
             _hud.visible = false;
-            _inGameUI.GetComponent<UIDocument>().rootVisualElement.visible = true;
+            _pauseMenu.visible = true;
             Time.timeScale = 0;
         }
         else if(Time.timeScale == 0){
             _hud.visible = true;
-            _inGameUI.GetComponent<UIDocument>().rootVisualElement.visible = false;
+            _pauseMenu.visible = false;
             Time.timeScale = 1;
         }
     }

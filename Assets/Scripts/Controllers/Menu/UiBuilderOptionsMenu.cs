@@ -23,7 +23,9 @@ public class UiBuilderOptionsMenu : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     { Logger.Log("OptionsMenu", "Options Menu");
-         _root = GetComponent<UIDocument>().rootVisualElement;
+        _root = GetComponent<UIDocument>().rootVisualElement;
+        _keyBindingUI.GetComponent<UIDocument>().rootVisualElement.visible = false;
+
         _keyBindingButton = _root.Q<Button>("KeyBinding");
         _backButton = _root.Q<Button>("Back");
         _masterVolume = _root.Q<Slider>("MasterVolume");
@@ -55,14 +57,14 @@ public class UiBuilderOptionsMenu : MonoBehaviour
 
     void OnKeyBinding(){
         Logger.Log("OptionsMenu", "Viewing Key Binding");
-        _optionsUI.SetActive(false);
-        _keyBindingUI.SetActive(true);
+        _optionsUI.GetComponent<UIDocument>().rootVisualElement.visible = false;
+        _keyBindingUI.GetComponent<UIDocument>().rootVisualElement.visible = true;
     }
 
     void OnBack(){
         Logger.Log("OptionsMenu", "Back to Menu");
-        _optionsUI.SetActive(false);
-        _mainMenuUI.SetActive(true);
+        _optionsUI.GetComponent<UIDocument>().rootVisualElement.visible = false;
+        _mainMenuUI.GetComponent<UIDocument>().rootVisualElement.visible = true;
     }
 
     void OnMasterSound(float volume) {

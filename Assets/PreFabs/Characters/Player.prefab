@@ -162,8 +162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b7d333209dbd044a92f3ae32fea62c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxInventorySize: 1
-  _selectedItemIndex: 0
 --- !u!114 &2607886220727919282
 MonoBehaviour:
   m_ObjectHideFlags: 0

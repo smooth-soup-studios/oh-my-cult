@@ -21,6 +21,7 @@ public class UIBuilderMenu : MonoBehaviour {
 
 	private void OnEnable() {
 		_root = GetComponent<UIDocument>().rootVisualElement;
+		_optionsUI.GetComponent<UIDocument>().rootVisualElement.visible = false;
 
 		_newGameButton = _root.Q<Button>("NewButton");
 		_continueButton = _root.Q<Button>("ContinueButton");
@@ -86,7 +87,7 @@ public class UIBuilderMenu : MonoBehaviour {
 
 	void OnOptions() {
 		Logger.Log("MenuController", "Viewing options");
-		_mainMenuUI.SetActive(false);
-		_optionsUI.SetActive(true);
+		_mainMenuUI.GetComponent<UIDocument>().rootVisualElement.visible = false;
+		_optionsUI.GetComponent<UIDocument>().rootVisualElement.visible = true;
 	}
 }

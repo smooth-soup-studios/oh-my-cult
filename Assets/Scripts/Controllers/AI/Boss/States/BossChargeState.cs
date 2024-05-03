@@ -17,6 +17,7 @@ public class BossChargeState : BossBaseState {
 			ChargeAttack();
 		}
 		else if (Boss.Enemy == true) {
+			Boss.StartCoroutine(Boss.FlashRed());
 			Boss.BossAttacks.ChargeAttack();
 			Boss.SwitchState("Idle");
 		}

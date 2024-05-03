@@ -87,4 +87,10 @@ public class Boss : MonoBehaviour, ISaveable {
 	public void SaveData(GameData data) {
 		data.SceneData.ArbitraryTriggers["BossDead"] = isActiveAndEnabled;
 	}
+
+		public IEnumerator FlashRed() {
+		GetComponent<SpriteRenderer>().color = Color.magenta;
+		yield return new WaitForSeconds(0.5f);
+		GetComponent<SpriteRenderer>().color = Color.white;
+	}
 }

@@ -28,7 +28,7 @@ public class BossIdleState : BossBaseState {
 		}
 	}
 	public override void ExitState() {
-
+		Boss.StartCoroutine(Boss.FlashRed()); 
 	}
 
 	IEnumerator SwitchTime() {

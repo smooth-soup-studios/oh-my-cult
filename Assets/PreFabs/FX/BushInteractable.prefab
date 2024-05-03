@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1601823501875199729}
   - component: {fileID: 3496009486144488937}
   m_Layer: 0
-  m_Name: BushInteraction
+  m_Name: BushInteractable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -11,7 +11,7 @@ public class TaskGoToTarget : Node {
 		_transform = transform;
 	}
 
-	public override NodeState Evaluate(BehaviorTree.EnemyBehaviourTree tree) {
+	public override NodeState Evaluate(EnemyBehaviourTree tree) {
 		Transform target = (Transform)GetData("target");
 
 		if (Vector2.Distance(_transform.position, target.position) > 1f) {

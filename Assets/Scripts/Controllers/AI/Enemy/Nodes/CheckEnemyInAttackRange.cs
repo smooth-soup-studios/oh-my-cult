@@ -15,7 +15,7 @@ public class CheckEnemyInAttackRange : Node
         _transform = transform;
     }
 
-	public override NodeState Evaluate(BehaviorTree.EnemyBehaviourTree tree)
+	public override NodeState Evaluate(EnemyBehaviourTree tree)
     {
         object t = GetData("target");
         if (t == null){

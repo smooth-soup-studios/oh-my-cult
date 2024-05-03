@@ -14,11 +14,10 @@ public class Inventory : MonoBehaviour, ISaveable {
 		_currentInventory = new List<InventoryItem>(new InventoryItem[_maxInventorySize]);
 		EventBus.Instance.Subscribe<int>(EventType.HOTBAR_SELECT, SelectSlot);
 		EventBus.Instance.Subscribe<int>(EventType.HOTBAR_SWITCH, e => {
-			Logger.Log(_logname, "Work");
 			if (e > 0) {
 				SelectNextSlot();
 			}
-			else {
+			else if (e < 0) {
 				SelectPrevSlot();
 			}
 		});
@@ -28,7 +27,7 @@ public class Inventory : MonoBehaviour, ISaveable {
 
 	public InventoryItem AddItem(InventoryItem item) {
 		if (_currentInventory.Contains(null)) {
-			_currentInventory[_currentInventory.FindIndex(x => x==null)] = item;
+			_currentInventory[_currentInventory.FindIndex(x => x == null)] = item;
 			return null;
 		}
 		else {

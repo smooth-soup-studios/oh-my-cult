@@ -15,7 +15,7 @@ public class UIbuilderKeyBinding : MonoBehaviour
     void OnEnable()
     { Logger.Log("KeyBinding", "Binding Menu");
          _root = GetComponent<UIDocument>().rootVisualElement;
-        _backButton = _root.Q<Button>("Back");
+        _backButton = _root.Q<Button>("BackButton");
 
         _backButton.clicked += OnBack;
     }

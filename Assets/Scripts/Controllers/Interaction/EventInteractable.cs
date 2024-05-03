@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class EventIneractable : BaseInteractable {
+public class EventInteractable : BaseInteractable {
 	[Header("Event Settings")]
 	[SerializeField] private UnityEvent<GameObject> _event = new();
 	[SerializeField] SpriteRenderer _spriteRenderer;

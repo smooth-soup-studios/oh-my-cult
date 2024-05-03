@@ -318,6 +318,14 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: a8fb3c6a84a3a5f43bd252ce02dda50a, type: 2}
+  _lowHealth:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _healthValue:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!50 &4849591457620503528
 Rigidbody2D:
   serializedVersion: 4

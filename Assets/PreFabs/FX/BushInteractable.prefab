@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5704c8d218943f4fac7591087d98a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: BushInteraction-0
+  <ObjectId>k__BackingField: BushInteractable-0
   InteractionRange: 15
   AutoTrigger: 0
   SingleUse: 0

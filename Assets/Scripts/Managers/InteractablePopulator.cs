@@ -5,14 +5,26 @@ using UnityEditor;
 using UnityEngine;
 
 public class InteractablePopulator : MonoBehaviour {
+	private static string _logname = "InteractablePopulator";
+
+	public GameObject LDtkLevel;
+	public GameObject PrefabInteractor;
+
 	public string InteractorLayerName = "InteractorLayer";
 	public string EntityNameStartsWith = "CustomInteractable";
-	public MonoScript Behaviour;
-	public InteractableControllerProperties BehaviourProperties;
+
+	void Awake() {
+		if (LDtkLevel == null) {
+			Logger.LogError(_logname, "LDtkLevel is null!");
+		}
+		else if (PrefabInteractor == null) {
+			Logger.LogError(_logname, "Prefab is null!");
+		}
+	}
 
 	// Start is called before the first frame update
 	void Start() {
-		Transform World = transform.Find("World");
+		Transform World = LDtkLevel.transform.Find("World");
 
 		for (int i = 0; i < World.childCount; i++) {
 			Transform levelLayer = World.GetChild(i);
@@ -43,7 +55,8 @@ public class InteractablePopulator : MonoBehaviour {
 
 				Debug.Log("Add bush to " + interactor.gameObject.name + " at " + interactor.position);
 				// T bushInteractor = (T)interactor.gameObject.AddComponent(Component.GetType());
-				interactor.gameObject.AddComponent(Behaviour.GetClass());
+				// interactor.gameObject.AddComponent(Behaviour.GetClass());
+				Instantiate(PrefabInteractor, interactor);
 			}
 		}
 	}

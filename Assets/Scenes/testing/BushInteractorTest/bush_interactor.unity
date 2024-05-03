@@ -1534,10 +1534,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: -4039824855013878796, guid: deaa4f20564675c4fa50306cf100af47, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2101610285}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: -5765183769023986340, guid: deaa4f20564675c4fa50306cf100af47, type: 3}
 --- !u!4 &2101610280 stripped
 Transform:
@@ -1549,22 +1546,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -4039824855013878796, guid: deaa4f20564675c4fa50306cf100af47, type: 3}
   m_PrefabInstance: {fileID: 2101610279}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2101610285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2101610281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4f854b7c4cb48849a3b89d32028ebf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InteractorLayerName: InteractorLayer
-  EntityNameStartsWith: BushInteractor
-  Behaviour: {fileID: 11500000, guid: b5704c8d218943f4fac7591087d98a15, type: 3}
-  BehaviourProperties: {fileID: 0}
 --- !u!1001 &5739236643078197715
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1622,6 +1603,79 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e35e5b4a76c222a4e91f3c0f4c94b159, type: 3}
+--- !u!1001 &6951926399853888337
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 911112370257409522, guid: c4300092719f58a4a95cc39512e7598c, type: 3}
+      propertyPath: m_Name
+      value: InteractablePopulator
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045024170136628811, guid: c4300092719f58a4a95cc39512e7598c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -80.906494
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045024170136628811, guid: c4300092719f58a4a95cc39512e7598c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.063133
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045024170136628811, guid: c4300092719f58a4a95cc39512e7598c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.4510347
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045024170136628811, guid: c4300092719f58a4a95cc39512e7598c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045024170136628811, guid: c4300092719f58a4a95cc39512e7598c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045024170136628811, guid: c4300092719f58a4a95cc39512e7598c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045024170136628811, guid: c4300092719f58a4a95cc39512e7598c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045024170136628811, guid: c4300092719f58a4a95cc39512e7598c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045024170136628811, guid: c4300092719f58a4a95cc39512e7598c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045024170136628811, guid: c4300092719f58a4a95cc39512e7598c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5956301502111064234, guid: c4300092719f58a4a95cc39512e7598c, type: 3}
+      propertyPath: Prefab
+      value: 
+      objectReference: {fileID: 6589389069696912329, guid: 70ab905d84ad22e49af124db2ab65f7e, type: 3}
+    - target: {fileID: 5956301502111064234, guid: c4300092719f58a4a95cc39512e7598c, type: 3}
+      propertyPath: LDtkLevel
+      value: 
+      objectReference: {fileID: 2101610281}
+    - target: {fileID: 5956301502111064234, guid: c4300092719f58a4a95cc39512e7598c, type: 3}
+      propertyPath: PrefabInteractor
+      value: 
+      objectReference: {fileID: 6589389069696912329, guid: 70ab905d84ad22e49af124db2ab65f7e, type: 3}
+    - target: {fileID: 5956301502111064234, guid: c4300092719f58a4a95cc39512e7598c, type: 3}
+      propertyPath: EntityNameStartsWith
+      value: BushInteractor
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c4300092719f58a4a95cc39512e7598c, type: 3}
 --- !u!1001 &7783460814706940949
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1693,4 +1747,5 @@ SceneRoots:
   - {fileID: 1628838404}
   - {fileID: 460661142}
   - {fileID: 1624129167}
+  - {fileID: 6951926399853888337}
   - {fileID: 1777830089}

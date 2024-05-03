@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
-using Unity.Collections;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour, ISaveable {
+	private string _logname = "InventorySystem";
 	private List<InventoryItem> _currentInventory = new();
 	private int _maxInventorySize = 5;
 	private int _selectedItemIndex = 0;
@@ -14,6 +14,7 @@ public class Inventory : MonoBehaviour, ISaveable {
 		_currentInventory = new List<InventoryItem>(new InventoryItem[_maxInventorySize]);
 		EventBus.Instance.Subscribe<int>(EventType.HOTBAR_SELECT, SelectSlot);
 		EventBus.Instance.Subscribe<int>(EventType.HOTBAR_SWITCH, e => {
+			Logger.Log(_logname, "Work");
 			if (e > 0) {
 				SelectNextSlot();
 			}
@@ -49,7 +50,7 @@ public class Inventory : MonoBehaviour, ISaveable {
 	}
 
 	public void SelectNextSlot() {
-		if (_selectedItemIndex + 1 > _maxInventorySize) {
+		if (_selectedItemIndex + 1 >= _maxInventorySize) {
 			_selectedItemIndex = 0;
 		}
 		else {

@@ -29,7 +29,14 @@ public class WeaponPickupPoint : BaseInteractable {
 			_spriteRenderer.sprite = null;
 		}
 		else {
-			_spriteRenderer.sprite = _item.InvData.ItemIcon;
+			Sprite itemSprite = null;
+			if (_item.InvData.ItemPrefab.TryGetComponent<SpriteRenderer>(out SpriteRenderer srenderer)) {
+				itemSprite = srenderer.sprite;
+			}
+			else {
+				itemSprite = _item.InvData.ItemIcon;
+			}
+			_spriteRenderer.sprite = itemSprite;
 
 		}
 	}

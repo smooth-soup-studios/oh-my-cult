@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Animator), typeof(Rigidbody2D), typeof(Inventory)), RequireComponent(typeof(EchoDashController), typeof(PlayerInteractionChecker))]
 public class StateMachine : MonoBehaviour, ISaveable {
-	private readonly string _logname = "StateMachine";
+	private static readonly string _logname = "StateMachine";
 
 	[Header("Debug settings")]
 	[SerializeField] private TextMeshProUGUI _stateText;
@@ -35,17 +35,7 @@ public class StateMachine : MonoBehaviour, ISaveable {
 	[Header("Latest Door")]
 	public int LatestDoor = -1;
 	public bool HasDoorKey = false;
-
-	void Awake() {
-		// GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-		// foreach (GameObject player in players) {
-		// 	if (player != gameObject) {
-		// 		Destroy(gameObject);
-		// 	}
-		// }
-
-		// DontDestroyOnLoad(this);
-	}
+	
 
 	void Start() {
 		PlayerInventory = GetComponent<Inventory>();

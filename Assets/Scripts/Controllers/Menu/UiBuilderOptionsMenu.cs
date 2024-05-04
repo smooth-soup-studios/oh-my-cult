@@ -34,12 +34,7 @@ public class UiBuilderOptionsMenu : MonoBehaviour
         _fxVolume = _root.Q<Slider>("FXVolume");
         _quality = _root.Q<DropdownField>("QualitySelection");
 
-        _masterVolume.value = _baseVolume;
-        OnMasterSound(_baseVolume);
-        _musicVolume.value = _baseVolume;
-        OnMusicSound(_baseVolume);
-        _fxVolume.value = _baseVolume;
-        OnFXSound(_baseVolume);
+        initializeSettings();
 
         _keyBindingButton.clicked += OnKeyBinding;
         _backButton.clicked += OnBack;
@@ -55,10 +50,28 @@ public class UiBuilderOptionsMenu : MonoBehaviour
         {
             OnFXSound(evt.newValue);
         });
-        _quality.RegisterCallback<ChangeEvent<int>>((evt) =>
+        _quality.RegisterValueChangedCallback((evt) =>
         {
             OnQuality(evt.newValue);
         });
+        _quality.RegisterValueChangedCallback(evt => Debug.Log(evt.newValue));
+    }
+
+    void initializeSettings(){
+        _masterVolume.value = _baseVolume;
+        OnMasterSound(_baseVolume);
+        _musicVolume.value = _baseVolume;
+        OnMusicSound(_baseVolume);
+        _fxVolume.value = _baseVolume;
+        OnFXSound(_baseVolume);
+
+        _quality.choices.Clear();
+        _quality.choices.Add("Very Low");
+        _quality.choices.Add("Low");
+        _quality.choices.Add("Medium");
+        _quality.choices.Add("High");
+        _quality.choices.Add("Very High");
+        _quality.choices.Add("Ultra");
     }
 
     void OnKeyBinding(){
@@ -85,8 +98,42 @@ public class UiBuilderOptionsMenu : MonoBehaviour
         _audioMixer.SetFloat("soundFXVolume", volume);
     }
 
-    void OnQuality(int QualityIndex){
-        QualitySettings.SetQualityLevel(QualityIndex);
+    void OnQuality(string QualityIndex){
+        Logger.Log("Options","Quality is: " + QualitySettings.GetQualityLevel());
+        switch (QualityIndex){
+            case "Very Low":
+            QualitySettings.SetQualityLevel(0, true);
+            Debug.Log("Quality settings set to 'Very Low'");
+            break;
+        case "Low":
+            QualitySettings.SetQualityLevel(1, true);
+            Debug.Log("Quality settings set to 'Low'");
+            break;
+        case "Medium":
+            QualitySettings.SetQualityLevel(2, true);
+            Debug.Log("Quality settings set to 'Medium'");
+            break;
+        case "High":
+            QualitySettings.SetQualityLevel(3, true);
+            Debug.Log("Quality settings set to 'High'");
+            break;
+        case "Very High":
+            QualitySettings.SetQualityLevel(4, true);
+            Debug.Log("Quality settings set to 'Very High'");
+            break;
+        case "Ultra":
+            QualitySettings.SetQualityLevel(5, true);
+            Debug.Log("Quality settings set to 'Ultra'");
+            break;
+        default:
+            QualitySettings.SetQualityLevel(2, true);
+            Debug.Log("Quality settings set to 'Medium'");
+            break;
+        }
+    }
+
+    void QualityVisual(){
+		
     }
 
 }

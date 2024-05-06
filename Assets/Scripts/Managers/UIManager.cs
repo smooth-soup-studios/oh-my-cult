@@ -107,7 +107,10 @@ public class UIManager : MonoBehaviour {
 	private void InvUpdate() {
 		// When transitioning between scenes the ref to the inventory is lost so reaquire it
 		if (_playerInventory == null) {
-			_playerInventory = FindFirstObjectByType<StateMachine>().PlayerInventory;
+			try {
+				_playerInventory = FindFirstObjectByType<StateMachine>().PlayerInventory;
+			}
+			catch { return; }
 		}
 
 		for (int i = 0; i < _hotbar.childCount; i++) {

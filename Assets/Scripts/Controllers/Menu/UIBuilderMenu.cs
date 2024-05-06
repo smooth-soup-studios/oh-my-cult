@@ -7,11 +7,12 @@ using System;
 using System.ComponentModel.Design.Serialization;
 
 public class UIBuilderMenu : MonoBehaviour {
-	[SerializeField] private Button _newGameButton;
-	[SerializeField] private Button _continueButton;
-	[SerializeField] private Button _loadGameButton;
-	[SerializeField] private Button _optionsButton;
-	[SerializeField] private Button _quit;
+	private Button _newGameButton;
+	private Button _continueButton;
+	private Button _loadGameButton;
+	private Button _optionsButton;
+	private Button _quit;
+	
 	[SerializeField] private GameObject _mainMenuUI;
 	[SerializeField] private GameObject _optionsUI;
 
@@ -90,7 +91,7 @@ public class UIBuilderMenu : MonoBehaviour {
 
 	void OnOptions() {
 		Logger.Log("MenuController", "Viewing options");
-		_mainMenuUI.SetActive(false);
-		_optionsUI.SetActive(true);
+		_mainMenuUI.GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container").visible = false;
+		_optionsUI.GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container").visible = true;
 	}
 }

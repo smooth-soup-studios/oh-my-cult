@@ -113,6 +113,7 @@ public class Inventory : MonoBehaviour, ISaveable {
 		if (newInv.Count > 0) {
 			_currentInventory = newInv;
 		}
+		_selectedItemIndex = data.PlayerData.SelectedInvSlot;
 	}
 
 	public void SaveData(GameData data) {
@@ -130,6 +131,7 @@ public class Inventory : MonoBehaviour, ISaveable {
 				data.PlayerData.InvItemVals[i.ToString()] = selectedItem.InvData;
 			}
 		}
+		data.PlayerData.SelectedInvSlot = _selectedItemIndex;
 	}
 
 }

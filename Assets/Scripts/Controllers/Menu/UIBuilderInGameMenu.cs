@@ -81,7 +81,7 @@ public class UIBuilderInGameMenu : MonoBehaviour
             _pauseMenu.visible = true;
             Time.timeScale = 0;
         }
-        else if(Time.timeScale == 0){
+        else if(Time.timeScale == 0 && _pauseMenu.visible){
             _hud.visible = true;
             _pauseMenu.visible = false;
             Time.timeScale = 1;

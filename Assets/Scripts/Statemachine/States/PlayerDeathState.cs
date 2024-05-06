@@ -9,7 +9,7 @@ public class PlayerDeathState : BaseState {
 
 
 	public override void EnterState() {
-		SceneManager.LoadScene("OutroScene");
+		SceneManager.LoadScene("5-OutroMenu");
 	}
 
 	public override void UpdateState() {

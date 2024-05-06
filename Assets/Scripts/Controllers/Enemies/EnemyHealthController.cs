@@ -59,12 +59,19 @@ public class EnemyHealthController : MonoBehaviour, ISaveable {
 	}
 
 	public void LoadData(GameData data) {
+		if (gameObject.CompareTag("Player")) {
+			_currentHealth = data.PlayerData.Health;
+		}
 		if (data.ActorData.HealthValues.ContainsKey(ObjectId)) {
 			data.ActorData.HealthValues.TryGetValue(ObjectId, out _currentHealth);
 		}
 	}
 
 	public void SaveData(GameData data) {
+		// Player UID changes between scenes so use dedicated ID
+		if (gameObject.CompareTag("Player")) {
+			data.PlayerData.Health = _currentHealth;
+		}
 		data.ActorData.HealthValues[ObjectId] = _currentHealth;
 	}
 }

@@ -20,7 +20,6 @@ public class UiBuilderOptionsMenu : MonoBehaviour {
 	// Start is called before the first frame update
 	void OnEnable() {
 		_root = GetComponent<UIDocument>().rootVisualElement;
-		//_keyBindingUI.GetComponent<UIDocument>().rootVisualElement.visible = false;
 
 		_keyBindingButton = _root.Q<Button>("KeyBinding");
 		_backButton = _root.Q<Button>("Back");

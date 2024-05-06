@@ -29,11 +29,6 @@ public class UIBuilderInGameMenu : MonoBehaviour
 		_optionsUI = GameObject.Find("OptionsMenu").GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container");
 		_pauseMenu = GameObject.Find("PauseMenu").GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container");
 
-		//_keyBindings.visible = false;
-		//_optionsUI.visible = false;
-		//Logger.Log("pause", _optionsUI.name);
-		
-
 		_continueButton = _root.Q<Button>("ContinueButton");
 		_loadGameButton = _root.Q<Button>("LoadButton");
 		_optionsButton = _root.Q<Button>("OptionsButton");

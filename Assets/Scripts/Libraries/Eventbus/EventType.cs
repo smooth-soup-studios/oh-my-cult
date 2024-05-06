@@ -11,4 +11,5 @@ public enum EventType {
 	HOTBAR_SELECT,
 	HOTBAR_SWITCH,
 	DEATH,
+	HIT,
 }

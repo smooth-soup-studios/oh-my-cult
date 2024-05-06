@@ -7,7 +7,7 @@ public class BushInteractable : BaseInteractable {
 
 	private readonly float _interactCooldown = 1.0f;
 	private float _lastInteractTime = -1.0f;
-	public bool CanInteract {
+	private bool CanInteract {
 		get {
 			return Time.time - _lastInteractTime > _interactCooldown;
 		}
@@ -16,6 +16,10 @@ public class BushInteractable : BaseInteractable {
 	void Awake() {
 		_particleSystem = GetComponent<ParticleSystem>();
 		_lastInteractTime = -_interactCooldown;
+		EventBus.Instance.Subscribe<(GameObject target, GameObject hitter)>(EventType.HIT, e => { if (e.target == gameObject) Interact(e.hitter); });
+		if (TryGetComponent<CircleCollider2D>(out CircleCollider2D _collider)) {
+			_collider.radius = InteractionRange;
+		}
 	}
 
 	public override void Interact(GameObject interactor) {

@@ -9,4 +9,5 @@ public enum EventType {
 	USE_PRIMARY,
 	USE_SECONDARY,
 	DEATH,
+	HIT,
 }

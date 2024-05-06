@@ -17,9 +17,6 @@ public class BushInteractable : BaseInteractable {
 		_particleSystem = GetComponent<ParticleSystem>();
 		_lastInteractTime = -_interactCooldown;
 		EventBus.Instance.Subscribe<(GameObject target, GameObject hitter)>(EventType.HIT, e => { if (e.target == gameObject) Interact(e.hitter); });
-		if (TryGetComponent<CircleCollider2D>(out CircleCollider2D _collider)) {
-			_collider.radius = InteractionRange;
-		}
 	}
 
 	public override void Interact(GameObject interactor) {
@@ -31,9 +28,21 @@ public class BushInteractable : BaseInteractable {
 		}
 	}
 
+	private void OnValidate() {
+		if (TryGetComponent<CircleCollider2D>(out CircleCollider2D _collider)) {
+			_collider.radius = InteractionRange;
+		}
+	}
+
+	// Disable default behavior of these methods
 	public override void OnDeselect() {
 	}
 
 	public override void OnSelect() {
+	}
+
+	public override void SaveData(GameData data) {
+	}
+	public override void LoadData(GameData data) {
 	}
 }

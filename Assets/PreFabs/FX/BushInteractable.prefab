@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5704c8d218943f4fac7591087d98a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: BushInteractable-0
-  InteractionRange: 15
+  <ObjectId>k__BackingField: BushActivators_3bd75f20-fec0-11ee-abf6-2f9d1981b400-3224.409
+  InteractionRange: 13
   AutoTrigger: 0
   SingleUse: 0
 --- !u!199 &1601823501875199729
@@ -4880,6 +4880,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 2.5475001}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 12.002501
+  m_Radius: 13

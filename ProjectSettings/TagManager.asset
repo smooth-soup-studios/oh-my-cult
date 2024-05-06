@@ -10,6 +10,10 @@ TagManager:
   - DoorInteractor
   - EnterChurch
   - EnterVillage
+  - EnterVillagePlaza
+  - EnterMerchant
+  - EnterVillageOutskirt
+  - EnterForest
   layers:
   - Default
   - TransparentFX

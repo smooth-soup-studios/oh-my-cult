@@ -22,7 +22,9 @@ ScriptedImporter:
     _asset: {fileID: 11400000, guid: b824373bb8ff10d45a323b4058099d72, type: 2}
   - _key: Collider_Layer_2
     _asset: {fileID: 11400000, guid: b824373bb8ff10d45a323b4058099d72, type: 2}
-  _entities: []
+  _entities:
+  - _key: BushActivators
+    _asset: {fileID: 6589389069696912329, guid: 70ab905d84ad22e49af124db2ab65f7e, type: 3}
   _enumGenerate: 1
   _enumPath: 
   _enumNamespace: 

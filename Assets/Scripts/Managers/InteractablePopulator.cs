@@ -3,60 +3,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class InteractablePopulator : MonoBehaviour {
 	private static string _logname = "InteractablePopulator";
 
-	public GameObject LDtkLevel;
 	public GameObject PrefabInteractor;
 
-	public string InteractorLayerName = "InteractorLayer";
-	public string EntityNameStartsWith = "CustomInteractable";
-
 	void Awake() {
-		if (LDtkLevel == null) {
-			Logger.LogError(_logname, "LDtkLevel is null!");
-		}
-		else if (PrefabInteractor == null) {
+		if (PrefabInteractor == null) {
 			Logger.LogError(_logname, "Prefab is null!");
 		}
 	}
 
-	// Start is called before the first frame update
 	void Start() {
-		Transform World = LDtkLevel.transform.Find("World");
+		if (!TryGetComponent(out Tilemap map)) {
+			Logger.LogError(_logname, "Tilemap is null!");
+			return;
+		}
 
-		for (int i = 0; i < World.childCount; i++) {
-			Transform levelLayer = World.GetChild(i);
+		for (int x = map.cellBounds.xMin; x < map.cellBounds.xMax; x++) {
+			for (int y = map.cellBounds.yMin; y < map.cellBounds.yMax; y++) {
+				Vector3Int localPlace = new(x, y, (int)map.transform.position.y);
+				Vector3 place = map.CellToWorld(localPlace) + map.cellSize / 2f;
 
-			if (!levelLayer.gameObject.name.StartsWith("Level")) {
-				continue;
-			}
-
-			Transform InteractorLayer = levelLayer.Find(InteractorLayerName);
-
-			if (InteractorLayer == null) {
-				continue;
-			}
-
-			for (int j = 0; j < InteractorLayer.childCount; j++) {
-				Transform interactor = InteractorLayer.GetChild(j);
-
-				// foreach (var c in Components) {
-				// 	if (interactor.gameObject.name.StartsWith(c.Key)) {
-				// 		Debug.Log("Add interactor " + c.Value.name + " to " + interactor.gameObject.name + " at " + interactor.position);
-				// 		interactor.gameObject.AddComponent(c.Value.GetType());
-				// 	}
-				// }
-
-				if (!interactor.gameObject.name.StartsWith(EntityNameStartsWith)) {
+				if (!map.HasTile(localPlace)) {
 					continue;
 				}
 
-				Debug.Log("Add bush to " + interactor.gameObject.name + " at " + interactor.position);
-				// T bushInteractor = (T)interactor.gameObject.AddComponent(Component.GetType());
-				// interactor.gameObject.AddComponent(Behaviour.GetClass());
-				Instantiate(PrefabInteractor, interactor);
+				GameObject instance = Instantiate(PrefabInteractor, place, Quaternion.identity);
+				instance.transform.parent = map.transform;
 			}
 		}
 	}

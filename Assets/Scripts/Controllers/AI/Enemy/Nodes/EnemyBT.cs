@@ -1,15 +1,16 @@
 using System;
 using System.Collections.Generic;
 using BehaviorTree;
+using UnityEngine;
 using UnityEngine.AI;
 
 
 public class EnemyBT : EnemyBehaviourTree {
 	public UnityEngine.Transform[] Waypoints;
 	public static float Speed = 2f;
-
 	public static float FovRange = 30f;
 	public static float AttackRange = 20f;
+	public static Vector3 SearchLocation = Vector3.zero;
 	public static NavMeshAgent Agent;
 
 
@@ -31,6 +32,11 @@ public class EnemyBT : EnemyBehaviourTree {
 			{
 				new CheckEnemyInRange(transform),
 				new TaskGoToTarget(transform),
+			}),
+			new Sequence(new List<Node>
+			{
+				new CheckLastKnownLocation(transform),
+				new TaskSearchLastKnownLocation(transform),
 			}),
 			new TaskPatrol( Waypoints),
 		});

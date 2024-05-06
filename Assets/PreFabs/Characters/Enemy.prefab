@@ -171,8 +171,8 @@ MonoBehaviour:
   _attackPoint: {fileID: 1268888446445211842}
   _enemyLayer:
     serializedVersion: 2
-    m_Bits: 1
-  _attackSoundClip: {fileID: 0}
+    m_Bits: 64
+  _attackSoundClip: {fileID: 8300000, guid: d456821e55ccca74a91d03031cde7299, type: 3}
 --- !u!1 &8507790943486014399
 GameObject:
   m_ObjectHideFlags: 0

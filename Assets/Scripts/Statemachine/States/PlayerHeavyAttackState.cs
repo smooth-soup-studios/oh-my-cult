@@ -20,7 +20,7 @@ public class PlayerHeavyAttackState : BaseState {
 	}
 
 	public override void UpdateState() {
-		StateMachine.transform.Translate(StateMachine.BaseSpeed * StateMachine.SpeedModifier * Time.deltaTime * Movement);
+		StateMachine.HandleMovement(StateMachine.BaseSpeed * StateMachine.SpeedModifier * Time.deltaTime * Movement.normalized);
 		if (!_using) {
 			StateMachine.SwitchState("Move");
 		}

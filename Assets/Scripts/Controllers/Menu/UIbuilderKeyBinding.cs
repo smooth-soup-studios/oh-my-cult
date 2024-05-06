@@ -29,6 +29,7 @@ public class UIbuilderKeyBinding : MonoBehaviour
         _keyBindingUI.GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container").visible = false;
         _optionsUI.GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container").visible = true;
     }
+    //OnContinue is only used in the keybindingsintro scene where it needs to switch scenes rather then showing the right menu
     void OnContinue(){
         Logger.Log("KeyBindingIntro", "Continue to story");
         SceneManager.LoadSceneAsync(2);

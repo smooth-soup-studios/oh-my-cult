@@ -62,6 +62,7 @@ public class UiBuilderOptionsMenu : MonoBehaviour {
 		_quality.choices.Add("High");
 		_quality.choices.Add("Very High");
 		_quality.choices.Add("Ultra");
+		_quality.index = QualitySettings.GetQualityLevel();
 	}
 
 	void OnKeyBinding() {

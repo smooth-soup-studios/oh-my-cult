@@ -20,7 +20,7 @@ public class UiBuilderOptionsMenu : MonoBehaviour {
 	// Start is called before the first frame update
 	void OnEnable() {
 		_root = GetComponent<UIDocument>().rootVisualElement;
-		_keyBindingUI.GetComponent<UIDocument>().rootVisualElement.visible = false;
+		//_keyBindingUI.GetComponent<UIDocument>().rootVisualElement.visible = false;
 
 		_keyBindingButton = _root.Q<Button>("KeyBinding");
 		_backButton = _root.Q<Button>("Back");
@@ -67,14 +67,14 @@ public class UiBuilderOptionsMenu : MonoBehaviour {
 
 	void OnKeyBinding() {
 		Logger.Log(_logname, "Viewing Key Binding");
-		_optionsUI.GetComponent<UIDocument>().rootVisualElement.visible = false;
-		_keyBindingUI.GetComponent<UIDocument>().rootVisualElement.visible = true;
+		_optionsUI.GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container").visible = false;
+		_keyBindingUI.GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container").visible = true;
 	}
 
 	void OnBack() {
 		Logger.Log(_logname, "Back to Menu");
-		_optionsUI.GetComponent<UIDocument>().rootVisualElement.visible = false;
-		_mainMenuUI.GetComponent<UIDocument>().rootVisualElement.visible = true;
+		_optionsUI.GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container").visible = false;
+		_mainMenuUI.GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container").visible = true;
 	}
 
 	void OnMasterSound(float volume) {

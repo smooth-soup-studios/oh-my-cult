@@ -21,7 +21,7 @@ public class UIBuilderMenu : MonoBehaviour {
 
 	private void OnEnable() {
 		_root = GetComponent<UIDocument>().rootVisualElement;
-		_optionsUI.GetComponent<UIDocument>().rootVisualElement.visible = false;
+		//_optionsUI.GetComponent<UIDocument>().rootVisualElement.visible = false;
 
 		_newGameButton = _root.Q<Button>("NewButton");
 		_continueButton = _root.Q<Button>("ContinueButton");

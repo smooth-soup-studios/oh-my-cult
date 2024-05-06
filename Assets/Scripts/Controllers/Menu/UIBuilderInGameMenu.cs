@@ -25,12 +25,13 @@ public class UIBuilderInGameMenu : MonoBehaviour
         EventBus.Instance.Subscribe(EventType.PAUSE, OnPause);
 		_root = GetComponent<UIDocument>().rootVisualElement;
         _hud = GameObject.Find("HUD").GetComponent<UIDocument>().rootVisualElement;
-		_keyBindings = GameObject.Find("KeyBindings").GetComponent<UIDocument>().rootVisualElement;
-		_optionsUI = GameObject.Find("OptionsMenu").GetComponent<UIDocument>().rootVisualElement;
-		_pauseMenu = GameObject.Find("PauseMenu").GetComponent<UIDocument>().rootVisualElement;
+		_keyBindings = GameObject.Find("KeyBindings").GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container");
+		_optionsUI = GameObject.Find("OptionsMenu").GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container");
+		_pauseMenu = GameObject.Find("PauseMenu").GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container");
 
 		//_keyBindings.visible = false;
-		_optionsUI.visible = false;
+		//_optionsUI.visible = false;
+		//Logger.Log("pause", _optionsUI.name);
 		
 
 		_continueButton = _root.Q<Button>("ContinueButton");

@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:Template name="KeyBindingsTemplate" src="project://database/Assets/UI/UXML/Templates/KeyBindingsTemplate.uxml?fileID=9197481963319205126&amp;guid=d5a732a78aebdc14dad330dca2316c15&amp;type=3#KeyBindingsTemplate" />
-    <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Art/Logos/Intro-Background.png?fileID=2800000&amp;guid=0ec85d573667439fca94a2daef8f282f&amp;type=3#Intro-Background&quot;); -unity-background-image-tint-color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0);">
+    <ui:VisualElement name="Container" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Art/Logos/Intro-Background.png?fileID=2800000&amp;guid=0ec85d573667439fca94a2daef8f282f&amp;type=3#Intro-Background&quot;); -unity-background-image-tint-color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0);">
         <ui:Instance template="KeyBindingsTemplate" name="KeyBindingsTemplate" style="flex-shrink: 0; height: 100%; width: 100%;" />
     </ui:VisualElement>
 </ui:UXML>

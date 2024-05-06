@@ -22,7 +22,7 @@ public class UIbuilderKeyBinding : MonoBehaviour
 
     void OnBack(){
         Logger.Log("KeyBinding", "Back to options");
-        _keyBindingUI.GetComponent<UIDocument>().rootVisualElement.visible = false;
-        _optionsUI.GetComponent<UIDocument>().rootVisualElement.visible = true;
+        _keyBindingUI.GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container").visible = false;
+        _optionsUI.GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container").visible = true;
     }
 }

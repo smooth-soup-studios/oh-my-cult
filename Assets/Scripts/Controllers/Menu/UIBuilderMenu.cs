@@ -63,8 +63,13 @@ public class UIBuilderMenu : MonoBehaviour {
 	}
 
 	public void QuitGame() {
-		Logger.Log("MenuController", "THE MENU IS DEAD!");
-		//Application.Quit();
+		#if UNITY_WEBGL
+            Logger.Log("UIBuilder","WebGL build detected, redirecting to homepage");
+            Application.OpenURL("/");
+        #else
+            Logger.Log("UIBuilder","Quitting Game..");
+            Application.Quit();
+        #endif
 	}
 
 	public void DisableButtons() {

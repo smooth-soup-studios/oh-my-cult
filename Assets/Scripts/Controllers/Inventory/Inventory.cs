@@ -12,6 +12,15 @@ public class Inventory : MonoBehaviour, ISaveable {
 	private void Awake() {
 		// Need to initialize the list with the max size. Should be overwritten by LoadData if we ever add expanding inventory space.
 		_currentInventory = new List<InventoryItem>(new InventoryItem[_maxInventorySize]);
+		EventBus.Instance.Subscribe<int>(EventType.HOTBAR_SELECT, SelectSlot);
+		EventBus.Instance.Subscribe<int>(EventType.HOTBAR_SWITCH, e => {
+			if (e > 0) {
+				SelectNextSlot();
+			}
+			else {
+				SelectPrevSlot();
+			}
+		});
 	}
 
 
@@ -79,7 +88,7 @@ public class Inventory : MonoBehaviour, ISaveable {
 		return _selectedItemIndex;
 	}
 
-	public int GetInventoryMaxSize(){
+	public int GetInventoryMaxSize() {
 		return _maxInventorySize;
 	}
 

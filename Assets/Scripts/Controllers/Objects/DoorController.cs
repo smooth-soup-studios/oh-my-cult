@@ -55,9 +55,9 @@ public class DoorController : MonoBehaviour {
 
 				GameManager.Instance.LoadScene(
 					TransportTo switch {
-						TransportDestination.House => "houses",
-						TransportDestination.Special => "boss_arenas",
-						_ => "level_0"
+						TransportDestination.House => SceneDefs.HouseInteriorLevel,
+						TransportDestination.Special => SceneDefs.BossArenaLevel,
+						_ => SceneDefs.VillageLevel
 					}
 				);
 			}

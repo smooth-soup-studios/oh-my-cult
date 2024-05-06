@@ -1,0 +1,277 @@
+fileFormatVersion: 2
+guid: 4b91fc8ee837de549ad13d927d6f6ec7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 14
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: scorch_tree_0
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 6
+        width: 486
+        height: 987
+      alignment: 9
+      pivot: {x: 0.5, y: 0.057}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 15, y: -469.5}
+        - {x: 13, y: -480.5}
+        - {x: 7, y: -489.5}
+        - {x: -7, y: -485.5}
+        - {x: -20, y: -479.5}
+        - {x: -38, y: -464.5}
+        - {x: -52, y: -459.5}
+        - {x: -62, y: -462.5}
+        - {x: -77, y: -468.5}
+        - {x: -88, y: -462.5}
+        - {x: -95, y: -449.5}
+        - {x: -109, y: -441.5}
+        - {x: -113, y: -433.5}
+        - {x: -84, y: -396.5}
+        - {x: 34, y: -397.5}
+        - {x: 39, y: -412.5}
+        - {x: 48, y: -424.5}
+        - {x: 71, y: -439.5}
+        - {x: 71, y: -454.5}
+        - {x: 58, y: -464.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17426bf785f9ff042a9558a6d6ec050a
+      internalID: -2097057846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scorch_tree_1
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 32
+        width: 509
+        height: 964
+      alignment: 9
+      pivot: {x: 0.5, y: 0.057}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 49.5, y: -464}
+        - {x: 20.5, y: -459}
+        - {x: 2.5, y: -460}
+        - {x: -6.5, y: -471}
+        - {x: -18.5, y: -475}
+        - {x: -37.5, y: -468}
+        - {x: -50.5, y: -456}
+        - {x: -68.5, y: -461}
+        - {x: -110.5, y: -445}
+        - {x: -101.5, y: -427}
+        - {x: -89.5, y: -420}
+        - {x: -82.5, y: -400}
+        - {x: 58.5, y: -400}
+        - {x: 64.5, y: -426}
+        - {x: 77.5, y: -437}
+        - {x: 74.5, y: -446}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67372ccc6abfcba4e8daeb5d2ea8c57d
+      internalID: 1222059676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scorch_tree_2
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 5
+        width: 330
+        height: 903
+      alignment: 9
+      pivot: {x: 0.5, y: 0.057}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 37, y: -443.5}
+        - {x: 6, y: -433.5}
+        - {x: -13, y: -447.5}
+        - {x: -28, y: -443.5}
+        - {x: -41, y: -433.5}
+        - {x: -57, y: -440.5}
+        - {x: -71, y: -437.5}
+        - {x: -70, y: -417.5}
+        - {x: -62, y: -401.5}
+        - {x: 30, y: -401.5}
+        - {x: 42, y: -421.5}
+        - {x: 46, y: -430.5}
+        - {x: 44, y: -438.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3804a76c6530f948aa5f9b10138f9e6
+      internalID: -2738234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scorch_tree_3
+      rect:
+        serializedVersion: 2
+        x: 1798
+        y: 32
+        width: 556
+        height: 911
+      alignment: 9
+      pivot: {x: 0.5, y: 0.057}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 63, y: -443.5}
+        - {x: 25, y: -431.5}
+        - {x: 3, y: -447.5}
+        - {x: -26, y: -439.5}
+        - {x: -50, y: -449.5}
+        - {x: -61, y: -436.5}
+        - {x: -86, y: -438.5}
+        - {x: -106, y: -420.5}
+        - {x: -74, y: -363.5}
+        - {x: 58, y: -364.5}
+        - {x: 71, y: -396.5}
+        - {x: 97, y: -419.5}
+        - {x: 99, y: -435.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0725287e4f34af41b64017e0ca0aa2f
+      internalID: -2029311403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      scorch_tree_0: -2097057846
+      scorch_tree_1: 1222059676
+      scorch_tree_2: -2738234
+      scorch_tree_3: -2029311403
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

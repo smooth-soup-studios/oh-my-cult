@@ -1,0 +1,13 @@
+Event	ID	Name			Wwise Object Path	Notes
+	203068402	low_heatlh			\Default Work Unit\low_heatlh	
+	1763999390	damage_taken			\Default Work Unit\damage_taken	
+	3603829085	boss_1_roar			\Default Work Unit\boss_1_roar	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	268400754	currentHealth			\Default Work Unit\currentHealth	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	242591968	creepy_laughter_01	C:\Users\milan\Desktop\Game dev\oh-my-cult\oh-my-cult_WwiseProject\.cache\Windows\SFX\creepy_laughter_01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\creepy_laughter_01		952232
+	387695879	low_health	C:\Users\milan\Desktop\Game dev\oh-my-cult\oh-my-cult_WwiseProject\.cache\Windows\SFX\low_health_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\low_health		449020
+	499859828	hit_00	C:\Users\milan\Desktop\Game dev\oh-my-cult\oh-my-cult_WwiseProject\.cache\Windows\SFX\hit_00_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\hit_00		95432
+

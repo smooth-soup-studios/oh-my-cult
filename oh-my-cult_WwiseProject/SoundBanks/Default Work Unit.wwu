@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A5FD03BD-F85A-45D1-97A9-797C7BC23263}" SchemaVersion="119">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{A5FD03BD-F85A-45D1-97A9-797C7BC23263}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{6C669F7F-B2AA-4E67-80A3-945E06F4BE5B}">
+					<ObjectInclusionList>
+						<ObjectRef Name="boss_1_roar" ID="{70913E3C-2C2C-43C7-A7A5-45B602D6AE36}" WorkUnitID="{44694C12-8F5C-4E27-9365-43D7F840F3D6}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="low_heatlh" ID="{A326C8BB-8FD4-481E-AB33-F5C7AED6906A}" WorkUnitID="{44694C12-8F5C-4E27-9365-43D7F840F3D6}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="damage_taken" ID="{9D9EE7B5-4243-4D32-AD41-FB855B1E5385}" WorkUnitID="{44694C12-8F5C-4E27-9365-43D7F840F3D6}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

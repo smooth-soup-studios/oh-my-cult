@@ -86,7 +86,7 @@ public class UIBuilderMenu : MonoBehaviour {
 
 	void OnOptions() {
 		Logger.Log("MenuController", "Viewing options");
-		_mainMenuUI.GetComponent<UIDocument>().rootVisualElement.visible = false;
-		_optionsUI.GetComponent<UIDocument>().rootVisualElement.visible = true;
+		_mainMenuUI.GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container").visible = false;
+		_optionsUI.GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container").visible = true;
 	}
 }

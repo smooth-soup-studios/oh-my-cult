@@ -67,6 +67,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "ToggleMenu",
+                    "type": "Button",
+                    "id": "ec981103-9661-4827-b3c7-3fac2d5ec654",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -395,7 +404,7 @@
                     "path": "<Gamepad>/dpad/left",
                     "interactions": "",
                     "processors": "Scale(factor=-1)",
-                    "groups": "",
+                    "groups": "Controller",
                     "action": "HotbarSwitch",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -406,30 +415,52 @@
                     "path": "<Gamepad>/dpad/right",
                     "interactions": "",
                     "processors": "Scale",
-                    "groups": "",
+                    "groups": "Controller",
                     "action": "HotbarSwitch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "1536fba2-9729-4ee2-9f0e-ea3eb34d448e",
-                    "path": "<Mouse>/scroll/up",
+                    "id": "2fd37465-cd1d-43d3-9ba1-2236d807d134",
+                    "path": "<Mouse>/scroll/y",
                     "interactions": "",
-                    "processors": "Scale(factor=-1)",
-                    "groups": "",
+                    "processors": "",
+                    "groups": "Keyboard",
                     "action": "HotbarSwitch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "133a73ce-d11f-449b-8e2e-7f34a050a750",
-                    "path": "<Mouse>/scroll/down",
+                    "id": "28f625e0-278c-4506-a90f-3d7fc27be75a",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
-                    "processors": "Scale",
-                    "groups": "",
-                    "action": "HotbarSwitch",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "ToggleMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "72a7c022-a159-4343-bcd0-52a3ce84ec8c",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "ToggleMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "57daf2ea-05ad-411b-9b8a-f9b674d3fe1f",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "ToggleMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

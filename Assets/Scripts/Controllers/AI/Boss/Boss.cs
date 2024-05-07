@@ -61,10 +61,6 @@ public class Boss : MonoBehaviour, ISaveable {
 	private void OnDrawGizmos() {
 		if (transform == null)
 			return;
-		Gizmos.color = Color.red;
-		Gizmos.DrawWireSphere(transform.position, Stats.SlamRange);
-		Gizmos.color = Color.green;
-		Gizmos.DrawWireSphere(transform.position, Stats.RoarRange);
 		Gizmos.color = Color.blue;
 		Gizmos.DrawWireSphere(transform.position, Stats.ChargeRange);
 	}

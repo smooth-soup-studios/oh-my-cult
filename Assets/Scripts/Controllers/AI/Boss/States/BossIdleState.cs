@@ -28,11 +28,11 @@ public class BossIdleState : BossBaseState {
 		}
 	}
 	public override void ExitState() {
-		Boss.StartCoroutine(Boss.FlashRed()); 
+		Boss.StartCoroutine(Boss.FlashRed());
 	}
 
 	IEnumerator SwitchTime() {
-		yield return new WaitForSecondsRealtime(Boss.Stats.SwitchTime);
+		yield return new WaitForSecondsRealtime(10f);
 		_switchState = true;
 	}
 }

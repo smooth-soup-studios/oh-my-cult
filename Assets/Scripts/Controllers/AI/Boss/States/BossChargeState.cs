@@ -6,9 +6,11 @@ using UnityEngine;
 public class BossChargeState : BossBaseState {
 	public BossChargeState(Boss boss, string name) : base(boss, name) { }
 	private bool _didAttack = false;
+	private bool _attackCooldown = false;
 
 	public override void EnterState() {
 		Boss.StartCoroutine(ChargeTime());
+		Boss.StartCoroutine(AttackCooldown());
 		Boss.Animator.Play("Boss_Down");
 
 	}
@@ -18,8 +20,13 @@ public class BossChargeState : BossBaseState {
 			ChargeAttack();
 		}
 		else if (Boss.Enemy == true) {
-			Boss.StartCoroutine(Boss.FlashRed());
-			Boss.BossAttacks.ChargeAttack();
+
+			if (_attackCooldown) {
+				Boss.StartCoroutine(Boss.FlashRed());
+				Boss.BossAttacks.ChargeAttack();
+				Logger.Log("attack", "Attack");
+				_attackCooldown = false;
+			}
 			Boss.StartCoroutine(AttackTime());
 			// Boss.SwitchState("Idle");
 		}
@@ -49,5 +56,9 @@ public class BossChargeState : BossBaseState {
 		_didAttack = false;
 		yield return new WaitForSeconds(0.1f);
 		_didAttack = true;
+	}
+	IEnumerator AttackCooldown() {
+		yield return new WaitForSecondsRealtime(Boss.Stats.SlamTime / 2f);
+		_attackCooldown = true;
 	}
 }

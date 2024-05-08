@@ -13,7 +13,8 @@ public class EnemyBT : EnemyBehaviourTree {
 	public static Vector3 SearchLocation = Vector3.zero;
 	public static NavMeshAgent Agent;
 
-	private void Awake() {
+	private new void Awake() {
+		base.Awake();
 		Agent = GetComponent<NavMeshAgent>();
 		Agent.updateRotation = false;
 		Agent.updateUpAxis = false;

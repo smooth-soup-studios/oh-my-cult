@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class FlashOnAttack : MonoBehaviour {
 	public IEnumerator FlashSlamAttack() {
-		Logger.Log("Return", "Flash"); 
+		GetComponent<SpriteRenderer>().color = Color.red;
 		yield return new WaitForSeconds(0.5f);
-
+		GetComponent<SpriteRenderer>().color = Color.clear;
 	}
 }

@@ -43,6 +43,7 @@ public class Boss : MonoBehaviour, ISaveable {
 			new BossSlamAttack(this, "Slam"),
 			new BossChargeState(this, "Charge"),
 			new BossRoarState(this, "Roar"),
+			new BossMoveState(this,"Move"),
 			new BossIdleState(this, "Idle")
 		};
 		SwitchState("Idle");
@@ -88,5 +89,26 @@ public class Boss : MonoBehaviour, ISaveable {
 		GetComponent<SpriteRenderer>().color = Color.magenta;
 		yield return new WaitForSeconds(0.5f);
 		GetComponent<SpriteRenderer>().color = Color.white;
+	}
+
+	public List<WeightedStates> WeightedValues;
+	public int GetRendomValue(List<WeightedStates> weightedValuesList) {
+		int output = 0;
+
+		var totalWeight = 0;
+		foreach (var entry in weightedValuesList) {
+			totalWeight += entry.Weight;
+		}
+		var rndWeightValue = Random.Range(1, totalWeight + 1);
+
+		var processedWeight = 0;
+		foreach (var entry in weightedValuesList) {
+			processedWeight += entry.Weight;
+			if (rndWeightValue <= processedWeight) {
+				output = entry.Value;
+				break;
+			}
+		}
+		return output;
 	}
 }

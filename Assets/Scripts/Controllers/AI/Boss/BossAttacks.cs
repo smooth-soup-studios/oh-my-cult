@@ -7,8 +7,15 @@ public class BossAttacks : MonoBehaviour {
 	public BossStatsSO Stats;
 	[SerializeField] public LayerMask EnemyLayer;
 	[SerializeField] private WeaponStats _weaponData;
+	public FlashOnAttack SlamFlashOnAttackLeft;
 
+	public FlashOnAttack SlamFlashOnAttackRight;
+	public FlashOnAttack RoarFlashOnAttack;
 
+	// private void Start() {
+	// 	FlashOnAttackLeft = GameObject.Find("FlashOnAttack").GetComponent<FlashOnAttack>();
+	// 	FlashOnAttackRight = GameObject.Find("FlashOnAttack").GetComponent<FlashOnAttack>();
+	// }
 
 	//TODO:
 	//rename the component to calculate health
@@ -20,7 +27,8 @@ public class BossAttacks : MonoBehaviour {
 		// 		opponent.TakeDamage(Stats.SlamDamage);
 		// 	}
 		// }
-
+		SlamFlashOnAttackLeft.StartCoroutine(SlamFlashOnAttackLeft.FlashSlamAttack());
+		SlamFlashOnAttackRight.StartCoroutine(SlamFlashOnAttackRight.FlashSlamAttack());
 		try {
 			GetComponentInChildren<BossSlamHitboxLeft>().GetObjectsInCollider().ForEach(obj => {
 				if (obj.TryGetComponent<EnemyHealthController>(out EnemyHealthController opponent)) {
@@ -30,7 +38,7 @@ public class BossAttacks : MonoBehaviour {
 		}
 		catch (System.Exception) {
 		}
-				try {
+		try {
 			GetComponentInChildren<BossSlamHitboxRight>().GetObjectsInCollider().ForEach(obj => {
 				if (obj.TryGetComponent<EnemyHealthController>(out EnemyHealthController opponent)) {
 					opponent.TakeDamage(_weaponData.WeaponData.Damage);
@@ -45,13 +53,14 @@ public class BossAttacks : MonoBehaviour {
 	//rename the component to calculate health
 
 	public void RoarAttack() {
-	// 	Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, Stats.RoarRange, EnemyLayer);
-	// 	foreach (Collider2D Enemy in hitEnemies) {
-	// 		if (Enemy.TryGetComponent<EnemyHealthController>(out EnemyHealthController opponent)) {
-	// 			opponent.TakeDamage(Stats.RoarAttack);
-	// 		}
-	// 	}
-				try {
+		// 	Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, Stats.RoarRange, EnemyLayer);
+		// 	foreach (Collider2D Enemy in hitEnemies) {
+		// 		if (Enemy.TryGetComponent<EnemyHealthController>(out EnemyHealthController opponent)) {
+		// 			opponent.TakeDamage(Stats.RoarAttack);
+		// 		}
+		// 	}
+		RoarFlashOnAttack.StartCoroutine(RoarFlashOnAttack.FlashSlamAttack());
+		try {
 			GetComponentInChildren<BossRoarHitbox>().GetObjectsInCollider().ForEach(obj => {
 				if (obj.TryGetComponent<EnemyHealthController>(out EnemyHealthController opponent)) {
 					opponent.TakeDamage(_weaponData.WeaponData.Damage);
@@ -71,7 +80,7 @@ public class BossAttacks : MonoBehaviour {
 		// 		opponent.TakeDamage(Stats.ChargeAttack);
 		// 	}
 		// }
-						try {
+		try {
 			GetComponentInChildren<BossRoarHitbox>().GetObjectsInCollider().ForEach(obj => {
 				if (obj.TryGetComponent<EnemyHealthController>(out EnemyHealthController opponent)) {
 					opponent.TakeDamage(_weaponData.WeaponData.Damage);

@@ -425,7 +425,7 @@
                     "id": "2fd37465-cd1d-43d3-9ba1-2236d807d134",
                     "path": "<Mouse>/scroll/y",
                     "interactions": "",
-                    "processors": "",
+                    "processors": "Invert",
                     "groups": "Keyboard",
                     "action": "HotbarSwitch",
                     "isComposite": false,

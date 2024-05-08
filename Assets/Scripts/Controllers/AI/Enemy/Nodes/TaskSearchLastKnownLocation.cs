@@ -19,7 +19,7 @@ public class TaskSearchLastKnownLocation : Node
 			EnemyBT.Agent.speed = 20;
             Logger.Log("Search", "Searching");
 		}
-		if (Vector2.Distance(_transform.position, target) < 5f) {
+		if (Vector2.Distance(_transform.position, target) < 1f) {
             Logger.Log("Search", "Found");
 			EnemyBT.SearchLocation = Vector3.zero;
 			State = NodeState.SUCCESS;

@@ -25,6 +25,7 @@ public class CheckEnemyInRange : Node {
 			State = NodeState.FAILURE;
 			return State;
 		}
+		EnemyBT.SearchLocation = ((Transform) t).position;
 		State = NodeState.SUCCESS;
 		return State;
 	}

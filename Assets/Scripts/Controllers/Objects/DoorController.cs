@@ -1,3 +1,4 @@
+using System.Collections;
 using Managers;
 using UnityEngine;
 
@@ -20,7 +21,7 @@ public class DoorController : MonoBehaviour {
 	}
 
 	public void ActivateDoor(GameObject target) {
-		if (NoEnter) return;
+		if (NoEnter | _isTransporting) return;
 
 		if (target.CompareTag("Player")) {
 			StateMachine sm = target.GetComponent<StateMachine>();
@@ -43,13 +44,23 @@ public class DoorController : MonoBehaviour {
 			AlreadyActivated = true;
 			_isTransporting = true;
 
-			GameManager.Instance.LoadScene(
-				TransportTo switch {
-					TransportDestination.House => "houses",
-					TransportDestination.Special => "boss_arenas",
-					_ => "level_0"
-				}
-			);
+			StartCoroutine(_loadDoor());
+
+			IEnumerator _loadDoor() {
+				SceneWipeManager.Instance.WipeIn();
+				yield return new WaitForSeconds(SceneWipeManager.WipeTime);
+				SceneWipeManager.Instance.ShouldWipeOffWhenStart = true;
+
+				_isTransporting = false;
+
+				GameManager.Instance.LoadScene(
+					TransportTo switch {
+						TransportDestination.House => SceneDefs.HouseInteriorLevel,
+						TransportDestination.Special => SceneDefs.BossArenaLevel,
+						_ => SceneDefs.VillageLevel
+					}
+				);
+			}
 		}
 	}
 

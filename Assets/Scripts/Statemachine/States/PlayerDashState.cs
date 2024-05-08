@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Managers;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerDashState : BaseState {
+	public static readonly float DashCooldown = 1.5f;
+	public static readonly float DashDuration = .25f;
+
 	private float _dashSpeedModifier = 2.5f;
 	private bool _dash = true;
 	public PlayerDashState(string name, StateMachine stateMachine) : base(name, stateMachine) {
 	}
 	public override void EnterState() {
 		StateMachine.StartCoroutine(dashTime());
+		UIManager.Instance.DashStart = Time.time;
 		StateMachine.EchoDashController.StartEcho();
 	}
 
@@ -28,7 +33,7 @@ public class PlayerDashState : BaseState {
 
 	IEnumerator dashTime() {
 		_dash = true;
-		yield return new WaitForSecondsRealtime(0.25f);
+		yield return new WaitForSecondsRealtime(DashDuration);
 		_dash = false;
 	}
 }

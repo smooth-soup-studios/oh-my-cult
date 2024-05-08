@@ -37,7 +37,7 @@ public class BossIdleState : BossBaseState {
 	}
 
 	IEnumerator SwitchTime() {
-		yield return new WaitForSecondsRealtime(10f);
+		yield return new WaitForSecondsRealtime(2f);
 		_switchState = true;
 	}
 

@@ -10,6 +10,7 @@ public class EnemyBT : EnemyBehaviourTree {
 	public static float Speed = 2f;
 	public static float FovRange = 30f;
 	public static float AttackRange = 20f;
+	public static GameObject Target = null;
 	public static Vector3 SearchLocation = Vector3.zero;
 	public static NavMeshAgent Agent;
 

@@ -14,18 +14,18 @@ public class CheckEnemyInRange : Node {
 	}
 
 	public override NodeState Evaluate(EnemyBehaviourTree tree) {
-		object t = GetData("target");
-		if (t == null) {
+		GameObject target = EnemyBT.Target;
+		if (target == null) {
 			Collider2D[] colliders = Physics2D.OverlapCircleAll(_transform.position, EnemyBT.FovRange, _enemyLayerMask);
 			if (colliders.Length > 0) {
-				Parent.Parent.SetData("target", colliders[0].transform);
+				EnemyBT.Target = colliders[0].gameObject;
 				State = NodeState.SUCCESS;
 				return State;
 			}
 			State = NodeState.FAILURE;
 			return State;
 		}
-		EnemyBT.SearchLocation = ((Transform) t).position;
+		EnemyBT.SearchLocation = target.transform.position;
 		State = NodeState.SUCCESS;
 		return State;
 	}

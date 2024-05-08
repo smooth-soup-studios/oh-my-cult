@@ -7,7 +7,6 @@ public class TaskAttack : Node {
 
 
 	private EnemyHealthController _enemy;
-	private Transform _lastTarget;
 	private EnemyBiteAttack _enemyBiteAttack;
 
 	private float _attackTime = 1f;
@@ -19,13 +18,8 @@ public class TaskAttack : Node {
 	}
 
 	public override NodeState Evaluate(EnemyBehaviourTree tree) {
-		Transform target = (Transform)GetData("target");
 		_enemyBiteAttack = tree.gameObject.GetComponent<EnemyBiteAttack>();
-
-		if (target != _lastTarget) {
-			_lastTarget = target;
-		}
-
+		
 		_attackCounter += Time.deltaTime;
 		if (_attackCounter >= _attackTime) {
 			_enemyBiteAttack.Attack();

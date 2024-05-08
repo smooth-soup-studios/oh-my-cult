@@ -5,27 +5,24 @@ using BehaviorTree;
 
 public class TaskGoToTarget : Node {
 	private Transform _transform;
-	private string name = "target";
+	private string _name = "target";
 	private float _radius = 20f;
 	public TaskGoToTarget(Transform transform) {
 		_transform = transform;
 	}
 
 	public override NodeState Evaluate(EnemyBehaviourTree tree) {
-		Transform target = (Transform)GetData("target");
+		Vector3 target = EnemyBT.Target.transform.position;
 
-		if (Vector2.Distance(_transform.position, target.position) > 1f) {
-			// _transform.position = Vector3.MoveTowards(_transform.position, target.position, EnemyBT.Speed * Time.deltaTime);
-			// _transform.LookAt(target.position);
-			// EnemyBT.Agent.destination = target.position;
-			Vector3 movePos = target.transform.position;
+		if (Vector2.Distance(_transform.position, target) > 1f) {
+			Vector3 movePos = target;
 			movePos = Vector3.MoveTowards(movePos, _transform.position, _radius);
 			EnemyBT.Agent.SetDestination(movePos);
 			EnemyBT.Agent.speed = 20;
-			Logger.Log(name, "Charge");
+			Logger.Log(_name, "Charge");
 		}
-		if (Vector2.Distance(_transform.position, target.position) > 40f) {
-			ClearData("target");
+		if (Vector2.Distance(_transform.position, target) > 40f) {
+			EnemyBT.Target = null;
 			State = NodeState.FAILURE;
 			return State;
 		}

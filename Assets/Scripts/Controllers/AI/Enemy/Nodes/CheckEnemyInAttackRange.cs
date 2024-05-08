@@ -17,14 +17,13 @@ public class CheckEnemyInAttackRange : Node
 
 	public override NodeState Evaluate(EnemyBehaviourTree tree)
     {
-        object t = GetData("target");
-        if (t == null){
+        GameObject target = EnemyBT.Target;
+        if (target == null){
             State = NodeState.FAILURE;
             return State;
         }
 
-        Transform target = (Transform)t;
-        if(Vector2.Distance(_transform.position, target.position) <= EnemyBT.AttackRange){
+        if(Vector2.Distance(_transform.position, target.transform.position) <= EnemyBT.AttackRange){
 			Logger.Log(name, "Attack");
             State = NodeState.SUCCESS;
             return State;

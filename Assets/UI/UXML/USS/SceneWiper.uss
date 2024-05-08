@@ -1,0 +1,18 @@
+#wiper-root {
+	transition-timing-function: ease-out-cubic;
+	visibility: hidden;
+	transition-duration: 0s;
+}
+
+#wiper-root.show {
+	visibility: visible;
+	transition-duration: 0.3s;
+}
+
+#wiper-root.up {
+	translate: 0 -200%;
+}
+
+#wiper-root.down {
+	translate: 0 200%;
+}

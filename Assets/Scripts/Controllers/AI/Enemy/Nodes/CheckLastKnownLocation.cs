@@ -16,7 +16,6 @@ public class CheckLastKnownLocation : Node
             State = NodeState.FAILURE;
             return State;
         }
-
         State = NodeState.SUCCESS;
         return State;
     }

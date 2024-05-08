@@ -19,7 +19,6 @@ public class TaskGoToTarget : Node {
 			movePos = Vector3.MoveTowards(movePos, _transform.position, _radius);
 			EnemyBT.Agent.SetDestination(movePos);
 			EnemyBT.Agent.speed = 20;
-			Logger.Log(_name, "Charge");
 		}
 		if (Vector2.Distance(_transform.position, target) > 40f) {
 			EnemyBT.Target = null;

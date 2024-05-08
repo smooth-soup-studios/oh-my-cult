@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 3000542283290782124}
   - component: {fileID: 7507666524552951778}
   - component: {fileID: 6226282403476561458}
-  m_Layer: 6
+  - component: {fileID: 5752292876538473265}
+  m_Layer: 7
   m_Name: Hitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,6 +134,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &5752292876538473265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876431728929801580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ac34e2c435f0046b73486e43318bbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3832337880142659033
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,7 +186,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4883085925236696737}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: HitContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -212,7 +225,7 @@ GameObject:
   - component: {fileID: 7641483773983506728}
   - component: {fileID: 4221077239659566202}
   - component: {fileID: 8057137832846050740}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -14,7 +14,6 @@ public class EnemyBT : EnemyBehaviourTree {
 	public static Vector3 SearchLocation = Vector3.zero;
 	public static NavMeshAgent Agent;
 
-
 	private void Awake() {
 		Agent = GetComponent<NavMeshAgent>();
 		Agent.updateRotation = false;
@@ -44,11 +43,9 @@ public class EnemyBT : EnemyBehaviourTree {
 
 		return root;
 	}
-
 		private void OnDrawGizmos() {
 		if (transform == null)
 			return;
 		UnityEngine.Gizmos.DrawWireSphere(transform.position, FovRange);
-
 	}
 }

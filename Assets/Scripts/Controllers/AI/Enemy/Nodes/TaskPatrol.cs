@@ -6,7 +6,6 @@ using UnityEngine.AI;
 using System.Linq;
 
 public class TaskPatrol : Node {
-
 	private Transform[] _waypoints;
 	private int _currentWaypointIndex = 0;
 	private float _waitTime = 1f; // in seconds
@@ -15,7 +14,6 @@ public class TaskPatrol : Node {
 	private bool _endReached = true;
 	private string _name = "Patrol";
 	public TaskPatrol(Transform[] waypoints) {
-
 		_waypoints = waypoints;
 	}
 
@@ -28,29 +26,21 @@ public class TaskPatrol : Node {
 			}
 		}
 		else {
-
-			// EnemyBT.Agent.destination = _waypoints[_currentWaypointIndex].position;\
 			if (Vector2.Distance(EnemyBT.Agent.transform.position, _waypoints[_waypoints.Length - 1].transform.position) < 0.01f) {
-				Logger.Log(_name, "The End");
 				_waypoints = _waypoints.Reverse().ToArray();
 				_currentWaypointIndex = 1;
 				EnemyBT.Agent.destination = _waypoints[_currentWaypointIndex].position;
 			}
-			else if (Vector2.Distance(EnemyBT.Agent.transform.position, _waypoints[_currentWaypointIndex].transform.position) < 0.01f ) {
+			else if (Vector2.Distance(EnemyBT.Agent.transform.position, _waypoints[_currentWaypointIndex].transform.position) < 0.01f) {
 				_waitCounter = 0;
 				_waiting = true;
-
 				_currentWaypointIndex = (_currentWaypointIndex + 1) % _waypoints.Length;
-
 				EnemyBT.Agent.destination = _waypoints[_currentWaypointIndex].position;
-				Logger.Log(_name, "");
 			}
-
-				EnemyBT.Agent.destination = _waypoints[_currentWaypointIndex].position;
+			EnemyBT.Agent.destination = _waypoints[_currentWaypointIndex].position;
 		}
 		State = NodeState.RUNNING;
 		return State;
-
 	}
 }
 

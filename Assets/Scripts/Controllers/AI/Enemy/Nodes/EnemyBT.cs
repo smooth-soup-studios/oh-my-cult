@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using BehaviorTree;
 using UnityEngine;
@@ -6,7 +5,7 @@ using UnityEngine.AI;
 
 
 public class EnemyBT : EnemyBehaviourTree {
-	public UnityEngine.Transform[] Waypoints;
+	public Transform[] Waypoints;
 	public static float Speed = 2f;
 	public static float FovRange = 30f;
 	public static float AttackRange = 20f;
@@ -43,9 +42,9 @@ public class EnemyBT : EnemyBehaviourTree {
 
 		return root;
 	}
-		private void OnDrawGizmos() {
+	private void OnDrawGizmos() {
 		if (transform == null)
 			return;
-		UnityEngine.Gizmos.DrawWireSphere(transform.position, FovRange);
+		Gizmos.DrawWireSphere(transform.position, FovRange);
 	}
 }

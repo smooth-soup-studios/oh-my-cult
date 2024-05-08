@@ -1,16 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using BehaviorTree;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class CheckEnemyInRange : Node {
 
-	private static int _enemyLayerMask = 1 << 6;
+	private static int _enemyLayerMask;
 	private Transform _transform;
 
 	public CheckEnemyInRange(Transform transform) {
 		_transform = transform;
+		_enemyLayerMask = 1 << LayerMask.NameToLayer("Player");
 	}
 
 	public override NodeState Evaluate(EnemyBehaviourTree tree) {

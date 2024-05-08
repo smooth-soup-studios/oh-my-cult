@@ -33,7 +33,7 @@ public class BossSlamAttack : BossBaseState {
 	}
 
 	IEnumerator SwitchState() {
-		yield return new WaitForSecondsRealtime(Boss.Stats.SlamTime);
+		yield return new WaitForSecondsRealtime(10f);
 		_switchState = true;
 	}
 

@@ -15,21 +15,20 @@ public class BossIdleState : BossBaseState {
 	}
 	public override void UpdateState() {
 		if (_switchState) {
-			// switch (Boss.StateCounter) {
-			// 	case 0:
-			// 		Boss.SwitchState("Slam");
-			// 		break;
-			// 	case 1:
-			// 		Boss.SwitchState("Charge");
-			// 		break;
-			// 	case 2:
-			// 		Boss.SwitchState("Roar");
-			// 		break;
-				// case 3:
-				// 	Boss.SwitchState("Move");
-				// 	break;
-			// }
-			Boss.SwitchState("Slam");
+			switch (Boss.StateCounter) {
+				case 0:
+					Boss.SwitchState("Slam");
+					break;
+				case 1:
+					Boss.SwitchState("Charge");
+					break;
+				case 2:
+					Boss.SwitchState("Roar");
+					break;
+				case 3:
+					Boss.SwitchState("Move");
+					break;
+			}
 		}
 	}
 	public override void ExitState() {

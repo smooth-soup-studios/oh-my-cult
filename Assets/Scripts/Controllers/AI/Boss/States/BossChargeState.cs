@@ -20,25 +20,18 @@ public class BossChargeState : BossBaseState {
 			ChargeAttack();
 		}
 		else if (Boss.Enemy == true) {
-
-			if (_attackCooldown) {
-				Boss.StartCoroutine(Boss.FlashRed());
-				Boss.BossAttacks.ChargeAttack();
+				Boss.SwitchState("ChargeAttack");
 				Logger.Log("attack", "Attack");
-				_attackCooldown = false;
-			}
-			Boss.StartCoroutine(AttackTime());
-			// Boss.SwitchState("Idle");
 		}
-		else if (_didAttack == true) {
-			Boss.SwitchState("Idle");
-		}
+		// else if (_didAttack == true) {
+		// 	Boss.SwitchState("Idle");
+		// }
 		else {
 			Boss.SwitchState("Idle");
 		}
 	}
 	public override void ExitState() {
-		Boss.Enemy = false;
+
 	}
 
 	private void ChargeAttack() {

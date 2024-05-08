@@ -44,7 +44,8 @@ public class Boss : MonoBehaviour, ISaveable {
 			new BossChargeState(this, "Charge"),
 			new BossRoarState(this, "Roar"),
 			new BossMoveState(this,"Move"),
-			new BossIdleState(this, "Idle")
+			new BossIdleState(this, "Idle"),
+			new BossChargeAttack(this, "ChargeAttack")
 		};
 		SwitchState("Idle");
 	}

@@ -5,7 +5,7 @@ public class TaskAttack : Node {
 	private EnemyHealthController _enemy;
 	private EnemyBiteAttack _enemyBiteAttack;
 
-	private float _attackTime = 1f;
+	private float _attackTime = 1.08f;
 	private float _attackCounter = 0f;
 
 	public TaskAttack(Transform transform) { }

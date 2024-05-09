@@ -17,9 +17,13 @@ public class CheckEnemyInAttackRange : Node {
 			return State;
 		}
 		if (Vector2.Distance(_transform.position, target.transform.position) <= EnemyBT.AttackRange) {
+			EnemyBT.EnemyAnimator.SetBool("IsAttacking", true);
 			State = NodeState.SUCCESS;
 			return State;
+
+
 		}
+		EnemyBT.EnemyAnimator.SetBool("IsAttacking", false);
 		State = NodeState.FAILURE;
 		return State;
 	}

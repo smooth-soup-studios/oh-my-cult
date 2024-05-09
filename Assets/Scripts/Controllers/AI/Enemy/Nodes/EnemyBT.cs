@@ -12,14 +12,15 @@ public class EnemyBT : EnemyBehaviourTree {
 	public static GameObject Target = null;
 	public static Vector3 SearchLocation = Vector3.zero;
 	public static NavMeshAgent Agent;
-	public static AnimationManager EnemyAnimator;
-	protected MovementDirection MovementDirection = MovementDirection.DOWN;
+	public static Animator EnemyAnimator;
+		public static Vector2 Movement;
+
 
 	private void Awake() {
 		Agent = GetComponent<NavMeshAgent>();
 		Agent.updateRotation = false;
 		Agent.updateUpAxis = false;
-		EnemyAnimator = new(GetComponent<Animator>());
+		EnemyAnimator = GetComponent<Animator>();
 	}
 
 	protected override Node SetupTree() {

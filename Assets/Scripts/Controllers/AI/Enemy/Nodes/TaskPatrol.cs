@@ -1,6 +1,7 @@
 using UnityEngine;
 using BehaviorTree;
 using System.Linq;
+using UnityEngine.UIElements.Experimental;
 
 public class TaskPatrol : Node {
 	private Transform[] _waypoints;
@@ -9,12 +10,18 @@ public class TaskPatrol : Node {
 	private float _waitCounter = 0f;
 	private bool _waiting = false;
 	private bool _endReached = true;
-	private string _name = "Patrol";
+	private Vector2  _movement;
+
+
 	public TaskPatrol(Transform[] waypoints) {
 		_waypoints = waypoints;
+
 	}
 
 	public override NodeState Evaluate(EnemyBehaviourTree tree) {
+		EnemyBT.EnemyAnimator.Play("EnemyWalk", MovementDirection);
+		
+
 		EnemyBT.Agent.speed = 10f;
 		if (_waiting) {
 			_waitCounter += Time.deltaTime;

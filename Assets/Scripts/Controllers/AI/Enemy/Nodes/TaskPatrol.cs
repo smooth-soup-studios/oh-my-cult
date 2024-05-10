@@ -24,7 +24,7 @@ public class TaskPatrol : BehaviorTree.Node {
 		EnemyBT.Movement = (_waypoints[_currentWaypointIndex].transform.position - EnemyBT.Agent.transform.position).normalized;
 		EnemyBT.EnemyAnimator.SetFloat("X", EnemyBT.Movement.x);
 		EnemyBT.EnemyAnimator.SetFloat("Y", EnemyBT.Movement.y);
-
+		EnemyBT.AttackCounter = -0.04f;
 
 		EnemyBT.Agent.speed = 10f;
 		if (_waiting) {

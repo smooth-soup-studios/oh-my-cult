@@ -18,7 +18,7 @@ public class Boss : MonoBehaviour, ISaveable {
 
 	private bool _isAlive = true;
 
-	// Start is called before the first frame update
+
 
 	void Start() {
 		if (!_isAlive) {

@@ -1,7 +1,64 @@
-Button:hover{
-    -unity-background-image-tint-color: #cccccc
+Button:hover {
+    -unity-background-image-tint-color: rgb(204, 204, 204);
 }
 
-Button:active{
-    -unity-background-image-tint-color: #aaaaaa
+Button:active {
+    -unity-background-image-tint-color: rgb(170, 170, 170);
+}
+
+.unity-base-field__input {
+    background-color: rgb(81, 26, 67);
+    border-left-color: rgb(81, 26, 67);
+    border-right-color: rgb(81, 26, 67);
+    border-top-color: rgb(81, 26, 67);
+    border-bottom-color: rgb(81, 26, 67);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.unity-base-popup-field__arrow {
+    -unity-background-image-tint-color: rgb(143, 202, 173);
+}
+
+.unity-base-field__label {
+    color: rgb(143, 202, 173);
+    font-size: 48px;
+}
+
+.unity-base-dropdown .unity-scroll-view {
+    background-color: rgb(81, 26, 67);
+    color: rgb(143, 202, 173);
+    border-left-color: rgb(81, 26, 67);
+    border-right-color: rgb(81, 26, 67);
+    border-top-color: rgb(81, 26, 67);
+    border-bottom-color: rgb(81, 26, 67);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.unity-base-dropdown__item {
+    flex-grow: 1;
+}
+
+.unity-base-dropdown #unity-content-container {
+    flex-direction: column;
+}
+
+.unity-base-dropdown__checkmark {
+    -unity-background-image-tint-color: rgb(81, 26, 67);
+}
+
+.unity-base-dropdown__container-outer {
+    border-left-color: rgb(59, 163, 94);
+    border-right-color: rgb(59, 163, 94);
+    border-top-color: rgb(59, 163, 94);
+    border-bottom-color: rgb(59, 163, 94);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }

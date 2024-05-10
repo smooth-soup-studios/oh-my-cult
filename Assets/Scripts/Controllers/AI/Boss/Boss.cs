@@ -31,7 +31,7 @@ public class Boss : MonoBehaviour, ISaveable {
 			if (obj == gameObject) {
 				_isAlive = false;
 				gameObject.SetActive(false);
-				SceneManager.LoadScene("OutroScene");
+				SceneManager.LoadScene(SceneDefs.EndingScreen);
 
 			}
 		});

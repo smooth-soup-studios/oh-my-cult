@@ -38,6 +38,7 @@ Button:active {
     border-bottom-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
+    max-height: 240px;
 }
 
 .unity-base-dropdown__item {
@@ -46,6 +47,7 @@ Button:active {
 
 .unity-base-dropdown #unity-content-container {
     flex-direction: column;
+    overflow: scroll;
 }
 
 .unity-base-dropdown__checkmark {
@@ -61,4 +63,17 @@ Button:active {
     border-bottom-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
+}
+
+.unity-base-dropdown .unity-scroll-view .unity-scroll-view__vertical-scrollbar .unity-scroll-view__vertical-handle {
+    background-color: rgba(81, 26, 67, 0.5);
+    border-radius: 4px;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    background-image: url("project://database/Assets/Art/DeleteThisLater/Button-V1.png?fileID=2800000&guid=6ea2eb79f968be648ab5d64b06533584&type=3#Button-V1");
+}
+
+.unity-base-dropdown .unity-scroll-view .unity-scroll-view__vertical-scrollbar {
+    background-color: rgba(81, 26, 67, 0.2);
+    border-radius: 4px;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
 }

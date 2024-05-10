@@ -16,7 +16,10 @@ public class Outro : MonoBehaviour, ISaveable
     void Start()
     {
         _root = GetComponent<UIDocument>().rootVisualElement;
-        GameObject.Find("HUD").GetComponent<UIDocument>().rootVisualElement.visible = false;
+        GameObject HUD = GameObject.Find("HUD");
+		if (HUD) {
+			HUD.GetComponent<UIDocument>().rootVisualElement.visible = false;
+		}
         _yesButton = _root.Q<Button>("YesButton");
         _yesButton.clicked += OnYesButton;
         _noButton = _root.Q<Button>("NoButton");

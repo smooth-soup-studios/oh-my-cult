@@ -21,10 +21,10 @@ public class TaskPatrol : BehaviorTree.Node {
 
 	public override NodeState Evaluate(EnemyBehaviourTree tree) {
 		// EnemyBT.EnemyAnimator.Play("EnemyWalk", MovementDirection);
-		EnemyBT.Movement = (_waypoints[_currentWaypointIndex].transform.position - EnemyBT.Agent.transform.position).normalized;
-		EnemyBT.EnemyAnimator.SetFloat("X", EnemyBT.Movement.x);
-		EnemyBT.EnemyAnimator.SetFloat("Y", EnemyBT.Movement.y);
-		EnemyBT.AttackCounter = -0.04f;
+		tree.Movement = (_waypoints[_currentWaypointIndex].transform.position - EnemyBT.Agent.transform.position).normalized;
+		EnemyBT.EnemyAnimator.SetFloat("X", tree.Movement.x);
+		EnemyBT.EnemyAnimator.SetFloat("Y", tree.Movement.y);
+		tree.AttackCounter = -0.04f;
 
 		EnemyBT.Agent.speed = 10f;
 		if (_waiting) {

@@ -13,8 +13,7 @@ public class EnemyBT : EnemyBehaviourTree {
 	public static Vector3 SearchLocation = Vector3.zero;
 	public static NavMeshAgent Agent;
 	public static Animator EnemyAnimator;
-		public static Vector2 Movement;
-			public static float AttackCounter = -0.04f;
+
 
 
 	private void Awake() {

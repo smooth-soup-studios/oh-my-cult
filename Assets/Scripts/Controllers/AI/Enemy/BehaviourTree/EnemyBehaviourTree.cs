@@ -4,6 +4,8 @@ namespace BehaviorTree {
 
 	public abstract class EnemyBehaviourTree : MonoBehaviour {
 		private Node _root = null;
+		public Vector2 Movement;
+		public float AttackCounter = -0.04f;
 
 		protected void Start() {
 			_root = SetupTree();

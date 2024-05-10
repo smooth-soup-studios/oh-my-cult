@@ -13,10 +13,10 @@ public class TaskAttack : Node {
 	public override NodeState Evaluate(EnemyBehaviourTree tree) {
 		_enemy = tree.GetComponent<EnemyHealthController>();
 		_enemyBiteAttack = tree.gameObject.GetComponent<EnemyBiteAttack>();
-		EnemyBT.AttackCounter += Time.deltaTime;
-		if (EnemyBT.AttackCounter >= _attackTime) {
+		tree.AttackCounter += Time.deltaTime;
+		if (tree.AttackCounter >= _attackTime) {
 			_enemyBiteAttack.Attack();
-			EnemyBT.AttackCounter = -0.04f;
+			tree.AttackCounter = -0.04f;
 		}
 		State = NodeState.RUNNING;
 		return State;

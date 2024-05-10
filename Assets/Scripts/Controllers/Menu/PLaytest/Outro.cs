@@ -11,10 +11,12 @@ public class Outro : MonoBehaviour, ISaveable
     VisualElement _root;
     [SerializeField] private GameObject _deadUI;
     [SerializeField] private GameObject _formUI;
+    VisualElement _hud;
     // Start is called before the first frame update
     void Start()
     {
         _root = GetComponent<UIDocument>().rootVisualElement;
+        GameObject.Find("HUD").GetComponent<UIDocument>().rootVisualElement.visible = false;
         _yesButton = _root.Q<Button>("YesButton");
         _yesButton.clicked += OnYesButton;
         _noButton = _root.Q<Button>("NoButton");

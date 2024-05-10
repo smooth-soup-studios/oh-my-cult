@@ -11,8 +11,7 @@ public class EnemyBiteAttack : MonoBehaviour {
 					enemy.TakeDamage(_weaponData.WeaponData.Damage);
 
 					if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
-						// rb.AddForce((obj.transform.position - transform.position).normalized * _weaponData.WeaponData.Knockback, ForceMode2D.Impulse);
-						rb.AddForce((obj.transform.position - transform.position).normalized * 100, ForceMode2D.Impulse);
+						rb.AddForce((obj.transform.position - transform.position).normalized * _weaponData.WeaponData.Knockback, ForceMode2D.Impulse);
 					}
 				}
 			});

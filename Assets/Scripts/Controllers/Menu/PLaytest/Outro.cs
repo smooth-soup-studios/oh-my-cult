@@ -11,7 +11,7 @@ public class Outro : MonoBehaviour, ISaveable
     VisualElement _root;
     [SerializeField] private GameObject _deadUI;
     [SerializeField] private GameObject _formUI;
-    // Start is called before the first frame update
+    
     void OnEnable()
     {
         _root = GetComponent<UIDocument>().rootVisualElement;

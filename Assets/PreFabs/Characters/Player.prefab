@@ -140,6 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _stateText: {fileID: 0}
   _changeStateLogging: 0
+  _useEightPointHitbox: 0
   PlayerAnimator:
     _animationDebugLogging: 0
   SpeedModifier: 5

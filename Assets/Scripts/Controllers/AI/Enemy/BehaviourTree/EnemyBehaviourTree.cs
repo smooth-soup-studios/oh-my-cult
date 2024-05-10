@@ -21,7 +21,7 @@ namespace BehaviorTree {
 		protected void Start() {
 			_root = SetupTree();
 		}
-		private void Update() {
+		protected void Update() {
 			if (_root != null) {
 				_root.Evaluate(this);
 			}

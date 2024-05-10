@@ -96,14 +96,14 @@ public class Boss : MonoBehaviour, ISaveable {
 	public int GetRendomValue(List<WeightedStates> weightedValuesList) {
 		int output = 0;
 
-		var totalWeight = 0;
-		foreach (var entry in weightedValuesList) {
+		int totalWeight = 0;
+		foreach (WeightedStates entry in weightedValuesList) {
 			totalWeight += entry.Weight;
 		}
-		var rndWeightValue = Random.Range(1, totalWeight + 1);
+		int rndWeightValue = Random.Range(1, totalWeight + 1);
 
-		var processedWeight = 0;
-		foreach (var entry in weightedValuesList) {
+		int processedWeight = 0;
+		foreach (WeightedStates entry in weightedValuesList) {
 			processedWeight += entry.Weight;
 			if (rndWeightValue <= processedWeight) {
 				output = entry.Value;

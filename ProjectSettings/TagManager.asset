@@ -12,6 +12,7 @@ TagManager:
   - EnterMerchant
   - EnterVillageOutskirt
   - EnterVillageMain
+  - EnterVillage
   layers:
   - Default
   - TransparentFX

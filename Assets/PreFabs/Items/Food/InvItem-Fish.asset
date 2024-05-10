@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c0e1789899e29448350646d58e3256, type: 3}
+  m_Name: InvItem-Fish
+  m_EditorClassIdentifier: 
+  InvData:
+    ItemName: Fish
+    ItemIcon: {fileID: 21300000, guid: 56a821c777d0bf74a8725106e7d53267, type: 3}
+    ItemPrefab: {fileID: 8445662014850619804, guid: 4510f33c7d313b642b37ee7df617f1ac, type: 3}
+    ItemType: 0
+    AnimationSet: 
+    Description: 

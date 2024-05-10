@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using BehaviorTree;
 using UnityEngine;
-using UnityEngine.AI;
 
 
 public class EnemyBT : EnemyBehaviourTree {
@@ -11,16 +10,14 @@ public class EnemyBT : EnemyBehaviourTree {
 	public static float AttackRange = 20f;
 	public static GameObject Target = null;
 	public static Vector3 SearchLocation = Vector3.zero;
-	public static NavMeshAgent Agent;
-	public static Animator EnemyAnimator;
 
 
 
-	private void Awake() {
-		Agent = GetComponent<NavMeshAgent>();
+
+	private new void Awake() {
+		base.Awake();
 		Agent.updateRotation = false;
 		Agent.updateUpAxis = false;
-		EnemyAnimator = GetComponent<Animator>();
 	}
 
 	protected override Node SetupTree() {

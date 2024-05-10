@@ -1,7 +1,6 @@
 using UnityEngine;
 
-public class EnemyBiteAttack : MonoBehaviour
-{
+public class EnemyBiteAttack : MonoBehaviour {
 	[SerializeField] private WeaponStats _weaponData;
 	public void Attack() {
 		try {

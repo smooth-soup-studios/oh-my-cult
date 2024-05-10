@@ -12,8 +12,8 @@ public class TaskSearchLastKnownLocation : Node {
 		tree.AttackCounter = -0.04f;
 
 		if (Vector2.Distance(_transform.position, target) > 1f) {
-			EnemyBT.Agent.SetDestination(target);
-			EnemyBT.Agent.speed = 20;
+			tree.Agent.SetDestination(target);
+			tree.Agent.speed = 20;
 		}
 		if (Vector2.Distance(_transform.position, target) < 1f) {
 			EnemyBT.SearchLocation = Vector3.zero;

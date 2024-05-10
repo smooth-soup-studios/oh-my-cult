@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using BehaviorTree;
 
@@ -17,13 +15,13 @@ public class CheckEnemyInAttackRange : Node {
 			return State;
 		}
 		if (Vector2.Distance(_transform.position, target.transform.position) <= EnemyBT.AttackRange) {
-			EnemyBT.EnemyAnimator.SetBool("IsAttacking", true);
+			tree.EnemyAnimator.SetBool("IsAttacking", true);
 			State = NodeState.SUCCESS;
 			return State;
 
 
 		}
-		EnemyBT.EnemyAnimator.SetBool("IsAttacking", false);
+		tree.EnemyAnimator.SetBool("IsAttacking", false);
 		State = NodeState.FAILURE;
 		return State;
 	}

@@ -73,7 +73,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.32, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 714397128736290338}
   m_Father: {fileID: 0}
@@ -147,7 +147,7 @@ MonoBehaviour:
   PlayerAnimator:
     _animationDebugLogging: 0
   SpeedModifier: 5
-  BaseSpeed: 10
+  BaseSpeed: 12.8
   WeaponHitbox: {fileID: 3173601029828910364}
   HitContainer: {fileID: 3053537212863230237}
   LatestDoor: -1

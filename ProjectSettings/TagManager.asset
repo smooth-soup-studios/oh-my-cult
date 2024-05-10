@@ -9,11 +9,9 @@ TagManager:
   - KeyBinding
   - DoorInteractor
   - EnterChurch
-  - EnterVillage
-  - EnterVillagePlaza
   - EnterMerchant
   - EnterVillageOutskirt
-  - EnterForest
+  - EnterVillageMain
   layers:
   - Default
   - TransparentFX

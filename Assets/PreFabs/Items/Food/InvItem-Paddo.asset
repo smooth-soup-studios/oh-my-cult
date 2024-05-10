@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InvData:
     ItemName: Paddo
-    ItemIcon: {fileID: 21300000, guid: b92bc07522f224748ab1b9d8be764aa3, type: 3}
+    ItemIcon: {fileID: 21300000, guid: c087fbc27dd89c342acaf4e96c6bd9b3, type: 3}
     ItemPrefab: {fileID: 3158172204144373338, guid: 681270435d9059b469d15da79dd75c1f, type: 3}
     ItemType: 0
     AnimationSet: 

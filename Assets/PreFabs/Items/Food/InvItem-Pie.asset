@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: InvItem-Pie
   m_EditorClassIdentifier: 
   InvData:
-    ItemName: Cake
-    ItemIcon: {fileID: 21300000, guid: dccb7ae8b9210da42a941419c54bd85c, type: 3}
+    ItemName: Pie
+    ItemIcon: {fileID: 21300000, guid: db465ae006715db4c8c2cbadac3d2288, type: 3}
     ItemPrefab: {fileID: 4325430436301110745, guid: 04a96ad0e07e95143b1dc1d46db65e11, type: 3}
     ItemType: 0
     AnimationSet: 

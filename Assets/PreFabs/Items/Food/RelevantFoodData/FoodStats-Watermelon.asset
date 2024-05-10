@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: FoodStats-Watermelon
   m_EditorClassIdentifier: 
   FoodData:
-    HealthAmount: 0
+    HealthAmount: 30

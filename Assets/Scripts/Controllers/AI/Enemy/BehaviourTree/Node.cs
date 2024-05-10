@@ -10,6 +10,8 @@ namespace BehaviorTree {
 		protected NodeState State;
 		public Node Parent;
 		protected List<Node> Children = new();
+		protected MovementDirection MovementDirection = MovementDirection.DOWN;
+		
 
 		private Dictionary<string, object> _dataContext = new();
 

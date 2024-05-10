@@ -221,7 +221,6 @@ GameObject:
   - component: {fileID: 9145262454478287574}
   - component: {fileID: 8057137832846050740}
   - component: {fileID: 3900318808842322138}
-  - component: {fileID: 489749630507691954}
   - component: {fileID: 7641483773983506728}
   - component: {fileID: 4849591457620503528}
   - component: {fileID: 3290768021699310593}
@@ -318,6 +317,7 @@ MonoBehaviour:
   Agent: {fileID: 0}
   EnemyAnimator: {fileID: 0}
   AttackCounter: -0.04
+  EnemyWeapon: {fileID: 0}
   Waypoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -337,19 +337,6 @@ MonoBehaviour:
   <ObjectId>k__BackingField: Enemy-0.1013
   _isInvulnerable: 0
   _maxHealth: 100
---- !u!114 &489749630507691954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8507790943486014399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e0bc3b695c5e034a8adc2982163dc82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _weaponData: {fileID: 11400000, guid: 6cf1858aecdd2b84f904f1c30762ee9d, type: 2}
 --- !u!195 &7641483773983506728
 NavMeshAgent:
   m_ObjectHideFlags: 0

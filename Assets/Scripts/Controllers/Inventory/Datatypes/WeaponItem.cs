@@ -2,12 +2,19 @@ using UnityEngine;
 
 public class WeaponItem : InteractableItem {
 	public WeaponStats WeaponStats;
+	protected LayerMask IgnoreThisMask;
 
-	public override void PrimaryAction(StateMachine source) {
+	protected void Start() {
+		// Layermask is a bitmask so bitshift the layers to get the mask, use | to combine them and ~ to invert the result for blacklisting.
+		// Unity's Physics2D.IgnoreRaycastLayer is set to 4 which is in fact not the ignore raycast layer but the water layer. -_-
+		IgnoreThisMask = ~(1 << LayerMask.NameToLayer("Player") | 1 << LayerMask.NameToLayer("Ignore Raycast"));
+	}
+
+	public override void PrimaryAction(GameObject source) {
 		try {
-			source.WeaponHitbox.GetObjectsInCollider().ForEach(obj => {
-				if (IsTargetUnObstructed(source.gameObject, obj)) {
-					EventBus.Instance.TriggerEvent(EventType.HIT, (obj, source.gameObject));
+			source.GetComponentInChildren<WeaponHitbox>().GetObjectsInCollider().ForEach(obj => {
+				if (IsTargetUnObstructed(source, obj)) {
+					EventBus.Instance.TriggerEvent(EventType.HIT, (obj, source));
 					if (obj.TryGetComponent<EnemyHealthController>(out EnemyHealthController enemy)) {
 						enemy.TakeDamage(WeaponStats.WeaponData.Damage);
 					}
@@ -18,11 +25,11 @@ public class WeaponItem : InteractableItem {
 		}
 	}
 
-	public override void SecondaryAction(StateMachine source) {
+	public override void SecondaryAction(GameObject source) {
 		try {
-			source.WeaponHitbox.GetObjectsInCollider().ForEach(obj => {
-				if (IsTargetUnObstructed(source.gameObject, obj)) {
-					EventBus.Instance.TriggerEvent(EventType.HIT, (obj, source.gameObject));
+			source.GetComponentInChildren<WeaponHitbox>().GetObjectsInCollider().ForEach(obj => {
+				if (IsTargetUnObstructed(source, obj)) {
+					EventBus.Instance.TriggerEvent(EventType.HIT, (obj, source));
 					if (obj.TryGetComponent<EnemyHealthController>(out EnemyHealthController enemy)) {
 						enemy.TakeDamage(WeaponStats.WeaponData.Damage);
 					}
@@ -36,10 +43,7 @@ public class WeaponItem : InteractableItem {
 	protected bool IsTargetUnObstructed(GameObject source, GameObject target) {
 		Debug.DrawRay(source.transform.position, target.transform.position - source.transform.position, Color.red, 10f);
 
-		// Layermask is a bitmask so bitshift the layers to get the mask, use | to combine them and ~ to invert the result for blacklisting.
-		// Unity's Physics2D.IgnoreRaycastLayer is set to 4 which is in fact not the ignore raycast layer but the water layer. -_-
-		LayerMask layerMask = ~(1 << LayerMask.NameToLayer("Player") | 1 << LayerMask.NameToLayer("Ignore Raycast"));
-		RaycastHit2D hit = Physics2D.Raycast(source.transform.position, target.transform.position - source.transform.position, Vector3.Distance(target.transform.position, source.transform.position), layerMask);
+		RaycastHit2D hit = Physics2D.Raycast(source.transform.position, target.transform.position - source.transform.position, Vector3.Distance(target.transform.position, source.transform.position), IgnoreThisMask);
 		if (hit) {
 			return hit.collider.gameObject == target;
 		}

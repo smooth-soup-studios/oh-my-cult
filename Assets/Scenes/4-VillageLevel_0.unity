@@ -5566,6 +5566,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8057137832846050740, guid: eb6bcb867272c7f4db2dc1b3ce0a2d95, type: 3}
+      propertyPath: EnemyWeapon
+      value: 
+      objectReference: {fileID: 7613533550855613070, guid: b52a80a05d680eb41b21c4cf63e7c8e4, type: 3}
+    - target: {fileID: 8057137832846050740, guid: eb6bcb867272c7f4db2dc1b3ce0a2d95, type: 3}
       propertyPath: Waypoints.Array.size
       value: 3
       objectReference: {fileID: 0}

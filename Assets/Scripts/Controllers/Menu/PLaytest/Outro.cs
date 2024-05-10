@@ -12,7 +12,7 @@ public class Outro : MonoBehaviour, ISaveable
     [SerializeField] private GameObject _deadUI;
     [SerializeField] private GameObject _formUI;
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         _root = GetComponent<UIDocument>().rootVisualElement;
         _yesButton = _root.Q<Button>("YesButton");

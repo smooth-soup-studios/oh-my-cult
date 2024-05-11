@@ -50,5 +50,15 @@ namespace Managers {
 
 			return false;
 		}
+
+		public static void QuitGame() {
+			#if UNITY_WEBGL
+				Logger.Log("UIBuilder","WebGL build detected, redirecting to homepage");
+				Application.OpenURL("/");
+			#else
+				Logger.Log("UIBuilder", "Quitting Game..");
+				Application.Quit();
+			#endif
+		}
 	}
 }

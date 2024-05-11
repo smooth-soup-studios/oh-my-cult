@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Managers;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -10,7 +11,7 @@ public class UIBuilderQuitWarning : MonoBehaviour
     VisualElement _root;
     VisualElement _quitWarning;
 
-    
+
     void OnEnable()
     {
         _root = GetComponent<UIDocument>().rootVisualElement;
@@ -23,8 +24,7 @@ public class UIBuilderQuitWarning : MonoBehaviour
     }
 
     void OnYesButton(){
-        Logger.Log("MenuController", "THE MENU IS DEAD!");
-		//Application.Quit();
+        GameManager.QuitGame();
     }
     void OnNoButton(){
         _quitWarning.visible = false;

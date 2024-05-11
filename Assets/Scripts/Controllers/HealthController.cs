@@ -1,10 +1,6 @@
 using System;
 using System.Collections;
-using AK.Wwise;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
-using Event = AK.Wwise.Event;
 
 public class HealthController : MonoBehaviour, ISaveable {
 	private string _logname = "Health controller";
@@ -16,12 +12,10 @@ public class HealthController : MonoBehaviour, ISaveable {
 	float _currentHealth;
 	[SerializeField] Event _actorDamaged;
 	[SerializeField] Event _lowHealth;
-	[SerializeField] RTPC _healthValue;
 	bool _isLowHealthEventPosted;
 
 	void Awake() {
 		_currentHealth = _maxHealth;
-		_healthValue.SetValue(gameObject, _currentHealth);
 	}
 
 	private void Start() {
@@ -36,7 +30,6 @@ public class HealthController : MonoBehaviour, ISaveable {
 			if (_isLowHealthEventPosted) {
 				return;
 			}
-			_lowHealth.Post(gameObject);
 			_isLowHealthEventPosted = true;
 		});
 	}
@@ -55,7 +48,6 @@ public class HealthController : MonoBehaviour, ISaveable {
 	public void TakeDamage(float damage) {
 		_currentHealth -= damage;
 
-		_actorDamaged.Post(gameObject);
 
 		if (_isInvulnerable) {
 			Logger.Log(_logname, $"The {name} took no damage becouse it is invulnerable!");
@@ -73,7 +65,6 @@ public class HealthController : MonoBehaviour, ISaveable {
 		}
 
 		if (!gameObject.CompareTag("Player")) return;
-		_healthValue.SetValue(gameObject, _currentHealth);
 	}
 
 	public float GetCurrentHealth() {

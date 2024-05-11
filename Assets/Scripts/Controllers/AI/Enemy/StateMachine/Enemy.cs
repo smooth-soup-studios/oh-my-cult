@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour, ISaveable {
 	[HideInInspector] public bool EndReached = false;
 	public NavMeshAgent Agent;
 
-
+//outdated
 	void Start() {
 
 		EventBus.Instance.Subscribe<GameObject>(EventType.DEATH, obj => {

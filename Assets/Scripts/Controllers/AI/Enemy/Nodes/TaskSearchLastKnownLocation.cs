@@ -9,10 +9,11 @@ public class TaskSearchLastKnownLocation : Node {
 	}
 	public override NodeState Evaluate(EnemyBehaviourTree tree) {
 		Vector3 target = EnemyBT.SearchLocation;
+		tree.AttackCounter = -0.04f;
 
 		if (Vector2.Distance(_transform.position, target) > 1f) {
-			EnemyBT.Agent.SetDestination(target);
-			EnemyBT.Agent.speed = 20;
+			tree.Agent.SetDestination(target);
+			tree.Agent.speed = 20;
 		}
 		if (Vector2.Distance(_transform.position, target) < 1f) {
 			EnemyBT.SearchLocation = Vector3.zero;

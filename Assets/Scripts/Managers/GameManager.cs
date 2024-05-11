@@ -56,6 +56,9 @@ namespace Managers {
 			#if UNITY_WEBGL
 				Logger.Log(_logname,"WebGL build detected, redirecting to homepage");
 				Application.OpenURL("/");
+			#elif UNITY_EDITOR
+				Logger.Log(_logname, "Quitting Playmode..");
+				UnityEditor.EditorApplication.isPlaying = false;
 			#else
 				Logger.Log(_logname, "Quitting Game..");
 				Application.Quit();

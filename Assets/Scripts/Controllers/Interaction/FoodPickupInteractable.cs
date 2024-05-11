@@ -12,6 +12,8 @@ public class FoodPickupInteractable : BaseItemPickupInteractable {
 	private new void Start() {
 		base.Start();
 
+		SingleUse = true;
+
 		_spriteRenderer = GetComponent<SpriteRenderer>();
 		UpdateSprite();
 	}
@@ -31,7 +33,6 @@ public class FoodPickupInteractable : BaseItemPickupInteractable {
 		}
 		else {
 			_spriteRenderer.sprite = Item.InvData.ItemIcon;
-
 		}
 	}
 

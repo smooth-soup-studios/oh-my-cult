@@ -1,11 +1,13 @@
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class FoodPickupInteractable : BaseInteractable {
+public class FoodPickupInteractable : BaseItemPickupInteractable {
 	[Header("Item settings")]
-	[SerializeField] private InventoryItem _item;
-	private SpriteRenderer _spriteRenderer;
+	[SerializeField]
+	private InventoryItem m_Item;
+	public override InventoryItem Item { get { return m_Item; } set { m_Item = value; } }
 
+	private SpriteRenderer _spriteRenderer;
 
 	private new void Start() {
 		base.Start();
@@ -14,22 +16,21 @@ public class FoodPickupInteractable : BaseInteractable {
 		UpdateSprite();
 	}
 
-
 	public override void Interact(GameObject interactor) {
 		if (interactor.TryGetComponent(out Inventory inventory)) {
-			InventoryItem switchedItem = inventory.AddItem(_item);
-			_item = switchedItem;
+			InventoryItem switchedItem = inventory.AddItem(Item);
+			Item = switchedItem;
 			UpdateSprite();
 		}
 		base.Interact(interactor);
 	}
 
 	private void UpdateSprite() {
-		if (_item == null) {
+		if (Item == null) {
 			_spriteRenderer.sprite = null;
 		}
 		else {
-			_spriteRenderer.sprite = _item.InvData.ItemIcon;
+			_spriteRenderer.sprite = Item.InvData.ItemIcon;
 
 		}
 	}

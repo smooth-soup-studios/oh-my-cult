@@ -12,7 +12,7 @@ public class FoodPickupInteractable : BaseItemPickupInteractable {
 	private new void Start() {
 		base.Start();
 
-		SingleUse = true;
+		// SingleUse = true;
 
 		_spriteRenderer = GetComponent<SpriteRenderer>();
 		UpdateSprite();

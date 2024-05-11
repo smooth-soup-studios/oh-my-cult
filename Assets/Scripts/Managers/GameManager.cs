@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 namespace Managers {
 	public class GameManager : MonoBehaviour {
 		public static GameManager Instance { get; private set; }
+		private static readonly string _logname = "GameManager";
 
 		private List<string> _sceneNamesInBuild = new();
 
@@ -53,10 +54,10 @@ namespace Managers {
 
 		public static void QuitGame() {
 			#if UNITY_WEBGL
-				Logger.Log("UIBuilder","WebGL build detected, redirecting to homepage");
+				Logger.Log(_logname,"WebGL build detected, redirecting to homepage");
 				Application.OpenURL("/");
 			#else
-				Logger.Log("UIBuilder", "Quitting Game..");
+				Logger.Log(_logname, "Quitting Game..");
 				Application.Quit();
 			#endif
 		}

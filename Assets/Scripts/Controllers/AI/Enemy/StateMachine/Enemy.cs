@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -27,7 +26,7 @@ public class Enemy : MonoBehaviour, ISaveable {
 	[HideInInspector] public bool EndReached = false;
 	public NavMeshAgent Agent;
 
-
+//outdated
 	void Start() {
 
 		EventBus.Instance.Subscribe<GameObject>(EventType.DEATH, obj => {
@@ -62,12 +61,12 @@ public class Enemy : MonoBehaviour, ISaveable {
 		CurrentState.UpdateState();
 	}
 
-	private void OnDrawGizmos() {
-		if (transform == null)
-			return;
-		Gizmos.DrawWireSphere(transform.position, Stats.PlayerDetectDistance);
-		Gizmos.DrawWireSphere(transform.position, Stats.MeleeDetectDistance);
-	}
+	// private void OnDrawGizmos() {
+	// 	if (transform == null)
+	// 		return;
+	// 	Gizmos.DrawWireSphere(transform.position, Stats.PlayerDetectDistance);
+	// 	Gizmos.DrawWireSphere(transform.position, Stats.MeleeDetectDistance);
+	// }
 	public void CheckForPlayer() {
 		Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(transform.position, Stats.PlayerDetectDistance, PlayerLayer);
 

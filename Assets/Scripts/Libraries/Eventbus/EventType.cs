@@ -15,4 +15,5 @@ public enum EventType {
 	PLAYER_EXIT_BUILDING_COVER,
 	ENTER_CHURCH,
 	ENTER_VILLAGE,
+	HIT,
 }

@@ -9,6 +9,10 @@ public class SwordItem : InteractableItem {
 				EventBus.Instance.TriggerEvent(EventType.HIT, (obj, source.gameObject));
 				if (obj.TryGetComponent<EnemyHealthController>(out EnemyHealthController enemy)) {
 					enemy.TakeDamage(WeaponStats.WeaponData.Damage);
+
+					if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
+						rb.AddForce((obj.transform.position - source.transform.position).normalized * WeaponStats.WeaponData.Knockback * rb.mass, ForceMode2D.Impulse);
+					}
 				}
 			});
 		}

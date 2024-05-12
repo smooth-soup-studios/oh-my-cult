@@ -7,6 +7,10 @@ public class EnemyBiteAttack : MonoBehaviour {
 			GetComponentInChildren<WeaponHitbox>().GetObjectsInCollider().ForEach(obj => {
 				if (obj.TryGetComponent<EnemyHealthController>(out EnemyHealthController enemy)) {
 					enemy.TakeDamage(_weaponData.WeaponData.Damage);
+
+					if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
+						rb.AddForce((obj.transform.position - transform.position).normalized * _weaponData.WeaponData.Knockback * rb.mass, ForceMode2D.Impulse);
+					}
 				}
 			});
 		}

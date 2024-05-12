@@ -78,10 +78,6 @@ public class HealthController : MonoBehaviour, ISaveable {
 			_currentHealth = _maxHealth;
 		}
 
-		if (gameObject.CompareTag("Player")) {
-			_healthValue.SetValue(gameObject, _currentHealth);
-		}
-
 		return _currentHealth;
 	}
 

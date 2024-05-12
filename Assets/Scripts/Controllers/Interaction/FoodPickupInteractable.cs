@@ -2,11 +2,6 @@ using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class FoodPickupInteractable : BaseItemPickupInteractable {
-	[Header("Item settings")]
-	[SerializeField]
-	private InventoryItem m_Item;
-	public override InventoryItem Item { get { return m_Item; } set { m_Item = value; } }
-
 	private SpriteRenderer _spriteRenderer;
 
 	private new void Start() {

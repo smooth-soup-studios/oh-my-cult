@@ -1,3 +1,6 @@
+using UnityEngine;
+
 public abstract class BaseItemPickupInteractable : BaseInteractable {
-	public abstract InventoryItem Item { get; set; }
+	[Header("Item settings")]
+	public InventoryItem Item;
 }

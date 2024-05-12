@@ -3,29 +3,42 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BossChargeAttack : BossBaseState {
-	public BossChargeAttack(Boss boss, string name) : base(boss, name) { }
 	private bool _switchState = false;
-	private Transform _transform;
-	private float _radius = 20f;
+	private bool _firstSlam = false;
+	public BossChargeAttack(Boss boss, string name) : base(boss, name) { }
 	public override void EnterState() {
 		_switchState = false;
+		Boss.BossAnimation.SetBool("ChargeAttack", true);
+		Boss.StartCoroutine(ChargeFirstSlam());
 		Boss.StartCoroutine(SwitchState());
-		Boss.StartCoroutine(Boss.FlashRed());
-		Boss.Animator.Play("Boss_Slam");
 	}
 	public override void UpdateState() {
-		Boss.BossAttacks.SlamAttack();
-		if (_switchState){
+		if (_firstSlam) {
+			Boss.BossAttacks.ChargeAttack();
+			_firstSlam = false;
+			Logger.Log("Slam", "Attack");
+		}
+		if (_switchState) {
 			Boss.SwitchState("Idle");
 		}
-
+		Boss.Movement = (Boss.Player.transform.position - Boss.transform.position).normalized;
+		Boss.BossAnimation.SetFloat("X", Boss.Movement.x);
+		Boss.BossAnimation.SetFloat("Y", Boss.Movement.y);
 	}
 	public override void ExitState() {
-		Boss.Enemy = false;
+		_firstSlam = false;
+		Boss.BossAnimation.SetBool("ChargeAttack", false);
 	}
+
 	IEnumerator SwitchState() {
-		yield return new WaitForSecondsRealtime(Boss.Stats.SwitchTime);
+		yield return new WaitForSecondsRealtime(0.54f);
 		_switchState = true;
 	}
+	IEnumerator ChargeFirstSlam() {
+		yield return new WaitForSecondsRealtime(0.29f);
+		_firstSlam = true;
+	}
+
+
 
 }

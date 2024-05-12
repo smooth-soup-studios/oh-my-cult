@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 013b6f19b03da5840809988f237ecaeb
+guid: fd83c629c4a42994cb811965db67392b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: 4
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,7 +110,175 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Big boss Idle and walk_0
+      name: compleet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7000
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86f5d2dd12c05d64ca9eee70f3d8edaf
+      internalID: -979271782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: compleet_1
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 7000
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7d35beeb79f4c541ad51816a6ba529f
+      internalID: 1346149215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: compleet_2
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 7000
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ad44f21b70123040a94de2e803da45e
+      internalID: -1253194570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: compleet_3
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 7000
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8218d70003517cd4ba967208acbf4438
+      internalID: -793388899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: compleet_4
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 7000
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 104319ef14c048a4ea56522dc7a1264a
+      internalID: -153812682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: compleet_5
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 7000
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 156ab12f57525444db41bfd05d700708
+      internalID: 523922852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: compleet_6
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 7000
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39f9e3f021295084fae3f211886ae758
+      internalID: -1248380994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: compleet_7
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 7000
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f1e9fcf5ad0400428d63bceafc76dd5
+      internalID: -1591258690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: compleet_8
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +292,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0abcbf5576e1684899a78225ca58f0c
-      internalID: -1930067918
+      spriteID: ae5dad75dd352324fa9948cfd5b6c335
+      internalID: -1972867023
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_1
+      name: compleet_9
       rect:
         serializedVersion: 2
         x: 1000
@@ -145,14 +313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d61c248c2d747a4285be40832daf6a1
-      internalID: 1450506522
+      spriteID: 91d6525fc8cb350499d42b31c225abd2
+      internalID: -1025295984
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_2
+      name: compleet_10
       rect:
         serializedVersion: 2
         x: 2000
@@ -166,14 +334,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b1a0f1467c1d8b49a93f0f08ba97f4a
-      internalID: 1227058635
+      spriteID: 8efef17fbe7f70d4f8b33752eb3787db
+      internalID: -491837034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_3
+      name: compleet_11
       rect:
         serializedVersion: 2
         x: 3000
@@ -187,14 +355,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 356bec5d53a489a4eb4f0a60448fbd8b
-      internalID: -1276361584
+      spriteID: 2f1ec3fe6d823f9428eb36477d5a5cdb
+      internalID: -2123455423
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_4
+      name: compleet_12
       rect:
         serializedVersion: 2
         x: 4000
@@ -208,14 +376,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3b8683aa4308f54182092b1912f2c01
-      internalID: -1616711859
+      spriteID: e3bb5639d2a653d43bc9be47e593bd32
+      internalID: 2030260434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_5
+      name: compleet_13
       rect:
         serializedVersion: 2
         x: 5000
@@ -229,14 +397,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fea74f7eae3f6d49a81bc153eb379ff
-      internalID: 1183516685
+      spriteID: bb367e87f4b647248a2a6cd8b2a12ba4
+      internalID: -231816365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_6
+      name: compleet_14
       rect:
         serializedVersion: 2
         x: 6000
@@ -250,14 +418,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5daa5ae92ee22184b8d16b0f86a85e34
-      internalID: 745340676
+      spriteID: ea290118b8e94d44c9a671698be888a5
+      internalID: 578636889
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_7
+      name: compleet_15
       rect:
         serializedVersion: 2
         x: 7000
@@ -271,14 +439,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e099418838630c844ab0c282cb6980d6
-      internalID: 1645412013
+      spriteID: 590989c700db1ef468cd05afb3bc0b7f
+      internalID: -1419061084
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_8
+      name: compleet_16
       rect:
         serializedVersion: 2
         x: 0
@@ -292,14 +460,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 894f0c902d1233548b55878483b5f1e4
-      internalID: 444804650
+      spriteID: 9dce38be1a5f6c54d9e366e8ce6b4e8f
+      internalID: -2104582695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_9
+      name: compleet_17
       rect:
         serializedVersion: 2
         x: 1000
@@ -313,14 +481,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b896adc5be8897348b21b6afab8dcc58
-      internalID: 1794718470
+      spriteID: b72be38b14873424e98043759fe8d46f
+      internalID: 1906014689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_10
+      name: compleet_18
       rect:
         serializedVersion: 2
         x: 2000
@@ -334,14 +502,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aab5f5bcee3b3604ebcd8192889ac1e5
-      internalID: 1758298226
+      spriteID: 66befc5685b9c544ca676f98ad31bcf3
+      internalID: -1012454672
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_11
+      name: compleet_19
       rect:
         serializedVersion: 2
         x: 3000
@@ -355,14 +523,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66e222fc8169d434bbaa10453b7197f1
-      internalID: 1018058098
+      spriteID: 3c221ae42784db24c850326da7725f0e
+      internalID: 1346767491
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_12
+      name: compleet_20
       rect:
         serializedVersion: 2
         x: 4000
@@ -376,14 +544,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0154d69a13082944797826cfc73f2f4c
-      internalID: 1037260878
+      spriteID: dba6451bd2588894cbc7facc838c30c1
+      internalID: -1913222400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_13
+      name: compleet_21
       rect:
         serializedVersion: 2
         x: 5000
@@ -397,14 +565,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38c2c0cb015ab364dadd8bd03a1ad4e4
-      internalID: -377737459
+      spriteID: c0f0f56275b077a4eb19b107212e404d
+      internalID: -754422225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_14
+      name: compleet_22
       rect:
         serializedVersion: 2
         x: 6000
@@ -418,14 +586,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aaf71951a3e7c5e4eb9a1256f924aa6f
-      internalID: 1326941649
+      spriteID: f6e4bb2ff59829a40a0937f4c6421972
+      internalID: -2089040752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_15
+      name: compleet_23
       rect:
         serializedVersion: 2
         x: 7000
@@ -439,14 +607,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a5d9471abdd67f4dbc672ce9c38aab9
-      internalID: 1964859351
+      spriteID: c3297f13bc068664995099a30026b8ca
+      internalID: 954615578
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_16
+      name: compleet_24
       rect:
         serializedVersion: 2
         x: 0
@@ -460,14 +628,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cebce69119e51f343a0883cf3992e74a
-      internalID: 1191995185
+      spriteID: 4ec54a9710683a14986499af9ae96008
+      internalID: 246138129
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_17
+      name: compleet_25
       rect:
         serializedVersion: 2
         x: 1000
@@ -481,14 +649,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3d8cb5dc7dff104c8dc3113ed0905b3
-      internalID: -1378446185
+      spriteID: 68b9f111a99b3a54fbd3eccc7b76b016
+      internalID: -1467698552
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_18
+      name: compleet_26
       rect:
         serializedVersion: 2
         x: 2000
@@ -502,14 +670,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4d587843f5992b44ab06acaa620f7c5
-      internalID: -1221497758
+      spriteID: e5d7aabe24d57814194d8f2fc7e88349
+      internalID: 1765223965
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_19
+      name: compleet_27
       rect:
         serializedVersion: 2
         x: 3000
@@ -523,14 +691,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38bb7e945f04db34d83350717ea3f9d4
-      internalID: 1805720220
+      spriteID: 6784465bc7a2daf4d919b29c61d0c5a2
+      internalID: -1005904947
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_20
+      name: compleet_28
       rect:
         serializedVersion: 2
         x: 4000
@@ -544,14 +712,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eaa88a93b809ff549ab6c7482748639d
-      internalID: -949419230
+      spriteID: 5a9f8b7db72406142ae57ea00efeac67
+      internalID: -1966675888
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_21
+      name: compleet_29
       rect:
         serializedVersion: 2
         x: 5000
@@ -565,14 +733,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1feef1a84ba439540b696af429cc9fb2
-      internalID: 572918675
+      spriteID: 6e431f407623c544a828ec821c2d3d3d
+      internalID: 1525039730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_22
+      name: compleet_30
       rect:
         serializedVersion: 2
         x: 6000
@@ -586,14 +754,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 221683c11a9ef6a43bddff3f6d01a56a
-      internalID: -471837782
+      spriteID: 7e1b2b34d5d33b045940347807d4541b
+      internalID: -1491022705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_23
+      name: compleet_31
       rect:
         serializedVersion: 2
         x: 7000
@@ -607,14 +775,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 756f2adf411812143b2fd74233c2f241
-      internalID: -1793498125
+      spriteID: 53878bad6825b3a458e572b74877a9c8
+      internalID: 826390130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_24
+      name: compleet_32
       rect:
         serializedVersion: 2
         x: 0
@@ -628,14 +796,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a26f91bf74b9a76409b2cb9d671dc035
-      internalID: 390445963
+      spriteID: b4d90664a4dd6ff4faa09ff9701a2a46
+      internalID: -984735087
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_25
+      name: compleet_33
       rect:
         serializedVersion: 2
         x: 1000
@@ -649,14 +817,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33c2f6d97c4fd5846a4f3292901a0db2
-      internalID: -1738931785
+      spriteID: 468f3ae649dad2e45bf14b9a3c6d34f0
+      internalID: -1958584334
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_26
+      name: compleet_34
       rect:
         serializedVersion: 2
         x: 2000
@@ -670,14 +838,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 669f9cd765ea83642a3277eeb08a6ad9
-      internalID: 1058875513
+      spriteID: 59207768f7f15654a80127aa4d454d35
+      internalID: -496197704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_27
+      name: compleet_35
       rect:
         serializedVersion: 2
         x: 3000
@@ -691,14 +859,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b426d1afe51ad9642b20a3d33b769a15
-      internalID: 1455809040
+      spriteID: 9cec5e358ff2893418163362e1d50936
+      internalID: -498382122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_28
+      name: compleet_36
       rect:
         serializedVersion: 2
         x: 4000
@@ -712,14 +880,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ac7a431972f0c84cb34c3e146912e66
-      internalID: 143606154
+      spriteID: 94a3d87a3f997fc469482eae51f5a1a7
+      internalID: 1896023981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_29
+      name: compleet_37
       rect:
         serializedVersion: 2
         x: 5000
@@ -733,14 +901,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14f9a067610c66543ba660bb315aabdb
-      internalID: -600437457
+      spriteID: c03a6b36acd76984fa21765aacdf7972
+      internalID: -664618633
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_30
+      name: compleet_38
       rect:
         serializedVersion: 2
         x: 6000
@@ -754,14 +922,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 198c183ec9149bb408ade9e3711f749a
-      internalID: -1360285826
+      spriteID: a979c3bf8bd1b4648b870b8a0711fabb
+      internalID: 354181986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_31
+      name: compleet_39
       rect:
         serializedVersion: 2
         x: 7000
@@ -775,14 +943,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33542cea66cefaf41b99dd6ab7f7e549
-      internalID: -20616089
+      spriteID: e836600f96c8ea640aeaaebcfa32e1ed
+      internalID: -784198792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_32
+      name: compleet_40
       rect:
         serializedVersion: 2
         x: 0
@@ -796,14 +964,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfac49b93d08a5640808faece94e0320
-      internalID: -1535787159
+      spriteID: fffaeec1822fd264380f9f08551fe1ce
+      internalID: -1888806983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_33
+      name: compleet_41
       rect:
         serializedVersion: 2
         x: 1000
@@ -817,14 +985,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7390d7cb821d5ed4c9871a95893665c2
-      internalID: 1856227911
+      spriteID: c5f1f8fedcf402d4a870c876e580072e
+      internalID: 1957600613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_34
+      name: compleet_42
       rect:
         serializedVersion: 2
         x: 2000
@@ -838,14 +1006,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8fb93a90763c5e4d9a19d041e230275
-      internalID: 288168202
+      spriteID: 10f226348be4e9a4598766bc60d5319c
+      internalID: -1447540910
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_35
+      name: compleet_43
       rect:
         serializedVersion: 2
         x: 3000
@@ -859,14 +1027,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4068f233d17cc9d4fa70b9c58f0e1849
-      internalID: -799328758
+      spriteID: 895b386aab89f384cbecba29aade5d16
+      internalID: -1921463356
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_36
+      name: compleet_44
       rect:
         serializedVersion: 2
         x: 4000
@@ -880,14 +1048,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6fecc7b6ab83f974f88e647bbd75a883
-      internalID: -1207137436
+      spriteID: 4da9dcecf883de04f864239fade00c44
+      internalID: -1831764198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_37
+      name: compleet_45
       rect:
         serializedVersion: 2
         x: 5000
@@ -901,14 +1069,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e2c2a739643a67489f57352c44493f2
-      internalID: 827821372
+      spriteID: b1f8a9761461b8c439ed33afaa599336
+      internalID: -57534021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_38
+      name: compleet_46
       rect:
         serializedVersion: 2
         x: 6000
@@ -922,14 +1090,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 065c54c2bb7d743449635523abe20d92
-      internalID: -1373480395
+      spriteID: 4504a3395fcfd734d8b28c03d900c316
+      internalID: 1358425005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_39
+      name: compleet_47
       rect:
         serializedVersion: 2
         x: 7000
@@ -943,14 +1111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c16343ecd03e6784e8c1ccdf3b5679e5
-      internalID: -1246498380
+      spriteID: 13febf6c43a3d9e4cb269d1d89603e66
+      internalID: 997872749
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_40
+      name: compleet_48
       rect:
         serializedVersion: 2
         x: 0
@@ -964,14 +1132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45eebb5c6c8d6aa4a9bc10889d69fc6b
-      internalID: -35894055
+      spriteID: 96be4f00b7b897f4a9a4bdd72327a4cc
+      internalID: 65664238
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_41
+      name: compleet_49
       rect:
         serializedVersion: 2
         x: 1000
@@ -985,14 +1153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de4affbd405a9d049bc1ebc10ab46525
-      internalID: 328816496
+      spriteID: 94a36d5d78102d74f849d5e3c13a9cde
+      internalID: -820772003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_42
+      name: compleet_50
       rect:
         serializedVersion: 2
         x: 2000
@@ -1006,14 +1174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6499ff3bd391b3a47809a2ae66c6ddc6
-      internalID: -434688586
+      spriteID: 899b1b5922ffc3e4d9ba72e3e143d0ec
+      internalID: 1136564381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_43
+      name: compleet_51
       rect:
         serializedVersion: 2
         x: 3000
@@ -1027,14 +1195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6336f85f7dd492d4f8440e3fde409b3e
-      internalID: 174916735
+      spriteID: 5d3ec484f176cd942a0c2e9780b03194
+      internalID: -1856631988
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_44
+      name: compleet_52
       rect:
         serializedVersion: 2
         x: 4000
@@ -1048,14 +1216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a77dea7f6fad17c448b83a3aaa7d044d
-      internalID: 2014912538
+      spriteID: e46131e9e8e54ba4b84a65cf03d6c900
+      internalID: 1092492487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_45
+      name: compleet_53
       rect:
         serializedVersion: 2
         x: 5000
@@ -1069,14 +1237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 972b1f3b68ab9664a905ec50e96f910a
-      internalID: 803867943
+      spriteID: be8f918b8b1748c4791cebdc7e33e572
+      internalID: -1395439061
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_46
+      name: compleet_54
       rect:
         serializedVersion: 2
         x: 6000
@@ -1090,14 +1258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b43794ccf23064c4c86b186ad1525301
-      internalID: 1430195297
+      spriteID: daa2e62e0eea8cc4cbc9263892cc1bc2
+      internalID: -626289604
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_47
+      name: compleet_55
       rect:
         serializedVersion: 2
         x: 7000
@@ -1111,14 +1279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 530497553db192b438e10769dc70093d
-      internalID: -1516671768
+      spriteID: ae7ecb0bf360b9b4d95c4b9ee74f113e
+      internalID: 126409642
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_48
+      name: compleet_56
       rect:
         serializedVersion: 2
         x: 0
@@ -1132,14 +1300,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 800359ce09b722a409cb5b0c364083e6
-      internalID: -1180548341
+      spriteID: e34d3a63951a93443b81d303cf445dd4
+      internalID: 535238844
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_49
+      name: compleet_57
       rect:
         serializedVersion: 2
         x: 1000
@@ -1153,14 +1321,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4fc25e2e5a17b44cac8872028104c07
-      internalID: 1304614716
+      spriteID: 49e7fde2cf57b64418ba7d656d8b077b
+      internalID: 700744851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_50
+      name: compleet_58
       rect:
         serializedVersion: 2
         x: 2000
@@ -1174,14 +1342,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6afb6d0cd1e844a48b340f902f1be5bc
-      internalID: -513303471
+      spriteID: ff0acd95fbe7ddc42bd0bc9b104f7e5b
+      internalID: -98040553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_51
+      name: compleet_59
       rect:
         serializedVersion: 2
         x: 3000
@@ -1195,14 +1363,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fb643cba6e28a945bdb77f0914e4dc0
-      internalID: -740038745
+      spriteID: bcc30f37e9794334f9fb734487ed561d
+      internalID: -534529438
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_52
+      name: compleet_60
       rect:
         serializedVersion: 2
         x: 4000
@@ -1216,14 +1384,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e0cace92d3ae5144944ad87c5238f2b
-      internalID: 507531485
+      spriteID: ee854d2acc7159048b700f54da90c10d
+      internalID: 749056783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_53
+      name: compleet_61
       rect:
         serializedVersion: 2
         x: 5000
@@ -1237,14 +1405,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b34c7152ae4e3c84f83c87becdbd6058
-      internalID: 1782291930
+      spriteID: 1380aa8a2b1c00c46b5ec976486f9366
+      internalID: 1927350709
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_54
+      name: compleet_62
       rect:
         serializedVersion: 2
         x: 6000
@@ -1258,14 +1426,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf31bbc63e40e2845a7f66ffa355c029
-      internalID: 997092276
+      spriteID: 23957f6c26c78474a86bf94daf9370d7
+      internalID: 588270752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big boss Idle and walk_55
+      name: compleet_63
       rect:
         serializedVersion: 2
         x: 7000
@@ -1279,8 +1447,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73436598c4c3c3546be25f19996b41f8
-      internalID: -1987953520
+      spriteID: 0c01025cec40dc74a9ab3582b96de09f
+      internalID: 1643306663
       vertices: []
       indices: 
       edges: []
@@ -1296,62 +1464,70 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Big boss Idle and walk_0: -1930067918
-      Big boss Idle and walk_1: 1450506522
-      Big boss Idle and walk_10: 1758298226
-      Big boss Idle and walk_11: 1018058098
-      Big boss Idle and walk_12: 1037260878
-      Big boss Idle and walk_13: -377737459
-      Big boss Idle and walk_14: 1326941649
-      Big boss Idle and walk_15: 1964859351
-      Big boss Idle and walk_16: 1191995185
-      Big boss Idle and walk_17: -1378446185
-      Big boss Idle and walk_18: -1221497758
-      Big boss Idle and walk_19: 1805720220
-      Big boss Idle and walk_2: 1227058635
-      Big boss Idle and walk_20: -949419230
-      Big boss Idle and walk_21: 572918675
-      Big boss Idle and walk_22: -471837782
-      Big boss Idle and walk_23: -1793498125
-      Big boss Idle and walk_24: 390445963
-      Big boss Idle and walk_25: -1738931785
-      Big boss Idle and walk_26: 1058875513
-      Big boss Idle and walk_27: 1455809040
-      Big boss Idle and walk_28: 143606154
-      Big boss Idle and walk_29: -600437457
-      Big boss Idle and walk_3: -1276361584
-      Big boss Idle and walk_30: -1360285826
-      Big boss Idle and walk_31: -20616089
-      Big boss Idle and walk_32: -1535787159
-      Big boss Idle and walk_33: 1856227911
-      Big boss Idle and walk_34: 288168202
-      Big boss Idle and walk_35: -799328758
-      Big boss Idle and walk_36: -1207137436
-      Big boss Idle and walk_37: 827821372
-      Big boss Idle and walk_38: -1373480395
-      Big boss Idle and walk_39: -1246498380
-      Big boss Idle and walk_4: -1616711859
-      Big boss Idle and walk_40: -35894055
-      Big boss Idle and walk_41: 328816496
-      Big boss Idle and walk_42: -434688586
-      Big boss Idle and walk_43: 174916735
-      Big boss Idle and walk_44: 2014912538
-      Big boss Idle and walk_45: 803867943
-      Big boss Idle and walk_46: 1430195297
-      Big boss Idle and walk_47: -1516671768
-      Big boss Idle and walk_48: -1180548341
-      Big boss Idle and walk_49: 1304614716
-      Big boss Idle and walk_5: 1183516685
-      Big boss Idle and walk_50: -513303471
-      Big boss Idle and walk_51: -740038745
-      Big boss Idle and walk_52: 507531485
-      Big boss Idle and walk_53: 1782291930
-      Big boss Idle and walk_54: 997092276
-      Big boss Idle and walk_55: -1987953520
-      Big boss Idle and walk_6: 745340676
-      Big boss Idle and walk_7: 1645412013
-      Big boss Idle and walk_8: 444804650
-      Big boss Idle and walk_9: 1794718470
+      compleet_0: -979271782
+      compleet_1: 1346149215
+      compleet_10: -491837034
+      compleet_11: -2123455423
+      compleet_12: 2030260434
+      compleet_13: -231816365
+      compleet_14: 578636889
+      compleet_15: -1419061084
+      compleet_16: -2104582695
+      compleet_17: 1906014689
+      compleet_18: -1012454672
+      compleet_19: 1346767491
+      compleet_2: -1253194570
+      compleet_20: -1913222400
+      compleet_21: -754422225
+      compleet_22: -2089040752
+      compleet_23: 954615578
+      compleet_24: 246138129
+      compleet_25: -1467698552
+      compleet_26: 1765223965
+      compleet_27: -1005904947
+      compleet_28: -1966675888
+      compleet_29: 1525039730
+      compleet_3: -793388899
+      compleet_30: -1491022705
+      compleet_31: 826390130
+      compleet_32: -984735087
+      compleet_33: -1958584334
+      compleet_34: -496197704
+      compleet_35: -498382122
+      compleet_36: 1896023981
+      compleet_37: -664618633
+      compleet_38: 354181986
+      compleet_39: -784198792
+      compleet_4: -153812682
+      compleet_40: -1888806983
+      compleet_41: 1957600613
+      compleet_42: -1447540910
+      compleet_43: -1921463356
+      compleet_44: -1831764198
+      compleet_45: -57534021
+      compleet_46: 1358425005
+      compleet_47: 997872749
+      compleet_48: 65664238
+      compleet_49: -820772003
+      compleet_5: 523922852
+      compleet_50: 1136564381
+      compleet_51: -1856631988
+      compleet_52: 1092492487
+      compleet_53: -1395439061
+      compleet_54: -626289604
+      compleet_55: 126409642
+      compleet_56: 535238844
+      compleet_57: 700744851
+      compleet_58: -98040553
+      compleet_59: -534529438
+      compleet_6: -1248380994
+      compleet_60: 749056783
+      compleet_61: 1927350709
+      compleet_62: 588270752
+      compleet_63: 1643306663
+      compleet_7: -1591258690
+      compleet_8: -1972867023
+      compleet_9: -1025295984
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -10,13 +10,13 @@ public class BossRoarState : BossBaseState {
 	private bool _attackCooldown = false;
 	public override void EnterState() {
 		_switchState = false;
-		Boss.Animator.Play("Boss_Roar");
-		// Boss.BossAttacks.RoarAttack();
+		Boss.BossAnimation.SetBool("RoarAttack", true);
 		SoundManager.Instance.PlayClip(Boss.RoarSoundClip, Boss.transform, 1f);
 		Boss.StartCoroutine(AttackCooldown());
 		Boss.StartCoroutine(SwitchState());
 	}
 	public override void UpdateState() {
+		Boss.CheckForPlayer();
 		if (_attackCooldown) {
 			Boss.BossAttacks.RoarAttack();
 			Logger.Log("attack", "Attack");
@@ -26,14 +26,20 @@ public class BossRoarState : BossBaseState {
 		if (_switchState) {
 			Boss.SwitchState("Idle");
 		}
+		Boss.Movement = (Boss.Player.transform.position - Boss.transform.position).normalized;
+		Boss.BossAnimation.SetFloat("X", Boss.Movement.x);
+		Boss.BossAnimation.SetFloat("Y", Boss.Movement.y);
 	}
-	public override void ExitState() { }
+	public override void ExitState() {
+		Boss.BossAnimation.SetBool("RoarAttack", false);
+		Boss.playerinroar = false;
+	}
 	IEnumerator SwitchState() {
-		yield return new WaitForSecondsRealtime(Boss.Stats.RoarTime);
+		yield return new WaitForSecondsRealtime(1.04f);
 		_switchState = true;
 	}
 	IEnumerator AttackCooldown() {
-		yield return new WaitForSecondsRealtime(Boss.Stats.SlamTime / 2f);
+		yield return new WaitForSecondsRealtime(0.5f);
 		_attackCooldown = true;
 	}
 

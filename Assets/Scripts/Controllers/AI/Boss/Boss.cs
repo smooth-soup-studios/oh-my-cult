@@ -9,7 +9,6 @@ public class Boss : MonoBehaviour, ISaveable {
 	[SerializeField] public BossAttacks BossAttacks;
 	[SerializeField] public AudioClip RoarSoundClip;
 	public Transform Player;
-	public AnimationManager Animator;
 	public BossBaseState CurrentState;
 	public List<BossBaseState> States;
 	[HideInInspector] public int StateCounter = 0;
@@ -17,22 +16,21 @@ public class Boss : MonoBehaviour, ISaveable {
 	[HideInInspector] public bool Charge;
 
 	private bool _isAlive = true;
-
-
+	public Animator BossAnimation;
+	[HideInInspector] public Vector2 Movement;
+	// public BossRoarHitbox BossRoarHitbox;
+	public bool playerinroar = false;
 
 	void Start() {
 		if (!_isAlive) {
 			gameObject.SetActive(false);
 		}
-
-		Animator = new(GetComponent<Animator>());
-
+		BossAnimation = GetComponent<Animator>();
 		EventBus.Instance.Subscribe<GameObject>(EventType.DEATH, obj => {
 			if (obj == gameObject) {
 				_isAlive = false;
 				gameObject.SetActive(false);
 				SceneManager.LoadScene(SceneDefs.EndingScreen);
-
 			}
 		});
 
@@ -73,24 +71,24 @@ public class Boss : MonoBehaviour, ISaveable {
 		if (hitEnemies.Length >= 1) {
 			Enemy = true;
 			Charge = false;
+				}
 		}
-	}
 
 	public void LoadData(GameData data) {
-		if (data.SceneData.ArbitraryTriggers.ContainsKey("BossDead")) {
-			data.SceneData.ArbitraryTriggers.TryGetValue("BossDead", out _isAlive);
+			if (data.SceneData.ArbitraryTriggers.ContainsKey("BossDead")) {
+				data.SceneData.ArbitraryTriggers.TryGetValue("BossDead", out _isAlive);
+			}
 		}
-	}
 
-	public void SaveData(GameData data) {
-		data.SceneData.ArbitraryTriggers["BossDead"] = isActiveAndEnabled;
-	}
+		public void SaveData(GameData data) {
+			data.SceneData.ArbitraryTriggers["BossDead"] = isActiveAndEnabled;
+		}
 
-	public IEnumerator FlashRed() {
-		GetComponent<SpriteRenderer>().color = Color.magenta;
-		yield return new WaitForSeconds(0.5f);
-		GetComponent<SpriteRenderer>().color = Color.white;
-	}
+		public IEnumerator FlashRed() {
+			GetComponent<SpriteRenderer>().color = Color.magenta;
+			yield return new WaitForSeconds(0.5f);
+			GetComponent<SpriteRenderer>().color = Color.white;
+		}
 
 	public List<WeightedStates> WeightedValues;
 	public int GetRendomValue(List<WeightedStates> weightedValuesList) {

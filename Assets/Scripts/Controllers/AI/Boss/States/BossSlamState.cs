@@ -4,42 +4,51 @@ using UnityEngine;
 
 public class BossSlamAttack : BossBaseState {
 	private bool _switchState = false;
-	private bool _attackCooldown = false;
-
-
+	private bool _firstSlam = false;
+	private bool _seccondSlam = false;
 
 	public BossSlamAttack(Boss boss, string name) : base(boss, name) { }
 	public override void EnterState() {
 		_switchState = false;
-		_attackCooldown = false;
-		Boss.Animator.Play("Boss_Slam");
-		Boss.BossAttacks.SlamAttack();
-		Boss.StartCoroutine(AttackCooldown());
+		Boss.BossAnimation.SetBool("SlamAttack", true);
+		Boss.StartCoroutine(FirstSlam());
 		Boss.StartCoroutine(SwitchState());
-
 	}
 	public override void UpdateState() {
-		if (_attackCooldown) {
+		if (_firstSlam) {
 			Boss.BossAttacks.SlamAttack();
-			_attackCooldown = false;
+			_firstSlam = false;
+			Boss.StartCoroutine(SeccondSlam());
 		}
-
+		else if (_seccondSlam) {
+			Boss.BossAttacks.SlamAttack();
+			_seccondSlam = false;
+		}
 		if (_switchState) {
 			Boss.SwitchState("Idle");
 		}
+		Boss.Movement = (Boss.Player.transform.position - Boss.transform.position).normalized;
+		Boss.BossAnimation.SetFloat("X", Boss.Movement.x);
+		Boss.BossAnimation.SetFloat("Y", Boss.Movement.y);
 	}
 	public override void ExitState() {
-		_attackCooldown = false;
+		_firstSlam = false;
+		_seccondSlam = false;
+		Boss.BossAnimation.SetBool("SlamAttack", false);
 	}
 
 	IEnumerator SwitchState() {
-		yield return new WaitForSecondsRealtime(10f);
+		yield return new WaitForSecondsRealtime(1.04f);
 		_switchState = true;
 	}
-
-	IEnumerator AttackCooldown() {
-		yield return new WaitForSecondsRealtime(Boss.Stats.SlamTime/2f);
-		_attackCooldown = true;
+	IEnumerator FirstSlam() {
+		yield return new WaitForSecondsRealtime(0.16f);
+		_firstSlam = true;
 	}
+	IEnumerator SeccondSlam() {
+		yield return new WaitForSecondsRealtime(0.7f);
+		_seccondSlam = true;
+	}
+
 
 }

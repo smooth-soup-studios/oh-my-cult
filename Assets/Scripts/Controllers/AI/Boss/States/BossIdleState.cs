@@ -9,13 +9,11 @@ public class BossIdleState : BossBaseState {
 		_switchState = false;
 		// Boss.StateCounter = Random.Range(0, Boss.States.Count - 1);
 		Boss.StateCounter = Boss.GetRendomValue(Boss.WeightedValues);
-		Boss.Animator.Play("Boss_Idle");
-
 		Boss.StartCoroutine(SwitchTime());
 	}
 	public override void UpdateState() {
 		if (_switchState) {
-			switch (Boss.StateCounter) {
+				switch (Boss.StateCounter) {
 				case 0:
 					Boss.SwitchState("Slam");
 					break;
@@ -30,13 +28,19 @@ public class BossIdleState : BossBaseState {
 					break;
 			}
 		}
+		else if (Vector2.Distance(Boss.Player.transform.position, Boss.transform.position) >= 100f) {
+			Boss.SwitchState("Move");
+		}
+		Boss.Movement = (Boss.Player.transform.position - Boss.transform.position).normalized;
+		Boss.BossAnimation.SetFloat("X", Boss.Movement.x);
+		Boss.BossAnimation.SetFloat("Y", Boss.Movement.y);
 	}
 	public override void ExitState() {
 		Boss.StartCoroutine(Boss.FlashRed());
 	}
 
 	IEnumerator SwitchTime() {
-		yield return new WaitForSecondsRealtime(2f);
+		yield return new WaitForSecondsRealtime(5f);
 		_switchState = true;
 	}
 

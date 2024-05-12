@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 61055242ace7e9a4d9eea74856b20d05
+guid: f14c16834edae6e4aad53a6684040a54
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -108,7 +108,679 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Big boss slam_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4200
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0419241bb1eeb74d8d21d0fa9dad677
+      internalID: -1922357855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_1
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 4200
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98fd444043dea0c49ba90a7ed75a39b0
+      internalID: -986932583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_2
+      rect:
+        serializedVersion: 2
+        x: 2798
+        y: 4200
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 989abde5dde1ad6478d7a4be8ad5fff5
+      internalID: -1041580821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_3
+      rect:
+        serializedVersion: 2
+        x: 4197
+        y: 4200
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e672bce999aab24cb1b827f6bd2534d
+      internalID: 1037285875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_4
+      rect:
+        serializedVersion: 2
+        x: 5596
+        y: 4200
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c0a4978f020104687025e403b529c2
+      internalID: -1587688415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_5
+      rect:
+        serializedVersion: 2
+        x: 6995
+        y: 4200
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 799a3707c3010904188301dfa5631626
+      internalID: 1454903672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_6
+      rect:
+        serializedVersion: 2
+        x: 8394
+        y: 4200
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 428ce91ae5c746e44901c276d46bd9ca
+      internalID: 1705093075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_7
+      rect:
+        serializedVersion: 2
+        x: 9793
+        y: 4200
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b40391050a323bf4b9ee021da0a88ae1
+      internalID: -160245806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2800
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4321c9d612538b543908e756ec71782e
+      internalID: -2090388124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_9
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 2800
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45bf17022d9f93a40b43cb0d0f9bf98e
+      internalID: -184347994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_10
+      rect:
+        serializedVersion: 2
+        x: 2798
+        y: 2800
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98b615ebb0b040940a9063f2d2bd8018
+      internalID: 219313699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_11
+      rect:
+        serializedVersion: 2
+        x: 4197
+        y: 2800
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f34821483eea7641ae03e40cd28320e
+      internalID: -7703866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_12
+      rect:
+        serializedVersion: 2
+        x: 5596
+        y: 2800
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ecafd783b98ad944baa4dc4716c7f9c
+      internalID: -1604226150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_13
+      rect:
+        serializedVersion: 2
+        x: 6995
+        y: 2800
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df2c611e821988c42b499507c64fd0d2
+      internalID: -1261620305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_14
+      rect:
+        serializedVersion: 2
+        x: 8394
+        y: 2800
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fce32634bbc24e41a779566e38b44e9
+      internalID: 735362388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_15
+      rect:
+        serializedVersion: 2
+        x: 9793
+        y: 2800
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 542fa124801395148ac150f98940f5fa
+      internalID: 641944993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1400
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 067ec484e3820c342942666311d203b5
+      internalID: 921190101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_17
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 1400
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51d22b548256dc94cb1a682e45af7710
+      internalID: -45280431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_18
+      rect:
+        serializedVersion: 2
+        x: 2798
+        y: 1400
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855c840e992853043add09903c4bb68d
+      internalID: 1990754869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_19
+      rect:
+        serializedVersion: 2
+        x: 4197
+        y: 1400
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be60560421241384fa5b258dac81621d
+      internalID: 1876798004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_20
+      rect:
+        serializedVersion: 2
+        x: 5596
+        y: 1400
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c573744faf42d940b65421d8be942a6
+      internalID: -1802715403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_21
+      rect:
+        serializedVersion: 2
+        x: 6995
+        y: 1400
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbfd71f53435b744eb9f24789b550461
+      internalID: 661749381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_22
+      rect:
+        serializedVersion: 2
+        x: 8394
+        y: 1400
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db40f96ff27b55e4698ab443871d8f09
+      internalID: -232367504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_23
+      rect:
+        serializedVersion: 2
+        x: 9793
+        y: 1400
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf5ff410b69c994ba3446e2603e8c17
+      internalID: 1813926173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce5270c83ae2ab4d8ebe1cb0bcc841e
+      internalID: -309302539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_25
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 0
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f700c9b7795247459a68a99c2a69556
+      internalID: 1072990128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_26
+      rect:
+        serializedVersion: 2
+        x: 2798
+        y: 0
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b2f9c5016f455f49953257c363f24e4
+      internalID: -1982923606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_27
+      rect:
+        serializedVersion: 2
+        x: 4197
+        y: 0
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ace7c2525c3a7ba44bc0f6112e4e0018
+      internalID: -446665919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_28
+      rect:
+        serializedVersion: 2
+        x: 5596
+        y: 0
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3a763da9f1ad9c47addd241b379f3f0
+      internalID: 1804449381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_29
+      rect:
+        serializedVersion: 2
+        x: 6995
+        y: 0
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99aece04bde47494b8a4b19377d5dcd6
+      internalID: 1542971358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_30
+      rect:
+        serializedVersion: 2
+        x: 8394
+        y: 0
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3543bc7d6093bf94287044e1ce3430e4
+      internalID: -762682209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss slam_31
+      rect:
+        serializedVersion: 2
+        x: 9793
+        y: 0
+        width: 1399.75
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d9124c48c72b74197e914ca25f8f66
+      internalID: -1967299728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +791,39 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Big boss slam_0: -1922357855
+      Big boss slam_1: -986932583
+      Big boss slam_10: 219313699
+      Big boss slam_11: -7703866
+      Big boss slam_12: -1604226150
+      Big boss slam_13: -1261620305
+      Big boss slam_14: 735362388
+      Big boss slam_15: 641944993
+      Big boss slam_16: 921190101
+      Big boss slam_17: -45280431
+      Big boss slam_18: 1990754869
+      Big boss slam_19: 1876798004
+      Big boss slam_2: -1041580821
+      Big boss slam_20: -1802715403
+      Big boss slam_21: 661749381
+      Big boss slam_22: -232367504
+      Big boss slam_23: 1813926173
+      Big boss slam_24: -309302539
+      Big boss slam_25: 1072990128
+      Big boss slam_26: -1982923606
+      Big boss slam_27: -446665919
+      Big boss slam_28: 1804449381
+      Big boss slam_29: 1542971358
+      Big boss slam_3: 1037285875
+      Big boss slam_30: -762682209
+      Big boss slam_31: -1967299728
+      Big boss slam_4: -1587688415
+      Big boss slam_5: 1454903672
+      Big boss slam_6: 1705093075
+      Big boss slam_7: -160245806
+      Big boss slam_8: -2090388124
+      Big boss slam_9: -184347994
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

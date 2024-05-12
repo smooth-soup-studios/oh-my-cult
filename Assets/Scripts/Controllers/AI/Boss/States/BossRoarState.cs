@@ -31,7 +31,6 @@ public class BossRoarState : BossBaseState {
 	}
 	public override void ExitState() {
 		Boss.BossAnimation.SetBool("RoarAttack", false);
-		Boss.playerinroar = false;
 	}
 	IEnumerator SwitchState() {
 		yield return new WaitForSecondsRealtime(1.04f);

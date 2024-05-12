@@ -19,7 +19,6 @@ public class Boss : MonoBehaviour, ISaveable {
 	public Animator BossAnimation;
 	[HideInInspector] public Vector2 Movement;
 	// public BossRoarHitbox BossRoarHitbox;
-	public bool playerinroar = false;
 
 	void Start() {
 		if (!_isAlive) {
@@ -53,16 +52,38 @@ public class Boss : MonoBehaviour, ISaveable {
 		CurrentState?.EnterState();
 	}
 
-	// Update is called once per frame
+	Vector2 _oldMove;
 	void Update() {
 		CurrentState?.UpdateState();
+		if (Movement != _oldMove) {
+			RotateHitboxOnMove(Movement);
+			_oldMove = Movement;
+		}
 	}
 
-	private void OnDrawGizmos() {
-		if (transform == null)
-			return;
-		Gizmos.color = Color.blue;
-		Gizmos.DrawWireSphere(transform.position, Stats.ChargeRange);
+	private void RotateHitboxOnMove(Vector2 movement) {
+		movement = RoundVector(movement);
+		Transform HitContainer = GetComponentInChildren<BossRoarHitbox>().transform.parent;
+		Quaternion currentRotation = HitContainer.transform.rotation;
+
+		if (movement.x > 0) { //L
+			currentRotation = Quaternion.Euler(0, 0, 90);
+		}
+		else if (movement.x < 0) { //R
+			currentRotation = Quaternion.Euler(0, 0, -90);
+		}
+		else if (movement.y > 0) { //U
+			currentRotation = Quaternion.Euler(0, 0, 180);
+		}
+		else if (movement.y < 0) { //D
+			currentRotation = Quaternion.Euler(0, 0, 0);
+		}
+
+		HitContainer.transform.rotation = currentRotation;
+	}
+
+	private Vector2 RoundVector(Vector2 vector) {
+		return new Vector2(Mathf.Round(vector.x), Mathf.Round(vector.y));
 	}
 
 	public void CheckForPlayer() {
@@ -71,24 +92,14 @@ public class Boss : MonoBehaviour, ISaveable {
 		if (hitEnemies.Length >= 1) {
 			Enemy = true;
 			Charge = false;
-				}
 		}
+	}
 
-	public void LoadData(GameData data) {
-			if (data.SceneData.ArbitraryTriggers.ContainsKey("BossDead")) {
-				data.SceneData.ArbitraryTriggers.TryGetValue("BossDead", out _isAlive);
-			}
-		}
-
-		public void SaveData(GameData data) {
-			data.SceneData.ArbitraryTriggers["BossDead"] = isActiveAndEnabled;
-		}
-
-		public IEnumerator FlashRed() {
-			GetComponent<SpriteRenderer>().color = Color.magenta;
-			yield return new WaitForSeconds(0.5f);
-			GetComponent<SpriteRenderer>().color = Color.white;
-		}
+	public IEnumerator FlashRed() {
+		GetComponent<SpriteRenderer>().color = Color.magenta;
+		yield return new WaitForSeconds(0.5f);
+		GetComponent<SpriteRenderer>().color = Color.white;
+	}
 
 	public List<WeightedStates> WeightedValues;
 	public int GetRendomValue(List<WeightedStates> weightedValuesList) {
@@ -109,5 +120,23 @@ public class Boss : MonoBehaviour, ISaveable {
 			}
 		}
 		return output;
+	}
+
+
+	private void OnDrawGizmos() {
+		if (transform == null)
+			return;
+		Gizmos.color = Color.blue;
+		Gizmos.DrawWireSphere(transform.position, Stats.ChargeRange);
+	}
+
+	public void LoadData(GameData data) {
+		if (data.SceneData.ArbitraryTriggers.ContainsKey("BossDead")) {
+			data.SceneData.ArbitraryTriggers.TryGetValue("BossDead", out _isAlive);
+		}
+	}
+
+	public void SaveData(GameData data) {
+		data.SceneData.ArbitraryTriggers["BossDead"] = isActiveAndEnabled;
 	}
 }

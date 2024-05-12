@@ -23,11 +23,30 @@ public class FoodPickupInteractable : BaseItemPickupInteractable {
 	}
 
 	private void UpdateSprite() {
-		if (Item == null) {
-			_spriteRenderer.sprite = null;
+		OnValidate(); // Yea it's not how you're supposed to use it but IDC.
+	}
+
+	private void OnValidate() {
+		SpriteRenderer renderer;
+		if (_spriteRenderer) {
+			renderer = _spriteRenderer;
 		}
 		else {
-			_spriteRenderer.sprite = Item.InvData.ItemIcon;
+			renderer = GetComponent<SpriteRenderer>();
+		}
+
+		if (Item == null) {
+			renderer.sprite = null;
+		}
+		else {
+			Sprite itemSprite;
+			if (Item.InvData.ItemPrefab.TryGetComponent<SpriteRenderer>(out SpriteRenderer srenderer)) {
+				itemSprite = srenderer.sprite;
+			}
+			else {
+				itemSprite = Item.InvData.ItemIcon;
+			}
+			renderer.sprite = itemSprite;
 		}
 	}
 

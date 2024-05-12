@@ -23,8 +23,28 @@ public class WeaponPickupPoint : BaseItemPickupInteractable {
 	}
 
 	private void UpdateSprite() {
+		OnValidate(); // Yea it's not how you're supposed to use it but IDC.
+	}
+
+	public override void OnDeselect() {
+		_spriteRenderer.color = Color.white;
+	}
+
+	public override void OnSelect() {
+		_spriteRenderer.color = Color.green;
+	}
+
+	private void OnValidate() {
+		SpriteRenderer renderer;
+		if (_spriteRenderer) {
+			renderer = _spriteRenderer;
+		}
+		else {
+			renderer = GetComponent<SpriteRenderer>();
+		}
+
 		if (Item == null) {
-			_spriteRenderer.sprite = null;
+			renderer.sprite = null;
 		}
 		else {
 			Sprite itemSprite;
@@ -34,17 +54,8 @@ public class WeaponPickupPoint : BaseItemPickupInteractable {
 			else {
 				itemSprite = Item.InvData.ItemIcon;
 			}
-			_spriteRenderer.sprite = itemSprite;
-
+			renderer.sprite = itemSprite;
 		}
-	}
-
-	public override void OnDeselect() {
-		_spriteRenderer.color = Color.white;
-	}
-
-	public override void OnSelect() {
-		_spriteRenderer.color = Color.green;
 	}
 
 	public override void LoadData(GameData data) {

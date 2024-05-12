@@ -20,6 +20,7 @@ public class UIBuilderInGameMenu : MonoBehaviour
 	VisualElement _keyBindings;
 	VisualElement _optionsUI;
 	VisualElement _pauseMenu;
+	VisualElement _quitWarning;
 
 	private void OnEnable() {
         EventBus.Instance.Subscribe(EventType.PAUSE, OnPause);
@@ -28,6 +29,7 @@ public class UIBuilderInGameMenu : MonoBehaviour
 		_keyBindings = GameObject.Find("KeyBindings").GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container");
 		_optionsUI = GameObject.Find("OptionsMenu").GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container");
 		_pauseMenu = GameObject.Find("PauseMenu").GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container");
+		_quitWarning = GameObject.Find("QuitWarning").GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container");
 
 		_continueButton = _root.Q<Button>("ContinueButton");
 		_loadGameButton = _root.Q<Button>("LoadButton");
@@ -49,8 +51,7 @@ public class UIBuilderInGameMenu : MonoBehaviour
 	}
 
 	public void QuitGame() {
-		Logger.Log("MenuController", "THE MENU IS DEAD!");
-		//Application.Quit();
+		_quitWarning.visible = true;
 	}
 
 	public void DisableButtons() {
@@ -77,7 +78,7 @@ public class UIBuilderInGameMenu : MonoBehaviour
             _pauseMenu.visible = true;
             Time.timeScale = 0;
         }
-        else if(Time.timeScale == 0 && _pauseMenu.visible){
+        else if(Time.timeScale == 0 && _pauseMenu.visible && !_quitWarning.visible){
             _hud.visible = true;
             _pauseMenu.visible = false;
             Time.timeScale = 1;

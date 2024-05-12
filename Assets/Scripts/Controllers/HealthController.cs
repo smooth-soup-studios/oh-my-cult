@@ -22,6 +22,7 @@ public class HealthController : MonoBehaviour, ISaveable {
 		if (_currentHealth <= 0) {
 			EventBus.Instance.TriggerEvent<GameObject>(EventType.DEATH, gameObject);
 			Logger.Log(_logname, $"The {name} is dead!");
+			Destroy(gameObject);
 		}
 	}
 
@@ -62,6 +63,7 @@ public class HealthController : MonoBehaviour, ISaveable {
 		if (_currentHealth <= 0) {
 			EventBus.Instance.TriggerEvent<GameObject>(EventType.DEATH, gameObject);
 			Logger.Log(_logname, $"The {name} is dead!");
+			Destroy(gameObject);
 		}
 
 		if (!gameObject.CompareTag("Player")) return;

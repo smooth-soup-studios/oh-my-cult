@@ -18,6 +18,9 @@ public class WeaponItem : InteractableItem {
 					if (obj.TryGetComponent<HealthController>(out HealthController enemy)) {
 						enemy.TakeDamage(WeaponStats.WeaponData.Damage);
 					}
+					if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
+						rb.AddForce((obj.transform.position - transform.position).normalized * _weaponData.WeaponData.Knockback * rb.mass, ForceMode2D.Impulse);
+					}
 				}
 			});
 		}
@@ -32,6 +35,9 @@ public class WeaponItem : InteractableItem {
 					EventBus.Instance.TriggerEvent(EventType.HIT, (obj, source));
 					if (obj.TryGetComponent<HealthController>(out HealthController enemy)) {
 						enemy.TakeDamage(WeaponStats.WeaponData.Damage);
+					}
+					if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
+						rb.AddForce((obj.transform.position - transform.position).normalized * _weaponData.WeaponData.Knockback * rb.mass, ForceMode2D.Impulse);
 					}
 				}
 			});

@@ -46,7 +46,7 @@ public class Enemy : MonoBehaviour, ISaveable {
 		};
 		SwitchState("Patrol");
 		Rb = GetComponent<Rigidbody2D>();
-		Rb.isKinematic = true;
+		// Rb.isKinematic = true; // May need to be removed
 		Agent = GetComponent<NavMeshAgent>();
 		Agent.updateRotation = false;
 		Agent.updateUpAxis = false;

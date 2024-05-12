@@ -12,4 +12,5 @@ public class WeaponData {
 	public float Damage;
 	public float AttackSpeed;
 	public float Range;
+	public float Knockback;
 }

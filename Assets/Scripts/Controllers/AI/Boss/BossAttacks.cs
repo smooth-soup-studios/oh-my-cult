@@ -1,45 +1,60 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
+using System.Linq;
 using UnityEngine;
 
 public class BossAttacks : MonoBehaviour {
 	public BossStatsSO Stats;
 	[SerializeField] public LayerMask EnemyLayer;
+	[SerializeField] private WeaponStats _weaponData;
+	public FlashOnAttack SlamFlashOnAttackLeft;
 
-
+	public FlashOnAttack SlamFlashOnAttackRight;
+	public FlashOnAttack RoarFlashOnAttack;
+	public FlashOnAttack ChargeFlashOnAttackLeft;
+	public FlashOnAttack ChargeFlashOnAttackRight;
 
 	//TODO:
 	//rename the component to calculate health
 	public void SlamAttack() {
-		Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, Stats.SlamRange, EnemyLayer);
-		foreach (Collider2D Enemy in hitEnemies) {
-			if (Enemy.TryGetComponent<HealthController>(out HealthController opponent)) {
-				opponent.TakeDamage(Stats.SlamDamage);
+
+		SlamFlashOnAttackLeft.StartCoroutine(SlamFlashOnAttackLeft.FlashSlamAttack());
+		SlamFlashOnAttackRight.StartCoroutine(SlamFlashOnAttackRight.FlashSlamAttack());
+		GetComponentsInChildren<BossSlamHitbox>().Where(e => e != null).ToList().ForEach(e => e.GetObjectsInCollider().ForEach(obj => {
+			if (obj.TryGetComponent<HealthController>(out HealthController opponent)) {
+				opponent.TakeDamage(_weaponData.WeaponData.Damage);
 			}
-		}
+		}));
+
 	}
 
 	//TODO:
 	//rename the component to calculate health
 
 	public void RoarAttack() {
-		Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, Stats.RoarRange, EnemyLayer);
-		foreach (Collider2D Enemy in hitEnemies) {
-			if (Enemy.TryGetComponent<HealthController>(out HealthController opponent)) {
-				opponent.TakeDamage(Stats.RoarAttack);
-			}
+		RoarFlashOnAttack.StartCoroutine(RoarFlashOnAttack.FlashRoarAttack());
+		try {
+			GetComponentsInChildren<BossRoarHitbox>().Where(e => e != null).ToList().ForEach(e => e.GetObjectsInCollider().ForEach(obj => {
+				if (obj.TryGetComponent<HealthController>(out HealthController opponent)) {
+					opponent.TakeDamage(_weaponData.WeaponData.Damage);
+				}
+			}));
+		}
+		catch (System.Exception) {
 		}
 	}
 
-	//TODO:
-	//rename the component to calculate health
-		public void ChargeAttack() {
-		Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, Stats.ChargeRange, EnemyLayer);
-		foreach (Collider2D Enemy in hitEnemies) {
-			if (Enemy.TryGetComponent<HealthController>(out HealthController opponent)) {
-				opponent.TakeDamage(Stats.ChargeAttack);
+	// //TODO:
+	// //rename the component to calculate health
+	public void ChargeAttack() {
+
+		ChargeFlashOnAttackLeft.StartCoroutine(ChargeFlashOnAttackLeft.FlashChargeAttack());
+		ChargeFlashOnAttackRight.StartCoroutine(ChargeFlashOnAttackRight.FlashChargeAttack());
+
+		GetComponentsInChildren<BossSlamHitbox>().Where(e => e != null).ToList().ForEach(e => e.GetObjectsInCollider().ForEach(obj => {
+			if (obj.TryGetComponent<HealthController>(out HealthController opponent)) {
+				opponent.TakeDamage(_weaponData.WeaponData.Damage);
 			}
-		}
+		}));
 	}
+
+
 }

@@ -12,18 +12,18 @@ public class CheckEnemyInRange : Node {
 	}
 
 	public override NodeState Evaluate(EnemyBehaviourTree tree) {
-		GameObject target = EnemyBT.Target;
+		GameObject target = tree.Target;
 		if (target == null) {
-			Collider2D[] colliders = Physics2D.OverlapCircleAll(_transform.position, EnemyBT.FovRange, _enemyLayerMask);
+			Collider2D[] colliders = Physics2D.OverlapCircleAll(_transform.position, tree.FovRange, _enemyLayerMask);
 			if (colliders.Length > 0) {
-				EnemyBT.Target = colliders[0].gameObject;
+				tree.Target = colliders[0].gameObject;
 				State = NodeState.SUCCESS;
 				return State;
 			}
 			State = NodeState.FAILURE;
 			return State;
 		}
-		EnemyBT.SearchLocation = target.transform.position;
+		tree.SearchLocation = target.transform.position;
 		State = NodeState.SUCCESS;
 		return State;
 	}

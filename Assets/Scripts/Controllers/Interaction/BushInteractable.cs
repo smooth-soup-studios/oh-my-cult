@@ -34,6 +34,11 @@ public class BushInteractable : BaseInteractable {
 		}
 	}
 
+	protected override void OnDrawGizmos() {
+		Gizmos.color = Color.green;
+		Gizmos.DrawWireCube(transform.position, Vector3.one*3);
+	}
+
 	// Disable default behavior of these methods
 	public override void OnDeselect() {
 	}

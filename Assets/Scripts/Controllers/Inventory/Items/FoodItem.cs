@@ -4,15 +4,16 @@ public class FoodItem : InteractableItem {
 	public FoodStats FoodStats;
 	public GameObject ParticlePrefab;
 
-	public override void PrimaryAction(StateMachine machine) {
-		machine.GetComponent<HealthController>().AddHealth(FoodStats.FoodData.HealthAmount);
-		machine.PlayerInventory.RemoveItem(ItemData);
-
-		GameObject pp = Instantiate(ParticlePrefab, machine.transform);
-		pp.GetComponent<ParticleSystemRenderer>().material.mainTexture = ItemData.InvData.ItemIcon.texture;
+	public override void PrimaryAction(GameObject source) {
+		if (source.TryGetComponent<Inventory>(out Inventory inv) && source.TryGetComponent<HealthController>(out HealthController hpcontroller)) {
+			inv.RemoveItem(ItemData);
+			hpcontroller.AddHealth(FoodStats.FoodData.HealthAmount);
+			GameObject pp = Instantiate(ParticlePrefab, source.transform);
+			pp.GetComponent<ParticleSystemRenderer>().material.mainTexture = ItemData.InvData.ItemIcon.texture;
+		}
 	}
 
-	public override void SecondaryAction(StateMachine machine) {
-		PrimaryAction(machine);
+	public override void SecondaryAction(GameObject source) {
+		PrimaryAction(source);
 	}
 }

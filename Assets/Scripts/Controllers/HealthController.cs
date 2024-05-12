@@ -22,6 +22,7 @@ public class HealthController : MonoBehaviour, ISaveable {
 		if (_currentHealth <= 0) {
 			EventBus.Instance.TriggerEvent<GameObject>(EventType.DEATH, gameObject);
 			Logger.Log(_logname, $"The {name} is dead!");
+			Destroy(gameObject);
 		}
 	}
 
@@ -62,6 +63,7 @@ public class HealthController : MonoBehaviour, ISaveable {
 		if (_currentHealth <= 0) {
 			EventBus.Instance.TriggerEvent<GameObject>(EventType.DEATH, gameObject);
 			Logger.Log(_logname, $"The {name} is dead!");
+			Destroy(gameObject);
 		}
 
 		if (!gameObject.CompareTag("Player")) return;
@@ -76,10 +78,6 @@ public class HealthController : MonoBehaviour, ISaveable {
 		_currentHealth += health;
 		if (_currentHealth > _maxHealth) {
 			_currentHealth = _maxHealth;
-		}
-
-		if (gameObject.CompareTag("Player")) {
-			_healthValue.SetValue(gameObject, _currentHealth);
 		}
 
 		return _currentHealth;
@@ -109,12 +107,19 @@ public class HealthController : MonoBehaviour, ISaveable {
 	}
 
 	public void LoadData(GameData data) {
+		if (gameObject.CompareTag("Player")) {
+			_currentHealth = data.PlayerData.Health;
+		}
 		if (data.ActorData.HealthValues.ContainsKey(ObjectId)) {
 			data.ActorData.HealthValues.TryGetValue(ObjectId, out _currentHealth);
 		}
 	}
 
 	public void SaveData(GameData data) {
+		// Player UID changes between scenes so use dedicated ID
+		if (gameObject.CompareTag("Player")) {
+			data.PlayerData.Health = _currentHealth;
+		}
 		data.ActorData.HealthValues[ObjectId] = _currentHealth;
 	}
 }

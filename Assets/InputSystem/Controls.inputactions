@@ -61,12 +61,12 @@
                 },
                 {
                     "name": "HotbarSwitch",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "034708ae-6a3a-44cd-84a1-0d09ae9ec7ad",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "ToggleMenu",
@@ -404,7 +404,7 @@
                     "path": "<Gamepad>/dpad/left",
                     "interactions": "",
                     "processors": "Scale(factor=-1)",
-                    "groups": "",
+                    "groups": "Controller",
                     "action": "HotbarSwitch",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -415,7 +415,18 @@
                     "path": "<Gamepad>/dpad/right",
                     "interactions": "",
                     "processors": "Scale",
-                    "groups": "",
+                    "groups": "Controller",
+                    "action": "HotbarSwitch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2fd37465-cd1d-43d3-9ba1-2236d807d134",
+                    "path": "<Mouse>/scroll/y",
+                    "interactions": "",
+                    "processors": "Invert",
+                    "groups": "Keyboard",
                     "action": "HotbarSwitch",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -651,6 +662,11 @@
                 {
                     "devicePath": "<Keyboard>",
                     "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": true,
                     "isOR": false
                 }
             ]

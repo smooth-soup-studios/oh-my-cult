@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ebe9f6770ae358489e1c29453354299, type: 3}
-  m_Name: EnemyBite
+  m_Name: WeaponStats-Spear
   m_EditorClassIdentifier: 
   WeaponData:
     Damage: 10
-    AttackSpeed: 3
-    Range: 5
+    AttackSpeed: 0.5
+    Range: 10

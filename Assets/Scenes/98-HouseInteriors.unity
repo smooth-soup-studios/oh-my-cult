@@ -521,8 +521,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_RenderShadows: 1
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
@@ -565,8 +565,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_ShowDebugText: 0
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
@@ -5085,7 +5085,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: _spriteRenderer
-      value: 
+      value:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: InteractionRange
@@ -9212,7 +9212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: _spriteRenderer
-      value: 
+      value:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: InteractionRange
@@ -9303,7 +9303,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: _spriteRenderer
-      value: 
+      value:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: InteractionRange
@@ -13390,8 +13390,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_BindingMode: 1
   m_FollowOffset: {x: 0, y: 0, z: -10}
   m_XDamping: 1
@@ -13412,8 +13412,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
@@ -13439,8 +13439,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1001 &448015091
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13515,7 +13515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: _spriteRenderer
-      value: 
+      value:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: InteractionRange
@@ -20424,8 +20424,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35273ca664851004a89ebe285e5c7ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   <ObjectId>k__BackingField: KeyPickup-8852624
   InteractionRange: 12
   AutoTrigger: 0
@@ -21697,7 +21697,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1625781803088781141, guid: bcf36efebb1722348b900b3210ec3517, type: 3}
       propertyPath: _item
-      value: 
+      value:
       objectReference: {fileID: 11400000, guid: 4d1825e3a48885e40b154d6ad3b7b531, type: 2}
     - target: {fileID: 2601442356323300049, guid: bcf36efebb1722348b900b3210ec3517, type: 3}
       propertyPath: m_Name
@@ -31741,7 +31741,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: _spriteRenderer
-      value: 
+      value:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: InteractionRange
@@ -36410,7 +36410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: _spriteRenderer
-      value: 
+      value:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: InteractionRange
@@ -36748,7 +36748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: _spriteRenderer
-      value: 
+      value:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: InteractionRange
@@ -36934,11 +36934,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_ExcludedPropertiesInInspector:
   - m_Script
-  m_LockStageInInspector: 
+  m_LockStageInInspector:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2

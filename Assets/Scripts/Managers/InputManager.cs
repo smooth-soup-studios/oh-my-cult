@@ -53,6 +53,7 @@ public class InputManager : MonoBehaviour {
 	}
 	public void OnHotbarSwitch(InputValue value) {
 		if (CheckTimeScale())
+			// Is either 1 for next or -1 for prev
 			EventBus.Instance.TriggerEvent(EventType.HOTBAR_SWITCH, (int)value.Get<float>());
 	}
 

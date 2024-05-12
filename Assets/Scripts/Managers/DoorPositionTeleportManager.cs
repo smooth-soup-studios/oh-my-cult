@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class HousePositionTeleportManager : MonoBehaviour {
 	private static string _logName = "HousePositionTeleportManager";
+	const int _yOffset = 15;
 
 	void Start() {
 		GameObject plr = GameObject.FindGameObjectWithTag("Player");
@@ -10,25 +11,19 @@ public class HousePositionTeleportManager : MonoBehaviour {
 
 		if (plrsm.LatestDoor == -1) return;
 
-		switch (SceneManager.GetActiveScene().name) {
-			case SceneDefs.HouseInteriorLevel: // houses
-				plr.transform.position = new Vector3((float)plrsm.LatestDoor * 1000, 0, 0);
-				Logger.Log(_logName, "Teleported to house " + plrsm.LatestDoor);
-				break;
-			default: // overworld || special
-				GameObject[] doors = GameObject.FindGameObjectsWithTag("DoorInteractor");
+		GameObject[] doors = GameObject.FindGameObjectsWithTag("DoorInteractor");
 
-				foreach (GameObject door in doors) {
-					DoorController dc = door.GetComponent<DoorController>();
-					if (dc.ArbitraryId == plrsm.LatestDoor) {
-						dc.AlreadyActivated = true;
-						plr.transform.position = door.transform.position;
+		foreach (GameObject door in doors) {
+			DoorController dc = door.GetComponent<DoorController>();
+			if (dc.ArbitraryId != plrsm.LatestDoor) continue;
 
-						Logger.Log(_logName, "Teleported to door " + plrsm.LatestDoor + " at " + plr.transform.position);
-					}
-				}
-				break;
+			dc.AlreadyActivated = true;
+			Vector3 position = door.transform.position;
+			plr.transform.position = new Vector2(position.x, position.y - _yOffset);
+
+			Logger.Log(_logName, "Teleported to door " + plrsm.LatestDoor + " at " + plr.transform.position);
 		}
+
 
 		// Hacky way to reassign the camera follow target, but works for playtest purposes :D
 		GameObject.Find("Vcam-Player").GetComponent<Cinemachine.CinemachineVirtualCamera>().Follow = plr.transform;

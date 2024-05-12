@@ -1,11 +1,9 @@
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class WeaponPickupPoint : BaseInteractable {
-	[Header("Item settings")]
-	[SerializeField] private InventoryItem _item;
-	private SpriteRenderer _spriteRenderer;
+public class WeaponPickupPoint : BaseItemPickupInteractable {
 
+	private SpriteRenderer _spriteRenderer;
 
 	private new void Start() {
 		base.Start();
@@ -17,15 +15,15 @@ public class WeaponPickupPoint : BaseInteractable {
 
 	public override void Interact(GameObject interactor) {
 		if (interactor.TryGetComponent(out Inventory inventory)) {
-			InventoryItem switchedItem = inventory.AddItem(_item);
-			_item = switchedItem;
+			InventoryItem switchedItem = inventory.AddItem(Item);
+			Item = switchedItem;
 			UpdateSprite();
 		}
 		base.Interact(interactor);
 	}
 
 	private void UpdateSprite() {
-		if (_item == null) {
+		if (Item == null) {
 			_spriteRenderer.sprite = null;
 		}
 		else {

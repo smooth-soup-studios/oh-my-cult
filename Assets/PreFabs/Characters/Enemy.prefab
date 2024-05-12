@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f0d07869b7ad747b46fdf13457c82e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: Enemy-0.1013
+  <ObjectId>k__BackingField: Enemy-0,1013
   _isInvulnerable: 0
   _maxHealth: 100
 --- !u!195 &7641483773983506728

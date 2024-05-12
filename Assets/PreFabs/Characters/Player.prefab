@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 3053537212863230237}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.3, y: 3.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -44,13 +44,14 @@ GameObject:
   - component: {fileID: 3242085015397341469}
   - component: {fileID: 7474330799362213706}
   - component: {fileID: 7464427908449370601}
-  - component: {fileID: 2607886220727919282}
   - component: {fileID: 3464190737083003022}
   - component: {fileID: 4072784352789340470}
   - component: {fileID: 661175975395288714}
   - component: {fileID: 8530993155805609580}
   - component: {fileID: 6290169931406716255}
   - component: {fileID: 8440669220791414699}
+  - component: {fileID: 2607886220727919282}
+  - component: {fileID: 4570516939083862268}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -69,7 +70,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.32, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 714397128736290338}
   m_Father: {fileID: 0}
@@ -125,7 +126,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &7474330799362213706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,19 +137,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a4b345c48534a14d93ae53897a1cae9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   _stateText: {fileID: 0}
   _changeStateLogging: 0
   _useEightPointHitbox: 0
   PlayerAnimator:
     _animationDebugLogging: 0
   SpeedModifier: 5
-  BaseSpeed: 10
+  BaseSpeed: 12.8
   WeaponHitbox: {fileID: 3173601029828910364}
   HitContainer: {fileID: 3053537212863230237}
-  RunSoundClip: {fileID: 8300000, guid: a72f1d0baa8e4e9e8c5f841fcf512c44, type: 3}
-  AttackSoundClip: {fileID: 8300000, guid: d456821e55ccca74a91d03031cde7299, type: 3}
   LatestDoor: -1
   HasDoorKey: 0
 --- !u!114 &7464427908449370601
@@ -161,8 +160,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4b7d333209dbd044a92f3ae32fea62c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!114 &2607886220727919282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,9 +172,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76f0d07869b7ad747b46fdf13457c82e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: Player-28.3024
+  m_Name:
+  m_EditorClassIdentifier:
+  <ObjectId>k__BackingField: Player-28,3024
   _isInvulnerable: 0
   _maxHealth: 100
 --- !u!50 &3464190737083003022
@@ -203,7 +202,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &4072784352789340470
 BoxCollider2D:
@@ -237,10 +236,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.26810455, y: -6.255772}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.05}
     oldSize: {x: 10.6875, y: 16.441515}
     newSize: {x: 5, y: 8}
     adaptiveTilingThreshold: 0.5
@@ -282,7 +281,7 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 7}
   m_Size: {x: 10.6875, y: 16.441515}
   m_Direction: 0
 --- !u!95 &8530993155805609580
@@ -301,7 +300,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -316,8 +315,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 143308678153da34ea09cf80b8830776, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   EchoGhostPrefab: {fileID: 5036995826059190279, guid: 16f811ba2291dad49a846047cacecc97, type: 3}
   EchoDelay: 0.05
   EchoLifetime: 0.5
@@ -331,8 +330,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa60292606897c345b756df85abb8ebd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
+--- !u!114 &2607886220727919282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6908342227108556609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f0d07869b7ad747b46fdf13457c82e, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  <ObjectId>k__BackingField: Player-28,3024
+  _isInvulnerable: 0
+  _maxHealth: 100
+--- !u!114 &4570516939083862268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6908342227108556609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c384eeeb366f199439b6e87d81cec898, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1 &7355898901544246293
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +387,7 @@ Transform:
   m_GameObject: {fileID: 7355898901544246293}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 12, y: 0, z: 0}
+  m_LocalPosition: {x: 10.7, y: -0.3, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -477,5 +503,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05ac34e2c435f0046b73486e43318bbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:

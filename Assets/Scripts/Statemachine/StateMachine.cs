@@ -28,9 +28,6 @@ public class StateMachine : MonoBehaviour, ISaveable {
 	[HideInInspector] public EchoDashController EchoDashController { get; private set; }
 	[HideInInspector] public PlayerInteractionChecker PlayerInteractor { get; private set; }
 	[HideInInspector] public Inventory PlayerInventory { get; private set; }
-
-	[SerializeField] public AudioClip RunSoundClip;
-	[SerializeField] public AudioClip AttackSoundClip;
 	private BaseState _currentState;
 	private List<BaseState> _states;
 
@@ -64,7 +61,7 @@ public class StateMachine : MonoBehaviour, ISaveable {
 		_currentState.UpdateState();
 
 		UIManager.Instance.HasPlaytestKey = HasDoorKey;
-		UIManager.Instance.Health = GetComponent<EnemyHealthController>().GetCurrentHealth();
+		UIManager.Instance.Health = GetComponent<HealthController>().GetCurrentHealth();
 	}
 
 	public void SwitchState(string name) {

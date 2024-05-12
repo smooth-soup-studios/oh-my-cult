@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="oh-my-cult_WwiseProject" GUID="{B904DC03-B917-4CBC-8232-97EC64BC5B83}" Generator="2023.1.3.8471"/>
+	<CacheRoot>../../../../oh-my-cult_WwiseProject/.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Linux" GUID="{E9B8AB85-5F75-416A-B33C-D135FAA568B8}" BasePlatform="Linux" BasePlatformGUID="{BD0BDF13-3125-454F-8BFD-319537169F81}" Path="../../../../oh-my-cult_WwiseProject/GeneratedSoundBanks/Linux"/>
+		<Platform Name="Mac" GUID="{97EAE674-8CA2-4120-B111-9D885DE6673C}" BasePlatform="Mac" BasePlatformGUID="{9C6217D5-DD11-4795-87C1-6CE02853C540}" Path="../../../../oh-my-cult_WwiseProject/GeneratedSoundBanks/Mac"/>
+		<Platform Name="Windows" GUID="{97DA312D-3580-4F8D-A500-B731B9D86DB1}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="../../../../oh-my-cult_WwiseProject/GeneratedSoundBanks/Windows"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{980CAF8B-11B3-4F89-82FA-4F671108DCC1}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{F1528208-A71E-D5DE-AAB4-87E361D9880E}</FileHash>
+</ProjectInfo>

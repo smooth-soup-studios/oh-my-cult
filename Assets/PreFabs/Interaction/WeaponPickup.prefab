@@ -49,7 +49,7 @@ MonoBehaviour:
   InteractionRange: 12
   AutoTrigger: 0
   SingleUse: 0
-  _item: {fileID: 0}
+  Item: {fileID: 0}
 --- !u!212 &3376820131804443929
 SpriteRenderer:
   m_ObjectHideFlags: 0

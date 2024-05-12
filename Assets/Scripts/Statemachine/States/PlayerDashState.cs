@@ -13,7 +13,7 @@ public class PlayerDashState : BaseState {
 	public PlayerDashState(string name, StateMachine stateMachine) : base(name, stateMachine) {
 	}
 	public override void EnterState() {
-		StateMachine.StartCoroutine(dashTime());
+		StateMachine.StartCoroutine(DashTime());
 		UIManager.Instance.DashStart = Time.time;
 		StateMachine.EchoDashController.StartEcho();
 	}
@@ -31,7 +31,7 @@ public class PlayerDashState : BaseState {
 	}
 
 
-	IEnumerator dashTime() {
+	IEnumerator DashTime() {
 		_dash = true;
 		yield return new WaitForSecondsRealtime(DashDuration);
 		_dash = false;

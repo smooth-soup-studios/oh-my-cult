@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Levels/overworld_village.meta
+guid: 12c58fbfb139cc848b673d7012cf3195
+folderAsset: yes
+DefaultImporter:
+========
 guid: dc4899dbe9525bef5938f2343da58d4b
 PrefabImporter:
+>>>>>>>> dev:Assets/PreFabs/Interaction/DoorInteractionPoint.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

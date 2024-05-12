@@ -31,7 +31,7 @@ public class BossChargeAttack : BossBaseState {
 	}
 
 	IEnumerator SwitchState() {
-		yield return new WaitForSecondsRealtime(0.54f);
+		yield return new WaitForSecondsRealtime(1f);
 		_switchState = true;
 	}
 	IEnumerator ChargeFirstSlam() {

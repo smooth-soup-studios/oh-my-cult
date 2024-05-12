@@ -10,7 +10,6 @@ public class BossRoarState : BossBaseState {
 	public override void EnterState() {
 		_switchState = false;
 		Boss.BossAnimation.SetBool("RoarAttack", true);
-		SoundManager.Instance.PlayClip(Boss.RoarSoundClip, Boss.transform, 1f);
 		Boss.StartCoroutine(AttackCooldown());
 		Boss.StartCoroutine(SwitchState());
 	}

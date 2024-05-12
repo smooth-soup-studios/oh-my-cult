@@ -1,16 +1,5 @@
 {
   "dependencies": {
-    "com.cammin.ldtkunity": {
-      "version": "4.2.2",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.2d.sprite": "1.0.0",
-        "com.unity.modules.physics2d": "1.0.0",
-        "com.unity.modules.tilemap": "1.0.0"
-      },
-      "url": "https://package.openupm.com"
-    },
     "com.h8man.2d.navmeshplus": {
       "version": "https://github.com/h8man/NavMeshPlus.git",
       "depth": 0,

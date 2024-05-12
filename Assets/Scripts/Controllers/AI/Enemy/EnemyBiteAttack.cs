@@ -5,7 +5,7 @@ public class EnemyBiteAttack : MonoBehaviour {
 	public void Attack() {
 		try {
 			GetComponentInChildren<WeaponHitbox>().GetObjectsInCollider().ForEach(obj => {
-				if (obj.TryGetComponent<EnemyHealthController>(out EnemyHealthController enemy)) {
+				if (obj.TryGetComponent<HealthController>(out HealthController enemy)) {
 					enemy.TakeDamage(_weaponData.WeaponData.Damage);
 				}
 			});

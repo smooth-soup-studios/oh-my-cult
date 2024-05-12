@@ -7,7 +7,7 @@ public class SwordItem : InteractableItem {
 		try {
 			source.WeaponHitbox.GetObjectsInCollider().ForEach(obj => {
 				EventBus.Instance.TriggerEvent(EventType.HIT, (obj, source.gameObject));
-				if (obj.TryGetComponent<EnemyHealthController>(out EnemyHealthController enemy)) {
+				if (obj.TryGetComponent<HealthController>(out HealthController enemy)) {
 					enemy.TakeDamage(WeaponStats.WeaponData.Damage);
 				}
 			});
@@ -20,7 +20,7 @@ public class SwordItem : InteractableItem {
 		try {
 			source.WeaponHitbox.GetObjectsInCollider().ForEach(obj => {
 				EventBus.Instance.TriggerEvent(EventType.HIT, (obj, source.gameObject));
-				if (obj.TryGetComponent<EnemyHealthController>(out EnemyHealthController enemy)) {
+				if (obj.TryGetComponent<HealthController>(out HealthController enemy)) {
 					enemy.TakeDamage(WeaponStats.WeaponData.Damage);
 				}
 			});

@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7410dd48c7ef63c690e526e711552ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: DoorInteractionPoint-11303.42
+  <ObjectId>k__BackingField: DoorInteractionPoint-11303,42
   InteractionRange: 8.7
   AutoTrigger: 0
   SingleUse: 0

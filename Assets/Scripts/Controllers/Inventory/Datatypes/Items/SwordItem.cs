@@ -10,7 +10,7 @@ public class SwordItem : InteractableItem {
 					enemy.TakeDamage(WeaponStats.WeaponData.Damage);
 
 					if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
-						rb.AddForce((obj.transform.position - source.transform.position).normalized * WeaponStats.WeaponData.Knockback, ForceMode2D.Impulse);
+						rb.AddForce((obj.transform.position - source.transform.position).normalized * WeaponStats.WeaponData.Knockback * rb.mass, ForceMode2D.Impulse);
 					}
 				}
 			});

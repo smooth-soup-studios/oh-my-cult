@@ -15,7 +15,7 @@ public class WeaponItem : InteractableItem {
 			source.GetComponentInChildren<WeaponHitbox>().GetObjectsInCollider().ForEach(obj => {
 				if (IsTargetUnObstructed(source, obj)) {
 					EventBus.Instance.TriggerEvent(EventType.HIT, (obj, source));
-					if (obj.TryGetComponent<EnemyHealthController>(out EnemyHealthController enemy)) {
+					if (obj.TryGetComponent<HealthController>(out HealthController enemy)) {
 						enemy.TakeDamage(WeaponStats.WeaponData.Damage);
 					}
 				}
@@ -30,7 +30,7 @@ public class WeaponItem : InteractableItem {
 			source.GetComponentInChildren<WeaponHitbox>().GetObjectsInCollider().ForEach(obj => {
 				if (IsTargetUnObstructed(source, obj)) {
 					EventBus.Instance.TriggerEvent(EventType.HIT, (obj, source));
-					if (obj.TryGetComponent<EnemyHealthController>(out EnemyHealthController enemy)) {
+					if (obj.TryGetComponent<HealthController>(out HealthController enemy)) {
 						enemy.TakeDamage(WeaponStats.WeaponData.Damage);
 					}
 				}

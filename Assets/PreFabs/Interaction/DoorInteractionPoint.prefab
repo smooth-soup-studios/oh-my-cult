@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7410dd48c7ef63c690e526e711552ef, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  <ObjectId>k__BackingField: DoorInteractionPoint-11303,42
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: DoorInteractionPoint-11303.42
   InteractionRange: 15
   AutoTrigger: 0
   SingleUse: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument:
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
   _spriteRenderer: {fileID: 199730581324819286}
@@ -108,8 +108,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4624c5477be0c6a43989b153d5f21502, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   TransportTo: 0
   ArbitraryId: 0
   RequiresKey: 0

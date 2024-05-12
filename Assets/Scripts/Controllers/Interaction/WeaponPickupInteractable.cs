@@ -27,12 +27,12 @@ public class WeaponPickupPoint : BaseItemPickupInteractable {
 			_spriteRenderer.sprite = null;
 		}
 		else {
-			Sprite itemSprite = null;
-			if (_item.InvData.ItemPrefab.TryGetComponent<SpriteRenderer>(out SpriteRenderer srenderer)) {
+			Sprite itemSprite;
+			if (Item.InvData.ItemPrefab.TryGetComponent<SpriteRenderer>(out SpriteRenderer srenderer)) {
 				itemSprite = srenderer.sprite;
 			}
 			else {
-				itemSprite = _item.InvData.ItemIcon;
+				itemSprite = Item.InvData.ItemIcon;
 			}
 			_spriteRenderer.sprite = itemSprite;
 

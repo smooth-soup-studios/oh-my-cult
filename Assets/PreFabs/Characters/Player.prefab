@@ -44,13 +44,13 @@ GameObject:
   - component: {fileID: 3242085015397341469}
   - component: {fileID: 7474330799362213706}
   - component: {fileID: 7464427908449370601}
+  - component: {fileID: 2607886220727919282}
+  - component: {fileID: 8530993155805609580}
   - component: {fileID: 3464190737083003022}
   - component: {fileID: 4072784352789340470}
   - component: {fileID: 661175975395288714}
-  - component: {fileID: 8530993155805609580}
   - component: {fileID: 6290169931406716255}
   - component: {fileID: 8440669220791414699}
-  - component: {fileID: 2607886220727919282}
   - component: {fileID: 4570516939083862268}
   m_Layer: 6
   m_Name: Player
@@ -137,8 +137,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a4b345c48534a14d93ae53897a1cae9, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   _stateText: {fileID: 0}
   _changeStateLogging: 0
   _useEightPointHitbox: 0
@@ -160,8 +160,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4b7d333209dbd044a92f3ae32fea62c, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2607886220727919282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,11 +172,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76f0d07869b7ad747b46fdf13457c82e, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  <ObjectId>k__BackingField: Player-28,3024
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: Player-28.3024
   _isInvulnerable: 0
   _maxHealth: 100
+  _currentHealth: 0
+--- !u!95 &8530993155805609580
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6908342227108556609}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d8594f1feb23493fbab32ff6ca0af104, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &3464190737083003022
 Rigidbody2D:
   serializedVersion: 4
@@ -284,27 +306,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 7}
   m_Size: {x: 10.6875, y: 16.441515}
   m_Direction: 0
---- !u!95 &8530993155805609580
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6908342227108556609}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d8594f1feb23493fbab32ff6ca0af104, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage:
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &6290169931406716255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,8 +316,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 143308678153da34ea09cf80b8830776, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   EchoGhostPrefab: {fileID: 5036995826059190279, guid: 16f811ba2291dad49a846047cacecc97, type: 3}
   EchoDelay: 0.05
   EchoLifetime: 0.5
@@ -330,23 +331,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa60292606897c345b756df85abb8ebd, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
---- !u!114 &2607886220727919282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6908342227108556609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76f0d07869b7ad747b46fdf13457c82e, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  <ObjectId>k__BackingField: Player-28,3024
-  _isInvulnerable: 0
-  _maxHealth: 100
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4570516939083862268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,8 +343,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c384eeeb366f199439b6e87d81cec898, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7355898901544246293
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,5 +489,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05ac34e2c435f0046b73486e43318bbc, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 

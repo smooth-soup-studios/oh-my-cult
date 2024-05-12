@@ -47,3 +47,4 @@ MonoBehaviour:
   ItemData: {fileID: 11400000, guid: 0bc334bdb091c174793ea205e94ffdf6, type: 2}
   UsageCooldown: 0
   FoodStats: {fileID: 11400000, guid: 3bd197b9d470a5d4e9bb1c1ffc143611, type: 2}
+  ParticlePrefab: {fileID: 1596064916514835981, guid: f945e52608e7fca478da83e15c9d31c0, type: 3}

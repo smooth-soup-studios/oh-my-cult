@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using Managers;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-public class PlaytestForm : MonoBehaviour
+public class UIBuilderQuitWarning : MonoBehaviour
 {
     Button _yesButton;
     Button _noButton;
     VisualElement _root;
-    // Start is called before the first frame update
-    void Start()
+    VisualElement _quitWarning;
+
+
+    void OnEnable()
     {
         _root = GetComponent<UIDocument>().rootVisualElement;
+    	_quitWarning = GameObject.Find("QuitWarning").GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container");
+
         _yesButton = _root.Q<Button>("YesButton");
         _yesButton.clicked += OnYesButton;
         _noButton = _root.Q<Button>("NoButton");
@@ -20,11 +24,9 @@ public class PlaytestForm : MonoBehaviour
     }
 
     void OnYesButton(){
-        Logger.Log("Forms", "Opening the form");
-        Application.OpenURL("https://forms.gle/xaRoFbseE2cSS3J69");
+        GameManager.QuitGame();
     }
-
     void OnNoButton(){
-        SceneManager.LoadSceneAsync(0);
+        _quitWarning.visible = false;
     }
 }

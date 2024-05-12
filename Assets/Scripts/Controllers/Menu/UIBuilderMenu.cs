@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 using System;
 using System.ComponentModel.Design.Serialization;
+using Managers;
 
 public class UIBuilderMenu : MonoBehaviour {
 	private Button _newGameButton;
@@ -12,7 +13,7 @@ public class UIBuilderMenu : MonoBehaviour {
 	private Button _loadGameButton;
 	private Button _optionsButton;
 	private Button _quit;
-	
+
 	[SerializeField] private GameObject _mainMenuUI;
 	[SerializeField] private GameObject _optionsUI;
 
@@ -64,13 +65,7 @@ public class UIBuilderMenu : MonoBehaviour {
 	}
 
 	public void QuitGame() {
-		#if UNITY_WEBGL
-            Logger.Log("UIBuilder","WebGL build detected, redirecting to homepage");
-            Application.OpenURL("/");
-        #else
-            Logger.Log("UIBuilder","Quitting Game..");
-            Application.Quit();
-        #endif
+		GameManager.QuitGame();
 	}
 
 	public void DisableButtons() {

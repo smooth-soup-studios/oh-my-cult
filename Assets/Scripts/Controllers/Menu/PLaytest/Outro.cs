@@ -9,7 +9,7 @@ public class Outro : MonoBehaviour, ISaveable {
 	[SerializeField] private GameObject _deadUI;
 	[SerializeField] private GameObject _formUI;
 
-	void Start() {
+	void OnEnable() {
 		_root = GetComponent<UIDocument>().rootVisualElement;
 		GameObject HUD = GameObject.Find("HUD");
 		if (HUD) {

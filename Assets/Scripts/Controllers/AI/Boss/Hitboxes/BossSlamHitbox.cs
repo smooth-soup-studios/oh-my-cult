@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class BossSlamHitboxRight : MonoBehaviour
-{
+public class BossSlamHitbox : MonoBehaviour {
 	private List<GameObject> _objectsInCollider = new();
 	private void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.GetComponentsInChildren<BossSlamHitboxRight>().Contains(this))
+		if (other.gameObject.GetComponentsInChildren<BossSlamHitbox>().Contains(this))
 			return;
 		_objectsInCollider.Add(other.gameObject);
 	}

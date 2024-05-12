@@ -5,12 +5,6 @@ using UnityEngine;
 
 public class EnemyBT : EnemyBehaviourTree {
 	public Transform[] Waypoints;
-	public static float Speed = 2f;
-	public static float FovRange = 30f;
-	public static float AttackRange = 20f;
-	public static GameObject Target = null;
-	public static Vector3 SearchLocation = Vector3.zero;
-
 	private Vector2 _oldMovement;
 
 	private new void Awake() {

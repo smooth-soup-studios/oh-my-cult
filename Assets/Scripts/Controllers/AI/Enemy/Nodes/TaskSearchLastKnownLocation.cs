@@ -8,7 +8,7 @@ public class TaskSearchLastKnownLocation : Node {
 		_transform = transform;
 	}
 	public override NodeState Evaluate(EnemyBehaviourTree tree) {
-		Vector3 target = EnemyBT.SearchLocation;
+		Vector3 target = tree.SearchLocation;
 		tree.AttackCounter = -0.04f;
 
 		if (Vector2.Distance(_transform.position, target) > 1f) {
@@ -16,7 +16,7 @@ public class TaskSearchLastKnownLocation : Node {
 			tree.Agent.speed = 20;
 		}
 		if (Vector2.Distance(_transform.position, target) < 1f) {
-			EnemyBT.SearchLocation = Vector3.zero;
+			tree.SearchLocation = Vector3.zero;
 			State = NodeState.SUCCESS;
 			return State;
 		}

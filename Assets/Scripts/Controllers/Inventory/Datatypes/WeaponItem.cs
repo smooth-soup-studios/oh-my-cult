@@ -19,7 +19,7 @@ public class WeaponItem : InteractableItem {
 						enemy.TakeDamage(WeaponStats.WeaponData.Damage);
 					}
 					if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
-						rb.AddForce(rb.mass * WeaponStats.WeaponData.Knockback * (obj.transform.position - transform.position).normalized, ForceMode2D.Impulse);
+						rb.AddForce(rb.mass * WeaponStats.WeaponData.Knockback * (obj.transform.position - source.transform.position).normalized, ForceMode2D.Impulse);
 					}
 				}
 			});
@@ -37,7 +37,7 @@ public class WeaponItem : InteractableItem {
 						enemy.TakeDamage(WeaponStats.WeaponData.Damage);
 					}
 					if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
-						rb.AddForce(rb.mass * WeaponStats.WeaponData.Knockback * (obj.transform.position - transform.position).normalized, ForceMode2D.Impulse);
+						rb.AddForce(rb.mass * WeaponStats.WeaponData.Knockback * (obj.transform.position - source.transform.position).normalized, ForceMode2D.Impulse);
 					}
 				}
 			});

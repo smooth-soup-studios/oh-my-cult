@@ -9,12 +9,12 @@ public class CheckEnemyInAttackRange : Node {
 	}
 
 	public override NodeState Evaluate(EnemyBehaviourTree tree) {
-		GameObject target = EnemyBT.Target;
+		GameObject target = tree.Target;
 		if (target == null) {
 			State = NodeState.FAILURE;
 			return State;
 		}
-		if (Vector2.Distance(_transform.position, target.transform.position) <= EnemyBT.AttackRange) {
+		if (Vector2.Distance(_transform.position, target.transform.position) <= tree.AttackRange) {
 			tree.EnemyAnimator.SetBool("IsAttacking", true);
 			State = NodeState.SUCCESS;
 			return State;

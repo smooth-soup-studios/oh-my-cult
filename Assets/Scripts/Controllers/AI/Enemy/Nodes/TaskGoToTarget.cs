@@ -11,8 +11,8 @@ public class TaskGoToTarget : Node {
 	}
 
 	public override NodeState Evaluate(EnemyBehaviourTree tree) {
-		Vector3 target = EnemyBT.Target.transform.position;
-		tree.Movement = (EnemyBT.Target.transform.position - tree.Agent.transform.position).normalized;
+		Vector3 target = tree.Target.transform.position;
+		tree.Movement = (tree.Target.transform.position - tree.Agent.transform.position).normalized;
 		tree.EnemyAnimator.SetFloat("X", tree.Movement.x);
 		tree.EnemyAnimator.SetFloat("Y", tree.Movement.y);
 
@@ -23,7 +23,7 @@ public class TaskGoToTarget : Node {
 			tree.Agent.speed = 20;
 		}
 		if (Vector2.Distance(_transform.position, target) > 40f) {
-			EnemyBT.Target = null;
+			tree.Target = null;
 			State = NodeState.FAILURE;
 			return State;
 		}

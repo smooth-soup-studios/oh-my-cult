@@ -9,6 +9,11 @@ namespace BehaviorTree {
 		[HideInInspector] public NavMeshAgent Agent;
 		[HideInInspector] public Animator EnemyAnimator;
 		[HideInInspector] public float AttackCounter = -0.04f;
+		[HideInInspector] public float Speed = 2f;
+		[HideInInspector] public float FovRange = 30f;
+		[HideInInspector] public float AttackRange = 20f;
+		[HideInInspector] public  GameObject Target = null;
+		[HideInInspector] public  Vector3 SearchLocation = Vector3.zero;
 
 		protected void Awake() {
 			Agent = GetComponent<NavMeshAgent>();

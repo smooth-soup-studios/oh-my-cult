@@ -112,7 +112,6 @@ MonoBehaviour:
   Charge: 0
   BossAnimation: {fileID: 0}
   Movement: {x: 0, y: 0}
-  playerinroar: 0
   WeightedValues:
   - Value: 0
     Weight: 5
@@ -567,7 +566,7 @@ GameObject:
   - component: {fileID: 8502575903042748231}
   - component: {fileID: 8751479784738707744}
   - component: {fileID: 4209625462684324893}
-  - component: {fileID: 8081342538743703416}
+  - component: {fileID: 5093696828256496984}
   m_Layer: 7
   m_Name: HitSlamRight
   m_TagString: Untagged
@@ -689,7 +688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fdc4d590b6aca48bc9359529be597d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8081342538743703416
+--- !u!114 &5093696828256496984
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -698,7 +697,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6922444085403339848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5438a57522cc7604e906ed2b80814066, type: 3}
+  m_Script: {fileID: 11500000, guid: 26054e80b6f32d648a6b570e3ad67cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8657378741009530393

@@ -18,15 +18,12 @@ public class BossAttacks : MonoBehaviour {
 
 		SlamFlashOnAttackLeft.StartCoroutine(SlamFlashOnAttackLeft.FlashSlamAttack());
 		SlamFlashOnAttackRight.StartCoroutine(SlamFlashOnAttackRight.FlashSlamAttack());
-		try {
-			GetComponentsInChildren<BossSlamHitbox>().ToList().ForEach(e => e.GetObjectsInCollider().ForEach(obj => {
-				if (obj.TryGetComponent<EnemyHealthController>(out EnemyHealthController opponent)) {
-					opponent.TakeDamage(_weaponData.WeaponData.Damage);
-				}
-			}));
-		}
-		catch (System.Exception) {
-		}
+		GetComponentsInChildren<BossSlamHitbox>().Where(e => e != null).ToList().ForEach(e => e.GetObjectsInCollider().ForEach(obj => {
+			if (obj.TryGetComponent<EnemyHealthController>(out EnemyHealthController opponent)) {
+				opponent.TakeDamage(_weaponData.WeaponData.Damage);
+			}
+		}));
+
 	}
 
 	//TODO:
@@ -51,15 +48,12 @@ public class BossAttacks : MonoBehaviour {
 
 		ChargeFlashOnAttackLeft.StartCoroutine(ChargeFlashOnAttackLeft.FlashChargeAttack());
 		ChargeFlashOnAttackRight.StartCoroutine(ChargeFlashOnAttackRight.FlashChargeAttack());
-		try {
-			GetComponentsInChildren<BossSlamHitbox>().ToList().ForEach(e => e.GetObjectsInCollider().ForEach(obj => {
-				if (obj.TryGetComponent<EnemyHealthController>(out EnemyHealthController opponent)) {
-					opponent.TakeDamage(_weaponData.WeaponData.Damage);
-				}
-			}));
-		}
-		catch (System.Exception) {
-		}
+
+		GetComponentsInChildren<BossSlamHitbox>().Where(e => e != null).ToList().ForEach(e => e.GetObjectsInCollider().ForEach(obj => {
+			if (obj.TryGetComponent<EnemyHealthController>(out EnemyHealthController opponent)) {
+				opponent.TakeDamage(_weaponData.WeaponData.Damage);
+			}
+		}));
 	}
 
 

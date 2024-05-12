@@ -9,7 +9,6 @@ public class Boss : MonoBehaviour, ISaveable {
 	[SerializeField] public BossAttacks BossAttacks;
 	[SerializeField] public AudioClip RoarSoundClip;
 	public Transform Player;
-	public AnimationManager Animator;
 	public BossBaseState CurrentState;
 	public List<BossBaseState> States;
 	[HideInInspector] public int StateCounter = 0;
@@ -17,22 +16,20 @@ public class Boss : MonoBehaviour, ISaveable {
 	[HideInInspector] public bool Charge;
 
 	private bool _isAlive = true;
-
-	// Start is called before the first frame update
+	public Animator BossAnimation;
+	[HideInInspector] public Vector2 Movement;
+	// public BossRoarHitbox BossRoarHitbox;
 
 	void Start() {
 		if (!_isAlive) {
 			gameObject.SetActive(false);
 		}
-
-		Animator = new(GetComponent<Animator>());
-
+		BossAnimation = GetComponent<Animator>();
 		EventBus.Instance.Subscribe<GameObject>(EventType.DEATH, obj => {
 			if (obj == gameObject) {
 				_isAlive = false;
 				gameObject.SetActive(false);
 				SceneManager.LoadScene(SceneDefs.EndingScreen);
-
 			}
 		});
 
@@ -43,7 +40,9 @@ public class Boss : MonoBehaviour, ISaveable {
 			new BossSlamAttack(this, "Slam"),
 			new BossChargeState(this, "Charge"),
 			new BossRoarState(this, "Roar"),
-			new BossIdleState(this, "Idle")
+			new BossMoveState(this,"Move"),
+			new BossIdleState(this, "Idle"),
+			new BossChargeAttack(this, "ChargeAttack")
 		};
 		SwitchState("Idle");
 	}
@@ -53,20 +52,38 @@ public class Boss : MonoBehaviour, ISaveable {
 		CurrentState?.EnterState();
 	}
 
-	// Update is called once per frame
+	Vector2 _oldMove;
 	void Update() {
 		CurrentState?.UpdateState();
+		if (Movement != _oldMove) {
+			RotateHitboxOnMove(Movement);
+			_oldMove = Movement;
+		}
 	}
 
-	private void OnDrawGizmos() {
-		if (transform == null)
-			return;
-		Gizmos.color = Color.red;
-		Gizmos.DrawWireSphere(transform.position, Stats.SlamRange);
-		Gizmos.color = Color.green;
-		Gizmos.DrawWireSphere(transform.position, Stats.RoarRange);
-		Gizmos.color = Color.blue;
-		Gizmos.DrawWireSphere(transform.position, Stats.ChargeRange);
+	private void RotateHitboxOnMove(Vector2 movement) {
+		movement = RoundVector(movement);
+		Transform HitContainer = GetComponentInChildren<BossRoarHitbox>().transform.parent;
+		Quaternion currentRotation = HitContainer.transform.rotation;
+
+		if (movement.x > 0) { //L
+			currentRotation = Quaternion.Euler(0, 0, 90);
+		}
+		else if (movement.x < 0) { //R
+			currentRotation = Quaternion.Euler(0, 0, -90);
+		}
+		else if (movement.y > 0) { //U
+			currentRotation = Quaternion.Euler(0, 0, 180);
+		}
+		else if (movement.y < 0) { //D
+			currentRotation = Quaternion.Euler(0, 0, 0);
+		}
+
+		HitContainer.transform.rotation = currentRotation;
+	}
+
+	private Vector2 RoundVector(Vector2 vector) {
+		return new Vector2(Mathf.Round(vector.x), Mathf.Round(vector.y));
 	}
 
 	public void CheckForPlayer() {
@@ -76,6 +93,41 @@ public class Boss : MonoBehaviour, ISaveable {
 			Enemy = true;
 			Charge = false;
 		}
+	}
+
+	public IEnumerator FlashRed() {
+		GetComponent<SpriteRenderer>().color = Color.magenta;
+		yield return new WaitForSeconds(0.5f);
+		GetComponent<SpriteRenderer>().color = Color.white;
+	}
+
+	public List<WeightedStates> WeightedValues;
+	public int GetRendomValue(List<WeightedStates> weightedValuesList) {
+		int output = 0;
+
+		int totalWeight = 0;
+		foreach (WeightedStates entry in weightedValuesList) {
+			totalWeight += entry.Weight;
+		}
+		int rndWeightValue = Random.Range(1, totalWeight + 1);
+
+		int processedWeight = 0;
+		foreach (WeightedStates entry in weightedValuesList) {
+			processedWeight += entry.Weight;
+			if (rndWeightValue <= processedWeight) {
+				output = entry.Value;
+				break;
+			}
+		}
+		return output;
+	}
+
+
+	private void OnDrawGizmos() {
+		if (transform == null)
+			return;
+		Gizmos.color = Color.blue;
+		Gizmos.DrawWireSphere(transform.position, Stats.ChargeRange);
 	}
 
 	public void LoadData(GameData data) {

@@ -195,7 +195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: DoorInteractionPoint House2-87996.24
+      value: DoorInteractionPoint House2-87996,24
       objectReference: {fileID: 0}
     - target: {fileID: 6036849210683475856, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: m_Name
@@ -299,7 +299,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: DoorInteractionPoint House1-131666.2
+      value: DoorInteractionPoint House1-131666,2
       objectReference: {fileID: 0}
     - target: {fileID: 6036849210683475856, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: m_Name
@@ -403,6 +403,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2069321049771282331, guid: 3e2be099de849f5c3a61954883b6d4f7, type: 3}
+      propertyPath: _initializeData
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5020171767887303805, guid: 3e2be099de849f5c3a61954883b6d4f7, type: 3}
       propertyPath: m_Name
       value: SaveManager
@@ -483,7 +487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1625781803088781141, guid: bcf36efebb1722348b900b3210ec3517, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: WeaponPickup-3166.921
+      value: WeaponPickup-3166,921
       objectReference: {fileID: 0}
     - target: {fileID: 2601442356323300049, guid: bcf36efebb1722348b900b3210ec3517, type: 3}
       propertyPath: m_Name
@@ -5423,7 +5427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: DoorInteractionPoint Church-410070.1
+      value: DoorInteractionPoint Church-410070,1
       objectReference: {fileID: 0}
     - target: {fileID: 6036849210683475856, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: m_Name
@@ -5975,6 +5979,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7474330799362213706, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
+      propertyPath: HasDoorKey
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7208551151754622344, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
@@ -6036,7 +6044,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: DoorInteractionPoint House0-32161.59
+      value: DoorInteractionPoint House0-32161,59
       objectReference: {fileID: 0}
     - target: {fileID: 6036849210683475856, guid: dc4899dbe9525bef5938f2343da58d4b, type: 3}
       propertyPath: m_Name

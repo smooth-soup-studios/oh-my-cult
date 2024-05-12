@@ -1,17 +1,17 @@
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class WeaponPickupPoint : BaseItemPickupInteractable {
-
+public class FoodPickupInteractable : BaseItemPickupInteractable {
 	private SpriteRenderer _spriteRenderer;
 
 	private new void Start() {
 		base.Start();
 
+		// SingleUse = true;
+
 		_spriteRenderer = GetComponent<SpriteRenderer>();
 		UpdateSprite();
 	}
-
 
 	public override void Interact(GameObject interactor) {
 		if (interactor.TryGetComponent(out Inventory inventory)) {
@@ -28,7 +28,6 @@ public class WeaponPickupPoint : BaseItemPickupInteractable {
 		}
 		else {
 			_spriteRenderer.sprite = Item.InvData.ItemIcon;
-
 		}
 	}
 
@@ -42,13 +41,13 @@ public class WeaponPickupPoint : BaseItemPickupInteractable {
 
 	public override void LoadData(GameData data) {
 		base.LoadData(data);
-		if (data.SceneData.InteractionData.ContainsKey($"{ObjectId}-SwordExists")) {
-			data.SceneData.InteractionData.TryGetValue($"{ObjectId}-SwordExists", out HasBeenUsed);
+		if (data.SceneData.InteractionData.ContainsKey($"{ObjectId}-FoodExists")) {
+			data.SceneData.InteractionData.TryGetValue($"{ObjectId}-FoodExists", out HasBeenUsed);
 		}
 	}
 
 	public override void SaveData(GameData data) {
 		base.SaveData(data);
-		data.SceneData.InteractionData[$"{ObjectId}-SwordExists"] = HasBeenUsed;
+		data.SceneData.InteractionData[$"{ObjectId}-FoodExists"] = HasBeenUsed;
 	}
 }

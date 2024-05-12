@@ -9,7 +9,7 @@ public class HealthController : MonoBehaviour, ISaveable {
 	[Header("Settings")]
 	[SerializeField] private bool _isInvulnerable = false;
 	[SerializeField] float _maxHealth = 100;
-	float _currentHealth;
+	[SerializeField] float _currentHealth;
 	[SerializeField] Event _actorDamaged;
 	[SerializeField] Event _lowHealth;
 	bool _isLowHealthEventPosted;
@@ -65,6 +65,24 @@ public class HealthController : MonoBehaviour, ISaveable {
 		}
 
 		if (!gameObject.CompareTag("Player")) return;
+	}
+
+	/// <summary>
+	/// Adds health.
+	/// </summary>
+	/// <param name="health"></param>
+	/// <returns>The current health after the operation.</returns>
+	public float AddHealth(float health) {
+		_currentHealth += health;
+		if (_currentHealth > _maxHealth) {
+			_currentHealth = _maxHealth;
+		}
+
+		if (gameObject.CompareTag("Player")) {
+			_healthValue.SetValue(gameObject, _currentHealth);
+		}
+
+		return _currentHealth;
 	}
 
 	public float GetCurrentHealth() {

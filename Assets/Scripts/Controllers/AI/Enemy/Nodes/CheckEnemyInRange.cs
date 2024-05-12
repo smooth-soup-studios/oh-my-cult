@@ -1,30 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using BehaviorTree;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class CheckEnemyInRange : Node {
 
-	private static int _enemyLayerMask = 1 << 6;
+	private static int _enemyLayerMask;
 	private Transform _transform;
 
 	public CheckEnemyInRange(Transform transform) {
 		_transform = transform;
+		_enemyLayerMask = 1 << LayerMask.NameToLayer("Player");
 	}
 
 	public override NodeState Evaluate(EnemyBehaviourTree tree) {
-		object t = GetData("target");
-		if (t == null) {
-			Collider2D[] colliders = Physics2D.OverlapCircleAll(_transform.position, EnemyBT.FovRange, _enemyLayerMask);
+		GameObject target = tree.Target;
+		if (target == null) {
+			Collider2D[] colliders = Physics2D.OverlapCircleAll(_transform.position, tree.FovRange, _enemyLayerMask);
 			if (colliders.Length > 0) {
-				Parent.Parent.SetData("target", colliders[0].transform);
+				tree.Target = colliders[0].gameObject;
 				State = NodeState.SUCCESS;
 				return State;
 			}
 			State = NodeState.FAILURE;
 			return State;
 		}
+		tree.SearchLocation = target.transform.position;
 		State = NodeState.SUCCESS;
 		return State;
 	}

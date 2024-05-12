@@ -1,45 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using BehaviorTree;
 using UnityEngine;
 
 public class TaskAttack : Node {
-
-
-	private EnemyHealthController _enemy;
-	private Transform _lastTarget;
 	private EnemyBiteAttack _enemyBiteAttack;
 
-	private float _attackTime = 1f;
-	private float _attackCounter = 0f;
+	private float _attackTime = 1.04f;
 
 
-	public TaskAttack(Transform transform) {
-		_enemy = GameObject.Find("Enemy").GetComponent<EnemyHealthController>();
-	}
+	public TaskAttack(Transform transform) { }
 
 	public override NodeState Evaluate(EnemyBehaviourTree tree) {
-		Transform target = (Transform)GetData("target");
 		_enemyBiteAttack = tree.gameObject.GetComponent<EnemyBiteAttack>();
-
-		if (target != _lastTarget) {
-			_lastTarget = target;
-		}
-
-		_attackCounter += Time.deltaTime;
-		if (_attackCounter >= _attackTime) {
+		tree.AttackCounter += Time.deltaTime;
+		if (tree.AttackCounter >= _attackTime) {
 			_enemyBiteAttack.Attack();
-			if (_enemy.GetCurrentHealth() == 0) {
-				ClearData("target");
-
-			}
-			else {
-				_attackCounter = 0f;
-			}
+			tree.AttackCounter = -0.04f;
 		}
-
 		State = NodeState.RUNNING;
 		return State;
 	}
-
 }

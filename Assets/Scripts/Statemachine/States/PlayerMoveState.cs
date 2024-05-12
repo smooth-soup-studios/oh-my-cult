@@ -24,7 +24,7 @@ public class PlayerMoveState : BaseState {
 	public override void UpdateState() {
 		StateMachine.HandleMovement(StateMachine.BaseSpeed * StateMachine.SpeedModifier * Time.deltaTime * Movement.normalized);
 
-		if(!_walkSound && SoundManager.Instance != null){
+		if (!_walkSound && SoundManager.Instance != null) {
 			SoundManager.Instance.PlayClip(StateMachine.RunSoundClip, StateMachine.transform, 1f);
 			StateMachine.StartCoroutine(WalkSpeed());
 		}
@@ -72,7 +72,7 @@ public class PlayerMoveState : BaseState {
 	}
 	public IEnumerator DashCooldown() {
 		_dashCooldown = true;
-		yield return new WaitForSecondsRealtime(1.25f);
+		yield return new WaitForSecondsRealtime(PlayerDashState.DashCooldown);
 		_dashCooldown = false;
 	}
 	private void OnAttack(bool attack) {

@@ -27,13 +27,13 @@ public class KeyPickupPoint : BaseInteractable {
 
 	public override void LoadData(GameData data) {
 		base.LoadData(data);
-		if (data.SceneData.ArbitraryTriggers.ContainsKey(ObjectId + "KeyExists")) {
-			data.SceneData.ArbitraryTriggers.TryGetValue(ObjectId + "KeyExists", out HasBeenUsed);
+		if (data.SceneData.ArbitraryTriggers.ContainsKey($"{ObjectId}-KeyExists")) {
+			data.SceneData.ArbitraryTriggers.TryGetValue($"{ObjectId}-KeyExists", out HasBeenUsed);
 		}
 	}
 
 	public override void SaveData(GameData data) {
 		base.SaveData(data);
-		data.SceneData.ArbitraryTriggers[ObjectId + "KeyExists"] = HasBeenUsed;
+		data.SceneData.ArbitraryTriggers[$"{ObjectId}-KeyExists"] = HasBeenUsed;
 	}
 }

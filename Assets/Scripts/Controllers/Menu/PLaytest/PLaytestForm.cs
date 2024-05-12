@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-public class PLaytestForm : MonoBehaviour
+public class PlaytestForm : MonoBehaviour
 {
     Button _yesButton;
     Button _noButton;

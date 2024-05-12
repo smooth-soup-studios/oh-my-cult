@@ -1,21 +1,13 @@
-using System;
 using System.Collections.Generic;
 using BehaviorTree;
 using UnityEngine;
-using UnityEngine.AI;
 
 
 public class EnemyBT : EnemyBehaviourTree {
-	public UnityEngine.Transform[] Waypoints;
-	public static float Speed = 2f;
-	public static float FovRange = 30f;
-	public static float AttackRange = 20f;
-	public static Vector3 SearchLocation = Vector3.zero;
-	public static NavMeshAgent Agent;
+	public Transform[] Waypoints;
 
-
-	private void Awake() {
-		Agent = GetComponent<NavMeshAgent>();
+	private new void Awake() {
+		base.Awake();
 		Agent.updateRotation = false;
 		Agent.updateUpAxis = false;
 	}
@@ -43,11 +35,9 @@ public class EnemyBT : EnemyBehaviourTree {
 
 		return root;
 	}
-
-		private void OnDrawGizmos() {
+	private void OnDrawGizmos() {
 		if (transform == null)
 			return;
-		UnityEngine.Gizmos.DrawWireSphere(transform.position, FovRange);
-
+		Gizmos.DrawWireSphere(transform.position, FovRange);
 	}
 }

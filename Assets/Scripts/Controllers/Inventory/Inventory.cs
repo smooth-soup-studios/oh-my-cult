@@ -39,12 +39,12 @@ public class Inventory : MonoBehaviour, ISaveable {
 	}
 
 	public void RemoveItem(InventoryItem item) {
-		_currentInventory.Remove(item);
+		RemoveItemByIndex(_currentInventory.IndexOf(item));
 	}
 
 	public void RemoveItemByIndex(int index) {
 		if (index >= 0 && index < _maxInventorySize && _currentInventory.Count > index) {
-			_currentInventory.RemoveAt(index);
+			_currentInventory[index] = null;
 		}
 	}
 

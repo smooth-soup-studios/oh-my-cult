@@ -11,6 +11,7 @@ public class InteractablePopulator : MonoBehaviour {
 	public GameObject PrefabInteractor;
 	public string TileNameStartsWith = "Interactable";
 
+
 	void Awake() {
 		if (PrefabInteractor == null) {
 			Logger.LogError(_logname, "Prefab is null!");

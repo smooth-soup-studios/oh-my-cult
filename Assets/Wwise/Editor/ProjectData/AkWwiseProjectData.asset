@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abe3cd6b229053b49b182f564025041c, type: 3}
+  m_Script: {fileID: 11500000, guid: 06f59736a791b6a4a867afaaeb488aff, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
@@ -20,11 +20,11 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: 53d76abeda2a464e92817403013012e4
+      guid: 2a7992d13a6fd4469b9d320de16dc771
     ParentPath: Virtual Acoustics\Default Work Unit
-    guid: 53d76abeda2a464e92817403013012e4
+    guid: 2a7992d13a6fd4469b9d320de16dc771
     GuidInternal: 
-    m_lastTime: -8584862586658922967
+    m_lastTime: -8584860109635098680
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -34,11 +34,11 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: 50f50c5daa173d4bbbc6ef18879d9334
+      guid: 11671e43e37a934caee3daf2cdafbf95
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
-    guid: 50f50c5daa173d4bbbc6ef18879d9334
+    guid: 11671e43e37a934caee3daf2cdafbf95
     GuidInternal: 
-    m_lastTime: -8584862586661956549
+    m_lastTime: -8584860109636292572
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -49,7 +49,7 @@ MonoBehaviour:
         guid: 00000000000000000000000000000000
       - ElementName: Default Work Unit
         ObjectType: 12
-        guid: 50f50c5daa173d4bbbc6ef18879d9334
+        guid: 11671e43e37a934caee3daf2cdafbf95
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -62,26 +62,12 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: bd03fda55af8d14597a9797c7bc23263
+      guid: dd2f4d67657c1c479890824352b9267f
     ParentPath: SoundBanks\Default Work Unit
-    guid: bd03fda55af8d14597a9797c7bc23263
+    guid: dd2f4d67657c1c479890824352b9267f
     GuidInternal: 
-    m_lastTime: -8584862586658991987
-    List:
-    - name: Main
-      guid: 7f9f666caab2674e80a3945e06f4be5b
-      id: 3161908922
-      PathAndIcons:
-      - ElementName: SoundBanks
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: bd03fda55af8d14597a9797c7bc23263
-      - ElementName: Main
-        ObjectType: 7
-        guid: 7f9f666caab2674e80a3945e06f4be5b
-      Path: SoundBanks\Default Work Unit\Main
+    m_lastTime: -8584860109636162715
+    List: []
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -90,131 +76,12 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: 124c69445c8f274e936543d7f840f3d6
+      guid: 097768304fb6d84c9b03f179562ca4c7
     ParentPath: Events\Default Work Unit
-    guid: 124c69445c8f274e936543d7f840f3d6
+    guid: 097768304fb6d84c9b03f179562ca4c7
     GuidInternal: 
-    m_lastTime: -8584862586662316207
-    List:
-    - name: boss_1_roar
-      guid: 3c3e91702c2cc743a7a545b602d6ae36
-      id: 3603829085
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 124c69445c8f274e936543d7f840f3d6
-      - ElementName: boss_1_roar
-        ObjectType: 3
-        guid: 3c3e91702c2cc743a7a545b602d6ae36
-      Path: Events\Default Work Unit\boss_1_roar
-      maxAttenuation: 0
-      maxDuration: 5.397324
-      minDuration: 5.397324
-    - name: damage_taken
-      guid: b5e79e9d4342324dad41fb855b1e5385
-      id: 1763999390
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 124c69445c8f274e936543d7f840f3d6
-      - ElementName: damage_taken
-        ObjectType: 3
-        guid: b5e79e9d4342324dad41fb855b1e5385
-      Path: Events\Default Work Unit\damage_taken
-      maxAttenuation: 0
-      maxDuration: 0.5401814
-      minDuration: 0.5401814
-    - name: dash
-      guid: 9f59cba51faa7649b604ba7ae9ed39e8
-      id: 1942692385
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 124c69445c8f274e936543d7f840f3d6
-      - ElementName: dash
-        ObjectType: 3
-        guid: 9f59cba51faa7649b604ba7ae9ed39e8
-      Path: Events\Default Work Unit\dash
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: enter_church
-      guid: 324285e034d7fa4aa673ced5c5d702eb
-      id: 2299923309
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 124c69445c8f274e936543d7f840f3d6
-      - ElementName: enter_church
-        ObjectType: 3
-        guid: 324285e034d7fa4aa673ced5c5d702eb
-      Path: Events\Default Work Unit\enter_church
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: enter_village
-      guid: 7e8032c7fe80cf4b9756be87a92a1705
-      id: 1097790916
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 124c69445c8f274e936543d7f840f3d6
-      - ElementName: enter_village
-        ObjectType: 3
-        guid: 7e8032c7fe80cf4b9756be87a92a1705
-      Path: Events\Default Work Unit\enter_village
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: low_heatlh
-      guid: bbc826a3d48f1e48ab33f5c7aed6906a
-      id: 203068402
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 124c69445c8f274e936543d7f840f3d6
-      - ElementName: low_heatlh
-        ObjectType: 3
-        guid: bbc826a3d48f1e48ab33f5c7aed6906a
-      Path: Events\Default Work Unit\low_heatlh
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: walk
-      guid: 65dd281331dacb46b965f6ae535521fa
-      id: 2108779966
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 124c69445c8f274e936543d7f840f3d6
-      - ElementName: walk
-        ObjectType: 3
-        guid: 65dd281331dacb46b965f6ae535521fa
-      Path: Events\Default Work Unit\walk
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+    m_lastTime: -8584860109635692452
+    List: []
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -223,26 +90,12 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: 5902b055f4dc5e4dab32d60f7b3ffdfd
+      guid: 47af1799cf87e64189c848f0bf384b30
     ParentPath: Game Parameters\Default Work Unit
-    guid: 5902b055f4dc5e4dab32d60f7b3ffdfd
+    guid: 47af1799cf87e64189c848f0bf384b30
     GuidInternal: 
-    m_lastTime: -8584862586662316207
-    List:
-    - name: currentHealth
-      guid: edd49a804ac21a4a8bc4703b556ce196
-      id: 268400754
-      PathAndIcons:
-      - ElementName: Game Parameters
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 5902b055f4dc5e4dab32d60f7b3ffdfd
-      - ElementName: currentHealth
-        ObjectType: 13
-        guid: edd49a804ac21a4a8bc4703b556ce196
-      Path: Game Parameters\Default Work Unit\currentHealth
+    m_lastTime: -8584860109635577375
+    List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -251,11 +104,11 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: d4d5418fb58a2645a0217b1a046ace58
+      guid: 876a71ff62d7414c8af293c730fcd6f1
     ParentPath: States\Default Work Unit
-    guid: d4d5418fb58a2645a0217b1a046ace58
+    guid: 876a71ff62d7414c8af293c730fcd6f1
     GuidInternal: 
-    m_lastTime: -8584862586658976749
+    m_lastTime: -8584860109636102496
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -265,11 +118,11 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: 4c4ad5e8d0d2bf49bfdb66d6a6aee17c
+      guid: fac572471381ad44a0f24fb468761bff
     ParentPath: Switches\Default Work Unit
-    guid: 4c4ad5e8d0d2bf49bfdb66d6a6aee17c
+    guid: fac572471381ad44a0f24fb468761bff
     GuidInternal: 
-    m_lastTime: -8584862586658966570
+    m_lastTime: -8584860109635364702
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -279,15 +132,15 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: 420a2e69b26f8243bcac71a129b5bbb0
+      guid: 816ece39268c384aba11da4875cee6b7
     ParentPath: Triggers\Default Work Unit
-    guid: 420a2e69b26f8243bcac71a129b5bbb0
+    guid: 816ece39268c384aba11da4875cee6b7
     GuidInternal: 
-    m_lastTime: -8584862586658956374
+    m_lastTime: -8584860109635867493
     List: []
-  ExpandedFileSystemItemIds: 02000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c000000
-  ExpandedWaapiItemIds: 0100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c000000190000001a0000001b000000
-  AutoSyncSelection: 1
+  ExpandedFileSystemItemIds: 
+  ExpandedWaapiItemIds: 
+  AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
   CurrentPluginConfig: 

@@ -63,10 +63,17 @@ public class WeaponPickupPoint : BaseItemPickupInteractable {
 		if (data.SceneData.InteractionData.ContainsKey($"{ObjectId}-SwordExists")) {
 			data.SceneData.InteractionData.TryGetValue($"{ObjectId}-SwordExists", out HasBeenUsed);
 		}
+		if (data.SceneData.InteractionData.ContainsKey($"{ObjectId}-ItemIsNull")) {
+			data.SceneData.InteractionData.TryGetValue($"{ObjectId}-ItemIsNull", out bool ItemNull);
+			if (ItemNull) {
+				Item = null;
+			}
+		}
 	}
 
 	public override void SaveData(GameData data) {
 		base.SaveData(data);
 		data.SceneData.InteractionData[$"{ObjectId}-SwordExists"] = HasBeenUsed;
+		data.SceneData.InteractionData[$"{ObjectId}-ItemIsNull"] = Item == null;
 	}
 }

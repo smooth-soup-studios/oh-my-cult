@@ -26,7 +26,7 @@ public class Inventory : MonoBehaviour, ISaveable {
 
 
 	public InventoryItem AddItem(InventoryItem item) {
-		if (_currentInventory.Contains(null)) {
+		if (_currentInventory.Contains(null) && item != null) {
 			_currentInventory[_currentInventory.FindIndex(x => x == null)] = item;
 			return null;
 		}

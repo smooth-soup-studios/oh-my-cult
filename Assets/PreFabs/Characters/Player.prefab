@@ -502,6 +502,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1689449188970856360}
   - component: {fileID: 4966035279945306172}
+  - component: {fileID: 6142888196673078989}
   m_Layer: 6
   m_Name: Jed Light 2D
   m_TagString: Untagged
@@ -574,3 +575,15 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &6142888196673078989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8332827223722713526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 950db44fbeb1bf84c9f18aa930969dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

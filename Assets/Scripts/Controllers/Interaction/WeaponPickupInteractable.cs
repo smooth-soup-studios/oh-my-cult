@@ -4,12 +4,15 @@ using UnityEngine;
 public class WeaponPickupPoint : BaseItemPickupInteractable {
 
 	private SpriteRenderer _spriteRenderer;
+	private ItemPickupGlowController _glowController;
 
 	private new void Start() {
 		base.Start();
 
 		_spriteRenderer = GetComponent<SpriteRenderer>();
 		UpdateSprite();
+
+		_glowController = GetComponent<ItemPickupGlowController>();
 	}
 
 
@@ -28,10 +31,12 @@ public class WeaponPickupPoint : BaseItemPickupInteractable {
 
 	public override void OnDeselect() {
 		_spriteRenderer.color = Color.white;
+		_glowController.StopGlow();
 	}
 
 	public override void OnSelect() {
 		_spriteRenderer.color = Color.green;
+		_glowController.StartGlow();
 	}
 
 	private void OnValidate() {

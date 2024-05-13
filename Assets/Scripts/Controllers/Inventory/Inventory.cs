@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
-using Unity.Collections;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour, ISaveable {
+	private string _logname = "InventorySystem";
 	private List<InventoryItem> _currentInventory = new();
 	private int _maxInventorySize = 5;
 	private int _selectedItemIndex = 0;
@@ -17,7 +17,7 @@ public class Inventory : MonoBehaviour, ISaveable {
 			if (e > 0) {
 				SelectNextSlot();
 			}
-			else {
+			else if (e < 0) {
 				SelectPrevSlot();
 			}
 		});
@@ -26,8 +26,8 @@ public class Inventory : MonoBehaviour, ISaveable {
 
 
 	public InventoryItem AddItem(InventoryItem item) {
-		if (_currentInventory.Count < _maxInventorySize) {
-			_currentInventory.Add(item);
+		if (_currentInventory.Contains(null) && item != null) {
+			_currentInventory[_currentInventory.FindIndex(x => x == null)] = item;
 			return null;
 		}
 		else {
@@ -49,7 +49,7 @@ public class Inventory : MonoBehaviour, ISaveable {
 	}
 
 	public void SelectNextSlot() {
-		if (_selectedItemIndex + 1 > _maxInventorySize) {
+		if (_selectedItemIndex + 1 >= _maxInventorySize) {
 			_selectedItemIndex = 0;
 		}
 		else {
@@ -113,6 +113,7 @@ public class Inventory : MonoBehaviour, ISaveable {
 		if (newInv.Count > 0) {
 			_currentInventory = newInv;
 		}
+		_selectedItemIndex = data.PlayerData.SelectedInvSlot;
 	}
 
 	public void SaveData(GameData data) {
@@ -130,6 +131,7 @@ public class Inventory : MonoBehaviour, ISaveable {
 				data.PlayerData.InvItemVals[i.ToString()] = selectedItem.InvData;
 			}
 		}
+		data.PlayerData.SelectedInvSlot = _selectedItemIndex;
 	}
 
 }

@@ -1,0 +1,831 @@
+fileFormatVersion: 2
+guid: e9694fc27a37f5d4f9d49c61f96e7f43
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Big boss roar_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2999.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a1a7be05a29d754289942033e6b5bf4
+      internalID: 1379054121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_1
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2999.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327d86fd1ed1f9a448d6541dd2b42757
+      internalID: 1041334735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_2
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 2999.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b51c4ec9660f5164dac4ff4838cb672b
+      internalID: 691688939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_3
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2999.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5bcf1571e15cf94d89f24bfe537f07a
+      internalID: 89282892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_4
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 2999.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165c498b91859fb428c5b6d19e9b2431
+      internalID: 1995749831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_5
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 2999.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7ceb526a328f34fbf6b45f924aa750
+      internalID: 1515827471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_6
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 2999.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68faf2ffa6ae1fe4e91f645a2db79156
+      internalID: -755601520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_7
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 2999.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 145e12f441825a846beab62765475c6b
+      internalID: 518254145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2000.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef340886f728f9643aa3870209456834
+      internalID: 374200638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_9
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2000.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89170076278922142b5b55670867ee2d
+      internalID: -1788471632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_10
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 2000.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6148d58ba1924c342965052291568198
+      internalID: 1177125239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_11
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2000.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70092f253347c5e46a742e6fe6ede5bb
+      internalID: 318604024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_12
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 2000.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd652d95542bc76419ab54d1b383be8f
+      internalID: -593945086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_13
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 2000.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37173f08a9a1fac43981e8b986bd3602
+      internalID: -417095590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_14
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 2000.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdea9171f02700f42a35814a5208e548
+      internalID: 605831279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_15
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 2000.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be7eb19703d6c9c448eaf2ae90c14133
+      internalID: -541061022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1001.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe427e43f1f104645841d7525e0b88ad
+      internalID: 1024436496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_17
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1001.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dd411d01ebaae84e9e0014c419098a2
+      internalID: 189309139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_18
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1001.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd775210e86e5842a5dfc1cb06881f7
+      internalID: -917293840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_19
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1001.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4513e5506b2b15d4b979f94dabeef084
+      internalID: -680877657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_20
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 1001.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 324f6d66a30ab3140bd42357d1d5c695
+      internalID: 2007881160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_21
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 1001.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff77f2dbb09d02048960b1e303b26099
+      internalID: 854191792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_22
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 1001.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4357a909a6760d442942a6c02d08baf2
+      internalID: -1147447738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_23
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 1001.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92591fb4b7ba9cc4eb95e54a15f06ab8
+      internalID: -819898663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2283eab33438e054284184e4b12796c5
+      internalID: 1417539040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_25
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8677e31a566c7e4bb562157bc31a5fe
+      internalID: -859736649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_26
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 2.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7dbc5345edb6d444a29035d1e031bc9
+      internalID: 670660191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_27
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf5ccfcb7b25124bb8e63a64b7a97cc
+      internalID: 1448371543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_28
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 2.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db62830c15b846b4ba9d542f0e90dd24
+      internalID: -1730944185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_29
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 2.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ab39b5241bc3f4d98ec402b4e8d262
+      internalID: -2105875685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_30
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 2.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73e35335357ba9e46974cf11d7382924
+      internalID: 1785567403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big boss roar_31
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 2.25
+        width: 1000
+        height: 999.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b51ac1e3afee3e46bd638022f70cf72
+      internalID: -1009064065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Big boss roar_0: 1379054121
+      Big boss roar_1: 1041334735
+      Big boss roar_10: 1177125239
+      Big boss roar_11: 318604024
+      Big boss roar_12: -593945086
+      Big boss roar_13: -417095590
+      Big boss roar_14: 605831279
+      Big boss roar_15: -541061022
+      Big boss roar_16: 1024436496
+      Big boss roar_17: 189309139
+      Big boss roar_18: -917293840
+      Big boss roar_19: -680877657
+      Big boss roar_2: 691688939
+      Big boss roar_20: 2007881160
+      Big boss roar_21: 854191792
+      Big boss roar_22: -1147447738
+      Big boss roar_23: -819898663
+      Big boss roar_24: 1417539040
+      Big boss roar_25: -859736649
+      Big boss roar_26: 670660191
+      Big boss roar_27: 1448371543
+      Big boss roar_28: -1730944185
+      Big boss roar_29: -2105875685
+      Big boss roar_3: 89282892
+      Big boss roar_30: 1785567403
+      Big boss roar_31: -1009064065
+      Big boss roar_4: 1995749831
+      Big boss roar_5: 1515827471
+      Big boss roar_6: -755601520
+      Big boss roar_7: 518254145
+      Big boss roar_8: 374200638
+      Big boss roar_9: -1788471632
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

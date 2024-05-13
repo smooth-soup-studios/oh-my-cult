@@ -15,7 +15,7 @@ MonoBehaviour:
   SwitchTime: 2
   ChargeSpeed: 5
   ChargeTime: 5
-  ChargeRange: 25
+  ChargeRange: 50
   ChargeAttack: 25
   SlamDamage: 18
   SlamRange: 40

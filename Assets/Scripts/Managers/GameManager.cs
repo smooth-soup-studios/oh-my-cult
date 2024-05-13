@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 namespace Managers {
 	public class GameManager : MonoBehaviour {
 		public static GameManager Instance { get; private set; }
+		private static readonly string _logname = "GameManager";
 
 		private List<string> _sceneNamesInBuild = new();
 
@@ -49,6 +50,19 @@ namespace Managers {
 			}
 
 			return false;
+		}
+
+		public static void QuitGame() {
+			#if UNITY_WEBGL
+				Logger.Log(_logname,"WebGL build detected, redirecting to homepage");
+				Application.OpenURL("/");
+			#elif UNITY_EDITOR
+				Logger.Log(_logname, "Quitting Playmode..");
+				UnityEditor.EditorApplication.isPlaying = false;
+			#else
+				Logger.Log(_logname, "Quitting Game..");
+				Application.Quit();
+			#endif
 		}
 	}
 }

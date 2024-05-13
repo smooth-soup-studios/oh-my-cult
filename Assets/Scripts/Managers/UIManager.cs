@@ -1,4 +1,3 @@
-using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -18,11 +17,11 @@ public class UIManager : MonoBehaviour {
 	private VisualElement _dashBarValue;
 	private VisualElement _keyIndicator;
 	private VisualElement _hotbar;
-	private int _selectedItemIndex = 0;
 	private Color _borderColor = new Color(33f / 255f, 15f / 255f, 59f / 255f);
 
 
 	private void Awake() {
+
 		if (Instance == null) {
 			Instance = this;
 			_root = GetComponent<UIDocument>().rootVisualElement;
@@ -31,12 +30,16 @@ public class UIManager : MonoBehaviour {
 			_keyIndicator = _root.Q<VisualElement>("key-indicator");
 			_hotbar = _root.Q<VisualElement>("Hotbar");
 			_playerInventory = FindFirstObjectByType<StateMachine>().gameObject.GetComponent<Inventory>();
+			GameObject.Find("PauseMenu").GetComponent<UIDocument>().rootVisualElement.visible = false;
+
 		}
 		else {
 			Destroy(gameObject);
 		}
-
 		DontDestroyOnLoad(gameObject);
+	}
+
+	private void Start() {
 	}
 
 	private void Update() {
@@ -102,6 +105,14 @@ public class UIManager : MonoBehaviour {
 	}
 
 	private void InvUpdate() {
+		// When transitioning between scenes the ref to the inventory is lost so reaquire it
+		if (_playerInventory == null) {
+			try {
+				_playerInventory = FindFirstObjectByType<StateMachine>().PlayerInventory;
+			}
+			catch { return; }
+		}
+
 		for (int i = 0; i < _hotbar.childCount; i++) {
 			Sprite sprite = null;
 			if (_playerInventory.GetInventoryMaxSize() >= i) {

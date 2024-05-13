@@ -1,10 +1,6 @@
 using System;
 using System.Collections;
-using AK.Wwise;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
-using Event = AK.Wwise.Event;
 
 public class HealthController : MonoBehaviour, ISaveable {
 	private string _logname = "Health controller";
@@ -16,12 +12,10 @@ public class HealthController : MonoBehaviour, ISaveable {
 	float _currentHealth;
 	[SerializeField] Event _actorDamaged;
 	[SerializeField] Event _lowHealth;
-	[SerializeField] RTPC _healthValue;
 	bool _isLowHealthEventPosted;
 
 	void Awake() {
 		_currentHealth = _maxHealth;
-		_healthValue.SetValue(gameObject, _currentHealth);
 	}
 
 	private void Start() {
@@ -36,7 +30,6 @@ public class HealthController : MonoBehaviour, ISaveable {
 			if (_isLowHealthEventPosted) {
 				return;
 			}
-			_lowHealth.Post(gameObject);
 			_isLowHealthEventPosted = true;
 		});
 	}
@@ -55,7 +48,6 @@ public class HealthController : MonoBehaviour, ISaveable {
 	public void TakeDamage(float damage) {
 		_currentHealth -= damage;
 
-		_actorDamaged.Post(gameObject);
 
 		if (_isInvulnerable) {
 			Logger.Log(_logname, $"The {name} took no damage becouse it is invulnerable!");
@@ -73,7 +65,20 @@ public class HealthController : MonoBehaviour, ISaveable {
 		}
 
 		if (!gameObject.CompareTag("Player")) return;
-		_healthValue.SetValue(gameObject, _currentHealth);
+	}
+
+	/// <summary>
+	/// Adds health.
+	/// </summary>
+	/// <param name="health"></param>
+	/// <returns>The current health after the operation.</returns>
+	public float AddHealth(float health) {
+		_currentHealth += health;
+		if (_currentHealth > _maxHealth) {
+			_currentHealth = _maxHealth;
+		}
+
+		return _currentHealth;
 	}
 
 	public float GetCurrentHealth() {
@@ -100,12 +105,21 @@ public class HealthController : MonoBehaviour, ISaveable {
 	}
 
 	public void LoadData(GameData data) {
+		if (gameObject.CompareTag("Player")) {
+			_currentHealth = data.PlayerData.Health;
+		}
 		if (data.ActorData.HealthValues.ContainsKey(ObjectId)) {
 			data.ActorData.HealthValues.TryGetValue(ObjectId, out _currentHealth);
 		}
 	}
 
 	public void SaveData(GameData data) {
-		data.ActorData.HealthValues[ObjectId] = _currentHealth;
+		// Player UID changes between scenes so use dedicated ID
+		if (gameObject.CompareTag("Player")) {
+			data.PlayerData.Health = _currentHealth;
+		}
+		else {
+			data.ActorData.HealthValues[ObjectId] = _currentHealth;
+		}
 	}
 }

@@ -61,8 +61,17 @@
                 },
                 {
                     "name": "HotbarSwitch",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "034708ae-6a3a-44cd-84a1-0d09ae9ec7ad",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "ToggleMenu",
+                    "type": "Button",
+                    "id": "ec981103-9661-4827-b3c7-3fac2d5ec654",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -395,7 +404,7 @@
                     "path": "<Gamepad>/dpad/left",
                     "interactions": "",
                     "processors": "Scale(factor=-1)",
-                    "groups": "",
+                    "groups": "Controller",
                     "action": "HotbarSwitch",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -406,8 +415,52 @@
                     "path": "<Gamepad>/dpad/right",
                     "interactions": "",
                     "processors": "Scale",
-                    "groups": "",
+                    "groups": "Controller",
                     "action": "HotbarSwitch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2fd37465-cd1d-43d3-9ba1-2236d807d134",
+                    "path": "<Mouse>/scroll/y",
+                    "interactions": "",
+                    "processors": "Invert",
+                    "groups": "Keyboard",
+                    "action": "HotbarSwitch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "28f625e0-278c-4506-a90f-3d7fc27be75a",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "ToggleMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "72a7c022-a159-4343-bcd0-52a3ce84ec8c",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "ToggleMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "57daf2ea-05ad-411b-9b8a-f9b674d3fe1f",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "ToggleMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -609,6 +662,11 @@
                 {
                     "devicePath": "<Keyboard>",
                     "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": true,
                     "isOR": false
                 }
             ]

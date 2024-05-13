@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using Event = AK.Wwise.Event;
 
 namespace Controllers {
 public class TrackController : MonoBehaviour {

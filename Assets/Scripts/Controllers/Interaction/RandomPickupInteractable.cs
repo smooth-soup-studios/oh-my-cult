@@ -20,10 +20,12 @@ public class RandomPickupInteractable : MonoBehaviour {
 	}
 
 	private void OnDrawGizmos() {
+		#if UNITY_EDITOR
 		if (transform == null)
 			return;
 		// Rainbow gizmos!!! :D
 		Gizmos.color = Color.HSVToRGB((float)EditorApplication.timeSinceStartup % 1, 1, .5f);
 		Gizmos.DrawWireSphere(transform.position, 15);
+		#endif
 	}
 }

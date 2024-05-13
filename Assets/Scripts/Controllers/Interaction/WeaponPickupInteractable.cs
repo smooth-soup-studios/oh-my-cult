@@ -21,6 +21,7 @@ public class WeaponPickupPoint : BaseItemPickupInteractable {
 			InventoryItem switchedItem = inventory.AddItem(Item);
 			Item = switchedItem;
 			UpdateSprite();
+			_glowController.StopGlow();
 		}
 		base.Interact(interactor);
 	}
@@ -36,7 +37,9 @@ public class WeaponPickupPoint : BaseItemPickupInteractable {
 
 	public override void OnSelect() {
 		_spriteRenderer.color = Color.green;
-		_glowController.StartGlow();
+		if (Item != null) {
+			_glowController.StartGlow();
+		}
 	}
 
 	private void OnValidate() {

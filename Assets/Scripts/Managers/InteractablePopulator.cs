@@ -9,6 +9,7 @@ public class InteractablePopulator : MonoBehaviour {
 	private static string _logname = "InteractablePopulator";
 
 	public GameObject PrefabInteractor;
+	public string TileNameStartsWith = "Interactable";
 
 	void Awake() {
 		if (PrefabInteractor == null) {
@@ -28,6 +29,10 @@ public class InteractablePopulator : MonoBehaviour {
 				Vector3 place = map.CellToWorld(localPlace) + map.cellSize / 2f;
 
 				if (!map.HasTile(localPlace)) {
+					continue;
+				}
+
+				if (!map.GetTile(localPlace).name.StartsWith(TileNameStartsWith)) {
 					continue;
 				}
 

@@ -13523,7 +13523,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: ExitBuilding-7904.84
+      value: ExitBuilding-5330.63
       objectReference: {fileID: 0}
     - target: {fileID: 6036849210683475856, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: m_Name
@@ -36752,7 +36752,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: ExitBuilding-261151.5
+      value: ExitBuilding-258562.8
       objectReference: {fileID: 0}
     - target: {fileID: 6036849210683475856, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: m_Name
@@ -37371,7 +37371,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2607886220727919282, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: Player-6266.44
+      value: Player-7518.85
       objectReference: {fileID: 0}
     - target: {fileID: 3242085015397341469, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
       propertyPath: m_MaskInteraction

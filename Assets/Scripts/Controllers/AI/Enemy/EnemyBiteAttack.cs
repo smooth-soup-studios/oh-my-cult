@@ -1,16 +1,10 @@
 using UnityEngine;
 
-public class EnemyBiteAttack : MonoBehaviour {
-	[SerializeField] private WeaponStats _weaponData;
-	public void Attack() {
-		try {
-			GetComponentInChildren<WeaponHitbox>().GetObjectsInCollider().ForEach(obj => {
-				if (obj.TryGetComponent<HealthController>(out HealthController enemy)) {
-					enemy.TakeDamage(_weaponData.WeaponData.Damage);
-				}
-			});
-		}
-		catch (System.Exception) {
-		}
+public class EnemyBiteAttack : WeaponItem {
+
+	private new void Start() {
+		base.Start();
+		// Overwrite layermask
+		IgnoreThisMask = ~(1 << LayerMask.NameToLayer("Player") | 1 << LayerMask.NameToLayer("Ignore Raycast"));
 	}
 }

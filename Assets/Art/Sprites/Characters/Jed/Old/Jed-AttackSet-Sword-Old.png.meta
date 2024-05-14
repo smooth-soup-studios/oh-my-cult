@@ -1,0 +1,800 @@
+fileFormatVersion: 2
+guid: 51f64c88e1555ec4a8d35b3aeda50085
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jed-AttackSet_0
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 2543
+        width: 199
+        height: 314
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 530e20a45a58ae64c80b9e25111dee32
+      internalID: -148349575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_1
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 2576
+        width: 260
+        height: 283
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa154396a170b9540853efe18956a100
+      internalID: 1915775481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_2
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 2586
+        width: 221
+        height: 271
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7f9772c18d6d66469f7b735029d372e
+      internalID: 195976912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_3
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 2588
+        width: 220
+        height: 268
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38862a7f7eaf21b4abdccbf51e910348
+      internalID: -1980609069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_4
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 2123
+        width: 197
+        height: 310
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01559a8a4ecbb6540a6b8b707f5a2814
+      internalID: -1569483581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_5
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 2288
+        width: 6
+        height: 6
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e9f0efe191858340beaafd77ca3be7c
+      internalID: -414209913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_6
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 2145
+        width: 261
+        height: 289
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df5d2083ad8c0047b8fe544dcd0384b
+      internalID: -1900569894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_7
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 2149
+        width: 225
+        height: 284
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34b8b96da3500e0498c5d491015ad1ce
+      internalID: -94559648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_8
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 2163
+        width: 220
+        height: 268
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea8b482822552347be7a14e8670bc9c
+      internalID: -1134851205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_9
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1723
+        width: 152
+        height: 297
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc5f056c3df37cb4cbcbcc10c0875a98
+      internalID: -1173554177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_10
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1723
+        width: 177
+        height: 288
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d9af035c783a24a821251aa58b8f41
+      internalID: -520697663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_11
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 1722
+        width: 232
+        height: 264
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3b1181150f5f64794d553bf4c64df3
+      internalID: -1900747501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_12
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 1693
+        width: 207
+        height: 290
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3fd98d14e4882d45a2261d2ca2628d2
+      internalID: 512089253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_13
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 1297
+        width: 151
+        height: 258
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74fc19df380b50b4d8dd2fd61e071b57
+      internalID: -1271331888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_14
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 1297
+        width: 154
+        height: 260
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c64d057d8f997aa4c818c152671314c2
+      internalID: -351948626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_15
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 1295
+        width: 203
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca5ac3d821116ac438a6d4eec0afc153
+      internalID: -802869539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_16
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 1290
+        width: 179
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da6b09942ca6eba4999625e72795021f
+      internalID: -1167330964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_17
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 857
+        width: 192
+        height: 286
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071efb2602d7798479be528a54582ab3
+      internalID: 1670608094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_18
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 996
+        width: 4
+        height: 8
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76a921b5f2a96394d87f839b2ef9e2c4
+      internalID: -701871337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_19
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 873
+        width: 255
+        height: 270
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 968a32ba492398148a3f7853f832f814
+      internalID: 961977390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_20
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 874
+        width: 194
+        height: 269
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44bf936fd870724e880ad3c77c30549
+      internalID: -500676868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_21
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 873
+        width: 185
+        height: 268
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc2762c720bf7f040b0821a3f1c57bea
+      internalID: -230887988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_22
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 444
+        width: 187
+        height: 271
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c377969974d630a4dbd9d584405edbd0
+      internalID: -788948402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_23
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 447
+        width: 258
+        height: 270
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae4a682aea784594f978efde3a00e90b
+      internalID: 1334419524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_24
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 447
+        width: 189
+        height: 268
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dcb8a497129fb24c86e1dca97a9b3e4
+      internalID: -1017949336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_25
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 447
+        width: 180
+        height: 268
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78f7b20b48d4f7e4c84a37a9f2703e6b
+      internalID: 741143164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_26
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 105
+        width: 257
+        height: 215
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae0efe303f81a2c4c92f2dec06dc442d
+      internalID: -158587859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_27
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 118
+        width: 247
+        height: 164
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82fc432675e0b3489d7222ce13c24c4
+      internalID: 1217187921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_28
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 120
+        width: 243
+        height: 145
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b6b0c3e22a4f94aa3267960b2297ac
+      internalID: -645219194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jed-AttackSet_29
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 138
+        width: 246
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93d6eb0c28b606d4da2bcb56210d59ab
+      internalID: -2070238580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Jed-AttackSet_0: -148349575
+      Jed-AttackSet_1: 1915775481
+      Jed-AttackSet_10: -520697663
+      Jed-AttackSet_11: -1900747501
+      Jed-AttackSet_12: 512089253
+      Jed-AttackSet_13: -1271331888
+      Jed-AttackSet_14: -351948626
+      Jed-AttackSet_15: -802869539
+      Jed-AttackSet_16: -1167330964
+      Jed-AttackSet_17: 1670608094
+      Jed-AttackSet_18: -701871337
+      Jed-AttackSet_19: 961977390
+      Jed-AttackSet_2: 195976912
+      Jed-AttackSet_20: -500676868
+      Jed-AttackSet_21: -230887988
+      Jed-AttackSet_22: -788948402
+      Jed-AttackSet_23: 1334419524
+      Jed-AttackSet_24: -1017949336
+      Jed-AttackSet_25: 741143164
+      Jed-AttackSet_26: -158587859
+      Jed-AttackSet_27: 1217187921
+      Jed-AttackSet_28: -645219194
+      Jed-AttackSet_29: -2070238580
+      Jed-AttackSet_3: -1980609069
+      Jed-AttackSet_4: -1569483581
+      Jed-AttackSet_5: -414209913
+      Jed-AttackSet_6: -1900569894
+      Jed-AttackSet_7: -94559648
+      Jed-AttackSet_8: -1134851205
+      Jed-AttackSet_9: -1173554177
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

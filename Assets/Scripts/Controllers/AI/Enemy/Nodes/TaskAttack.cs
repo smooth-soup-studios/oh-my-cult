@@ -13,7 +13,7 @@ public class TaskAttack : Node {
 		_enemyBiteAttack = tree.gameObject.GetComponent<EnemyBiteAttack>();
 		tree.AttackCounter += Time.deltaTime;
 		if (tree.AttackCounter >= _attackTime) {
-			_enemyBiteAttack.Attack();
+			tree.EnemyWeapon.PrimaryAction(tree.gameObject);
 			tree.AttackCounter = -0.04f;
 		}
 		State = NodeState.RUNNING;

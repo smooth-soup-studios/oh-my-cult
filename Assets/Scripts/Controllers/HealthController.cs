@@ -9,7 +9,7 @@ public class HealthController : MonoBehaviour, ISaveable {
 	[Header("Settings")]
 	[SerializeField] private bool _isInvulnerable = false;
 	[SerializeField] float _maxHealth = 100;
-	[SerializeField] float _currentHealth;
+	float _currentHealth;
 	[SerializeField] Event _actorDamaged;
 	[SerializeField] Event _lowHealth;
 	bool _isLowHealthEventPosted;
@@ -105,12 +105,21 @@ public class HealthController : MonoBehaviour, ISaveable {
 	}
 
 	public void LoadData(GameData data) {
+		if (gameObject.CompareTag("Player")) {
+			_currentHealth = data.PlayerData.Health;
+		}
 		if (data.ActorData.HealthValues.ContainsKey(ObjectId)) {
 			data.ActorData.HealthValues.TryGetValue(ObjectId, out _currentHealth);
 		}
 	}
 
 	public void SaveData(GameData data) {
-		data.ActorData.HealthValues[ObjectId] = _currentHealth;
+		// Player UID changes between scenes so use dedicated ID
+		if (gameObject.CompareTag("Player")) {
+			data.PlayerData.Health = _currentHealth;
+		}
+		else {
+			data.ActorData.HealthValues[ObjectId] = _currentHealth;
+		}
 	}
 }

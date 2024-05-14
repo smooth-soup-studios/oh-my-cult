@@ -5,11 +5,19 @@ using UnityEngine;
 
 public class EnemyBT : EnemyBehaviourTree {
 	public Transform[] Waypoints;
+	private Vector2 _oldMovement;
 
 	private new void Awake() {
 		base.Awake();
 		Agent.updateRotation = false;
 		Agent.updateUpAxis = false;
+	}
+	protected new void Update() {
+		base.Update();
+		if (Movement != _oldMovement) {
+			RotateHitboxOnMove(Movement);
+			_oldMovement = Movement;
+		}
 	}
 
 	protected override Node SetupTree() {
@@ -35,6 +43,13 @@ public class EnemyBT : EnemyBehaviourTree {
 
 		return root;
 	}
+
+	private void RotateHitboxOnMove(Vector2 movement) {
+		Transform HitContainer = GetComponentInChildren<WeaponHitbox>().transform.parent;
+		float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
+		HitContainer.transform.rotation = Quaternion.Euler(0, 0, angle);
+	}
+
 	private void OnDrawGizmos() {
 		if (transform == null)
 			return;

@@ -17,7 +17,8 @@ public class PlayerData {
 	public int LatestDoor = -1;
 	public bool HasDoorKey = false;
 	public Dict<string, InvData> InvItemVals = new();
-
+	public int SelectedInvSlot = 0;
+	public float Health = 100;
 }
 
 [Serializable]

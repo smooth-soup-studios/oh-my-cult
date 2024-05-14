@@ -14,12 +14,12 @@ public class FoodPickupInteractable : BaseItemPickupInteractable {
 	}
 
 	public override void Interact(GameObject interactor) {
-		if (interactor.TryGetComponent(out Inventory inventory)) {
+		if (interactor.TryGetComponent(out Inventory inventory) && !inventory.IsInventoryFull()) {
 			InventoryItem switchedItem = inventory.AddItem(Item);
 			Item = switchedItem;
 			UpdateSprite();
+			base.Interact(interactor);
 		}
-		base.Interact(interactor);
 	}
 
 	private void UpdateSprite() {

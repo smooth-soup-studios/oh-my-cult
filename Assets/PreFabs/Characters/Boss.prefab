@@ -205,7 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: Boss-50140.49
   _isInvulnerable: 0
-  _maxHealth: 100
+  _maxHealth: 500
 --- !u!114 &5148443580798022672
 MonoBehaviour:
   m_ObjectHideFlags: 0

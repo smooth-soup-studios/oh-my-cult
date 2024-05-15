@@ -2,16 +2,18 @@ using System.Collections.Generic;
 using System.Linq;
 using Managers;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Animator), typeof(Rigidbody2D), typeof(Inventory)), RequireComponent(typeof(EchoDashController), typeof(PlayerInteractionChecker))]
 public class StateMachine : MonoBehaviour, ISaveable {
-	private readonly string _logname = "StateMachine";
+	private static readonly string _logname = "StateMachine";
 
 	[Header("Debug settings")]
 	[SerializeField] private TextMeshProUGUI _stateText;
 	[SerializeField] private bool _changeStateLogging = false;
+	[SerializeField] private bool _useEightPointHitbox = false;
 	public AnimationManager PlayerAnimator;
 
 	[Header("Movement Settings")]
@@ -26,26 +28,12 @@ public class StateMachine : MonoBehaviour, ISaveable {
 	[HideInInspector] public EchoDashController EchoDashController { get; private set; }
 	[HideInInspector] public PlayerInteractionChecker PlayerInteractor { get; private set; }
 	[HideInInspector] public Inventory PlayerInventory { get; private set; }
-
-	[SerializeField] public AudioClip RunSoundClip;
-	[SerializeField] public AudioClip AttackSoundClip;
 	private BaseState _currentState;
 	private List<BaseState> _states;
 
 	[Header("Latest Door")]
 	public int LatestDoor = -1;
 	public bool HasDoorKey = false;
-
-	void Awake() {
-		// GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-		// foreach (GameObject player in players) {
-		// 	if (player != gameObject) {
-		// 		Destroy(gameObject);
-		// 	}
-		// }
-
-		// DontDestroyOnLoad(this);
-	}
 
 	void Start() {
 		PlayerInventory = GetComponent<Inventory>();
@@ -73,7 +61,7 @@ public class StateMachine : MonoBehaviour, ISaveable {
 		_currentState.UpdateState();
 
 		UIManager.Instance.HasPlaytestKey = HasDoorKey;
-		UIManager.Instance.Health = GetComponent<EnemyHealthController>().GetCurrentHealth();
+		UIManager.Instance.Health = GetComponent<HealthController>().GetCurrentHealth();
 	}
 
 	public void SwitchState(string name) {
@@ -105,31 +93,35 @@ public class StateMachine : MonoBehaviour, ISaveable {
 
 	private void SwitchSpriteOnMove(Vector2 movement) {
 		if (movement != Vector2.zero) {
-			// This should never default becouse it should never be V2.zero!
+			// These should never default becouse it should never be V2.zero!
 			// Basically just here to initialize the value so vscode doesn't kill me.
 			MovementDirection currentDirection = MovementDirection.DOWN;
+			Quaternion currentRotation = HitContainer.transform.rotation;
 
 			if (movement.x > 0) {
 				currentDirection = MovementDirection.RIGHT;
 				GetComponent<SpriteRenderer>().flipX = true;
-				HitContainer.transform.rotation = Quaternion.Euler(0, 0, 0);
+				currentRotation = Quaternion.Euler(0, 0, 0);
 			}
 			else if (movement.x < 0) {
 				currentDirection = MovementDirection.LEFT;
 				GetComponent<SpriteRenderer>().flipX = false;
-				HitContainer.transform.rotation = Quaternion.Euler(0, 0, 180);
-
+				currentRotation = Quaternion.Euler(0, 0, 180);
 			}
 			else if (movement.y > 0) {
 				currentDirection = MovementDirection.UP;
-				HitContainer.transform.rotation = Quaternion.Euler(0, 0, 90);
-
+				currentRotation = Quaternion.Euler(0, 0, 90);
 			}
 			else if (movement.y < 0) {
 				currentDirection = MovementDirection.DOWN;
-				HitContainer.transform.rotation = Quaternion.Euler(0, 0, -90);
-
+				currentRotation = Quaternion.Euler(0, 0, -90);
 			}
+
+			if (_useEightPointHitbox) {
+				float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
+				currentRotation = Quaternion.Euler(0, 0, angle);
+			}
+			HitContainer.transform.rotation = currentRotation;
 			EventBus.Instance.TriggerEvent<MovementDirection>(EventType.MOVEMENT, currentDirection);
 		}
 	}

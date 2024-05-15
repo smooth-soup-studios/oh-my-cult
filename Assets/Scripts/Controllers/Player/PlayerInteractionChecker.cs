@@ -15,9 +15,10 @@ public class PlayerInteractionChecker : MonoBehaviour {
 					obj.OnDeselect();
 				}
 			});
-		}
-		if (closestInteractable != null) {
-			closestInteractable.OnSelect();
+
+			if (closestInteractable != null) {
+				closestInteractable.OnSelect();
+			}
 		}
 	}
 

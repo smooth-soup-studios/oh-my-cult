@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7507666524552951778}
   - component: {fileID: 6226282403476561458}
   - component: {fileID: 5752292876538473265}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Hitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5592009803983209540}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: ObjectDetection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4883085925236696737}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: HitContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,11 +221,10 @@ GameObject:
   - component: {fileID: 9145262454478287574}
   - component: {fileID: 8057137832846050740}
   - component: {fileID: 3900318808842322138}
-  - component: {fileID: 489749630507691954}
   - component: {fileID: 7641483773983506728}
+  - component: {fileID: 6748209838310189458}
   - component: {fileID: 4849591457620503528}
   - component: {fileID: 3290768021699310593}
-  - component: {fileID: 6748209838310189458}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
@@ -323,6 +322,7 @@ MonoBehaviour:
   AttackRange: 20
   Target: {fileID: 0}
   SearchLocation: {x: 0, y: 0, z: 0}
+  EnemyWeapon: {fileID: 7613533550855613070, guid: b52a80a05d680eb41b21c4cf63e7c8e4, type: 3}
   Waypoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -342,19 +342,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: Enemy-0,1013
   _isInvulnerable: 0
   _maxHealth: 100
---- !u!114 &489749630507691954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8507790943486014399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e0bc3b695c5e034a8adc2982163dc82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _weaponData: {fileID: 11400000, guid: 6cf1858aecdd2b84f904f1c30762ee9d, type: 2}
+  _currentHealth: 0
 --- !u!195 &7641483773983506728
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -377,6 +365,27 @@ NavMeshAgent:
   m_BaseOffset: 12.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!95 &6748209838310189458
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8507790943486014399}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7aad3276d10902c4f911027bd4347f3f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &4849591457620503528
 Rigidbody2D:
   serializedVersion: 4
@@ -439,24 +448,3 @@ CapsuleCollider2D:
   m_Offset: {x: 0.21994591, y: -2.2019348}
   m_Size: {x: 16.887005, y: 20.59613}
   m_Direction: 0
---- !u!95 &6748209838310189458
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8507790943486014399}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7aad3276d10902c4f911027bd4347f3f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0

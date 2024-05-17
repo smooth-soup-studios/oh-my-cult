@@ -91,7 +91,7 @@ public class Inventory : MonoBehaviour, ISaveable {
 	public int GetInventoryMaxSize() {
 		return _maxInventorySize;
 	}
-	
+
 	public bool IsInventoryFull() {
 		return !_currentInventory.Any(e => e == null);
 	}

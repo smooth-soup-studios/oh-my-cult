@@ -12,6 +12,7 @@ public class InvData {
 	public string ItemName;
 	public Sprite ItemIcon;
 	public GameObject ItemPrefab;
+	public int MaxStackSize = 1;
 	public InventoryItemType ItemType;
 	public string AnimationSet;
 

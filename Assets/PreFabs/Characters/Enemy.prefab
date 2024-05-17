@@ -342,7 +342,6 @@ MonoBehaviour:
   <ObjectId>k__BackingField: Enemy-0,1013
   _isInvulnerable: 0
   _maxHealth: 100
-  _currentHealth: 0
 --- !u!195 &7641483773983506728
 NavMeshAgent:
   m_ObjectHideFlags: 0

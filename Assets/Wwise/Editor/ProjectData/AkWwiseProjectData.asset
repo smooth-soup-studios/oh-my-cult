@@ -76,12 +76,199 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: 097768304fb6d84c9b03f179562ca4c7
+      guid: 124c69445c8f274e936543d7f840f3d6
     ParentPath: Events\Default Work Unit
-    guid: 097768304fb6d84c9b03f179562ca4c7
+    guid: 124c69445c8f274e936543d7f840f3d6
     GuidInternal: 
-    m_lastTime: -8584860109635692452
-    List: []
+    m_lastTime: -8584857432463596582
+    List:
+    - name: boss_1_roar
+      guid: 3c3e91702c2cc743a7a545b602d6ae36
+      id: 3603829085
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 124c69445c8f274e936543d7f840f3d6
+      - ElementName: boss_1_roar
+        ObjectType: 3
+        guid: 3c3e91702c2cc743a7a545b602d6ae36
+      Path: Events\Default Work Unit\boss_1_roar
+      maxAttenuation: 0
+      maxDuration: 5.397324
+      minDuration: 5.397324
+    - name: damage_taken
+      guid: b5e79e9d4342324dad41fb855b1e5385
+      id: 1763999390
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 124c69445c8f274e936543d7f840f3d6
+      - ElementName: damage_taken
+        ObjectType: 3
+        guid: b5e79e9d4342324dad41fb855b1e5385
+      Path: Events\Default Work Unit\damage_taken
+      maxAttenuation: 0
+      maxDuration: 0.5401814
+      minDuration: 0.5401814
+    - name: dash
+      guid: 9f59cba51faa7649b604ba7ae9ed39e8
+      id: 1942692385
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 124c69445c8f274e936543d7f840f3d6
+      - ElementName: dash
+        ObjectType: 3
+        guid: 9f59cba51faa7649b604ba7ae9ed39e8
+      Path: Events\Default Work Unit\dash
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: enter_church
+      guid: 324285e034d7fa4aa673ced5c5d702eb
+      id: 2299923309
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 124c69445c8f274e936543d7f840f3d6
+      - ElementName: enter_church
+        ObjectType: 3
+        guid: 324285e034d7fa4aa673ced5c5d702eb
+      Path: Events\Default Work Unit\enter_church
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: enter_village
+      guid: 7e8032c7fe80cf4b9756be87a92a1705
+      id: 1097790916
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 124c69445c8f274e936543d7f840f3d6
+      - ElementName: enter_village
+        ObjectType: 3
+        guid: 7e8032c7fe80cf4b9756be87a92a1705
+      Path: Events\Default Work Unit\enter_village
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: low_heatlh
+      guid: bbc826a3d48f1e48ab33f5c7aed6906a
+      id: 203068402
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 124c69445c8f274e936543d7f840f3d6
+      - ElementName: low_heatlh
+        ObjectType: 3
+        guid: bbc826a3d48f1e48ab33f5c7aed6906a
+      Path: Events\Default Work Unit\low_heatlh
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_State_Church
+      guid: 083f75ea38ab0b40baa03a8283a67510
+      id: 375129317
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 124c69445c8f274e936543d7f840f3d6
+      - ElementName: Set_State_Church
+        ObjectType: 3
+        guid: 083f75ea38ab0b40baa03a8283a67510
+      Path: Events\Default Work Unit\Set_State_Church
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_State_Church_01
+      guid: 7fc098029f162f458514d92d19f556fd
+      id: 2503215041
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 124c69445c8f274e936543d7f840f3d6
+      - ElementName: Set_State_Church_01
+        ObjectType: 3
+        guid: 7fc098029f162f458514d92d19f556fd
+      Path: Events\Default Work Unit\Set_State_Church_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_State_Church_02
+      guid: 368a658ac5e79c4fac71eb3ce4e6195d
+      id: 2503215042
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 124c69445c8f274e936543d7f840f3d6
+      - ElementName: Set_State_Church_02
+        ObjectType: 3
+        guid: 368a658ac5e79c4fac71eb3ce4e6195d
+      Path: Events\Default Work Unit\Set_State_Church_02
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Set_State_Village
+      guid: c6802560daf6204381ca41860ad00b3f
+      id: 3999096508
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 124c69445c8f274e936543d7f840f3d6
+      - ElementName: Set_State_Village
+        ObjectType: 3
+        guid: c6802560daf6204381ca41860ad00b3f
+      Path: Events\Default Work Unit\Set_State_Village
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: walk
+      guid: 65dd281331dacb46b965f6ae535521fa
+      id: 2108779966
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 124c69445c8f274e936543d7f840f3d6
+      - ElementName: walk
+        ObjectType: 3
+        guid: 65dd281331dacb46b965f6ae535521fa
+      Path: Events\Default Work Unit\walk
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -104,12 +291,78 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: 876a71ff62d7414c8af293c730fcd6f1
+      guid: d4d5418fb58a2645a0217b1a046ace58
     ParentPath: States\Default Work Unit
-    guid: 876a71ff62d7414c8af293c730fcd6f1
+    guid: d4d5418fb58a2645a0217b1a046ace58
     GuidInternal: 
-    m_lastTime: -8584860109636102496
-    List: []
+    m_lastTime: -8584857432463690707
+    List:
+    - name: MusicStates
+      guid: fe7c5dac55da914ebe0d1f9c05517fc5
+      id: 3103015060
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d4d5418fb58a2645a0217b1a046ace58
+      - ElementName: MusicStates
+        ObjectType: 9
+        guid: fe7c5dac55da914ebe0d1f9c05517fc5
+      Path: States\Default Work Unit\MusicStates
+      values:
+      - name: Church
+        guid: 885510c1e5ace644842ef5d570c3d7d9
+        id: 2568407992
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d4d5418fb58a2645a0217b1a046ace58
+        - ElementName: MusicStates
+          ObjectType: 9
+          guid: fe7c5dac55da914ebe0d1f9c05517fc5
+        - ElementName: Church
+          ObjectType: 8
+          guid: 885510c1e5ace644842ef5d570c3d7d9
+      - name: None
+        guid: b96cea595102a945bc928ddbe46fbf18
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d4d5418fb58a2645a0217b1a046ace58
+        - ElementName: MusicStates
+          ObjectType: 9
+          guid: fe7c5dac55da914ebe0d1f9c05517fc5
+        - ElementName: None
+          ObjectType: 8
+          guid: b96cea595102a945bc928ddbe46fbf18
+      - name: Village
+        guid: dc79231f3e4e1348a34f13d383e8c868
+        id: 3945572659
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d4d5418fb58a2645a0217b1a046ace58
+        - ElementName: MusicStates
+          ObjectType: 9
+          guid: fe7c5dac55da914ebe0d1f9c05517fc5
+        - ElementName: Village
+          ObjectType: 8
+          guid: dc79231f3e4e1348a34f13d383e8c868
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:

@@ -26,6 +26,7 @@ public class Inventory : MonoBehaviour, ISaveable {
 
 
 	public InventoryItem AddItem(InventoryItem item) {
+		EventBus.Instance.TriggerEvent<InventoryItem>(EventType.INV_ADD, item);
 		if (_currentInventory.Contains(null) && item != null) {
 			_currentInventory[_currentInventory.FindIndex(x => x == null)] = item;
 			return null;
@@ -39,6 +40,7 @@ public class Inventory : MonoBehaviour, ISaveable {
 	}
 
 	public void RemoveItem(InventoryItem item) {
+		EventBus.Instance.TriggerEvent<InventoryItem>(EventType.INV_REMOVE, item);
 		RemoveItemByIndex(_currentInventory.IndexOf(item));
 	}
 

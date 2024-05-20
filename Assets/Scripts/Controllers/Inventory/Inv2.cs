@@ -1,13 +1,9 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 public class Inv2 : MonoBehaviour {
 	private string _logname = "InventorySystem";
-	[Header("Settings")]
-	[SerializeField] private bool _allowItemOverwrite = false;
-
 
 	private List<ItemStack> _currentInventory = new();
 	private int _maxInventorySize = 5;
@@ -26,58 +22,68 @@ public class Inv2 : MonoBehaviour {
 				SelectPrevSlot();
 			}
 		});
+		EventBus.Instance.Subscribe<InventoryItem>(EventType.INV_ADD, TempAdd);
+		EventBus.Instance.Subscribe<InventoryItem>(EventType.INV_REMOVE, TempRemove);
 	}
 
+	public void TempAdd(InventoryItem item) {
+		AddItem(item);
+	}
 
+	public void TempRemove(InventoryItem item) {
+		RemoveItem(item);
+	}
 
 	public InventoryItem AddItem(InventoryItem item) {
+		InventoryItem returnItem;
 		// Check if item already exists in inventory
-		if (_currentInventory.Any(e => e.Item == item)) {
+		if (_currentInventory.Any(e => e.Item == item && item != null)) {
 			ItemStack stack = _currentInventory.First(e => e.Item == item);
 			stack.Amount++;
-			return null;
+			returnItem = null;
 		}
 		// Check if there is an empty slot in the inventory
 		else if (_currentInventory.Any(e => e.Amount == 0) && item != null) {
 			_currentInventory[_currentInventory.FindIndex(x => x.Amount == 0)] = new ItemStack(item, 1);
-			return null;
+			returnItem = null;
 		}
 		//overwrite the item if enabled
 		else {
-			if (!_allowItemOverwrite) {
-				return item;
-			}
 			InventoryItem oldItem = _currentInventory[_selectedItemIndex].Item;
 			_currentInventory[_selectedItemIndex] = new ItemStack(item, 1);
-			return oldItem;
+			returnItem = oldItem;
 		}
+
+		CleanInventory();
+		return returnItem;
 	}
 
 	public ItemStack AddItem(ItemStack stack) {
+		ItemStack returnStack;
 		// Check if item already exists in inventory
-		if (_currentInventory.Any(e => e.Item == stack.Item)) {
+		if (_currentInventory.Any(e => e.Item == stack.Item && stack.Item != null)) {
 			ItemStack existingStack = _currentInventory.First(e => e.Item == stack.Item);
 			existingStack.Amount += stack.Amount;
-			return new ItemStack(null, 0);
+			returnStack = new ItemStack(null, 0);
 		}
 		// Check if there is an empty slot in the inventory
 		else if (_currentInventory.Any(e => e.Amount == 0) && stack.Item != null) {
 			_currentInventory[_currentInventory.FindIndex(x => x.Amount == 0)] = stack;
-			return new ItemStack(null, 0);
+			returnStack = new ItemStack(null, 0);
 		}
 		//overwrite the item if enabled
 		else {
-			if (!_allowItemOverwrite) {
-				return stack;
-			}
 			ItemStack oldStack = _currentInventory[_selectedItemIndex];
 			_currentInventory[_selectedItemIndex] = stack;
-			return oldStack;
+			returnStack = oldStack;
 		}
+		CleanInventory();
+		return returnStack;
 	}
 
 	public void RemoveItem(InventoryItem item) {
 		RemoveItemByIndex(_currentInventory.FindIndex(e => e.Item == item));
+		CleanInventory();
 	}
 	public void RemoveItem(InventoryItem item, int amount) {
 		ItemStack stack = _currentInventory.First(e => e.Item == item);
@@ -85,6 +91,7 @@ public class Inv2 : MonoBehaviour {
 		if (stack.Amount <= 0) {
 			RemoveItemByIndex(_currentInventory.FindIndex(e => e.Item == item));
 		}
+		CleanInventory();
 	}
 	public void RemoveItem(ItemStack stack) {
 		ItemStack existingStack = _currentInventory.First(e => e.Item == stack.Item);
@@ -92,12 +99,14 @@ public class Inv2 : MonoBehaviour {
 		if (existingStack.Amount <= 0) {
 			RemoveItemByIndex(_currentInventory.FindIndex(e => e.Item == stack.Item));
 		}
+		CleanInventory();
 	}
 
 	public void RemoveItemByIndex(int index) {
 		if (index >= 0 && index < _maxInventorySize && _currentInventory.Count > index) {
 			_currentInventory[index] = new(null, 0);
 		}
+		CleanInventory();
 	}
 
 	public void SelectNextSlot() {
@@ -162,7 +171,19 @@ public class Inv2 : MonoBehaviour {
 
 
 
-
+	// Helpers
+	public void CleanInventory() {
+		for (int i = 0; i < _currentInventory.Count; i++) {
+			ItemStack stack = _currentInventory[i];
+			if (stack.Item == null) {
+				stack.Amount = 0;
+			}
+			if (stack.Amount == 0) {
+				stack.Item = null;
+			}
+			_currentInventory[i] = stack;
+		}
+	}
 
 	// public void LoadData(GameData data) {
 	// 	List<InventoryItem> newInv = new();

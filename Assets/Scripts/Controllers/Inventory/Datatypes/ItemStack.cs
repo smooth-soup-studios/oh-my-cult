@@ -41,6 +41,7 @@ public static class StackExtentions {
 			newItem = null;
 		}
 		else {
+			newItem.name = stack.Data.ItemName;
 			newItem.InvData = stack.Data;
 		}
 		return new ItemStack(newItem, stack.Amount);

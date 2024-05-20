@@ -27,6 +27,7 @@ public class Inv2 : MonoBehaviour, ISaveable {
 		EventBus.Instance.Subscribe<InventoryItem>(EventType.INV_REMOVE, TempRemove);
 	}
 
+
 	public void TempAdd(InventoryItem item) {
 		AddItem(item);
 	}
@@ -66,7 +67,6 @@ public class Inv2 : MonoBehaviour, ISaveable {
 			returnStack = oldStack;
 		}
 		CleanInventory();
-		EventBus.Instance.TriggerEvent(EventType.INV_ADD);
 		return returnStack;
 	}
 
@@ -95,7 +95,6 @@ public class Inv2 : MonoBehaviour, ISaveable {
 			RemoveItemByIndex(_currentInventory.IndexOf(GetStackOf(stack.Item)));
 		}
 		CleanInventory();
-		EventBus.Instance.TriggerEvent(EventType.INV_REMOVE);
 	}
 
 	public void RemoveItemByIndex(int index) {
@@ -187,7 +186,7 @@ public class Inv2 : MonoBehaviour, ISaveable {
 		}
 	}
 
-	private ItemStack GetStackOf(InventoryItem item) => _currentInventory.First(e => e.Item == item);
+	private ItemStack GetStackOf(InventoryItem item) => _currentInventory.First(e => e.Item.InvData.Id == item.InvData.Id);
 
 	public void LoadData(GameData data) {
 		List<ItemStack> newInv = new();

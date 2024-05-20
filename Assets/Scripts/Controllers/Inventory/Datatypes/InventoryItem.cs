@@ -8,6 +8,8 @@ public class InventoryItem : ScriptableObject {
 
 [Serializable]
 public class InvData {
+	[ScriptableObjectId]
+	public string Id;
 	[Header("Inventroy information")]
 	public string ItemName;
 	public Sprite ItemIcon;

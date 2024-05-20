@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Inv2 : MonoBehaviour {
+public class Inv2 : MonoBehaviour, ISaveable {
 	private string _logname = "InventorySystem";
 
 	private List<ItemStack> _currentInventory = new();
@@ -66,6 +66,7 @@ public class Inv2 : MonoBehaviour {
 			returnStack = oldStack;
 		}
 		CleanInventory();
+		EventBus.Instance.TriggerEvent(EventType.INV_ADD);
 		return returnStack;
 	}
 
@@ -94,6 +95,7 @@ public class Inv2 : MonoBehaviour {
 			RemoveItemByIndex(_currentInventory.IndexOf(GetStackOf(stack.Item)));
 		}
 		CleanInventory();
+		EventBus.Instance.TriggerEvent(EventType.INV_REMOVE);
 	}
 
 	public void RemoveItemByIndex(int index) {
@@ -187,42 +189,29 @@ public class Inv2 : MonoBehaviour {
 
 	private ItemStack GetStackOf(InventoryItem item) => _currentInventory.First(e => e.Item == item);
 
-	// public void LoadData(GameData data) {
-	// 	List<InventoryItem> newInv = new();
-	// 	data.PlayerData.InvItemVals.Keys.ToList().ForEach(key => {
-	// 		InvData storedData = data.PlayerData.InvItemVals[key];
-	// 		if (storedData.ItemType == InventoryItemType.Null) {
-	// 			newInv.Add(null);
-	// 		}
-	// 		else {
-	// 			InventoryItem newItem = ScriptableObject.CreateInstance<InventoryItem>();
-	// 			newItem.name = storedData.ItemName;
-	// 			newItem.InvData = storedData;
-	// 			newInv.Add(newItem);
-	// 		}
-	// 	});
-	// 	if (newInv.Count > 0) {
-	// 		_currentInventory = newInv;
-	// 	}
-	// 	_selectedItemIndex = data.PlayerData.SelectedInvSlot;
-	// }
+	public void LoadData(GameData data) {
+		List<ItemStack> newInv = new();
+		foreach (ItemDataStack item in data.PlayerData.Inventory.ToRegular()) {
+			newInv.Add(item.ToRegular());
+		}
+		if (newInv.Count > 0) {
+			_currentInventory = newInv;
+		}
 
-	// public void SaveData(GameData data) {
-	// 	// Hacky conversion between "true null" and object marked as nulltype for use in serialization
-	// 	// itemtype should be checked in loadData and converted back to true null
-	// 	for (int i = 0; i < _currentInventory.Count; i++) {
-	// 		InventoryItem selectedItem = _currentInventory[i];
-	// 		if (selectedItem == null) {
-	// 			InvData emptyItem = new() {
-	// 				ItemType = InventoryItemType.Null
-	// 			};
-	// 			data.PlayerData.InvItemVals[i.ToString()] = emptyItem;
-	// 		}
-	// 		else {
-	// 			data.PlayerData.InvItemVals[i.ToString()] = selectedItem.InvData;
-	// 		}
-	// 	}
-	// 	data.PlayerData.SelectedInvSlot = _selectedItemIndex;
-	// }
+		_selectedItemIndex = data.PlayerData.SelectedInvSlot;
+	}
+
+	public void SaveData(GameData data) {
+		// Hacky conversion between "true null" and object marked as nulltype for use in serialization
+		// itemtype should be checked in loadData and converted back to true null
+		List<ItemDataStack> saveDataList = new();
+		for (int i = 0; i < _currentInventory.Count; i++) {
+			ItemStack selectedItem = _currentInventory[i];
+			saveDataList.Add(selectedItem.ToSerializable());
+		}
+		data.PlayerData.Inventory = saveDataList.ToSerializable();
+
+		data.PlayerData.SelectedInvSlot = _selectedItemIndex;
+	}
 
 }

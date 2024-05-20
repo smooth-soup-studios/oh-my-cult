@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -34,36 +35,23 @@ public class Inv2 : MonoBehaviour {
 		RemoveItem(item);
 	}
 
-	public InventoryItem AddItem(InventoryItem item) {
-		InventoryItem returnItem;
-		// Check if item already exists in inventory
-		if (_currentInventory.Any(e => e.Item == item && item != null)) {
-			ItemStack stack = _currentInventory.First(e => e.Item == item);
-			stack.Amount++;
-			returnItem = null;
-		}
-		// Check if there is an empty slot in the inventory
-		else if (_currentInventory.Any(e => e.Amount == 0) && item != null) {
-			_currentInventory[_currentInventory.FindIndex(x => x.Amount == 0)] = new ItemStack(item, 1);
-			returnItem = null;
-		}
-		//overwrite the item if enabled
-		else {
-			InventoryItem oldItem = _currentInventory[_selectedItemIndex].Item;
-			_currentInventory[_selectedItemIndex] = new ItemStack(item, 1);
-			returnItem = oldItem;
-		}
 
-		CleanInventory();
-		return returnItem;
+
+	public InventoryItem AddItem(InventoryItem item) {
+		return AddItem(new ItemStack(item, 1)).Item;
+	}
+
+	public ItemStack AddItem(InventoryItem item, int amount) {
+		return AddItem(new ItemStack(item, amount));
 	}
 
 	public ItemStack AddItem(ItemStack stack) {
 		ItemStack returnStack;
 		// Check if item already exists in inventory
 		if (_currentInventory.Any(e => e.Item == stack.Item && stack.Item != null)) {
-			ItemStack existingStack = _currentInventory.First(e => e.Item == stack.Item);
+			ItemStack existingStack = GetStackOf(stack.Item);
 			existingStack.Amount += stack.Amount;
+			_currentInventory[_currentInventory.IndexOf(GetStackOf(stack.Item))] = existingStack;
 			returnStack = new ItemStack(null, 0);
 		}
 		// Check if there is an empty slot in the inventory
@@ -81,23 +69,29 @@ public class Inv2 : MonoBehaviour {
 		return returnStack;
 	}
 
+
+
+
 	public void RemoveItem(InventoryItem item) {
-		RemoveItemByIndex(_currentInventory.FindIndex(e => e.Item == item));
+		RemoveItem(new ItemStack(item, 1));
 		CleanInventory();
 	}
+
 	public void RemoveItem(InventoryItem item, int amount) {
-		ItemStack stack = _currentInventory.First(e => e.Item == item);
-		stack.Amount -= amount;
-		if (stack.Amount <= 0) {
-			RemoveItemByIndex(_currentInventory.FindIndex(e => e.Item == item));
-		}
-		CleanInventory();
+		RemoveItem(new ItemStack(item, amount));
 	}
+
 	public void RemoveItem(ItemStack stack) {
-		ItemStack existingStack = _currentInventory.First(e => e.Item == stack.Item);
+		// find the stack containing the item
+		ItemStack existingStack = GetStackOf(stack.Item);
+		// update item value
 		existingStack.Amount -= stack.Amount;
+		// Load item back into the inventory
+		_currentInventory[_currentInventory.IndexOf(GetStackOf(stack.Item))] = existingStack;
+
+		// if the stack is empty, remove the item (CleanInv probably takes care of it but just to be sure)
 		if (existingStack.Amount <= 0) {
-			RemoveItemByIndex(_currentInventory.FindIndex(e => e.Item == stack.Item));
+			RemoveItemByIndex(_currentInventory.IndexOf(GetStackOf(stack.Item)));
 		}
 		CleanInventory();
 	}
@@ -109,6 +103,9 @@ public class Inv2 : MonoBehaviour {
 		CleanInventory();
 	}
 
+
+
+	// Slot Selection
 	public void SelectNextSlot() {
 		if (_selectedItemIndex + 1 >= _maxInventorySize) {
 			_selectedItemIndex = 0;
@@ -133,6 +130,9 @@ public class Inv2 : MonoBehaviour {
 		}
 	}
 
+
+
+	// Getters
 	public InventoryItem GetSelectedItem() {
 		if (_currentInventory.Count > _selectedItemIndex)
 			return _currentInventory[_selectedItemIndex].Item;
@@ -148,13 +148,13 @@ public class Inv2 : MonoBehaviour {
 	public InventoryItem GetItemByIndex(int index) {
 		if (index >= 0 && index < _maxInventorySize && _currentInventory.Count > index)
 			return _currentInventory[index].Item;
-		return null;
+		throw new ArgumentOutOfRangeException("Index is not within inventory range!");
 	}
 
 	public ItemStack GetStackByIndex(int index) {
 		if (index >= 0 && index < _maxInventorySize && _currentInventory.Count > index)
 			return _currentInventory[index];
-		return new ItemStack(null, 0);
+		throw new ArgumentOutOfRangeException("Index is not within inventory range!");
 	}
 
 	public int GetCurrentIndex() {
@@ -184,6 +184,8 @@ public class Inv2 : MonoBehaviour {
 			_currentInventory[i] = stack;
 		}
 	}
+
+	private ItemStack GetStackOf(InventoryItem item) => _currentInventory.First(e => e.Item == item);
 
 	// public void LoadData(GameData data) {
 	// 	List<InventoryItem> newInv = new();

@@ -26,7 +26,8 @@ public class FoodPickupInteractable : BaseItemPickupInteractable {
 		OnValidate(); // Yea it's not how you're supposed to use it but IDC.
 	}
 
-	private void OnValidate() {
+	private new void OnValidate() {
+		base.OnValidate();
 		SpriteRenderer renderer;
 		if (_spriteRenderer) {
 			renderer = _spriteRenderer;

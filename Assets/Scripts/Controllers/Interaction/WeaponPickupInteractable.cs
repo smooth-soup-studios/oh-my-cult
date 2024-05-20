@@ -42,7 +42,8 @@ public class WeaponPickupPoint : BaseItemPickupInteractable {
 		}
 	}
 
-	private void OnValidate() {
+	private new void OnValidate() {
+		base.OnValidate();
 		SpriteRenderer renderer;
 		if (_spriteRenderer) {
 			renderer = _spriteRenderer;

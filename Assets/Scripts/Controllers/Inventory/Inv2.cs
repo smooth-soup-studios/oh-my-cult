@@ -67,6 +67,7 @@ public class Inv2 : MonoBehaviour, ISaveable {
 			returnStack = oldStack;
 		}
 		CleanInventory();
+		EventBus.Instance.TriggerEvent(EventType.INV_ADD);
 		return returnStack;
 	}
 

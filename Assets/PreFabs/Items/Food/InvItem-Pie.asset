@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: InvItem-Pie
   m_EditorClassIdentifier: 
   InvData:
+    Id: 50d4ad3a-1b55-4e7d-b15d-82f684ba7f7f
     ItemName: Pie
     ItemIcon: {fileID: 21300000, guid: db465ae006715db4c8c2cbadac3d2288, type: 3}
     ItemPrefab: {fileID: 4325430436301110745, guid: 04a96ad0e07e95143b1dc1d46db65e11, type: 3}
+    MaxStackSize: 2
     ItemType: 0
     AnimationSet: 
     Description: 

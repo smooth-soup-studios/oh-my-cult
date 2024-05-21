@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: InvItem-Spear
   m_EditorClassIdentifier: 
   InvData:
+    Id: ebb49af2-0994-4f30-8d93-82a13d95d891
     ItemName: Spear
     ItemIcon: {fileID: 21300000, guid: 64aa69248bd9c3cc8a5534b34e296ec9, type: 3}
     ItemPrefab: {fileID: 6458623882520386215, guid: 0aa7415eda184f35690a33da85220684, type: 3}
+    MaxStackSize: 1
     ItemType: 1
     AnimationSet: Spear
     Description: Big stick with a rock glued to the end

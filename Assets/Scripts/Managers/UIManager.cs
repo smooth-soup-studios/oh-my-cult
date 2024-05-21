@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -114,21 +115,39 @@ public class UIManager : MonoBehaviour {
 		}
 
 		for (int i = 0; i < _hotbar.childCount; i++) {
-			Sprite sprite = null;
-			if (_playerInventory.GetInventoryMaxSize() >= i) {
-				if (_playerInventory.GetItemByIndex(i) != null) {
-					sprite = _playerInventory.GetItemByIndex(i).InvData.ItemIcon;
-				}
-			}
-			Image item = new Image();
-			item.sprite = sprite;
+			//Sprite sprite = null;
 			VisualElement itemSlot = _hotbar[i];
-			if (itemSlot.childCount > 0) {
-				for (int x = 0; x < itemSlot.childCount; x++) {
-					itemSlot.Remove(itemSlot[x]);
+			Label slot = itemSlot.Q<Label>("Stack");
+			if (_playerInventory.GetInventoryMaxSize() >= i) {
+				ItemStack stack = _playerInventory.GetStackByIndex(i);
+				if (stack.Item != null) {
+					if (itemSlot.childCount < 2) {
+						Image item = new() {
+							sprite = stack.Item.InvData.ItemIcon
+						};
+						itemSlot.Add(item);
+					}
+					//sprite = stack.Item.InvData.ItemIcon;
+					slot.text = stack.Amount.ToString();
+				}
+				else {
+					slot.text = "";
+					if (itemSlot.childCount > 1) {
+						for (int x = 1; x < itemSlot.childCount; x++) {
+							itemSlot.Remove(itemSlot[x]);
+						}
+					}
 				}
 			}
-			itemSlot.Add(item);
+			// Image item = new() {
+			// 	sprite = sprite
+			// };
+			// if (itemSlot.childCount > 1) {
+			// 	for (int x = 1; x < itemSlot.childCount; x++) {
+			// 		itemSlot.Remove(itemSlot[x]);
+			// 	}
+			// }
+			// itemSlot.Add(item);
 			HighlightSelectedItem(itemSlot, i);
 		}
 	}

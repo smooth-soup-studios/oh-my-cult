@@ -2,6 +2,9 @@ using System;
 using UnityEngine;
 
 [Serializable]
+// Disable warnings about not overriding .Equals(). This is intentionally left out to allow for direct object comparison
+#pragma warning disable CS0660
+#pragma warning disable CS0661
 public struct ItemStack {
 	public InventoryItem Item;
 	public int Amount;
@@ -10,6 +13,9 @@ public struct ItemStack {
 		Item = item;
 		Amount = amount;
 	}
+	public static bool operator ==(ItemStack lhs, ItemStack rhs) { return lhs.Item.InvData.Id == rhs.Item.InvData.Id; }
+	public static bool operator !=(ItemStack lhs, ItemStack rhs) { return lhs.Item.InvData.Id == rhs.Item.InvData.Id; }
+
 }
 
 [Serializable]

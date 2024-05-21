@@ -38,7 +38,7 @@ public class Inventory : MonoBehaviour, ISaveable {
 	}
 
 
-
+	#region Item Addition
 	public InventoryItem AddItem(InventoryItem item) {
 		return AddItem(new ItemStack(item, 1)).Item;
 	}
@@ -53,14 +53,8 @@ public class Inventory : MonoBehaviour, ISaveable {
 		if (_currentInventory.Any(e => e.Item == stack.Item && stack.Item != null)) {
 
 			ItemStack existingStack = GetStackOf(stack.Item);
-			// Check if the max limit has been reached
-			if (existingStack.Amount + stack.Amount > stack.Item.InvData.MaxStackSize) {
-				_currentInventory[_currentInventory.FindIndex(x => x.Amount == 0)] = stack;
-			}
-			else {
-				existingStack.Amount += stack.Amount;
-				_currentInventory[_currentInventory.IndexOf(GetStackOf(stack.Item))] = existingStack;
-			}
+			existingStack.Amount += stack.Amount;
+			_currentInventory[_currentInventory.IndexOf(GetStackOf(stack.Item))] = existingStack;
 			returnStack = new ItemStack(null, 0);
 		}
 		// Check if there is an empty slot in the inventory
@@ -79,9 +73,9 @@ public class Inventory : MonoBehaviour, ISaveable {
 		return returnStack;
 	}
 
+	#endregion
 
-
-
+	#region Item Removal
 	public void RemoveItem(InventoryItem item) {
 		RemoveItem(new ItemStack(item, 1));
 		CleanInventory();
@@ -120,9 +114,9 @@ public class Inventory : MonoBehaviour, ISaveable {
 		CleanInventory();
 	}
 
+	#endregion
 
-
-	// Slot Selection
+	#region  Slot Selection
 	public void SelectNextSlot() {
 		if (_selectedItemIndex + 1 >= _maxInventorySize) {
 			_selectedItemIndex = 0;
@@ -147,9 +141,9 @@ public class Inventory : MonoBehaviour, ISaveable {
 		}
 	}
 
+	#endregion
 
-
-	// Getters
+	#region Getters
 	public InventoryItem GetSelectedItem() {
 		if (_currentInventory.Count > _selectedItemIndex)
 			return _currentInventory[_selectedItemIndex].Item;
@@ -185,10 +179,9 @@ public class Inventory : MonoBehaviour, ISaveable {
 	public bool IsInventoryFull() {
 		return !_currentInventory.Any(e => e.Amount == 0);
 	}
+	#endregion
 
-
-
-	// Helpers
+	#region Helpers
 	public void CleanInventory() {
 		for (int i = 0; i < _currentInventory.Count; i++) {
 			ItemStack stack = _currentInventory[i];
@@ -207,6 +200,7 @@ public class Inventory : MonoBehaviour, ISaveable {
 
 	private ItemStack GetAvailableStackOf(InventoryItem item) => _currentInventory.Where(e => e.Item != null).First(e => e.Item.InvData.Id == item.InvData.Id && e.Amount < item.InvData.MaxStackSize);
 
+	#endregion
 
 
 	public void LoadData(GameData data) {
@@ -222,8 +216,6 @@ public class Inventory : MonoBehaviour, ISaveable {
 	}
 
 	public void SaveData(GameData data) {
-		// Hacky conversion between "true null" and object marked as nulltype for use in serialization
-		// itemtype should be checked in loadData and converted back to true null
 		List<ItemDataStack> saveDataList = new();
 		for (int i = 0; i < _currentInventory.Count; i++) {
 			ItemStack selectedItem = _currentInventory[i];

@@ -31,6 +31,8 @@ public struct ItemDataStack {
 
 public static class StackExtentions {
 	public static ItemDataStack ToSerializable(this ItemStack stack) {
+		// Hacky conversion between "true null" and object marked as nulltype for use in serialization
+		// itemtype should be checked in loadData and converted back to true null
 		if (stack.Item == null) {
 			InvData emptyItem = new() {
 				ItemType = InventoryItemType.Null

@@ -7,6 +7,9 @@ public class WeaponHitbox : MonoBehaviour {
 	private void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.GetComponentsInChildren<WeaponHitbox>().Contains(this))
 			return;
+		if (other.CompareTag("Player") && other.isTrigger) {
+			return;
+		}
 		_objectsInCollider.Add(other.gameObject);
 	}
 

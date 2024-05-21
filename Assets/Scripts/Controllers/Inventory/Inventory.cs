@@ -49,12 +49,14 @@ public class Inventory : MonoBehaviour, ISaveable {
 
 	public ItemStack AddItem(ItemStack stack) {
 		ItemStack returnStack;
-		// Check if item already exists in inventory
-		if (_currentInventory.Any(e => e.Item == stack.Item && stack.Item != null)) {
+		// Check if item already exists in inventory and is stackable
+		if (_currentInventory.Any(e => e.Item == stack.Item && stack.Item != null && stack.Item.InvData.MaxStackSize > 1)) {
 
 			ItemStack existingStack = GetStackOf(stack.Item);
+
 			existingStack.Amount += stack.Amount;
 			_currentInventory[_currentInventory.IndexOf(GetStackOf(stack.Item))] = existingStack;
+
 			returnStack = new ItemStack(null, 0);
 		}
 		// Check if there is an empty slot in the inventory

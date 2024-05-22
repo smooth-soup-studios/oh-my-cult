@@ -318,7 +318,7 @@ MonoBehaviour:
   EnemyAnimator: {fileID: 0}
   AttackCounter: -0.04
   Speed: 2
-  FovRange: 30
+  FOVRange: 70
   AttackRange: 20
   Target: {fileID: 0}
   SearchLocation: {x: 0, y: 0, z: 0}
@@ -339,10 +339,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f0d07869b7ad747b46fdf13457c82e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: Enemy-0,1013
+  <ObjectId>k__BackingField: Enemy-0.1013
   _isInvulnerable: 0
   _maxHealth: 100
-  _currentHealth: 0
 --- !u!195 &7641483773983506728
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -362,7 +361,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 25
-  m_BaseOffset: 12.5
+  m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!95 &6748209838310189458

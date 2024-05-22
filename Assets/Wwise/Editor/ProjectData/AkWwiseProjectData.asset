@@ -267,8 +267,8 @@ MonoBehaviour:
         guid: 65dd281331dacb46b965f6ae535521fa
       Path: Events\Default Work Unit\walk
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.38839003
+      minDuration: 0.38839003
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:

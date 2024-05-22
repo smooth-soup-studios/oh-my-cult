@@ -17,6 +17,7 @@ public class PlayerData {
 	public int LatestDoor = -1;
 	public bool HasDoorKey = false;
 	public Dict<string, InvData> InvItemVals = new();
+	public SerializableList<ItemDataStack> Inventory = new();
 	public int SelectedInvSlot = 0;
 	public float Health = 100;
 	public bool IsInvulnerable = false;
@@ -26,6 +27,8 @@ public class PlayerData {
 public class SceneData {
 	public Dict<string, bool> ArbitraryTriggers = new();
 	public Dict<string, bool> InteractionData = new();
+	public Dict<string, ItemDataStack> InteractionItems = new();
+
 }
 
 [Serializable]

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -8,8 +9,8 @@ public class UIManager : MonoBehaviour {
 	public float Health = 1;
 	[HideInInspector] public float DashStart = -(PlayerDashState.DashCooldown + PlayerDashState.DashDuration);
 
-	[SerializeField] private Color _dashReadyColor = new Color(0f, 1f, 0.5f);
-	[SerializeField] private Color _dashUnreadyColor = new Color(0f, 0.5f, 1f);
+	[SerializeField] private Color _dashReadyColor = new(0f, 1f, 0.5f);
+	[SerializeField] private Color _dashUnreadyColor = new(0f, 0.5f, 1f);
 
 	private Inventory _playerInventory;
 	private VisualElement _root;
@@ -17,7 +18,7 @@ public class UIManager : MonoBehaviour {
 	private VisualElement _dashBarValue;
 	private VisualElement _keyIndicator;
 	private VisualElement _hotbar;
-	private Color _borderColor = new Color(33f / 255f, 15f / 255f, 59f / 255f);
+	private Color _borderColor = new(33f / 255f, 15f / 255f, 59f / 255f);
 
 
 	private void Awake() {
@@ -114,21 +115,32 @@ public class UIManager : MonoBehaviour {
 		}
 
 		for (int i = 0; i < _hotbar.childCount; i++) {
-			Sprite sprite = null;
-			if (_playerInventory.GetInventoryMaxSize() >= i) {
-				if (_playerInventory.GetItemByIndex(i) != null) {
-					sprite = _playerInventory.GetItemByIndex(i).InvData.ItemIcon;
-				}
-			}
-			Image item = new Image();
-			item.sprite = sprite;
 			VisualElement itemSlot = _hotbar[i];
-			if (itemSlot.childCount > 0) {
-				for (int x = 0; x < itemSlot.childCount; x++) {
-					itemSlot.Remove(itemSlot[x]);
+			Label slot = itemSlot.Q<Label>("Stack");
+			if (_playerInventory.GetInventoryMaxSize() >= i) {
+				ItemStack stack = _playerInventory.GetStackByIndex(i);
+				if (stack.Item != null) {
+					if (itemSlot.childCount < 2) {
+						Image item = new() {
+							sprite = stack.Item.InvData.ItemIcon
+						};
+						itemSlot.Add(item);
+					}
+
+					// Hide the stack label if there is only one item
+					slot.visible = stack.Amount > 1;
+					slot.text = stack.Amount.ToString();
+
+				}
+				else {
+					slot.text = "";
+					if (itemSlot.childCount > 1) {
+						for (int x = 1; x < itemSlot.childCount; x++) {
+							itemSlot.Remove(itemSlot[x]);
+						}
+					}
 				}
 			}
-			itemSlot.Add(item);
 			HighlightSelectedItem(itemSlot, i);
 		}
 	}

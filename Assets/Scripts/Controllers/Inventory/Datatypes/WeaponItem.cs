@@ -12,7 +12,7 @@ public class WeaponItem : InteractableItem {
 
 	public override void PrimaryAction(GameObject source) {
 		try {
-			source.GetComponentInChildren<WeaponHitbox>().GetObjectsInCollider().ForEach(obj => {
+			source.GetComponentInChildren<WeaponHitbox>().GetUniqueObjectsInCollider().ForEach(obj => {
 				if (IsTargetUnObstructed(source, obj)) {
 					EventBus.Instance.TriggerEvent(EventType.HIT, (obj, source));
 					if (obj.TryGetComponent<HealthController>(out HealthController enemy)) {
@@ -30,7 +30,7 @@ public class WeaponItem : InteractableItem {
 
 	public override void SecondaryAction(GameObject source) {
 		try {
-			source.GetComponentInChildren<WeaponHitbox>().GetObjectsInCollider().ForEach(obj => {
+			source.GetComponentInChildren<WeaponHitbox>().GetUniqueObjectsInCollider().ForEach(obj => {
 				if (IsTargetUnObstructed(source, obj)) {
 					EventBus.Instance.TriggerEvent(EventType.HIT, (obj, source));
 					if (obj.TryGetComponent<HealthController>(out HealthController enemy)) {

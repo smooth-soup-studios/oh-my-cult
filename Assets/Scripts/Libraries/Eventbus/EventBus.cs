@@ -69,7 +69,7 @@ public class EventBus : MonoBehaviour {
 		if (Instance._eventHash.ContainsKey(key)) {
 			newEvent = (UnityEvent<T>)Instance._eventHash[key];
 			newEvent.AddListener(listener);
-			Instance._eventHash[eventName] = newEvent;
+			Instance._eventHash[key] = newEvent;
 		}
 		else {
 			newEvent = new UnityEvent<T>();
@@ -135,6 +135,8 @@ public class EventBus : MonoBehaviour {
 		if (Instance._eventHash.ContainsKey(key)) {
 			newEvent = (UnityEvent<T>)Instance._eventHash[key];
 			newEvent.RemoveListener(listener);
+			Instance._eventHash[key] = newEvent;
+
 
 			if (_showSubscriptionLogs) {
 				sendToLogger($"{listener.Target} unsubscribed from event {eventName}<{typeof(T).Name}>");
@@ -159,6 +161,7 @@ public class EventBus : MonoBehaviour {
 		if (Instance._eventHash.ContainsKey(eventName)) {
 			newEvent = (UnityEvent)Instance._eventHash[eventName];
 			newEvent.RemoveListener(listener);
+			Instance._eventHash[eventName] = newEvent;
 
 			if (_showSubscriptionLogs) {
 				sendToLogger($"{listener} unsubscribed from event {eventName}");

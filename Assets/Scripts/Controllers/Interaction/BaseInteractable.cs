@@ -50,7 +50,7 @@ public abstract class BaseInteractable : MonoBehaviour, ISaveable {
 	}
 
 
-	private void OnValidate() {
+	protected void OnValidate() {
 		// Generates an unique ID based on the name & position of the gameobject.
 #if UNITY_EDITOR
 		ObjectId = $"{name}-{Vector3.SqrMagnitude(transform.position)}";

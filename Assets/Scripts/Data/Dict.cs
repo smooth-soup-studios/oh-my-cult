@@ -30,8 +30,4 @@ public class Dict<Tkey, Tvalue> : Dictionary<Tkey, Tvalue>, ISerializationCallba
 			Add(_keys[i], _values[i]);
 		}
 	}
-
-	internal void TryGetValue(string v) {
-		throw new NotImplementedException();
-	}
 }

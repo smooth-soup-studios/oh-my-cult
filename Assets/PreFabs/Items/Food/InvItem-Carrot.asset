@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: InvItem-Carrot
   m_EditorClassIdentifier: 
   InvData:
+    Id: 1ce8d415-dd03-48fc-802d-b7695dfb268b
     ItemName: Carrot
     ItemIcon: {fileID: 21300000, guid: 2ebe7d2cbcf07af4b9fa4c4b72dd6064, type: 3}
     ItemPrefab: {fileID: 2673301886863879068, guid: 2fbce97f6846ae745bee1507de564e7e, type: 3}
+    MaxStackSize: 2
     ItemType: 0
     AnimationSet: 
     Description: 

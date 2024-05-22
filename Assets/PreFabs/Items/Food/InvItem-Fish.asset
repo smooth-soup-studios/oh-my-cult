@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: InvItem-Fish
   m_EditorClassIdentifier: 
   InvData:
+    Id: 431ac4ca-6778-4e60-ac26-b249a6b5bcde
     ItemName: Fish
     ItemIcon: {fileID: 21300000, guid: 0b3874bc217da1445b82dcfd0adfe97b, type: 3}
     ItemPrefab: {fileID: 8445662014850619804, guid: 4510f33c7d313b642b37ee7df617f1ac, type: 3}
+    MaxStackSize: 2
     ItemType: 0
     AnimationSet: 
     Description: 

@@ -19,6 +19,7 @@ public struct ItemStack {
 }
 
 [Serializable]
+// Companion class to ItemStack, used for serialization as ScriptableObjects are annoying to serialize directly.
 public struct ItemDataStack {
 	public InvData Data;
 	public int Amount;
@@ -30,6 +31,11 @@ public struct ItemDataStack {
 }
 
 public static class StackExtentions {
+	/// <summary>
+	/// Converts an ItemStack to an easier serializable ItemDataStack
+	/// </summary>
+	/// <param name="stack"></param>
+	/// <returns></returns>
 	public static ItemDataStack ToSerializable(this ItemStack stack) {
 		// Hacky conversion between "true null" and object marked as nulltype for use in serialization
 		// itemtype should be checked in loadData and converted back to true null
@@ -37,12 +43,16 @@ public static class StackExtentions {
 			InvData emptyItem = new() {
 				ItemType = InventoryItemType.Null
 			};
-
 			return new ItemDataStack(emptyItem, stack.Amount);
 		}
 		return new ItemDataStack(stack.Item.InvData, stack.Amount);
 	}
 
+	/// <summary>
+	/// Converts an ItemDataStack to a more usable ItemStack
+	/// </summary>
+	/// <param name="stack"></param>
+	/// <returns></returns>
 	public static ItemStack ToRegular(this ItemDataStack stack) {
 		InventoryItem newItem = ScriptableObject.CreateInstance<InventoryItem>();
 		if (stack.Data.ItemType == InventoryItemType.Null) {

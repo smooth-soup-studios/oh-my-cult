@@ -19,6 +19,7 @@ public class PlayerData {
 	public Dict<string, InvData> InvItemVals = new();
 	public int SelectedInvSlot = 0;
 	public float Health = 100;
+	public bool IsInvulnerable = false;
 }
 
 [Serializable]
@@ -31,4 +32,6 @@ public class SceneData {
 public class ActorData {
 	public Dict<string, float> HealthValues = new();
 	public Dict<string, Vector3> PositionValues = new();
+	public Dict<string, bool> Arbitraryvalues = new();
+
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 [Serializable]
 public class SerializableList<T> {
-	public List<T> Data;
+	public List<T> Data = new();
 }
 
 public static class ListExtentions {

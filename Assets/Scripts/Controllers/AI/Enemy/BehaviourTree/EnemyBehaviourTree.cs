@@ -8,9 +8,9 @@ namespace BehaviorTree {
 		[HideInInspector] public Vector2 Movement;
 		[HideInInspector] public NavMeshAgent Agent;
 		[HideInInspector] public Animator EnemyAnimator;
-		[HideInInspector] public float AttackCounter = -0.04f;
+		[HideInInspector] public float AttackCounter = -0.18f;
 		[HideInInspector] public float Speed = 2f;
-		[HideInInspector] public float FovRange = 30f;
+		[HideInInspector] public float FOVRange = 70f;
 		[HideInInspector] public float AttackRange = 20f;
 		[HideInInspector] public GameObject Target = null;
 		[HideInInspector] public Vector3 SearchLocation = Vector3.zero;
@@ -39,6 +39,7 @@ namespace BehaviorTree {
 				gameObject.SetActive(false);
 			}
 		}
+
 	}
 
 }

@@ -50,9 +50,5 @@ public class EnemyBT : EnemyBehaviourTree {
 		HitContainer.transform.rotation = Quaternion.Euler(0, 0, angle);
 	}
 
-	private void OnDrawGizmos() {
-		if (transform == null)
-			return;
-		Gizmos.DrawWireSphere(transform.position, FovRange);
-	}
+
 }

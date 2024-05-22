@@ -24,17 +24,6 @@ public class Inventory : MonoBehaviour, ISaveable {
 				SelectPrevSlot();
 			}
 		});
-		EventBus.Instance.Subscribe<InventoryItem>(EventType.INV_ADD, TempAdd);
-		EventBus.Instance.Subscribe<InventoryItem>(EventType.INV_REMOVE, TempRemove);
-	}
-
-
-	public void TempAdd(InventoryItem item) {
-		AddItem(item);
-	}
-
-	public void TempRemove(InventoryItem item) {
-		RemoveItem(item);
 	}
 
 

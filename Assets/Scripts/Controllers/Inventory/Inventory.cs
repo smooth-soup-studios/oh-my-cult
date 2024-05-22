@@ -50,7 +50,7 @@ public class Inventory : MonoBehaviour, ISaveable {
 	public ItemStack AddItem(ItemStack stack) {
 		ItemStack returnStack;
 		// Check if item already exists in inventory and is stackable
-		if (_currentInventory.Any(e => e.Item == stack.Item && stack.Item != null && stack.Item.InvData.MaxStackSize > 1)) {
+		if (IsItemInAnyStack(stack.Item) && stack.Item.InvData.MaxStackSize > 1) {
 
 			ItemStack existingStack = GetStackOf(stack.Item);
 
@@ -199,7 +199,7 @@ public class Inventory : MonoBehaviour, ISaveable {
 
 	private ItemStack GetStackOf(InventoryItem item) => _currentInventory.Where(e => e.Item != null).First(e => e.Item.InvData.Id == item.InvData.Id);
 	private List<ItemStack> GetStacksOf(InventoryItem item) => _currentInventory.Where(e => e.Item != null).ToList().FindAll(e => e.Item.InvData.Id == item.InvData.Id);
-
+	private bool IsItemInAnyStack(InventoryItem item) => _currentInventory.Where(e => e.Item != null && item != null).Any(e => e.Item.InvData.Id == item.InvData.Id);
 	private ItemStack GetAvailableStackOf(InventoryItem item) => _currentInventory.Where(e => e.Item != null).First(e => e.Item.InvData.Id == item.InvData.Id && e.Amount < item.InvData.MaxStackSize);
 
 	#endregion

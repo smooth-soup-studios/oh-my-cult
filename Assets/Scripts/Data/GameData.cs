@@ -26,6 +26,8 @@ public class PlayerData {
 public class SceneData {
 	public Dict<string, bool> ArbitraryTriggers = new();
 	public Dict<string, bool> InteractionData = new();
+	public Dict<string, ItemDataStack> InteractionItems = new();
+
 }
 
 [Serializable]

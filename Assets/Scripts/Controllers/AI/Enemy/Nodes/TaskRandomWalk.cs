@@ -23,7 +23,8 @@ public class TaskRandomWalk : Node {
 		tree.EnemyAnimator.SetFloat("X", tree.Movement.x);
 		tree.EnemyAnimator.SetFloat("Y", tree.Movement.y);
 
-		tree.Agent.speed = 10f;
+		tree.Agent.speed = 20f;
+		tree.Agent.acceleration = 80;
 
 		// Choose a new target if:
 		// - The agent has reached the target

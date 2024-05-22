@@ -20,6 +20,14 @@ public class Boss : MonoBehaviour, ISaveable {
 	[HideInInspector] public Vector2 Movement;
 	// public BossRoarHitbox BossRoarHitbox;
 
+public Direction direction;
+
+	public enum Direction {
+		UP ,
+		DOWN,
+		LEFT,
+		RIGHT
+	}
 	void Start() {
 		if (!_isAlive) {
 			gameObject.SetActive(false);
@@ -59,6 +67,7 @@ public class Boss : MonoBehaviour, ISaveable {
 			RotateHitboxOnMove(Movement);
 			_oldMove = Movement;
 		}
+
 	}
 
 	private void RotateHitboxOnMove(Vector2 movement) {
@@ -68,18 +77,23 @@ public class Boss : MonoBehaviour, ISaveable {
 
 		if (movement.x > 0) { //L
 			currentRotation = Quaternion.Euler(0, 0, 90);
+			direction = Direction.DOWN;
 		}
 		else if (movement.x < 0) { //R
 			currentRotation = Quaternion.Euler(0, 0, -90);
+			direction = Direction.UP;
 		}
 		else if (movement.y > 0) { //U
 			currentRotation = Quaternion.Euler(0, 0, 180);
+			direction = Direction.LEFT;
 		}
 		else if (movement.y < 0) { //D
 			currentRotation = Quaternion.Euler(0, 0, 0);
+			direction = Direction.RIGHT;
 		}
 
 		HitContainer.transform.rotation = currentRotation;
+		Logger.Log("Rotation", direction); 
 	}
 
 	private Vector2 RoundVector(Vector2 vector) {

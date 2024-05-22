@@ -15,6 +15,7 @@ public class BossSlamAttack : BossBaseState {
 		Boss.StartCoroutine(SwitchState());
 	}
 	public override void UpdateState() {
+		Logger.Log("Direction", Boss.Movement);
 		if (_firstSlam) {
 			Boss.BossAttacks.SlamAttack();
 			_firstSlam = false;

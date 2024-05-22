@@ -178,7 +178,6 @@ MonoBehaviour:
   <ObjectId>k__BackingField: Player-28,3024
   _isInvulnerable: 0
   _maxHealth: 100
-  _currentHealth: 0
 --- !u!95 &8530993155805609580
 Animator:
   serializedVersion: 5

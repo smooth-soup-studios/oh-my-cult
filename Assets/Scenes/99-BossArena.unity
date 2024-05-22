@@ -806,7 +806,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: ExitChurch-8076.41
+      value: ExitChurch-6348,529
       objectReference: {fileID: 0}
     - target: {fileID: 6036849210683475856, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: m_Name

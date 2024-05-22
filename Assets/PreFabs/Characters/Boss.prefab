@@ -110,7 +110,7 @@ MonoBehaviour:
   StateCounter: 0
   Enemy: 0
   Charge: 0
-  BossAnimation: {fileID: 0}
+  BossAnimation: {fileID: 4742239558171051814}
   Movement: {x: 0, y: 0}
   WeightedValues:
   - Value: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f0d07869b7ad747b46fdf13457c82e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: Boss-50140.49
+  <ObjectId>k__BackingField: Boss-50140,49
   _isInvulnerable: 0
   _maxHealth: 100
 --- !u!114 &5148443580798022672
@@ -223,11 +223,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _weaponData: {fileID: 11400000, guid: 6e8620d507bf4a24d8a1b6b9991981be, type: 2}
-  SlamFlashOnAttackLeft: {fileID: 0}
-  SlamFlashOnAttackRight: {fileID: 0}
+  SlamFlashOnAttackLeft: {fileID: 5685111291778934185}
+  SlamFlashOnAttackRight: {fileID: 4209625462684324893}
   RoarFlashOnAttack: {fileID: 6511808458646782533}
-  ChargeFlashOnAttackLeft: {fileID: 0}
-  ChargeFlashOnAttackRight: {fileID: 0}
+  ChargeFlashOnAttackLeft: {fileID: 5685111291778934185}
+  ChargeFlashOnAttackRight: {fileID: 4209625462684324893}
 --- !u!95 &4742239558171051814
 Animator:
   serializedVersion: 5

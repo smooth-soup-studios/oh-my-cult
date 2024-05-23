@@ -18,8 +18,7 @@ public class BossAttacks : MonoBehaviour {
 	//rename the component to calculate health
 	public void SlamAttack() {
 
-		SlamFlashOnAttackLeft.StartCoroutine(SlamFlashOnAttackLeft.FlashSlamAttack());
-		SlamFlashOnAttackRight.StartCoroutine(SlamFlashOnAttackRight.FlashSlamAttack());
+
 		// GetComponentsInChildren<BossSlamHitbox>().Where(e => e != null).ToList().ForEach(e => e.GetObjectsInCollider().ForEach(obj => {
 		// 	if (obj.TryGetComponent<HealthController>(out HealthController opponent)) {
 		// 		opponent.TakeDamage(_weaponData.WeaponData.Damage);
@@ -28,7 +27,9 @@ public class BossAttacks : MonoBehaviour {
 
 		switch (Boss.direction) {
 			case Boss.Direction.LEFT:
-				Hitbox.HitboxDown(); 
+				Hitbox.HitboxLeft();
+				// SlamFlashOnAttackLeft.StartCoroutine(SlamFlashOnAttackLeft.FlashSlamAttack());
+				// SlamFlashOnAttackRight.StartCoroutine(SlamFlashOnAttackRight.FlashSlamAttack());
 				break;
 			case Boss.Direction.UP:
 				Logger.Log("", "");
@@ -37,7 +38,9 @@ public class BossAttacks : MonoBehaviour {
 				Logger.Log("", "");
 				break;
 			case Boss.Direction.DOWN:
-				Logger.Log("", "");
+				Hitbox.HitboxDown();
+				// SlamFlashOnAttackLeft.StartCoroutine(SlamFlashOnAttackLeft.FlashSlamAttack());
+				// SlamFlashOnAttackRight.StartCoroutine(SlamFlashOnAttackRight.FlashSlamAttack());
 				break;
 
 		}

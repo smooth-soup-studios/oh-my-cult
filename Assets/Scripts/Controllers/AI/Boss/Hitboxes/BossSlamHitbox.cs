@@ -28,4 +28,28 @@ public class BossSlamHitbox : MonoBehaviour {
 
 		}));
 	}
+		public void HitboxLeft() {
+		GetComponentsInChildren<BossSlamHitbox>().Where(e => e != null).ToList().ForEach(e => e.GetObjectsInCollider().ForEach(obj => {
+			if (obj.TryGetComponent<HealthController>(out HealthController opponent)) {
+				opponent.TakeDamage(_weaponData.WeaponData.Damage);
+			}
+
+		}));
+	}
+		public void HitboxRight() {
+		GetComponentsInChildren<BossSlamHitbox>().Where(e => e != null).ToList().ForEach(e => e.GetObjectsInCollider().ForEach(obj => {
+			if (obj.TryGetComponent<HealthController>(out HealthController opponent)) {
+				opponent.TakeDamage(_weaponData.WeaponData.Damage);
+			}
+
+		}));
+	}
+		public void HitboxUp() {
+		GetComponentsInChildren<BossSlamHitbox>().Where(e => e != null).ToList().ForEach(e => e.GetObjectsInCollider().ForEach(obj => {
+			if (obj.TryGetComponent<HealthController>(out HealthController opponent)) {
+				opponent.TakeDamage(_weaponData.WeaponData.Damage);
+			}
+
+		}));
+	}
 }

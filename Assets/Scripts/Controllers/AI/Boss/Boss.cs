@@ -20,10 +20,10 @@ public class Boss : MonoBehaviour, ISaveable {
 	[HideInInspector] public Vector2 Movement;
 	// public BossRoarHitbox BossRoarHitbox;
 
-public Direction direction;
+	public Direction direction;
 
 	public enum Direction {
-		UP ,
+		UP,
 		DOWN,
 		LEFT,
 		RIGHT
@@ -76,24 +76,25 @@ public Direction direction;
 		Quaternion currentRotation = HitContainer.transform.rotation;
 
 		if (movement.x > 0) { //L
-			currentRotation = Quaternion.Euler(0, 0, 90);
-			direction = Direction.DOWN;
+							  // currentRotation = Quaternion.Euler(0, 0, 90);
+			direction = Direction.RIGHT;
 		}
 		else if (movement.x < 0) { //R
-			currentRotation = Quaternion.Euler(0, 0, -90);
-			direction = Direction.UP;
-		}
-		else if (movement.y > 0) { //U
-			currentRotation = Quaternion.Euler(0, 0, 180);
+								   // currentRotation = Quaternion.Euler(0, 0, -90);
 			direction = Direction.LEFT;
 		}
+		else if (movement.y > 0) { //U
+								   // currentRotation = Quaternion.Euler(0, 0, 180);
+			direction = Direction.UP;
+
+		}
 		else if (movement.y < 0) { //D
-			currentRotation = Quaternion.Euler(0, 0, 0);
-			direction = Direction.RIGHT;
+								   // currentRotation = Quaternion.Euler(0, 0, 0);
+			direction = Direction.DOWN;
 		}
 
 		HitContainer.transform.rotation = currentRotation;
-		Logger.Log("Rotation", direction); 
+		Logger.Log("Rotation", direction);
 	}
 
 	private Vector2 RoundVector(Vector2 vector) {

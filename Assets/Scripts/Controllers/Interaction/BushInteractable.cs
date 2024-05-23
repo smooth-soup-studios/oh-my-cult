@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(ParticleSystem))]
 public class BushInteractable : BaseInteractable {
 	private ParticleSystem _particleSystem;
 
@@ -37,7 +36,7 @@ public class BushInteractable : BaseInteractable {
 
 	protected override void OnDrawGizmos() {
 		Gizmos.color = Color.green;
-		Gizmos.DrawWireCube(transform.position, Vector3.one*3);
+		Gizmos.DrawWireCube(transform.position, Vector3.one * 3);
 	}
 
 	// Disable default behavior of these methods

@@ -46,9 +46,6 @@ public class HealthController : MonoBehaviour, ISaveable {
 	}
 
 	public void TakeDamage(float damage) {
-		_currentHealth -= damage;
-
-
 		if (_isInvulnerable) {
 			Logger.Log(_logname, $"The {name} took no damage becouse it is invulnerable!");
 		}
@@ -56,9 +53,8 @@ public class HealthController : MonoBehaviour, ISaveable {
 			_currentHealth -= damage;
 			Logger.Log(_logname, $"The {name} took {damage} damage!");
 		}
-
 		StartCoroutine(FlashRed());
-		Logger.Log(_logname, $"The {name} took {damage} damage!");
+
 		if (_currentHealth <= 0) {
 			EventBus.Instance.TriggerEvent<GameObject>(EventType.DEATH, gameObject);
 			Logger.Log(_logname, $"The {name} is dead!");
@@ -107,9 +103,13 @@ public class HealthController : MonoBehaviour, ISaveable {
 	public void LoadData(GameData data) {
 		if (gameObject.CompareTag("Player")) {
 			_currentHealth = data.PlayerData.Health;
+			_isInvulnerable = data.PlayerData.IsInvulnerable;
 		}
 		if (data.ActorData.HealthValues.ContainsKey(ObjectId)) {
 			data.ActorData.HealthValues.TryGetValue(ObjectId, out _currentHealth);
+		}
+		if (data.ActorData.Arbitraryvalues.ContainsKey($"{ObjectId}-IsInvulnerable")) {
+			data.ActorData.Arbitraryvalues.TryGetValue($"{ObjectId}-IsInvulnerable", out _isInvulnerable);
 		}
 	}
 
@@ -117,9 +117,11 @@ public class HealthController : MonoBehaviour, ISaveable {
 		// Player UID changes between scenes so use dedicated ID
 		if (gameObject.CompareTag("Player")) {
 			data.PlayerData.Health = _currentHealth;
+			data.PlayerData.IsInvulnerable = _isInvulnerable;
 		}
 		else {
 			data.ActorData.HealthValues[ObjectId] = _currentHealth;
+			data.ActorData.Arbitraryvalues[$"{ObjectId}-IsInvulnerable"] = _isInvulnerable;
 		}
 	}
 }

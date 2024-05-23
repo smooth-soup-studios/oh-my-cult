@@ -18,4 +18,9 @@ public class WeaponHitbox : MonoBehaviour {
 		_objectsInCollider = _objectsInCollider.Where(obj => obj != null).ToList();
 		return _objectsInCollider;
 	}
+
+	public List<GameObject> GetUniqueObjectsInCollider() {
+		_objectsInCollider = GetObjectsInCollider().Distinct().ToList();
+		return _objectsInCollider;
+	}
 }

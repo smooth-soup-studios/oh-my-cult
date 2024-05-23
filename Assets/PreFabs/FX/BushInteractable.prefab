@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5704c8d218943f4fac7591087d98a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: BushActivators_3bd75f20-fec0-11ee-abf6-2f9d1981b400-3224.409
+  <ObjectId>k__BackingField: BushInteractable-0
   InteractionRange: 13
   AutoTrigger: 0
   SingleUse: 0

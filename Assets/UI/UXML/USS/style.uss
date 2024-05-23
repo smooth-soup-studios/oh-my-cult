@@ -32,3 +32,11 @@ Label.title {
 #dialog-box.closed {
     transition-timing-function: ease-in-cubic;
 }
+
+.ItemStackIndicator {
+    font-size: 261%;
+    color: rgb(255, 255, 255);
+    right: -3px;
+    bottom: -10px;
+    position: absolute;
+}

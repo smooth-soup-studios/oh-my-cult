@@ -23,7 +23,7 @@ public class EnemyBT : EnemyBehaviourTree {
 	protected override Node SetupTree() {
 		Node root = new Selector(new List<Node>
 		{
-			 new Sequence(new List<Node>
+			new Sequence(new List<Node>
 			{
 				new CheckEnemyInAttackRange(transform),
 				new TaskAttack(transform),
@@ -38,7 +38,12 @@ public class EnemyBT : EnemyBehaviourTree {
 				new CheckLastKnownLocation(transform),
 				new TaskSearchLastKnownLocation(transform),
 			}),
-			new TaskPatrol( Waypoints),
+			new Sequence(new List<Node>
+			{
+				new CheckAgentHasWaypoints(transform),
+				new TaskPatrol( Waypoints)
+			}),
+			new TaskRandomWalk(transform),
 		});
 
 		return root;
@@ -50,9 +55,5 @@ public class EnemyBT : EnemyBehaviourTree {
 		HitContainer.transform.rotation = Quaternion.Euler(0, 0, angle);
 	}
 
-	private void OnDrawGizmos() {
-		if (transform == null)
-			return;
-		Gizmos.DrawWireSphere(transform.position, FovRange);
-	}
+
 }

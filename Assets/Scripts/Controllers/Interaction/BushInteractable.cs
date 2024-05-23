@@ -28,7 +28,8 @@ public class BushInteractable : BaseInteractable {
 		}
 	}
 
-	private void OnValidate() {
+	private new void OnValidate() {
+		base.OnValidate();
 		if (TryGetComponent<CircleCollider2D>(out CircleCollider2D _collider)) {
 			_collider.radius = InteractionRange;
 		}

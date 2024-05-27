@@ -18,16 +18,8 @@ public class Boss : MonoBehaviour, ISaveable {
 	private bool _isAlive = true;
 	public Animator BossAnimation;
 	[HideInInspector] public Vector2 Movement;
-	// public BossRoarHitbox BossRoarHitbox;
+	public MovementDirection Direction;
 
-	public Direction direction;
-
-	public enum Direction {
-		UP,
-		DOWN,
-		LEFT,
-		RIGHT
-	}
 	void Start() {
 		if (!_isAlive) {
 			gameObject.SetActive(false);
@@ -72,29 +64,29 @@ public class Boss : MonoBehaviour, ISaveable {
 
 	private void RotateHitboxOnMove(Vector2 movement) {
 		movement = RoundVector(movement);
-		Transform HitContainer = GetComponentInChildren<BossRoarHitbox>().transform.parent;
-		Quaternion currentRotation = HitContainer.transform.rotation;
+		// Transform HitContainer = GetComponentInChildren<BossRoarHitbox>().transform.parent;
+		// Quaternion currentRotation = HitContainer.transform.rotation;
 
 		if (movement.x > 0) { //L
 							  // currentRotation = Quaternion.Euler(0, 0, 90);
-			direction = Direction.RIGHT;
+			Direction = MovementDirection.RIGHT;
 		}
 		else if (movement.x < 0) { //R
 								   // currentRotation = Quaternion.Euler(0, 0, -90);
-			direction = Direction.LEFT;
+			Direction = MovementDirection.LEFT;
 		}
 		else if (movement.y > 0) { //U
 								   // currentRotation = Quaternion.Euler(0, 0, 180);
-			direction = Direction.UP;
+			Direction = MovementDirection.UP;
 
 		}
 		else if (movement.y < 0) { //D
 								   // currentRotation = Quaternion.Euler(0, 0, 0);
-			direction = Direction.DOWN;
+			Direction = MovementDirection.DOWN;
 		}
 
-		HitContainer.transform.rotation = currentRotation;
-		Logger.Log("Rotation", direction);
+		// HitContainer.transform.rotation = currentRotation;
+		Logger.Log("Rotation", Direction);
 	}
 
 	private Vector2 RoundVector(Vector2 vector) {

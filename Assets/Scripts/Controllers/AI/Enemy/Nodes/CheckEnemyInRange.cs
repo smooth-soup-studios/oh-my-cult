@@ -16,6 +16,7 @@ public class CheckEnemyInRange : Node {
 		if (target == null) {
 			Collider2D[] colliders = Physics2D.OverlapCircleAll(_transform.position, tree.FOVRange, _enemyLayerMask);
 			if (colliders.Length > 0) {
+				//tree.target is unnecessary because at the beginning you say Target = target
 				tree.Target = colliders[0].gameObject;
 				State = NodeState.SUCCESS;
 				return State;

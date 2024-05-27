@@ -17,12 +17,12 @@ public class BossSlamAttack : BossBaseState {
 	public override void UpdateState() {
 		// Logger.Log("Direction", Boss.Movement);
 		if (_firstSlam) {
-			Boss.BossAttacks.SlamAttack();
+			Boss.BossAttacks.Attack(Boss.Direction, BossAttackType.SLAm);
 			_firstSlam = false;
 			Boss.StartCoroutine(SeccondSlam());
 		}
 		else if (_seccondSlam) {
-			Boss.BossAttacks.SlamAttack();
+			Boss.BossAttacks.Attack(Boss.Direction, BossAttackType.SLAm);
 			_seccondSlam = false;
 		}
 		if (_switchState) {

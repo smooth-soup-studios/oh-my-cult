@@ -14,7 +14,7 @@ public class BossChargeAttack : BossBaseState {
 	}
 	public override void UpdateState() {
 		if (_firstSlam) {
-			Boss.BossAttacks.ChargeAttack();
+			// Boss.BossAttacks.ChargeAttack();
 			_firstSlam = false;
 			Logger.Log("Slam", "Attack");
 		}

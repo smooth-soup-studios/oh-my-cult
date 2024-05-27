@@ -11,70 +11,19 @@ public class BossAttacks : MonoBehaviour {
 	public FlashOnAttack RoarFlashOnAttack;
 	public FlashOnAttack ChargeFlashOnAttackLeft;
 	public FlashOnAttack ChargeFlashOnAttackRight;
-	public Boss Boss;
-	public BossSlamHitbox Hitbox;
+	// public Boss Boss;
+	public BossAttackHitbox Hitbox;
 
 	//TODO:
 	//rename the component to calculate health
-	public void SlamAttack() {
-
-
-		// GetComponentsInChildren<BossSlamHitbox>().Where(e => e != null).ToList().ForEach(e => e.GetObjectsInCollider().ForEach(obj => {
-		// 	if (obj.TryGetComponent<HealthController>(out HealthController opponent)) {
-		// 		opponent.TakeDamage(_weaponData.WeaponData.Damage);
-		// 	}
-		// }));
-
-		switch (Boss.direction) {
-			case Boss.Direction.LEFT:
-				Hitbox.HitboxLeft();
-				// SlamFlashOnAttackLeft.StartCoroutine(SlamFlashOnAttackLeft.FlashSlamAttack());
-				// SlamFlashOnAttackRight.StartCoroutine(SlamFlashOnAttackRight.FlashSlamAttack());
-				break;
-			case Boss.Direction.UP:
-				Logger.Log("", "");
-				break;
-			case Boss.Direction.RIGHT:
-				Logger.Log("", "");
-				break;
-			case Boss.Direction.DOWN:
-				Hitbox.HitboxDown();
-				// SlamFlashOnAttackLeft.StartCoroutine(SlamFlashOnAttackLeft.FlashSlamAttack());
-				// SlamFlashOnAttackRight.StartCoroutine(SlamFlashOnAttackRight.FlashSlamAttack());
-				break;
-
-		}
-	}
-
-	//TODO:
-	//rename the component to calculate health
-
-	public void RoarAttack() {
-		RoarFlashOnAttack.StartCoroutine(RoarFlashOnAttack.FlashRoarAttack());
-		try {
-			GetComponentsInChildren<BossRoarHitbox>().Where(e => e != null).ToList().ForEach(e => e.GetObjectsInCollider().ForEach(obj => {
-				if (obj.TryGetComponent<HealthController>(out HealthController opponent)) {
-					opponent.TakeDamage(_weaponData.WeaponData.Damage);
-				}
-			}));
-		}
-		catch (System.Exception) {
-		}
-	}
-
-	// //TODO:
-	// //rename the component to calculate health
-	public void ChargeAttack() {
-
-		ChargeFlashOnAttackLeft.StartCoroutine(ChargeFlashOnAttackLeft.FlashChargeAttack());
-		ChargeFlashOnAttackRight.StartCoroutine(ChargeFlashOnAttackRight.FlashChargeAttack());
-
-		GetComponentsInChildren<BossSlamHitbox>().Where(e => e != null).ToList().ForEach(e => e.GetObjectsInCollider().ForEach(obj => {
+	// add enum to check attack and add a where statement
+	public void Attack(MovementDirection currentDirection, BossAttackType attackType) {
+		Logger.Log("Slam", currentDirection);
+		GetComponentsInChildren<BossAttackHitbox>().Where(e => e != null).Where(e => e.Direction == currentDirection).Where(e => e.AttackType == attackType).ToList().ForEach(e => e.GetUniqueObjectsInCollider().ForEach(obj => {
 			if (obj.TryGetComponent<HealthController>(out HealthController opponent)) {
 				opponent.TakeDamage(_weaponData.WeaponData.Damage);
 			}
 		}));
+
 	}
-
-
 }

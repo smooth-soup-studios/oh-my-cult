@@ -100,4 +100,4 @@ MonoBehaviour:
   PickupPointInteractable: {fileID: 6063357390683749374, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
   ItemToDrop: {fileID: 11400000, guid: 0bc334bdb091c174793ea205e94ffdf6, type: 2}
   Lifetime: 1
-  Height: 20
+  Height: 10

@@ -5,8 +5,8 @@ public class ShatterController : MonoBehaviour {
 	public GameObject ShatterPiecePrefab;
 	public float ShatterForce = 10.0f;
 	public float ShatterLifetime = 1.0f;
-	public float OffsetRandom = 2f;
 	public Vector2Int ShatterFragments;
+	public float FragmentOffsetRandom = 2f;
 
 	private SpriteRenderer _spriteRenderer;
 
@@ -29,7 +29,6 @@ public class ShatterController : MonoBehaviour {
 	}
 
 	public void Shatter(GameObject hitOrigin) {
-		// Vector2 hitDirection = (hitOrigin.transform.position - transform.position).normalized;
 		for (int x = 0; x < ShatterFragments.x; x++) {
 			for (int y = 0; y < ShatterFragments.y; y++) {
 				Vector2 pieceOffset = new Vector2(
@@ -37,7 +36,7 @@ public class ShatterController : MonoBehaviour {
 					y / (float)ShatterFragments.y * -2 + 1
 				)
 				* _spriteRenderer.bounds.size
-				+ new Vector2(Random.Range(-OffsetRandom, OffsetRandom), Random.Range(-OffsetRandom, OffsetRandom));
+				+ new Vector2(Random.Range(-FragmentOffsetRandom, FragmentOffsetRandom), Random.Range(-FragmentOffsetRandom, FragmentOffsetRandom));
 
 				Vector2 hitDirection = (transform.position + new Vector3(pieceOffset.x, pieceOffset.y) - hitOrigin.transform.position).normalized + Vector3.up / 2;
 

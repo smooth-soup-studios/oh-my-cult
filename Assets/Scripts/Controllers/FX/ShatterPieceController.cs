@@ -10,6 +10,7 @@ public class ShatterPieceController : MonoBehaviour {
 	private SpriteRenderer _spriteRenderer;
 	private float _timeStart;
 
+	private float _freezeY;
 
 	private void Awake() {
 		_spriteRenderer = GetComponent<SpriteRenderer>();
@@ -27,10 +28,16 @@ public class ShatterPieceController : MonoBehaviour {
 		float offsetY = 1f * ShatterFragmentOffset.y / ShatterFragments.y;
 		_spriteRenderer.material.SetVector("_ClipOffset", new Vector2(offsetX, offsetY));
 
+		_freezeY = transform.position.y - _spriteRenderer.bounds.size.y * (1 - offsetY) + Random.Range(-1f, 1f);
+
 		Destroy(gameObject, Lifetime);
 	}
 
 	private void Update() {
 		_spriteRenderer.material.SetFloat("_GlobalAlpha", Mathf.Lerp(1f, 0f, (Time.time - _timeStart) / Lifetime));
+
+		if (transform.position.y < _freezeY) {
+			GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+		}
 	}
 }

@@ -12,6 +12,7 @@ public class BarrelInteractable : BaseInteractable {
 		EventBus.Instance.Subscribe<(GameObject target, GameObject hitter)>(EventType.HIT, e => { if (e.target == gameObject) OnAttack(e.hitter); });
 	}
 
+
 	public override void OnSelect() {
 	}
 
@@ -20,12 +21,14 @@ public class BarrelInteractable : BaseInteractable {
 
 	private void OnAttack(GameObject interactor) {
 		base.Interact(interactor);
-		_shatterController.Shatter();
+		_shatterController.Shatter(interactor);
+		GetComponent<SpriteRenderer>().enabled = false;
+		if (SingleUse) {
+			Destroy(gameObject, _shatterController.ShatterLifetime);
+		}
 	}
 
 	private void OnValidate() {
-		if (TryGetComponent(out CircleCollider2D _collider)) {
-			_collider.radius = InteractionRange;
-		}
+		// SingleUse = true;
 	}
 }

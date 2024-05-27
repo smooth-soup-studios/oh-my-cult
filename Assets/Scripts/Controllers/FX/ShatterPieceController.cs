@@ -6,8 +6,10 @@ public class ShatterPieceController : MonoBehaviour {
 	[HideInInspector] public Vector2Int ShatterFragments;
 	[HideInInspector] public Vector2Int ShatterFragmentOffset;
 	[HideInInspector] public SpriteRenderer ParentSpriteRenderer;
+	[HideInInspector] public float Lifetime = 1.0f;
 	private SpriteRenderer _spriteRenderer;
 	private float _timeStart;
+
 
 	private void Awake() {
 		_spriteRenderer = GetComponent<SpriteRenderer>();
@@ -20,12 +22,15 @@ public class ShatterPieceController : MonoBehaviour {
 		_spriteRenderer.sprite = ParentSpriteRenderer.sprite;
 		_spriteRenderer.transform.localScale = ParentSpriteRenderer.transform.localScale;
 		_spriteRenderer.material.SetVector("_ClipSize", new Vector2(1f / ShatterFragments.x, 1f / ShatterFragments.y));
-		_spriteRenderer.material.SetVector("_ClipOffset", new Vector2(1f / ShatterFragmentOffset.x, 1f / ShatterFragmentOffset.y));
 
-		Destroy(gameObject, 5.0f);
+		float offsetX = 1f * ShatterFragmentOffset.x / ShatterFragments.x;
+		float offsetY = 1f * ShatterFragmentOffset.y / ShatterFragments.y;
+		_spriteRenderer.material.SetVector("_ClipOffset", new Vector2(offsetX, offsetY));
+
+		Destroy(gameObject, Lifetime);
 	}
 
 	private void Update() {
-		_spriteRenderer.material.SetFloat("_GlobalAlpha", Mathf.Lerp(1f, 0f, (Time.time - _timeStart) / 5f));
+		_spriteRenderer.material.SetFloat("_GlobalAlpha", Mathf.Lerp(1f, 0f, (Time.time - _timeStart) / Lifetime));
 	}
 }

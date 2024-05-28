@@ -19,6 +19,10 @@ public class Boss : MonoBehaviour, ISaveable {
 	public Animator BossAnimation;
 	[HideInInspector] public Vector2 Movement;
 	public MovementDirection Direction;
+	private float _xMin = -1;
+	private float _xMax = 1;
+	private float _yMin = -1;
+	private float _yMax = 1;
 
 	void Start() {
 		if (!_isAlive) {
@@ -67,26 +71,34 @@ public class Boss : MonoBehaviour, ISaveable {
 		// Transform HitContainer = GetComponentInChildren<BossRoarHitbox>().transform.parent;
 		// Quaternion currentRotation = HitContainer.transform.rotation;
 
-		if (movement.x > 0) { //L
+		float x = Mathf.Clamp(movement.x, -1, 1);
+		float y = Mathf.Clamp(movement.y, -1, 1);
+
+		if (x > 0 && y < 1) { //L
 							  // currentRotation = Quaternion.Euler(0, 0, 90);
 			Direction = MovementDirection.RIGHT;
+
+
 		}
-		else if (movement.x < 0) { //R
+		else if (x < 0 && y < 1) { //R
 								   // currentRotation = Quaternion.Euler(0, 0, -90);
 			Direction = MovementDirection.LEFT;
 		}
-		else if (movement.y > 0) { //U
+		else if (y > 0 && x < 1) { //U
 								   // currentRotation = Quaternion.Euler(0, 0, 180);
 			Direction = MovementDirection.UP;
 
 		}
-		else if (movement.y < 0) { //D
+		else if (y < 0 && x < 1) { //D
 								   // currentRotation = Quaternion.Euler(0, 0, 0);
 			Direction = MovementDirection.DOWN;
 		}
 
 		// HitContainer.transform.rotation = currentRotation;
 		Logger.Log("Rotation", Direction);
+		Logger.Log($"{y}", x);
+
+
 	}
 
 	private Vector2 RoundVector(Vector2 vector) {

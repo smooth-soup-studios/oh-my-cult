@@ -1,5 +1,6 @@
 using System.Collections;
 using Managers;
+using UnityEditor;
 using UnityEngine;
 
 public class DoorController : MonoBehaviour {
@@ -78,6 +79,14 @@ public class DoorController : MonoBehaviour {
 	private void OnDrawGizmos() {
 		Gizmos.color = Color.green;
 		Gizmos.DrawWireCube(transform.position, Vector3.one * 5);
+
+		string doorString = "<color=";
+		doorString += RequiresKey ? "yellow" : "green";
+		doorString += ">Door" + ArbitraryId + "</color>";
+		doorString += "\n<color=grey>To " + TransportTo.ToString() + "</color>";
+
+		Handles.color = Color.green;
+		Handles.Label(transform.position + Vector3.up * 5, doorString, new GUIStyle() { fontSize = 12, alignment = TextAnchor.MiddleCenter, richText = true });
 	}
 }
 

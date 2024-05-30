@@ -20,11 +20,17 @@ public class TimedTween : Tween {
 	}
 
 	public float Get() {
+		if (Duration == 0)
+			return To;
+
 		float t = (Time.time - TStart) / Duration;
 		return Get(t);
 	}
 
 	public float GetClamped() {
+		if (Duration == 0)
+			return To;
+
 		float t = Mathf.Clamp01((Time.time - TStart) / Duration);
 		return Get(t);
 	}

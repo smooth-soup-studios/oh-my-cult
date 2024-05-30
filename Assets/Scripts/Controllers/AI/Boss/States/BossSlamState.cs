@@ -13,15 +13,17 @@ public class BossSlamAttack : BossBaseState {
 		Boss.BossAnimation.SetBool("SlamAttack", true);
 		Boss.StartCoroutine(FirstSlam());
 		Boss.StartCoroutine(SwitchState());
+		// Boss.BossAttacks.Flash(Boss.Direction, BossAttackType.SLAm);
 	}
 	public override void UpdateState() {
-		// Logger.Log("Direction", Boss.Movement);
 		if (_firstSlam) {
+
 			Boss.BossAttacks.Attack(Boss.Direction, BossAttackType.SLAm);
 			_firstSlam = false;
 			Boss.StartCoroutine(SeccondSlam());
 		}
 		else if (_seccondSlam) {
+			// Boss.BossAttacks.Flash(Boss.Direction, BossAttackType.SLAm);
 			Boss.BossAttacks.Attack(Boss.Direction, BossAttackType.SLAm);
 			_seccondSlam = false;
 		}

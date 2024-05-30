@@ -19,10 +19,6 @@ public class Boss : MonoBehaviour, ISaveable {
 	public Animator BossAnimation;
 	[HideInInspector] public Vector2 Movement;
 	public MovementDirection Direction;
-	private float _xMin = -1;
-	private float _xMax = 1;
-	private float _yMin = -1;
-	private float _yMax = 1;
 
 	void Start() {
 		if (!_isAlive) {
@@ -68,37 +64,23 @@ public class Boss : MonoBehaviour, ISaveable {
 
 	private void RotateHitboxOnMove(Vector2 movement) {
 		movement = RoundVector(movement);
-		// Transform HitContainer = GetComponentInChildren<BossRoarHitbox>().transform.parent;
-		// Quaternion currentRotation = HitContainer.transform.rotation;
 
 		float x = Mathf.Clamp(movement.x, -1, 1);
 		float y = Mathf.Clamp(movement.y, -1, 1);
 
-		if (x > 0 && y < 1) { //L
-							  // currentRotation = Quaternion.Euler(0, 0, 90);
+		if (x > 0 && y < 1) { //R
 			Direction = MovementDirection.RIGHT;
-
-
 		}
-		else if (x < 0 && y < 1) { //R
-								   // currentRotation = Quaternion.Euler(0, 0, -90);
+		else if (x < 0 && y < 1) { //L
 			Direction = MovementDirection.LEFT;
 		}
 		else if (y > 0 && x < 1) { //U
-								   // currentRotation = Quaternion.Euler(0, 0, 180);
 			Direction = MovementDirection.UP;
 
 		}
 		else if (y < 0 && x < 1) { //D
-								   // currentRotation = Quaternion.Euler(0, 0, 0);
 			Direction = MovementDirection.DOWN;
 		}
-
-		// HitContainer.transform.rotation = currentRotation;
-		Logger.Log("Rotation", Direction);
-		Logger.Log($"{y}", x);
-
-
 	}
 
 	private Vector2 RoundVector(Vector2 vector) {
@@ -140,21 +122,11 @@ public class Boss : MonoBehaviour, ISaveable {
 		}
 		return output;
 	}
-
-
-	private void OnDrawGizmos() {
-		if (transform == null)
-			return;
-		Gizmos.color = Color.blue;
-		Gizmos.DrawWireSphere(transform.position, Stats.ChargeRange);
-	}
-
 	public void LoadData(GameData data) {
 		if (data.SceneData.ArbitraryTriggers.ContainsKey("BossDead")) {
 			data.SceneData.ArbitraryTriggers.TryGetValue("BossDead", out _isAlive);
 		}
 	}
-
 	public void SaveData(GameData data) {
 		data.SceneData.ArbitraryTriggers["BossDead"] = isActiveAndEnabled;
 	}

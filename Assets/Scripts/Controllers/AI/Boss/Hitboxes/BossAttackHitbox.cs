@@ -9,9 +9,10 @@ public class BossAttackHitbox : WeaponHitbox {
 	public BossAttackType AttackType;
 
 
+
 }
 
 public enum BossAttackType {
-SLAm,
-ROAR
+	SLAm,
+	ROAR
 }

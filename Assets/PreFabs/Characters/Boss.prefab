@@ -224,12 +224,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _weaponData: {fileID: 11400000, guid: 6e8620d507bf4a24d8a1b6b9991981be, type: 2}
-  SlamFlashOnAttackLeft: {fileID: 5685111291778934185}
-  SlamFlashOnAttackRight: {fileID: 4209625462684324893}
-  RoarFlashOnAttack: {fileID: 6511808458646782533}
-  ChargeFlashOnAttackLeft: {fileID: 5685111291778934185}
-  ChargeFlashOnAttackRight: {fileID: 4209625462684324893}
-  Hitbox: {fileID: 0}
 --- !u!95 &4742239558171051814
 Animator:
   serializedVersion: 5
@@ -328,7 +322,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 907f9f800f417ff418f5d24745e0a952, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -385,6 +379,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fdc4d590b6aca48bc9359529be597d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Direction: 0
+  AttackType: 0
 --- !u!114 &6320108257795583120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -477,7 +473,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 907f9f800f417ff418f5d24745e0a952, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -534,6 +530,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fdc4d590b6aca48bc9359529be597d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Direction: 1
+  AttackType: 0
 --- !u!114 &82860385706179587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561,6 +559,7 @@ GameObject:
   - component: {fileID: 8490894449760808133}
   - component: {fileID: 8645354003475367614}
   - component: {fileID: 7356426885131889989}
+  - component: {fileID: 386178567996044938}
   m_Layer: 0
   m_Name: HitSlamRight
   m_TagString: Untagged
@@ -625,7 +624,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 907f9f800f417ff418f5d24745e0a952, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -685,6 +684,20 @@ MonoBehaviour:
   _weaponData: {fileID: 11400000, guid: 6e8620d507bf4a24d8a1b6b9991981be, type: 2}
   Direction: 3
   AttackType: 0
+--- !u!114 &386178567996044938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140424575082307186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fdc4d590b6aca48bc9359529be597d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Direction: 3
+  AttackType: 0
 --- !u!1 &3452657972711305900
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,7 +710,6 @@ GameObject:
   - component: {fileID: 2517153431958096534}
   - component: {fileID: 6511808458646782533}
   - component: {fileID: 3040064506745112883}
-  - component: {fileID: 8503752881127677394}
   m_Layer: 7
   m_Name: HitRoar
   m_TagString: Untagged
@@ -784,6 +796,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fdc4d590b6aca48bc9359529be597d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Direction: 0
+  AttackType: 1
 --- !u!60 &3040064506745112883
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -832,18 +846,6 @@ PolygonCollider2D:
       - {x: -3.2953496, y: -2.0575986}
       - {x: 3.2298322, y: -2.0794377}
   m_UseDelaunayMesh: 0
---- !u!114 &8503752881127677394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3452657972711305900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b9a6be41ca12304e8f10019b473115c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6922444085403339848
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,7 +923,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 907f9f800f417ff418f5d24745e0a952, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -978,6 +980,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fdc4d590b6aca48bc9359529be597d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Direction: 1
+  AttackType: 0
 --- !u!114 &144692775404384528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1005,6 +1009,7 @@ GameObject:
   - component: {fileID: 9010227097130504146}
   - component: {fileID: 7233262054435625080}
   - component: {fileID: 7718632716788748582}
+  - component: {fileID: 3045820038870813952}
   m_Layer: 0
   m_Name: HitSlamLeft
   m_TagString: Untagged
@@ -1069,7 +1074,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 907f9f800f417ff418f5d24745e0a952, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1127,6 +1132,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponData: {fileID: 11400000, guid: 6e8620d507bf4a24d8a1b6b9991981be, type: 2}
+  Direction: 2
+  AttackType: 0
+--- !u!114 &3045820038870813952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7996363292492067054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fdc4d590b6aca48bc9359529be597d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   Direction: 2
   AttackType: 0
 --- !u!1 &8225840985117130543
@@ -1206,7 +1225,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 907f9f800f417ff418f5d24745e0a952, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1263,6 +1282,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fdc4d590b6aca48bc9359529be597d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Direction: 0
+  AttackType: 0
 --- !u!114 &6205842537079730351
 MonoBehaviour:
   m_ObjectHideFlags: 0

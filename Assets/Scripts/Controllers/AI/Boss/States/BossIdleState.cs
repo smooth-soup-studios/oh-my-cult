@@ -28,6 +28,7 @@ public class BossIdleState : BossBaseState {
 			// 		break;
 			// }
 			Boss.SwitchState("Slam");
+			Boss.BossAttacks.Flash(Boss.Direction, BossAttackType.SLAm);
 		}
 		else if (Vector2.Distance(Boss.Player.transform.position, Boss.transform.position) >= 100f) {
 			Boss.SwitchState("Move");
@@ -35,7 +36,7 @@ public class BossIdleState : BossBaseState {
 		Boss.Movement = (Boss.Player.transform.position - Boss.transform.position).normalized;
 		Boss.BossAnimation.SetFloat("X", Boss.Movement.x);
 		Boss.BossAnimation.SetFloat("Y", Boss.Movement.y);
-		
+
 	}
 	public override void ExitState() {
 		Boss.StartCoroutine(Boss.FlashRed());

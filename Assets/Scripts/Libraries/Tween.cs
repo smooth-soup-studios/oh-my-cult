@@ -19,6 +19,8 @@ public class TimedTween : Tween {
 		set => Duration = value - TStart;
 	}
 
+	public bool Finished => Time.time >= TEnd;
+
 	public float Get() {
 		if (Duration == 0)
 			return To;

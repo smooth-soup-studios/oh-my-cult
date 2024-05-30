@@ -37,28 +37,6 @@ public class ScreenShakeManager : MonoBehaviour {
 	void Update() {
 		CleanupLayers();
 		SetCinemachineShake();
-
-		if (Input.GetKeyUp(KeyCode.H)) {
-			Logger.Log(_logName, "H'd");
-			GetOrAddLayer("yes").SetShake(500, 500);
-			GetOrAddLayer("yes").StopShakeRamped(5);
-		}
-		if (Input.GetKeyUp(KeyCode.J)) {
-			Logger.Log(_logName, "J'd");
-			GetOrAddLayer("yes").StopShakeRamped();
-		}
-		if (Input.GetKeyUp(KeyCode.K)) {
-			Logger.Log(_logName, "K'd");
-			GetOrAddLayer("yes").SetShakeRamped(1, 20);
-		}
-		if (Input.GetKeyUp(KeyCode.U)) {
-			Logger.Log(_logName, "U'd");
-			GetOrAddLayer("two").StopShakeRamped();
-		}
-		if (Input.GetKeyUp(KeyCode.I)) {
-			Logger.Log(_logName, "I'd");
-			GetOrAddLayer("two").SetShakeRamped(2, 2);
-		}
 	}
 
 	private void SetCinemachineShake() {

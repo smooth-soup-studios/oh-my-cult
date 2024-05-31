@@ -14,9 +14,8 @@ public class BossChargeAttack : BossBaseState {
 	}
 	public override void UpdateState() {
 		if (_firstSlam) {
-			// Boss.BossAttacks.ChargeAttack();
+			Boss.BossAttacks.Attack(Boss.Direction, BossAttackType.SLAm);
 			_firstSlam = false;
-			Logger.Log("Slam", "Attack");
 		}
 		if (_switchState) {
 			Boss.SwitchState("Idle");

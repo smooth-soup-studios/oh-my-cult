@@ -6,7 +6,7 @@ public class FlashOnAttack : MonoBehaviour {
 	public BossAttackType AttackType;
 	public IEnumerator FlashSlamAttack() {
 		GetComponent<SpriteRenderer>().color = Color.red;
-		yield return new WaitForSeconds(0.08f);
+		yield return new WaitForSeconds(0.5f);
 		GetComponent<SpriteRenderer>().color = Color.clear;
 	}
 	public IEnumerator FlashRoarAttack() {

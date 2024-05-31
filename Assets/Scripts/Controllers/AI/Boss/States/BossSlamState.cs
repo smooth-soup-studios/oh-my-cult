@@ -13,19 +13,12 @@ public class BossSlamAttack : BossBaseState {
 		Boss.BossAnimation.SetBool("SlamAttack", true);
 		Boss.StartCoroutine(FirstSlam());
 		Boss.StartCoroutine(SwitchState());
-		// Boss.BossAttacks.Flash(Boss.Direction, BossAttackType.SLAm);
 	}
 	public override void UpdateState() {
 		if (_firstSlam) {
 
 			Boss.BossAttacks.Attack(Boss.Direction, BossAttackType.SLAm);
 			_firstSlam = false;
-			Boss.StartCoroutine(SeccondSlam());
-		}
-		else if (_seccondSlam) {
-			// Boss.BossAttacks.Flash(Boss.Direction, BossAttackType.SLAm);
-			Boss.BossAttacks.Attack(Boss.Direction, BossAttackType.SLAm);
-			_seccondSlam = false;
 		}
 		if (_switchState) {
 			Boss.SwitchState("Idle");
@@ -41,17 +34,14 @@ public class BossSlamAttack : BossBaseState {
 	}
 
 	IEnumerator SwitchState() {
-		yield return new WaitForSecondsRealtime(1.04f);
+		yield return new WaitForSecondsRealtime(1.05f);
 		_switchState = true;
 	}
 	IEnumerator FirstSlam() {
-		yield return new WaitForSecondsRealtime(0.16f);
+		yield return new WaitForSecondsRealtime(0.6f);
 		_firstSlam = true;
 	}
-	IEnumerator SeccondSlam() {
-		yield return new WaitForSecondsRealtime(0.7f);
-		_seccondSlam = true;
-	}
+
 
 
 }

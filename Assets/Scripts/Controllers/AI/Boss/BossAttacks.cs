@@ -7,10 +7,17 @@ public class BossAttacks : MonoBehaviour {
 	[SerializeField] public LayerMask EnemyLayer;
 	[SerializeField] private WeaponStats _weaponData;
 
-	public void Flash(MovementDirection currentDirection, BossAttackType attackType) {
+	public void FlashSlam(MovementDirection currentDirection, BossAttackType attackType) {
 		GetComponentsInChildren<FlashOnAttack>().Where(e => e.Direction == currentDirection).Where(e => e.AttackType == attackType).ToList().ForEach(obj => {
 			if (obj.TryGetComponent<FlashOnAttack>(out FlashOnAttack flash)) {
 				StartCoroutine(flash.FlashSlamAttack());
+			}
+		});
+	}
+		public void FlashRoar(MovementDirection currentDirection, BossAttackType attackType) {
+		GetComponentsInChildren<FlashOnAttack>().Where(e => e.Direction == currentDirection).Where(e => e.AttackType == attackType).ToList().ForEach(obj => {
+			if (obj.TryGetComponent<FlashOnAttack>(out FlashOnAttack flash)) {
+				StartCoroutine(flash.FlashRoarAttack());
 			}
 		});
 	}

@@ -6,6 +6,7 @@ using UnityEngine;
 /// <para/>
 /// All functions use the ScreenShakeManager.DefaultEasingFunction. All functions without the duration parameter use the ScreenShakeManager.DefaultDuration.
 /// </summary>
+[Serializable]
 public class ShakeLayer {
 	public ShakeLayer() {
 		AmpTween = new TimedTween();

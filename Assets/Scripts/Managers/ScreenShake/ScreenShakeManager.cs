@@ -9,7 +9,7 @@ public class ScreenShakeManager : MonoBehaviour {
 	Cinemachine.CinemachineVirtualCamera _virtualCamera;
 
 	public AmbientScreenShakeLayer AmbientLayer { get; private set; }
-	public List<ShakeLayer> Layers = new();
+	protected List<ShakeLayer> Layers = new();
 
 	public static float DefaultDuration = .5f;
 	public static Func<float, float> DefaultEasingFunction = Easings.Linear;

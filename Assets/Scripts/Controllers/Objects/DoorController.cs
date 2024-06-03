@@ -78,7 +78,7 @@ public class DoorController : MonoBehaviour {
 
 	private void OnDrawGizmos() {
 		Gizmos.color = Color.green;
-		Gizmos.DrawWireCube(transform.position, Vector3.one * 5);
+		Gizmos.DrawWireCube(transform.position, Vector3.one);
 
 		string doorString = "<color=";
 		doorString += RequiresKey ? "yellow" : "green";

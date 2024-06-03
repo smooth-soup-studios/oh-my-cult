@@ -36,8 +36,7 @@ public class UserInput : MonoBehaviour
 			return;
 		}
 
-        _playerInput = GetComponent<PlayerInput>();
-
+        _playerInput = FindObjectOfType<EventBus>().GetComponent<PlayerInput>();
         SetupInputActions();
     }
 
@@ -67,12 +66,22 @@ public class UserInput : MonoBehaviour
     {
         _playerInput.actions[actionToRebind].Disable();
         _playerInput.actions[actionToRebind].PerformInteractiveRebinding(bindingIndex)
-            // To avoid accidental input from mouse motion "<Keyboard>/escape"
+            .WithBindingGroup("Keyboard")
+            // To avoid accidental input from mouse motion
             .WithControlsExcluding("Mouse")
             .WithCancelingThrough("<Keyboard>/escape")
             .OnMatchWaitForAnother(0.1f)
-
+            .OnComplete(operation => {
+                RebindComplete();
+                operation.Dispose(); 
+            })
             .Start();
+        // String newButton = _playerInput.actions[actionToRebind].GetBindingDisplayString();
+        // Debug.Log("Rebind : " +  newButton);
         _playerInput.actions[actionToRebind].Enable();
+    }
+
+    public void RebindComplete(){
+        Debug.Log("Rebind complete");
     }
 }

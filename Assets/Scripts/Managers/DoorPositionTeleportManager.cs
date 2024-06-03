@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class HousePositionTeleportManager : MonoBehaviour {
 	private static string _logName = "HousePositionTeleportManager";
-	const int _yOffset = 15;
+	const int _yOffset = 0;
 
 	void Start() {
 		GameObject plr = GameObject.FindGameObjectWithTag("Player");
@@ -26,7 +26,7 @@ public class HousePositionTeleportManager : MonoBehaviour {
 
 
 		// Hacky way to reassign the camera follow target, but works for playtest purposes :D
-		GameObject.Find("Vcam-Player").GetComponent<Cinemachine.CinemachineVirtualCamera>().Follow = plr.transform;
+		// GameObject.Find("Vcam-Player").GetComponent<Cinemachine.CinemachineVirtualCamera>().Follow = plr.transform;
 		plrsm.LatestDoor = -1;
 	}
 }

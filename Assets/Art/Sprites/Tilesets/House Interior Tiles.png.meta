@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 2
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 14
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -71,8 +71,8 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
-    textureCompression: 1
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -93,28 +93,15 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: floor_tileset_0
+      name: House Interior Tiles_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1198
+        y: 1200
         width: 200
         height: 200
       alignment: 0
@@ -124,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 575d9899f8729524ebeeaf85dc51c5d2
-      internalID: 1240208821
+      spriteID: ec53dc964c3d2754cbb8725147e9e519
+      internalID: -1306545078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_1
+      name: House Interior Tiles_1
       rect:
         serializedVersion: 2
         x: 200
@@ -145,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c568a9fd93dca347a41d8492b278241
-      internalID: -1477791564
+      spriteID: c7d798539acf194419b9ca75d91ae5e9
+      internalID: -1773600147
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_2
+      name: House Interior Tiles_2
       rect:
         serializedVersion: 2
         x: 400
@@ -166,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e622b1a9fed93b4a948814fa29dc2b3
-      internalID: 1822784307
+      spriteID: c7cc01228305954468336ec58dc7ab02
+      internalID: -446013662
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_3
+      name: House Interior Tiles_3
       rect:
         serializedVersion: 2
         x: 600
@@ -187,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf45504a18acc3e46b6e80c6962eee41
-      internalID: 1432147130
+      spriteID: 35d21f76554a70f428a99041ee480bee
+      internalID: 1555881334
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_4
+      name: House Interior Tiles_4
       rect:
         serializedVersion: 2
         x: 800
@@ -208,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eac58a0ced4a82e4ea1f19077df0b3d1
-      internalID: 763599065
+      spriteID: e2aef83b48c00d944a033886f61b08bd
+      internalID: 355402457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_5
+      name: House Interior Tiles_5
       rect:
         serializedVersion: 2
         x: 1000
@@ -229,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c386bfa32e9a49419222603fe7ffaf0
-      internalID: -857396940
+      spriteID: c929bab902ae0c847a3334c7d3b764d7
+      internalID: -1325663230
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_6
+      name: House Interior Tiles_6
       rect:
         serializedVersion: 2
         x: 1200
@@ -250,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd023fab247a1244784dbd2740f98eaa
-      internalID: 1841431644
+      spriteID: c00c61f02e2f56f41814645322658433
+      internalID: -527403495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_7
+      name: House Interior Tiles_7
       rect:
         serializedVersion: 2
         x: 1400
@@ -271,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c578e1144ab7e3a4dafe589091052c55
-      internalID: 1136273048
+      spriteID: f71a5e24b46ab5048a03419a2c095308
+      internalID: 1992645874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_8
+      name: House Interior Tiles_8
       rect:
         serializedVersion: 2
         x: 0
@@ -292,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f9dca17573f7cf44822ea9e224165cb
-      internalID: 974605912
+      spriteID: 1cc5f91bb4a8eed4cb261ed0415c3519
+      internalID: 1091555934
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_9
+      name: House Interior Tiles_9
       rect:
         serializedVersion: 2
         x: 200
@@ -313,14 +300,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d465e702d38d8048968ecc0dfb4dee6
-      internalID: 1883366287
+      spriteID: 34bfdcd8c61d70946a0ffd960eb740d5
+      internalID: -1099181451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_10
+      name: House Interior Tiles_10
       rect:
         serializedVersion: 2
         x: 400
@@ -334,14 +321,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 262c3c7fbeae5ca4187d08b18f205adc
-      internalID: -1952634412
+      spriteID: c62548b8bc8d20342b953b01057a1c02
+      internalID: -1956292619
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_11
+      name: House Interior Tiles_11
       rect:
         serializedVersion: 2
         x: 600
@@ -355,14 +342,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff59896171e4d9c4db35732b9fb97cf9
-      internalID: 623689708
+      spriteID: ab6ccd99c9eefe847b58e6551d08e532
+      internalID: 616996220
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_12
+      name: House Interior Tiles_12
       rect:
         serializedVersion: 2
         x: 800
@@ -376,14 +363,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d1315b95d3069740a91ff5036df5e7b
-      internalID: 200265585
+      spriteID: 5792d1c10e98a6547b9501bd7a92bbb4
+      internalID: 806749125
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_13
+      name: House Interior Tiles_13
       rect:
         serializedVersion: 2
         x: 1000
@@ -397,14 +384,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 520ac392b6b24b1448a42292a0b91098
-      internalID: -578839740
+      spriteID: a8e5cd16e54e19046a8c84f6408dfe0e
+      internalID: -2045477498
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_14
+      name: House Interior Tiles_14
       rect:
         serializedVersion: 2
         x: 1200
@@ -418,14 +405,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1f48b263d4c6114c9004d098c0f42fd
-      internalID: -1770574943
+      spriteID: 507c896b19f39934783929949feb2495
+      internalID: 23045842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_15
+      name: House Interior Tiles_15
       rect:
         serializedVersion: 2
         x: 1400
@@ -439,14 +426,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc9693b3907fc314f8d3d8ff056619f1
-      internalID: 27271261
+      spriteID: ed551c35493c97d4d84c40321ed8c764
+      internalID: -1416638822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_16
+      name: House Interior Tiles_16
       rect:
         serializedVersion: 2
         x: 0
@@ -460,14 +447,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eaa06a7798b4ada4d9944085208be78e
-      internalID: 1891503476
+      spriteID: 9cedd67cbc5896446a9247e0f9ab9937
+      internalID: 1289505119
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_17
+      name: House Interior Tiles_17
       rect:
         serializedVersion: 2
         x: 200
@@ -481,14 +468,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6116fe044bc791149b6737a4ee0a232a
-      internalID: 1381241137
+      spriteID: 2db8e19b7da429b4a8cf95dd16bbc030
+      internalID: 1993295062
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_18
+      name: House Interior Tiles_18
       rect:
         serializedVersion: 2
         x: 400
@@ -502,14 +489,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d8347d66923d9544be0a88b1fc94176
-      internalID: 1786943901
+      spriteID: c24b36a36adbc6141a99ee04456a2719
+      internalID: 2108917251
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_19
+      name: House Interior Tiles_19
       rect:
         serializedVersion: 2
         x: 600
@@ -523,14 +510,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33b6b49160971254a8666ae1b73b2f17
-      internalID: 83146512
+      spriteID: ae7372ad540334c4dbec10b78b3713e3
+      internalID: 461530678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_20
+      name: House Interior Tiles_20
       rect:
         serializedVersion: 2
         x: 800
@@ -544,14 +531,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 224e7293282b90f4583d087ff9e2ce12
-      internalID: 36667814
+      spriteID: 4c6d7e80c534db24e963e8f94ae0f5d8
+      internalID: -1068535622
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_21
+      name: House Interior Tiles_21
       rect:
         serializedVersion: 2
         x: 1000
@@ -565,14 +552,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7b8937e2f0378a4dbedd7e95065d5ce
-      internalID: 2104005338
+      spriteID: 62109983df97db94f887bf9743e57e5b
+      internalID: 550379948
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_22
+      name: House Interior Tiles_22
       rect:
         serializedVersion: 2
         x: 1200
@@ -586,14 +573,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e66569fc1fe51ef4bbc03f7c1e96f24d
-      internalID: 2001327329
+      spriteID: b3e10259c5ac390428e9112af57f40c9
+      internalID: -1859844130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_23
+      name: House Interior Tiles_23
       rect:
         serializedVersion: 2
         x: 1400
@@ -607,14 +594,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fad462824dbc6c41b67b589effe55c2
-      internalID: -1898509255
+      spriteID: 06336be34c353b243afbef5ab8076588
+      internalID: 1198528512
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_24
+      name: House Interior Tiles_24
       rect:
         serializedVersion: 2
         x: 0
@@ -628,14 +615,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 326d26695e22a7c448ced96d6a3f5def
-      internalID: 872940544
+      spriteID: 62335ba1ff73bce4ebbeb42a3ed7fc99
+      internalID: -131900700
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_25
+      name: House Interior Tiles_25
       rect:
         serializedVersion: 2
         x: 200
@@ -649,14 +636,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d22240bced7d114985fa430e4c101a6
-      internalID: 269787203
+      spriteID: ae09766d4071eb74585f0c7e90328769
+      internalID: -1339647578
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_26
+      name: House Interior Tiles_26
       rect:
         serializedVersion: 2
         x: 400
@@ -670,14 +657,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3426fee69afe82b4fa4bc8da96e531cf
-      internalID: 1458078316
+      spriteID: 815a865d3afdfea42b352745d621d655
+      internalID: 739200996
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_27
+      name: House Interior Tiles_27
       rect:
         serializedVersion: 2
         x: 600
@@ -691,14 +678,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 052284f0881cf0d4e8d08579f7c02e6b
-      internalID: -819945791
+      spriteID: e30f550627df9a44cabe56bc0c5d55fe
+      internalID: -721186296
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_28
+      name: House Interior Tiles_28
       rect:
         serializedVersion: 2
         x: 800
@@ -712,14 +699,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96781cad811ff0942a115ebc3ce655be
-      internalID: -1793920372
+      spriteID: 33045d50acaf7d942b04938e88b70d54
+      internalID: 919934855
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_29
+      name: House Interior Tiles_29
       rect:
         serializedVersion: 2
         x: 1000
@@ -733,14 +720,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf62f42a1226dc3448d48b6740872576
-      internalID: 178826285
+      spriteID: 3d22ed22bdef2864a8df02c006257285
+      internalID: -1099891298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_30
+      name: House Interior Tiles_30
       rect:
         serializedVersion: 2
         x: 1200
@@ -754,14 +741,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb215fb89c3a2c6498e3bb174f87f6b7
-      internalID: -1150480705
+      spriteID: 1f3e02f231652c048829ebfddf9d4d6e
+      internalID: 1023701819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_31
+      name: House Interior Tiles_31
       rect:
         serializedVersion: 2
         x: 1400
@@ -775,14 +762,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5823437ccf70afb449952228875943b9
-      internalID: -1253141807
+      spriteID: ce7565d9353af794fa344ac75cc58f87
+      internalID: 1438661017
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_32
+      name: House Interior Tiles_32
       rect:
         serializedVersion: 2
         x: 0
@@ -796,14 +783,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b45d48c88a2cdd448af95e812259fe8
-      internalID: 227232460
+      spriteID: f86dd2d8f20904948a44457a779606d7
+      internalID: -1506438349
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_33
+      name: House Interior Tiles_33
       rect:
         serializedVersion: 2
         x: 200
@@ -817,14 +804,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0386827651c6152448c3ce8aa61b77b2
-      internalID: -18125301
+      spriteID: ec663d6fa1b53a14dbac2a7572b41240
+      internalID: -1024801430
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_34
+      name: House Interior Tiles_34
       rect:
         serializedVersion: 2
         x: 400
@@ -838,14 +825,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcedd3271c376194489ceed3e6e22900
-      internalID: -886834574
+      spriteID: 89f49a049c35a7d40ac9de4725e81917
+      internalID: -1282131669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_35
+      name: House Interior Tiles_35
       rect:
         serializedVersion: 2
         x: 600
@@ -859,14 +846,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c7d401c0637688468b8d5f80c52c44e
-      internalID: -1313176283
+      spriteID: 812a4de74ebf30444a9a1a3200317b62
+      internalID: 395690472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_36
+      name: House Interior Tiles_36
       rect:
         serializedVersion: 2
         x: 800
@@ -880,14 +867,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcc9cbab6e00a8546bdcc5a0fa2dcd66
-      internalID: -408091260
+      spriteID: a5f05155916f1144bb6b55ab950d4765
+      internalID: 1384695293
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_37
+      name: House Interior Tiles_37
       rect:
         serializedVersion: 2
         x: 1000
@@ -901,14 +888,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e83e1c1c3d8bc6489d250103ff51691
-      internalID: -6126045
+      spriteID: b0d4ea326e2f1ef46a4076c0022b1553
+      internalID: 700578807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_38
+      name: House Interior Tiles_38
       rect:
         serializedVersion: 2
         x: 1200
@@ -922,14 +909,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f088cfdf75eb095418e936b2b96747c8
-      internalID: 1680010970
+      spriteID: c660ec051a7c17842a69174e1a9193f4
+      internalID: 135347838
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_39
+      name: House Interior Tiles_39
       rect:
         serializedVersion: 2
         x: 1400
@@ -943,14 +930,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22420ab29987af54fb8df7577ceffc86
-      internalID: -2066327457
+      spriteID: 8ba73c265e54bb443ae14c9366c49635
+      internalID: -1297921772
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_40
+      name: House Interior Tiles_40
       rect:
         serializedVersion: 2
         x: 0
@@ -964,14 +951,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 437d46a99aaff7242836e0919d70739b
-      internalID: 6923510
+      spriteID: ce6abf60da959d84b9758f60d95340bb
+      internalID: -1198424877
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_41
+      name: House Interior Tiles_41
       rect:
         serializedVersion: 2
         x: 200
@@ -985,14 +972,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba4f1c4c42963624db013b3a172016bf
-      internalID: 187950971
+      spriteID: 8f1e28f37fb2b8845b56e88bd40b7bb0
+      internalID: -1713271853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_42
+      name: House Interior Tiles_42
       rect:
         serializedVersion: 2
         x: 400
@@ -1006,14 +993,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17d0c302e18b31540b61a1bbbac30074
-      internalID: -1052818528
+      spriteID: 35b93d07cedaf634fa0d7074ab57e06a
+      internalID: 1016471114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_43
+      name: House Interior Tiles_43
       rect:
         serializedVersion: 2
         x: 600
@@ -1027,14 +1014,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c336082c3d04e174e9f08a434d790be9
-      internalID: -998955331
+      spriteID: 9407b9dcc33abcc46a5b3151fa015144
+      internalID: 1610971672
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_44
+      name: House Interior Tiles_44
       rect:
         serializedVersion: 2
         x: 800
@@ -1048,14 +1035,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 164b856172cb0a74abb6fa4bbbefc314
-      internalID: -1781786717
+      spriteID: 75299fe646de73d48bce36b5de51e61d
+      internalID: 170829138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_45
+      name: House Interior Tiles_45
       rect:
         serializedVersion: 2
         x: 1000
@@ -1069,14 +1056,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9f78a7ca632e8e44bc93ccb3091dad3
-      internalID: -2144452130
+      spriteID: 05c33c191611b6f4da67ab3fa6b9cb34
+      internalID: -1257184710
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_46
+      name: House Interior Tiles_46
       rect:
         serializedVersion: 2
         x: 1200
@@ -1090,14 +1077,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21db35b144b36104d8d2e41e4e649a7d
-      internalID: 544153851
+      spriteID: 89407f763974a3f4e99041e844dc0e00
+      internalID: -97964103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_47
+      name: House Interior Tiles_47
       rect:
         serializedVersion: 2
         x: 1400
@@ -1111,14 +1098,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfd5e404d29a5f34f9ce10c2b694dc19
-      internalID: -181925983
+      spriteID: b891c9c4c51693344b2f9c88bc1b0551
+      internalID: 170476780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_48
+      name: House Interior Tiles_48
       rect:
         serializedVersion: 2
         x: 0
@@ -1132,14 +1119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e4ebdb16e7a4814baf76644d3e27769
-      internalID: -1742411955
+      spriteID: 94eb5357990e2cb45943d1be51d27e2d
+      internalID: 542196096
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_49
+      name: House Interior Tiles_49
       rect:
         serializedVersion: 2
         x: 200
@@ -1153,14 +1140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7194b908bb27084409312e2b30f50f88
-      internalID: -148461757
+      spriteID: 7b2cd4f86267e4548af669e6082fe7eb
+      internalID: -1580029267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_50
+      name: House Interior Tiles_50
       rect:
         serializedVersion: 2
         x: 400
@@ -1174,14 +1161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0168d61bc541a06479e22e37bc3ab800
-      internalID: 1834918724
+      spriteID: c8085ca65bbb4ee44a6ba2f6d25d271e
+      internalID: 1747125584
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_51
+      name: House Interior Tiles_51
       rect:
         serializedVersion: 2
         x: 600
@@ -1195,14 +1182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef48e6e8f07896c41867b1cb4ce7be97
-      internalID: -2126385408
+      spriteID: 2bf5f8ce1feaa7a418024f892db9aeea
+      internalID: 1850598260
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_52
+      name: House Interior Tiles_52
       rect:
         serializedVersion: 2
         x: 800
@@ -1216,14 +1203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75ae32a5a29e6f941bbcdded5b91c45d
-      internalID: -711572359
+      spriteID: 06e8436880837354d9eab6a67d231fc6
+      internalID: -741759994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_53
+      name: House Interior Tiles_53
       rect:
         serializedVersion: 2
         x: 1000
@@ -1237,14 +1224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bafaf6e38f46de94eb0eb24ff1893c5a
-      internalID: -1520532658
+      spriteID: 05597e44d881c2848813bcc2bdc8d417
+      internalID: -1066849690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_54
+      name: House Interior Tiles_54
       rect:
         serializedVersion: 2
         x: 1200
@@ -1258,14 +1245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ad107cd1cc84e8459c8d697f313e463
-      internalID: 121092929
+      spriteID: b4d7f67473963344db940a0d022966a1
+      internalID: -132839231
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_tileset_55
+      name: House Interior Tiles_55
       rect:
         serializedVersion: 2
         x: 1400
@@ -1279,8 +1266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11751671ad66c7a45b8418fc986e71be
-      internalID: 651601823
+      spriteID: a598add3b958e6c458bfd26360c85094
+      internalID: 279630518
       vertices: []
       indices: 
       edges: []
@@ -1296,62 +1283,62 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      floor_tileset_0: 1240208821
-      floor_tileset_1: -1477791564
-      floor_tileset_10: -1952634412
-      floor_tileset_11: 623689708
-      floor_tileset_12: 200265585
-      floor_tileset_13: -578839740
-      floor_tileset_14: -1770574943
-      floor_tileset_15: 27271261
-      floor_tileset_16: 1891503476
-      floor_tileset_17: 1381241137
-      floor_tileset_18: 1786943901
-      floor_tileset_19: 83146512
-      floor_tileset_2: 1822784307
-      floor_tileset_20: 36667814
-      floor_tileset_21: 2104005338
-      floor_tileset_22: 2001327329
-      floor_tileset_23: -1898509255
-      floor_tileset_24: 872940544
-      floor_tileset_25: 269787203
-      floor_tileset_26: 1458078316
-      floor_tileset_27: -819945791
-      floor_tileset_28: -1793920372
-      floor_tileset_29: 178826285
-      floor_tileset_3: 1432147130
-      floor_tileset_30: -1150480705
-      floor_tileset_31: -1253141807
-      floor_tileset_32: 227232460
-      floor_tileset_33: -18125301
-      floor_tileset_34: -886834574
-      floor_tileset_35: -1313176283
-      floor_tileset_36: -408091260
-      floor_tileset_37: -6126045
-      floor_tileset_38: 1680010970
-      floor_tileset_39: -2066327457
-      floor_tileset_4: 763599065
-      floor_tileset_40: 6923510
-      floor_tileset_41: 187950971
-      floor_tileset_42: -1052818528
-      floor_tileset_43: -998955331
-      floor_tileset_44: -1781786717
-      floor_tileset_45: -2144452130
-      floor_tileset_46: 544153851
-      floor_tileset_47: -181925983
-      floor_tileset_48: -1742411955
-      floor_tileset_49: -148461757
-      floor_tileset_5: -857396940
-      floor_tileset_50: 1834918724
-      floor_tileset_51: -2126385408
-      floor_tileset_52: -711572359
-      floor_tileset_53: -1520532658
-      floor_tileset_54: 121092929
-      floor_tileset_55: 651601823
-      floor_tileset_6: 1841431644
-      floor_tileset_7: 1136273048
-      floor_tileset_8: 974605912
-      floor_tileset_9: 1883366287
+      House Interior Tiles_0: -1306545078
+      House Interior Tiles_1: -1773600147
+      House Interior Tiles_10: -1956292619
+      House Interior Tiles_11: 616996220
+      House Interior Tiles_12: 806749125
+      House Interior Tiles_13: -2045477498
+      House Interior Tiles_14: 23045842
+      House Interior Tiles_15: -1416638822
+      House Interior Tiles_16: 1289505119
+      House Interior Tiles_17: 1993295062
+      House Interior Tiles_18: 2108917251
+      House Interior Tiles_19: 461530678
+      House Interior Tiles_2: -446013662
+      House Interior Tiles_20: -1068535622
+      House Interior Tiles_21: 550379948
+      House Interior Tiles_22: -1859844130
+      House Interior Tiles_23: 1198528512
+      House Interior Tiles_24: -131900700
+      House Interior Tiles_25: -1339647578
+      House Interior Tiles_26: 739200996
+      House Interior Tiles_27: -721186296
+      House Interior Tiles_28: 919934855
+      House Interior Tiles_29: -1099891298
+      House Interior Tiles_3: 1555881334
+      House Interior Tiles_30: 1023701819
+      House Interior Tiles_31: 1438661017
+      House Interior Tiles_32: -1506438349
+      House Interior Tiles_33: -1024801430
+      House Interior Tiles_34: -1282131669
+      House Interior Tiles_35: 395690472
+      House Interior Tiles_36: 1384695293
+      House Interior Tiles_37: 700578807
+      House Interior Tiles_38: 135347838
+      House Interior Tiles_39: -1297921772
+      House Interior Tiles_4: 355402457
+      House Interior Tiles_40: -1198424877
+      House Interior Tiles_41: -1713271853
+      House Interior Tiles_42: 1016471114
+      House Interior Tiles_43: 1610971672
+      House Interior Tiles_44: 170829138
+      House Interior Tiles_45: -1257184710
+      House Interior Tiles_46: -97964103
+      House Interior Tiles_47: 170476780
+      House Interior Tiles_48: 542196096
+      House Interior Tiles_49: -1580029267
+      House Interior Tiles_5: -1325663230
+      House Interior Tiles_50: 1747125584
+      House Interior Tiles_51: 1850598260
+      House Interior Tiles_52: -741759994
+      House Interior Tiles_53: -1066849690
+      House Interior Tiles_54: -132839231
+      House Interior Tiles_55: 279630518
+      House Interior Tiles_6: -527403495
+      House Interior Tiles_7: 1992645874
+      House Interior Tiles_8: 1091555934
+      House Interior Tiles_9: -1099181451
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

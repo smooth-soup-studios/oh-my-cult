@@ -145,8 +145,8 @@ MonoBehaviour:
   _useEightPointHitbox: 0
   PlayerAnimator:
     _animationDebugLogging: 0
-  SpeedModifier: 5
-  BaseSpeed: 12.8
+  SpeedModifier: 1
+  BaseSpeed: 5
   WeaponHitbox: {fileID: 3173601029828910364}
   HitContainer: {fileID: 3053537212863230237}
   LatestDoor: -1
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f0d07869b7ad747b46fdf13457c82e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: Player-28.3024
+  <ObjectId>k__BackingField: Player-28,3024
   _isInvulnerable: 0
   _maxHealth: 100
 --- !u!95 &8530993155805609580
@@ -262,7 +262,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.05}
-    oldSize: {x: 10.6875, y: 16.441515}
+    oldSize: {x: 0.855, y: 1.3153211}
     newSize: {x: 5, y: 8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

@@ -6,6 +6,16 @@ Button:active {
     -unity-background-image-tint-color: rgb(170, 170, 170);
 }
 
+Button{
+    -unity-font: url("../../../Fonts/Nunito-Regular.ttf");
+    -unity-font-definition: url("../../..//Fonts/Nunito-Regular-SDF.asset"); 
+}
+
+field__label{
+    -unity-font: url("../../../Fonts/Nunito-Regular.ttf");
+    -unity-font-definition: url("../../..//Fonts/Nunito-Regular-SDF.asset"); 
+}
+
 .unity-base-field__input {
     background-color: rgb(81, 26, 67);
     border-left-color: rgb(81, 26, 67);

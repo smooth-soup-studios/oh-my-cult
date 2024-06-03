@@ -15,11 +15,11 @@ public class SaveManager : MonoBehaviour {
 	[SerializeField] private bool _enableLogging;
 	[SerializeField] private bool _dataManagerLogging;
 
-	private readonly static string _logname = "SaveManager";
-	private static string _saveName = "OhMyCult";
-	private string _selectedProfile = "";
-	private List<ISaveable> _saveables;
-	private GameData _gameData;
+	protected readonly static string Logname = "SaveManager";
+	protected static string SaveName = "OhMyCult";
+	protected string SelectedProfile = "";
+	protected List<ISaveable> Saveables;
+	protected GameData GameData;
 	protected IDataManager DataManager;
 
 	private static SaveManager _saveManager;
@@ -29,45 +29,45 @@ public class SaveManager : MonoBehaviour {
 				_saveManager = FindAnyObjectByType<SaveManager>();
 
 				if (!_saveManager) {
-					Logger.LogError(_logname, "No SaveManager found in the scene!");
+					Logger.LogError(Logname, "No SaveManager found in the scene!");
 				}
 			}
 			return _saveManager;
 		}
 	}
 
+	protected void OnEnable() {
+		SceneManager.sceneLoaded += OnSceneLoaded;
+	}
 
-	private void Awake() {
+	protected void Awake() {
 		if (_saveManager == null) {
 			_saveManager = this;
 		}
 		else if (_saveManager != this) {
-			Logger.LogWarning(_logname, "Multiple Instances found! Exiting...");
+			Logger.LogWarning(Logname, "Multiple Instances found! Exiting...");
 			Destroy(gameObject);
 			return;
 		}
 		DontDestroyOnLoad(Instance);
 
 #if UNITY_EDITOR // Make sure debugging savefiles don't fuck up production saves
-		_saveName += "-debug";
+		SaveName += "-debug";
 #endif
-		DataManager = new FileDataManager(Application.persistentDataPath, _saveName + ".WDF", _useEncryption, _dataManagerLogging);
+		DataManager = new FileDataManager(Application.persistentDataPath, SaveName + ".WDF", _useEncryption, _dataManagerLogging);
 	}
 
-	private void OnEnable() {
-		SceneManager.sceneLoaded += OnSceneLoaded;
-	}
 
-	private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
-		_saveables = FindAllSaveables();
+	protected void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+		Saveables = FindAllSaveables();
 		LoadGame();
 	}
 
-	private void OnDisable() {
+	protected void OnDisable() {
 		SceneManager.sceneLoaded -= OnSceneLoaded;
 	}
 
-	private void OnApplicationQuit() {
+	protected void OnApplicationQuit() {
 		if (_saveOnQuit) {
 			SaveGame();
 		}
@@ -78,7 +78,7 @@ public class SaveManager : MonoBehaviour {
 	/// </summary>
 	/// <param name="newProfileId"></param>
 	public void ChangeSelectedProfileId(string newProfileId) {
-		_selectedProfile = newProfileId;
+		SelectedProfile = newProfileId;
 		LoadGame();
 	}
 
@@ -87,16 +87,15 @@ public class SaveManager : MonoBehaviour {
 	/// </summary>
 	/// <param name="newProfileId"></param>
 	public void ChangeSelectedProfileIdNoLoad(string newProfileId) {
-		_selectedProfile = newProfileId;
+		SelectedProfile = newProfileId;
 	}
 
 	/// <summary>
-	/// Overwrites the locally stored data with a clean instance of GameData. </br>
-	///
+	/// Overwrites the locally stored data with a clean instance of GameData.
 	/// </summary>
 	public void NewGame() {
 		SendToLogger("Starting new game. Creating default gamedata");
-		_gameData = new GameData();
+		GameData = new GameData();
 	}
 
 	/// <summary>
@@ -105,20 +104,20 @@ public class SaveManager : MonoBehaviour {
 	public void LoadGame() {
 		if (_enableSaving) {
 			SendToLogger("Loading game, looking for saves.");
-			_gameData = DataManager.Load(_selectedProfile);
+			GameData = DataManager.Load(SelectedProfile);
 
-			if (_gameData == null && _initializeData) {
+			if (GameData == null && _initializeData) {
 				SendToLogger("No save found. initializing new game.");
-				_selectedProfile = "debug";
+				SelectedProfile = "debug";
 				NewGame();
 			}
 
-			if (_gameData == null) {
-				Logger.LogWarning(_logname, "No game data found. Start a new game before loading!");
+			if (GameData == null) {
+				Logger.LogWarning(Logname, "No game data found. Start a new game before loading!");
 				return;
 			}
 
-			_saveables.ForEach(saveable => saveable.LoadData(_gameData));
+			Saveables.ForEach(saveable => saveable.LoadData(GameData));
 		}
 
 	}
@@ -129,14 +128,14 @@ public class SaveManager : MonoBehaviour {
 	/// </summary>
 	public void SaveGame() {
 		if (_enableSaving) {
-			if (_gameData == null) {
-				Logger.LogWarning(_logname, "No data to save. Start a new game before saving!");
+			if (GameData == null) {
+				Logger.LogWarning(Logname, "No data to save. Start a new game before saving!");
 				return;
 			}
 
 			SendToLogger("Saving game.");
-			_saveables.ForEach(saveable => saveable?.SaveData(_gameData));
-			DataManager.Save(_gameData, _selectedProfile);
+			Saveables.ForEach(saveable => saveable?.SaveData(GameData));
+			DataManager.Save(GameData, SelectedProfile);
 		}
 	}
 
@@ -156,14 +155,13 @@ public class SaveManager : MonoBehaviour {
 	}
 
 	public bool HasGameData() {
-		return _gameData != null;
+		return GameData != null;
 	}
 
 
 	private void SendToLogger(string text) {
 		if (_enableLogging) {
-			Logger.Log(_logname, text);
-
+			Logger.Log(Logname, text);
 		}
 	}
 

@@ -128,8 +128,7 @@ public class UIManager : MonoBehaviour {
 					}
 
 					// Hide the stack label if there is only one item
-					slot.visible = stack.Amount > 1;
-					slot.text = stack.Amount.ToString();
+					slot.text = stack.Amount > 1 ? stack.Amount.ToString() : "";
 
 				}
 				else {

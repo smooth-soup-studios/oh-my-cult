@@ -66,7 +66,7 @@ public class UserInput : MonoBehaviour
     {
         _playerInput.actions[actionToRebind].Disable();
         _playerInput.actions[actionToRebind].PerformInteractiveRebinding(bindingIndex)
-            .WithBindingGroup("Keyboard")
+            .WithBindingGroup(_playerInput.currentControlScheme)
             // To avoid accidental input from mouse motion
             .WithControlsExcluding("Mouse")
             .WithCancelingThrough("<Keyboard>/escape")
@@ -76,8 +76,8 @@ public class UserInput : MonoBehaviour
                 operation.Dispose(); 
             })
             .Start();
-        // String newButton = _playerInput.actions[actionToRebind].GetBindingDisplayString();
-        // Debug.Log("Rebind : " +  newButton);
+        String newButton = _playerInput.actions[actionToRebind].GetBindingDisplayString();
+        Debug.Log("Rebind : " +  newButton);
         _playerInput.actions[actionToRebind].Enable();
     }
 

@@ -3548,7 +3548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: DoorInteractionPoint-19,22714
+      value: DoorInteractionPoint-547,8087
       objectReference: {fileID: 0}
     - target: {fileID: 6036849210683475856, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: m_Name
@@ -3632,6 +3632,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rug Purple
       objectReference: {fileID: 0}
+    - target: {fileID: 8484900880545361796, guid: 30ad8706a8868ea4b94bfa8be2cd9c81, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484900880545361796, guid: 30ad8706a8868ea4b94bfa8be2cd9c81, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484900880545361796, guid: 30ad8706a8868ea4b94bfa8be2cd9c81, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 509012055
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484900880545361796, guid: 30ad8706a8868ea4b94bfa8be2cd9c81, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484900880545361796, guid: 30ad8706a8868ea4b94bfa8be2cd9c81, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8924889953280016147, guid: 30ad8706a8868ea4b94bfa8be2cd9c81, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.107776664
@@ -3671,26 +3691,6 @@ PrefabInstance:
     - target: {fileID: 8924889953280016147, guid: 30ad8706a8868ea4b94bfa8be2cd9c81, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8484900880545361796, guid: 30ad8706a8868ea4b94bfa8be2cd9c81, type: 3}
-      propertyPath: m_SortingLayer
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8484900880545361796, guid: 30ad8706a8868ea4b94bfa8be2cd9c81, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8484900880545361796, guid: 30ad8706a8868ea4b94bfa8be2cd9c81, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 509012055
-      objectReference: {fileID: 0}
-    - target: {fileID: 8484900880545361796, guid: 30ad8706a8868ea4b94bfa8be2cd9c81, type: 3}
-      propertyPath: m_MaskInteraction
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8484900880545361796, guid: 30ad8706a8868ea4b94bfa8be2cd9c81, type: 3}
-      propertyPath: m_SpriteSortPoint
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5651,6 +5651,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 716486501}
     m_Modifications:
+    - target: {fileID: 7747182258120643817, guid: 36c5937a3909c634eb6af952132664dc, type: 3}
+      propertyPath: m_Name
+      value: Bed Purple
+      objectReference: {fileID: 0}
     - target: {fileID: 8349825995152034715, guid: 36c5937a3909c634eb6af952132664dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.022223
@@ -5690,10 +5694,6 @@ PrefabInstance:
     - target: {fileID: 8349825995152034715, guid: 36c5937a3909c634eb6af952132664dc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7747182258120643817, guid: 36c5937a3909c634eb6af952132664dc, type: 3}
-      propertyPath: m_Name
-      value: Bed Purple
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

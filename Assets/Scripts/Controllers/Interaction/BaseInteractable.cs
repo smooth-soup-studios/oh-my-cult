@@ -59,16 +59,12 @@ public abstract class BaseInteractable : MonoBehaviour, ISaveable {
 	}
 
 	public virtual void LoadData(GameData data) {
-		if (data.SceneData.InteractionData.ContainsKey($"{ObjectId}-AutoTrigger")) {
-			data.SceneData.InteractionData.TryGetValue($"{ObjectId}-AutoTrigger", out AutoTrigger);
-		}
 		if (data.SceneData.InteractionData.ContainsKey($"{ObjectId}-HasBeenUsed")) {
 			data.SceneData.InteractionData.TryGetValue($"{ObjectId}-HasBeenUsed", out HasBeenUsed);
 		}
 	}
 
 	public virtual void SaveData(GameData data) {
-		data.SceneData.InteractionData[$"{ObjectId}-AutoTrigger"] = AutoTrigger;
 		data.SceneData.InteractionData[$"{ObjectId}-HasBeenUsed"] = HasBeenUsed;
 	}
 }

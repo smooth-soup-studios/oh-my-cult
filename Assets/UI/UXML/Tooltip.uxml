@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="centerer" style="flex-direction: row; align-items: center; flex-grow: 1; justify-content: center;">
+        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font-definition: url(&quot;project://database/Assets/Fonts/Nunito-Medium%20SDF.asset?fileID=11400000&amp;guid=b848bc55227ee7340bd893d052166368&amp;type=2#Nunito-Medium SDF&quot;); font-size: 45px; color: rgb(255, 255, 255);" />
+    </ui:VisualElement>
+</ui:UXML>

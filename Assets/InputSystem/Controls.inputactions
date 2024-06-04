@@ -301,17 +301,6 @@
                 },
                 {
                     "name": "",
-                    "id": "31437444-b33a-40de-9abf-477aa68bcc69",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Primary",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "3baf53c9-a074-4c8c-a799-845795c881fc",
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "",

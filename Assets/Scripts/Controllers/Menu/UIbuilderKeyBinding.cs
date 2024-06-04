@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
@@ -47,7 +48,11 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 		}
 
 		_leftButton.clicked += OnLeftChange;
-
+		_rightButton.clicked += OnRightChange;
+		_upButton.clicked += OnUpChange;
+		_downButton.clicked += OnDownChange;
+		_interactButton.clicked += OnInteractChange;
+		_attackButton.clicked += OnAttackChange;
 		_dashButton.clicked += OnDashChange;
 	}
 
@@ -63,11 +68,31 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 	}
 
 	void OnKeyChange(String buttonToRebind, int bindingIndex = -1){
-		_userInput.RemapButtonClicked(buttonToRebind, bindingIndex);
+		_userInput.RemapButtonClicked(buttonToRebind, _root, bindingIndex);
 	}
 
 	void OnLeftChange(){
 		OnKeyChange("Move", 2);
+	}
+
+	void OnRightChange(){
+		OnKeyChange("Move", 3);
+	}
+
+	void OnUpChange(){
+		OnKeyChange("Move", 0);
+	}
+
+	void OnDownChange(){
+		OnKeyChange("Move", 1);
+	}
+
+	void OnInteractChange(){
+		OnKeyChange("Interact");
+	}
+
+	void OnAttackChange(){
+		OnKeyChange("Primary");
 	}
 
 	void OnDashChange(){

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class UserInput : MonoBehaviour
 {
@@ -62,7 +63,7 @@ public class UserInput : MonoBehaviour
         ItemPickUpInput = _itemPickUpAction.WasPerformedThisFrame();
     }
 
-    public void RemapButtonClicked(String actionToRebind, int bindingIndex = -1)
+    public void RemapButtonClicked(String actionToRebind,VisualElement root, int bindingIndex = -1)
     {
         _playerInput.actions[actionToRebind].Disable();
         _playerInput.actions[actionToRebind].PerformInteractiveRebinding(bindingIndex)
@@ -72,16 +73,16 @@ public class UserInput : MonoBehaviour
             .WithCancelingThrough("<Keyboard>/escape")
             .OnMatchWaitForAnother(0.1f)
             .OnComplete(operation => {
-                RebindComplete();
+                RebindComplete(root);
                 operation.Dispose(); 
             })
             .Start();
-        String newButton = _playerInput.actions[actionToRebind].GetBindingDisplayString();
-        Debug.Log("Rebind : " +  newButton);
+        // String newButton = _playerInput.actions[actionToRebind].GetBindingDisplayString();
+        // Debug.Log("Rebind : " +  newButton);
         _playerInput.actions[actionToRebind].Enable();
     }
 
-    public void RebindComplete(){
+    public void RebindComplete(VisualElement root){
         Debug.Log("Rebind complete");
     }
 }

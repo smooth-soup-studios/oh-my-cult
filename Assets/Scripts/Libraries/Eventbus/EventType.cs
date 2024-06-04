@@ -16,4 +16,6 @@ public enum EventType {
 	ENTER_CHURCH,
 	ENTER_VILLAGE,
 	HIT,
+	INV_ADD,
+	INV_REMOVE
 }

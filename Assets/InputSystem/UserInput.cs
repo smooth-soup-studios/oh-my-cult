@@ -87,20 +87,18 @@ public class UserInput : MonoBehaviour
     {
         InputAction action = _playerInput.actions[actionName];
         if (action == null)
-        {Debug.Log("action not found");
+        {
             return string.Empty;
         }
         if (bindingIndex == -1)
-        {Debug.Log("" + action.GetBindingDisplayString());
+        {
             return action.GetBindingDisplayString();
         }
-Debug.Log("" + action.GetBindingDisplayString(bindingIndex));
         return action.GetBindingDisplayString(bindingIndex);
         
     }
 
     public void RebindComplete(Button button, String buttonText){
         button.text = buttonText;
-        Debug.Log("Rebind complete");
     }
 }

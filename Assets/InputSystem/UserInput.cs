@@ -63,9 +63,9 @@ public class UserInput : MonoBehaviour
         ItemPickUpInput = _itemPickUpAction.WasPerformedThisFrame();
     }
 
-    public void RemapButtonClicked(String actionToRebind,VisualElement root, int bindingIndex = -1)
+    public void RemapButtonClicked(String actionToRebind,Button button, int bindingIndex = -1)
     {
-        _playerInput.actions[actionToRebind].Disable();
+        _playerInput.actions[actionToRebind].Disable();   
         _playerInput.actions[actionToRebind].PerformInteractiveRebinding(bindingIndex)
             .WithBindingGroup(_playerInput.currentControlScheme)
             // To avoid accidental input from mouse motion
@@ -73,7 +73,8 @@ public class UserInput : MonoBehaviour
             .WithCancelingThrough("<Keyboard>/escape")
             .OnMatchWaitForAnother(0.1f)
             .OnComplete(operation => {
-                RebindComplete(root);
+                String newText = GetBindingDisplayString(actionToRebind, bindingIndex);
+                RebindComplete(button, newText);
                 operation.Dispose(); 
             })
             .Start();
@@ -82,7 +83,24 @@ public class UserInput : MonoBehaviour
         _playerInput.actions[actionToRebind].Enable();
     }
 
-    public void RebindComplete(VisualElement root){
+    public string GetBindingDisplayString(string actionName, int bindingIndex)
+    {
+        InputAction action = _playerInput.actions[actionName];
+        if (action == null)
+        {Debug.Log("action not found");
+            return string.Empty;
+        }
+        if (bindingIndex == -1)
+        {Debug.Log("" + action.GetBindingDisplayString());
+            return action.GetBindingDisplayString();
+        }
+Debug.Log("" + action.GetBindingDisplayString(bindingIndex));
+        return action.GetBindingDisplayString(bindingIndex);
+        
+    }
+
+    public void RebindComplete(Button button, String buttonText){
+        button.text = buttonText;
         Debug.Log("Rebind complete");
     }
 }

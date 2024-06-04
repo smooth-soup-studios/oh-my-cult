@@ -8,12 +8,12 @@ Button:active {
 
 Button{
     -unity-font: url("../../../Fonts/Nunito-Regular.ttf");
-    -unity-font-definition: url("../../..//Fonts/Nunito-Regular-SDF.asset"); 
+    -unity-font-definition: url("../../..//Fonts/Nunito-Regular SDF.asset"); 
 }
 
 field__label{
     -unity-font: url("../../../Fonts/Nunito-Regular.ttf");
-    -unity-font-definition: url("../../..//Fonts/Nunito-Regular-SDF.asset"); 
+    -unity-font-definition: url("../../..//Fonts/Nunito-Regular SDF.asset"); 
 }
 
 .unity-base-field__input {

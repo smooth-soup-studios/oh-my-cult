@@ -1,16 +1,18 @@
 using UnityEngine;
 
 
-[RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(SpriteRenderer), typeof(TooltipController))]
 public abstract class BaseItemPickupInteractable : BaseInteractable {
 	[Header("Item settings")]
 	public ItemStack PickupStack;
 
 	protected SpriteRenderer SpriteRenderer;
+	protected TooltipController TooltipController;
 
 	protected new void Start() {
 		base.Start();
 		SpriteRenderer = GetComponent<SpriteRenderer>();
+		TooltipController = GetComponent<TooltipController>();
 		UpdateSprite();
 	}
 
@@ -27,6 +29,8 @@ public abstract class BaseItemPickupInteractable : BaseInteractable {
 		ItemStack switchedItem = inventory.AddItem(PickupStack);
 		PickupStack = switchedItem;
 		UpdateSprite();
+		TooltipController.Select();
+		TooltipController.HideTooltip();
 	}
 
 
@@ -37,10 +41,14 @@ public abstract class BaseItemPickupInteractable : BaseInteractable {
 
 	public override void OnDeselect() {
 		SpriteRenderer.color = Color.white;
+		TooltipController.HideTooltip();
 	}
 
 	public override void OnSelect() {
-		SpriteRenderer.color = Color.green;
+		if (PickupStack.Item != null) {
+			SpriteRenderer.color = Color.green;
+			TooltipController.ShowTooltip();
+		}
 	}
 
 	protected new void OnValidate() {

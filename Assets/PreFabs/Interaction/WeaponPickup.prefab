@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3376820131804443929}
   - component: {fileID: 3190531234116292789}
   - component: {fileID: 1307342027879266201}
+  - component: {fileID: 8247225202943281563}
   m_Layer: 0
   m_Name: WeaponPickup
   m_TagString: Untagged
@@ -170,3 +171,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GlowDuration: 0.3
   GlowRange: 50
+--- !u!114 &8247225202943281563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2601442356323300049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4950a7b001ee35a49912b3776df14475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tooltipPrefab: {fileID: 7369165516556784984, guid: 71f937e3ad8c0634ba19b8e0449f9667, type: 3}
+  TooltipText: Pick up
+  Key: E

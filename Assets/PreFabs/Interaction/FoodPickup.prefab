@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5892297606518876843}
   - component: {fileID: 2212882349735924432}
   - component: {fileID: -3746807699098805615}
+  - component: {fileID: 8916858723484459872}
   m_Layer: 0
   m_Name: FoodPickup
   m_TagString: Untagged
@@ -104,3 +105,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8916858723484459872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6063357390683749374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4950a7b001ee35a49912b3776df14475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tooltipPrefab: {fileID: 7369165516556784984, guid: 71f937e3ad8c0634ba19b8e0449f9667, type: 3}
+  TooltipText: Pick up
+  Key: E

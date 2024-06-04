@@ -26,7 +26,6 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 	// Start is called before the first frame update
 	void OnEnable() {
 		_userInput = FindObjectOfType<UserInput>();
-		Debug.Log("" + _userInput.name);
 
 		Logger.Log("KeyBinding", "Binding Menu");
 		_root = GetComponent<UIDocument>().rootVisualElement;
@@ -67,35 +66,37 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 		SceneManager.LoadSceneAsync(2);
 	}
 
-	void OnKeyChange(String buttonToRebind, Button button, int bindingIndex = -1){
-		_userInput.RemapButtonClicked(buttonToRebind, button, bindingIndex);
+	void OnKeyChange(String buttonToRebind, Button button, int bindingIndex = -1) {
+		if (_userInput) {
+			_userInput.RemapButtonClicked(buttonToRebind, button, bindingIndex);
+		}
 	}
 
-	void OnLeftChange(){
+	void OnLeftChange() {
 		OnKeyChange("Move", _leftButton, 3);
 	}
 
-	void OnRightChange(){
-		OnKeyChange("Move",_rightButton, 4);
+	void OnRightChange() {
+		OnKeyChange("Move", _rightButton, 4);
 	}
 
-	void OnUpChange(){
+	void OnUpChange() {
 		OnKeyChange("Move", _upButton, 1);
 	}
 
-	void OnDownChange(){
+	void OnDownChange() {
 		OnKeyChange("Move", _downButton, 2);
 	}
 
-	void OnInteractChange(){
+	void OnInteractChange() {
 		OnKeyChange("Interact", _interactButton);
 	}
 
-	void OnAttackChange(){
+	void OnAttackChange() {
 		OnKeyChange("Primary", _attackButton);
 	}
 
-	void OnDashChange(){
+	void OnDashChange() {
 		OnKeyChange("Dash", _dashButton);
 	}
 }

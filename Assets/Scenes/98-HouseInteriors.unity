@@ -183,7 +183,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.6666667
   m_BuildHeightMesh: 0
   m_HideEditorLogs: 0
   m_NavMeshData: {fileID: 23800000, guid: cfa6d8fba14d5584a99916b97611eab6, type: 2}
@@ -9557,6 +9557,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3900318808842322138, guid: eb6bcb867272c7f4db2dc1b3ce0a2d95, type: 3}
+      propertyPath: <ObjectId>k__BackingField
+      value: Enemy-619,1979
+      objectReference: {fileID: 0}
     - target: {fileID: 6731496170037079614, guid: eb6bcb867272c7f4db2dc1b3ce0a2d95, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.492325
@@ -22064,6 +22068,10 @@ PrefabInstance:
       propertyPath: _item
       value: 
       objectReference: {fileID: 11400000, guid: 4d1825e3a48885e40b154d6ad3b7b531, type: 2}
+    - target: {fileID: 1625781803088781141, guid: bcf36efebb1722348b900b3210ec3517, type: 3}
+      propertyPath: <ObjectId>k__BackingField
+      value: WeaponPickup-622415,2
+      objectReference: {fileID: 0}
     - target: {fileID: 2601442356323300049, guid: bcf36efebb1722348b900b3210ec3517, type: 3}
       propertyPath: m_Name
       value: WeaponPickup
@@ -26430,6 +26438,10 @@ PrefabInstance:
       propertyPath: Item
       value: 
       objectReference: {fileID: 11400000, guid: d43d7c4f032c34af2907ba70a41976c3, type: 2}
+    - target: {fileID: 1625781803088781141, guid: bcf36efebb1722348b900b3210ec3517, type: 3}
+      propertyPath: <ObjectId>k__BackingField
+      value: WeaponPickup (1)-8880410
+      objectReference: {fileID: 0}
     - target: {fileID: 2601442356323300049, guid: bcf36efebb1722348b900b3210ec3517, type: 3}
       propertyPath: m_Name
       value: WeaponPickup (1)
@@ -31551,7 +31563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6449601583080737103, guid: 03c768b93753f6f0d857daa1be8f0c8f, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: KeyPickup (1)-18966.76
+      value: KeyPickup (1)-18966,76
       objectReference: {fileID: 0}
     - target: {fileID: 7892930061713947259, guid: 03c768b93753f6f0d857daa1be8f0c8f, type: 3}
       propertyPath: m_DrawMode
@@ -32009,6 +32021,71 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1602300792
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5898170079424621629, guid: eb90483a42857524983d455135796ffe, type: 3}
+      propertyPath: Glow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905417198770615702, guid: eb90483a42857524983d455135796ffe, type: 3}
+      propertyPath: m_Name
+      value: ChestInteract
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043796765759097173, guid: eb90483a42857524983d455135796ffe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1374.7146
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043796765759097173, guid: eb90483a42857524983d455135796ffe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1479.4265
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043796765759097173, guid: eb90483a42857524983d455135796ffe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.1699128
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043796765759097173, guid: eb90483a42857524983d455135796ffe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043796765759097173, guid: eb90483a42857524983d455135796ffe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043796765759097173, guid: eb90483a42857524983d455135796ffe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043796765759097173, guid: eb90483a42857524983d455135796ffe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043796765759097173, guid: eb90483a42857524983d455135796ffe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043796765759097173, guid: eb90483a42857524983d455135796ffe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043796765759097173, guid: eb90483a42857524983d455135796ffe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9054747733478265267, guid: eb90483a42857524983d455135796ffe, type: 3}
+      propertyPath: <ObjectId>k__BackingField
+      value: ChestInteract-4078548
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eb90483a42857524983d455135796ffe, type: 3}
 --- !u!1 &1630675759
 GameObject:
   m_ObjectHideFlags: 0
@@ -38137,7 +38214,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2607886220727919282, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: Player-7518.85
+      value: Player-4594180
       objectReference: {fileID: 0}
     - target: {fileID: 3242085015397341469, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
       propertyPath: m_MaskInteraction
@@ -38226,3 +38303,4 @@ SceneRoots:
   - {fileID: 39768714}
   - {fileID: 303894535}
   - {fileID: 365693830}
+  - {fileID: 1602300792}

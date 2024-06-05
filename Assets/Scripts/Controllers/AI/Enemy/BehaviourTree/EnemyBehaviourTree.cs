@@ -10,8 +10,8 @@ namespace BehaviorTree {
 		[HideInInspector] public Animator EnemyAnimator;
 		[HideInInspector] public float AttackCounter = -0.18f;
 		[HideInInspector] public float Speed = 2f;
-		[HideInInspector] public float FOVRange = 70f;
-		[HideInInspector] public float AttackRange = 20f;
+		[HideInInspector] public float FOVRange = 3f;
+		[HideInInspector] public float AttackRange = 0.5f;
 		[HideInInspector] public GameObject Target = null;
 		[HideInInspector] public Vector3 SearchLocation = Vector3.zero;
 		public WeaponItem EnemyWeapon;

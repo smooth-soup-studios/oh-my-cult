@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f0d07869b7ad747b46fdf13457c82e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: Player-28.3024
+  <ObjectId>k__BackingField: Player-28,3024
   _isInvulnerable: 0
   _maxHealth: 100
 --- !u!95 &8530993155805609580
@@ -258,7 +258,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.082481086}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.05}
@@ -269,7 +269,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.14946, y: 2.6086264}
+  m_Size: {x: 0.855, y: 0.29649317}
   m_EdgeRadius: 0
 --- !u!70 &661175975395288714
 CapsuleCollider2D:
@@ -303,8 +303,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 7}
-  m_Size: {x: 10.6875, y: 16.441515}
+  m_Offset: {x: 0, y: 0.59189504}
+  m_Size: {x: 0.855, y: 1.3153211}
   m_Direction: 0
 --- !u!114 &6290169931406716255
 MonoBehaviour:

@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: WeaponPickup-0
-  InteractionRange: 12
+  InteractionRange: 3.7
   AutoTrigger: 0
   SingleUse: 0
   PickupStack:

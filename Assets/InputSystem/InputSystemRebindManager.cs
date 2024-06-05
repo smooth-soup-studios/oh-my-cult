@@ -5,8 +5,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
-public class UserInput : MonoBehaviour {
-	public static UserInput Instance { get; private set; }
+public class InputSystemRebindManager : MonoBehaviour {
+	public static InputSystemRebindManager Instance { get; private set; }
 
 	public Vector2 MoveInput { get; private set; }
 	public bool AttackInput { get; private set; }

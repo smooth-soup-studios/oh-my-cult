@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 3290768021699310593}
   m_Layer: 7
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -319,7 +319,6 @@ MonoBehaviour:
   AttackCounter: -0.04
   Speed: 2
   FOVRange: 70
-  AttackRange: 20
   Target: {fileID: 0}
   SearchLocation: {x: 0, y: 0, z: 0}
   EnemyWeapon: {fileID: 7613533550855613070, guid: b52a80a05d680eb41b21c4cf63e7c8e4, type: 3}
@@ -337,7 +336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f0d07869b7ad747b46fdf13457c82e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: Enemy-0.1013
+  <ObjectId>k__BackingField: Enemy-0,1013
   _isInvulnerable: 0
   _maxHealth: 100
 --- !u!195 &7641483773983506728

@@ -14,9 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/3-StoryTutorialPage.unity
     guid: 51aee8ad44bf27b4d8b6f8521b635736
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/4-Overworld.unity
     guid: fb2619489abc9e64ca3142247c75ec8f
+  - enabled: 1
+    path: Assets/Scenes/4-NewOverworld.unity
+    guid: e4ab7c51ebda93a4c811db5b3fccf150
   - enabled: 1
     path: Assets/Scenes/5-OutroMenu.unity
     guid: 24ba1b75f3014964ba5b591e90ec3d06

@@ -50,9 +50,12 @@ public class DoorController : MonoBehaviour {
 			StartCoroutine(_loadDoor());
 
 			IEnumerator _loadDoor() {
-				SceneWipeManager.Instance.WipeIn();
-				yield return new WaitForSeconds(SceneWipeManager.WipeTime);
-				SceneWipeManager.Instance.ShouldWipeOffWhenStart = true;
+				if (SceneWipeManager.Instance) {
+					SceneWipeManager.Instance.WipeIn();
+					yield return new WaitForSeconds(SceneWipeManager.WipeTime);
+					SceneWipeManager.Instance.ShouldWipeOffWhenStart = true;
+				}
+
 
 				_isTransporting = false;
 

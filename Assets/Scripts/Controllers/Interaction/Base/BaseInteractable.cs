@@ -39,7 +39,11 @@ public abstract class BaseInteractable : MonoBehaviour, ISaveable {
 
 	public abstract void OnSelect();
 	public abstract void OnDeselect();
-
+	public virtual void OnSelectWhileDisabled() {
+		if (TryGetComponent<SpriteRenderer>(out SpriteRenderer renderMeister)) {
+			renderMeister.color = Color.red;
+		}
+	}
 
 	protected virtual void OnDrawGizmos() {
 		Gizmos.color = Color.red;

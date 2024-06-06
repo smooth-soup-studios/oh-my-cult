@@ -17,6 +17,7 @@ public enum EventType {
 	HIT,
 	INV_ADD,
 	INV_REMOVE,
+	INTERACT_TOGGLE,
 
 	// Audio Events
 	AUDIO_PLAY,

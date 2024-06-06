@@ -3,11 +3,16 @@ using System.Linq;
 using UnityEngine;
 
 public class PlayerInteractionChecker : MonoBehaviour {
+	private const string _logName = "PlayerInteractionChecker";
 	private BaseInteractable _currentInteractable;
 	private bool _isInteractionEnabled = true;
 
 	private void Awake() {
-		EventBus.Instance.Subscribe<bool>(EventType.INTERACT_TOGGLE, e => _isInteractionEnabled = e);
+		EventBus.Instance.Subscribe<bool>(EventType.INTERACT_TOGGLE, e => {
+			string status = e ? "On" : "Off";
+			Logger.LogWarning(_logName, $"Interaction toggled to {status}");
+			_isInteractionEnabled = e;
+		});
 	}
 
 	private void Update() {

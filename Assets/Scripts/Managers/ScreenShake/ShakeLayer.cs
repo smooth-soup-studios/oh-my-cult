@@ -88,6 +88,30 @@ public class ShakeLayer {
 	/// </summary>
 	/// <param name="duration">The duration of the ramp in seconds</param>
 	public void StopShakeRamped(float duration) => SetShakeRamped(0, 0, duration);
+
+	/// <summary>
+	/// Sets the shake amplitude and frequency, then stops the shake over a duration of 500 milliseconds.
+	/// <para/>
+	/// Handy for impacted shakes (high --> low).
+	/// </summary>
+	/// <param name="amp">The target amplitude of the shake in units</param>
+	/// <param name="freq">The target frequency of the shake in Hz</param>
+	public void SetShakeThenStop(float amp, float freq) {
+		SetShakeRamped(amp, freq);
+		StopShakeRamped();
+	}
+	/// <summary>
+	/// Sets the shake amplitude and frequency, then stops the shake over a duration of [duration] seconds.
+	/// <para/>
+	/// Handy for impacted shakes (high --> low).
+	/// </summary>
+	/// <param name="amp">The target amplitude of the shake in units</param>
+	/// <param name="freq">The target frequency of the shake in Hz</param>
+	/// <param name="duration">The duration of the ramp in seconds</param>
+	public void SetShakeThenStop(float amp, float freq, float duration) {
+		SetShakeRamped(amp, freq, duration);
+		StopShakeRamped(duration);
+	}
 }
 
 public class AmbientScreenShakeLayer : ShakeLayer {

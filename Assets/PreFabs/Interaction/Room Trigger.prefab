@@ -90,5 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b6427bd38f8804488c76fe7883daef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: Room Trigger-0
   _borders: []
-  _amountOfEnemies: 0
+  _enemies: []
+  _isCleared: 0

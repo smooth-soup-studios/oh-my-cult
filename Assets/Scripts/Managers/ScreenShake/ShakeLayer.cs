@@ -115,7 +115,7 @@ public class ShakeLayer {
 }
 
 public class AmbientScreenShakeLayer : ShakeLayer {
-	public void AmbientShake() => SetShakeRamped(ScreenShakeManager.AmbientShakeAmplitude, ScreenShakeManager.AmbientShakeFrequency, 0);
+	public void AmbientShake() => SetShake(ScreenShakeManager.AmbientShakeAmplitude, ScreenShakeManager.AmbientShakeFrequency);
 	public void AmbientShakeRamped() => SetShakeRamped(ScreenShakeManager.AmbientShakeAmplitude, ScreenShakeManager.AmbientShakeFrequency);
 	public void AmbientShakeRamped(float duration) => SetShakeRamped(ScreenShakeManager.AmbientShakeAmplitude, ScreenShakeManager.AmbientShakeFrequency, duration);
 }

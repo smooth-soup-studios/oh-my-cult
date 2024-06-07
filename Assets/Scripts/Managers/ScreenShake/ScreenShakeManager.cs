@@ -13,7 +13,7 @@ public class ScreenShakeManager : MonoBehaviour {
 
 	public static float DefaultDuration = .5f;
 	public static Func<float, float> DefaultEasingFunction = Easings.Linear;
-	public static float AmbientShakeAmplitude = 0.5f;
+	public static float AmbientShakeAmplitude = 0.1f;
 	public static float AmbientShakeFrequency = 0.1f;
 
 	void Awake() {

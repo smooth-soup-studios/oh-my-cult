@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class ScreenShakeManager : MonoBehaviour {
 	private const string _logName = "ScreenShakeManager";
+	[Header("Settings")]
+	[SerializeField] private bool _useAmbientShake = true;
 	public static ScreenShakeManager Instance { get; private set; }
 	Cinemachine.CinemachineVirtualCamera _virtualCamera;
 
@@ -30,7 +32,9 @@ public class ScreenShakeManager : MonoBehaviour {
 
 		// In Awake(), because Unity doesn't allow initializing with Time.time (from ScreenShakeLayer().*Tween().TStart) in the constructor/declaration
 		AmbientLayer = new AmbientScreenShakeLayer();
-		AmbientLayer.AmbientShake();
+		if (_useAmbientShake) {
+			AmbientLayer.AmbientShake();
+		}
 	}
 
 	void Update() {

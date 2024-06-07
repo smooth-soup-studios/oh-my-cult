@@ -18,7 +18,7 @@ public class ScreenShakeManager : MonoBehaviour {
 
 	void Awake() {
 		if (!TryGetComponent(out _virtualCamera)) {
-			Logger.LogError(_logName, _logName);
+			Logger.LogError(_logName, $"No virtual camera found on {name}!");
 		}
 
 		if (Instance == null) {
@@ -27,7 +27,6 @@ public class ScreenShakeManager : MonoBehaviour {
 		else {
 			Destroy(gameObject);
 		}
-		DontDestroyOnLoad(gameObject);
 
 		// In Awake(), because Unity doesn't allow initializing with Time.time (from ScreenShakeLayer().*Tween().TStart) in the constructor/declaration
 		AmbientLayer = new AmbientScreenShakeLayer();

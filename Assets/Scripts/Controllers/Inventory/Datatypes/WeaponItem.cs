@@ -31,8 +31,7 @@ public class WeaponItem : InteractableItem {
 	protected void DoPrimaryDamage(HealthController enemy) {
 		if (ScreenShakeManager.Instance) {
 			ShakeLayer DamageShakeLayer = ScreenShakeManager.Instance.GetOrAddLayer("PrimaryDamage", true);
-			DamageShakeLayer.SetShake(5, 2);
-			DamageShakeLayer.StopShakeRamped();
+			DamageShakeLayer.SetShakeThenStop(5, 2);
 		}
 		enemy.TakeDamage(WeaponStats.WeaponData.Damage);
 	}
@@ -58,8 +57,7 @@ public class WeaponItem : InteractableItem {
 	protected void DoSecondaryDamage(HealthController enemy) {
 		if (ScreenShakeManager.Instance) {
 			ShakeLayer DamageShakeLayer = ScreenShakeManager.Instance.GetOrAddLayer("SecondaryDamage", true);
-			DamageShakeLayer.SetShake(5, 2);
-			DamageShakeLayer.StopShakeRamped();
+			DamageShakeLayer.SetShakeThenStop(5, 2);
 		}
 		enemy.TakeDamage(WeaponStats.WeaponData.Damage);
 	}

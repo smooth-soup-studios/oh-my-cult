@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorPositionTeleportManager : MonoBehaviour {
 	private static string _logName = "DoorPositionTeleportManager";
@@ -37,7 +38,7 @@ public class DoorPositionTeleportManager : MonoBehaviour {
 		Cinemachine.CinemachineVirtualCamera vcam = FindObjectOfType<Cinemachine.CinemachineVirtualCamera>();
 		Camera mainCam = FindObjectOfType<Camera>();
 
-		Transform target = foundCamPoint ? foundCamPoint.transform : player.transform;
+		Transform target = foundCamPoint ? foundCamPoint.TrackingPoint : player.transform;
 
 		if (vcam) {
 			vcam.Follow = target;

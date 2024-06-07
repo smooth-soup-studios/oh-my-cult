@@ -316,9 +316,9 @@ MonoBehaviour:
   Movement: {x: 0, y: 0}
   Agent: {fileID: 0}
   EnemyAnimator: {fileID: 0}
-  AttackCounter: -0.04
+  AttackCounter: -0.18
   Speed: 2
-  FOVRange: 70
+  FOVRange: 3
   Target: {fileID: 0}
   SearchLocation: {x: 0, y: 0, z: 0}
   EnemyWeapon: {fileID: 7613533550855613070, guid: b52a80a05d680eb41b21c4cf63e7c8e4, type: 3}
@@ -350,7 +350,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.7
   m_Speed: 3.5
-  m_Acceleration: 8
+  m_Acceleration: 30
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0

@@ -2751,7 +2751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313275134783585123, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: DoorInteractionPoint-19.22714
+      value: DoorInteractionPoint-548.7288
       objectReference: {fileID: 0}
     - target: {fileID: 6036849210683475856, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: m_Name
@@ -3632,7 +3632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2607886220727919282, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: Player-13.3705
+      value: Player-7.193
       objectReference: {fileID: 0}
     - target: {fileID: 3242085015397341469, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
       propertyPath: m_Enabled
@@ -3644,11 +3644,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5190605175808683211, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.48
+      value: -1.49
       objectReference: {fileID: 0}
     - target: {fileID: 5190605175808683211, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.67
+      value: -2.23
       objectReference: {fileID: 0}
     - target: {fileID: 5190605175808683211, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3692,6 +3692,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7474330799362213706, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7474330799362213706, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
+      propertyPath: LatestDoor
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8440669220791414699, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}

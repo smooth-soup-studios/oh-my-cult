@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
@@ -29,7 +27,6 @@ public class DroppingItemController : MonoBehaviour {
 		_spriteRenderer.sprite = ItemToDrop.InvData.ItemIcon;
 	}
 
-	// Update is called once per frame
 	void Update() {
 		float t = (Time.time - _timeStart) / Lifetime;
 		float h = Mathf.Sin(t * Mathf.PI) * Height;

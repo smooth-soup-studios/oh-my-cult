@@ -21,11 +21,10 @@ public class BarrelInteractable : BaseInteractable {
 		EventBus.Instance.Subscribe<(GameObject target, GameObject hitter)>(EventType.HIT, e => { if (e.target == gameObject) OnAttack(e.hitter); });
 	}
 
-	public override void OnSelect() {
-	}
+	public override void Interact(GameObject interactor) { }
+	public override void OnSelect() { }
+	public override void OnDeselect() { }
 
-	public override void OnDeselect() {
-	}
 
 	private void OnAttack(GameObject interactor) {
 		base.Interact(interactor);

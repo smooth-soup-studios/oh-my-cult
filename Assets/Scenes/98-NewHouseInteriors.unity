@@ -3069,6 +3069,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AssignedDoor: {fileID: 389500626}
+  TrackTarget: 0
+  TrackingPoint: {fileID: 0}
+  TrackingTarget: {fileID: 0}
+  BoundingBox:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!4 &652499601 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6094362554967580744, guid: c3668df19f779f74bad379e41c8a6e0d, type: 3}
@@ -4369,6 +4375,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AssignedDoor: {fileID: 286790094}
+  TrackTarget: 0
+  TrackingPoint: {fileID: 0}
+  TrackingTarget: {fileID: 0}
+  BoundingBox:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!4 &1602522191 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5069429485718608031, guid: 8ba69334512307445a4eff578d789c09, type: 3}

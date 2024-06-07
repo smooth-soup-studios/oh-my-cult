@@ -16,7 +16,7 @@ public class WeaponItem : InteractableItem {
 				if (IsTargetUnObstructed(source, obj)) {
 					EventBus.Instance.TriggerEvent(EventType.HIT, (obj, source));
 					if (obj.TryGetComponent<HealthController>(out HealthController enemy)) {
-						enemy.TakeDamage(WeaponStats.WeaponData.Damage);
+						DoPrimaryDamage(enemy);
 					}
 					if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
 						rb.AddForce(rb.mass * WeaponStats.WeaponData.Knockback * (obj.transform.position - source.transform.position).normalized, ForceMode2D.Impulse);
@@ -28,13 +28,21 @@ public class WeaponItem : InteractableItem {
 		}
 	}
 
+	protected void DoPrimaryDamage(HealthController enemy) {
+		if (ScreenShakeManager.Instance) {
+			ShakeLayer DamageShakeLayer = ScreenShakeManager.Instance.GetOrAddLayer("PrimaryDamage", true);
+			DamageShakeLayer.SetShakeThenStop(2, 2);
+		}
+		enemy.TakeDamage(WeaponStats.WeaponData.Damage);
+	}
+
 	public override void SecondaryAction(GameObject source) {
 		try {
 			source.GetComponentInChildren<WeaponHitbox>().GetUniqueObjectsInCollider().ForEach(obj => {
 				if (IsTargetUnObstructed(source, obj)) {
 					EventBus.Instance.TriggerEvent(EventType.HIT, (obj, source));
 					if (obj.TryGetComponent<HealthController>(out HealthController enemy)) {
-						enemy.TakeDamage(WeaponStats.WeaponData.Damage);
+						DoSecondaryDamage(enemy);
 					}
 					if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
 						rb.AddForce(rb.mass * WeaponStats.WeaponData.Knockback * (obj.transform.position - source.transform.position).normalized, ForceMode2D.Impulse);
@@ -44,6 +52,14 @@ public class WeaponItem : InteractableItem {
 		}
 		catch (System.Exception) {
 		}
+	}
+
+	protected void DoSecondaryDamage(HealthController enemy) {
+		if (ScreenShakeManager.Instance) {
+			ShakeLayer DamageShakeLayer = ScreenShakeManager.Instance.GetOrAddLayer("SecondaryDamage", true);
+			DamageShakeLayer.SetShakeThenStop(2, 2);
+		}
+		enemy.TakeDamage(WeaponStats.WeaponData.Damage);
 	}
 
 	protected bool IsTargetUnObstructed(GameObject source, GameObject target) {

@@ -6,7 +6,7 @@ public class DroppingItemController : MonoBehaviour {
 	public ItemStack ItemToDrop;
 
 	public float Lifetime = .7f;
-	public float Height = 50f;
+	public float Height = 0.25f;
 
 	private Vector3 _startPosition;
 	private float _timeStart;

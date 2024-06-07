@@ -3,9 +3,9 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class ShatterController : MonoBehaviour {
 	public GameObject ShatterPiecePrefab;
-	public float ShatterForce = 10.0f;
-	public float ShatterLifetime = 1.0f;
-	public Vector2Int ShatterFragments;
+	public float ShatterForce = 2.0f;
+	public float ShatterLifetime = 3.0f;
+	public Vector2Int ShatterFragments = new(8, 8);
 	public float FragmentOffsetRandom = 2f;
 
 	private SpriteRenderer _spriteRenderer;

@@ -37,15 +37,18 @@ public class ChestInteractable : BaseInteractable {
 	}
 
 	public override void Interact(GameObject interactor) {
-		OpenChest();
-		_spriteRenderer.color = Color.white;
-		_glowController.StopGlow();
-		base.Interact(interactor);
+		if (!_isOpen){
+			OpenChest();
+			_spriteRenderer.color = Color.white;
+			_glowController.StopGlow();
+			base.Interact(interactor);
+		}
 	}
 
 	private void OpenChest(){
 		_spriteRenderer.sprite = _openChestSprite;
 		_isOpen = true;
+		GetComponent<AudioSource>().Play();
 
 		if (DroppingItemPrefab != null && PickupPointInteractable != null && ItemToDrop != null) {
 			GameObject dip = Instantiate(DroppingItemPrefab, transform.position, Quaternion.identity);

@@ -185,4 +185,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tooltipPrefab: {fileID: 7369165516556784984, guid: 71f937e3ad8c0634ba19b8e0449f9667, type: 3}
   TooltipText: Pick up
+  Key: E
   Type: 0

@@ -82,6 +82,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tooltipPrefab: {fileID: 7369165516556784984, guid: 71f937e3ad8c0634ba19b8e0449f9667, type: 3}
   TooltipText: Open
+  Key: E
   Type: 0
 --- !u!1 &7111290995525018696
 GameObject:

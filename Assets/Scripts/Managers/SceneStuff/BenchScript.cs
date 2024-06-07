@@ -17,6 +17,4 @@ public class BenchScript : MonoBehaviour
 		_collider2D.enabled = false;
 		_animator.SetBool("IsBroken", true);
 	}
-
-
 }

@@ -9,7 +9,8 @@ public class TooltipController : MonoBehaviour {
 	private GameObject _tooltipPrefab;
 
 	public string TooltipText = "Pick up";
-	public string Key = "E";
+	private string _key = "E";
+	public TooltipType Type;
 
 	private UIDocument _doc;
 	private VisualElement _root;
@@ -31,7 +32,7 @@ public class TooltipController : MonoBehaviour {
 
 	private void Update() {
 		_label.text = TooltipText;
-		_keyLabel.text = Key;
+		_keyLabel.text = ConvertTypeToKey(Type);
 	}
 
 	public void ShowTooltip() {
@@ -44,7 +45,8 @@ public class TooltipController : MonoBehaviour {
 	}
 	public void ShowTooltip(string text, string key) {
 		TooltipText = text;
-		Key = key;
+		_key = key;
+		Type = TooltipType.Custom;
 		_container.RemoveFromClassList("hidden");
 	}
 	public void HideTooltip() {
@@ -60,6 +62,18 @@ public class TooltipController : MonoBehaviour {
 		}
 	}
 
+
+	private string ConvertTypeToKey(TooltipType type) {
+		InputSystemRebindManager _userInput = FindObjectOfType<InputSystemRebindManager>();
+		if (_userInput == null) return _key;
+		return type switch {
+			TooltipType.Interact => _userInput.GetBindingDisplayString("Interact", -1),
+			TooltipType.Attack => _userInput.GetBindingDisplayString("Primary", -1),
+			TooltipType.Custom => _key,
+			_ => "E",
+		};
+	}
+
 #if UNITY_EDITOR
 	private void OnValidate() {
 		if (_tooltipPrefab == null) {
@@ -68,4 +82,10 @@ public class TooltipController : MonoBehaviour {
 		}
 	}
 #endif
+}
+
+public enum TooltipType {
+	Interact,
+	Attack,
+	Custom
 }

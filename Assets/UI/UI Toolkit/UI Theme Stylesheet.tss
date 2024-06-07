@@ -1,4 +1,4 @@
 @import url("unity-theme://default");
 
-@import url("UI/UXML/USS/Menu.uss");
+@import url("../UXML/USS/Menu.uss");
 VisualElement {}

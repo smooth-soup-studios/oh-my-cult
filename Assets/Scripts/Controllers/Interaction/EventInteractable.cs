@@ -33,4 +33,10 @@ public class EventInteractable : BaseInteractable {
 			_tooltipController.ShowTooltip();
 		}
 	}
+
+	public override void OnSelectWhileDisabled() {
+		if (_spriteRenderer) {
+			_spriteRenderer.color = Color.red;
+		}
+	}
 }

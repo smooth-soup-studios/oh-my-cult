@@ -9,7 +9,7 @@ public class TooltipController : MonoBehaviour {
 	private GameObject _tooltipPrefab;
 
 	public string TooltipText = "Pick up";
-	private string _key = "E";
+	public string Key = "E";
 	public TooltipType Type;
 
 	private UIDocument _doc;
@@ -45,7 +45,7 @@ public class TooltipController : MonoBehaviour {
 	}
 	public void ShowTooltip(string text, string key) {
 		TooltipText = text;
-		_key = key;
+		Key = key;
 		Type = TooltipType.Custom;
 		_container.RemoveFromClassList("hidden");
 	}
@@ -65,11 +65,11 @@ public class TooltipController : MonoBehaviour {
 
 	private string ConvertTypeToKey(TooltipType type) {
 		InputSystemRebindManager _userInput = FindObjectOfType<InputSystemRebindManager>();
-		if (_userInput == null) return _key;
+		if (_userInput == null) return Key;
 		return type switch {
 			TooltipType.Interact => _userInput.GetBindingDisplayString("Interact", -1),
 			TooltipType.Attack => _userInput.GetBindingDisplayString("Primary", -1),
-			TooltipType.Custom => _key,
+			TooltipType.Custom => Key,
 			_ => "E",
 		};
 	}

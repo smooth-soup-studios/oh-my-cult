@@ -4,17 +4,15 @@ using UnityEngine;
 public class CheckEnemyInRange : Node {
 
 	private static int _enemyLayerMask;
-	private Transform _transform;
 
-	public CheckEnemyInRange(Transform transform) {
-		_transform = transform;
+	public CheckEnemyInRange() {
 		_enemyLayerMask = 1 << LayerMask.NameToLayer("Player");
 	}
 
-	public override NodeState Evaluate(EnemyBehaviourTree tree) {
+	public override NodeState Evaluate(BaseBehaviourTree tree) {
 		GameObject target = tree.Target;
 		if (target == null) {
-			Collider2D[] colliders = Physics2D.OverlapCircleAll(_transform.position, tree.FOVRange, _enemyLayerMask);
+			Collider2D[] colliders = Physics2D.OverlapCircleAll(tree.transform.position, tree.Stats.DetectionRange, _enemyLayerMask);
 			if (colliders.Length > 0) {
 				tree.Target = colliders[0].gameObject;
 				State = NodeState.SUCCESS;

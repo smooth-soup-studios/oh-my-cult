@@ -29,7 +29,6 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 				new CheckActorType(ActorType.NPC),
 				new CheckEnemyInRange(),
 				new TaskChangeToEnemy()
-
 			}),
 
 			new Sequence(new List<Node>

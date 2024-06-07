@@ -112,6 +112,12 @@ public class ShakeLayer {
 		SetShakeRamped(amp, freq, duration);
 		StopShakeRamped(duration);
 	}
+
+	public void SetImpactShakeThenStop(float amp, float freq) {
+		SetShake(amp, freq);
+		StopShakeRamped();
+	}
+
 }
 
 public class AmbientScreenShakeLayer : ShakeLayer {

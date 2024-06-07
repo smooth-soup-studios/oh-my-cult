@@ -28,10 +28,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5038953582178386077}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1070.6, y: -1123.7, z: 16.416986}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
-  m_ConstrainProportionsScale: 0
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -47,13 +47,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 121b75b15bbf129478337673ebb75639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: 
-  InteractionRange: 15
+  <ObjectId>k__BackingField: BarrelInteractable-0
+  InteractionRange: 2
   AutoTrigger: 0
   SingleUse: 1
   DroppingItemPrefab: {fileID: 8123352219933033122, guid: 2d2529d4f11a6094bba93233381ffd15, type: 3}
   PickupPointInteractable: {fileID: 0}
-  ItemToDrop: {fileID: 0}
+  ItemToDrop:
+    Item: {fileID: 0}
+    Amount: 0
 --- !u!58 &8257976234912735177
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -86,9 +88,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.5}
+  m_Offset: {x: 0, y: -0.1}
   serializedVersion: 2
-  m_Radius: 6
+  m_Radius: 0.8
 --- !u!212 &611465640628302
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -154,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShatterPiecePrefab: {fileID: 2709359368759553787, guid: 37b67c4f027b7f94d97ebcf16f44f863, type: 3}
-  ShatterForce: 25
+  ShatterForce: 2
   ShatterLifetime: 3
   ShatterFragments: {x: 8, y: 8}
   FragmentOffsetRandom: 2

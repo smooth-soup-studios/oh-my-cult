@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class TaskRandomWalk : Node {
 	// Config
-	private float _minDistance = 30.0f;
-	private float _maxDistance = 70.0f;
+	private float _minDistance = 3.0f;
+	private float _maxDistance = 7.0f;
 	private float _maxTravelTime = 7.0f;
 
 	// State
@@ -22,9 +22,8 @@ public class TaskRandomWalk : Node {
 		tree.Movement = (_randomTarget - tree.Agent.transform.position).normalized;
 		tree.EnemyAnimator.SetFloat("X", tree.Movement.x);
 		tree.EnemyAnimator.SetFloat("Y", tree.Movement.y);
-
-		tree.Agent.speed = 20f;
-		tree.Agent.acceleration = 80;
+		// tree.Agent.speed = 20f;
+		// tree.Agent.acceleration = 80;
 
 		// Choose a new target if:
 		// - The agent has reached the target

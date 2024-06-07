@@ -24,4 +24,10 @@ public class EventInteractable : BaseInteractable {
 			_spriteRenderer.color = Color.green;
 		}
 	}
+
+	public override void OnSelectWhileDisabled() {
+		if (_spriteRenderer) {
+			_spriteRenderer.color = Color.red;
+		}
+	}
 }

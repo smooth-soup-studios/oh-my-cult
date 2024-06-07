@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 3053537212863230237}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.3, y: 3.2, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -96,7 +96,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -145,8 +145,8 @@ MonoBehaviour:
   _useEightPointHitbox: 0
   PlayerAnimator:
     _animationDebugLogging: 0
-  SpeedModifier: 5
-  BaseSpeed: 12.8
+  SpeedModifier: 1
+  BaseSpeed: 5
   WeaponHitbox: {fileID: 3173601029828910364}
   HitContainer: {fileID: 3053537212863230237}
   LatestDoor: -1
@@ -258,18 +258,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.082481086}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.05}
-    oldSize: {x: 10.6875, y: 16.441515}
+    oldSize: {x: 0.855, y: 1.3153211}
     newSize: {x: 5, y: 8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.14946, y: 2.6086264}
+  m_Size: {x: 0.855, y: 0.29649317}
   m_EdgeRadius: 0
 --- !u!70 &661175975395288714
 CapsuleCollider2D:
@@ -303,8 +303,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 7}
-  m_Size: {x: 10.6875, y: 16.441515}
+  m_Offset: {x: 0, y: 0.59189504}
+  m_Size: {x: 0.855, y: 1.3153211}
   m_Direction: 0
 --- !u!114 &6290169931406716255
 MonoBehaviour:
@@ -373,8 +373,8 @@ Transform:
   m_GameObject: {fileID: 7355898901544246293}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 10.7, y: -0.3, z: 0}
-  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_LocalPosition: {x: 0.75, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 714397128736290338}

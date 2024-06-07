@@ -3,10 +3,10 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class DroppingItemController : MonoBehaviour {
 	public GameObject PickupPointInteractable;
-	public InventoryItem ItemToDrop;
+	public ItemStack ItemToDrop;
 
 	public float Lifetime = .7f;
-	public float Height = 50f;
+	public float Height = 0.25f;
 
 	private Vector3 _startPosition;
 	private float _timeStart;
@@ -24,7 +24,7 @@ public class DroppingItemController : MonoBehaviour {
 	void Start() {
 		_timeStart = Time.time;
 		_startPosition = transform.position;
-		_spriteRenderer.sprite = ItemToDrop.InvData.ItemIcon;
+		_spriteRenderer.sprite = ItemToDrop.Item.InvData.ItemIcon;
 	}
 
 	void Update() {
@@ -34,7 +34,7 @@ public class DroppingItemController : MonoBehaviour {
 
 		if (Time.time - _timeStart > Lifetime) {
 			GameObject g = Instantiate(PickupPointInteractable, transform.position, Quaternion.identity);
-			g.GetComponent<BaseItemPickupInteractable>().Item = ItemToDrop;
+			g.GetComponent<BaseItemPickupInteractable>().PickupStack = ItemToDrop;
 
 			Destroy(gameObject);
 		}

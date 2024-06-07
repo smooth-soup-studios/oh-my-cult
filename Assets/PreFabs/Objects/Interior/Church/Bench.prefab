@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2809242367755679659}
   - component: {fileID: 1630923292391175179}
   - component: {fileID: 3396666658668308660}
+  - component: {fileID: 2810871821608851975}
+  - component: {fileID: 7798959018785713866}
   m_Layer: 0
   m_Name: Bench
   m_TagString: Untagged
@@ -130,3 +132,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.7367442, y: 1.2272168}
   m_EdgeRadius: 0
+--- !u!114 &2810871821608851975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7798551445821312694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297bb25be53bdb940918be42b9c7b17d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &7798959018785713866
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7798551445821312694}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1c249f74382b2bd438b842a1cf4b54ca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

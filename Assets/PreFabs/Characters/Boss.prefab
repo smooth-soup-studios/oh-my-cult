@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f0d07869b7ad747b46fdf13457c82e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: Boss-50140,49
+  <ObjectId>k__BackingField: Boss-50140.49
   _isInvulnerable: 0
   _maxHealth: 100
 --- !u!114 &5148443580798022672

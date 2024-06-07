@@ -1,16 +1,11 @@
-using System.Linq;
 using BehaviorTree;
 using UnityEngine;
 
 public class CheckAgressionDisabled : Node {
 
-	public CheckAgressionDisabled(Transform transform) { }
+	public CheckAgressionDisabled() { }
 
-	public override NodeState Evaluate(EnemyBehaviourTree tree) {
-		EnemyBT enemyBT = tree as EnemyBT;
-		if (enemyBT) {
-			return enemyBT.DisableAgression ? NodeState.FAILURE : NodeState.SUCCESS;
-		}
-		return NodeState.SUCCESS;
+	public override NodeState Evaluate(BaseBehaviourTree tree) {
+		return tree.DisableAgression ? NodeState.FAILURE : NodeState.SUCCESS;
 	}
 }

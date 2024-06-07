@@ -147,7 +147,7 @@ TextureImporter:
       spriteID: 2e7bdcf28f0baee4da7b8547d1a1cd23
       internalID: 703930454
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     - serializedVersion: 2
@@ -176,7 +176,7 @@ TextureImporter:
       spriteID: fe1b84e424169e94e894fea1da0ddc77
       internalID: 2043799594
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     outline: []
@@ -185,15 +185,15 @@ TextureImporter:
     spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
-    indices: 
+    indices:
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
       Chest_0: 703930454
       Chest_1: 2043799594
-  mipmapLimitGroupName: 
+  mipmapLimitGroupName:
   pSDRemoveMatte: 0
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+  userData:
+  assetBundleName:
+  assetBundleVariant:

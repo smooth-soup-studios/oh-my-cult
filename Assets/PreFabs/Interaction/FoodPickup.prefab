@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: FoodPickup-0
-  InteractionRange: 15
+  InteractionRange: 1.5
   AutoTrigger: 0
   SingleUse: 1
   PickupStack:

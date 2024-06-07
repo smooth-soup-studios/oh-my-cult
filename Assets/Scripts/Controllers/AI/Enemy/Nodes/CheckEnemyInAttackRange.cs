@@ -8,7 +8,7 @@ public class CheckEnemyInAttackRange : Node {
 		_transform = transform;
 	}
 
-	public override NodeState Evaluate(EnemyBehaviourTree tree) {
+	public override NodeState Evaluate(BaseBehaviourTree tree) {
 		GameObject target = tree.Target;
 		if (target == null) {
 			State = NodeState.FAILURE;

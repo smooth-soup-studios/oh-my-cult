@@ -7,7 +7,7 @@ public class CheckLastKnownLocation : Node {
 		_transform = transform;
 	}
 
-	public override NodeState Evaluate(EnemyBehaviourTree tree) {
+	public override NodeState Evaluate(BaseBehaviourTree tree) {
 		Vector3 search = tree.SearchLocation;
 		if (search == Vector3.zero) {
 			State = NodeState.FAILURE;

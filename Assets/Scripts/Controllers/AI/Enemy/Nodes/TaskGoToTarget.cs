@@ -10,7 +10,7 @@ public class TaskGoToTarget : Node {
 		_transform = transform;
 	}
 
-	public override NodeState Evaluate(EnemyBehaviourTree tree) {
+	public override NodeState Evaluate(BaseBehaviourTree tree) {
 		Vector3 target = tree.Target.transform.position;
 		tree.Movement = (tree.Target.transform.position - tree.Agent.transform.position).normalized;
 		tree.EnemyAnimator.SetFloat("X", tree.Movement.x);

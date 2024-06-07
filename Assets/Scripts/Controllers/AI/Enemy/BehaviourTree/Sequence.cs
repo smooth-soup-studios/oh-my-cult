@@ -4,7 +4,7 @@ namespace BehaviorTree {
 	public class Sequence : Node {
 		public Sequence() : base() { }
 		public Sequence(List<Node> children) : base(children) { }
-		public override NodeState Evaluate(EnemyBehaviourTree tree) {
+		public override NodeState Evaluate(BaseBehaviourTree tree) {
 			bool anyChildIsRunning = false;
 			foreach (Node node in Children) {
 				switch (node.Evaluate(tree)) {

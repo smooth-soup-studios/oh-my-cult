@@ -9,7 +9,7 @@ public class TaskAttack : Node {
 
 	public TaskAttack(Transform transform) { }
 
-	public override NodeState Evaluate(EnemyBehaviourTree tree) {
+	public override NodeState Evaluate(BaseBehaviourTree tree) {
 		_enemyBiteAttack = tree.gameObject.GetComponent<EnemyBiteAttack>();
 		tree.AttackCounter += Time.deltaTime;
 		if (tree.AttackCounter >= _attackTime) {

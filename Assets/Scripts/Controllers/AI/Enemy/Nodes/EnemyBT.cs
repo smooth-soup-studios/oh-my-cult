@@ -3,7 +3,7 @@ using BehaviorTree;
 using UnityEngine;
 
 
-public class EnemyBT : EnemyBehaviourTree {
+public class EnemyBT : BaseBehaviourTree {
 	public Transform[] Waypoints;
 	private Vector2 _oldMovement;
 
@@ -23,6 +23,15 @@ public class EnemyBT : EnemyBehaviourTree {
 	protected override Node SetupTree() {
 		Node root = new Selector(new List<Node>
 		{
+
+			new Sequence(new List<Node>
+			{
+				new CheckEnemyType(),
+				new CheckEnemyInRange(transform),
+				new TaskChangeToEnemy(transform)
+
+			}),
+
 			new Sequence(new List<Node>
 			{
 				new CheckEnemyInAttackRange(transform),

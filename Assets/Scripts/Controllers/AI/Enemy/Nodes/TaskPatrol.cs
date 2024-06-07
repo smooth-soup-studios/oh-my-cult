@@ -17,8 +17,9 @@ public class TaskPatrol : Node {
 
 	}
 
-	public override NodeState Evaluate(EnemyBehaviourTree tree) {
+	public override NodeState Evaluate(BaseBehaviourTree tree) {
 		// tree.EnemyAnimator.Play("EnemyWalk", MovementDirection);
+		tree.EnemyAnimator.SetBool("IsNPC", false);
 		tree.Movement = (_waypoints[_currentWaypointIndex].transform.position - tree.Agent.transform.position).normalized;
 		tree.EnemyAnimator.SetFloat("X", tree.Movement.x);
 		tree.EnemyAnimator.SetFloat("Y", tree.Movement.y);

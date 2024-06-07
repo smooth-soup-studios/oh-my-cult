@@ -4,7 +4,7 @@ using BehaviorTree;
 public class TaskGoToTarget : Node {
 	private Transform _transform;
 	private string _name = "target";
-	private float _radius = 1.25f;
+	private float _radius = 15f;
 
 	public TaskGoToTarget(Transform transform) {
 		_transform = transform;
@@ -20,8 +20,8 @@ public class TaskGoToTarget : Node {
 			Vector3 movePos = target;
 			movePos = Vector3.MoveTowards(movePos, _transform.position, _radius);
 			tree.Agent.SetDestination(movePos);
-			// tree.Agent.speed = 40;
-			// tree.Agent.acceleration = 100;
+			tree.Agent.speed = 40;
+			tree.Agent.acceleration = 100;
 		}
 		if (Vector2.Distance(_transform.position, target) > tree.FOVRange) {
 			tree.Target = null;

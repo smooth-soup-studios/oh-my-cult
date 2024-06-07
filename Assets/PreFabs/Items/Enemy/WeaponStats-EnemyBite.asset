@@ -15,5 +15,5 @@ MonoBehaviour:
   WeaponData:
     Damage: 10
     AttackSpeed: 3
-    Range: 10
-    Knockback: 5
+    Range: 5
+    Knockback: 100

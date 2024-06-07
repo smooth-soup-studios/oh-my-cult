@@ -56,6 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-	"dotnet.defaultSolution": "oh-my-cult.sln",
-	"dotnet.preferCSharpExtension": true
+    "dotnet.defaultSolution": "oh-my-cult.sln"
 }

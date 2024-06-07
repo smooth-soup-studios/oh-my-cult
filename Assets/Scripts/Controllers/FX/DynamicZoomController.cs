@@ -7,6 +7,8 @@ using UnityEngine;
 [RequireComponent(typeof(CircleCollider2D))]
 public class DynamicZoomController : MonoBehaviour {
 	public GameObject CombatCenterFollow;
+
+	public bool FrozenOnPlayer = false;
 	public float ZoomSpeed = 5;
 	public float MinZoom = 80;
 	public float MaxZoom = 95;
@@ -16,7 +18,6 @@ public class DynamicZoomController : MonoBehaviour {
 	private CircleCollider2D _collider;
 
 	void Awake() {
-		Debug.Log("DynamicZoomController Awak");
 		if (CombatCenterFollow == null) {
 			CombatCenterFollow = GameObject.Find("CombatCenterFollow");
 		}
@@ -26,25 +27,25 @@ public class DynamicZoomController : MonoBehaviour {
 
 	}
 
-	// Start is called before the first frame update
-	// IEnumerable Start() {
-	void Start() {
-		// yield return new WaitUntil(() => CinemachineCore.Instance.GetActiveBrain(0) != null);
-		Debug.Log("DynamicZoomController Start");
-	}
-
-	// Update is called once per frame
 	void Update() {
+		// Here because it would not find it on Awake nor on Start
 		_virtualCamera = CinemachineCore.Instance.GetActiveBrain(0).ActiveVirtualCamera as CinemachineVirtualCamera;
 
 		if (_virtualCamera == null) {
 			return;
 		}
 
-		CombatCenterFollow.transform.localPosition = CenterPoint();
-		float targetZoom = Mathf.Clamp(Mathf.Lerp(50, 95, MaxDist().magnitude / _collider.radius), MinZoom, MaxZoom);
-		_virtualCamera.m_Lens.OrthographicSize =
-		 Mathf.Lerp(_virtualCamera.m_Lens.OrthographicSize, targetZoom, Time.deltaTime * 5);
+		float targetZoom = MaxZoom;
+
+		if (FrozenOnPlayer) {
+			CombatCenterFollow.transform.localPosition = Vector2.zero;
+		}
+		else {
+			CombatCenterFollow.transform.localPosition = CenterPoint();
+			targetZoom = Mathf.Clamp(Mathf.Lerp(50, 95, MaxDist().magnitude / _collider.radius), MinZoom, MaxZoom);
+		}
+
+		_virtualCamera.m_Lens.OrthographicSize = Mathf.Lerp(_virtualCamera.m_Lens.OrthographicSize, targetZoom, Time.deltaTime * ZoomSpeed);
 	}
 
 	Vector2 MaxDist() {
@@ -74,15 +75,11 @@ public class DynamicZoomController : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.layer == LayerMask.NameToLayer("Enemy")) {
 			_enemies.Add(other.gameObject);
-			// Debug.Log("Enemy enter");
-			// _virtualCamera.m_Lens.OrthographicSize = 50;
 		}
 	}
 	void OnTriggerExit2D(Collider2D other) {
 		if (other.gameObject.layer == LayerMask.NameToLayer("Enemy")) {
 			_enemies.Remove(other.gameObject);
-			// Debug.Log("Enemy exit");
-			// _virtualCamera.m_Lens.OrthographicSize = 95;
 		}
 	}
 }

@@ -170,7 +170,7 @@ MonoBehaviour:
   _spriteRenderer: {fileID: 8326027967057232240}
   _openChestSprite: {fileID: 2043799594, guid: cbc71cb3dbcc10345966094414de7a7b, type: 3}
   DroppingItemPrefab: {fileID: 8123352219933033122, guid: 2d2529d4f11a6094bba93233381ffd15, type: 3}
-  PickupPointInteractable: {fileID: 0}
+  PickupPointInteractable: {fileID: 6063357390683749374, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
   ItemToDrop:
-    Item: {fileID: 0}
-    Amount: 0
+    Item: {fileID: 11400000, guid: e7eb8cf6a91e4914aad10412b2ac1c41, type: 2}
+    Amount: 1

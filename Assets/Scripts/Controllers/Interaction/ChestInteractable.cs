@@ -7,38 +7,50 @@ using UnityEngine.Events;
 [RequireComponent(typeof(ItemPickupGlowController))]
 public class ChestInteractable : BaseInteractable {
 	private ItemPickupGlowController _glowController;
-	[SerializeField] private UnityEvent<GameObject> _event = new();
-	[SerializeField] SpriteRenderer _spriteRenderer;
-	public ChestController ChestController;
+	[SerializeField] private SpriteRenderer _spriteRenderer;
+	[SerializeField] private Sprite _openChestSprite;
+	private bool _isOpen;
+	public GameObject DroppingItemPrefab;
+	public GameObject PickupPointInteractable;
+	public ItemStack ItemToDrop;
 
 	private new void Start() {
 		base.Start();
 		_glowController = GetComponent<ItemPickupGlowController>();
 	}
 
-
-	public override void OnDeselect() {
-		_glowController.StopGlow();
-		_spriteRenderer.color = Color.white;
-	}
-
 	public override void OnSelect() {
 
-		if (ChestController.SpriteRenderer.sprite == ChestController.ChestOpen) {
+		if (_isOpen) {
 			_spriteRenderer.color = Color.white;
 			_glowController.StopGlow();
-			return; 
+			return;
 		}
 		_glowController.StartGlow();
 		_spriteRenderer.color = Color.green;
 		Logger.Log("Chest", "Interact");
 	}
 
-	public override void Interact(GameObject interactor) {
-		_event.Invoke(interactor);
-		base.Interact(interactor);
-
+	public override void OnDeselect() {
+		_glowController.StopGlow();
+		_spriteRenderer.color = Color.white;
 	}
 
+	public override void Interact(GameObject interactor) {
+		OpenChest();
+		_spriteRenderer.color = Color.white;
+		_glowController.StopGlow();
+		base.Interact(interactor);
+	}
 
+	private void OpenChest(){
+		_spriteRenderer.sprite = _openChestSprite;
+		_isOpen = true;
+
+		if (DroppingItemPrefab != null && PickupPointInteractable != null && ItemToDrop != null) {
+			GameObject dip = Instantiate(DroppingItemPrefab, transform.position, Quaternion.identity);
+			dip.GetComponent<DroppingItemController>().PickupPointInteractable = PickupPointInteractable;
+			dip.GetComponent<DroppingItemController>().ItemToDrop = ItemToDrop;
+		}
+	}
 }

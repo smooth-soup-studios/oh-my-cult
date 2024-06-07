@@ -97,7 +97,7 @@ public class ShakeLayer {
 	/// <param name="amp">The target amplitude of the shake in units</param>
 	/// <param name="freq">The target frequency of the shake in Hz</param>
 	public void SetShakeThenStop(float amp, float freq) {
-		SetShakeRamped(amp, freq);
+		SetShake(amp, freq);
 		StopShakeRamped();
 	}
 	/// <summary>
@@ -109,15 +109,9 @@ public class ShakeLayer {
 	/// <param name="freq">The target frequency of the shake in Hz</param>
 	/// <param name="duration">The duration of the ramp in seconds</param>
 	public void SetShakeThenStop(float amp, float freq, float duration) {
-		SetShakeRamped(amp, freq, duration);
+		SetShake(amp, freq);
 		StopShakeRamped(duration);
 	}
-
-	public void SetImpactShakeThenStop(float amp, float freq) {
-		SetShake(amp, freq);
-		StopShakeRamped();
-	}
-
 }
 
 public class AmbientScreenShakeLayer : ShakeLayer {

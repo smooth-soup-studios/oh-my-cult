@@ -8,7 +8,7 @@ public class BarrelInteractable : BaseInteractable {
 
 	public GameObject DroppingItemPrefab;
 	public GameObject PickupPointInteractable;
-	public ItemStack ItemToDrop;
+	public InventoryItem ItemToDrop;
 
 	private ShatterController _shatterController;
 
@@ -42,8 +42,7 @@ public class BarrelInteractable : BaseInteractable {
 		}
 	}
 
-	private new void OnValidate() {
-		base.OnValidate();
+	private void OnValidate() {
 		SingleUse = true;
 	}
 }

@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 8123352219933033122}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -980.38873, y: -672.79846, z: 16.416986}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -98,6 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PickupPointInteractable: {fileID: 6063357390683749374, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
-  ItemToDrop: {fileID: 11400000, guid: 0bc334bdb091c174793ea205e94ffdf6, type: 2}
-  Lifetime: 1
-  Height: 10
+  ItemToDrop:
+    Item: {fileID: 0}
+    Amount: 0
+  Lifetime: 0.5
+  Height: 0.5

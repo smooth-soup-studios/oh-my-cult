@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class UIbuilderKeyBinding : MonoBehaviour {
-	UserInput _userInput;
+	InputSystemRebindManager _userInput;
 
 	private Button _backButton;
 	private Button _continueButton;
@@ -25,7 +25,7 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 
 	// Start is called before the first frame update
 	void OnEnable() {
-		_userInput = FindObjectOfType<UserInput>();
+		_userInput = FindObjectOfType<InputSystemRebindManager>();
 
 		Logger.Log("KeyBinding", "Binding Menu");
 		_root = GetComponent<UIDocument>().rootVisualElement;

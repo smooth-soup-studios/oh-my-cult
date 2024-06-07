@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 
 namespace BehaviorTree {
@@ -10,7 +9,7 @@ namespace BehaviorTree {
 
 
 
-		public class Node {
+	public class Node {
 		protected NodeState State;
 		public Node Parent;
 		protected List<Node> Children = new();

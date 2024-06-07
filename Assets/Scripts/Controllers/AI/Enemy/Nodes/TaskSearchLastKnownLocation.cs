@@ -3,10 +3,11 @@ using BehaviorTree;
 
 public class TaskSearchLastKnownLocation : Node {
 	private Transform _transform;
-	private float _radius = 20f;
+
 	public TaskSearchLastKnownLocation(Transform transform) {
 		_transform = transform;
 	}
+
 	public override NodeState Evaluate(BaseBehaviourTree tree) {
 		Vector3 target = tree.SearchLocation;
 		tree.AttackCounter = -0.04f;

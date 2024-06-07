@@ -7,6 +7,9 @@ public class EnemyBT : BaseBehaviourTree {
 	public Transform[] Waypoints;
 	private Vector2 _oldMovement;
 
+	[Header("Debug")]
+	public bool DisableAgression = false;
+
 	private new void Awake() {
 		base.Awake();
 		Agent.updateRotation = false;
@@ -34,11 +37,13 @@ public class EnemyBT : BaseBehaviourTree {
 
 			new Sequence(new List<Node>
 			{
+				new CheckAgressionDisabled(transform),
 				new CheckEnemyInAttackRange(transform),
 				new TaskAttack(transform),
 			}),
 			new Sequence(new List<Node>
 			{
+				new CheckAgressionDisabled(transform),
 				new CheckEnemyInRange(transform),
 				new TaskGoToTarget(transform),
 			}),

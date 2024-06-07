@@ -318,7 +318,6 @@ MonoBehaviour:
   EnemyAnimator: {fileID: 0}
   AttackCounter: -0.18
   Speed: 2
-  FOVRange: 3
   Target: {fileID: 0}
   SearchLocation: {x: 0, y: 0, z: 0}
   EnemyWeapon: {fileID: 7613533550855613070, guid: b52a80a05d680eb41b21c4cf63e7c8e4, type: 3}

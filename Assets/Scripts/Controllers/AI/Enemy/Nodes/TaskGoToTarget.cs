@@ -4,7 +4,7 @@ using BehaviorTree;
 public class TaskGoToTarget : Node {
 	private Transform _transform;
 	private string _name = "target";
-	private float _radius = 1.5f;
+	private float _radius = 1.25f;
 
 	public TaskGoToTarget(Transform transform) {
 		_transform = transform;

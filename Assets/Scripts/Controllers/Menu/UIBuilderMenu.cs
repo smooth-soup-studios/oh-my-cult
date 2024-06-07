@@ -50,7 +50,7 @@ public class UIBuilderMenu : MonoBehaviour {
 		// Loads the default savestate, overwriting existing files.
 		SaveManager.Instance.NewGame();
 		SaveManager.Instance.SaveGame();
-		SceneManager.LoadSceneAsync(SceneDefs.VillageLevel);
+		SceneManager.LoadSceneAsync(1);
 	}
 
 	public void OnContinue() {

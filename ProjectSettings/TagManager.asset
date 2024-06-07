@@ -13,7 +13,6 @@ TagManager:
   - EnterVillageOutskirt
   - EnterVillageMain
   - EnterVillage
-  - Enemy
   layers:
   - Default
   - TransparentFX

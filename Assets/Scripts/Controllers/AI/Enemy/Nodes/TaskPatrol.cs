@@ -23,8 +23,9 @@ public class TaskPatrol : Node {
 		tree.EnemyAnimator.SetFloat("X", tree.Movement.x);
 		tree.EnemyAnimator.SetFloat("Y", tree.Movement.y);
 		tree.AttackCounter = -0.18f;
-		// tree.Agent.speed = 20f;
-		// tree.Agent.acceleration = 80;
+
+		tree.Agent.speed = 20f;
+		tree.Agent.acceleration = 80;
 		if (_waiting) {
 			_waitCounter += Time.deltaTime;
 			if (_waitCounter >= _waitTime) {

@@ -10,8 +10,8 @@ namespace BehaviorTree {
 		[HideInInspector] public Animator EnemyAnimator;
 		[HideInInspector] public float AttackCounter = -0.18f;
 		[HideInInspector] public float Speed = 2f;
-		public float FOVRange {get; set;} = 12.5f;
-		public float AttackRange {get; set;} = 1.5f;
+		[HideInInspector] public float FOVRange = 70f;
+		[HideInInspector] public float AttackRange = 20f;
 		[HideInInspector] public GameObject Target = null;
 		[HideInInspector] public Vector3 SearchLocation = Vector3.zero;
 		public WeaponItem EnemyWeapon;
@@ -38,14 +38,6 @@ namespace BehaviorTree {
 			if (target == gameObject) {
 				gameObject.SetActive(false);
 			}
-		}
-
-		private void OnDrawGizmos() {
-			Gizmos.color = Color.magenta;
-			Gizmos.DrawWireSphere(transform.position, AttackRange);
-			Gizmos.color = Color.red;
-			Gizmos.DrawWireSphere(transform.position, FOVRange);
-
 		}
 
 	}

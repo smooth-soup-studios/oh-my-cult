@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -18,6 +19,8 @@ public class UIManager : MonoBehaviour {
 	private VisualElement _dashBarValue;
 	private VisualElement _keyIndicator;
 	private VisualElement _hotbar;
+	private VisualElement _quests;
+	private VisualElement _questsText;
 	private Color _borderColor = new(33f / 255f, 15f / 255f, 59f / 255f);
 
 
@@ -30,9 +33,14 @@ public class UIManager : MonoBehaviour {
 			_dashBarValue = _root.Q<VisualElement>("Dash-cooldown-value");
 			_keyIndicator = _root.Q<VisualElement>("key-indicator");
 			_hotbar = _root.Q<VisualElement>("Hotbar");
+			_quests = _root.Q<VisualElement>("Quests");
+			_questsText = _root.Q<VisualElement>("QuestsText");
+
 			_playerInventory = FindFirstObjectByType<StateMachine>().gameObject.GetComponent<Inventory>();
 			GameObject.Find("PauseMenu").GetComponent<UIDocument>().rootVisualElement.visible = false;
 
+			_quests.RegisterCallback<MouseEnterEvent> ( x => OnMouseEnter ( ) );
+			_quests.RegisterCallback<MouseLeaveEvent> ( x => OnMouseLeave ( ) );
 		}
 		else {
 			Destroy(gameObject);
@@ -160,4 +168,14 @@ public class UIManager : MonoBehaviour {
 			itemSlot.style.borderTopColor = _borderColor;
 		}
 	}
+	//void PointerOverEvent(){}
+	private void OnMouseEnter() {
+		_questsText.visible = true;
+	}
+
+	private void OnMouseLeave() {
+		_questsText.visible = false;
+	}
+	
+	
 }

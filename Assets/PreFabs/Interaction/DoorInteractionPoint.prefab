@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: DoorInteractionPoint-11303.42
-  InteractionRange: 15
+  InteractionRange: 1.85
   AutoTrigger: 0
   SingleUse: 0
   _event:

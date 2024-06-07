@@ -4,7 +4,6 @@ using Managers;
 using UnityEditor;
 using UnityEngine;
 
-[Serializable]
 public class DoorController : MonoBehaviour {
 	private static string _logName = "DoorController";
 

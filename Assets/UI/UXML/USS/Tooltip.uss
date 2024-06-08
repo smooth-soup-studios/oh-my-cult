@@ -3,7 +3,6 @@
     margin: 0 0 256px 0;
     padding: 8px 8px 8px 16px;
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
     transition-property: opacity, translate;
     transition-duration: 0.3s, 0.3s;

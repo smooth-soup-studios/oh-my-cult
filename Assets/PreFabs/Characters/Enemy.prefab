@@ -27,13 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1876431728929801580}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 12, y: 0, z: 0}
-  m_LocalScale: {x: 20, y: 15, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4883085925236696737}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7507666524552951778
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -130,9 +130,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.5773587}
-      - {x: -0.5, y: -0.28866667}
-      - {x: 0.5, y: -0.28866667}
+    - - {x: 1.3291005, y: 0.66529906}
+      - {x: 0.34630382, y: -0.0065659285}
+      - {x: 1.3149604, y: -0.6856983}
   m_UseDelaunayMesh: 0
 --- !u!114 &5752292876538473265
 MonoBehaviour:
@@ -144,8 +144,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05ac34e2c435f0046b73486e43318bbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1 &3832337880142659033
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 3290768021699310593}
   m_Layer: 7
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -290,7 +290,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1024968838, guid: abe889e7d546e8e4fa30e49be7dc0fb0, type: 3}
+  m_Sprite: {fileID: 108023838, guid: a6369e68a41836c41b551229762e03cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -311,22 +311,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f90ed41905425ec4d95e7dee12a1cac4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Movement: {x: 0, y: 0}
-  Agent: {fileID: 0}
-  EnemyAnimator: {fileID: 0}
-  AttackCounter: -0.04
-  Speed: 2
-  FOVRange: 70
-  AttackRange: 20
-  Target: {fileID: 0}
-  SearchLocation: {x: 0, y: 0, z: 0}
-  EnemyWeapon: {fileID: 7613533550855613070, guid: b52a80a05d680eb41b21c4cf63e7c8e4, type: 3}
-  Waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  m_Name:
+  m_EditorClassIdentifier:
+  ActorType: 0
+  Stats: {fileID: 11400000, guid: 2d4e21e94621b6743a5338596fd40776, type: 2}
+  Waypoints: []
+  DisableAgression: 0
 --- !u!114 &3900318808842322138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,11 +327,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76f0d07869b7ad747b46fdf13457c82e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   <ObjectId>k__BackingField: Enemy-0.1013
   _isInvulnerable: 0
-  _maxHealth: 100
+  _maxHealth: 50
 --- !u!195 &7641483773983506728
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -351,17 +341,17 @@ NavMeshAgent:
   m_GameObject: {fileID: 8507790943486014399}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 12.5
+  m_Radius: 0.7
   m_Speed: 3.5
-  m_Acceleration: 8
+  m_Acceleration: 30
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 25
-  m_BaseOffset: 0
+  m_Height: 1.79
+  m_BaseOffset: 1.16
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!95 &6748209838310189458
@@ -380,7 +370,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -444,6 +434,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.21994591, y: -2.2019348}
-  m_Size: {x: 16.887005, y: 20.59613}
+  m_Offset: {x: -0.021373749, y: -0.2832198}
+  m_Size: {x: 0.78162384, y: 1.4335604}
   m_Direction: 0

@@ -7,8 +7,7 @@ using UnityEngine;
 /// <para/>
 /// Easings from https://easings.net/
 /// </summary>
-public static class Easings
-{
+public static class Easings {
 	private const float _c1 = 1.70158f;
 	private const float _c2 = _c1 * 1.525f;
 	private const float _c3 = _c1 + 1;
@@ -90,22 +89,17 @@ public static class Easings
 
 	// Bounce
 	public static float EaseInBounce(float x) => 1 - EaseOutBounce(1 - x);
-	public static float EaseOutBounce(float x)
-	{
-		if (x < 1 / _d1)
-		{
+	public static float EaseOutBounce(float x) {
+		if (x < 1 / _d1) {
 			return _n1 * x * x;
 		}
-		else if (x < 2 / _d1)
-		{
+		else if (x < 2 / _d1) {
 			return _n1 * (x -= 1.5f / _d1) * x + 0.75f;
 		}
-		else if (x < 2.5 / _d1)
-		{
+		else if (x < 2.5 / _d1) {
 			return _n1 * (x -= 2.25f / _d1) * x + 0.9375f;
 		}
-		else
-		{
+		else {
 			return _n1 * (x -= 2.625f / _d1) * x + 0.984375f;
 		}
 	}

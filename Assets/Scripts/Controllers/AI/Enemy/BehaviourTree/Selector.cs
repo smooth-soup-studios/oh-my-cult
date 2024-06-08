@@ -4,7 +4,7 @@ namespace BehaviorTree {
 	public class Selector : Node {
 		public Selector() : base() { }
 		public Selector(List<Node> children) : base(children) { }
-		public override NodeState Evaluate(EnemyBehaviourTree tree) {
+		public override NodeState Evaluate(BaseBehaviourTree tree) {
 
 
 			foreach (Node node in Children) {

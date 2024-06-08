@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 6036849210683475856}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.08, y: -1.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7410dd48c7ef63c690e526e711552ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: DoorInteractionPoint-0
-  InteractionRange: 15
+  <ObjectId>k__BackingField: DoorInteractionPoint-2,6633
+  InteractionRange: 2
   AutoTrigger: 0
   SingleUse: 0
   _event:
@@ -110,7 +110,7 @@ Transform:
   m_GameObject: {fileID: 7111290995525018696}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 11.2, z: 0}
+  m_LocalPosition: {x: 0, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

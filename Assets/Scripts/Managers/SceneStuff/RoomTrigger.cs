@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class RoomTrigger : MonoBehaviour, ISaveable {
@@ -31,10 +29,12 @@ public class RoomTrigger : MonoBehaviour, ISaveable {
 
 	private void Start() {
 		if (_isCleared) {
+			List<GameObject> toremove = new();
 			foreach (GameObject enemy in _enemies) {
 				EventBus.Instance.TriggerEvent(EventType.DEATH, enemy);
-				_enemies.Remove(enemy);
+				toremove.Add(enemy);
 			}
+			_enemies.RemoveAll(x => toremove.Contains(x));
 		}
 	}
 
@@ -43,12 +43,12 @@ public class RoomTrigger : MonoBehaviour, ISaveable {
 			border.SetActive(false);
 			_isCleared = true;
 		}
-		if (EventBus.Instance){
+		if (EventBus.Instance) {
 			EventBus.Instance.TriggerEvent(EventType.INTERACT_TOGGLE, true);
 		}
 	}
 
-		protected void OnValidate() {
+	protected void OnValidate() {
 		// Generates an unique ID based on the name & position of the gameobject.
 #if UNITY_EDITOR
 		ObjectId = $"{name}-{Vector3.SqrMagnitude(transform.position)}";

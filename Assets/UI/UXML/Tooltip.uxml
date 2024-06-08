@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/UXML/USS/Tooltip.uss?fileID=7433441132597879392&amp;guid=034066cefe2a53b4c8db03756351df1c&amp;type=3#Tooltip" />
+    <ui:VisualElement style="flex-direction: row; align-items: center; flex-grow: 1; justify-content: center;">
+        <ui:VisualElement name="container" class="hidden">
+            <ui:VisualElement name="icon" style="width: 64px; height: 64px; background-image: url(&quot;project://database/Assets/Art/Sprites/UI/KeyboardKeySmall.png?fileID=2800000&amp;guid=46e775b2bf8baab41a25ad14a362aada&amp;type=3#KeyboardKeySmall&quot;); margin-right: 16px;">
+                <ui:Label tabindex="-1" text="E" parse-escape-sequences="true" display-tooltip-when-elided="true" style="align-self: center; margin-right: 0; -unity-font-definition: url(&quot;project://database/Assets/Fonts/Nunito-ExtraBold%20SDF.asset?fileID=11400000&amp;guid=eff4a44351aa03c42a0dc3db56c2d5b6&amp;type=2#Nunito-ExtraBold SDF&quot;); color: rgb(0, 0, 0); top: 2px;" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="label" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

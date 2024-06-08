@@ -1348,27 +1348,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 149644444053333856, guid: f347ef1b1acfc9f48badee766143504d, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: Boss-154,5054
+      value: Boss-154.5054
       objectReference: {fileID: 0}
     - target: {fileID: 419892085652963985, guid: f347ef1b1acfc9f48badee766143504d, type: 3}
       propertyPath: m_Name
       value: Boss
-      objectReference: {fileID: 0}
-    - target: {fileID: 4848697707482886390, guid: f347ef1b1acfc9f48badee766143504d, type: 3}
-      propertyPath: m_Size.x
-      value: 1.7785981
-      objectReference: {fileID: 0}
-    - target: {fileID: 4848697707482886390, guid: f347ef1b1acfc9f48badee766143504d, type: 3}
-      propertyPath: m_Size.y
-      value: 1.3461952
-      objectReference: {fileID: 0}
-    - target: {fileID: 4848697707482886390, guid: f347ef1b1acfc9f48badee766143504d, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.010809898
-      objectReference: {fileID: 0}
-    - target: {fileID: 4848697707482886390, guid: f347ef1b1acfc9f48badee766143504d, type: 3}
-      propertyPath: m_Offset.y
-      value: -1.3512592
       objectReference: {fileID: 0}
     - target: {fileID: 5853670735497630154, guid: f347ef1b1acfc9f48badee766143504d, type: 3}
       propertyPath: m_LocalPosition.x

@@ -27,9 +27,9 @@ Transform:
   m_GameObject: {fileID: 3787534918991896929}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2169.1785, y: -9.157559, z: -0.9433789}
-  m_LocalScale: {x: 4, y: 4, z: 4}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35273ca664851004a89ebe285e5c7ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: KeyPickup-4705420
-  InteractionRange: 12
+  <ObjectId>k__BackingField: KeyPickup-0
+  InteractionRange: 1
   AutoTrigger: 0
   SingleUse: 1
 --- !u!212 &7892930061713947259

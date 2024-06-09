@@ -1,7 +1,7 @@
 using System;
 using UnityEditor;
 using UnityEngine;
-	
+
 public class ScriptableObjectIdAttribute : PropertyAttribute { }
 
 #if UNITY_EDITOR

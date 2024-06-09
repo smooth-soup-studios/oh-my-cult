@@ -4,13 +4,19 @@ using UnityEngine;
 public class RoomTrigger : MonoBehaviour, ISaveable {
 
 	[field: SerializeField, Header("Object information")] public string ObjectId { get; private set; }
-
+	[Header("Settings")]
+	[SerializeField] private bool _addEnemiesDynamic = true;
 	[SerializeField] private List<GameObject> _borders;
 	[SerializeField] private List<GameObject> _enemies;
 	[SerializeField] private bool _isCleared;
 
+
 	private void OnTriggerEnter2D(Collider2D other) {
-		if (other.tag == "Player" && _enemies.Count > 0) {
+		if (other.CompareTag("Enemy") && _addEnemiesDynamic) {
+			_enemies.Add(other.gameObject);
+		}
+
+		if (other.CompareTag("Player") && _enemies.Count > 0) {
 			foreach (GameObject border in _borders) {
 				border.SetActive(true);
 				EventBus.Instance.TriggerEvent(EventType.INTERACT_TOGGLE, false);
@@ -19,11 +25,8 @@ public class RoomTrigger : MonoBehaviour, ISaveable {
 	}
 
 	private void OnTriggerExit2D(Collider2D other) {
-		if (other.tag == "Enemy") {
+		if (other.CompareTag("Enemy")) {
 			_enemies.Remove(other.gameObject);
-			if (_enemies.Count <= 0) {
-				UnlockArea();
-			}
 		}
 	}
 
@@ -35,6 +38,12 @@ public class RoomTrigger : MonoBehaviour, ISaveable {
 				toremove.Add(enemy);
 			}
 			_enemies.RemoveAll(x => toremove.Contains(x));
+		}
+	}
+
+	private void Update() {
+		if (_enemies.Count <= 0) {
+			UnlockArea();
 		}
 	}
 

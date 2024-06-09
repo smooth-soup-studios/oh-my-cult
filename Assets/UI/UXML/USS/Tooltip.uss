@@ -1,0 +1,33 @@
+#container {
+	background-color: rgba(66, 48, 94, .5);
+    margin: 0 0 256px 0;
+    padding: 8px 8px 8px 16px;
+    flex-direction: row;
+    align-items: center;
+    transition-property: opacity, translate;
+    transition-duration: 0.3s, 0.3s;
+    transition-timing-function: ease-out-cubic, ease-out-cubic;
+
+	border-radius: 5px;
+    border-color: #210F3B;
+    border-width: 3px;
+}
+
+#container.hidden {
+    translate: 0 100%;
+    opacity: 0;
+}
+
+#container.select {
+	border-color: rgb(0, 255, 128);
+    background-color: rgb(0, 0, 0);
+    transition-timing-function: ease-in-back, ease-in-back;
+}
+
+Label {
+    -unity-font-definition: url("project://database/Assets/Fonts/Nunito-Medium%20SDF.asset?fileID=11400000&guid=b848bc55227ee7340bd893d052166368&type=2#Nunito-Medium SDF");
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    margin: 0 16px 0 0;
+    padding: 0;
+}

@@ -3,28 +3,26 @@ using UnityEngine;
 
 public class TaskRandomWalk : Node {
 	// Config
-	private float _minDistance = 30.0f;
-	private float _maxDistance = 70.0f;
+	private float _minDistance = 3.0f;
+	private float _maxDistance = 7.0f;
 	private float _maxTravelTime = 7.0f;
 
 	// State
 	private Vector3 _randomTarget;
 	private float _travelTime = 0.0f;
 
-	public TaskRandomWalk(Transform transform) { }
-
-	public override NodeState Evaluate(EnemyBehaviourTree tree) {
+	public override NodeState Evaluate(BaseBehaviourTree tree) {
+		ActorType _enemyState = tree.ActorType;
 		if (_randomTarget == Vector3.zero) {
-			_randomTarget = GetRandomPosition(tree.Agent.transform);
+			_randomTarget = GetRandomPosition(tree.Agent.transform, _enemyState, tree);
 		}
 
 		tree.Agent.destination = _randomTarget;
 		tree.Movement = (_randomTarget - tree.Agent.transform.position).normalized;
-		tree.EnemyAnimator.SetFloat("X", tree.Movement.x);
-		tree.EnemyAnimator.SetFloat("Y", tree.Movement.y);
-
-		tree.Agent.speed = 20f;
-		tree.Agent.acceleration = 80;
+		tree.ActorAnimator.SetFloat("X", tree.Movement.x);
+		tree.ActorAnimator.SetFloat("Y", tree.Movement.y);
+		// tree.Agent.speed = 20f;
+		// tree.Agent.acceleration = 80;
 
 		// Choose a new target if:
 		// - The agent has reached the target
@@ -47,10 +45,17 @@ public class TaskRandomWalk : Node {
 		_travelTime = 0f;
 	}
 
-	private Vector3 GetRandomPosition(Transform characterTransform) {
+	private Vector3 GetRandomPosition(Transform characterTransform, ActorType enemyState, BaseBehaviourTree tree) {
 		// Generate a random angle and distance
-		float randomAngle = Random.Range(0f, Mathf.PI * 2);
-		float randomDistance = Random.Range(_minDistance, _maxDistance);
+		float randomAngle = 0;
+		float randomDistance = 0;
+
+
+		if (enemyState != ActorType.NPC) {
+			tree.ActorAnimator.SetBool("IsNPC", false);
+			randomAngle = Random.Range(0f, Mathf.PI * 2);
+			randomDistance = Random.Range(_minDistance, _maxDistance);
+		}
 
 		// Calculate the position within the circle
 		float offsetX = Mathf.Cos(randomAngle) * randomDistance;

@@ -2,28 +2,26 @@ using UnityEngine;
 using BehaviorTree;
 
 public class TaskGoToTarget : Node {
-	private Transform _transform;
-	private string _name = "target";
-	private float _radius = 15f;
+	private float _radius = 1.25f;
 
-	public TaskGoToTarget(Transform transform) {
-		_transform = transform;
+	public TaskGoToTarget() {
+
 	}
 
-	public override NodeState Evaluate(EnemyBehaviourTree tree) {
+	public override NodeState Evaluate(BaseBehaviourTree tree) {
+		Transform ActorPos = tree.gameObject.transform;
 		Vector3 target = tree.Target.transform.position;
-		tree.Movement = (tree.Target.transform.position - tree.Agent.transform.position).normalized;
-		tree.EnemyAnimator.SetFloat("X", tree.Movement.x);
-		tree.EnemyAnimator.SetFloat("Y", tree.Movement.y);
 
-		if (Vector2.Distance(_transform.position, target) > 1.4f) {
+		tree.Movement = (tree.Target.transform.position - tree.Agent.transform.position).normalized;
+		tree.ActorAnimator.SetFloat("X", tree.Movement.x);
+		tree.ActorAnimator.SetFloat("Y", tree.Movement.y);
+
+		if (Vector2.Distance(ActorPos.position, target) > 1.4f) {
 			Vector3 movePos = target;
-			movePos = Vector3.MoveTowards(movePos, _transform.position, _radius);
+			movePos = Vector3.MoveTowards(movePos, ActorPos.position, _radius);
 			tree.Agent.SetDestination(movePos);
-			tree.Agent.speed = 40;
-			tree.Agent.acceleration = 100;
 		}
-		if (Vector2.Distance(_transform.position, target) > tree.FOVRange) {
+		if (Vector2.Distance(ActorPos.position, target) > tree.Stats.DetectionRange) {
 			tree.Target = null;
 			State = NodeState.FAILURE;
 			return State;

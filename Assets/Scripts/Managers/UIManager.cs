@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -39,16 +40,13 @@ public class UIManager : MonoBehaviour {
 			_playerInventory = FindFirstObjectByType<StateMachine>().gameObject.GetComponent<Inventory>();
 			GameObject.Find("PauseMenu").GetComponent<UIDocument>().rootVisualElement.visible = false;
 
-			_quests.RegisterCallback<MouseEnterEvent> ( x => OnMouseEnter ( ) );
-			_quests.RegisterCallback<MouseLeaveEvent> ( x => OnMouseLeave ( ) );
+			_quests.RegisterCallback<MouseEnterEvent>(x => OnMouseEnter());
+			_quests.RegisterCallback<MouseLeaveEvent>(x => OnMouseLeave());
 		}
 		else {
 			Destroy(gameObject);
 		}
 		DontDestroyOnLoad(gameObject);
-	}
-
-	private void Start() {
 	}
 
 	private void Update() {
@@ -168,16 +166,20 @@ public class UIManager : MonoBehaviour {
 			itemSlot.style.borderTopColor = _borderColor;
 		}
 	}
-	//void PointerOverEvent(){}
+
+
 	private void OnMouseEnter() {
-		if(_questsText != null)
+		if (_questsText != null)
 			_questsText.visible = true;
 	}
 
 	private void OnMouseLeave() {
-		if(_questsText != null)
+		if (_questsText != null)
 			_questsText.visible = false;
 	}
-	
-	
+
+	public void SetQuestsText(string text) {
+		_questsText.Q<Label>().text = text;
+	}
+
 }

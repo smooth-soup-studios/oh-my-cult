@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f90ed41905425ec4d95e7dee12a1cac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActorType: 0
+  ActorType: 1
   Stats: {fileID: 11400000, guid: 2d4e21e94621b6743a5338596fd40776, type: 2}
   Waypoints: []
   DisableAgression: 0

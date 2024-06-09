@@ -9,7 +9,6 @@ public class TaskChangeToBear : Node {
 		}
         tree.ActorAnimator.SetBool("IsBear", true);
         tree.ActorType = ActorType.BearEnemy;
-		Logger.Log("Bear", "IsBear");
         State = NodeState.SUCCESS;
         return State;
     }

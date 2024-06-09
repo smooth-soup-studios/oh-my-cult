@@ -27,38 +27,48 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 			new Sequence(new List<Node>
 			{
 				new CheckActorType(ActorType.NPC),
-				new CheckEnemyInRange(),
+				new CheckPlayerInRange(),
 				new TaskChangeToEnemy()
 			}),
 
+			// Bear - Change to bear animations when the target is set as a bear in the inspector
+			//TODO: Init method for changing animations and such. Can probably be called in Awake or Start.
 			new Sequence(new List<Node>
 			{
 				new CheckActorType(ActorType.BearEnemy),
 				new TaskChangeToBear()
 			}),
 
+			// Enemy - Attack when in range
 			new Sequence(new List<Node>
 			{
 				new CheckAgressionDisabled(),
-				new CheckEnemyInAttackRange(),
+				new CheckTargetInAttackRange(),
 				new TaskAttack(),
 			}),
+
+			// Enemy - Move to target when in range but not attack range
 			new Sequence(new List<Node>
 			{
 				new CheckAgressionDisabled(),
-				new CheckEnemyInRange(),
+				new CheckPlayerInRange(),
+				new CheckTargetUnobstructed(),
 				new TaskGoToTarget(),
 			}),
+			// Enemy - Search for target when lost
 			new Sequence(new List<Node>
 			{
 				new CheckLastKnownLocation(),
 				new TaskSearchLastKnownLocation(transform),
 			}),
+
+			// Enemy - Patrol when no target is available and waypoints have been set
 			new Sequence(new List<Node>
 			{
 				new CheckAgentHasWaypoints(Waypoints),
 				new TaskPatrol(Waypoints)
 			}),
+
 			new TaskRandomWalk(),
 		});
 

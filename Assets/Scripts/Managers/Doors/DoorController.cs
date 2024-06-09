@@ -88,9 +88,10 @@ public class DoorController : MonoBehaviour {
 		doorString += RequiresKey ? "yellow" : "green";
 		doorString += ">Door" + ArbitraryId + "</color>";
 		doorString += "\n<color=grey>To " + TransportTo.ToString() + "</color>";
-
+#if UNITY_EDITOR
 		Handles.color = Color.green;
 		Handles.Label(transform.position, doorString, new GUIStyle() { fontSize = 12, alignment = TextAnchor.MiddleCenter, richText = true });
+#endif
 	}
 }
 

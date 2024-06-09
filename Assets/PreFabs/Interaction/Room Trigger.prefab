@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6972347098002444416}
   - component: {fileID: 4109000722959676931}
   - component: {fileID: 8026613792816804491}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Room Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,6 +91,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: Room Trigger-0
-  _borders: []
+  _addEnemiesDynamic: 1
+  _borders:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _enemies: []
   _isCleared: 0

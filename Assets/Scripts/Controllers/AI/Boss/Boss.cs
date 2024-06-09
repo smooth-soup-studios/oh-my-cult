@@ -18,6 +18,7 @@ public class Boss : MonoBehaviour, ISaveable {
 	private bool _isAlive = true;
 	public Animator BossAnimation;
 	[HideInInspector] public Vector2 Movement;
+	[HideInInspector] public bool WaitForWalking = true;
 	public MovementDirection Direction;
 
 	void Start() {
@@ -32,7 +33,7 @@ public class Boss : MonoBehaviour, ISaveable {
 				SceneManager.LoadScene(SceneDefs.EndingScreen);
 			}
 		});
-
+			StartCoroutine(WaitForWalk());
 		Player = GameObject.FindGameObjectWithTag("Player").transform;
 
 
@@ -129,5 +130,10 @@ public class Boss : MonoBehaviour, ISaveable {
 	}
 	public void SaveData(GameData data) {
 		data.SceneData.ArbitraryTriggers["BossDead"] = isActiveAndEnabled;
+	}
+	public IEnumerator WaitForWalk() {
+		yield return new WaitForSeconds(4f);
+		Logger.Log("Wait", "Walk");
+		WaitForWalking = false;
 	}
 }

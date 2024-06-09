@@ -30,7 +30,7 @@ public class BossIdleState : BossBaseState {
 					break;
 			}
 		}
-		else if (Vector2.Distance(Boss.Player.transform.position, Boss.transform.position) >= 50f) {
+		else if (Vector2.Distance(Boss.Player.transform.position, Boss.transform.position) >= 5f && Boss.WaitForWalking == false) {
 			Boss.SwitchState("Move");
 		}
 		Boss.Movement = (Boss.Player.transform.position - Boss.transform.position).normalized;

@@ -16,6 +16,9 @@ public class ChestInteractable : BaseInteractable {
 	private new void Start() {
 		base.Start();
 		_glowController = GetComponent<ItemPickupGlowController>();
+		if (HasBeenUsed) {
+			_spriteRenderer.sprite = _openChestSprite;
+		}
 	}
 
 	public override void OnSelect() {
@@ -27,7 +30,6 @@ public class ChestInteractable : BaseInteractable {
 		}
 		_glowController.StartGlow();
 		_spriteRenderer.color = Color.green;
-		Logger.Log("Chest", "Interact");
 	}
 
 	public override void OnDeselect() {

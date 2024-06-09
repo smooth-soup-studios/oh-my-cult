@@ -9,7 +9,6 @@ public class ChestInteractable : BaseInteractable {
 	private ItemPickupGlowController _glowController;
 	[SerializeField] private SpriteRenderer _spriteRenderer;
 	[SerializeField] private Sprite _openChestSprite;
-	private bool _isOpen;
 	public GameObject DroppingItemPrefab;
 	public GameObject PickupPointInteractable;
 	public ItemStack ItemToDrop;
@@ -21,7 +20,7 @@ public class ChestInteractable : BaseInteractable {
 
 	public override void OnSelect() {
 
-		if (_isOpen) {
+		if (HasBeenUsed) {
 			_spriteRenderer.color = Color.white;
 			_glowController.StopGlow();
 			return;
@@ -37,7 +36,7 @@ public class ChestInteractable : BaseInteractable {
 	}
 
 	public override void Interact(GameObject interactor) {
-		if (!_isOpen) {
+		if (!HasBeenUsed) {
 			OpenChest();
 			_spriteRenderer.color = Color.white;
 			_glowController.StopGlow();
@@ -47,10 +46,7 @@ public class ChestInteractable : BaseInteractable {
 
 	private void OpenChest() {
 		_spriteRenderer.sprite = _openChestSprite;
-		_isOpen = true;
-		if (TryGetComponent<AudioSource>(out AudioSource source)) {
-			source.Play();
-		}
+		EventBus.Instance.TriggerEvent(EventType.AUDIO_PLAY, "ChestOpen");
 
 
 		if (DroppingItemPrefab != null && PickupPointInteractable != null && ItemToDrop != null) {

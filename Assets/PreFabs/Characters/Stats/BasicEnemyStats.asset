@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BasicEnemyStats
   m_EditorClassIdentifier: 
   Speed: 2
-  DetectionRange: 3.2
+  DetectionRange: 5.98
   AttackRange: 1.5
   EnemyWeapon: {fileID: 7613533550855613070, guid: b52a80a05d680eb41b21c4cf63e7c8e4, type: 3}

@@ -42,23 +42,18 @@ public class UIBuilderDeathMenu : MonoBehaviour
     }
 
     void OnYesButton(){
-        // Reset the save/scene?
-        // Loads the default savestate, overwriting existing files.
-
+        // Initialize new gamedata
         SaveManager.Instance.ChangeSelectedProfileId("1");
 		SaveManager.Instance.NewGame();
-		SaveManager.Instance.SaveGame();
 
-
-        // Load the current scene
+        // Reload the current scene
         SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
-        Debug.Log("Reload scene");
     }
     void OnNoButton(){
+        // Load the mainmenu
         SceneManager.LoadSceneAsync(0);
         Time.timeScale = 1;
-        Debug.Log("Main Menu");
     }
 }

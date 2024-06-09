@@ -170,11 +170,13 @@ public class UIManager : MonoBehaviour {
 	}
 	//void PointerOverEvent(){}
 	private void OnMouseEnter() {
-		_questsText.visible = true;
+		if(_questsText != null)
+			_questsText.visible = true;
 	}
 
 	private void OnMouseLeave() {
-		_questsText.visible = false;
+		if(_questsText != null)
+			_questsText.visible = false;
 	}
 	
 	

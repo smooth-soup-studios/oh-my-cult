@@ -33,6 +33,12 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 
 			new Sequence(new List<Node>
 			{
+				new CheckActorType(ActorType.BearEnemy),
+				new TaskChangeToBear()
+			}),
+
+			new Sequence(new List<Node>
+			{
 				new CheckAgressionDisabled(),
 				new CheckEnemyInAttackRange(),
 				new TaskAttack(),

@@ -14,7 +14,7 @@ public class TaskRandomWalk : Node {
 	public override NodeState Evaluate(BaseBehaviourTree tree) {
 		ActorType _enemyState = tree.ActorType;
 		if (_randomTarget == Vector3.zero) {
-			_randomTarget = GetRandomPosition(tree.Agent.transform, _enemyState);
+			_randomTarget = GetRandomPosition(tree.Agent.transform, _enemyState, tree);
 		}
 
 		tree.Agent.destination = _randomTarget;
@@ -45,13 +45,14 @@ public class TaskRandomWalk : Node {
 		_travelTime = 0f;
 	}
 
-	private Vector3 GetRandomPosition(Transform characterTransform, ActorType enemyState) {
+	private Vector3 GetRandomPosition(Transform characterTransform, ActorType enemyState, BaseBehaviourTree tree) {
 		// Generate a random angle and distance
 		float randomAngle = 0;
 		float randomDistance = 0;
 
 
 		if (enemyState != ActorType.NPC) {
+			tree.ActorAnimator.SetBool("IsNPC", false);
 			randomAngle = Random.Range(0f, Mathf.PI * 2);
 			randomDistance = Random.Range(_minDistance, _maxDistance);
 		}

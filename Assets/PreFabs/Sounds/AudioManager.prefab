@@ -110,6 +110,14 @@ MonoBehaviour:
     Loop: 1
     SoundType: 1
     Source: {fileID: 0}
+  - ClipName: ChurchAmbient
+    Clip: {fileID: 8300000, guid: 944e8f5b3ccc442c8802a24799a95077, type: 3}
+    Volume: 1
+    Pitch: 1
+    PlayOnAwake: 0
+    Loop: 1
+    SoundType: 1
+    Source: {fileID: 0}
   MasterMixer: {fileID: 24300002, guid: 91150793499acda4ea8048a4d0af909b, type: 2}
   MusicMixer: {fileID: 7284405772634046545, guid: 91150793499acda4ea8048a4d0af909b, type: 2}
   FXMixer: {fileID: 8330087061292956545, guid: 91150793499acda4ea8048a4d0af909b, type: 2}

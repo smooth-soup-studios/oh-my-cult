@@ -52,7 +52,7 @@ public class TaskRandomWalk : Node {
 
 
 		if (enemyState != ActorType.NPC) {
-			tree.ActorAnimator.SetBool("IsNPC", false);
+			// tree.ActorAnimator.SetBool("IsNPC", false);
 			randomAngle = Random.Range(0f, Mathf.PI * 2);
 			randomDistance = Random.Range(_minDistance, _maxDistance);
 		}

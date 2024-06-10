@@ -63,7 +63,7 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 	//OnContinue is only used in the keybindingsintro scene where it needs to switch scenes rather then showing the right menu
 	void OnContinue() {
 		Logger.Log("KeyBindingIntro", "Continue to story");
-		SceneManager.LoadSceneAsync(2);
+		SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 
 	void OnKeyChange(String buttonToRebind, Button button, int bindingIndex = -1) {

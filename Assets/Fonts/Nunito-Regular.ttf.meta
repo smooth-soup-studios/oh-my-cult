@@ -10,7 +10,22 @@ TrueTypeFontImporter:
   includeFontData: 1
   fontNames:
   - Nunito
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 94505d9cc44f7264fb7f37eb6494b5c2, type: 3}
+  - {fileID: 12800000, guid: c41b0d54ffdfc254da91d5331a2795d3, type: 3}
+  - {fileID: 12800000, guid: 1d93097fc0f86ab4a85483dde501a691, type: 3}
+  - {fileID: 12800000, guid: 48c636697db24604cb03f6d33cc1d734, type: 3}
+  - {fileID: 12800000, guid: 8ea660c9fd7f08d4dae0bfee17e9cb9d, type: 3}
+  - {fileID: 12800000, guid: e8657bd61fe30314bb0d027dc5aa76f9, type: 3}
+  - {fileID: 12800000, guid: 9166981034813bc41998dcb29856466e, type: 3}
+  - {fileID: 12800000, guid: 84bd1af5376503149bc71ee6c413bfdc, type: 3}
+  - {fileID: 12800000, guid: d5da73de00967d54c9d0793edb8dd941, type: 3}
+  - {fileID: 12800000, guid: b7627d436fdf0c142a58862868d327ba, type: 3}
+  - {fileID: 12800000, guid: e44d11b416d80a44298872f4c1480a78, type: 3}
+  - {fileID: 12800000, guid: 15a038aa6e0dfd442b4dacecdd785b4f, type: 3}
+  - {fileID: 12800000, guid: 098c13d1bb6b8cc4595f407961c8092b, type: 3}
+  - {fileID: 12800000, guid: 794d83d6fa5c0194281994e528fae1b6, type: 3}
+  - {fileID: 12800000, guid: 823ebeca5903f4246bc0e3b6ec88b3c7, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

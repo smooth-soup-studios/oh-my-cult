@@ -8,7 +8,6 @@ public class SwordItem : WeaponItem {
 
 	protected override void DoPrimaryDamage(HealthController enemy) {
 		base.DoPrimaryDamage(enemy);
-		Debug.Log("SwordItem DoPrimaryDamage");
 		EventBus.Instance.TriggerEvent(EventType.AUDIO_PLAY, "SwordHit");
 	}
 

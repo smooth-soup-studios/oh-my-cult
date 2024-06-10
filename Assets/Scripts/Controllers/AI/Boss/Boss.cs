@@ -133,7 +133,6 @@ public class Boss : MonoBehaviour, ISaveable {
 	}
 	public IEnumerator WaitForWalk() {
 		yield return new WaitForSeconds(4f);
-		Logger.Log("Wait", "Walk");
 		WaitForWalking = false;
 	}
 }

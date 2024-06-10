@@ -3,6 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(CircleCollider2D))]
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(ShatterController))]
+[RequireComponent(typeof(TooltipController))]
 public class BarrelInteractable : BaseInteractable {
 	private static readonly string _logName = "BarrelInteractable";
 
@@ -11,6 +12,8 @@ public class BarrelInteractable : BaseInteractable {
 	public ItemStack ItemToDrop;
 
 	private ShatterController _shatterController;
+	private TooltipController _tooltipController;
+
 
 	private void Awake() {
 		if (DroppingItemPrefab != null && !DroppingItemPrefab.TryGetComponent(out DroppingItemController _)) {
@@ -18,12 +21,22 @@ public class BarrelInteractable : BaseInteractable {
 		}
 
 		_shatterController = GetComponent<ShatterController>();
+		_tooltipController = GetComponent<TooltipController>();
+
 		EventBus.Instance.Subscribe<(GameObject target, GameObject hitter)>(EventType.HIT, e => { if (e.target == gameObject) OnAttack(e.hitter); });
 	}
 
 	public override void Interact(GameObject interactor) { }
-	public override void OnSelect() { }
-	public override void OnDeselect() { }
+	public override void OnSelect() {
+		if (_tooltipController) {
+			_tooltipController.ShowTooltip();
+		}
+	}
+	public override void OnDeselect() {
+		if (_tooltipController) {
+			_tooltipController.HideTooltip();
+		}
+	}
 
 
 	private void OnAttack(GameObject interactor) {

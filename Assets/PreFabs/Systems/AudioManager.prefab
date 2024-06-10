@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3259731853036925783
+--- !u!1 &5530135090382171474
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2177494362261009941}
-  - component: {fileID: 2318119877125423846}
+  - component: {fileID: 5402100198453569447}
+  - component: {fileID: 8216052772553385752}
+  - component: {fileID: 6446468468014704956}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -17,31 +18,128 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2177494362261009941
+--- !u!4 &5402100198453569447
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3259731853036925783}
+  m_GameObject: {fileID: 5530135090382171474}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1087.6, y: -1096.8125, z: -636.916}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2318119877125423846
+--- !u!114 &8216052772553385752
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3259731853036925783}
+  m_GameObject: {fileID: 5530135090382171474}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e237fd73b418b364f98cddf78e7e4d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sounds: []
+  Sounds:
+  - ClipName: ChestOpen
+    Clip: {fileID: 8300000, guid: ee3552e2dde7450429c3d4b97db02ccd, type: 3}
+    Volume: 1
+    Pitch: 1
+    PlayOnAwake: 0
+    Loop: 0
+    SoundType: 2
+    Source: {fileID: 0}
+  - ClipName: SwordHit
+    Clip: {fileID: 8300000, guid: bd2c08f4f7d52024b9bc5fe74afab4e4, type: 3}
+    Volume: 1
+    Pitch: 1
+    PlayOnAwake: 0
+    Loop: 0
+    SoundType: 2
+    Source: {fileID: 0}
+  - ClipName: SwordSwing
+    Clip: {fileID: 8300000, guid: f01a2b0ec3d5de44799d9890757b1c9e, type: 3}
+    Volume: 1
+    Pitch: 1
+    PlayOnAwake: 0
+    Loop: 0
+    SoundType: 2
+    Source: {fileID: 0}
+  - ClipName: AppleMunch
+    Clip: {fileID: 8300000, guid: e2dfc517f98abd745a70b404a09ac4d8, type: 3}
+    Volume: 1
+    Pitch: 1
+    PlayOnAwake: 0
+    Loop: 0
+    SoundType: 2
+    Source: {fileID: 0}
+  - ClipName: DoorOpen
+    Clip: {fileID: 8300000, guid: 246c00daaf5093d43a9cdde5360bb6a2, type: 3}
+    Volume: 1
+    Pitch: 1
+    PlayOnAwake: 0
+    Loop: 0
+    SoundType: 2
+    Source: {fileID: 0}
+  - ClipName: Dash
+    Clip: {fileID: 8300000, guid: 807674e7cc9c78a479ba5fe3a2c6ba43, type: 3}
+    Volume: 0.3
+    Pitch: 0.6
+    PlayOnAwake: 0
+    Loop: 0
+    SoundType: 2
+    Source: {fileID: 0}
+  - ClipName: Fireplace
+    Clip: {fileID: 8300000, guid: 254e93b8e51d228458689694b78a7c77, type: 3}
+    Volume: 0.3
+    Pitch: 1
+    PlayOnAwake: 0
+    Loop: 1
+    SoundType: 1
+    Source: {fileID: 0}
+  - ClipName: ForestAmbient
+    Clip: {fileID: 8300000, guid: e1fcaffdc89f4049868d929dff30f816, type: 3}
+    Volume: 1
+    Pitch: 1
+    PlayOnAwake: 0
+    Loop: 1
+    SoundType: 1
+    Source: {fileID: 0}
+  - ClipName: HouseAmbient
+    Clip: {fileID: 8300000, guid: 8b1750402dda57445a88ab665cd1c55b, type: 3}
+    Volume: 0.3
+    Pitch: 1
+    PlayOnAwake: 0
+    Loop: 1
+    SoundType: 1
+    Source: {fileID: 0}
+  - ClipName: ChurchAmbient
+    Clip: {fileID: 8300000, guid: 944e8f5b3ccc442c8802a24799a95077, type: 3}
+    Volume: 1
+    Pitch: 1
+    PlayOnAwake: 0
+    Loop: 1
+    SoundType: 1
+    Source: {fileID: 0}
+  MasterMixer: {fileID: 24300002, guid: 91150793499acda4ea8048a4d0af909b, type: 2}
+  MusicMixer: {fileID: 7284405772634046545, guid: 91150793499acda4ea8048a4d0af909b, type: 2}
+  FXMixer: {fileID: 8330087061292956545, guid: 91150793499acda4ea8048a4d0af909b, type: 2}
+  _updateGeneratedSources: 0
+--- !u!114 &6446468468014704956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5530135090382171474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4cc8688f335b3e4594f55375ec8675b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sound: AmbientTest

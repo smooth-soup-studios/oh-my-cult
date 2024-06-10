@@ -46,6 +46,7 @@ public class DoorController : MonoBehaviour {
 			AlreadyActivated = true;
 			_isTransporting = true;
 
+			EventBus.Instance.TriggerEvent(EventType.AUDIO_PLAY, "DoorOpen");
 			StartCoroutine(_loadDoor());
 
 			IEnumerator _loadDoor() {

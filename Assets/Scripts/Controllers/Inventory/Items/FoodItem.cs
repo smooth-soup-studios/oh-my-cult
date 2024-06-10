@@ -10,6 +10,7 @@ public class FoodItem : InteractableItem {
 			hpcontroller.AddHealth(FoodStats.FoodData.HealthAmount);
 			GameObject pp = Instantiate(ParticlePrefab, source.transform);
 			pp.GetComponent<ParticleSystemRenderer>().material.mainTexture = ItemData.InvData.ItemIcon.texture;
+			EventBus.Instance.TriggerEvent(EventType.AUDIO_PLAY, "AppleMunch");
 		}
 	}
 

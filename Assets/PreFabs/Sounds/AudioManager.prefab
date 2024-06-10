@@ -54,6 +54,70 @@ MonoBehaviour:
     Loop: 0
     SoundType: 2
     Source: {fileID: 0}
+  - ClipName: SwordHit
+    Clip: {fileID: 8300000, guid: bd2c08f4f7d52024b9bc5fe74afab4e4, type: 3}
+    Volume: 1
+    Pitch: 1
+    PlayOnAwake: 0
+    Loop: 0
+    SoundType: 2
+    Source: {fileID: 0}
+  - ClipName: SwordSwing
+    Clip: {fileID: 8300000, guid: f01a2b0ec3d5de44799d9890757b1c9e, type: 3}
+    Volume: 1
+    Pitch: 1
+    PlayOnAwake: 0
+    Loop: 0
+    SoundType: 2
+    Source: {fileID: 0}
+  - ClipName: AppleMunch
+    Clip: {fileID: 8300000, guid: e2dfc517f98abd745a70b404a09ac4d8, type: 3}
+    Volume: 1
+    Pitch: 1
+    PlayOnAwake: 0
+    Loop: 0
+    SoundType: 2
+    Source: {fileID: 0}
+  - ClipName: DoorOpen
+    Clip: {fileID: 8300000, guid: 246c00daaf5093d43a9cdde5360bb6a2, type: 3}
+    Volume: 1
+    Pitch: 1
+    PlayOnAwake: 0
+    Loop: 0
+    SoundType: 2
+    Source: {fileID: 0}
+  - ClipName: Dash
+    Clip: {fileID: 8300000, guid: 807674e7cc9c78a479ba5fe3a2c6ba43, type: 3}
+    Volume: 0.3
+    Pitch: 0.6
+    PlayOnAwake: 0
+    Loop: 0
+    SoundType: 2
+    Source: {fileID: 0}
+  - ClipName: ForestAmbient
+    Clip: {fileID: 8300000, guid: e1fcaffdc89f4049868d929dff30f816, type: 3}
+    Volume: 1
+    Pitch: 1
+    PlayOnAwake: 0
+    Loop: 1
+    SoundType: 1
+    Source: {fileID: 0}
+  - ClipName: HouseAmbient
+    Clip: {fileID: 8300000, guid: 8b1750402dda57445a88ab665cd1c55b, type: 3}
+    Volume: 0.3
+    Pitch: 1
+    PlayOnAwake: 0
+    Loop: 1
+    SoundType: 1
+    Source: {fileID: 0}
+  - ClipName: ChurchAmbient
+    Clip: {fileID: 8300000, guid: 944e8f5b3ccc442c8802a24799a95077, type: 3}
+    Volume: 1
+    Pitch: 1
+    PlayOnAwake: 0
+    Loop: 1
+    SoundType: 1
+    Source: {fileID: 0}
   MasterMixer: {fileID: 24300002, guid: 91150793499acda4ea8048a4d0af909b, type: 2}
   MusicMixer: {fileID: 7284405772634046545, guid: 91150793499acda4ea8048a4d0af909b, type: 2}
   FXMixer: {fileID: 8330087061292956545, guid: 91150793499acda4ea8048a4d0af909b, type: 2}
@@ -70,4 +134,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4cc8688f335b3e4594f55375ec8675b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sound: Test
+  Sound: AmbientTest

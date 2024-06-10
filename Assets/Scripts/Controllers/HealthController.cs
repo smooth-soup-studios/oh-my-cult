@@ -1,3 +1,5 @@
+#pragma warning disable UNT0008 // Null propagation on Unity objects
+
 using System;
 using System.Collections;
 using UnityEngine;
@@ -60,7 +62,7 @@ public class HealthController : MonoBehaviour, ISaveable {
 		StartCoroutine(FlashRed());
 
 		if (_currentHealth <= 0) {
-			_shatterController.Shatter(source);
+			_shatterController?.Shatter(source);
 			EventBus.Instance.TriggerEvent<GameObject>(EventType.DEATH, gameObject);
 			Logger.Log(_logname, $"The {name} is dead!");
 		}

@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -12,6 +13,8 @@ public class ShatterPieceController : MonoBehaviour {
 
 	private float _freezeY;
 
+	bool _debugLog = false;
+
 	private void Awake() {
 		_spriteRenderer = GetComponent<SpriteRenderer>();
 	}
@@ -20,15 +23,31 @@ public class ShatterPieceController : MonoBehaviour {
 		_timeStart = Time.time;
 
 		// This stuff EXPLICITLY has to be in the Start function because the parent & other settings gets set after instantiation.
+		Vector2 textureSize = ParentSpriteRenderer.sprite.texture.Size();
+		Rect outerBounds = ParentSpriteRenderer.sprite.rect;
+		Vector2 outerFragments = textureSize / outerBounds.size;
+
+		Vector2 outerOffset = new(
+			outerBounds.x / textureSize.x,
+			1 - outerBounds.y / textureSize.y - 1 / outerFragments.y // FUCK YOU, UNITY! WE COULD'VE BEEN FRIENDS. ⚔️ THE FIGHT IS ON.
+		);
+
+		Debug.Log($"sprn: {ParentSpriteRenderer.sprite.name} / texSize: {textureSize} / outerBounds: {outerBounds} / outerFragments: {outerFragments} / outerOffset: {outerOffset}");
+		// Debug.Log($"sprn: {ParentSpriteRenderer.sprite.name} / tro: {ParentSpriteRenderer.sprite.textureRectOffset}");
+
 		_spriteRenderer.sprite = ParentSpriteRenderer.sprite;
 		_spriteRenderer.transform.localScale = ParentSpriteRenderer.transform.localScale;
-		_spriteRenderer.material.SetVector("_ClipSize", new Vector2(1f / ShatterFragments.x, 1f / ShatterFragments.y));
+		_spriteRenderer.material.SetVector("_ClipSize", new Vector2(1f / ShatterFragments.x / outerFragments.x, 1f / ShatterFragments.y / outerFragments.y));
+		_spriteRenderer.material.SetTexture("_MainTex", ParentSpriteRenderer.sprite.texture);
 
-		float offsetX = 1f * ShatterFragmentOffset.x / ShatterFragments.x;
-		float offsetY = 1f * ShatterFragmentOffset.y / ShatterFragments.y;
+		float offsetX = (float)ShatterFragmentOffset.x / (float)ShatterFragments.x / (float)outerFragments.x + (float)outerOffset.x;
+		float offsetY = (float)ShatterFragmentOffset.y / (float)ShatterFragments.y / (float)outerFragments.y + (float)outerOffset.y;
 		_spriteRenderer.material.SetVector("_ClipOffset", new Vector2(offsetX, offsetY));
 
+		// Debug.Log($"sfo: {ShatterFragmentOffset} / sf: {ShatterFragments} / offset: {offsetX}, {offsetY}");
+
 		_freezeY = transform.position.y - _spriteRenderer.bounds.size.y * (1 - offsetY) + Random.Range(-1f, 1f);
+
 
 		Destroy(gameObject, Lifetime);
 	}
@@ -37,6 +56,11 @@ public class ShatterPieceController : MonoBehaviour {
 		_spriteRenderer.material.SetFloat("_GlobalAlpha", Mathf.Lerp(1f, 0f, (Time.time - _timeStart) / Lifetime));
 
 		if (transform.position.y < _freezeY) {
+			if (!_debugLog) {
+				_debugLog = true;
+				// Debug.Log($"FreezeY: {_freezeY}");
+			}
+
 			GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
 		}
 	}

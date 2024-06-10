@@ -1,7 +1,7 @@
 using UnityEngine;
 using BehaviorTree;
 
-public class CheckEnemyInAttackRange : Node {
+public class CheckTargetInAttackRange : Node {
 
 	public override NodeState Evaluate(BaseBehaviourTree tree) {
 		GameObject target = tree.Target;

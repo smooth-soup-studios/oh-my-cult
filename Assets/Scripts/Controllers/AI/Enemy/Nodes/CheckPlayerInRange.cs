@@ -1,11 +1,11 @@
 using BehaviorTree;
 using UnityEngine;
 
-public class CheckEnemyInRange : Node {
+public class CheckPlayerInRange : Node {
 
 	private static int _enemyLayerMask;
 
-	public CheckEnemyInRange() {
+	public CheckPlayerInRange() {
 		_enemyLayerMask = 1 << LayerMask.NameToLayer("Player");
 	}
 

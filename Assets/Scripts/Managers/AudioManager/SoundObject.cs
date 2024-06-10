@@ -11,7 +11,16 @@ public class SoundObject {
 	[Range(.1f, 3f)]
 	public float Pitch = 1;
 
+	public bool PlayOnAwake;
 	public bool Loop;
-
+	
+	public AudioType SoundType;
 	[HideInInspector] public AudioSource Source;
+}
+
+
+public enum AudioType {
+	Master,
+	Music,
+	FX
 }

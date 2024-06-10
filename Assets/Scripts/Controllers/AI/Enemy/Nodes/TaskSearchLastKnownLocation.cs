@@ -14,7 +14,6 @@ public class TaskSearchLastKnownLocation : Node {
 
 		if (Vector2.Distance(_transform.position, target) > 1f) {
 			tree.Agent.SetDestination(target);
-			tree.Agent.speed = 20;
 		}
 		if (Vector2.Distance(_transform.position, target) < 1f) {
 			tree.SearchLocation = Vector3.zero;

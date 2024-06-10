@@ -13,6 +13,7 @@ public abstract class BaseItemPickupInteractable : BaseInteractable {
 		base.Start();
 		RendererOfSprites = GetComponent<SpriteRenderer>();
 		TooltipController = GetComponent<TooltipController>();
+		UpdateSprite();
 	}
 
 

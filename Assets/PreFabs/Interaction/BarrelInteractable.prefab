@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8257976234912735177}
   - component: {fileID: 611465640628302}
   - component: {fileID: 6032906832402924645}
+  - component: {fileID: 2306939559723431462}
   m_Layer: 0
   m_Name: BarrelInteractable
   m_TagString: Untagged
@@ -160,3 +161,19 @@ MonoBehaviour:
   ShatterLifetime: 3
   ShatterFragments: {x: 8, y: 8}
   FragmentOffsetRandom: 2
+--- !u!114 &2306939559723431462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5038953582178386077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4950a7b001ee35a49912b3776df14475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tooltipPrefab: {fileID: 7369165516556784984, guid: 71f937e3ad8c0634ba19b8e0449f9667, type: 3}
+  TooltipText: Attack
+  Key: Space
+  Type: 1

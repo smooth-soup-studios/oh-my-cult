@@ -13,14 +13,16 @@ public class BossIdleState : BossBaseState {
 	}
 	public override void UpdateState() {
 		if (_switchState) {
-				switch (Boss.StateCounter) {
+			switch (Boss.StateCounter) {
 				case 0:
+					Boss.BossAttacks.FlashSlam(Boss.Direction, BossAttackType.SLAm);
 					Boss.SwitchState("Slam");
 					break;
 				case 1:
 					Boss.SwitchState("Charge");
 					break;
 				case 2:
+					Boss.BossAttacks.FlashRoar(Boss.Direction, BossAttackType.ROAR);
 					Boss.SwitchState("Roar");
 					break;
 				case 3:
@@ -28,19 +30,20 @@ public class BossIdleState : BossBaseState {
 					break;
 			}
 		}
-		else if (Vector2.Distance(Boss.Player.transform.position, Boss.transform.position) >= 100f) {
+		else if (Vector2.Distance(Boss.Player.transform.position, Boss.transform.position) >= 5f && Boss.WaitForWalking == false) {
 			Boss.SwitchState("Move");
 		}
 		Boss.Movement = (Boss.Player.transform.position - Boss.transform.position).normalized;
 		Boss.BossAnimation.SetFloat("X", Boss.Movement.x);
 		Boss.BossAnimation.SetFloat("Y", Boss.Movement.y);
+
 	}
 	public override void ExitState() {
 		Boss.StartCoroutine(Boss.FlashRed());
 	}
 
 	IEnumerator SwitchTime() {
-		yield return new WaitForSecondsRealtime(5f);
+		yield return new WaitForSecondsRealtime(1.5f);
 		_switchState = true;
 	}
 

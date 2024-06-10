@@ -28,7 +28,7 @@ public class WeaponItem : InteractableItem {
 		}
 	}
 
-	protected void DoPrimaryDamage(HealthController enemy) {
+	protected virtual void DoPrimaryDamage(HealthController enemy) {
 		if (ScreenShakeManager.Instance) {
 			ShakeLayer DamageShakeLayer = ScreenShakeManager.Instance.GetOrAddLayer("PrimaryDamage", true);
 			DamageShakeLayer.SetShakeThenStop(2, 2);
@@ -54,7 +54,7 @@ public class WeaponItem : InteractableItem {
 		}
 	}
 
-	protected void DoSecondaryDamage(HealthController enemy) {
+	protected virtual void DoSecondaryDamage(HealthController enemy) {
 		if (ScreenShakeManager.Instance) {
 			ShakeLayer DamageShakeLayer = ScreenShakeManager.Instance.GetOrAddLayer("SecondaryDamage", true);
 			DamageShakeLayer.SetShakeThenStop(2, 2);

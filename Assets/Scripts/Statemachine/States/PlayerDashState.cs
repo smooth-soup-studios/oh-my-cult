@@ -16,6 +16,7 @@ public class PlayerDashState : BaseState {
 		StateMachine.StartCoroutine(DashTime());
 		UIManager.Instance.DashStart = Time.time;
 		StateMachine.EchoDashController.StartEcho();
+		EventBus.Instance.TriggerEvent(EventType.AUDIO_PLAY, "Dash");
 	}
 
 	public override void UpdateState() {

@@ -16,13 +16,9 @@ public class BossSlamAttack : BossBaseState {
 	}
 	public override void UpdateState() {
 		if (_firstSlam) {
-			Boss.BossAttacks.SlamAttack();
+
+			Boss.BossAttacks.Attack(Boss.Direction, BossAttackType.SLAm);
 			_firstSlam = false;
-			Boss.StartCoroutine(SeccondSlam());
-		}
-		else if (_seccondSlam) {
-			Boss.BossAttacks.SlamAttack();
-			_seccondSlam = false;
 		}
 		if (_switchState) {
 			Boss.SwitchState("Idle");
@@ -38,17 +34,14 @@ public class BossSlamAttack : BossBaseState {
 	}
 
 	IEnumerator SwitchState() {
-		yield return new WaitForSecondsRealtime(1.04f);
+		yield return new WaitForSecondsRealtime(1.05f);
 		_switchState = true;
 	}
 	IEnumerator FirstSlam() {
-		yield return new WaitForSecondsRealtime(0.16f);
+		yield return new WaitForSecondsRealtime(0.6f);
 		_firstSlam = true;
 	}
-	IEnumerator SeccondSlam() {
-		yield return new WaitForSecondsRealtime(0.7f);
-		_seccondSlam = true;
-	}
+
 
 
 }

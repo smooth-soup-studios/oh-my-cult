@@ -18,8 +18,8 @@ public class BossChargeState : BossBaseState {
 			ChargeAttack();
 		}
 		else if (Boss.Enemy == true) {
+			Boss.BossAttacks.FlashSlam(Boss.Direction, BossAttackType.SLAm);
 			Boss.SwitchState("ChargeAttack");
-			Logger.Log("attack", "Attack");
 		}
 		else {
 			Boss.SwitchState("Idle");

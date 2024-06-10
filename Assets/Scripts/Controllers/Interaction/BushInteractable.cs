@@ -46,6 +46,8 @@ public class BushInteractable : BaseInteractable {
 
 	public override void OnSelect() {
 	}
+	public override void OnSelectWhileDisabled() {
+	}
 
 	public override void SaveData(GameData data) {
 	}

@@ -9,9 +9,9 @@ public class DynamicZoomController : MonoBehaviour {
 	public GameObject CombatCenterFollow;
 
 	public bool FrozenOnPlayer = false;
-	public float ZoomSpeed = 5;
-	public float MinZoom = 80;
-	public float MaxZoom = 95;
+	public float ZoomSpeed = 1;
+	public float MinZoom = 5;
+	public float MaxZoom = 7;
 
 	private List<GameObject> _enemies = new();
 	private CinemachineVirtualCamera _virtualCamera;

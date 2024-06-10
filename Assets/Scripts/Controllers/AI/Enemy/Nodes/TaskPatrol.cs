@@ -41,8 +41,8 @@ public class TaskPatrol : Node {
 				_waitCounter = 0;
 				_waiting = true;
 				_currentWaypointIndex = (_currentWaypointIndex + 1) % _waypoints.Length;
-					tree.Agent.destination = _waypoints[_currentWaypointIndex].position;
-				}
+				tree.Agent.destination = _waypoints[_currentWaypointIndex].position;
+			}
 			tree.Agent.destination = _waypoints[_currentWaypointIndex].position;
 		}
 		State = NodeState.RUNNING;

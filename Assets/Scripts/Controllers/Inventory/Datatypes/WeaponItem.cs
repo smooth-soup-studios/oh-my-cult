@@ -16,7 +16,7 @@ public class WeaponItem : InteractableItem {
 				if (IsTargetUnObstructed(source, obj)) {
 					EventBus.Instance.TriggerEvent(EventType.HIT, (obj, source));
 					if (obj.TryGetComponent<HealthController>(out HealthController enemy)) {
-						enemy.TakeDamage(WeaponStats.WeaponData.Damage);
+						enemy.TakeDamage(WeaponStats.WeaponData.Damage, source);
 					}
 					if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
 						rb.AddForce(rb.mass * WeaponStats.WeaponData.Knockback * (obj.transform.position - source.transform.position).normalized, ForceMode2D.Impulse);
@@ -34,7 +34,7 @@ public class WeaponItem : InteractableItem {
 				if (IsTargetUnObstructed(source, obj)) {
 					EventBus.Instance.TriggerEvent(EventType.HIT, (obj, source));
 					if (obj.TryGetComponent<HealthController>(out HealthController enemy)) {
-						enemy.TakeDamage(WeaponStats.WeaponData.Damage);
+						enemy.TakeDamage(WeaponStats.WeaponData.Damage, source);
 					}
 					if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
 						rb.AddForce(rb.mass * WeaponStats.WeaponData.Knockback * (obj.transform.position - source.transform.position).normalized, ForceMode2D.Impulse);

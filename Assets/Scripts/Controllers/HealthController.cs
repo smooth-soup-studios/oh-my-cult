@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
+// [RequireComponent(typeof(ShatterController))]
 public class HealthController : MonoBehaviour, ISaveable {
 	private string _logname = "Health controller";
 	[field: SerializeField, Header("Object information")] public string ObjectId { get; private set; }
@@ -14,8 +15,11 @@ public class HealthController : MonoBehaviour, ISaveable {
 	[SerializeField] Event _lowHealth;
 	bool _isLowHealthEventPosted;
 
+	private ShatterController _shatterController;
+
 	void Awake() {
 		_currentHealth = _maxHealth;
+		_shatterController = GetComponent<ShatterController>();
 	}
 
 	private void Start() {
@@ -26,6 +30,10 @@ public class HealthController : MonoBehaviour, ISaveable {
 	}
 
 	void Update() {
+		if (Input.GetKeyDown(KeyCode.K)) {
+			_shatterController?.Shatter(new Vector3(gameObject.transform.position.x + 2, gameObject.transform.position.y - 2, gameObject.transform.position.z));
+		}
+
 		CheckLowHealth(() => {
 			if (_isLowHealthEventPosted) {
 				return;
@@ -45,7 +53,7 @@ public class HealthController : MonoBehaviour, ISaveable {
 		}
 	}
 
-	public void TakeDamage(float damage) {
+	public void TakeDamage(float damage, GameObject source) {
 		if (_isInvulnerable) {
 			Logger.Log(_logname, $"The {name} took no damage becouse it is invulnerable!");
 		}
@@ -56,6 +64,7 @@ public class HealthController : MonoBehaviour, ISaveable {
 		StartCoroutine(FlashRed());
 
 		if (_currentHealth <= 0) {
+			_shatterController.Shatter(source);
 			EventBus.Instance.TriggerEvent<GameObject>(EventType.DEATH, gameObject);
 			Logger.Log(_logname, $"The {name} is dead!");
 		}

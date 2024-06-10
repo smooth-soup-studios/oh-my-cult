@@ -16,7 +16,7 @@ public class BossRoarState : BossBaseState {
 	public override void UpdateState() {
 		Boss.CheckForPlayer();
 		if (_attackCooldown) {
-			Boss.BossAttacks.RoarAttack();
+			Boss.BossAttacks.Attack(Boss.Direction, BossAttackType.ROAR);
 			Logger.Log("attack", "Attack");
 			_attackCooldown = false;
 		}

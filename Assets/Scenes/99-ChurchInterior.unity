@@ -1289,7 +1289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9127103987448674119, guid: 35272fe5fcc7bc748b16b680bf26a735, type: 3}
       propertyPath: m_Follow
-      value: 
+      value:
       objectReference: {fileID: 252937807}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1400,8 +1400,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4624c5477be0c6a43989b153d5f21502, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   TransportTo: 1
   ArbitraryId: 20
   RequiresKey: 0
@@ -1428,26 +1428,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
-    - target: {fileID: 419892085652963985, guid: f347ef1b1acfc9f48badee766143504d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4848697707482886390, guid: f347ef1b1acfc9f48badee766143504d, type: 3}
-      propertyPath: m_Size.x
-      value: 1.7785981
-      objectReference: {fileID: 0}
-    - target: {fileID: 4848697707482886390, guid: f347ef1b1acfc9f48badee766143504d, type: 3}
-      propertyPath: m_Size.y
-      value: 1.3461952
-      objectReference: {fileID: 0}
-    - target: {fileID: 4848697707482886390, guid: f347ef1b1acfc9f48badee766143504d, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.010809898
-      objectReference: {fileID: 0}
-    - target: {fileID: 4848697707482886390, guid: f347ef1b1acfc9f48badee766143504d, type: 3}
-      propertyPath: m_Offset.y
-      value: -1.3512592
-      objectReference: {fileID: 0}
+    - target: {fileID: 1413192362969303183, guid: f347ef1b1acfc9f48badee766143504d, type: 3}
+      propertyPath: Player
+      value:
+      objectReference: {fileID: 252937807}
     - target: {fileID: 5853670735497630154, guid: f347ef1b1acfc9f48badee766143504d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.918416
@@ -10074,7 +10058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2221874640631751959, guid: d88840ed95ba0b23bbb56b77fc63cf83, type: 3}
       propertyPath: AssignedDoor
-      value: 
+      value:
       objectReference: {fileID: 829823876}
     - target: {fileID: 3872372834644071138, guid: d88840ed95ba0b23bbb56b77fc63cf83, type: 3}
       propertyPath: m_LocalPosition.x

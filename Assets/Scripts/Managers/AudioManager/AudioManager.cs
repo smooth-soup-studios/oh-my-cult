@@ -18,6 +18,8 @@ public class AudioManager : MonoBehaviour {
 	[Tooltip("Update generated AudioSources when their SoundObjects are updated. Will mess up crossfading!")]
 	[SerializeField] private bool _updateGeneratedSources = false;
 
+	private Dictionary<string, Coroutine> _runningCoroutines = new();
+
 	private static AudioManager _audioManager;
 	public static AudioManager Instance {
 		get {
@@ -103,7 +105,8 @@ public class AudioManager : MonoBehaviour {
 			Logger.LogWarning(_logName, "Sound with name " + clipName + " not found!");
 			return;
 		}
-		StartCoroutine(FadeIn(sound, duration));
+		StopRunningCoroutines(clipName);
+		_runningCoroutines[clipName] = StartCoroutine(FadeIn(sound, duration));
 		sound.Source.Play();
 	}
 
@@ -113,7 +116,7 @@ public class AudioManager : MonoBehaviour {
 			Logger.LogWarning(_logName, "Sound with name " + clipName + " not found!");
 			return;
 		}
-		StartCoroutine(FadeOut(sound, duration));
+		_runningCoroutines[clipName] = StartCoroutine(FadeOut(sound, duration));
 	}
 
 
@@ -148,6 +151,7 @@ public class AudioManager : MonoBehaviour {
 
 		// Ensure the volume is set to the target volume
 		sound.Source.volume = sound.Volume;
+		_runningCoroutines[sound.ClipName] = null;
 	}
 
 	IEnumerator FadeOut(SoundObject sound, float duration) {
@@ -160,11 +164,18 @@ public class AudioManager : MonoBehaviour {
 
 		sound.Source.Stop();
 		sound.Source.volume = startVolume;
+		_runningCoroutines[sound.ClipName] = null;
 	}
 
 	#endregion
 
-
+	private void StopRunningCoroutines(string name) {
+		if (_runningCoroutines.TryGetValue(name, out Coroutine coroutine)) {
+			if (coroutine != null) {
+				StopCoroutine(coroutine);
+			}
+		}
+	}
 	private AudioMixerGroup ConvertAudioTypeToMixer(AudioType type) {
 		return type switch {
 			AudioType.Master => MasterMixer,

@@ -38,6 +38,7 @@ public class AudioTrigger : MonoBehaviour {
 				EventBus.Instance.TriggerEvent(EventType.AUDIO_STOP, sound.Name);
 			});
 		}
+		SceneManager.sceneUnloaded -= OnSceneULoaded;
 	}
 }
 

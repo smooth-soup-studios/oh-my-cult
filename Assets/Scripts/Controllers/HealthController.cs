@@ -15,11 +15,8 @@ public class HealthController : MonoBehaviour, ISaveable {
 	[SerializeField] Event _lowHealth;
 	bool _isLowHealthEventPosted;
 
-	private ShatterController _shatterController;
-
 	void Awake() {
 		_currentHealth = _maxHealth;
-		_shatterController = GetComponent<ShatterController>();
 	}
 
 	private void Start() {

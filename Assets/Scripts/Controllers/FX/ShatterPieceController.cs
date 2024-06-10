@@ -32,22 +32,16 @@ public class ShatterPieceController : MonoBehaviour {
 			1 - outerBounds.y / textureSize.y - 1 / outerFragments.y // FUCK YOU, UNITY! WE COULD'VE BEEN FRIENDS. ⚔️ THE FIGHT IS ON.
 		);
 
-		Debug.Log($"sprn: {ParentSpriteRenderer.sprite.name} / texSize: {textureSize} / outerBounds: {outerBounds} / outerFragments: {outerFragments} / outerOffset: {outerOffset}");
-		// Debug.Log($"sprn: {ParentSpriteRenderer.sprite.name} / tro: {ParentSpriteRenderer.sprite.textureRectOffset}");
-
 		_spriteRenderer.sprite = ParentSpriteRenderer.sprite;
 		_spriteRenderer.transform.localScale = ParentSpriteRenderer.transform.localScale;
 		_spriteRenderer.material.SetVector("_ClipSize", new Vector2(1f / ShatterFragments.x / outerFragments.x, 1f / ShatterFragments.y / outerFragments.y));
 		_spriteRenderer.material.SetTexture("_MainTex", ParentSpriteRenderer.sprite.texture);
 
-		float offsetX = (float)ShatterFragmentOffset.x / (float)ShatterFragments.x / (float)outerFragments.x + (float)outerOffset.x;
-		float offsetY = (float)ShatterFragmentOffset.y / (float)ShatterFragments.y / (float)outerFragments.y + (float)outerOffset.y;
+		float offsetX = (float)ShatterFragmentOffset.x / ShatterFragments.x / outerFragments.x + outerOffset.x;
+		float offsetY = (float)ShatterFragmentOffset.y / ShatterFragments.y / outerFragments.y + outerOffset.y;
 		_spriteRenderer.material.SetVector("_ClipOffset", new Vector2(offsetX, offsetY));
 
-		// Debug.Log($"sfo: {ShatterFragmentOffset} / sf: {ShatterFragments} / offset: {offsetX}, {offsetY}");
-
 		_freezeY = transform.position.y - _spriteRenderer.bounds.size.y * (1 - offsetY) + Random.Range(-1f, 1f);
-
 
 		Destroy(gameObject, Lifetime);
 	}
@@ -58,7 +52,6 @@ public class ShatterPieceController : MonoBehaviour {
 		if (transform.position.y < _freezeY) {
 			if (!_debugLog) {
 				_debugLog = true;
-				// Debug.Log($"FreezeY: {_freezeY}");
 			}
 
 			GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;

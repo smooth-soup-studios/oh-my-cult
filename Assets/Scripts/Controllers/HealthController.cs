@@ -30,10 +30,6 @@ public class HealthController : MonoBehaviour, ISaveable {
 	}
 
 	void Update() {
-		if (Input.GetKeyDown(KeyCode.K)) {
-			_shatterController?.Shatter(new Vector3(gameObject.transform.position.x + 2, gameObject.transform.position.y - 2, gameObject.transform.position.z));
-		}
-
 		CheckLowHealth(() => {
 			if (_isLowHealthEventPosted) {
 				return;

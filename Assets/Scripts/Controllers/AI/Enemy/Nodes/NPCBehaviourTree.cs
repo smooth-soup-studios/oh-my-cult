@@ -33,16 +33,25 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 
 			new Sequence(new List<Node>
 			{
+				new CheckActorType(ActorType.RangedEnemy),
+				new TaskChangeToRange(),
+				new CheckEnemyInRange(),
+				new CheckEnemyDistance(transform),
+				new TaskRetreatFromEnemy(transform)
+			}),
+
+			new Sequence(new List<Node>
+			{
 				new CheckAgressionDisabled(),
 				new CheckEnemyInAttackRange(),
 				new TaskAttack(),
 			}),
-			new Sequence(new List<Node>
-			{
-				new CheckAgressionDisabled(),
-				new CheckEnemyInRange(),
-				new TaskGoToTarget(),
-			}),
+			// new Sequence(new List<Node>
+			// {
+			// 	new CheckAgressionDisabled(),
+			// 	new CheckEnemyInRange(),
+			// 	new TaskGoToTarget(),
+			// }),
 			new Sequence(new List<Node>
 			{
 				new CheckLastKnownLocation(),

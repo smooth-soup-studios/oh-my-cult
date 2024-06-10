@@ -51,7 +51,7 @@ public class TaskRandomWalk : Node {
 		float randomDistance = 0;
 
 
-		if (enemyState != ActorType.NPC) {
+		if (enemyState != ActorType.RangedEnemy) {
 			randomAngle = Random.Range(0f, Mathf.PI * 2);
 			randomDistance = Random.Range(_minDistance, _maxDistance);
 		}

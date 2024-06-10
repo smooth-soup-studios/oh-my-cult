@@ -10,6 +10,10 @@ public class RoomTrigger : MonoBehaviour, ISaveable {
 	[SerializeField] private List<GameObject> _enemies;
 	[SerializeField] private bool _isCleared;
 
+	// Ensures that Unlock can only be called once either the player has entered the room,
+	// or the enemies have been detected by the physics engine. OnTrigger lifecycle is a bit annoying.
+	private bool _initialized = false;
+
 
 	private void OnTriggerEnter2D(Collider2D other) {
 		if (other.CompareTag("Enemy") && _addEnemiesDynamic) {
@@ -22,6 +26,7 @@ public class RoomTrigger : MonoBehaviour, ISaveable {
 				EventBus.Instance.TriggerEvent(EventType.INTERACT_TOGGLE, false);
 			}
 		}
+		_initialized = true;
 	}
 
 	private void OnTriggerExit2D(Collider2D other) {
@@ -42,7 +47,7 @@ public class RoomTrigger : MonoBehaviour, ISaveable {
 	}
 
 	private void Update() {
-		if (_enemies.Count <= 0) {
+		if (_enemies.Count <= 0 && _initialized) {
 			UnlockArea();
 		}
 	}

@@ -14,5 +14,6 @@ public class ActorStats : ScriptableObject {
 public enum ActorType {
 	NPC,
 	MeleeEnemy,
-	RangedEnemy
+	RangedEnemy,
+	BearEnemy
 }

@@ -13,8 +13,6 @@ public class ShatterPieceController : MonoBehaviour {
 
 	private float _freezeY;
 
-	bool _debugLog = false;
-
 	private void Awake() {
 		_spriteRenderer = GetComponent<SpriteRenderer>();
 	}
@@ -50,10 +48,6 @@ public class ShatterPieceController : MonoBehaviour {
 		_spriteRenderer.material.SetFloat("_GlobalAlpha", Mathf.Lerp(1f, 0f, (Time.time - _timeStart) / Lifetime));
 
 		if (transform.position.y < _freezeY) {
-			if (!_debugLog) {
-				_debugLog = true;
-			}
-
 			GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
 		}
 	}

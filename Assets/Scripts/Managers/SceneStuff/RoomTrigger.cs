@@ -47,7 +47,7 @@ public class RoomTrigger : MonoBehaviour, ISaveable {
 	}
 
 	private void Update() {
-		if (_enemies.Count <= 0 && _initialized) {
+		if (_enemies.Count <= 0 && _initialized && !_isCleared) {
 			UnlockArea();
 		}
 	}

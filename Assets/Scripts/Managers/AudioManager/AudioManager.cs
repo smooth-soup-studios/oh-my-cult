@@ -103,10 +103,8 @@ public class AudioManager : MonoBehaviour {
 			Logger.LogWarning(_logName, "Sound with name " + clipName + " not found!");
 			return;
 		}
-		if (!sound.Source.isPlaying) {
-			StartCoroutine(FadeIn(sound, duration));
-			sound.Source.Play();
-		}
+		StartCoroutine(FadeIn(sound, duration));
+		sound.Source.Play();
 	}
 
 	protected void Stop(string clipName, float duration = 0f) {

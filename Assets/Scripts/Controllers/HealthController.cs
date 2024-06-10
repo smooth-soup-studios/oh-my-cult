@@ -49,7 +49,7 @@ public class HealthController : MonoBehaviour, ISaveable {
 		}
 	}
 
-	public void TakeDamage(float damage, GameObject source) {
+	public void TakeDamage(float damage) {
 		if (_isInvulnerable) {
 			Logger.Log(_logname, $"The {name} took no damage becouse it is invulnerable!");
 		}
@@ -60,9 +60,6 @@ public class HealthController : MonoBehaviour, ISaveable {
 		StartCoroutine(FlashRed());
 
 		if (_currentHealth <= 0) {
-			if (_shatterController) {
-				_shatterController.Shatter(source);
-			}
 			EventBus.Instance.TriggerEvent<GameObject>(EventType.DEATH, gameObject);
 			Logger.Log(_logname, $"The {name} is dead!");
 		}

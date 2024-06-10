@@ -10,9 +10,12 @@ public class ShatterController : MonoBehaviour {
 	public float FragmentOffsetRandom = 2f;
 
 	private SpriteRenderer _spriteRenderer;
+	private GameObject _lastHitSource;
 
 	private void Awake() {
 		_spriteRenderer = GetComponent<SpriteRenderer>();
+		EventBus.Instance.Subscribe<(GameObject target, GameObject source)>(EventType.HIT, x => { if (x.target == gameObject) _lastHitSource = x.source; });
+		EventBus.Instance.Subscribe<GameObject>(EventType.DEATH, x => { if (x == gameObject) Shatter(_lastHitSource); });
 	}
 
 	public void Shatter() {

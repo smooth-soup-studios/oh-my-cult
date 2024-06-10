@@ -31,23 +31,23 @@ public class TooltipController : MonoBehaviour {
 	}
 
 	private void Update() {
-		_label.text = TooltipText;
-		_keyLabel.text = ConvertTypeToKey(Type);
+		
 	}
 
 	public void ShowTooltip() {
 		_container.RemoveFromClassList("hidden");
 		_container.RemoveFromClassList("select");
+		UpdateTooltip();
 	}
 	public void ShowTooltip(string text) {
 		TooltipText = text;
-		_container.RemoveFromClassList("hidden");
+		ShowTooltip();
 	}
 	public void ShowTooltip(string text, string key) {
 		TooltipText = text;
 		Key = key;
 		Type = TooltipType.Custom;
-		_container.RemoveFromClassList("hidden");
+		ShowTooltip();
 	}
 	public void HideTooltip() {
 		_container.AddToClassList("hidden");
@@ -62,6 +62,12 @@ public class TooltipController : MonoBehaviour {
 		}
 	}
 
+	private void UpdateTooltip (){
+		_label.text = TooltipText;
+		_keyLabel.text = ConvertTypeToKey(Type);
+		ChangeSprite();
+	}
+
 
 	private string ConvertTypeToKey(TooltipType type) {
 		InputSystemRebindManager _userInput = FindObjectOfType<InputSystemRebindManager>();
@@ -72,6 +78,16 @@ public class TooltipController : MonoBehaviour {
 			TooltipType.Custom => Key,
 			_ => "E",
 		};
+	}
+
+	private void ChangeSprite() {
+		if (_keyLabel.text.Length > 1){
+			_icon.style.backgroundImage = new StyleBackground(AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Art/Menu/Keyboard_Key_Medium.png"));
+			_icon.style.width = 150;
+		}else{
+			_icon.style.backgroundImage = new StyleBackground(AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Art/Menu/Keyboard_Key_Small.png"));
+			_icon.style.width = 64;
+		}
 	}
 
 #if UNITY_EDITOR

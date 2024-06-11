@@ -14,7 +14,7 @@ public class NoteInteracteble : BaseInteractable {
 	public override void Interact(GameObject interactor) {
 		base.Interact(interactor);
 		if (UIManager.Instance && Note) {
-			UIManager.Instance.ShowDialogBox(Note.NoteHeader, Note.NoteText, 2f);
+			UIManager.Instance.ShowDialogBox(Note.Title, Note.Content, Note.Duration);
 		}
 	}
 
@@ -34,7 +34,7 @@ public class NoteInteracteble : BaseInteractable {
 			_renderer = GetComponent<SpriteRenderer>();
 		}
 		if (Note) {
-			_renderer.sprite = Note.NoteSprite;
+			_renderer.sprite = Note.Sprite;
 		}
 	}
 }

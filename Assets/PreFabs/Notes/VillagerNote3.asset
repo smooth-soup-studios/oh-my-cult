@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2b69f79565c6883190c1c0443ab6601, type: 3}
   m_Name: VillagerNote3
   m_EditorClassIdentifier: 
-  NoteSprite: {fileID: 21300000, guid: bfa65ead61e37e343b41048aef287150, type: 3}
-  NoteHeader: Task list
-  NoteText: 'When I went out on my morning walk, I came across this wonderfull stick!
+  Sprite: {fileID: 21300000, guid: bfa65ead61e37e343b41048aef287150, type: 3}
+  Title: Task list
+  Content: 'When I went out on my morning walk, I came across this wonderful stick!
 
     It
-    even has a pointy end ... Surely for extra stability!'
+    even has a pointy end... Surely useful for extra stability!'
+  Duration: 4

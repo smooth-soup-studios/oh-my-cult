@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BossIdleState : BossBaseState {
@@ -15,7 +14,7 @@ public class BossIdleState : BossBaseState {
 		if (_switchState) {
 			switch (Boss.StateCounter) {
 				case 0:
-					Boss.BossAttacks.FlashSlam(Boss.Direction, BossAttackType.SLAm);
+					Boss.BossAttacks.FlashSlam(Boss.Direction, BossAttackType.SLAM);
 					Boss.SwitchState("Slam");
 					break;
 				case 1:

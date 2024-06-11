@@ -33,7 +33,7 @@ public class Boss : MonoBehaviour, ISaveable {
 				SceneManager.LoadScene(SceneDefs.EndingScreen);
 			}
 		});
-			StartCoroutine(WaitForWalk());
+		StartCoroutine(WaitForWalk());
 		Player = GameObject.FindGameObjectWithTag("Player").transform;
 
 

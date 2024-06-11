@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using Managers;
 
 public class BossRoarState : BossBaseState {
 	public BossRoarState(Boss boss, string name) : base(boss, name) { }

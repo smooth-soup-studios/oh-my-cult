@@ -78,8 +78,5 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 		HitContainer.transform.rotation = Quaternion.Euler(0, 0, angle);
 	}
 
-	public void DoAttack() {
-		ActorAnimator.SetBool("IsAttacking", false);
-		Stats.EnemyWeapon.PrimaryAction(gameObject);
-	}
+
 }

@@ -9,7 +9,7 @@ public class DynamicZoomController : MonoBehaviour {
 	public GameObject CombatCenterFollow;
 
 	public bool FrozenOnPlayer = false;
-	public float ZoomSpeed = 1;
+	public float ZoomSpeed = 5;
 	public float MinZoom = 5;
 	public float MaxZoom = 7;
 
@@ -42,7 +42,7 @@ public class DynamicZoomController : MonoBehaviour {
 		}
 		else {
 			CombatCenterFollow.transform.localPosition = CenterPoint();
-			targetZoom = Mathf.Clamp(Mathf.Lerp(50, 95, MaxDist().magnitude / _collider.radius), MinZoom, MaxZoom);
+			targetZoom = Mathf.Clamp(Mathf.Lerp(MinZoom, MaxZoom, MaxDist().magnitude / _collider.radius), MinZoom, MaxZoom);
 		}
 
 		_virtualCamera.m_Lens.OrthographicSize = Mathf.Lerp(_virtualCamera.m_Lens.OrthographicSize, targetZoom, Time.deltaTime * ZoomSpeed);

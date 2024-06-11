@@ -95,7 +95,11 @@ public class SaveManager : MonoBehaviour {
 	/// </summary>
 	public void NewGame() {
 		SendToLogger("Starting new game. Creating default gamedata");
-		GameData = new();
+		GameData newGameData = new();
+		if (GameData != null) {
+			newGameData.PlayerSettings = GameData.PlayerSettings;
+		}
+		GameData = newGameData;
 	}
 
 	/// <summary>

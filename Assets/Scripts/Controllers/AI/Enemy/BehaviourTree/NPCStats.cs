@@ -5,9 +5,11 @@ public class ActorStats : ScriptableObject {
 	public float Speed = 2f;
 	public float DetectionRange = 12.5f;
 	public float AttackRange = 1.5f;
+	public float RetreatRange = 1f;
 
 	[Tooltip("Change from MeleeEnemy to the desired enemy type")]
 	public WeaponItem EnemyWeapon;
+	public GameObject EnemyProjectile;
 
 }
 

@@ -10,24 +10,29 @@ public class TaskRetreatFromEnemy : Node {
 	}
 
 	public override NodeState Evaluate(BaseBehaviourTree tree) {
-
-
+		Transform ActorPos = tree.gameObject.transform;
 		Vector3 target = tree.Target.transform.position;
 
-		Vector3 dirToPlayer = _transform.position - target;
-		Vector3 newPosition = _transform.position + dirToPlayer;
+		tree.Movement = (tree.Target.transform.position - tree.Agent.transform.position).normalized;
+		tree.ActorAnimator.SetFloat("X", -tree.Movement.x);
+		tree.ActorAnimator.SetFloat("Y", -tree.Movement.y);
 
-		if (Vector3.Distance(_transform.position, target) < 3f) {
+
+        Vector3 dirToPlayer = _transform.position - target;
+        Vector3 newPosition = _transform.position + dirToPlayer;
+
+		if (Vector3.Distance(_transform.position, target) < tree.Stats.RetreatRange) {
+			// Vector3 movePos = target;
+			// movePos = Vector3.MoveTowards(movePos, -ActorPos.position, _radius);
 			tree.Agent.SetDestination(newPosition);
-			Logger.Log("Beweeg", "RenWeg");
 		}
-		if (Vector3.Distance(_transform.position, target) > 15f) {
+		if (Vector3.Distance(_transform.position, target) > tree.Stats.RetreatRange) {
 			tree.Target = null;
-			Logger.Log("Beweeg", "RenWeg");
 			State = NodeState.FAILURE;
 			return State;
 		}
 		State = NodeState.RUNNING;
 		return State;
+
 	}
 }

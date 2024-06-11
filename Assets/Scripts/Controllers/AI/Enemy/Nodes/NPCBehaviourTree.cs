@@ -39,6 +39,22 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 				new TaskChangeToBear()
 			}),
 
+			new Sequence(new List<Node>
+			{
+				new CheckActorType(ActorType.RangedEnemy),
+				new CheckEnemyDistance(transform),
+				new TaskRetreatFromEnemy(transform)
+			}),
+
+
+			new Sequence(new List<Node>
+			{
+				new CheckActorType(ActorType.RangedEnemy),
+				new CheckPlayerInRange(),
+				new TaskShoot()
+			}),
+
+
 			// Enemy - Attack when in range
 			new Sequence(new List<Node>
 			{

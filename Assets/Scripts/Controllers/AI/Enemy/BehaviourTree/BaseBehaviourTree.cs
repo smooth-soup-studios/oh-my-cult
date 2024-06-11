@@ -53,6 +53,8 @@ namespace BehaviorTree {
 				Gizmos.DrawWireSphere(transform.position, Stats.AttackRange);
 				Gizmos.color = Color.red;
 				Gizmos.DrawWireSphere(transform.position, Stats.DetectionRange);
+				Gizmos.color = Color.green;
+				Gizmos.DrawWireSphere(transform.position, Stats.RetreatRange);
 			}
 		}
 

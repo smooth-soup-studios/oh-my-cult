@@ -12,13 +12,22 @@ public class CheckEnemyDistance : Node {
 
 	public override NodeState Evaluate(BaseBehaviourTree tree) {
 
+		GameObject target = tree.Target;
+		if (target != null) {
 
-		if (Vector2.Distance(_transform.position, tree.Target.transform.position) < 10f) {
-			Logger.Log("Check", "Distance");
+
+			if (Vector3.Distance(_transform.position, target.transform.position) > tree.Stats.RetreatRange) {
+				tree.Target = null;
+				State = NodeState.FAILURE;
+				return State;
+			}
 			State = NodeState.SUCCESS;
 			return State;
 		}
-		State = NodeState.SUCCESS;
+
+
+
+		State = NodeState.FAILURE;
 		return State;
 	}
 }

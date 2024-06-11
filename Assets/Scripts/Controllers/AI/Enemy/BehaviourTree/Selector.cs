@@ -5,8 +5,6 @@ namespace BehaviorTree {
 		public Selector() : base() { }
 		public Selector(List<Node> children) : base(children) { }
 		public override NodeState Evaluate(BaseBehaviourTree tree) {
-
-
 			foreach (Node node in Children) {
 				switch (node.Evaluate(tree)) {
 					case NodeState.FAILURE:

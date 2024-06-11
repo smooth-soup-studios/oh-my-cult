@@ -95,7 +95,7 @@ public class SaveManager : MonoBehaviour {
 	/// </summary>
 	public void NewGame() {
 		SendToLogger("Starting new game. Creating default gamedata");
-		GameData = new GameData();
+		GameData = new();
 	}
 
 	/// <summary>
@@ -119,7 +119,6 @@ public class SaveManager : MonoBehaviour {
 
 			Saveables.ForEach(saveable => saveable.LoadData(GameData));
 		}
-
 	}
 
 	/// <summary>

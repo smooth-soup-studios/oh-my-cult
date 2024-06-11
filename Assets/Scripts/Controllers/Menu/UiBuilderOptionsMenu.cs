@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.Audio;
 
-public class UiBuilderOptionsMenu : MonoBehaviour {
+public class UiBuilderOptionsMenu : MonoBehaviour, ISaveable {
 	private static readonly string _logname = "OptionsMenu";
 	Button _keyBindingButton;
 	Button _backButton;
@@ -47,12 +47,14 @@ public class UiBuilderOptionsMenu : MonoBehaviour {
 	}
 
 	void initializeSettings() {
+		_audioMixer.GetFloat("masterVolume", out _baseVolume);
 		_masterVolume.value = _baseVolume;
-		OnMasterSound(_baseVolume);
+
+		_audioMixer.GetFloat("musicVolume", out _baseVolume);
 		_musicVolume.value = _baseVolume;
-		OnMusicSound(_baseVolume);
+
+		_audioMixer.GetFloat("soundFXVolume", out _baseVolume);
 		_fxVolume.value = _baseVolume;
-		OnFXSound(_baseVolume);
 
 		_quality.choices.Clear();
 		_quality.choices.Add("Very Low");
@@ -120,4 +122,15 @@ public class UiBuilderOptionsMenu : MonoBehaviour {
 
 	}
 
+	public void LoadData(GameData data) {
+		int QualityLevel = data.PlayerSettings.QualityIndex;
+		if (QualityLevel > -1) {
+			QualitySettings.SetQualityLevel(QualityLevel, true);
+		}
+		initializeSettings();
+	}
+
+	public void SaveData(GameData data) {
+		data.PlayerSettings.QualityIndex = QualitySettings.GetQualityLevel();
+	}
 }

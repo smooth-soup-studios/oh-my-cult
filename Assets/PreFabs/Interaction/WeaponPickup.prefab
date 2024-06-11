@@ -187,3 +187,5 @@ MonoBehaviour:
   TooltipText: Pick up
   Key: E
   Type: 0
+  _smallKey: {fileID: 21300000, guid: cfdfcebd1e6bcac4f9891afc4a3e3c1e, type: 3}
+  _bigKey: {fileID: 21300000, guid: d29e43eb5be7c0f448ee52d813ee532e, type: 3}

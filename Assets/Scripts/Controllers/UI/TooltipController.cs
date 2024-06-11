@@ -12,6 +12,10 @@ public class TooltipController : MonoBehaviour {
 	public string Key = "E";
 	public TooltipType Type;
 
+	[SerializeField] private Sprite _smallKey;
+
+	[SerializeField] private Sprite _bigKey;
+
 	private UIDocument _doc;
 	private VisualElement _root;
 
@@ -79,11 +83,11 @@ public class TooltipController : MonoBehaviour {
 
 	private void ChangeSprite() {
 		if (_keyLabel.text.Length > 1) {
-			_icon.style.backgroundImage = new StyleBackground(AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Art/Menu/Keyboard_Key_Medium.png"));
+			_icon.style.backgroundImage = new StyleBackground(_bigKey);
 			_icon.style.width = 150;
 		}
 		else {
-			_icon.style.backgroundImage = new StyleBackground(AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Art/Menu/Keyboard_Key_Small.png"));
+			_icon.style.backgroundImage = new StyleBackground(_smallKey);
 			_icon.style.width = 64;
 		}
 	}
@@ -93,6 +97,12 @@ public class TooltipController : MonoBehaviour {
 		if (_tooltipPrefab == null) {
 			GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/UI/Tooltip.prefab");
 			_tooltipPrefab = prefab;
+		}
+		if (_bigKey == null) {
+			_bigKey = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Art/Menu/Keyboard_Key_Medium.png");
+		}
+		if (_smallKey == null) {
+			_smallKey = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Art/Menu/Keyboard_Key_Small.png");
 		}
 	}
 #endif

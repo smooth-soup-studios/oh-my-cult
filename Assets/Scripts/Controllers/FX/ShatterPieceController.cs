@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -21,7 +20,8 @@ public class ShatterPieceController : MonoBehaviour {
 		_timeStart = Time.time;
 
 		// This stuff EXPLICITLY has to be in the Start function because the parent & other settings gets set after instantiation.
-		Vector2 textureSize = ParentSpriteRenderer.sprite.texture.Size();
+		Texture2D baseTexture = ParentSpriteRenderer.sprite.texture;
+		Vector2 textureSize = new(baseTexture.width, baseTexture.height);
 		Rect outerBounds = ParentSpriteRenderer.sprite.rect;
 		Vector2 outerFragments = textureSize / outerBounds.size;
 

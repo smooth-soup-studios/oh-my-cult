@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 1422463304999281607}
   - component: {fileID: 7434633484598413398}
   - component: {fileID: 8296431218032627972}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: DynamicZoomCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,9 +145,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CombatCenterFollow: {fileID: 655015400041076805}
   FrozenOnPlayer: 0
+  ZoomInOnAction: 0
   ZoomSpeed: 1
   MinZoom: 5
-  MaxZoom: 7
+  MaxZoom: 5
 --- !u!1 &6908342227108556609
 GameObject:
   m_ObjectHideFlags: 0

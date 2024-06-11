@@ -22,9 +22,7 @@ public class DynamicZoomController : MonoBehaviour {
 		if (CombatCenterFollow == null) {
 			CombatCenterFollow = GameObject.Find("CombatCenterFollow");
 		}
-		if (!TryGetComponent(out _collider)) {
-			throw new System.Exception("DynamicZoomController must have a CircleCollider2D component");
-		}
+		_collider = GetComponent<CircleCollider2D>();
 
 	}
 

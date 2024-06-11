@@ -19,7 +19,7 @@ namespace BehaviorTree {
 		public NavMeshAgent Agent { get; set; }
 		public Animator ActorAnimator { get; set; }
 		public Vector2 Movement { get; set; }
-		public float AttackCounter { get; set; } = -0.18f;
+		public float AttackCounter { get; set; } = 0;
 		public GameObject Target { get; set; } = null; //TF is this for? Should probable be replaced?
 		public Vector3 SearchLocation { get; set; } = Vector3.zero;
 

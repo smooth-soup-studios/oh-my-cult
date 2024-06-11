@@ -22,9 +22,7 @@ public class TaskPatrol : Node {
 		tree.Movement = (_waypoints[_currentWaypointIndex].transform.position - tree.Agent.transform.position).normalized;
 		tree.ActorAnimator.SetFloat("X", tree.Movement.x);
 		tree.ActorAnimator.SetFloat("Y", tree.Movement.y);
-		tree.AttackCounter = -0.18f;
-		// tree.Agent.speed = 20f;
-		// tree.Agent.acceleration = 80;
+		
 		if (_waiting) {
 			_waitCounter += Time.deltaTime;
 			if (_waitCounter >= _waitTime) {

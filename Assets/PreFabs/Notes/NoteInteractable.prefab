@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: NoteInteractable-0
-  InteractionRange: 15
+  InteractionRange: 1
   AutoTrigger: 0
   SingleUse: 0
   Note: {fileID: 11400000, guid: ffdf42f979af59019b740d6a7d444b6e, type: 2}

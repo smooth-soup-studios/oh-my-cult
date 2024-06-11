@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using Managers;
 
 public class BossRoarState : BossBaseState {
 	public BossRoarState(Boss boss, string name) : base(boss, name) { }
@@ -16,8 +15,7 @@ public class BossRoarState : BossBaseState {
 	public override void UpdateState() {
 		Boss.CheckForPlayer();
 		if (_attackCooldown) {
-			Boss.BossAttacks.RoarAttack();
-			Logger.Log("attack", "Attack");
+			Boss.BossAttacks.Attack(Boss.Direction, BossAttackType.ROAR);
 			_attackCooldown = false;
 		}
 

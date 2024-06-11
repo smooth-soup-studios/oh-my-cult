@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BossChargeState : BossBaseState {
@@ -18,8 +16,8 @@ public class BossChargeState : BossBaseState {
 			ChargeAttack();
 		}
 		else if (Boss.Enemy == true) {
+			Boss.BossAttacks.FlashSlam(Boss.Direction, BossAttackType.SLAM);
 			Boss.SwitchState("ChargeAttack");
-			Logger.Log("attack", "Attack");
 		}
 		else {
 			Boss.SwitchState("Idle");

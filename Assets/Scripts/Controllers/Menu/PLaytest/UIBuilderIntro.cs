@@ -17,6 +17,6 @@ public class UIBuilderIntro : MonoBehaviour
     }
 
     void OnStartButton(){
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadSceneAsync(SceneDefs.VillageLevel);
     }
 }

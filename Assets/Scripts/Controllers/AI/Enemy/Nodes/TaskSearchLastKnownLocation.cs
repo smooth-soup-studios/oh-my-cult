@@ -10,7 +10,6 @@ public class TaskSearchLastKnownLocation : Node {
 
 	public override NodeState Evaluate(BaseBehaviourTree tree) {
 		Vector3 target = tree.SearchLocation;
-		tree.AttackCounter = -0.04f;
 
 		if (Vector2.Distance(_transform.position, target) > 1f) {
 			tree.Agent.SetDestination(target);

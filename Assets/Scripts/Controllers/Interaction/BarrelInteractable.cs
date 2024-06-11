@@ -37,6 +37,8 @@ public class BarrelInteractable : BaseInteractable {
 			_tooltipController.HideTooltip();
 		}
 	}
+	public override void OnSelectWhileDisabled() {
+	}
 
 
 	private void OnAttack(GameObject interactor) {

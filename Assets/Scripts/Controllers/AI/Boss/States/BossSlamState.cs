@@ -1,11 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BossSlamAttack : BossBaseState {
 	private bool _switchState = false;
 	private bool _firstSlam = false;
-	private bool _seccondSlam = false;
+	private bool _secondSlam = false;
 
 	public BossSlamAttack(Boss boss, string name) : base(boss, name) { }
 	public override void EnterState() {
@@ -16,13 +15,9 @@ public class BossSlamAttack : BossBaseState {
 	}
 	public override void UpdateState() {
 		if (_firstSlam) {
-			Boss.BossAttacks.SlamAttack();
+
+			Boss.BossAttacks.Attack(Boss.Direction, BossAttackType.SLAM);
 			_firstSlam = false;
-			Boss.StartCoroutine(SeccondSlam());
-		}
-		else if (_seccondSlam) {
-			Boss.BossAttacks.SlamAttack();
-			_seccondSlam = false;
 		}
 		if (_switchState) {
 			Boss.SwitchState("Idle");
@@ -33,22 +28,19 @@ public class BossSlamAttack : BossBaseState {
 	}
 	public override void ExitState() {
 		_firstSlam = false;
-		_seccondSlam = false;
+		_secondSlam = false;
 		Boss.BossAnimation.SetBool("SlamAttack", false);
 	}
 
 	IEnumerator SwitchState() {
-		yield return new WaitForSecondsRealtime(1.04f);
+		yield return new WaitForSecondsRealtime(1.05f);
 		_switchState = true;
 	}
 	IEnumerator FirstSlam() {
-		yield return new WaitForSecondsRealtime(0.16f);
+		yield return new WaitForSecondsRealtime(0.6f);
 		_firstSlam = true;
 	}
-	IEnumerator SeccondSlam() {
-		yield return new WaitForSecondsRealtime(0.7f);
-		_seccondSlam = true;
-	}
+
 
 
 }

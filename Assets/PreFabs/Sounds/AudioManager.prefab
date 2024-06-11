@@ -94,6 +94,14 @@ MonoBehaviour:
     Loop: 0
     SoundType: 2
     Source: {fileID: 0}
+  - ClipName: Fireplace
+    Clip: {fileID: 8300000, guid: 254e93b8e51d228458689694b78a7c77, type: 3}
+    Volume: 0.3
+    Pitch: 1
+    PlayOnAwake: 0
+    Loop: 1
+    SoundType: 1
+    Source: {fileID: 0}
   - ClipName: ForestAmbient
     Clip: {fileID: 8300000, guid: e1fcaffdc89f4049868d929dff30f816, type: 3}
     Volume: 1

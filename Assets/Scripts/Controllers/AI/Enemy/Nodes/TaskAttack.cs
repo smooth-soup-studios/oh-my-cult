@@ -3,13 +3,12 @@ using UnityEngine;
 
 public class TaskAttack : Node {
 
-	private float _attackTime = 0.48f;
 
 	public override NodeState Evaluate(BaseBehaviourTree tree) {
 		tree.AttackCounter += Time.deltaTime;
-		if (tree.AttackCounter >= _attackTime) {
+		if (tree.AttackCounter >= tree.Stats.AttackSpeed) {
 			tree.Stats.EnemyWeapon.PrimaryAction(tree.gameObject);
-			tree.AttackCounter = -0.18f;
+			tree.AttackCounter = 0;
 		}
 		State = NodeState.RUNNING;
 		return State;

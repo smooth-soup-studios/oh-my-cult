@@ -18,7 +18,8 @@ public class Boss : MonoBehaviour, ISaveable {
 	private bool _isAlive = true;
 	public Animator BossAnimation;
 	[HideInInspector] public Vector2 Movement;
-	// public BossRoarHitbox BossRoarHitbox;
+	[HideInInspector] public bool WaitForWalking = true;
+	public MovementDirection Direction;
 
 	void Start() {
 		if (!_isAlive) {
@@ -32,7 +33,7 @@ public class Boss : MonoBehaviour, ISaveable {
 				SceneManager.LoadScene(SceneDefs.EndingScreen);
 			}
 		});
-
+		StartCoroutine(WaitForWalk());
 		Player = GameObject.FindGameObjectWithTag("Player").transform;
 
 
@@ -59,27 +60,28 @@ public class Boss : MonoBehaviour, ISaveable {
 			RotateHitboxOnMove(Movement);
 			_oldMove = Movement;
 		}
+
 	}
 
 	private void RotateHitboxOnMove(Vector2 movement) {
 		movement = RoundVector(movement);
-		Transform HitContainer = GetComponentInChildren<BossRoarHitbox>().transform.parent;
-		Quaternion currentRotation = HitContainer.transform.rotation;
 
-		if (movement.x > 0) { //L
-			currentRotation = Quaternion.Euler(0, 0, 90);
-		}
-		else if (movement.x < 0) { //R
-			currentRotation = Quaternion.Euler(0, 0, -90);
-		}
-		else if (movement.y > 0) { //U
-			currentRotation = Quaternion.Euler(0, 0, 180);
-		}
-		else if (movement.y < 0) { //D
-			currentRotation = Quaternion.Euler(0, 0, 0);
-		}
+		float x = Mathf.Clamp(movement.x, -1, 1);
+		float y = Mathf.Clamp(movement.y, -1, 1);
 
-		HitContainer.transform.rotation = currentRotation;
+		if (x > 0 && y < 1) { //R
+			Direction = MovementDirection.RIGHT;
+		}
+		else if (x < 0 && y < 1) { //L
+			Direction = MovementDirection.LEFT;
+		}
+		else if (y > 0 && x < 1) { //U
+			Direction = MovementDirection.UP;
+
+		}
+		else if (y < 0 && x < 1) { //D
+			Direction = MovementDirection.DOWN;
+		}
 	}
 
 	private Vector2 RoundVector(Vector2 vector) {
@@ -121,22 +123,16 @@ public class Boss : MonoBehaviour, ISaveable {
 		}
 		return output;
 	}
-
-
-	private void OnDrawGizmos() {
-		if (transform == null)
-			return;
-		Gizmos.color = Color.blue;
-		Gizmos.DrawWireSphere(transform.position, Stats.ChargeRange);
-	}
-
 	public void LoadData(GameData data) {
 		if (data.SceneData.ArbitraryTriggers.ContainsKey("BossDead")) {
 			data.SceneData.ArbitraryTriggers.TryGetValue("BossDead", out _isAlive);
 		}
 	}
-
 	public void SaveData(GameData data) {
 		data.SceneData.ArbitraryTriggers["BossDead"] = isActiveAndEnabled;
+	}
+	public IEnumerator WaitForWalk() {
+		yield return new WaitForSeconds(4f);
+		WaitForWalking = false;
 	}
 }

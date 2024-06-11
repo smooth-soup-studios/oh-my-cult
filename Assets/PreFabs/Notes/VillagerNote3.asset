@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2b69f79565c6883190c1c0443ab6601, type: 3}
-  m_Name: MyNote
+  m_Name: VillagerNote3
   m_EditorClassIdentifier: 
-  NoteSprite: {fileID: 21300000, guid: bfa65ead61e37e343b41048aef287150, type: 3}
-  NoteHeader: Curious note
-  NoteText: 'I used to be an adventurer like you.
+  Sprite: {fileID: 21300000, guid: bfa65ead61e37e343b41048aef287150, type: 3}
+  Title: Task list
+  Content: 'When I went out on my morning walk, I came across this wonderful stick!
 
-    But than I took an arrow in
-    the knee!'
+    It
+    even has a pointy end... Surely useful for extra stability!'
+  Duration: 4

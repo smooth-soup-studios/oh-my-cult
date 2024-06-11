@@ -7,9 +7,10 @@ using UnityEngine;
 [RequireComponent(typeof(CircleCollider2D))]
 public class DynamicZoomController : MonoBehaviour {
 	public GameObject CombatCenterFollow;
-
 	public bool FrozenOnPlayer = false;
-	public float ZoomSpeed = 5;
+	public bool ZoomInOnAction = true;
+
+	public float ZoomSpeed = 1;
 	public float MinZoom = 5;
 	public float MaxZoom = 7;
 
@@ -35,14 +36,18 @@ public class DynamicZoomController : MonoBehaviour {
 			return;
 		}
 
-		float targetZoom = MaxZoom;
+		float targetZoom = ZoomInOnAction ? MaxZoom : MinZoom;
 
 		if (FrozenOnPlayer) {
 			CombatCenterFollow.transform.localPosition = Vector2.zero;
 		}
 		else {
 			CombatCenterFollow.transform.localPosition = CenterPoint();
-			targetZoom = Mathf.Clamp(Mathf.Lerp(MinZoom, MaxZoom, MaxDist().magnitude / _collider.radius), MinZoom, MaxZoom);
+			if (ZoomInOnAction)
+				targetZoom = Mathf.Clamp(Mathf.Lerp(MinZoom, MaxZoom, MaxDist().magnitude / _collider.radius), MinZoom, MaxZoom);
+			else {
+				targetZoom = Mathf.Clamp(Mathf.Lerp(MaxZoom, MinZoom, MaxDist().magnitude / _collider.radius), MinZoom, MaxZoom);
+			}
 		}
 
 		_virtualCamera.m_Lens.OrthographicSize = Mathf.Lerp(_virtualCamera.m_Lens.OrthographicSize, targetZoom, Time.deltaTime * ZoomSpeed);

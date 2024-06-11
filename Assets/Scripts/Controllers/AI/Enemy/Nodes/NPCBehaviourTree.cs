@@ -23,6 +23,9 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 	protected override Node SetupTree() {
 		Node root = new Selector(new List<Node>
 		{
+			// Update animator
+			new TaskUpdateAnimator(),
+
 			// Friendly NPC Behavior
 			new Sequence(new List<Node>
 			{

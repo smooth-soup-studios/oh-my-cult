@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 6748209838310189458}
   - component: {fileID: 4849591457620503528}
   - component: {fileID: 3290768021699310593}
+  - component: {fileID: 4520707863643151095}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
@@ -437,3 +438,20 @@ CapsuleCollider2D:
   m_Offset: {x: -0.021373749, y: -0.2832198}
   m_Size: {x: 0.78162384, y: 1.4335604}
   m_Direction: 0
+--- !u!114 &4520707863643151095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8507790943486014399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32888b8cadb7975458d6ab0493428768, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShatterPiecePrefab: {fileID: 2709359368759553787, guid: 37b67c4f027b7f94d97ebcf16f44f863, type: 3}
+  ShatterForce: 5
+  ShatterLifetime: 3
+  ShatterFragments: {x: 8, y: 8}
+  FragmentOffsetRandom: 2

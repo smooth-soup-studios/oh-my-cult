@@ -1,11 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BossSlamAttack : BossBaseState {
 	private bool _switchState = false;
 	private bool _firstSlam = false;
-	private bool _seccondSlam = false;
+	private bool _secondSlam = false;
 
 	public BossSlamAttack(Boss boss, string name) : base(boss, name) { }
 	public override void EnterState() {
@@ -17,7 +16,7 @@ public class BossSlamAttack : BossBaseState {
 	public override void UpdateState() {
 		if (_firstSlam) {
 
-			Boss.BossAttacks.Attack(Boss.Direction, BossAttackType.SLAm);
+			Boss.BossAttacks.Attack(Boss.Direction, BossAttackType.SLAM);
 			_firstSlam = false;
 		}
 		if (_switchState) {
@@ -29,7 +28,7 @@ public class BossSlamAttack : BossBaseState {
 	}
 	public override void ExitState() {
 		_firstSlam = false;
-		_seccondSlam = false;
+		_secondSlam = false;
 		Boss.BossAnimation.SetBool("SlamAttack", false);
 	}
 

@@ -7,12 +7,9 @@ public class BossAttackHitbox : WeaponHitbox {
 	[SerializeField] private WeaponStats _weaponData;
 	public MovementDirection Direction;
 	public BossAttackType AttackType;
-
-
-
 }
 
 public enum BossAttackType {
-	SLAm,
+	SLAM,
 	ROAR
 }

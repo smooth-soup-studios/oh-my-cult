@@ -12,6 +12,10 @@ public class TooltipController : MonoBehaviour {
 	public string Key = "E";
 	public TooltipType Type;
 
+	[SerializeField] private Sprite _smallKey;
+
+	[SerializeField] private Sprite _bigKey;
+
 	private UIDocument _doc;
 	private VisualElement _root;
 
@@ -30,24 +34,21 @@ public class TooltipController : MonoBehaviour {
 		_label = _root.Q<Label>("label");
 	}
 
-	private void Update() {
-		_label.text = TooltipText;
-		_keyLabel.text = ConvertTypeToKey(Type);
-	}
 
 	public void ShowTooltip() {
 		_container.RemoveFromClassList("hidden");
 		_container.RemoveFromClassList("select");
+		UpdateTooltip();
 	}
 	public void ShowTooltip(string text) {
 		TooltipText = text;
-		_container.RemoveFromClassList("hidden");
+		ShowTooltip();
 	}
 	public void ShowTooltip(string text, string key) {
 		TooltipText = text;
 		Key = key;
 		Type = TooltipType.Custom;
-		_container.RemoveFromClassList("hidden");
+		ShowTooltip();
 	}
 	public void HideTooltip() {
 		_container.AddToClassList("hidden");
@@ -62,6 +63,12 @@ public class TooltipController : MonoBehaviour {
 		}
 	}
 
+	private void UpdateTooltip() {
+		_label.text = TooltipText;
+		_keyLabel.text = ConvertTypeToKey(Type);
+		ChangeSprite();
+	}
+
 
 	private string ConvertTypeToKey(TooltipType type) {
 		InputSystemRebindManager _userInput = FindObjectOfType<InputSystemRebindManager>();
@@ -74,11 +81,28 @@ public class TooltipController : MonoBehaviour {
 		};
 	}
 
+	private void ChangeSprite() {
+		if (_keyLabel.text.Length > 1) {
+			_icon.style.backgroundImage = new StyleBackground(_bigKey);
+			_icon.style.width = 150;
+		}
+		else {
+			_icon.style.backgroundImage = new StyleBackground(_smallKey);
+			_icon.style.width = 64;
+		}
+	}
+
 #if UNITY_EDITOR
 	private void OnValidate() {
 		if (_tooltipPrefab == null) {
 			GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/UI/Tooltip.prefab");
 			_tooltipPrefab = prefab;
+		}
+		if (_bigKey == null) {
+			_bigKey = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Art/Menu/Keyboard_Key_Medium.png");
+		}
+		if (_smallKey == null) {
+			_smallKey = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Art/Menu/Keyboard_Key_Small.png");
 		}
 	}
 #endif

@@ -20,6 +20,7 @@ public class SaveManager : MonoBehaviour {
 	protected string SelectedProfile = "";
 	protected List<ISaveable> Saveables;
 	protected GameData GameData;
+	protected GameData InjectionCache = new();
 	protected IDataManager DataManager;
 
 	private static SaveManager _saveManager;
@@ -95,11 +96,8 @@ public class SaveManager : MonoBehaviour {
 	/// </summary>
 	public void NewGame() {
 		SendToLogger("Starting new game. Creating default gamedata");
-		GameData newGameData = new();
-		if (GameData != null) {
-			newGameData.PlayerSettings = GameData.PlayerSettings;
-		}
-		GameData = newGameData;
+		GameData = new();
+		ApplyInjectionCache();
 	}
 
 	/// <summary>
@@ -109,6 +107,7 @@ public class SaveManager : MonoBehaviour {
 		if (_enableSaving) {
 			SendToLogger("Loading game, looking for saves.");
 			GameData = DataManager.Load(SelectedProfile);
+			ApplyInjectionCache();
 
 			if (GameData == null && _initializeData) {
 				SendToLogger("No save found. initializing new game.");
@@ -138,9 +137,23 @@ public class SaveManager : MonoBehaviour {
 
 			SendToLogger("Saving game.");
 			Saveables.ForEach(saveable => saveable?.SaveData(GameData));
+			ApplyInjectionCache();
 			DataManager.Save(GameData, SelectedProfile);
 		}
 	}
+
+	/// <summary>
+	/// Saves the gamestate to the injection cache without writing to disk
+	/// </summary>
+	public void SoftSaveGame() {
+		if (_enableSaving) {
+			SendToLogger("SoftSaving game.");
+			GameData tempData = new();
+			Saveables.ForEach(saveable => saveable?.SaveData(tempData));
+			SetInjectionCache(tempData);
+		}
+	}
+
 
 
 	/// <summary>
@@ -161,6 +174,20 @@ public class SaveManager : MonoBehaviour {
 		return GameData != null;
 	}
 
+	/// <summary>
+	/// Sets the cache injected at save, load and game creation.
+	/// </summary>
+	protected void SetInjectionCache(GameData data) {
+		InjectionCache = data;
+	}
+	/// <summary>
+	/// Injects the specified values from the cache into the current GameData instance.
+	/// </summary>
+	protected void ApplyInjectionCache() {
+		if (GameData != null) {
+			GameData.PlayerSettings = InjectionCache.PlayerSettings;
+		}
+	}
 
 	private void SendToLogger(string text) {
 		if (_enableLogging) {

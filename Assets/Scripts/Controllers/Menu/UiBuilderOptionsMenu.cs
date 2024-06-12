@@ -74,6 +74,7 @@ public class UiBuilderOptionsMenu : MonoBehaviour, ISaveable {
 
 	void OnBack() {
 		Logger.Log(_logname, "Back to Menu");
+		SaveManager.Instance.SoftSaveGame();
 		_optionsUI.GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container").visible = false;
 		_mainMenuUI.GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container").visible = true;
 	}
@@ -127,10 +128,28 @@ public class UiBuilderOptionsMenu : MonoBehaviour, ISaveable {
 		if (QualityLevel > -1) {
 			QualitySettings.SetQualityLevel(QualityLevel, true);
 		}
+		if (data.PlayerSettings.VolumeValues.ContainsKey($"{_logname}-MasterVolume")) {
+			data.PlayerSettings.VolumeValues.TryGetValue($"{_logname}-MasterVolume", out float value);
+			_audioMixer.SetFloat("masterVolume", value);
+		}
+		if (data.PlayerSettings.VolumeValues.ContainsKey($"{_logname}-MusicVolume")) {
+			data.PlayerSettings.VolumeValues.TryGetValue($"{_logname}-MusicVolume", out float value);
+			_audioMixer.SetFloat("musicVolume", value);
+		}
+		if (data.PlayerSettings.VolumeValues.ContainsKey($"{_logname}-FXVolume")) {
+			data.PlayerSettings.VolumeValues.TryGetValue($"{_logname}-FXVolume", out float value);
+			_audioMixer.SetFloat("soundFXVolume", value);
+		}
 		initializeSettings();
 	}
 
 	public void SaveData(GameData data) {
+		_audioMixer.GetFloat("masterVolume", out float value);
+		data.PlayerSettings.VolumeValues[$"{_logname}-MasterVolume"] = value;
+		_audioMixer.GetFloat("musicVolume", out value);
+		data.PlayerSettings.VolumeValues[$"{_logname}-MusicVolume"] = value;
+		_audioMixer.GetFloat("soundFXVolume", out value);
+		data.PlayerSettings.VolumeValues[$"{_logname}-FXVolume"] = value;
 		data.PlayerSettings.QualityIndex = QualitySettings.GetQualityLevel();
 	}
 }

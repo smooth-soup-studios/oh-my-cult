@@ -187,27 +187,11 @@ public class AudioManager : MonoBehaviour, ISaveable {
 
 	public void LoadData(GameData data) {
 
-		if (data.PlayerSettings.VolumeValues.ContainsKey($"{_logName}-MasterVolume")) {
-			data.PlayerSettings.VolumeValues.TryGetValue($"{_logName}-MasterVolume", out float value);
-			MasterMixer.audioMixer.SetFloat("masterVolume", value);
-		}
-		if (data.PlayerSettings.VolumeValues.ContainsKey($"{_logName}-MusicVolume")) {
-			data.PlayerSettings.VolumeValues.TryGetValue($"{_logName}-MusicVolume", out float value);
-			MasterMixer.audioMixer.SetFloat("musicVolume", value);
-		}
-		if (data.PlayerSettings.VolumeValues.ContainsKey($"{_logName}-FXVolume")) {
-			data.PlayerSettings.VolumeValues.TryGetValue($"{_logName}-FXVolume", out float value);
-			MasterMixer.audioMixer.SetFloat("soundFXVolume", value);
-		}
+
 	}
 
 	public void SaveData(GameData data) {
-		MasterMixer.audioMixer.GetFloat("masterVolume", out float value);
-		data.PlayerSettings.VolumeValues[$"{_logName}-MasterVolume"] = value;
-		MasterMixer.audioMixer.GetFloat("musicVolume", out value);
-		data.PlayerSettings.VolumeValues[$"{_logName}-MusicVolume"] = value;
-		MasterMixer.audioMixer.GetFloat("soundFXVolume", out value);
-		data.PlayerSettings.VolumeValues[$"{_logName}-FXVolume"] = value;
+
 	}
 
 }

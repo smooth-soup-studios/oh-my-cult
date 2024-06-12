@@ -53,7 +53,7 @@ namespace Managers {
 		}
 
 		public static void QuitGame() {
-			#if UNITY_WEBGL
+			#if UNITY_WEBGL && !UNITY_EDITOR
 				Logger.Log(_logname,"WebGL build detected, redirecting to homepage");
 				Application.OpenURL("/");
 			#elif UNITY_EDITOR

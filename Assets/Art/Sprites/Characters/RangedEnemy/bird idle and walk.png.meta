@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fd83c629c4a42994cb811965db67392b
+guid: 945a7d3283e86d849b4efeca116ef899
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,10 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
-    textureCompression: 1
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,9 +108,9 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: iPhone
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: compleet_0
+      name: bird idle and walk_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 7000
-        width: 1000
-        height: 1000
+        y: 3600
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86f5d2dd12c05d64ca9eee70f3d8edaf
-      internalID: -979271782
+      spriteID: e395d3c347abdb645b5df702a3fb1fbf
+      internalID: 940895913
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_1
+      name: bird idle and walk_1
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 7000
-        width: 1000
-        height: 1000
+        x: 600
+        y: 3600
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7d35beeb79f4c541ad51816a6ba529f
-      internalID: 1346149215
+      spriteID: a24f036dc928fb64b8463be71c1db0e8
+      internalID: 625022728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_2
+      name: bird idle and walk_2
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 7000
-        width: 1000
-        height: 1000
+        x: 1200
+        y: 3600
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ad44f21b70123040a94de2e803da45e
-      internalID: -1253194570
+      spriteID: 56cedfaaca6fad04da680ce4af27c7f7
+      internalID: -1129285042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_3
+      name: bird idle and walk_3
       rect:
         serializedVersion: 2
-        x: 3000
-        y: 7000
-        width: 1000
-        height: 1000
+        x: 1800
+        y: 3600
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8218d70003517cd4ba967208acbf4438
-      internalID: -793388899
+      spriteID: c7e05235f63bc404e96f119bd6efe9da
+      internalID: 1183704040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_4
+      name: bird idle and walk_4
       rect:
         serializedVersion: 2
-        x: 4000
-        y: 7000
-        width: 1000
-        height: 1000
+        x: 2400
+        y: 3600
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,146 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 104319ef14c048a4ea56522dc7a1264a
-      internalID: -153812682
+      spriteID: 0255db5813bcc984c9e80012d275ee26
+      internalID: -1270541088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_5
-      rect:
-        serializedVersion: 2
-        x: 5000
-        y: 7000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 156ab12f57525444db41bfd05d700708
-      internalID: 523922852
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_6
-      rect:
-        serializedVersion: 2
-        x: 6000
-        y: 7000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39f9e3f021295084fae3f211886ae758
-      internalID: -1248380994
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_7
-      rect:
-        serializedVersion: 2
-        x: 7000
-        y: 7000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f1e9fcf5ad0400428d63bceafc76dd5
-      internalID: -1591258690
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 6000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae5dad75dd352324fa9948cfd5b6c335
-      internalID: -1972867023
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_9
-      rect:
-        serializedVersion: 2
-        x: 1000
-        y: 6000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 91d6525fc8cb350499d42b31c225abd2
-      internalID: -1025295984
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_10
-      rect:
-        serializedVersion: 2
-        x: 2000
-        y: 6000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8efef17fbe7f70d4f8b33752eb3787db
-      internalID: -491837034
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_11
+      name: bird idle and walk_5
       rect:
         serializedVersion: 2
         x: 3000
-        y: 6000
-        width: 1000
-        height: 1000
+        y: 3600
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -368,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f1ec3fe6d823f9428eb36477d5a5cdb
-      internalID: -2123455423
+      spriteID: 5b3f5809bf75ae44986257852a9f4c13
+      internalID: 1277331949
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_12
+      name: bird idle and walk_6
       rect:
         serializedVersion: 2
-        x: 4000
-        y: 6000
-        width: 1000
-        height: 1000
+        x: 3600
+        y: 3600
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3bb5639d2a653d43bc9be47e593bd32
-      internalID: 2030260434
+      spriteID: c3797803cab00764d9e95eae09f0d1ea
+      internalID: 203177353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_13
+      name: bird idle and walk_7
       rect:
         serializedVersion: 2
-        x: 5000
-        y: 6000
-        width: 1000
-        height: 1000
+        x: 4200
+        y: 3600
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,398 +284,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb367e87f4b647248a2a6cd8b2a12ba4
-      internalID: -231816365
+      spriteID: 102884a9c964e7c46bf38333af00afd8
+      internalID: -639211371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_14
-      rect:
-        serializedVersion: 2
-        x: 6000
-        y: 6000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea290118b8e94d44c9a671698be888a5
-      internalID: 578636889
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_15
-      rect:
-        serializedVersion: 2
-        x: 7000
-        y: 6000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 590989c700db1ef468cd05afb3bc0b7f
-      internalID: -1419061084
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_16
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 5000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9dce38be1a5f6c54d9e366e8ce6b4e8f
-      internalID: -2104582695
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_17
-      rect:
-        serializedVersion: 2
-        x: 1000
-        y: 5000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b72be38b14873424e98043759fe8d46f
-      internalID: 1906014689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_18
-      rect:
-        serializedVersion: 2
-        x: 2000
-        y: 5000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 66befc5685b9c544ca676f98ad31bcf3
-      internalID: -1012454672
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_19
-      rect:
-        serializedVersion: 2
-        x: 3000
-        y: 5000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3c221ae42784db24c850326da7725f0e
-      internalID: 1346767491
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_20
-      rect:
-        serializedVersion: 2
-        x: 4000
-        y: 5000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dba6451bd2588894cbc7facc838c30c1
-      internalID: -1913222400
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_21
-      rect:
-        serializedVersion: 2
-        x: 5000
-        y: 5000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c0f0f56275b077a4eb19b107212e404d
-      internalID: -754422225
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_22
-      rect:
-        serializedVersion: 2
-        x: 6000
-        y: 5000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6e4bb2ff59829a40a0937f4c6421972
-      internalID: -2089040752
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_23
-      rect:
-        serializedVersion: 2
-        x: 7000
-        y: 5000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c3297f13bc068664995099a30026b8ca
-      internalID: 954615578
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_24
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 4000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ec54a9710683a14986499af9ae96008
-      internalID: 246138129
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_25
-      rect:
-        serializedVersion: 2
-        x: 1000
-        y: 4000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 68b9f111a99b3a54fbd3eccc7b76b016
-      internalID: -1467698552
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_26
-      rect:
-        serializedVersion: 2
-        x: 2000
-        y: 4000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e5d7aabe24d57814194d8f2fc7e88349
-      internalID: 1765223965
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_27
-      rect:
-        serializedVersion: 2
-        x: 3000
-        y: 4000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6784465bc7a2daf4d919b29c61d0c5a2
-      internalID: -1005904947
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_28
-      rect:
-        serializedVersion: 2
-        x: 4000
-        y: 4000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a9f8b7db72406142ae57ea00efeac67
-      internalID: -1966675888
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_29
-      rect:
-        serializedVersion: 2
-        x: 5000
-        y: 4000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e431f407623c544a828ec821c2d3d3d
-      internalID: 1525039730
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_30
-      rect:
-        serializedVersion: 2
-        x: 6000
-        y: 4000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e1b2b34d5d33b045940347807d4541b
-      internalID: -1491022705
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_31
-      rect:
-        serializedVersion: 2
-        x: 7000
-        y: 4000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53878bad6825b3a458e572b74877a9c8
-      internalID: 826390130
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_32
+      name: bird idle and walk_8
       rect:
         serializedVersion: 2
         x: 0
         y: 3000
-        width: 1000
-        height: 1000
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -809,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4d90664a4dd6ff4faa09ff9701a2a46
-      internalID: -984735087
+      spriteID: e533eef4d5a53f743aeb44dc73875ffb
+      internalID: -468892933
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_33
+      name: bird idle and walk_9
       rect:
         serializedVersion: 2
-        x: 1000
+        x: 600
         y: 3000
-        width: 1000
-        height: 1000
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -830,20 +326,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 468f3ae649dad2e45bf14b9a3c6d34f0
-      internalID: -1958584334
+      spriteID: 07b1b2e063cb2ef40b745bf343332a74
+      internalID: -854595502
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_34
+      name: bird idle and walk_10
       rect:
         serializedVersion: 2
-        x: 2000
+        x: 1200
         y: 3000
-        width: 1000
-        height: 1000
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -851,20 +347,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59207768f7f15654a80127aa4d454d35
-      internalID: -496197704
+      spriteID: 17dac541b9b26194692a93431ff69f1e
+      internalID: 798113129
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_35
+      name: bird idle and walk_11
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 3000
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93e01359431a5d148bd815981b72e03e
+      internalID: -393517616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird idle and walk_12
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 3000
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7bedf35821026a44861e67a619b9309
+      internalID: 749196659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird idle and walk_13
       rect:
         serializedVersion: 2
         x: 3000
         y: 3000
-        width: 1000
-        height: 1000
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -872,20 +410,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cec5e358ff2893418163362e1d50936
-      internalID: -498382122
+      spriteID: 777e3efb381d64b41ac6d7a06b251198
+      internalID: -2145416445
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_36
+      name: bird idle and walk_14
       rect:
         serializedVersion: 2
-        x: 4000
+        x: 3600
         y: 3000
-        width: 1000
-        height: 1000
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -893,20 +431,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94a3d87a3f997fc469482eae51f5a1a7
-      internalID: 1896023981
+      spriteID: 3f8df611eebbed14aa407f829cab064e
+      internalID: 1928213194
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_37
+      name: bird idle and walk_15
       rect:
         serializedVersion: 2
-        x: 5000
+        x: 4200
         y: 3000
-        width: 1000
-        height: 1000
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -914,62 +452,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c03a6b36acd76984fa21765aacdf7972
-      internalID: -664618633
+      spriteID: 9469d288c6d2f8340bd238f25072f327
+      internalID: 1379125940
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_38
-      rect:
-        serializedVersion: 2
-        x: 6000
-        y: 3000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a979c3bf8bd1b4648b870b8a0711fabb
-      internalID: 354181986
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_39
-      rect:
-        serializedVersion: 2
-        x: 7000
-        y: 3000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e836600f96c8ea640aeaaebcfa32e1ed
-      internalID: -784198792
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_40
+      name: bird idle and walk_16
       rect:
         serializedVersion: 2
         x: 0
-        y: 2000
-        width: 1000
-        height: 1000
+        y: 2400
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -977,20 +473,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fffaeec1822fd264380f9f08551fe1ce
-      internalID: -1888806983
+      spriteID: 7c618077db95ca049b6e057cd299e18f
+      internalID: -836407098
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_41
+      name: bird idle and walk_17
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 2000
-        width: 1000
-        height: 1000
+        x: 600
+        y: 2400
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -998,20 +494,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5f1f8fedcf402d4a870c876e580072e
-      internalID: 1957600613
+      spriteID: 6f96abb6ca7cb8548911d932cbcc5d14
+      internalID: 1961862198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_42
+      name: bird idle and walk_18
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 2000
-        width: 1000
-        height: 1000
+        x: 1200
+        y: 2400
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1019,20 +515,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10f226348be4e9a4598766bc60d5319c
-      internalID: -1447540910
+      spriteID: dc7b75377cf4a7941b4ecd51641ea7f0
+      internalID: -81799811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_43
+      name: bird idle and walk_19
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 2400
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d742c6df022322f4cbaeda3727ac7554
+      internalID: 1853477431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird idle and walk_20
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2400
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02709849d0859b74881ba13317f094f1
+      internalID: -270461124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird idle and walk_21
       rect:
         serializedVersion: 2
         x: 3000
-        y: 2000
-        width: 1000
-        height: 1000
+        y: 2400
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1040,20 +578,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 895b386aab89f384cbecba29aade5d16
-      internalID: -1921463356
+      spriteID: eb109a8e5630d9a4da6265628daf12b0
+      internalID: -1533809766
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_44
+      name: bird idle and walk_22
       rect:
         serializedVersion: 2
-        x: 4000
-        y: 2000
-        width: 1000
-        height: 1000
+        x: 3600
+        y: 2400
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1061,20 +599,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4da9dcecf883de04f864239fade00c44
-      internalID: -1831764198
+      spriteID: a4ceae30d5e132e409fdbc78d85b6de6
+      internalID: 1105665066
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_45
+      name: bird idle and walk_23
       rect:
         serializedVersion: 2
-        x: 5000
-        y: 2000
-        width: 1000
-        height: 1000
+        x: 4200
+        y: 2400
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1082,62 +620,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1f8a9761461b8c439ed33afaa599336
-      internalID: -57534021
+      spriteID: e88f0b3559eff3941ab68823b043e606
+      internalID: 1496685349
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_46
-      rect:
-        serializedVersion: 2
-        x: 6000
-        y: 2000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4504a3395fcfd734d8b28c03d900c316
-      internalID: 1358425005
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_47
-      rect:
-        serializedVersion: 2
-        x: 7000
-        y: 2000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 13febf6c43a3d9e4cb269d1d89603e66
-      internalID: 997872749
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_48
+      name: bird idle and walk_24
       rect:
         serializedVersion: 2
         x: 0
-        y: 1000
-        width: 1000
-        height: 1000
+        y: 1800
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1145,20 +641,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96be4f00b7b897f4a9a4bdd72327a4cc
-      internalID: 65664238
+      spriteID: 1fdd57e1edf6f4d4dae66302f884479c
+      internalID: 431612333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_49
+      name: bird idle and walk_25
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 1000
-        width: 1000
-        height: 1000
+        x: 600
+        y: 1800
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1166,20 +662,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94a36d5d78102d74f849d5e3c13a9cde
-      internalID: -820772003
+      spriteID: 01ad022077d5d084ba0a952d0730c54a
+      internalID: 1005274720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_50
+      name: bird idle and walk_26
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 1000
-        width: 1000
-        height: 1000
+        x: 1200
+        y: 1800
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1187,20 +683,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 899b1b5922ffc3e4d9ba72e3e143d0ec
-      internalID: 1136564381
+      spriteID: 127a370e559c0e544b4ccb6939c3a7eb
+      internalID: 1310407471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_51
+      name: bird idle and walk_27
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1800
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0386c83376817c44826e6b2f2d8b737
+      internalID: 1227876103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird idle and walk_28
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1800
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 273074a0cc0d3744face372d987c636b
+      internalID: -1490713756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird idle and walk_29
       rect:
         serializedVersion: 2
         x: 3000
-        y: 1000
-        width: 1000
-        height: 1000
+        y: 1800
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1208,20 +746,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d3ec484f176cd942a0c2e9780b03194
-      internalID: -1856631988
+      spriteID: ad1ba2c2bacd610479ade8bfce27f9a9
+      internalID: -42647258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_52
+      name: bird idle and walk_30
       rect:
         serializedVersion: 2
-        x: 4000
-        y: 1000
-        width: 1000
-        height: 1000
+        x: 3600
+        y: 1800
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1229,20 +767,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e46131e9e8e54ba4b84a65cf03d6c900
-      internalID: 1092492487
+      spriteID: 30f3a431e1349f74e832a6660c90659f
+      internalID: -530359505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_53
+      name: bird idle and walk_31
       rect:
         serializedVersion: 2
-        x: 5000
-        y: 1000
-        width: 1000
-        height: 1000
+        x: 4200
+        y: 1800
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1250,20 +788,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be8f918b8b1748c4791cebdc7e33e572
-      internalID: -1395439061
+      spriteID: 45a7455dad9951642bc36bf9111c14f5
+      internalID: -86544331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_54
+      name: bird idle and walk_32
       rect:
         serializedVersion: 2
-        x: 6000
-        y: 1000
-        width: 1000
-        height: 1000
+        x: 0
+        y: 1200
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1271,20 +809,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: daa2e62e0eea8cc4cbc9263892cc1bc2
-      internalID: -626289604
+      spriteID: 2ce6ed47653648447a1c49f5867f3d75
+      internalID: 1060227991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_55
+      name: bird idle and walk_33
       rect:
         serializedVersion: 2
-        x: 7000
-        y: 1000
-        width: 1000
-        height: 1000
+        x: 600
+        y: 1200
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1292,20 +830,314 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae7ecb0bf360b9b4d95c4b9ee74f113e
-      internalID: 126409642
+      spriteID: 14fb248ce8336654a8f07f3ed4311e5a
+      internalID: 492428868
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_56
+      name: bird idle and walk_34
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1200
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59400478c966d554b85d14f2775c33da
+      internalID: 844933069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird idle and walk_35
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1200
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a50699e6f7e9a7549b3fe3024e6a4bdc
+      internalID: -1256200300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird idle and walk_36
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1200
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcaf103901c08cf468f7a37d367c7358
+      internalID: 551900850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird idle and walk_37
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1200
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 267d989ec35d678449504bb62c23c60d
+      internalID: 1563197200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird idle and walk_38
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1200
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d5a8f2be59fac4693b1a47bc564757
+      internalID: 1017410376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird idle and walk_39
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 1200
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0df3d64da9ca3e446877912595051712
+      internalID: -1174807187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird idle and walk_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da53992c089c3014e9457ad9dcc1c29c
+      internalID: -1271506590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird idle and walk_41
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 600
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 212aff8d877da0e4cba25c97a999acd1
+      internalID: 1672425540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird idle and walk_42
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 600
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3be80e7812b2ff4ab8aafc0052091d9
+      internalID: 1565167771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird idle and walk_43
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 600
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b12a765a826c0d43b6c3442d74f5b03
+      internalID: 1952905249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird idle and walk_44
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 600
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78a5e040264ac1749a04841387d60174
+      internalID: 1345371684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird idle and walk_45
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 600
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd8c2828f72ca143af0613223941618
+      internalID: 614694267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird idle and walk_46
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 600
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f3b00099c53be459cf2c76dcc053eb
+      internalID: 510616488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird idle and walk_47
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 600
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61921ea8e55332a4fbf18932602a7918
+      internalID: 1769187189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird idle and walk_48
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1000
-        height: 1000
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1313,20 +1145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e34d3a63951a93443b81d303cf445dd4
-      internalID: 535238844
+      spriteID: ca036c2fa88347e4283298661ba89581
+      internalID: -1726801475
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_57
+      name: bird idle and walk_49
       rect:
         serializedVersion: 2
-        x: 1000
+        x: 600
         y: 0
-        width: 1000
-        height: 1000
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1334,20 +1166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49e7fde2cf57b64418ba7d656d8b077b
-      internalID: 700744851
+      spriteID: 26247980a168c504a9b44ac6fcad93c0
+      internalID: 1919030909
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_58
+      name: bird idle and walk_50
       rect:
         serializedVersion: 2
-        x: 2000
+        x: 1200
         y: 0
-        width: 1000
-        height: 1000
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1355,20 +1187,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff0acd95fbe7ddc42bd0bc9b104f7e5b
-      internalID: -98040553
+      spriteID: 08a50e255b68c4743b802d475199414d
+      internalID: -678002545
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_59
+      name: bird idle and walk_51
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 0
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81559c0d5b061f5498656c7e4770c2fe
+      internalID: 965968084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird idle and walk_52
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9c93fb9625a23e4e8419e05b232c31a
+      internalID: -761133692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird idle and walk_53
       rect:
         serializedVersion: 2
         x: 3000
         y: 0
-        width: 1000
-        height: 1000
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1376,20 +1250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcc30f37e9794334f9fb734487ed561d
-      internalID: -534529438
+      spriteID: 05de6e5699180de44b381d2732cf858a
+      internalID: 354731630
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_60
+      name: bird idle and walk_54
       rect:
         serializedVersion: 2
-        x: 4000
+        x: 3600
         y: 0
-        width: 1000
-        height: 1000
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1397,20 +1271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee854d2acc7159048b700f54da90c10d
-      internalID: 749056783
+      spriteID: a98e1fda621b4124d9927cfbc639a6dc
+      internalID: -2007147191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: compleet_61
+      name: bird idle and walk_55
       rect:
         serializedVersion: 2
-        x: 5000
+        x: 4200
         y: 0
-        width: 1000
-        height: 1000
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1418,50 +1292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1380aa8a2b1c00c46b5ec976486f9366
-      internalID: 1927350709
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_62
-      rect:
-        serializedVersion: 2
-        x: 6000
-        y: 0
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 23957f6c26c78474a86bf94daf9370d7
-      internalID: 588270752
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: compleet_63
-      rect:
-        serializedVersion: 2
-        x: 7000
-        y: 0
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c01025cec40dc74a9ab3582b96de09f
-      internalID: 1643306663
+      spriteID: 62a3caa3c889c8d499ceac0449a5f6b3
+      internalID: -224272877
       vertices: []
       indices: 
       edges: []
@@ -1477,70 +1309,62 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      compleet_0: -979271782
-      compleet_1: 1346149215
-      compleet_10: -491837034
-      compleet_11: -2123455423
-      compleet_12: 2030260434
-      compleet_13: -231816365
-      compleet_14: 578636889
-      compleet_15: -1419061084
-      compleet_16: -2104582695
-      compleet_17: 1906014689
-      compleet_18: -1012454672
-      compleet_19: 1346767491
-      compleet_2: -1253194570
-      compleet_20: -1913222400
-      compleet_21: -754422225
-      compleet_22: -2089040752
-      compleet_23: 954615578
-      compleet_24: 246138129
-      compleet_25: -1467698552
-      compleet_26: 1765223965
-      compleet_27: -1005904947
-      compleet_28: -1966675888
-      compleet_29: 1525039730
-      compleet_3: -793388899
-      compleet_30: -1491022705
-      compleet_31: 826390130
-      compleet_32: -984735087
-      compleet_33: -1958584334
-      compleet_34: -496197704
-      compleet_35: -498382122
-      compleet_36: 1896023981
-      compleet_37: -664618633
-      compleet_38: 354181986
-      compleet_39: -784198792
-      compleet_4: -153812682
-      compleet_40: -1888806983
-      compleet_41: 1957600613
-      compleet_42: -1447540910
-      compleet_43: -1921463356
-      compleet_44: -1831764198
-      compleet_45: -57534021
-      compleet_46: 1358425005
-      compleet_47: 997872749
-      compleet_48: 65664238
-      compleet_49: -820772003
-      compleet_5: 523922852
-      compleet_50: 1136564381
-      compleet_51: -1856631988
-      compleet_52: 1092492487
-      compleet_53: -1395439061
-      compleet_54: -626289604
-      compleet_55: 126409642
-      compleet_56: 535238844
-      compleet_57: 700744851
-      compleet_58: -98040553
-      compleet_59: -534529438
-      compleet_6: -1248380994
-      compleet_60: 749056783
-      compleet_61: 1927350709
-      compleet_62: 588270752
-      compleet_63: 1643306663
-      compleet_7: -1591258690
-      compleet_8: -1972867023
-      compleet_9: -1025295984
+      bird idle and walk_0: 940895913
+      bird idle and walk_1: 625022728
+      bird idle and walk_10: 798113129
+      bird idle and walk_11: -393517616
+      bird idle and walk_12: 749196659
+      bird idle and walk_13: -2145416445
+      bird idle and walk_14: 1928213194
+      bird idle and walk_15: 1379125940
+      bird idle and walk_16: -836407098
+      bird idle and walk_17: 1961862198
+      bird idle and walk_18: -81799811
+      bird idle and walk_19: 1853477431
+      bird idle and walk_2: -1129285042
+      bird idle and walk_20: -270461124
+      bird idle and walk_21: -1533809766
+      bird idle and walk_22: 1105665066
+      bird idle and walk_23: 1496685349
+      bird idle and walk_24: 431612333
+      bird idle and walk_25: 1005274720
+      bird idle and walk_26: 1310407471
+      bird idle and walk_27: 1227876103
+      bird idle and walk_28: -1490713756
+      bird idle and walk_29: -42647258
+      bird idle and walk_3: 1183704040
+      bird idle and walk_30: -530359505
+      bird idle and walk_31: -86544331
+      bird idle and walk_32: 1060227991
+      bird idle and walk_33: 492428868
+      bird idle and walk_34: 844933069
+      bird idle and walk_35: -1256200300
+      bird idle and walk_36: 551900850
+      bird idle and walk_37: 1563197200
+      bird idle and walk_38: 1017410376
+      bird idle and walk_39: -1174807187
+      bird idle and walk_4: -1270541088
+      bird idle and walk_40: -1271506590
+      bird idle and walk_41: 1672425540
+      bird idle and walk_42: 1565167771
+      bird idle and walk_43: 1952905249
+      bird idle and walk_44: 1345371684
+      bird idle and walk_45: 614694267
+      bird idle and walk_46: 510616488
+      bird idle and walk_47: 1769187189
+      bird idle and walk_48: -1726801475
+      bird idle and walk_49: 1919030909
+      bird idle and walk_5: 1277331949
+      bird idle and walk_50: -678002545
+      bird idle and walk_51: 965968084
+      bird idle and walk_52: -761133692
+      bird idle and walk_53: 354731630
+      bird idle and walk_54: -2007147191
+      bird idle and walk_55: -224272877
+      bird idle and walk_6: 203177353
+      bird idle and walk_7: -639211371
+      bird idle and walk_8: -468892933
+      bird idle and walk_9: -854595502
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

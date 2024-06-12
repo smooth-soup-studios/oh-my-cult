@@ -29,9 +29,6 @@ public class UIBuilderDeathMenu : MonoBehaviour {
 	}
 
 	void OnDeath(GameObject target) {
-		StartCoroutine(ShowAnimation());
-
-
 		if (target == _player) {
 			if (_death != null) {
 				GameObject.Find("HUD").GetComponent<UIDocument>().rootVisualElement.visible = false;

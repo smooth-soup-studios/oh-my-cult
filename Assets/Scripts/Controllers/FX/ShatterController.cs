@@ -1,17 +1,21 @@
+using UnityEditor;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class ShatterController : MonoBehaviour {
 	public GameObject ShatterPiecePrefab;
-	public float ShatterForce = 10.0f;
-	public float ShatterLifetime = 1.0f;
-	public Vector2Int ShatterFragments;
+	public float ShatterForce = 2.0f;
+	public float ShatterLifetime = 3.0f;
+	public Vector2Int ShatterFragments = new(8, 8);
 	public float FragmentOffsetRandom = 2f;
 
 	private SpriteRenderer _spriteRenderer;
+	private GameObject _lastHitSource;
 
 	private void Awake() {
 		_spriteRenderer = GetComponent<SpriteRenderer>();
+		EventBus.Instance.Subscribe<(GameObject target, GameObject source)>(EventType.HIT, x => { if (x.target == gameObject) _lastHitSource = x.source; });
+		EventBus.Instance.Subscribe<GameObject>(EventType.DEATH, x => { if (x == gameObject && _lastHitSource) Shatter(_lastHitSource); });
 	}
 
 	public void Shatter() {
@@ -28,7 +32,9 @@ public class ShatterController : MonoBehaviour {
 		}
 	}
 
-	public void Shatter(GameObject hitOrigin) {
+	public void Shatter(GameObject hitOrigin) => Shatter(hitOrigin.transform.position);
+
+	public void Shatter(Vector3 hitOrigin) {
 		for (int x = 0; x < ShatterFragments.x; x++) {
 			for (int y = 0; y < ShatterFragments.y; y++) {
 				Vector2 pieceOffset = new Vector2(
@@ -38,7 +44,7 @@ public class ShatterController : MonoBehaviour {
 				* _spriteRenderer.bounds.size
 				+ new Vector2(Random.Range(-FragmentOffsetRandom, FragmentOffsetRandom), Random.Range(-FragmentOffsetRandom, FragmentOffsetRandom));
 
-				Vector2 hitDirection = (transform.position + new Vector3(pieceOffset.x, pieceOffset.y) - hitOrigin.transform.position).normalized + Vector3.up / 2;
+				Vector2 hitDirection = (transform.position + new Vector3(pieceOffset.x, pieceOffset.y) - hitOrigin).normalized + Vector3.up / 2;
 
 				DoInit(
 					hitDirection * ShatterForce,

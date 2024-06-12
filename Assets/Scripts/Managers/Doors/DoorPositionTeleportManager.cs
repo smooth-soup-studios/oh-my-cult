@@ -1,10 +1,12 @@
 using System;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class DoorPositionTeleportManager : MonoBehaviour {
 	private static string _logName = "DoorPositionTeleportManager";
+
+	[Header("Settings")]
+	[SerializeField] private bool _useCameraSystem = true;
 
 	void Start() {
 		GameObject plr = GameObject.FindGameObjectWithTag("Player");
@@ -28,8 +30,9 @@ public class DoorPositionTeleportManager : MonoBehaviour {
 
 		// Hacky way to reassign the camera follow target, but works for playtest purposes :D
 		// It's still hacky but now we have a nice method to handle it :) -W
-		HandleCameras(plr, plrsm.LatestDoor);
-
+		if (_useCameraSystem) {
+			HandleCameras(plr, plrsm.LatestDoor);
+		}
 		plrsm.LatestDoor = -1;
 	}
 

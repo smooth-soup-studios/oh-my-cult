@@ -23,20 +23,15 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 	protected override Node SetupTree() {
 		Node root = new Selector(new List<Node>
 		{
+			// Update animator
+			new TaskUpdateAnimator(),
+
 			// Friendly NPC Behavior
 			new Sequence(new List<Node>
 			{
 				new CheckActorType(ActorType.NPC),
 				new CheckPlayerInRange(),
 				new TaskChangeToEnemy()
-			}),
-
-			// Bear - Change to bear animations when the target is set as a bear in the inspector
-			//TODO: Init method for changing animations and such. Can probably be called in Awake or Start.
-			new Sequence(new List<Node>
-			{
-				new CheckActorType(ActorType.BearEnemy),
-				new TaskChangeToBear()
 			}),
 
 			// Enemy - Attack when in range

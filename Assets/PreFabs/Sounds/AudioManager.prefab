@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3781904372847348960}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -59.406204, y: 18.172958, z: 2.2165155}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -69,6 +69,14 @@ MonoBehaviour:
     PlayOnAwake: 0
     Loop: 0
     SoundType: 2
+    Source: {fileID: 0}
+  - ClipName: HammerBonk
+    Clip: {fileID: 8300000, guid: 7328e0e416e8e084c853ca1371dbb76c, type: 3}
+    Volume: 1
+    Pitch: 1
+    PlayOnAwake: 0
+    Loop: 0
+    SoundType: 1
     Source: {fileID: 0}
   - ClipName: AppleMunch
     Clip: {fileID: 8300000, guid: e2dfc517f98abd745a70b404a09ac4d8, type: 3}

@@ -22,5 +22,7 @@ public class EnemyTransformAnimationContainerController : MonoBehaviour {
 		_face.TotalTween =
 		_glow.TotalTween =
 		_totalTween;
+
+		Destroy(gameObject, Duration);
 	}
 }

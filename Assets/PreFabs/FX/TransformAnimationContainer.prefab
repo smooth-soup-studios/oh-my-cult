@@ -202,6 +202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6238396458113191501}
   - component: {fileID: 6175888900067440515}
+  - component: {fileID: 8560798612563590160}
   m_Layer: 7
   m_Name: TransformAnimationContainer
   m_TagString: Untagged
@@ -244,6 +245,41 @@ MonoBehaviour:
   _cloudCounterClockwiseController: {fileID: 4677843632098971168}
   _face: {fileID: 2427796914038746695}
   _glow: {fileID: 5827993438708644136}
+--- !u!58 &8560798612563590160
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3236270680428040073}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.5
 --- !u!1 &3960744366564117923
 GameObject:
   m_ObjectHideFlags: 0

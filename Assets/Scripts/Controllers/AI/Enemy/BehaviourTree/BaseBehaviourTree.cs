@@ -10,6 +10,7 @@ namespace BehaviorTree {
 		public ActorType ActorType;
 		public ActorStats Stats;
 		public Transform[] Waypoints;
+		public GameObject NPCTransformPrefab;
 
 		[Header("Debug")]
 		public bool DisableAgression = false;

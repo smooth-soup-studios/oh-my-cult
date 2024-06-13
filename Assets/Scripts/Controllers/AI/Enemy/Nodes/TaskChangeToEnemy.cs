@@ -2,7 +2,7 @@ using UnityEngine;
 using BehaviorTree;
 
 public class TaskChangeToEnemy : Node {
-	public float AnimationWaitTime = 1f;
+	public float AnimationWaitTime = .2f;
 	bool _didAnimationStart = false;
 	float _tAnimationStart;
 	GameObject _animationContainerInstance;
@@ -12,11 +12,16 @@ public class TaskChangeToEnemy : Node {
 			_didAnimationStart = true;
 			_tAnimationStart = Time.time;
 		}
-		else if (Time.time - _tAnimationStart > AnimationWaitTime && _animationContainerInstance == null) {
-			_animationContainerInstance = Object.Instantiate(tree.NPCTransformPrefab, tree.transform);
-		}
-		else if (Time.time - _tAnimationStart > _animationContainerInstance.GetComponent<EnemyTransformAnimationContainerController>().Duration + AnimationWaitTime) {
-			tree.ActorType = ActorType.MeleeEnemy;
+		else {
+			if (Time.time - _tAnimationStart > AnimationWaitTime && _animationContainerInstance == null) {
+				_animationContainerInstance = Object.Instantiate(tree.NPCTransformPrefab, tree.transform);
+			}
+			if (Time.time - _tAnimationStart > _animationContainerInstance.GetComponent<EnemyTransformAnimationContainerController>().Duration / 2 + AnimationWaitTime) {
+				tree.HalfwayTransitionAnimation = true;
+			}
+			if (Time.time - _tAnimationStart > _animationContainerInstance.GetComponent<EnemyTransformAnimationContainerController>().Duration + AnimationWaitTime) {
+				tree.ActorType = ActorType.MeleeEnemy;
+			}
 		}
 
 		State = NodeState.RUNNING;

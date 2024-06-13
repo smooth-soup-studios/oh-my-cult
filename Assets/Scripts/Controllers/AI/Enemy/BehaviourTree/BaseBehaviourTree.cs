@@ -23,6 +23,7 @@ namespace BehaviorTree {
 		public float AttackCounter { get; set; } = 0;
 		public GameObject Target { get; set; } = null; //TF is this for? Should probable be replaced?
 		public Vector3 SearchLocation { get; set; } = Vector3.zero;
+		public bool HalfwayTransitionAnimation { get; set; } = false;
 
 
 		protected void Awake() {

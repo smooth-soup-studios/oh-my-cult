@@ -312,6 +312,17 @@
                 },
                 {
                     "name": "",
+                    "id": "0757bd90-c9a6-497d-b499-5331acb46b9d",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Primary",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "b25fe9fc-446c-4eb4-9332-f8deff53dc77",
                     "path": "<Keyboard>/ctrl",
                     "interactions": "",

@@ -41,13 +41,15 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 				new TaskRetreatFromEnemy(transform)
 			}),
 
-
 			new Sequence(new List<Node>
 			{
 				new CheckActorType(ActorType.RangedEnemy),
 				new CheckPlayerInRange(),
+				new CheckTargetInAttackRange(),
 				new TaskShoot()
 			}),
+
+
 
 
 			// Enemy - Attack when in range

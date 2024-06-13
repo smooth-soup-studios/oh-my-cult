@@ -17,7 +17,7 @@ public class Projectile : MonoBehaviour {
 	//   public BaseBehaviourTree Enemy;
 	private Vector2 _targetPosition;
 	private Vector2 _startPosition;
-	private  GameObject _target;
+	private GameObject _target;
 	void Start() {
 		_target = GameObject.FindWithTag("Player");
 		_targetPosition = _target.transform.position;
@@ -33,25 +33,27 @@ public class Projectile : MonoBehaviour {
 		transform.position,
 		_targetPosition,
 		_speed * Time.deltaTime);
-		RotateHitboxOnMove(Vector2.Min(transform.position ,_targetPosition));
+		RotateHitboxOnMove(Vector2.Min(transform.position, _targetPosition));
 
 
 
 
-		// If it exists for too long, destroy!
-		if (Vector2.Distance(transform.position, _startPosition) > _destroyDistance || _flying == false) {
-			Destroy(gameObject);
-		}
+		// // If it exists for too long, destroy!
+		// if (Vector2.Distance(transform.position, _startPosition) > _destroyDistance || _flying == false) {
+		// 	Destroy(gameObject);
+		// }
 	}
 	private void RotateHitboxOnMove(Vector2 movement) {
 		float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
 		transform.rotation = Quaternion.Euler(0, 0, angle);
 	}
 	private void OnTriggerEnter2D(Collider2D other) {
-		if (other.tag != "Enemy") {
+		if (!other.CompareTag("Enemy") && other.gameObject.layer != LayerMask.NameToLayer("Ignore Raycast")) {
 			Logger.Log("Arrow", "Destroy");
+			Debug.Log(other.gameObject.name);
 			EnemyWeapon.PrimaryAction(gameObject);
-			Destroy(gameObject);
+			StartCoroutine(Destroy());
+
 		}
 	}
 
@@ -59,5 +61,9 @@ public class Projectile : MonoBehaviour {
 		_flying = true;
 		yield return new WaitForSeconds(_flytime);
 		_flying = false;
+	}
+	public IEnumerator Destroy() {
+		yield return new WaitForSeconds(0.5f);
+		Destroy(gameObject);
 	}
 }

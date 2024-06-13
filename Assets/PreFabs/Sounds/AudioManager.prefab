@@ -86,6 +86,14 @@ MonoBehaviour:
     Loop: 0
     SoundType: 2
     Source: {fileID: 0}
+  - ClipName: RockHit
+    Clip: {fileID: 8300000, guid: 6f5d2f6a91b294a799020b5accce5b08, type: 3}
+    Volume: 1
+    Pitch: 1
+    PlayOnAwake: 0
+    Loop: 0
+    SoundType: 2
+    Source: {fileID: 0}
   - ClipName: DoorOpen
     Clip: {fileID: 8300000, guid: 246c00daaf5093d43a9cdde5360bb6a2, type: 3}
     Volume: 1

@@ -19,6 +19,7 @@ public class HammerInTheRock : MonoBehaviour {
 		GameObject target = arg.target;
 
 		if (target == gameObject) {
+			EventBus.Instance.TriggerEvent(EventType.AUDIO_PLAY, "RockHit");
 			if (ScreenShakeManager.Instance) {
 				ShakeLayer DamageShakeLayer = ScreenShakeManager.Instance.GetOrAddLayer("RockShake", true);
 				DamageShakeLayer.SetShakeThenStop(_shakeIntensity / _hitsTillBreak + 1, 2);

@@ -14,12 +14,13 @@ public class NoteInteracteble : BaseInteractable {
 	public override void Interact(GameObject interactor) {
 		base.Interact(interactor);
 		if (UIManager.Instance && Note) {
-			UIManager.Instance.ShowDialogBox(Note.Title, Note.Content, Note.Duration);
+			UIManager.Instance.ShowDialogBox(Note.Title, Note.Content);
 		}
 	}
 
 	public override void OnDeselect() {
 		_renderer.color = Color.white;
+		UIManager.Instance.HideDialogBox();
 	}
 
 	public override void OnSelect() {

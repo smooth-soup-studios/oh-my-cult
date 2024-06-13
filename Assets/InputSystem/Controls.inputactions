@@ -268,22 +268,22 @@
                 },
                 {
                     "name": "",
-                    "id": "ffbe9a6a-fab0-4d44-885a-1f0ea121fbb9",
-                    "path": "<Gamepad>/buttonNorth",
+                    "id": "b112bb9e-8f46-4147-b8f8-4b018794d1ff",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Controller",
+                    "groups": "Keyboard",
                     "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "b112bb9e-8f46-4147-b8f8-4b018794d1ff",
-                    "path": "<Keyboard>/e",
+                    "id": "ffbe9a6a-fab0-4d44-885a-1f0ea121fbb9",
+                    "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard",
+                    "groups": "Controller",
                     "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -400,6 +400,17 @@
                 },
                 {
                     "name": "",
+                    "id": "2fd37465-cd1d-43d3-9ba1-2236d807d134",
+                    "path": "<Mouse>/scroll/y",
+                    "interactions": "",
+                    "processors": "Invert",
+                    "groups": "Keyboard",
+                    "action": "HotbarSwitch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "cd699a04-6c9e-49e1-af7f-cb591d9919b4",
                     "path": "<Gamepad>/dpad/left",
                     "interactions": "",
@@ -416,17 +427,6 @@
                     "interactions": "",
                     "processors": "Scale",
                     "groups": "Controller",
-                    "action": "HotbarSwitch",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "2fd37465-cd1d-43d3-9ba1-2236d807d134",
-                    "path": "<Mouse>/scroll/y",
-                    "interactions": "",
-                    "processors": "Invert",
-                    "groups": "Keyboard",
                     "action": "HotbarSwitch",
                     "isComposite": false,
                     "isPartOfComposite": false

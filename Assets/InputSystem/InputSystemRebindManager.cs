@@ -78,6 +78,7 @@ public class InputSystemRebindManager : MonoBehaviour {
 		if (action == null) {
 			return string.Empty;
 		}
+		bindingIndex = action.GetBindingIndex("Keyboard");
 		return action.GetBindingDisplayString(bindingIndex);
 
 	}

@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 
 public class EnemyTransformAnimationContainerController : MonoBehaviour {
 	public float Duration { get => _totalTween.Duration; }
@@ -14,7 +13,7 @@ public class EnemyTransformAnimationContainerController : MonoBehaviour {
 		_totalTween = new() {
 			From = 0,
 			To = 1,
-			Duration = 2,
+			Duration = 1.25f,
 		};
 
 		_cloudClockwiseController.TotalTween =

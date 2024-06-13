@@ -89,8 +89,11 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 	}
 
 	private void RotateHitboxOnMove(Vector2 movement) {
-		Transform HitContainer = GetComponentInChildren<WeaponHitbox>().transform.parent;
-		float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
-		HitContainer.transform.rotation = Quaternion.Euler(0, 0, angle);
+		WeaponHitbox hitbox = GetComponentInChildren<WeaponHitbox>();
+		if (hitbox) {
+			Transform HitContainer = hitbox.transform.parent;
+			float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
+			HitContainer.transform.rotation = Quaternion.Euler(0, 0, angle);
+		}
 	}
 }

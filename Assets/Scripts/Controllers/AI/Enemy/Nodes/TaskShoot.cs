@@ -17,6 +17,7 @@ public class TaskShoot : Node {
 			GameObject.Instantiate(tree.Stats.EnemyProjectile, tree.transform.position, Quaternion.identity);
 			Logger.Log($"{tree.Target}", "Target");
 			_cooldownTimer = Time.time + _cooldown;
+			tree.Agent.SetDestination(tree.transform.position);
 		}
 		State = NodeState.RUNNING;
 		return State;

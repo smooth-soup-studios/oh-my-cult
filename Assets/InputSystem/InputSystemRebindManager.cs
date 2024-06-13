@@ -15,6 +15,7 @@ public class InputSystemRebindManager : MonoBehaviour {
 	public bool ItemPickUpInput { get; private set; }
 
 	private static string _logname = "UserInput";
+	private string _bindingGroup = "Keyboard";
 
 	private PlayerInput _playerInput;
 
@@ -56,7 +57,7 @@ public class InputSystemRebindManager : MonoBehaviour {
 	}
 
 	public void RemapButtonClicked(String actionToRebind, Button button) {
-		int bindingIndex = _playerInput.actions[actionToRebind].GetBindingIndex("Keyboard");
+		int bindingIndex = _playerInput.actions[actionToRebind].GetBindingIndex(_bindingGroup);
 		_playerInput.actions[actionToRebind].Disable();
 		_playerInput.actions[actionToRebind].PerformInteractiveRebinding(bindingIndex)
 			.WithBindingGroup(_playerInput.currentControlScheme)
@@ -79,7 +80,7 @@ public class InputSystemRebindManager : MonoBehaviour {
 		if (action == null) {
 			return string.Empty;
 		}
-		int bindingIndex = action.GetBindingIndex("Keyboard");
+		int bindingIndex = action.GetBindingIndex(_bindingGroup);
 		return action.GetBindingDisplayString(bindingIndex);
 
 	}

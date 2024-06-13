@@ -65,8 +65,12 @@ public class TooltipController : MonoBehaviour {
 
 	private void UpdateTooltip() {
 		_label.text = TooltipText;
-		_keyLabel.text = ConvertTypeToKey(Type);
+		SetKeyLabel(ConvertTypeToKey(Type));
 		ChangeSprite();
+	}
+
+	private void SetKeyLabel(string text) {
+		_keyLabel.text = text.Replace("\u0001", "").Replace(" ", "Space");
 	}
 
 

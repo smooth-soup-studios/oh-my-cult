@@ -15,9 +15,9 @@ MonoBehaviour:
   InvData:
     Id: 26c16ae0-d0f9-4258-a195-445fbcbb2b4d
     ItemName: 
-    ItemIcon: {fileID: 0}
-    ItemPrefab: {fileID: 0}
+    ItemIcon: {fileID: 21300000, guid: f23962c24f1d5014d9735dec9959b68a, type: 3}
+    ItemPrefab: {fileID: 6458623882520386215, guid: 52131658ad7717049b957c492657bca4, type: 3}
     MaxStackSize: 1
     ItemType: 0
-    AnimationSet: 
+    AnimationSet: Bird Attack
     Description: 

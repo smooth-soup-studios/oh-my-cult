@@ -74,8 +74,8 @@ public class TooltipController : MonoBehaviour {
 		InputSystemRebindManager _userInput = FindObjectOfType<InputSystemRebindManager>();
 		if (_userInput == null) return Key;
 		return type switch {
-			TooltipType.Interact => _userInput.GetBindingDisplayString("Interact", -1),
-			TooltipType.Attack => _userInput.GetBindingDisplayString("Primary", -1),
+			TooltipType.Interact => _userInput.GetBindingDisplayString("Interact"),
+			TooltipType.Attack => _userInput.GetBindingDisplayString("Primary"),
 			TooltipType.Custom => Key,
 			_ => "E",
 		};

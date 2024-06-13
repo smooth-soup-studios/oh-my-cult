@@ -55,7 +55,8 @@ public class InputSystemRebindManager : MonoBehaviour {
 		ItemPickUpInput = _itemPickUpAction.WasPerformedThisFrame();
 	}
 
-	public void RemapButtonClicked(String actionToRebind, Button button, int bindingIndex = -1) {
+	public void RemapButtonClicked(String actionToRebind, Button button) {
+		int bindingIndex = _playerInput.actions[actionToRebind].GetBindingIndex("Keyboard");
 		_playerInput.actions[actionToRebind].Disable();
 		_playerInput.actions[actionToRebind].PerformInteractiveRebinding(bindingIndex)
 			.WithBindingGroup(_playerInput.currentControlScheme)
@@ -64,7 +65,7 @@ public class InputSystemRebindManager : MonoBehaviour {
 			.WithCancelingThrough("<Keyboard>/escape")
 			.OnMatchWaitForAnother(0.1f)
 			.OnComplete(operation => {
-				String newText = GetBindingDisplayString(actionToRebind, bindingIndex);
+				String newText = GetBindingDisplayString(actionToRebind);
 				RebindComplete(button, newText);
 				operation.Dispose();
 			})
@@ -73,12 +74,12 @@ public class InputSystemRebindManager : MonoBehaviour {
 		_playerInput.actions[actionToRebind].Enable();
 	}
 
-	public string GetBindingDisplayString(string actionName, int bindingIndex) {
+	public string GetBindingDisplayString(string actionName) {
 		InputAction action = _playerInput.actions[actionName];
 		if (action == null) {
 			return string.Empty;
 		}
-		bindingIndex = action.GetBindingIndex("Keyboard");
+		int bindingIndex = action.GetBindingIndex("Keyboard");
 		return action.GetBindingDisplayString(bindingIndex);
 
 	}

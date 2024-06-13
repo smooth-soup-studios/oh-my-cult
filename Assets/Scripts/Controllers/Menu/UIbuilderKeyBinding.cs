@@ -66,26 +66,26 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 		SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 
-	void OnKeyChange(String buttonToRebind, Button button, int bindingIndex = -1) {
+	void OnKeyChange(String buttonToRebind, Button button) {
 		if (_userInput) {
-			_userInput.RemapButtonClicked(buttonToRebind, button, bindingIndex);
+			_userInput.RemapButtonClicked(buttonToRebind, button);
 		}
 	}
 
 	void OnLeftChange() {
-		OnKeyChange("Move", _leftButton, 3);
+		OnKeyChange("Move", _leftButton);
 	}
 
 	void OnRightChange() {
-		OnKeyChange("Move", _rightButton, 4);
+		OnKeyChange("Move", _rightButton);
 	}
 
 	void OnUpChange() {
-		OnKeyChange("Move", _upButton, 1);
+		OnKeyChange("Move", _upButton);
 	}
 
 	void OnDownChange() {
-		OnKeyChange("Move", _downButton, 2);
+		OnKeyChange("Move", _downButton);
 	}
 
 	void OnInteractChange() {

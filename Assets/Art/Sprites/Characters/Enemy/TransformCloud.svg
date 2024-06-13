@@ -6,9 +6,8 @@
 	</style>
 
 	<defs>
-		<!-- <radialGradient id="gradient" cx="250" cy="250" r="250"> -->
 		<radialGradient id="gradient" r="1">
-			<stop offset="5%" stop-color="white"/>
+			<stop offset="20%" stop-color="white"/>
 			<stop offset="100%" stop-color="black"/>
 		</radialGradient>
 

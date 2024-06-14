@@ -18,6 +18,7 @@ public class InputSystemRebindManager : MonoBehaviour {
 	private string _bindingGroup = "Keyboard";
 
 	private PlayerInput _playerInput;
+	private PreMadeMovementButtons _buttoning;
 
 	private InputAction _moveAction;
 	private InputAction _attackAction;
@@ -37,6 +38,7 @@ public class InputSystemRebindManager : MonoBehaviour {
 		}
 
 		_playerInput = FindObjectOfType<EventBus>().GetComponent<PlayerInput>();
+		_buttoning = gameObject.GetComponent<PreMadeMovementButtons>();
 		SetupInputActions();
 	}
 
@@ -56,7 +58,7 @@ public class InputSystemRebindManager : MonoBehaviour {
 		ItemPickUpInput = _itemPickUpAction.WasPerformedThisFrame();
 	}
 
-	public void RemapButtonClicked(String actionToRebind, Button button, int bindingIndex = -1) {
+	public void RemapButtonClicked(String actionToRebind, VisualElement container, int bindingIndex) {
 		if(bindingIndex == -1)
 			bindingIndex = _playerInput.actions[actionToRebind].GetBindingIndex(_bindingGroup);
 		_playerInput.actions[actionToRebind].Disable();
@@ -68,7 +70,7 @@ public class InputSystemRebindManager : MonoBehaviour {
 			.OnMatchWaitForAnother(0.1f)
 			.OnComplete(operation => {
 				String newText = GetBindingDisplayString(actionToRebind);
-				TextChange(button, newText);
+				TextChange(newText, container, _playerInput.currentControlScheme);
 				operation.Dispose();
 			})
 			.Start();
@@ -87,13 +89,34 @@ public class InputSystemRebindManager : MonoBehaviour {
 		if (bindingIndex == -1)
 			bindingIndex = action.GetBindingIndex(bindingGroup);
 		String text = action.GetBindingDisplayString(bindingIndex);
-		text = text.Split("/")[0];
+		//text = text.Split("/")[0];
 		return text;
 
 	}
 
-	public void TextChange(Button button, String buttonText) {
-		button.text = buttonText;
+	public void TextChange(String buttonText, VisualElement container, String bindingGroup = null) {
+		Button button;
+		if (bindingGroup == "Controller") {
+			button = _buttoning.GetControllerButton(buttonText);
+			container.Q<Button>().text = "";
+		}else{
+			button = _buttoning.GetKeyboardButton(buttonText);
+			container.Q<Button>().text = buttonText;
+		}
+		buttonChange(container, button);
+	}
+
+	private void buttonChange(VisualElement container, Button button){
+		// container.Q<Button>().style.width = button.style.width;
+		// container.Q<Button>().style.height = button.style.height;
+		container.Q<Button>().style.unityTextAlign = button.style.unityTextAlign;
+		container.Q<Button>().style.fontSize = button.style.fontSize;
+		container.Q<Button>().style.backgroundImage = button.style.backgroundImage;
+		container.Q<Button>().style.color = button.style.color;
+		container.Q<Button>().style.marginTop = button.style.marginTop;
+		container.Q<Button>().style.marginBottom = button.style.marginBottom;
+		container.Q<Button>().style.marginLeft = button.style.marginLeft;
+		container.Q<Button>().style.marginRight = button.style.marginRight;
 	}
 
 	public void SetBindingGroup(String newGroup){

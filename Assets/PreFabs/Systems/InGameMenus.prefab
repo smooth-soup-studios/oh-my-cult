@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7732480856765806753}
   - component: {fileID: 1135737141265677825}
   - component: {fileID: 1069334494583158469}
+  - component: {fileID: 327956198668055248}
+  - component: {fileID: 6539523062834748395}
   m_Layer: 0
   m_Name: KeyBindings
   m_TagString: Untagged
@@ -63,6 +65,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _keyBindingUI: {fileID: 368387762294613076}
   _optionsUI: {fileID: 6390754601938785391}
+--- !u!114 &327956198668055248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368387762294613076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f50f528d27ab744b240a5eb8732f9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeyboardSmallImg: {fileID: 0}
+  KeyboardBigImg: {fileID: 0}
+  LeftStickImg: {fileID: 0}
+  RightStickImg: {fileID: 0}
+  AImg: {fileID: 0}
+  BImg: {fileID: 0}
+  XImg: {fileID: 0}
+  YImg: {fileID: 0}
+  RbImg: {fileID: 0}
+  RtImg: {fileID: 0}
+  LbImg: {fileID: 0}
+  LtImg: {fileID: 0}
+  UpImg: {fileID: 0}
+  DownImg: {fileID: 0}
+  LeftImg: {fileID: 0}
+  RightImg: {fileID: 0}
+--- !u!114 &6539523062834748395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368387762294613076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f105782f54cb357488029c8b50ed0150, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1696964228672438043
 GameObject:
   m_ObjectHideFlags: 0

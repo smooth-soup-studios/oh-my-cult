@@ -1,9 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
-using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
@@ -14,13 +11,14 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 	private Button _controller;
 	private Button _backButton;
 	private Button _continueButton;
-	private Button _leftButton;
-	private Button _rightButton;
-	private Button _upButton;
-	private Button _downButton;
-	private Button _interactButton;
-	private Button _attackButton;
-	private Button _dashButton;
+
+	private VisualElement _leftButton;
+	private VisualElement _rightButton;
+	private VisualElement _upButton;
+	private VisualElement _downButton;
+	private VisualElement _interactButton;
+	private VisualElement _attackButton;
+	private VisualElement _dashButton;
 
 	private int _controllerOffset = 0;
 
@@ -30,7 +28,8 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 
 	// Start is called before the first frame update
 	void OnEnable() {
-		_userInput = FindObjectOfType<InputSystemRebindManager>();
+		_userInput = gameObject.GetComponent<InputSystemRebindManager>();
+		
 
 		Logger.Log("KeyBinding", "Binding Menu");
 		_root = GetComponent<UIDocument>().rootVisualElement;
@@ -40,13 +39,13 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 		_backButton = _root.Q<Button>("BackButton");
 		_continueButton = _root.Q<Button>("ContinueButton");
 
-		_leftButton = _root.Q<Button>("WalkLeftButton");
-		_rightButton = _root.Q<Button>("WalkRightButton");
-		_upButton = _root.Q<Button>("WalkUpButton");
-		_downButton = _root.Q<Button>("WalkDownButton");
-		_interactButton = _root.Q<Button>("InteractButton");
-		_attackButton = _root.Q<Button>("AttackButton");
-		_dashButton = _root.Q<Button>("DashButton");
+		_leftButton = _root.Q<VisualElement>("WalkLeftButton");
+		_rightButton = _root.Q<VisualElement>("WalkRightButton");
+		_upButton = _root.Q<VisualElement>("WalkUpButton");
+		_downButton = _root.Q<VisualElement>("WalkDownButton");
+		_interactButton = _root.Q<VisualElement>("InteractButton");
+		_attackButton = _root.Q<VisualElement>("AttackButton");
+		_dashButton = _root.Q<VisualElement>("DashButton");
 
 		_keyboard.clicked += OnKeyboard;
 		_controller.clicked += OnController;
@@ -55,13 +54,15 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 			_continueButton.clicked += OnContinue;
 		}
 
-		_leftButton.clicked += OnLeftChange;
-		_rightButton.clicked += OnRightChange;
-		_upButton.clicked += OnUpChange;
-		_downButton.clicked += OnDownChange;
-		_interactButton.clicked += OnInteractChange;
-		_attackButton.clicked += OnAttackChange;
-		_dashButton.clicked += OnDashChange;
+		_leftButton.Q<Button>().clicked += OnLeftChange;
+		_rightButton.Q<Button>().clicked += OnRightChange;
+		_upButton.Q<Button>().clicked += OnUpChange;
+		_downButton.Q<Button>().clicked += OnDownChange;
+		_interactButton.Q<Button>().clicked += OnInteractChange;
+		_attackButton.Q<Button>().clicked += OnAttackChange;
+		_dashButton.Q<Button>().clicked += OnDashChange;
+
+		ReloadText("Keyboard");
 	}
 
 	void OnKeyboard(){
@@ -77,36 +78,36 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 	void ReloadText(String bindingGroup){
 		if(!_userInput)
 			return;
-			
+
 		String newText;
 
 		//Move Up button
 		newText = _userInput.GetBindingDisplayString("Move", bindingGroup, 1 + _controllerOffset);
-		_userInput.TextChange(_upButton, newText);
+		_userInput.TextChange(newText, _upButton, bindingGroup);
 
 		//Move down button
 		newText = _userInput.GetBindingDisplayString("Move", bindingGroup, 2 + _controllerOffset);
-		_userInput.TextChange(_downButton, newText);
+		_userInput.TextChange(newText, _downButton, bindingGroup);
 
 		//Move down button
 		newText = _userInput.GetBindingDisplayString("Move", bindingGroup, 3 + _controllerOffset);
-		_userInput.TextChange(_leftButton, newText);
+		_userInput.TextChange(newText, _leftButton, bindingGroup);
 
 		//Move down button
 		newText = _userInput.GetBindingDisplayString("Move", bindingGroup, 4 + _controllerOffset);
-		_userInput.TextChange(_rightButton, newText);
+		_userInput.TextChange(newText, _rightButton, bindingGroup);
 		
 		//Interact button
 		newText = _userInput.GetBindingDisplayString("Interact", bindingGroup);
-		_userInput.TextChange(_interactButton, newText);
+		_userInput.TextChange(newText, _interactButton, bindingGroup);
 
 		//Attack button
 		newText = _userInput.GetBindingDisplayString("Primary", bindingGroup);
-		_userInput.TextChange(_attackButton, newText);
+		_userInput.TextChange(newText, _attackButton, bindingGroup);
 
 		//Dash button
 		newText = _userInput.GetBindingDisplayString("Dash", bindingGroup);
-		_userInput.TextChange(_dashButton, newText);
+		_userInput.TextChange(newText, _dashButton, bindingGroup);
 	}
 
 	void OnBack() {
@@ -121,9 +122,18 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 		SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 
-	void OnKeyChange(String buttonToRebind, Button button, int KeyBinding = -1) {
+	void OnKeyChange(String buttonToRebind, VisualElement container, int KeyBinding = -1) {
+		Button button = null;
 		if (_userInput) {
-			_userInput.RemapButtonClicked(buttonToRebind, button);
+			Debug.Log("Button remapping");
+			_userInput.RemapButtonClicked(buttonToRebind, container, KeyBinding);
+		}
+		Debug.Log("Keychange");
+		if (button != null){
+			Debug.Log("Button replaced");
+			container.Clear();
+			container.Add(button);
+
 		}
 	}
 

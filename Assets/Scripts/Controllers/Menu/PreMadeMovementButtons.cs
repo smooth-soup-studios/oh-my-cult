@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -68,19 +69,29 @@ public class PreMadeMovementButtons : MonoBehaviour
     private void KeyboardInit(){
         // Small
         KeyboardSmall = new();
-        KeyboardSmall.style.width = 140;
-        KeyboardSmall.style.height = 130;
+        // KeyboardSmall.style.width = 110;
+        // KeyboardSmall.style.height = 100;
         KeyboardSmall.style.unityTextAlign = TextAnchor.UpperCenter;
-        KeyboardSmall.style.fontSize = 60;
+        KeyboardSmall.style.fontSize = 42;
         KeyboardSmall.style.backgroundImage = new StyleBackground(KeyboardSmallImg);
+        KeyboardSmall.style.color = new Color(0, 0, 0, 255);
+        KeyboardSmall.style.marginTop = 5;
+        KeyboardSmall.style.marginBottom = 30;
+        KeyboardSmall.style.marginLeft = 35;
+        KeyboardSmall.style.marginRight = 35;
 
         // Big
         KeyboardBig = new();
-        KeyboardBig.style.width = 280;
-        KeyboardBig.style.height = 130;
+        // KeyboardBig.style.width = 220;
+        // KeyboardBig.style.height = 100;
         KeyboardBig.style.unityTextAlign = TextAnchor.UpperCenter;
-        KeyboardBig.style.fontSize = 60;
+        KeyboardBig.style.fontSize = 42;
         KeyboardBig.style.backgroundImage = new StyleBackground(KeyboardBigImg);
+        KeyboardBig.style.color = new Color(0, 0, 0, 255);
+        KeyboardBig.style.marginTop = 5;
+        KeyboardBig.style.marginBottom = 30;
+        KeyboardBig.style.marginLeft = 35;
+        KeyboardBig.style.marginRight = 35;
     }
 
     private void ControllerInit(ref Button controller, Sprite sprite){
@@ -91,4 +102,70 @@ public class PreMadeMovementButtons : MonoBehaviour
         controller.style.fontSize = 60;
         controller.style.backgroundImage = new StyleBackground(sprite);
     }
+
+    public Button GetKeyboardButton(String buttonText){
+        if(buttonText.Length > 1){
+            return KeyboardBig;
+        }
+        return KeyboardSmall;
+    }
+
+    public Button GetControllerButton(String buttonText){
+		return buttonText switch {
+			"LS/Up" => LeftStick,
+            "LS/Down" => LeftStick,
+            "LS/Left" => LeftStick,
+            "LS/Right" => LeftStick,
+			"RS/Up" => RightStick,
+            "RS/Down" => RightStick,
+            "RS/Left" => RightStick,
+            "RS/Right" => RightStick,
+            "A" => A,
+            "B" => B,
+            "X" => X,
+            "Y" => Y,
+            "RB" => Rb,
+            "RT" => Rt,
+            "LB" => Lb,
+            "Lt" => Lt,
+            //"D-pad/Up" => Up,
+            //"D-pad/Down" => Down,
+            //"D-pad/Left" => Left,
+            //"D-pad/Right" => Right,
+			_ => LeftStick,
+		};
+	}
+
+    public Sprite GetKeyboardButtonImg(String buttonText){
+        if(buttonText.Length > 1){
+            return KeyboardBigImg;
+        }
+        return KeyboardSmallImg;
+    }
+
+    public Button GetControllerButtonImg(String buttonText){
+		return buttonText switch {
+			"LS/Up" => LeftStick,
+            "LS/Down" => LeftStick,
+            "LS/Left" => LeftStick,
+            "LS/Right" => LeftStick,
+			"RS/Up" => RightStick,
+            "RS/Down" => RightStick,
+            "RS/Left" => RightStick,
+            "RS/Right" => RightStick,
+            "A" => A,
+            "B" => B,
+            "X" => X,
+            "Y" => Y,
+            "RB" => Rb,
+            "RT" => Rt,
+            "LB" => Lb,
+            "Lt" => Lt,
+            //"D-pad/Up" => Up,
+            //"D-pad/Down" => Down,
+            //"D-pad/Left" => Left,
+            //"D-pad/Right" => Right,
+			_ => LeftStick,
+		};
+	}
 }

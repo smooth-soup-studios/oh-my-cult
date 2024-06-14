@@ -56,8 +56,9 @@ public class InputSystemRebindManager : MonoBehaviour {
 		ItemPickUpInput = _itemPickUpAction.WasPerformedThisFrame();
 	}
 
-	public void RemapButtonClicked(String actionToRebind, Button button) {
-		int bindingIndex = _playerInput.actions[actionToRebind].GetBindingIndex(_bindingGroup);
+	public void RemapButtonClicked(String actionToRebind, Button button, int bindingIndex = -1) {
+		if(bindingIndex == -1)
+			bindingIndex = _playerInput.actions[actionToRebind].GetBindingIndex(_bindingGroup);
 		_playerInput.actions[actionToRebind].Disable();
 		_playerInput.actions[actionToRebind].PerformInteractiveRebinding(bindingIndex)
 			.WithBindingGroup(_playerInput.currentControlScheme)
@@ -67,7 +68,7 @@ public class InputSystemRebindManager : MonoBehaviour {
 			.OnMatchWaitForAnother(0.1f)
 			.OnComplete(operation => {
 				String newText = GetBindingDisplayString(actionToRebind);
-				RebindComplete(button, newText);
+				TextChange(button, newText);
 				operation.Dispose();
 			})
 			.Start();
@@ -75,17 +76,27 @@ public class InputSystemRebindManager : MonoBehaviour {
 		_playerInput.actions[actionToRebind].Enable();
 	}
 
-	public string GetBindingDisplayString(string actionName) {
+	public string GetBindingDisplayString(string actionName, String bindingGroup = null, int bindingIndex = -1) {
+		if (bindingGroup == null) {
+			bindingGroup = _bindingGroup;
+		}
 		InputAction action = _playerInput.actions[actionName];
 		if (action == null) {
 			return string.Empty;
 		}
-		int bindingIndex = action.GetBindingIndex(_bindingGroup);
-		return action.GetBindingDisplayString(bindingIndex);
+		if (bindingIndex == -1)
+			bindingIndex = action.GetBindingIndex(bindingGroup);
+		String text = action.GetBindingDisplayString(bindingIndex);
+		text = text.Split("/")[0];
+		return text;
 
 	}
 
-	public void RebindComplete(Button button, String buttonText) {
+	public void TextChange(Button button, String buttonText) {
 		button.text = buttonText;
+	}
+
+	public void SetBindingGroup(String newGroup){
+		_bindingGroup = newGroup;
 	}
 }

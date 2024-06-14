@@ -7,10 +7,10 @@ public class TaskAttack : Node {
 	public override NodeState Evaluate(BaseBehaviourTree tree) {
 		tree.AttackCounter += Time.deltaTime;
 		if (tree.AttackCounter >= tree.Stats.AttackSpeed) {
-			tree.Stats.EnemyWeapon.PrimaryAction(tree.gameObject);
+			tree.ActorAnimator.SetBool("IsAttacking", true);
 			tree.AttackCounter = 0;
+			return NodeState.RUNNING;
 		}
-		State = NodeState.RUNNING;
-		return State;
+		return NodeState.FAILURE;
 	}
 }

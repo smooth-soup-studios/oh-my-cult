@@ -226,6 +226,7 @@ GameObject:
   - component: {fileID: 4849591457620503528}
   - component: {fileID: 3290768021699310593}
   - component: {fileID: 4520707863643151095}
+  - component: {fileID: 370101957999876833}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
@@ -455,3 +456,15 @@ MonoBehaviour:
   ShatterLifetime: 3
   ShatterFragments: {x: 8, y: 8}
   FragmentOffsetRandom: 2
+--- !u!114 &370101957999876833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8507790943486014399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaaabe2768da9b140a5e4e7b6937b1bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

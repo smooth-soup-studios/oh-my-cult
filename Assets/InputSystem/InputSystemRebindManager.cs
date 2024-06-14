@@ -78,9 +78,6 @@ public class InputSystemRebindManager : MonoBehaviour {
 		if (action == null) {
 			return string.Empty;
 		}
-		if (bindingIndex == -1) {
-			return action.GetBindingDisplayString();
-		}
 		return action.GetBindingDisplayString(bindingIndex);
 
 	}

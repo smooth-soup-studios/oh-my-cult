@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class AudioManager : MonoBehaviour, ISaveable {
+public class AudioManager : MonoBehaviour {
 	private static readonly string _logName = "AudioManager";
 	[SerializeField] protected List<SoundObject> Sounds;
 
@@ -166,8 +166,6 @@ public class AudioManager : MonoBehaviour, ISaveable {
 		_runningCoroutines[sound.ClipName] = null;
 	}
 
-	#endregion
-
 	private void StopRunningCoroutines(string name) {
 		if (_runningCoroutines.TryGetValue(name, out Coroutine coroutine)) {
 			if (coroutine != null) {
@@ -175,6 +173,9 @@ public class AudioManager : MonoBehaviour, ISaveable {
 			}
 		}
 	}
+
+	#endregion
+
 	private AudioMixerGroup ConvertAudioTypeToMixer(AudioType type) {
 		return type switch {
 			AudioType.Master => MasterMixer,
@@ -182,16 +183,6 @@ public class AudioManager : MonoBehaviour, ISaveable {
 			AudioType.FX => FXMixer,
 			_ => null,
 		};
-	}
-
-
-	public void LoadData(GameData data) {
-
-
-	}
-
-	public void SaveData(GameData data) {
-
 	}
 
 }

@@ -8,12 +8,6 @@ using UnityEngine.UIElements;
 public class InputSystemRebindManager : MonoBehaviour {
 	public static InputSystemRebindManager Instance { get; private set; }
 
-	public Vector2 MoveInput { get; private set; }
-	public bool AttackInput { get; private set; }
-	public bool DashInput { get; private set; }
-	public bool MenuToggleInput { get; private set; }
-	public bool ItemPickUpInput { get; private set; }
-
 	private static string _logname = "UserInput";
 
 	private PlayerInput _playerInput;
@@ -47,14 +41,6 @@ public class InputSystemRebindManager : MonoBehaviour {
 		_dashAction = _playerInput.actions["Dash"];
 		_menuToggleAction = _playerInput.actions["ToggleMenu"];
 		_itemPickUpAction = _playerInput.actions["Interact"];
-	}
-
-	private void UpdateInputs() {
-		MoveInput = _moveAction.ReadValue<Vector2>();
-		AttackInput = _attackAction.WasPressedThisFrame();
-		DashInput = _dashAction.WasPressedThisFrame();
-		MenuToggleInput = _menuToggleAction.WasPressedThisFrame();
-		ItemPickUpInput = _itemPickUpAction.WasPerformedThisFrame();
 	}
 
 	public void RemapButtonClicked(String actionToRebind, VisualElement container, int bindingIndex) {

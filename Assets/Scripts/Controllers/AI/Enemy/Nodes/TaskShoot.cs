@@ -3,7 +3,7 @@ using UnityEngine;
 
 
 public class TaskShoot : Node {
-	private float _cooldown = 2f;
+	private float _cooldown = 5f;
 	private float _cooldownTimer;
 	private Vector2 _offset = new Vector2(0f, 0f);
 	public TaskShoot() {
@@ -11,6 +11,9 @@ public class TaskShoot : Node {
 	}
 
 	public override NodeState Evaluate(BaseBehaviourTree tree) {
+		tree.Movement = (tree.Target.transform.position - tree.Agent.transform.position).normalized;
+		tree.ActorAnimator.SetFloat("X", tree.Movement.x);
+		tree.ActorAnimator.SetFloat("Y", tree.Movement.y);
 
 		if (Time.time > _cooldownTimer) {
 			tree.ActorAnimator.SetBool("IsAttacking", true);

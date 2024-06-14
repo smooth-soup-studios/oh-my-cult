@@ -1,11 +1,10 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class AudioManager : MonoBehaviour {
+public class AudioManager : MonoBehaviour, ISaveable {
 	private static readonly string _logName = "AudioManager";
 	[SerializeField] protected List<SoundObject> Sounds;
 
@@ -27,7 +26,7 @@ public class AudioManager : MonoBehaviour {
 				_audioManager = FindAnyObjectByType<AudioManager>();
 
 				if (!_audioManager) {
-					Logger.LogError(_logName, "No SaveManager found in the scene!");
+					Logger.LogError(_logName, "No AudioManager found in the scene!");
 				}
 			}
 			return _audioManager;
@@ -184,4 +183,15 @@ public class AudioManager : MonoBehaviour {
 			_ => null,
 		};
 	}
+
+
+	public void LoadData(GameData data) {
+
+
+	}
+
+	public void SaveData(GameData data) {
+
+	}
+
 }

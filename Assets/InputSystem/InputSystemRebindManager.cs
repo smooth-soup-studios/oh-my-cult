@@ -13,13 +13,6 @@ public class InputSystemRebindManager : MonoBehaviour {
 	private PlayerInput _playerInput;
 	private PreMadeMovementButtons _buttoning;
 
-	private InputAction _moveAction;
-	private InputAction _attackAction;
-	private InputAction _dashAction;
-	private InputAction _menuToggleAction;
-	private InputAction _itemPickUpAction;
-
-
 	private void Awake() {
 		if (Instance == null) {
 			Instance = this;
@@ -32,15 +25,6 @@ public class InputSystemRebindManager : MonoBehaviour {
 
 		_playerInput = FindObjectOfType<EventBus>().GetComponent<PlayerInput>();
 		_buttoning = gameObject.GetComponent<PreMadeMovementButtons>();
-		SetupInputActions();
-	}
-
-	private void SetupInputActions() {
-		_moveAction = _playerInput.actions["Move"];
-		_attackAction = _playerInput.actions["Primary"];
-		_dashAction = _playerInput.actions["Dash"];
-		_menuToggleAction = _playerInput.actions["ToggleMenu"];
-		_itemPickUpAction = _playerInput.actions["Interact"];
 	}
 
 	public void RemapButtonClicked(String actionToRebind, VisualElement container, int bindingIndex) {

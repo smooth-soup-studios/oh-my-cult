@@ -7,24 +7,24 @@ using UnityEngine.UIElements;
 public class PreMadeMovementButtons : MonoBehaviour
 {
     //Keyboard
-    [HideInInspector] public Button KeyboardSmall = new Button();
-    [HideInInspector] public Button KeyboardBig = new Button();
+    [HideInInspector] public Button KeyboardSmall;
+    [HideInInspector] public Button KeyboardBig;
 
     //Controller
-    [HideInInspector] public Button LeftStick = new Button();
-    [HideInInspector] public Button RightStick = new Button();
-    [HideInInspector] public Button A = new Button();
-    [HideInInspector] public Button B = new Button();
-    [HideInInspector] public Button X = new Button();
-    [HideInInspector] public Button Y = new Button();
-    [HideInInspector] public Button Rb = new Button();
-    [HideInInspector] public Button Rt = new Button();
-    [HideInInspector] public Button Lb = new Button();
-    [HideInInspector] public Button Lt = new Button();
-    [HideInInspector] public Button Up = new Button();
-    [HideInInspector] public Button Down = new Button();
-    [HideInInspector] public Button Left = new Button();
-    [HideInInspector] public Button Right = new Button();
+    [HideInInspector] public Button LeftStick;
+    [HideInInspector] public Button RightStick;
+    [HideInInspector] public Button A;
+    [HideInInspector] public Button B;
+    [HideInInspector] public Button X;
+    [HideInInspector] public Button Y;
+    [HideInInspector] public Button Rb;
+    [HideInInspector] public Button Rt;
+    [HideInInspector] public Button Lb;
+    [HideInInspector] public Button Lt;
+    [HideInInspector] public Button Up;
+    [HideInInspector] public Button Down;
+    [HideInInspector] public Button Left;
+    [HideInInspector] public Button Right;
 
     // Images
     public Sprite KeyboardSmallImg;
@@ -67,6 +67,7 @@ public class PreMadeMovementButtons : MonoBehaviour
 
     private void KeyboardInit(){
         // Small
+        KeyboardSmall = new();
         KeyboardSmall.style.width = 140;
         KeyboardSmall.style.height = 130;
         KeyboardSmall.style.unityTextAlign = TextAnchor.UpperCenter;
@@ -74,6 +75,7 @@ public class PreMadeMovementButtons : MonoBehaviour
         KeyboardSmall.style.backgroundImage = new StyleBackground(KeyboardSmallImg);
 
         // Big
+        KeyboardBig = new();
         KeyboardBig.style.width = 280;
         KeyboardBig.style.height = 130;
         KeyboardBig.style.unityTextAlign = TextAnchor.UpperCenter;
@@ -82,6 +84,7 @@ public class PreMadeMovementButtons : MonoBehaviour
     }
 
     private void ControllerInit(ref Button controller, Sprite sprite){
+        controller = new();
         controller.style.width = 125;
         controller.style.height = 125;
         controller.style.unityTextAlign = TextAnchor.UpperCenter;

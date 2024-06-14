@@ -11,6 +11,10 @@ public class FoodItem : InteractableItem {
 			GameObject pp = Instantiate(ParticlePrefab, source.transform);
 			pp.GetComponent<ParticleSystemRenderer>().material.mainTexture = ItemData.InvData.ItemIcon.texture;
 			EventBus.Instance.TriggerEvent(EventType.AUDIO_PLAY, "AppleMunch");
+
+			if (VibrationManager.Instance) {
+				VibrationManager.Instance.GetOrAddLayer(VibrationLayerNames.Consume, true).SetShakeThenStop(0, .1f, .1f);
+			}
 		}
 	}
 

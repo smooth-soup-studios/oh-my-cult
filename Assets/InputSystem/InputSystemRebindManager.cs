@@ -15,7 +15,6 @@ public class InputSystemRebindManager : MonoBehaviour {
 	public bool ItemPickUpInput { get; private set; }
 
 	private static string _logname = "UserInput";
-	private string _bindingGroup = "Keyboard";
 
 	private PlayerInput _playerInput;
 	private PreMadeMovementButtons _buttoning;
@@ -60,7 +59,7 @@ public class InputSystemRebindManager : MonoBehaviour {
 
 	public void RemapButtonClicked(String actionToRebind, VisualElement container, int bindingIndex) {
 		if(bindingIndex == -1)
-			bindingIndex = _playerInput.actions[actionToRebind].GetBindingIndex(_bindingGroup);
+			bindingIndex = _playerInput.actions[actionToRebind].GetBindingIndex(_playerInput.currentControlScheme);
 		_playerInput.actions[actionToRebind].Disable();
 		_playerInput.actions[actionToRebind].PerformInteractiveRebinding(bindingIndex)
 			.WithBindingGroup(_playerInput.currentControlScheme)
@@ -80,7 +79,7 @@ public class InputSystemRebindManager : MonoBehaviour {
 
 	public string GetBindingDisplayString(string actionName, String bindingGroup = null, int bindingIndex = -1) {
 		if (bindingGroup == null) {
-			bindingGroup = _bindingGroup;
+			bindingGroup = _playerInput.currentControlScheme;
 		}
 		InputAction action = _playerInput.actions[actionName];
 		if (action == null) {
@@ -113,9 +112,5 @@ public class InputSystemRebindManager : MonoBehaviour {
 		container.Q<Button>().style.marginBottom = button.style.marginBottom;
 		container.Q<Button>().style.marginLeft = button.style.marginLeft;
 		container.Q<Button>().style.marginRight = button.style.marginRight;
-	}
-
-	public void SetBindingGroup(String newGroup){
-		_bindingGroup = newGroup;
 	}
 }

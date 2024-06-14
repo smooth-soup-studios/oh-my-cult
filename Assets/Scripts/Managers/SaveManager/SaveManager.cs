@@ -20,7 +20,7 @@ public class SaveManager : MonoBehaviour {
 	protected string SelectedProfile = "";
 	protected List<ISaveable> Saveables;
 	protected GameData GameData;
-	protected GameData InjectionCache = new();
+	protected GameData InjectionCache;
 	protected IDataManager DataManager;
 
 	private static SaveManager _saveManager;
@@ -178,13 +178,14 @@ public class SaveManager : MonoBehaviour {
 	/// Sets the cache injected at save, load and game creation.
 	/// </summary>
 	protected void SetInjectionCache(GameData data) {
+		InjectionCache ??= new();
 		InjectionCache = data;
 	}
 	/// <summary>
 	/// Injects the specified values from the cache into the current GameData instance.
 	/// </summary>
 	protected void ApplyInjectionCache() {
-		if (GameData != null) {
+		if (GameData != null && InjectionCache != null) {
 			GameData.PlayerSettings = InjectionCache.PlayerSettings;
 		}
 	}

@@ -26,7 +26,7 @@ public class AudioManager : MonoBehaviour, ISaveable {
 				_audioManager = FindAnyObjectByType<AudioManager>();
 
 				if (!_audioManager) {
-					Logger.LogError(_logName, "No SaveManager found in the scene!");
+					Logger.LogError(_logName, "No AudioManager found in the scene!");
 				}
 			}
 			return _audioManager;

@@ -123,17 +123,9 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 	}
 
 	void OnKeyChange(String buttonToRebind, VisualElement container, int KeyBinding = -1) {
-		Button button = null;
 		if (_userInput) {
 			Debug.Log("Button remapping");
 			_userInput.RemapButtonClicked(buttonToRebind, container, KeyBinding);
-		}
-		Debug.Log("Keychange");
-		if (button != null){
-			Debug.Log("Button replaced");
-			container.Clear();
-			container.Add(button);
-
 		}
 	}
 

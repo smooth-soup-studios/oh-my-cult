@@ -69,7 +69,7 @@ public class InputSystemRebindManager : MonoBehaviour {
 			.WithCancelingThrough("<Keyboard>/escape")
 			.OnMatchWaitForAnother(0.1f)
 			.OnComplete(operation => {
-				String newText = GetBindingDisplayString(actionToRebind);
+				String newText = GetBindingDisplayString(actionToRebind, _playerInput.currentControlScheme, bindingIndex);
 				TextChange(newText, container, _playerInput.currentControlScheme);
 				operation.Dispose();
 			})
@@ -110,7 +110,7 @@ public class InputSystemRebindManager : MonoBehaviour {
 		// container.Q<Button>().style.width = button.style.width;
 		// container.Q<Button>().style.height = button.style.height;
 		container.Q<Button>().style.unityTextAlign = button.style.unityTextAlign;
-		container.Q<Button>().style.fontSize = button.style.fontSize;
+		//container.Q<Button>().style.fontSize = button.style.fontSize;
 		container.Q<Button>().style.backgroundImage = button.style.backgroundImage;
 		container.Q<Button>().style.color = button.style.color;
 		container.Q<Button>().style.marginTop = button.style.marginTop;

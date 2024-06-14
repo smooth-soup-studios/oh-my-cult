@@ -72,7 +72,7 @@ public class PreMadeMovementButtons : MonoBehaviour
         // KeyboardSmall.style.width = 110;
         // KeyboardSmall.style.height = 100;
         KeyboardSmall.style.unityTextAlign = TextAnchor.UpperCenter;
-        KeyboardSmall.style.fontSize = 42;
+        //KeyboardSmall.style.fontSize = 42;
         KeyboardSmall.style.backgroundImage = new StyleBackground(KeyboardSmallImg);
         KeyboardSmall.style.color = new Color(0, 0, 0, 255);
         KeyboardSmall.style.marginTop = 5;
@@ -85,7 +85,7 @@ public class PreMadeMovementButtons : MonoBehaviour
         // KeyboardBig.style.width = 220;
         // KeyboardBig.style.height = 100;
         KeyboardBig.style.unityTextAlign = TextAnchor.UpperCenter;
-        KeyboardBig.style.fontSize = 42;
+        //KeyboardBig.style.fontSize = 42;
         KeyboardBig.style.backgroundImage = new StyleBackground(KeyboardBigImg);
         KeyboardBig.style.color = new Color(0, 0, 0, 255);
         KeyboardBig.style.marginTop = 5;
@@ -98,8 +98,6 @@ public class PreMadeMovementButtons : MonoBehaviour
         controller = new();
         controller.style.width = 125;
         controller.style.height = 125;
-        controller.style.unityTextAlign = TextAnchor.UpperCenter;
-        controller.style.fontSize = 60;
         controller.style.backgroundImage = new StyleBackground(sprite);
     }
 
@@ -111,39 +109,6 @@ public class PreMadeMovementButtons : MonoBehaviour
     }
 
     public Button GetControllerButton(String buttonText){
-		return buttonText switch {
-			"LS/Up" => LeftStick,
-            "LS/Down" => LeftStick,
-            "LS/Left" => LeftStick,
-            "LS/Right" => LeftStick,
-			"RS/Up" => RightStick,
-            "RS/Down" => RightStick,
-            "RS/Left" => RightStick,
-            "RS/Right" => RightStick,
-            "A" => A,
-            "B" => B,
-            "X" => X,
-            "Y" => Y,
-            "RB" => Rb,
-            "RT" => Rt,
-            "LB" => Lb,
-            "Lt" => Lt,
-            //"D-pad/Up" => Up,
-            //"D-pad/Down" => Down,
-            //"D-pad/Left" => Left,
-            //"D-pad/Right" => Right,
-			_ => LeftStick,
-		};
-	}
-
-    public Sprite GetKeyboardButtonImg(String buttonText){
-        if(buttonText.Length > 1){
-            return KeyboardBigImg;
-        }
-        return KeyboardSmallImg;
-    }
-
-    public Button GetControllerButtonImg(String buttonText){
 		return buttonText switch {
 			"LS/Up" => LeftStick,
             "LS/Down" => LeftStick,

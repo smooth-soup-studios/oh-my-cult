@@ -25,6 +25,13 @@ public class BossAttacks : MonoBehaviour {
 		GetComponentsInChildren<BossAttackHitbox>().Where(e => e != null).Where(e => e.Direction == currentDirection).Where(e => e.AttackType == attackType).ToList().ForEach(e => e.GetUniqueObjectsInCollider().ForEach(obj => {
 			if (obj.TryGetComponent(out HealthController opponent)) {
 				opponent.TakeDamage(_weaponData.WeaponData.Damage);
+
+				if (ScreenShakeManager.Instance) {
+					ScreenShakeManager.Instance.GetOrAddLayer(VibrationLayerNames.ReceivePrimaryDamage, true).SetShakeThenStop(5f, 1.25f, 1.5f);
+				}
+				if (VibrationManager.Instance) {
+					VibrationManager.Instance.GetOrAddLayer(VibrationLayerNames.ReceivePrimaryDamage, true).SetShakeThenStop(1f, .75f, .5f);
+				}
 			}
 		}));
 

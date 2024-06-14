@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 
-public class PreMadeMovementButtons
+public class PreMadeMovementButtons : MonoBehaviour
 {
     //Keyboard
     [HideInInspector] public Button KeyboardSmall = new Button();
@@ -44,7 +44,7 @@ public class PreMadeMovementButtons
     public Sprite LeftImg;
     public Sprite RightImg;
 
-    public PreMadeMovementButtons(){
+    private void Awake() {
         // Keyboard initialisation
         KeyboardInit();
 

@@ -107,12 +107,8 @@ public class InputSystemRebindManager : MonoBehaviour {
 	}
 
 	private void buttonChange(VisualElement container, Button button){
-		// container.Q<Button>().style.width = button.style.width;
-		// container.Q<Button>().style.height = button.style.height;
 		container.Q<Button>().style.unityTextAlign = button.style.unityTextAlign;
-		//container.Q<Button>().style.fontSize = button.style.fontSize;
 		container.Q<Button>().style.backgroundImage = button.style.backgroundImage;
-		container.Q<Button>().style.color = button.style.color;
 		container.Q<Button>().style.marginTop = button.style.marginTop;
 		container.Q<Button>().style.marginBottom = button.style.marginBottom;
 		container.Q<Button>().style.marginLeft = button.style.marginLeft;

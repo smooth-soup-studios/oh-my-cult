@@ -69,12 +69,8 @@ public class PreMadeMovementButtons : MonoBehaviour
     private void KeyboardInit(){
         // Small
         KeyboardSmall = new();
-        // KeyboardSmall.style.width = 110;
-        // KeyboardSmall.style.height = 100;
         KeyboardSmall.style.unityTextAlign = TextAnchor.UpperCenter;
-        //KeyboardSmall.style.fontSize = 42;
         KeyboardSmall.style.backgroundImage = new StyleBackground(KeyboardSmallImg);
-        KeyboardSmall.style.color = new Color(0, 0, 0, 255);
         KeyboardSmall.style.marginTop = 5;
         KeyboardSmall.style.marginBottom = 30;
         KeyboardSmall.style.marginLeft = 35;
@@ -82,12 +78,8 @@ public class PreMadeMovementButtons : MonoBehaviour
 
         // Big
         KeyboardBig = new();
-        // KeyboardBig.style.width = 220;
-        // KeyboardBig.style.height = 100;
         KeyboardBig.style.unityTextAlign = TextAnchor.UpperCenter;
-        //KeyboardBig.style.fontSize = 42;
         KeyboardBig.style.backgroundImage = new StyleBackground(KeyboardBigImg);
-        KeyboardBig.style.color = new Color(0, 0, 0, 255);
         KeyboardBig.style.marginTop = 5;
         KeyboardBig.style.marginBottom = 30;
         KeyboardBig.style.marginLeft = 35;

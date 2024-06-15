@@ -18,20 +18,22 @@ public class BossIdleState : BossBaseState {
 					Boss.SwitchState("Slam");
 					break;
 				case 1:
-					Boss.SwitchState("Charge");
-					break;
-				case 2:
 					Boss.BossAttacks.FlashRoar(Boss.Direction, BossAttackType.ROAR);
 					Boss.SwitchState("Roar");
 					break;
-				case 3:
-					Boss.SwitchState("Move");
-					break;
 			}
 		}
-		else if (Vector2.Distance(Boss.Player.transform.position, Boss.transform.position) >= 5f && Boss.WaitForWalking == false) {
-			Boss.SwitchState("Move");
+
+		//TODO Need Fixing
+		else if (Vector2.Distance(Boss.Player.transform.position, Boss.transform.position) >= 6f && Boss.WaitForWalking == false) {
+			if (Vector2.Distance(Boss.Player.transform.position, Boss.transform.position) <= 4f) {
+				Boss.SwitchState("Move");
+			}
+			else {
+				Boss.SwitchState("Charge");
+			}
 		}
+
 		Boss.Movement = (Boss.Player.transform.position - Boss.transform.position).normalized;
 		Boss.BossAnimation.SetFloat("X", Boss.Movement.x);
 		Boss.BossAnimation.SetFloat("Y", Boss.Movement.y);
@@ -42,7 +44,7 @@ public class BossIdleState : BossBaseState {
 	}
 
 	IEnumerator SwitchTime() {
-		yield return new WaitForSecondsRealtime(1.5f);
+		yield return new WaitForSecondsRealtime(2f);
 		_switchState = true;
 	}
 

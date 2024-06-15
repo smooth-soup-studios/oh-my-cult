@@ -20,8 +20,10 @@ public class Boss : MonoBehaviour, ISaveable {
 	[HideInInspector] public Vector2 Movement;
 	[HideInInspector] public bool WaitForWalking = true;
 	public MovementDirection Direction;
+		private GameObject _target;
 
 	void Start() {
+		_target = GameObject.FindWithTag("Player");
 		if (!_isAlive) {
 			gameObject.SetActive(false);
 		}
@@ -89,11 +91,14 @@ public class Boss : MonoBehaviour, ISaveable {
 	}
 
 	public void CheckForPlayer() {
-		Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, Stats.ChargeRange, BossAttacks.EnemyLayer);
+		// Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, Stats.ChargeRange, BossAttacks.EnemyLayer);
 
-		if (hitEnemies.Length >= 1) {
+		// if (hitEnemies.Length >= 1) {
+		// 	Enemy = true;
+		// 	Charge = false;
+		// }
+		if (Vector2.Distance(transform.position, _target.transform.position) <= Stats.ChargeRange) {
 			Enemy = true;
-			Charge = false;
 		}
 	}
 

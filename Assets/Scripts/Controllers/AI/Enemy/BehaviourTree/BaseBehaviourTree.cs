@@ -31,6 +31,8 @@ namespace BehaviorTree {
 
 			Agent = GetComponent<NavMeshAgent>();
 			ActorAnimator = GetComponent<Animator>();
+
+			Agent.speed = Stats.Speed; 
 		}
 
 		protected void Start() {

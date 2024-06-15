@@ -62,6 +62,7 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 			// Enemy - Patrol when no target is available and waypoints have been set
 			new Sequence(new List<Node>
 			{
+				// new CheckActorType(ActorType.MeleeEnemy),
 				new CheckAgentHasWaypoints(Waypoints),
 				new TaskPatrol(Waypoints)
 			}),

@@ -405,6 +405,7 @@ MonoBehaviour:
   ActorType: 3
   Stats: {fileID: 11400000, guid: 62b55ec386d43474bbb7e92a5b49c3c8, type: 2}
   Waypoints: []
+  NPCTransformPrefab: {fileID: 0}
   DisableAgression: 0
 --- !u!61 &8858220036240824714
 BoxCollider2D:

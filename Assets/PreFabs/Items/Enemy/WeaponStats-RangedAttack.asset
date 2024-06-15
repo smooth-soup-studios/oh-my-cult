@@ -16,4 +16,4 @@ MonoBehaviour:
     Damage: 8
     AttackSpeed: 2
     Range: 6
-    Knockback: 3
+    Knockback: 1

@@ -20,6 +20,7 @@ public class InputSystemRebindManager : MonoBehaviour {
 			Destroy(this);
 			return;
 		}
+		AcquireRefs();
 	}
 
 	private void Start() {

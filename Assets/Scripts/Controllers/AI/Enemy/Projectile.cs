@@ -11,7 +11,7 @@ public class Projectile : MonoBehaviour {
 
 	public WeaponItem EnemyWeapon;
 	private float _destroyDistance = 5;
-	private float _flytime = 10f;
+	private float _flytime = 2f;
 	private bool _flying;
 
 	//   public BaseBehaviourTree Enemy;
@@ -23,6 +23,7 @@ public class Projectile : MonoBehaviour {
 		_targetPosition = _target.transform.position;
 		_startPosition = transform.position;
 		StartCoroutine(FlyTime());
+		RotateHitboxOnMove();
 
 	}
 
@@ -34,18 +35,18 @@ public class Projectile : MonoBehaviour {
 		transform.position,
 		_targetPosition,
 		_speed * Time.deltaTime);
-		// RotateHitboxOnMove(Vector2.Min(transform.position, _targetPosition));
+
 
 
 
 
 
 		// // If it exists for too long, destroy!
-		// if (Vector2.Distance(transform.position, _startPosition) > _destroyDistance || _flying == false) {
+		// if (_flying == false) {
 		// 	Destroy(gameObject);
 		// }
 	}
-	private void RotateHitboxOnMove(Vector2 movement) {
+	private void RotateHitboxOnMove() {
 		// float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
 		// transform.rotation = Quaternion.Euler(0, 0, angle);
 
@@ -66,9 +67,8 @@ public class Projectile : MonoBehaviour {
 	}
 
 	public IEnumerator FlyTime() {
-		_flying = true;
 		yield return new WaitForSeconds(_flytime);
-		_flying = false;
+		Destroy(gameObject);
 	}
 	public IEnumerator Destroy() {
 		yield return new WaitForSeconds(0.5f);

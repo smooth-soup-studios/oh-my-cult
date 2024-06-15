@@ -7,6 +7,8 @@ public class VibrationManager : MonoBehaviour {
 	private const string _logName = "VibrationManager";
 	public static VibrationManager Instance { get; private set; }
 
+	public static bool VibrationEnabled = true;
+
 	protected List<ShakeLayer> Layers = new();
 
 	void Awake() {
@@ -24,7 +26,7 @@ public class VibrationManager : MonoBehaviour {
 	}
 
 	private void SetGamepadShake() {
-		if (Gamepad.current != null) {
+		if (VibrationEnabled && Gamepad.current != null) {
 			// float ampLow = Mathf.Clamp01(Layers.Sum(l => l.FreqTween.GetClamped() < 0.5f ? l.AmpTween.GetClamped() : 0));
 			// float ampHigh = Mathf.Clamp01(Layers.Sum(l => l.FreqTween.GetClamped() >= 0.5f ? l.AmpTween.GetClamped() : 0));
 

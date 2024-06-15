@@ -128,7 +128,6 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 
 	void OnKeyChange(string buttonToRebind, VisualElement container, int KeyBinding = -1) {
 		if (_userInput) {
-			Debug.Log("Button remapping");
 			_userInput.RemapButtonClicked(buttonToRebind, container, KeyBinding, _controlScheme);
 		}
 	}

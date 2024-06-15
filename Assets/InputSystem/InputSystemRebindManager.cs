@@ -32,7 +32,7 @@ public class InputSystemRebindManager : MonoBehaviour {
 			_playerInput = FindObjectOfType<EventBus>().GetComponent<PlayerInput>();
 
 		string currentControlScheme = _playerInput.currentControlScheme;
-		
+
 		if(bindingIndex == -1)
 			bindingIndex = _playerInput.actions[actionToRebind].GetBindingIndex(currentControlScheme);
 
@@ -47,7 +47,6 @@ public class InputSystemRebindManager : MonoBehaviour {
 			.WithCancelingThrough("<Keyboard>/escape")
 			.OnMatchWaitForAnother(0.1f)
 			.OnComplete(operation => {
-				Debug.Log(_playerInput + " is the actual vs the fake " + controlScheme);
 				string newText = GetBindingDisplayString(actionToRebind, currentControlScheme, bindingIndex);
 				TextChange(newText, container, currentControlScheme);
 				operation.Dispose();
@@ -73,13 +72,11 @@ public class InputSystemRebindManager : MonoBehaviour {
 	}
 
 	public void TextChange(string buttonText, VisualElement container, string bindingGroup = null) {
-		Button button = null;
+		Button button;
 		if (bindingGroup == "Controller") {
-			//container.Q<Button>().style.backgroundImage = new StyleBackground(_buttoning.GetControllerButton(buttonText));
 			button = _buttoning.GetControllerButton(buttonText);
 			container.Q<Button>().text = "";
 		}else{
-			//container.Q<Button>().style.backgroundImage = new StyleBackground(_buttoning.GetKeyboardButton(buttonText));
 			button = _buttoning.GetKeyboardButton(buttonText);
 			container.Q<Button>().text = buttonText;
 		}

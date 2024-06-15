@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TaskShoot : Node {
 	private float _cooldown = 0;
-	private float _cooldownTimer = 0.56f;
+	private float _cooldownTimer = 1.04f;
 	private Vector2 _offset = new Vector2(0f, 0f);
 	public TaskShoot() {
 

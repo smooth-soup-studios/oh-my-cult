@@ -11,7 +11,7 @@ public class Projectile : MonoBehaviour {
 
 	public WeaponItem EnemyWeapon;
 	private float _destroyDistance = 5;
-	private float _flytime = 2f;
+	private float _flytime = 3.5f;
 	private bool _flying;
 
 	//   public BaseBehaviourTree Enemy;
@@ -30,21 +30,11 @@ public class Projectile : MonoBehaviour {
 	// Update is called once per frame
 	void Update() {
 		// Move the projectile in the direction the target was when it was instantiated
-
 		transform.position = Vector3.MoveTowards(
 		transform.position,
 		_targetPosition,
 		_speed * Time.deltaTime);
 
-
-
-
-
-
-		// // If it exists for too long, destroy!
-		// if (_flying == false) {
-		// 	Destroy(gameObject);
-		// }
 	}
 	private void RotateHitboxOnMove() {
 		// float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;

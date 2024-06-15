@@ -96,8 +96,9 @@ public class SaveManager : MonoBehaviour {
 	/// </summary>
 	public void NewGame() {
 		SendToLogger("Starting new game. Creating default gamedata");
+		GameData oldData = GameData;
 		GameData = new();
-		ApplyInjectionCache();
+		TransferSettings(ref oldData, ref GameData);
 	}
 
 	/// <summary>
@@ -106,8 +107,8 @@ public class SaveManager : MonoBehaviour {
 	public void LoadGame() {
 		if (_enableSaving) {
 			SendToLogger("Loading game, looking for saves.");
+			GameData oldData = GameData;
 			GameData = DataManager.Load(SelectedProfile);
-			ApplyInjectionCache();
 
 			if (GameData == null && _initializeData) {
 				SendToLogger("No save found. initializing new game.");
@@ -121,6 +122,7 @@ public class SaveManager : MonoBehaviour {
 			}
 
 			Saveables.ForEach(saveable => saveable.LoadData(GameData));
+			TransferSettings(ref oldData, ref GameData);
 		}
 	}
 
@@ -137,7 +139,6 @@ public class SaveManager : MonoBehaviour {
 
 			SendToLogger("Saving game.");
 			Saveables.ForEach(saveable => saveable?.SaveData(GameData));
-			ApplyInjectionCache();
 			DataManager.Save(GameData, SelectedProfile);
 		}
 	}
@@ -150,7 +151,7 @@ public class SaveManager : MonoBehaviour {
 			SendToLogger("SoftSaving game.");
 			GameData tempData = new();
 			Saveables.ForEach(saveable => saveable?.SaveData(tempData));
-			SetInjectionCache(tempData);
+			TransferSettings(ref tempData, ref GameData);
 		}
 	}
 
@@ -174,21 +175,13 @@ public class SaveManager : MonoBehaviour {
 		return GameData != null;
 	}
 
-	/// <summary>
-	/// Sets the cache injected at save, load and game creation.
-	/// </summary>
-	protected void SetInjectionCache(GameData data) {
-		InjectionCache ??= new();
-		InjectionCache = data;
-	}
-	/// <summary>
-	/// Injects the specified values from the cache into the current GameData instance.
-	/// </summary>
-	protected void ApplyInjectionCache() {
-		if (GameData != null && InjectionCache != null) {
-			GameData.PlayerSettings = InjectionCache.PlayerSettings;
+	public void TransferSettings(ref GameData source, ref GameData target) {
+		if (source == null || target == null) {
+			return;
 		}
+		target.PlayerSettings = source.PlayerSettings;
 	}
+
 
 	private void SendToLogger(string text) {
 		if (_enableLogging) {

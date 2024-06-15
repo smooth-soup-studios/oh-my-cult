@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
@@ -8,22 +5,11 @@ using UnityEngine.UIElements;
 public class InputSystemRebindManager : MonoBehaviour {
 	public static InputSystemRebindManager Instance { get; private set; }
 
-	public Vector2 MoveInput { get; private set; }
-	public bool AttackInput { get; private set; }
-	public bool DashInput { get; private set; }
-	public bool MenuToggleInput { get; private set; }
-	public bool ItemPickUpInput { get; private set; }
-
 	private static string _logname = "UserInput";
 
 	private PlayerInput _playerInput;
-
-	private InputAction _moveAction;
-	private InputAction _attackAction;
-	private InputAction _dashAction;
-	private InputAction _menuToggleAction;
-	private InputAction _itemPickUpAction;
-
+	private PreMadeMovementButtons _buttoning;
+	private InputActionRebindingExtensions.RebindingOperation _rebindInProgress;
 
 	private void Awake() {
 		if (Instance == null) {
@@ -34,55 +20,108 @@ public class InputSystemRebindManager : MonoBehaviour {
 			Destroy(this);
 			return;
 		}
+		AcquireRefs();
+	}
 
+	private void Start() {
+		AcquireRefs();
+	}
+
+	public void AcquireRefs() {
 		_playerInput = FindObjectOfType<EventBus>().GetComponent<PlayerInput>();
-		SetupInputActions();
+		_buttoning = FindObjectOfType<PreMadeMovementButtons>();
 	}
 
-	private void SetupInputActions() {
-		_moveAction = _playerInput.actions["Move"];
-		_attackAction = _playerInput.actions["Primary"];
-		_dashAction = _playerInput.actions["Dash"];
-		_menuToggleAction = _playerInput.actions["ToggleMenu"];
-		_itemPickUpAction = _playerInput.actions["Interact"];
-	}
+	public void RemapButtonClicked(string actionToRebind, VisualElement container, int bindingIndex, string controlScheme) {
+		if (_playerInput == null) {
+			AcquireRefs();
+		}
 
-	private void UpdateInputs() {
-		MoveInput = _moveAction.ReadValue<Vector2>();
-		AttackInput = _attackAction.WasPressedThisFrame();
-		DashInput = _dashAction.WasPressedThisFrame();
-		MenuToggleInput = _menuToggleAction.WasPressedThisFrame();
-		ItemPickUpInput = _itemPickUpAction.WasPerformedThisFrame();
-	}
+		string currentControlScheme = _playerInput.currentControlScheme;
 
-	public void RemapButtonClicked(String actionToRebind, Button button, int bindingIndex = -1) {
+		if (bindingIndex == -1) {
+			bindingIndex = _playerInput.actions[actionToRebind].GetBindingIndex(currentControlScheme);
+		}
+		if (currentControlScheme != controlScheme) {
+			return;
+		}
+
+		// Cancel any existing rebinding operation
+		_rebindInProgress?.Cancel();
+
 		_playerInput.actions[actionToRebind].Disable();
-		_playerInput.actions[actionToRebind].PerformInteractiveRebinding(bindingIndex)
-			.WithBindingGroup(_playerInput.currentControlScheme)
+		_rebindInProgress = _playerInput.actions[actionToRebind].PerformInteractiveRebinding(bindingIndex)
+			.WithBindingGroup(currentControlScheme)
 			// To avoid accidental input from mouse motion
 			.WithControlsExcluding("Mouse")
 			.WithCancelingThrough("<Keyboard>/escape")
 			.OnMatchWaitForAnother(0.1f)
 			.OnComplete(operation => {
-				String newText = GetBindingDisplayString(actionToRebind, bindingIndex);
-				RebindComplete(button, newText);
+				string newText = GetBindingDisplayString(actionToRebind, currentControlScheme, bindingIndex);
+				TextChange(newText, container, currentControlScheme);
 				operation.Dispose();
+				_rebindInProgress = null;
 			})
 			.Start();
 
 		_playerInput.actions[actionToRebind].Enable();
 	}
 
-	public string GetBindingDisplayString(string actionName, int bindingIndex) {
+	public string GetBindingDisplayString(string actionName, string bindingGroup = null, int bindingIndex = -1) {
+		if (_playerInput == null) {
+			AcquireRefs();
+		}
+		bindingGroup ??= _playerInput.currentControlScheme;
+
 		InputAction action = _playerInput.actions[actionName];
 		if (action == null) {
 			return string.Empty;
 		}
-		return action.GetBindingDisplayString(bindingIndex);
+		if (bindingIndex == -1)
+			bindingIndex = action.GetBindingIndex(bindingGroup);
+		string text = action.GetBindingDisplayString(bindingIndex);
+		return text;
 
 	}
 
-	public void RebindComplete(Button button, String buttonText) {
-		button.text = buttonText;
+	public void TextChange(string buttonText, VisualElement container, string bindingGroup = null) {
+		Button button;
+		if (bindingGroup == "Controller") {
+			button = _buttoning.GetControllerButton(buttonText);
+			container.Q<Button>().text = "";
+		}
+		else {
+			button = _buttoning.GetKeyboardButton(buttonText);
+			container.Q<Button>().text = buttonText;
+		}
+		NewButton(container, button);
+	}
+
+	public void NewButton(VisualElement container, Button button) {
+		Button original = container.Q<Button>();
+
+		original.style.width = button.style.width;
+		original.style.height = button.style.height;
+		original.style.backgroundImage = button.style.backgroundImage;
+	}
+
+	public void TextChange(string buttonText, VisualElement icon, Label label) {
+		Button button;
+		if (_playerInput.currentControlScheme == "Controller") {
+			button = _buttoning.GetControllerButton(buttonText);
+			label.text = "";
+			icon.style.width = 50;
+		}
+		else {
+			button = _buttoning.GetKeyboardButton(buttonText);
+			label.text = buttonText;
+			if (buttonText.Length > 1) {
+				icon.style.width = 150;
+			}
+			else {
+				icon.style.width = 64;
+			}
+		}
+		icon.style.backgroundImage = button.style.backgroundImage;
 	}
 }

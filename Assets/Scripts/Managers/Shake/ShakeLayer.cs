@@ -5,6 +5,8 @@ using UnityEngine;
 /// Represents a layer of screen shake.
 /// <para/>
 /// All functions use the ScreenShakeManager.DefaultEasingFunction. All functions without the duration parameter use the ScreenShakeManager.DefaultDuration.
+/// <para/>
+/// For VibrationManager, amplitude is the low frequency motor and frequency is the high frequency motor.
 /// </summary>
 [Serializable]
 public class ShakeLayer {

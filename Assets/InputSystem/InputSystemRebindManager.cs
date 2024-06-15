@@ -29,7 +29,7 @@ public class InputSystemRebindManager : MonoBehaviour {
 
 	public void AcquireRefs() {
 		_playerInput = FindObjectOfType<EventBus>().GetComponent<PlayerInput>();
-		_buttoning = gameObject.GetComponent<PreMadeMovementButtons>();
+		_buttoning = FindObjectOfType<PreMadeMovementButtons>();
 	}
 
 	public void RemapButtonClicked(string actionToRebind, VisualElement container, int bindingIndex, string controlScheme) {

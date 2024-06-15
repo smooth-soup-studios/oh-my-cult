@@ -14,7 +14,7 @@ public class TaskChangeToEnemy : Node {
 			_didAnimationStart = true;
 			_tAnimationStart = Time.time;
 			if (tree.TryGetComponent<Rigidbody2D>(out _rb)) {
-				_rb.simulated = false;
+				_rb.constraints = RigidbodyConstraints2D.FreezeAll;
 			}
 		}
 		else {
@@ -30,7 +30,7 @@ public class TaskChangeToEnemy : Node {
 			if (Time.time - _tAnimationStart > _copyAnimationDuration + _animationWaitTime) {
 				tree.ActorType = ActorType.MeleeEnemy;
 				if (_rb) {
-					_rb.simulated = true;
+					_rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 				}
 			}
 		}

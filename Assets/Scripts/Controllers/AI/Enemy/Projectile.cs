@@ -11,7 +11,7 @@ public class Projectile : MonoBehaviour {
 
 	public WeaponItem EnemyWeapon;
 	private float _destroyDistance = 5;
-	private float _flytime = 2f;
+	private float _flytime = 10f;
 	private bool _flying;
 
 	//   public BaseBehaviourTree Enemy;
@@ -23,6 +23,7 @@ public class Projectile : MonoBehaviour {
 		_targetPosition = _target.transform.position;
 		_startPosition = transform.position;
 		StartCoroutine(FlyTime());
+
 	}
 
 	// Update is called once per frame
@@ -33,7 +34,8 @@ public class Projectile : MonoBehaviour {
 		transform.position,
 		_targetPosition,
 		_speed * Time.deltaTime);
-		RotateHitboxOnMove(Vector2.Min(transform.position, _targetPosition));
+		// RotateHitboxOnMove(Vector2.Min(transform.position, _targetPosition));
+
 
 
 
@@ -44,8 +46,14 @@ public class Projectile : MonoBehaviour {
 		// }
 	}
 	private void RotateHitboxOnMove(Vector2 movement) {
-		float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
-		transform.rotation = Quaternion.Euler(0, 0, angle);
+		// float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
+		// transform.rotation = Quaternion.Euler(0, 0, angle);
+
+		Vector3 dir = _target.transform.position - transform.position;
+
+		float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+
+		transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 	}
 	private void OnTriggerEnter2D(Collider2D other) {
 		if (!other.CompareTag("Enemy") && other.gameObject.layer != LayerMask.NameToLayer("Ignore Raycast")) {

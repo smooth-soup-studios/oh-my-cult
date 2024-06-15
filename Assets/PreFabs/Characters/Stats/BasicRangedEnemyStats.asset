@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: BasicRangedEnemyStats
   m_EditorClassIdentifier: 
   Speed: 2
-  DetectionRange: 6
-  AttackRange: 4
-  RetreatRange: 2
+  DetectionRange: 8
+  AttackRange: 2
+  ShootRange: 6
+  RetreatRange: 4
   AttackSpeed: 0.56
   EnemyWeapon: {fileID: 7613533550855613070, guid: b52a80a05d680eb41b21c4cf63e7c8e4, type: 3}
   EnemyProjectile: {fileID: 4358673302326295181, guid: 3c7eb3be55ceddf4e8afa227d2f2f95e, type: 3}

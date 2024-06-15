@@ -11,4 +11,9 @@ public class EnemyAttackHandler : MonoBehaviour {
 		_behaviourTree.ActorAnimator.SetBool("IsAttacking", false);
 		_behaviourTree.Stats.EnemyWeapon.PrimaryAction(gameObject);
 	}
+
+	public void RangedAttack(){
+		_behaviourTree.ActorAnimator.SetBool("IsAttacking", false);
+
+	}
 }

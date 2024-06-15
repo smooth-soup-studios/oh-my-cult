@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1876806339172268021}
   - component: {fileID: -3325858199186435859}
   - component: {fileID: 8128946012040755029}
-  - component: {fileID: 2413695278877631731}
   m_Layer: 2
   m_Name: Projectile
   m_TagString: Untagged
@@ -186,15 +185,3 @@ PolygonCollider2D:
       - {x: -0.33249998, y: -0.65749997}
       - {x: -0.24249999, y: -0.59749997}
   m_UseDelaunayMesh: 0
---- !u!114 &2413695278877631731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4358673302326295181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05ac34e2c435f0046b73486e43318bbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

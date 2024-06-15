@@ -22,7 +22,6 @@ public class InputSystemRebindManager : MonoBehaviour {
 			Destroy(this);
 			return;
 		}
-		AcquireRefs();
 	}
 
 	private void Start() {
@@ -65,9 +64,11 @@ public class InputSystemRebindManager : MonoBehaviour {
 	}
 
 	public string GetBindingDisplayString(string actionName, string bindingGroup = null, int bindingIndex = -1) {
-		if (bindingGroup == null) {
-			bindingGroup = _playerInput.currentControlScheme;
+		if (_playerInput == null) {
+			AcquireRefs();
 		}
+		bindingGroup ??= _playerInput.currentControlScheme;
+
 		InputAction action = _playerInput.actions[actionName];
 		if (action == null) {
 			return string.Empty;
@@ -110,9 +111,10 @@ public class InputSystemRebindManager : MonoBehaviour {
 		else {
 			button = _buttoning.GetKeyboardButton(buttonText);
 			label.text = buttonText;
-			if (buttonText.Length > 1){
+			if (buttonText.Length > 1) {
 				icon.style.width = 150;
-			}else{
+			}
+			else {
 				icon.style.width = 64;
 			}
 		}

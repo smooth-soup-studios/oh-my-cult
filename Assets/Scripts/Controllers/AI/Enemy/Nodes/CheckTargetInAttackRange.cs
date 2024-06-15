@@ -10,13 +10,9 @@ public class CheckTargetInAttackRange : Node {
 			return State;
 		}
 		if (Vector2.Distance(tree.transform.position, target.transform.position) <= tree.Stats.AttackRange) {
-			tree.ActorAnimator.SetBool("IsAttacking", true);
 			State = NodeState.SUCCESS;
 			return State;
-
-
 		}
-		tree.ActorAnimator.SetBool("IsAttacking", false);
 		State = NodeState.FAILURE;
 		return State;
 	}

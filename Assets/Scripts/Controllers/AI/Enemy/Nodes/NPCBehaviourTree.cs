@@ -12,6 +12,7 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 		Agent.updateRotation = false;
 		Agent.updateUpAxis = false;
 	}
+
 	protected new void Update() {
 		base.Update();
 		if (Movement != _oldMovement) {
@@ -19,6 +20,7 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 			_oldMovement = Movement;
 		}
 	}
+
 
 	protected override Node SetupTree() {
 		Node root = new Selector(new List<Node>
@@ -75,4 +77,6 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 		float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
 		HitContainer.transform.rotation = Quaternion.Euler(0, 0, angle);
 	}
+
+
 }

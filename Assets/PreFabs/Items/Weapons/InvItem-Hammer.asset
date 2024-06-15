@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c0e1789899e29448350646d58e3256, type: 3}
+  m_Name: InvItem-Hammer
+  m_EditorClassIdentifier: 
+  InvData:
+    Id: f5b62a55-4384-45ea-868f-d7ae291f7730
+    ItemName: Hammer
+    ItemIcon: {fileID: 21300000, guid: d404c7e90a61da04c80424b75f1f8abc, type: 3}
+    ItemPrefab: {fileID: 7763686930614832610, guid: 93a934a234c72c949bdf58cb2f237318, type: 3}
+    MaxStackSize: 1
+    ItemType: 1
+    AnimationSet: Hammer
+    Description: A big block of metal on a stick.. what could possibly go wrong?

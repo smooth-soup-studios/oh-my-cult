@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2405006365793980597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7571494745925710560}
+  - component: {fileID: 4504824434958718761}
+  - component: {fileID: 5657791440642038804}
+  - component: {fileID: 6116300679002029349}
+  - component: {fileID: 3824061499471161190}
+  m_Layer: 5
+  m_Name: KeyBinding
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7571494745925710560
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405006365793980597}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4504824434958718761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405006365793980597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: dc71905af099c6f419e95a4de31fafd7, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 3e2d49aeef0dad64aa225db7536556f0, type: 3}
+  m_SortingOrder: 0
+--- !u!114 &5657791440642038804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405006365793980597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 365bbbcc8ca0fcf4e9e2293f14fe74e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _keyBindingUI: {fileID: 2405006365793980597}
+  _optionsUI: {fileID: 0}
+--- !u!114 &6116300679002029349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405006365793980597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f105782f54cb357488029c8b50ed0150, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3824061499471161190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405006365793980597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f50f528d27ab744b240a5eb8732f9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scale: 1
+  KeyboardSmallImg: {fileID: 21300000, guid: cfdfcebd1e6bcac4f9891afc4a3e3c1e, type: 3}
+  KeyboardBigImg: {fileID: 21300000, guid: d29e43eb5be7c0f448ee52d813ee532e, type: 3}
+  LeftStickImg: {fileID: 21300000, guid: ca9a04c235cee86df92cf073df2807ad, type: 3}
+  RightStickImg: {fileID: 21300000, guid: 21f0e38749991cdadb31577e06d3bf71, type: 3}
+  AImg: {fileID: 21300000, guid: 3320dd49a09a974e5b614aae03e6ede9, type: 3}
+  BImg: {fileID: 21300000, guid: 24b2e62ecfff67bc99b4fa1023a0d6c6, type: 3}
+  XImg: {fileID: 21300000, guid: e25bf23427ada9ca589975c572665ed5, type: 3}
+  YImg: {fileID: 21300000, guid: 07e2d5363212e691ab80519f16d97bf8, type: 3}
+  RbImg: {fileID: 21300000, guid: 84e5057c233233c40b1e5f5eff4b9dd3, type: 3}
+  RtImg: {fileID: 21300000, guid: 216e53f9951c99e3c81da317632f4efb, type: 3}
+  LbImg: {fileID: 21300000, guid: f12c2e4530c6459598c1281f75c60fe6, type: 3}
+  LtImg: {fileID: 21300000, guid: 6dd5453fb9bd9125db0fb4b138ef2754, type: 3}
+  UpImg: {fileID: 21300000, guid: 094bab99f97e78235ad25110dabe0b81, type: 3}
+  DownImg: {fileID: 21300000, guid: 031fea358fba0ec2eafed1b70fd14dde, type: 3}
+  LeftImg: {fileID: 21300000, guid: b0657d9c2ab9140eb9e73b470a6d5c93, type: 3}
+  RightImg: {fileID: 21300000, guid: d98b1da4ee6a1a6a7855f09409af86e5, type: 3}

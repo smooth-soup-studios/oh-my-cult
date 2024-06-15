@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: 8498132675949790370}
   - component: {fileID: 8381264616294448403}
   - component: {fileID: 8858220036240824714}
+  - component: {fileID: 2259212530515624718}
   m_Layer: 7
   m_Name: BearEnemy
   m_TagString: Enemy
@@ -405,6 +406,7 @@ MonoBehaviour:
   ActorType: 3
   Stats: {fileID: 11400000, guid: 62b55ec386d43474bbb7e92a5b49c3c8, type: 2}
   Waypoints: []
+  NPCTransformPrefab: {fileID: 0}
   DisableAgression: 0
 --- !u!61 &8858220036240824714
 BoxCollider2D:
@@ -451,3 +453,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2420428, y: 2.138883}
   m_EdgeRadius: 0
+--- !u!114 &2259212530515624718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7014223499463873009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaaabe2768da9b140a5e4e7b6937b1bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

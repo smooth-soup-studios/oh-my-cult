@@ -65,10 +65,13 @@ public class TooltipController : MonoBehaviour {
 
 	private void UpdateTooltip() {
 		_label.text = TooltipText;
-		_keyLabel.text = ConvertTypeToKey(Type);
+		SetKeyLabel(ConvertTypeToKey(Type));
 		InputSystemRebindManager _userInput = FindObjectOfType<InputSystemRebindManager>();
 		_userInput.TextChange(_keyLabel.text, _icon, _keyLabel);
-		//ChangeSprite();
+	}
+
+	private void SetKeyLabel(string text) {
+		_keyLabel.text = text.Replace("\u0001", "").Replace(" ", "Space");
 	}
 
 
@@ -83,16 +86,6 @@ public class TooltipController : MonoBehaviour {
 		};
 	}
 
-	private void ChangeSprite() {
-		if (_keyLabel.text.Length > 1) {
-			_icon.style.backgroundImage = new StyleBackground(_bigKey);
-			_icon.style.width = 150;
-		}
-		else {
-			_icon.style.backgroundImage = new StyleBackground(_smallKey);
-			_icon.style.width = 64;
-		}
-	}
 
 #if UNITY_EDITOR
 	private void OnValidate() {

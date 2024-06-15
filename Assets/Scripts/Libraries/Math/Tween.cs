@@ -19,13 +19,17 @@ public class TimedTween : Tween {
 		set => Duration = value - TStart;
 	}
 
+	public float TProgress => Time.time - TStart;
+
+	public float Progress => (Time.time - TStart) / Duration;
+
 	public bool Finished => Time.time >= TEnd;
 
 	public float Get() {
 		if (Duration == 0)
 			return To;
 
-		float t = (Time.time - TStart) / Duration;
+		float t = Progress;
 		return Get(t);
 	}
 
@@ -33,7 +37,7 @@ public class TimedTween : Tween {
 		if (Duration == 0)
 			return To;
 
-		float t = Mathf.Clamp01((Time.time - TStart) / Duration);
+		float t = Mathf.Clamp01(Progress);
 		return Get(t);
 	}
 }

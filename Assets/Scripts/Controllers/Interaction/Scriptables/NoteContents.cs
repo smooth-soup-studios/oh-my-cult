@@ -5,5 +5,4 @@ public class NoteContents : ScriptableObject {
 	public Sprite Sprite;
 	public string Title = "Torn note";
 	[TextArea] public string Content;
-	public float Duration = 4f;
 }

@@ -6,6 +6,7 @@ public class GameData {
 	public PlayerData PlayerData = new();
 	public SceneData SceneData = new();
 	public ActorData ActorData = new();
+	public PlayerSettings PlayerSettings = new();
 }
 
 
@@ -37,4 +38,11 @@ public class ActorData {
 	public Dict<string, Vector3> PositionValues = new();
 	public Dict<string, bool> Arbitraryvalues = new();
 
+}
+
+
+[Serializable]
+public class PlayerSettings {
+	public Dict<string, float> VolumeValues = new();
+	public int QualityIndex = -1;
 }

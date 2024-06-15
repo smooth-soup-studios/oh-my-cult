@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +26,7 @@ public class AudioManager : MonoBehaviour {
 				_audioManager = FindAnyObjectByType<AudioManager>();
 
 				if (!_audioManager) {
-					Logger.LogError(_logName, "No SaveManager found in the scene!");
+					Logger.LogError(_logName, "No AudioManager found in the scene!");
 				}
 			}
 			return _audioManager;
@@ -167,8 +166,6 @@ public class AudioManager : MonoBehaviour {
 		_runningCoroutines[sound.ClipName] = null;
 	}
 
-	#endregion
-
 	private void StopRunningCoroutines(string name) {
 		if (_runningCoroutines.TryGetValue(name, out Coroutine coroutine)) {
 			if (coroutine != null) {
@@ -176,6 +173,9 @@ public class AudioManager : MonoBehaviour {
 			}
 		}
 	}
+
+	#endregion
+
 	private AudioMixerGroup ConvertAudioTypeToMixer(AudioType type) {
 		return type switch {
 			AudioType.Master => MasterMixer,
@@ -184,4 +184,5 @@ public class AudioManager : MonoBehaviour {
 			_ => null,
 		};
 	}
+
 }

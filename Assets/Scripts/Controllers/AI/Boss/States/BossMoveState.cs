@@ -11,6 +11,9 @@ public class BossMoveState : BossBaseState {
 		Boss.Movement = (Boss.Player.transform.position - Boss.transform.position).normalized;
 		Boss.BossAnimation.SetFloat("X", Boss.Movement.x);
 		Boss.BossAnimation.SetFloat("Y", Boss.Movement.y);
+		if (Vector2.Distance(Boss.Player.transform.position, Boss.transform.position) >= 10f ) {
+			Boss.SwitchState("Charge");
+		}
 		if (Vector2.Distance(Boss.Player.transform.position, Boss.transform.position) <= 5f) {
 			Boss.SwitchState("Idle");
 		}

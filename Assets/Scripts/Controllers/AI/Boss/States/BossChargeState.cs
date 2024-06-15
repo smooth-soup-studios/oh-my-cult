@@ -16,7 +16,7 @@ public class BossChargeState : BossBaseState {
 			ChargeAttack();
 		// }
 		 if (Boss.Enemy == true) {
-			// Boss.BossAttacks.FlashSlam(Boss.Direction, BossAttackType.SLAM);
+			Boss.BossAttacks.FlashSlam(Boss.Direction, BossAttackType.SLAM);
 			Boss.SwitchState("ChargeAttack");
 		}
 		// else {

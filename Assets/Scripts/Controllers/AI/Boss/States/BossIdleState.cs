@@ -24,15 +24,22 @@ public class BossIdleState : BossBaseState {
 			}
 		}
 
-		//TODO Need Fixing
-		else if (Vector2.Distance(Boss.Player.transform.position, Boss.transform.position) >= 6f && Boss.WaitForWalking == false) {
-			if (Vector2.Distance(Boss.Player.transform.position, Boss.transform.position) <= 4f) {
-				Boss.SwitchState("Move");
-			}
-			else {
-				Boss.SwitchState("Charge");
-			}
+		// else if (Vector2.Distance(Boss.Player.transform.position, Boss.transform.position) >= 4f) {
+		// 	Boss.SwitchState("Move");
+		// }
+		else if(Vector2.Distance(Boss.Player.transform.position, Boss.transform.position) >= 6f && Boss.WaitForWalking == false){
+			Boss.SwitchState("Move");
 		}
+
+		//TODO Need Fixing
+		// else if (Vector2.Distance(Boss.Player.transform.position, Boss.transform.position) >= 6f && Boss.WaitForWalking == false) {
+		// 	if (Vector2.Distance(Boss.Player.transform.position, Boss.transform.position) <= 4f) {
+		// 		Boss.SwitchState("Move");
+		// 	}
+		// 	else {
+		// 		Boss.SwitchState("Charge");
+		// 	}
+		// }
 
 		Boss.Movement = (Boss.Player.transform.position - Boss.transform.position).normalized;
 		Boss.BossAnimation.SetFloat("X", Boss.Movement.x);

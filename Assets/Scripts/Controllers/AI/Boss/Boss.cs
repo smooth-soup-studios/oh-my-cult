@@ -21,9 +21,11 @@ public class Boss : MonoBehaviour, ISaveable {
 	[HideInInspector] public bool WaitForWalking = true;
 	public MovementDirection Direction;
 		private GameObject _target;
+		public Rigidbody2D Rigidbody2D;
 
 	void Start() {
 		_target = GameObject.FindWithTag("Player");
+		 Rigidbody2D = GetComponent<Rigidbody2D>();
 		if (!_isAlive) {
 			gameObject.SetActive(false);
 		}

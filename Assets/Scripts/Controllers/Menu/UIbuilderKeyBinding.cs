@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
@@ -100,7 +98,7 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 		//Move down button
 		newText = _userInput.GetBindingDisplayString("Move", bindingGroup, 4 + _controllerOffset);
 		_userInput.TextChange(newText, _rightButton, bindingGroup);
-		
+
 		//Interact button
 		newText = _userInput.GetBindingDisplayString("Interact", bindingGroup);
 		_userInput.TextChange(newText, _interactButton, bindingGroup);

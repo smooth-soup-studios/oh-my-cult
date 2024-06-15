@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -99,7 +96,7 @@ public class PreMadeMovementButtons : MonoBehaviour
         if(Scale == 0){
             Scale = 1;
         }
-        
+
         controller = new();
         controller.style.width = 125 * Scale;
         controller.style.height = 125 * Scale;

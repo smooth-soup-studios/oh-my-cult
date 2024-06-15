@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
@@ -12,6 +9,7 @@ public class InputSystemRebindManager : MonoBehaviour {
 
 	private PlayerInput _playerInput;
 	private PreMadeMovementButtons _buttoning;
+	private InputActionRebindingExtensions.RebindingOperation _rebindInProgress;
 
 	private void Awake() {
 		if (Instance == null) {
@@ -40,14 +38,18 @@ public class InputSystemRebindManager : MonoBehaviour {
 
 		string currentControlScheme = _playerInput.currentControlScheme;
 
-		if (bindingIndex == -1)
+		if (bindingIndex == -1) {
 			bindingIndex = _playerInput.actions[actionToRebind].GetBindingIndex(currentControlScheme);
-
-		if (currentControlScheme != controlScheme)
+		}
+		if (currentControlScheme != controlScheme) {
 			return;
+		}
+
+		// Cancel any existing rebinding operation
+		_rebindInProgress?.Cancel();
 
 		_playerInput.actions[actionToRebind].Disable();
-		_playerInput.actions[actionToRebind].PerformInteractiveRebinding(bindingIndex)
+		_rebindInProgress = _playerInput.actions[actionToRebind].PerformInteractiveRebinding(bindingIndex)
 			.WithBindingGroup(currentControlScheme)
 			// To avoid accidental input from mouse motion
 			.WithControlsExcluding("Mouse")
@@ -57,6 +59,7 @@ public class InputSystemRebindManager : MonoBehaviour {
 				string newText = GetBindingDisplayString(actionToRebind, currentControlScheme, bindingIndex);
 				TextChange(newText, container, currentControlScheme);
 				operation.Dispose();
+				_rebindInProgress = null;
 			})
 			.Start();
 

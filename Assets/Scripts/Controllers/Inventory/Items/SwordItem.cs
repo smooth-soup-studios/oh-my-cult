@@ -8,6 +8,9 @@ public class SwordItem : WeaponItem {
 
 	protected override void DoPrimaryDamage(HealthController enemy) {
 		base.DoPrimaryDamage(enemy);
+		if (VibrationManager.Instance) {
+			VibrationManager.Instance.GetOrAddLayer(VibrationLayerNames.DoPrimaryDamage, true).SetShakeThenStop(0, .75f, .25f);
+		}
 		EventBus.Instance.TriggerEvent(EventType.AUDIO_PLAY, "SwordHit");
 	}
 

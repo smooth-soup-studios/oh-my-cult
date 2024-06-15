@@ -22,21 +22,29 @@ public class InputSystemRebindManager : MonoBehaviour {
 			Destroy(this);
 			return;
 		}
+		AcquireRefs();
+	}
 
+	private void Start() {
+		AcquireRefs();
+	}
+
+	public void AcquireRefs() {
 		_playerInput = FindObjectOfType<EventBus>().GetComponent<PlayerInput>();
 		_buttoning = gameObject.GetComponent<PreMadeMovementButtons>();
 	}
 
 	public void RemapButtonClicked(string actionToRebind, VisualElement container, int bindingIndex, string controlScheme) {
-		if (_playerInput.currentControlScheme == "")
-			_playerInput = FindObjectOfType<EventBus>().GetComponent<PlayerInput>();
+		if (_playerInput == null) {
+			AcquireRefs();
+		}
 
 		string currentControlScheme = _playerInput.currentControlScheme;
 
-		if(bindingIndex == -1)
+		if (bindingIndex == -1)
 			bindingIndex = _playerInput.actions[actionToRebind].GetBindingIndex(currentControlScheme);
 
-		if(currentControlScheme != controlScheme)
+		if (currentControlScheme != controlScheme)
 			return;
 
 		_playerInput.actions[actionToRebind].Disable();
@@ -76,18 +84,19 @@ public class InputSystemRebindManager : MonoBehaviour {
 		if (bindingGroup == "Controller") {
 			button = _buttoning.GetControllerButton(buttonText);
 			container.Q<Button>().text = "";
-		}else{
+		}
+		else {
 			button = _buttoning.GetKeyboardButton(buttonText);
 			container.Q<Button>().text = buttonText;
 		}
 		NewButton(container, button);
 	}
 
-	public void NewButton(VisualElement container, Button button){
+	public void NewButton(VisualElement container, Button button) {
 		Button original = container.Q<Button>();
 
-        original.style.width = button.style.width;
-        original.style.height = button.style.height;
-        original.style.backgroundImage = button.style.backgroundImage;
+		original.style.width = button.style.width;
+		original.style.height = button.style.height;
+		original.style.backgroundImage = button.style.backgroundImage;
 	}
 }

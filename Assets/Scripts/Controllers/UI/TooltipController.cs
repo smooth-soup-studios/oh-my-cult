@@ -66,7 +66,9 @@ public class TooltipController : MonoBehaviour {
 	private void UpdateTooltip() {
 		_label.text = TooltipText;
 		_keyLabel.text = ConvertTypeToKey(Type);
-		ChangeSprite();
+		InputSystemRebindManager _userInput = FindObjectOfType<InputSystemRebindManager>();
+		_userInput.TextChange(_keyLabel.text, _icon, _keyLabel);
+		//ChangeSprite();
 	}
 
 

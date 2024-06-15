@@ -87,31 +87,31 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 
 		//Move Up button
 		newText = _userInput.GetBindingDisplayString("Move", bindingGroup, 1 + _controllerOffset);
-		_userInput.TextChange(newText, _upButton.Q<Button>(), bindingGroup);
+		_userInput.TextChange(newText, _upButton, bindingGroup);
 
 		//Move down button
 		newText = _userInput.GetBindingDisplayString("Move", bindingGroup, 2 + _controllerOffset);
-		_userInput.TextChange(newText, _downButton.Q<Button>(), bindingGroup);
+		_userInput.TextChange(newText, _downButton, bindingGroup);
 
 		//Move down button
 		newText = _userInput.GetBindingDisplayString("Move", bindingGroup, 3 + _controllerOffset);
-		_userInput.TextChange(newText, _leftButton.Q<Button>(), bindingGroup);
+		_userInput.TextChange(newText, _leftButton, bindingGroup);
 
 		//Move down button
 		newText = _userInput.GetBindingDisplayString("Move", bindingGroup, 4 + _controllerOffset);
-		_userInput.TextChange(newText, _rightButton.Q<Button>(), bindingGroup);
+		_userInput.TextChange(newText, _rightButton, bindingGroup);
 		
 		//Interact button
 		newText = _userInput.GetBindingDisplayString("Interact", bindingGroup);
-		_userInput.TextChange(newText, _interactButton.Q<Button>(), bindingGroup);
+		_userInput.TextChange(newText, _interactButton, bindingGroup);
 
 		//Attack button
 		newText = _userInput.GetBindingDisplayString("Primary", bindingGroup);
-		_userInput.TextChange(newText, _attackButton.Q<Button>(), bindingGroup);
+		_userInput.TextChange(newText, _attackButton, bindingGroup);
 
 		//Dash button
 		newText = _userInput.GetBindingDisplayString("Dash", bindingGroup);
-		_userInput.TextChange(newText, _dashButton.Q<Button>(), bindingGroup);
+		_userInput.TextChange(newText, _dashButton, bindingGroup);
 	}
 
 	void OnBack() {
@@ -128,7 +128,7 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 
 	void OnKeyChange(string buttonToRebind, VisualElement container, int KeyBinding = -1) {
 		if (_userInput) {
-			_userInput.RemapButtonClicked(buttonToRebind, container.Q<Button>(), KeyBinding, _controlScheme);
+			_userInput.RemapButtonClicked(buttonToRebind, container, KeyBinding, _controlScheme);
 		}
 	}
 

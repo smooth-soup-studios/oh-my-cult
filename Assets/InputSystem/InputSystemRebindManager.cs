@@ -34,7 +34,7 @@ public class InputSystemRebindManager : MonoBehaviour {
 		_buttoning = gameObject.GetComponent<PreMadeMovementButtons>();
 	}
 
-	public void RemapButtonClicked(string actionToRebind, Button container, int bindingIndex, string controlScheme) {
+	public void RemapButtonClicked(string actionToRebind, VisualElement container, int bindingIndex, string controlScheme) {
 		if (_playerInput == null) {
 			AcquireRefs();
 		}
@@ -79,22 +79,43 @@ public class InputSystemRebindManager : MonoBehaviour {
 
 	}
 
-	public void TextChange(string buttonText, Button container, string bindingGroup = null) {
+	public void TextChange(string buttonText, VisualElement container, string bindingGroup = null) {
 		Button button;
 		if (bindingGroup == "Controller") {
 			button = _buttoning.GetControllerButton(buttonText);
-			container.text = "";
+			container.Q<Button>().text = "";
 		}
 		else {
 			button = _buttoning.GetKeyboardButton(buttonText);
-			container.text = buttonText;
+			container.Q<Button>().text = buttonText;
 		}
 		NewButton(container, button);
 	}
 
-	public void NewButton(Button container, Button button) {
-		container.style.width = button.style.width;
-		container.style.height = button.style.height;
-		container.style.backgroundImage = button.style.backgroundImage;
+	public void NewButton(VisualElement container, Button button) {
+		Button original = container.Q<Button>();
+
+		original.style.width = button.style.width;
+		original.style.height = button.style.height;
+		original.style.backgroundImage = button.style.backgroundImage;
+	}
+
+	public void TextChange(string buttonText, VisualElement icon, Label label) {
+		Button button;
+		if (_playerInput.currentControlScheme == "Controller") {
+			button = _buttoning.GetControllerButton(buttonText);
+			label.text = "";
+			icon.style.width = 50;
+		}
+		else {
+			button = _buttoning.GetKeyboardButton(buttonText);
+			label.text = buttonText;
+			if (buttonText.Length > 1){
+				icon.style.width = 150;
+			}else{
+				icon.style.width = 64;
+			}
+		}
+		icon.style.backgroundImage = button.style.backgroundImage;
 	}
 }

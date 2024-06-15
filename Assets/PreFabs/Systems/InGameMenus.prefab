@@ -77,6 +77,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3f50f528d27ab744b240a5eb8732f9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Scale: 0.78
   KeyboardSmallImg: {fileID: 21300000, guid: cfdfcebd1e6bcac4f9891afc4a3e3c1e, type: 3}
   KeyboardBigImg: {fileID: 21300000, guid: d29e43eb5be7c0f448ee52d813ee532e, type: 3}
   LeftStickImg: {fileID: 21300000, guid: ca9a04c235cee86df92cf073df2807ad, type: 3}

@@ -7,6 +7,8 @@ using UnityEngine.UIElements;
 public class UIbuilderKeyBinding : MonoBehaviour {
 	InputSystemRebindManager _userInput;
 
+	private string _controlScheme;
+
 	private Button _keyboard;
 	private Button _controller;
 	private Button _backButton;
@@ -29,7 +31,7 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 	// Start is called before the first frame update
 	void OnEnable() {
 		_userInput = gameObject.GetComponent<InputSystemRebindManager>();
-		
+		_controlScheme = "Keyboard";
 
 		Logger.Log("KeyBinding", "Binding Menu");
 		_root = GetComponent<UIDocument>().rootVisualElement;
@@ -67,19 +69,21 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 
 	void OnKeyboard(){
 		_controllerOffset = 0;
-		ReloadText("Keyboard");
+		_controlScheme = "Keyboard";
+		ReloadText(_controlScheme);
 	}
 
 	void OnController(){
 		_controllerOffset = 10;
-		ReloadText("Controller");
+		_controlScheme = "Controller";
+		ReloadText(_controlScheme);
 	}
 
-	void ReloadText(String bindingGroup){
+	void ReloadText(string bindingGroup){
 		if(!_userInput)
 			return;
 
-		String newText;
+		string newText;
 
 		//Move Up button
 		newText = _userInput.GetBindingDisplayString("Move", bindingGroup, 1 + _controllerOffset);
@@ -122,10 +126,10 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 		SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 
-	void OnKeyChange(String buttonToRebind, VisualElement container, int KeyBinding = -1) {
+	void OnKeyChange(string buttonToRebind, VisualElement container, int KeyBinding = -1) {
 		if (_userInput) {
 			Debug.Log("Button remapping");
-			_userInput.RemapButtonClicked(buttonToRebind, container, KeyBinding);
+			_userInput.RemapButtonClicked(buttonToRebind, container, KeyBinding, _controlScheme);
 		}
 	}
 

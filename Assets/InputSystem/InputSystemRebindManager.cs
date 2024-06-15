@@ -27,19 +27,29 @@ public class InputSystemRebindManager : MonoBehaviour {
 		_buttoning = gameObject.GetComponent<PreMadeMovementButtons>();
 	}
 
-	public void RemapButtonClicked(String actionToRebind, VisualElement container, int bindingIndex) {
+	public void RemapButtonClicked(string actionToRebind, VisualElement container, int bindingIndex, string controlScheme) {
+		if (_playerInput.currentControlScheme == "")
+			_playerInput = FindObjectOfType<EventBus>().GetComponent<PlayerInput>();
+
+		string currentControlScheme = _playerInput.currentControlScheme;
+		
 		if(bindingIndex == -1)
-			bindingIndex = _playerInput.actions[actionToRebind].GetBindingIndex(_playerInput.currentControlScheme);
+			bindingIndex = _playerInput.actions[actionToRebind].GetBindingIndex(currentControlScheme);
+
+		if(currentControlScheme != controlScheme)
+			return;
+
 		_playerInput.actions[actionToRebind].Disable();
 		_playerInput.actions[actionToRebind].PerformInteractiveRebinding(bindingIndex)
-			.WithBindingGroup(_playerInput.currentControlScheme)
+			.WithBindingGroup(currentControlScheme)
 			// To avoid accidental input from mouse motion
 			.WithControlsExcluding("Mouse")
 			.WithCancelingThrough("<Keyboard>/escape")
 			.OnMatchWaitForAnother(0.1f)
 			.OnComplete(operation => {
-				String newText = GetBindingDisplayString(actionToRebind, _playerInput.currentControlScheme, bindingIndex);
-				TextChange(newText, container, _playerInput.currentControlScheme);
+				Debug.Log(_playerInput + " is the actual vs the fake " + controlScheme);
+				string newText = GetBindingDisplayString(actionToRebind, currentControlScheme, bindingIndex);
+				TextChange(newText, container, currentControlScheme);
 				operation.Dispose();
 			})
 			.Start();
@@ -47,7 +57,7 @@ public class InputSystemRebindManager : MonoBehaviour {
 		_playerInput.actions[actionToRebind].Enable();
 	}
 
-	public string GetBindingDisplayString(string actionName, String bindingGroup = null, int bindingIndex = -1) {
+	public string GetBindingDisplayString(string actionName, string bindingGroup = null, int bindingIndex = -1) {
 		if (bindingGroup == null) {
 			bindingGroup = _playerInput.currentControlScheme;
 		}
@@ -57,30 +67,30 @@ public class InputSystemRebindManager : MonoBehaviour {
 		}
 		if (bindingIndex == -1)
 			bindingIndex = action.GetBindingIndex(bindingGroup);
-		String text = action.GetBindingDisplayString(bindingIndex);
-		//text = text.Split("/")[0];
+		string text = action.GetBindingDisplayString(bindingIndex);
 		return text;
 
 	}
 
-	public void TextChange(String buttonText, VisualElement container, String bindingGroup = null) {
-		Button button;
+	public void TextChange(string buttonText, VisualElement container, string bindingGroup = null) {
+		Button button = null;
 		if (bindingGroup == "Controller") {
+			//container.Q<Button>().style.backgroundImage = new StyleBackground(_buttoning.GetControllerButton(buttonText));
 			button = _buttoning.GetControllerButton(buttonText);
 			container.Q<Button>().text = "";
 		}else{
+			//container.Q<Button>().style.backgroundImage = new StyleBackground(_buttoning.GetKeyboardButton(buttonText));
 			button = _buttoning.GetKeyboardButton(buttonText);
 			container.Q<Button>().text = buttonText;
 		}
-		buttonChange(container, button);
+		NewButton(container, button);
 	}
 
-	private void buttonChange(VisualElement container, Button button){
-		container.Q<Button>().style.unityTextAlign = button.style.unityTextAlign;
-		container.Q<Button>().style.backgroundImage = button.style.backgroundImage;
-		container.Q<Button>().style.marginTop = button.style.marginTop;
-		container.Q<Button>().style.marginBottom = button.style.marginBottom;
-		container.Q<Button>().style.marginLeft = button.style.marginLeft;
-		container.Q<Button>().style.marginRight = button.style.marginRight;
+	public void NewButton(VisualElement container, Button button){
+		Button original = container.Q<Button>();
+
+        original.style.width = button.style.width;
+        original.style.height = button.style.height;
+        original.style.backgroundImage = button.style.backgroundImage;
 	}
 }

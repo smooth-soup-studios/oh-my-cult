@@ -10,6 +10,10 @@ public class TransformFaceController : MonoBehaviour {
 		_spriteRenderer = GetComponent<SpriteRenderer>();
 	}
 
+	private void Start() {
+		Update();
+	}
+
 	private readonly float _firstHalfDurationMult = .75f;
 	private float _secondHalfDurationMult { get => 1 - _firstHalfDurationMult; }
 	private float _d1 { get => TotalTween.Duration * _firstHalfDurationMult; }

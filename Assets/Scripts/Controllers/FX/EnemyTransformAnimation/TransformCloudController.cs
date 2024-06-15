@@ -19,6 +19,10 @@ public class TransformCloudController : MonoBehaviour {
 		_spriteRenderer = GetComponent<SpriteRenderer>();
 	}
 
+	private void Start() {
+		Update();
+	}
+
 	private void Update() {
 		TimedTween scaleTween = new() { Duration = _d, From = .5f, To = Scale, TStart = _ts, EasingFunction = Easings.EaseOutCubic };
 		TimedTween opacityTween = new() { Duration = _d, From = 0, To = 1, TStart = _ts, EasingFunction = Easings.EaseOutCubic };

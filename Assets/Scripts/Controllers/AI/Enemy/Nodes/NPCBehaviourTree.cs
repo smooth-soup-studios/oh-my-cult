@@ -85,8 +85,12 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 				new TaskPatrol(Waypoints)
 			}),
 
-			// All - Backup random walk
-			new TaskRandomWalk(),
+			// Enemy - Backup random walk
+			new Sequence(new List<Node>
+			{
+				new Inverter(new CheckActorType(ActorType.NPC)),
+				new TaskRandomWalk(),
+			}),
 		});
 
 		return root;

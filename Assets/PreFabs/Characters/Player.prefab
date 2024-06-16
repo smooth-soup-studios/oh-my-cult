@@ -294,7 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f0d07869b7ad747b46fdf13457c82e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: Player-28,3024
+  <ObjectId>k__BackingField: Player-28.3024
   _isInvulnerable: 0
   _maxHealth: 100
 --- !u!95 &8530993155805609580

@@ -20,7 +20,6 @@ public class Boss : MonoBehaviour, ISaveable {
 	[HideInInspector] public Vector2 Movement;
 	[HideInInspector] public bool WaitForWalking = true;
 	public MovementDirection Direction;
-
 	private bool _isAlive = true;
 	private GameObject _target;
 	private Vector2 _oldMove;
@@ -33,16 +32,10 @@ public class Boss : MonoBehaviour, ISaveable {
 			gameObject.SetActive(false);
 		}
 		BossAnimation = GetComponent<Animator>();
-		EventBus.Instance.Subscribe<GameObject>(EventType.DEATH, obj => {
-			if (obj == gameObject) {
-				_isAlive = false;
-				gameObject.SetActive(false);
-				SceneManager.LoadScene(SceneDefs.EndingScreen);
-			}
-		});
+		EventBus.Instance.Subscribe<GameObject>(EventType.DEATH, OnDeath);
+
 		StartCoroutine(WaitForWalk());
 		Player = GameObject.FindGameObjectWithTag("Player").transform;
-
 
 		States = new List<BossBaseState>{
 			new BossSlamAttack(this, "Slam"),
@@ -135,6 +128,14 @@ public class Boss : MonoBehaviour, ISaveable {
 	public IEnumerator WaitForWalk() {
 		yield return new WaitForSeconds(4f);
 		WaitForWalking = false;
+	}
+
+	private void OnDeath(GameObject objThatDied) {
+		if (objThatDied == gameObject) {
+			_isAlive = false;
+			gameObject.SetActive(false);
+			SceneManager.LoadScene(SceneDefs.OutroCutscene);
+		}
 	}
 
 

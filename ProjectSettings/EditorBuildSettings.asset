@@ -12,17 +12,23 @@ EditorBuildSettings:
     path: Assets/Scenes/2-KeybindInfoPage.unity
     guid: f071c88293b405745abac9b659f15e09
   - enabled: 1
-    path: Assets/Scenes/3-StoryTutorialPage.unity
-    guid: 51aee8ad44bf27b4d8b6f8521b635736
+    path: Assets/Scenes/4-IntroCutscene.unity
+    guid: 760826d5c5e66f444ad7eb14e4d2968b
   - enabled: 1
-    path: Assets/Scenes/4-NewOverworld.unity
+    path: Assets/Scenes/5-NewOverworld.unity
     guid: e4ab7c51ebda93a4c811db5b3fccf150
   - enabled: 1
-    path: Assets/Scenes/5-OutroMenu.unity
+    path: Assets/Scenes/6-OutroCutscene.unity
+    guid: 1288371b231c64c46be1bf072a65b408
+  - enabled: 1
+    path: Assets/Scenes/7-OutroMenu.unity
     guid: 24ba1b75f3014964ba5b591e90ec3d06
   - enabled: 1
     path: Assets/Scenes/98-NewHouseInteriors.unity
     guid: 8350e5cd513273e4caca6f1d80b62917
+  - enabled: 1
+    path: Assets/Scenes/97-ChurchCutscene.unity
+    guid: cfa83634e2bb7024785b5d4738eec61c
   - enabled: 1
     path: Assets/Scenes/99-ChurchInterior.unity
     guid: cb9441f0769dc9f4cb40da116bb1b73c

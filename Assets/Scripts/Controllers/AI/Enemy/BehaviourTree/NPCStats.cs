@@ -3,6 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "new ActorStats", menuName = "OhMyCult/Actor/ActorStats", order = 0)]
 public class ActorStats : ScriptableObject {
 	public float Speed = 2f;
+	public float ChargeSpeed = 1;
 	public float DetectionRange = 12.5f;
 	public float AttackRange = 1.5f;
 	public float ShootRange = 1f; 

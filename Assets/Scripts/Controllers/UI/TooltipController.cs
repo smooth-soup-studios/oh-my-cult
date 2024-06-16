@@ -66,7 +66,8 @@ public class TooltipController : MonoBehaviour {
 	private void UpdateTooltip() {
 		_label.text = TooltipText;
 		SetKeyLabel(ConvertTypeToKey(Type));
-		ChangeSprite();
+		InputSystemRebindManager _userInput = FindObjectOfType<InputSystemRebindManager>();
+		_userInput.TextChange(_keyLabel.text, _icon, _keyLabel);
 	}
 
 	private void SetKeyLabel(string text) {
@@ -78,23 +79,13 @@ public class TooltipController : MonoBehaviour {
 		InputSystemRebindManager _userInput = FindObjectOfType<InputSystemRebindManager>();
 		if (_userInput == null) return Key;
 		return type switch {
-			TooltipType.Interact => _userInput.GetBindingDisplayString("Interact", -1),
-			TooltipType.Attack => _userInput.GetBindingDisplayString("Primary", -1),
+			TooltipType.Interact => _userInput.GetBindingDisplayString("Interact"),
+			TooltipType.Attack => _userInput.GetBindingDisplayString("Primary"),
 			TooltipType.Custom => Key,
 			_ => "E",
 		};
 	}
 
-	private void ChangeSprite() {
-		if (_keyLabel.text.Length > 1) {
-			_icon.style.backgroundImage = new StyleBackground(_bigKey);
-			_icon.style.width = 150;
-		}
-		else {
-			_icon.style.backgroundImage = new StyleBackground(_smallKey);
-			_icon.style.width = 64;
-		}
-	}
 
 #if UNITY_EDITOR
 	private void OnValidate() {

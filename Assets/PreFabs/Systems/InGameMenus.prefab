@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7732480856765806753}
   - component: {fileID: 1135737141265677825}
   - component: {fileID: 1069334494583158469}
+  - component: {fileID: 327956198668055248}
+  - component: {fileID: 6539523062834748395}
   m_Layer: 0
   m_Name: KeyBindings
   m_TagString: Untagged
@@ -63,6 +65,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _keyBindingUI: {fileID: 368387762294613076}
   _optionsUI: {fileID: 6390754601938785391}
+--- !u!114 &327956198668055248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368387762294613076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f50f528d27ab744b240a5eb8732f9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scale: 0.78
+  KeyboardSmallImg: {fileID: 21300000, guid: cfdfcebd1e6bcac4f9891afc4a3e3c1e, type: 3}
+  KeyboardBigImg: {fileID: 21300000, guid: d29e43eb5be7c0f448ee52d813ee532e, type: 3}
+  LeftStickImg: {fileID: 21300000, guid: ca9a04c235cee86df92cf073df2807ad, type: 3}
+  RightStickImg: {fileID: 21300000, guid: 21f0e38749991cdadb31577e06d3bf71, type: 3}
+  AImg: {fileID: 21300000, guid: 3320dd49a09a974e5b614aae03e6ede9, type: 3}
+  BImg: {fileID: 21300000, guid: 24b2e62ecfff67bc99b4fa1023a0d6c6, type: 3}
+  XImg: {fileID: 21300000, guid: e25bf23427ada9ca589975c572665ed5, type: 3}
+  YImg: {fileID: 21300000, guid: 07e2d5363212e691ab80519f16d97bf8, type: 3}
+  RbImg: {fileID: 21300000, guid: 84e5057c233233c40b1e5f5eff4b9dd3, type: 3}
+  RtImg: {fileID: 21300000, guid: 216e53f9951c99e3c81da317632f4efb, type: 3}
+  LbImg: {fileID: 21300000, guid: f12c2e4530c6459598c1281f75c60fe6, type: 3}
+  LtImg: {fileID: 21300000, guid: 6dd5453fb9bd9125db0fb4b138ef2754, type: 3}
+  UpImg: {fileID: 21300000, guid: 094bab99f97e78235ad25110dabe0b81, type: 3}
+  DownImg: {fileID: 21300000, guid: 031fea358fba0ec2eafed1b70fd14dde, type: 3}
+  LeftImg: {fileID: 21300000, guid: b0657d9c2ab9140eb9e73b470a6d5c93, type: 3}
+  RightImg: {fileID: 21300000, guid: d98b1da4ee6a1a6a7855f09409af86e5, type: 3}
+--- !u!114 &6539523062834748395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368387762294613076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f105782f54cb357488029c8b50ed0150, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1696964228672438043
 GameObject:
   m_ObjectHideFlags: 0

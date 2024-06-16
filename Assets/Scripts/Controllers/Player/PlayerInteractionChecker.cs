@@ -37,8 +37,7 @@ public class PlayerInteractionChecker : MonoBehaviour {
 	}
 
 	public BaseInteractable GetCurrentInteractable() {
-		if (!_isInteractionEnabled) return null;
-		return _currentInteractable;
+		return _isInteractionEnabled ? _currentInteractable : null;
 	}
 
 	private BaseInteractable FindClosestInteractable(List<BaseInteractable> interactables) {

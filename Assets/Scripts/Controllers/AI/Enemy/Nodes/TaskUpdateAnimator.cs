@@ -11,7 +11,7 @@ public class TaskUpdateAnimator : Node {
 		ActorType type = tree.ActorType;
 		switch (type) {
 			case ActorType.NPC:
-				tree.ActorAnimator.SetBool("IsNPC", true);
+				tree.ActorAnimator.SetBool("IsNPC", !tree.HalfwayTransitionAnimation);
 				tree.ActorAnimator.SetBool("IsBear", false);
 				break;
 			case ActorType.BearEnemy:

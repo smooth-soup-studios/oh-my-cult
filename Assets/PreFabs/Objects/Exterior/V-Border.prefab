@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 920005723214497463}
   - component: {fileID: 8691807397363201746}
+  - component: {fileID: 8150867867289733438}
   m_Layer: 0
   m_Name: V-Border
   m_TagString: Untagged
@@ -80,6 +81,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 3}
   m_EdgeRadius: 0
+--- !u!95 &8150867867289733438
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9153173181771127676}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5ddf827cdf5be934ba5ba81902b6b043, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &27997283696903353
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -130,6 +152,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2802035518371355622, guid: 4ffd22788f69145489234b5265ebb62b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4253708846296996676, guid: 4ffd22788f69145489234b5265ebb62b, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8426479019037971332, guid: 4ffd22788f69145489234b5265ebb62b, type: 3}
@@ -202,6 +228,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4253708846296996676, guid: 4ffd22788f69145489234b5265ebb62b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8426479019037971332, guid: 4ffd22788f69145489234b5265ebb62b, type: 3}
       propertyPath: m_Intensity
       value: 1
@@ -270,6 +300,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2802035518371355622, guid: 4ffd22788f69145489234b5265ebb62b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4253708846296996676, guid: 4ffd22788f69145489234b5265ebb62b, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8426479019037971332, guid: 4ffd22788f69145489234b5265ebb62b, type: 3}

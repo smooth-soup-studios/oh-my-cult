@@ -64,6 +64,7 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 			// Enemy - Attack when in range
 			new Sequence(new List<Node>
 			{
+				new Inverter(new CheckActorType(ActorType.NPC)),
 				new CheckAgressionDisabled(),
 				new CheckTargetInAttackRange(),
 				new TaskAttack(),
@@ -72,6 +73,7 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 			// Enemy - Move to target when in range but not attack range
 			new Sequence(new List<Node>
 			{
+				new Inverter(new CheckActorType(ActorType.NPC)),
 				new CheckAgressionDisabled(),
 				new CheckPlayerInRange(),
 				new CheckTargetUnobstructed(),
@@ -80,11 +82,12 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 			// Enemy - Search for target when lost
 			new Sequence(new List<Node>
 			{
+				new Inverter(new CheckActorType(ActorType.NPC)),
 				new CheckLastKnownLocation(),
 				new TaskSearchLastKnownLocation(transform),
 			}),
 
-			// Enemy - Patrol when no target is available and waypoints have been set
+			// All - Patrol when no target is available and waypoints have been set
 			new Sequence(new List<Node>
 			{
 				new CheckAgentHasWaypoints(Waypoints),

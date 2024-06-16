@@ -52,6 +52,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2365039485399706068, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
+      propertyPath: m_Size.x
+      value: 0.86151505
+      objectReference: {fileID: 0}
+    - target: {fileID: 2365039485399706068, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
+      propertyPath: m_Size.y
+      value: 0.52928543
+      objectReference: {fileID: 0}
+    - target: {fileID: 2365039485399706068, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.017950058
+      objectReference: {fileID: 0}
+    - target: {fileID: 2365039485399706068, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.117902756
+      objectReference: {fileID: 0}
+    - target: {fileID: 4285004798021977128, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
+      propertyPath: m_Radius
+      value: 0.4494588
+      objectReference: {fileID: 0}
+    - target: {fileID: 4285004798021977128, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 6968419284320496469, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
+      propertyPath: m_Area
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6968419284320496469, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
+      propertyPath: m_Size.x
+      value: 0.45829976
+      objectReference: {fileID: 0}
+    - target: {fileID: 6968419284320496469, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
+      propertyPath: m_Size.y
+      value: 0.4814666
+      objectReference: {fileID: 0}
+    - target: {fileID: 6968419284320496469, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
+      propertyPath: m_Size.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6968419284320496469, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
+      propertyPath: m_Center.x
+      value: 0.0162538
+      objectReference: {fileID: 0}
+    - target: {fileID: 6968419284320496469, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
+      propertyPath: m_Center.y
+      value: 0.2524018
+      objectReference: {fileID: 0}
     - target: {fileID: 8179118238102744693, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
       propertyPath: m_Name
       value: Rock Variant

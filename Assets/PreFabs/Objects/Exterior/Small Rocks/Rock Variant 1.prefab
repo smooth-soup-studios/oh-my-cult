@@ -52,11 +52,60 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2365039485399706068, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2365039485399706068, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.415
+      objectReference: {fileID: 0}
+    - target: {fileID: 2365039485399706068, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.485
+      objectReference: {fileID: 0}
+    - target: {fileID: 4285004798021977128, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
+      propertyPath: m_Radius
+      value: 0.5188712
+      objectReference: {fileID: 0}
+    - target: {fileID: 4285004798021977128, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4285004798021977128, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.20435536
+      objectReference: {fileID: 0}
+    - target: {fileID: 6968419284320496469, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
+      propertyPath: m_Area
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6968419284320496469, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
+      propertyPath: m_Size.x
+      value: 0.622821
+      objectReference: {fileID: 0}
+    - target: {fileID: 6968419284320496469, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
+      propertyPath: m_Size.y
+      value: 0.73827255
+      objectReference: {fileID: 0}
+    - target: {fileID: 6968419284320496469, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
+      propertyPath: m_Size.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6968419284320496469, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
+      propertyPath: m_Center.x
+      value: -0.024666965
+      objectReference: {fileID: 0}
+    - target: {fileID: 6968419284320496469, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
+      propertyPath: m_Center.y
+      value: 0.14913619
+      objectReference: {fileID: 0}
     - target: {fileID: 8179118238102744693, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
       propertyPath: m_Name
       value: Rock Variant 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2365039485399706068, guid: c75c9073797e7fb4da0f6906e375eb0d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

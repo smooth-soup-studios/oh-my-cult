@@ -17,6 +17,7 @@ public class PlayerDashState : BaseState {
 		UIManager.Instance.DashStart = Time.time;
 		StateMachine.EchoDashController.StartEcho();
 		EventBus.Instance.TriggerEvent(EventType.AUDIO_PLAY, "Dash");
+		VibrationManager.Instance.GetOrAddLayer(VibrationLayerNames.Dash).SetShake(0, .1f);
 	}
 
 	public override void UpdateState() {
@@ -28,13 +29,14 @@ public class PlayerDashState : BaseState {
 	}
 
 	public override void ExitState() {
+		VibrationManager.Instance.GetOrAddLayer(VibrationLayerNames.Dash).SetShake(0, 0);
 		StateMachine.EchoDashController.StopEcho();
 	}
 
 
 	IEnumerator DashTime() {
 		_dash = true;
-		yield return new WaitForSecondsRealtime(DashDuration);
+		yield return new WaitForSeconds(DashDuration);
 		_dash = false;
 	}
 }

@@ -324,8 +324,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _light2D: {fileID: 3217737848061047381}
-  _minIntensity: 1.5
-  _maxIntensity: 4
+  _minIntensity: 1
+  _maxIntensity: 5
 --- !u!1 &5219292523599266472
 GameObject:
   m_ObjectHideFlags: 0

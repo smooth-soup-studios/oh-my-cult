@@ -6,22 +6,29 @@ using UnityEngine.SceneManagement;
 
 public class Boss : MonoBehaviour, ISaveable {
 	public BossStatsSO Stats;
+	public Animator BossAnimation;
+
 	[SerializeField] public BossAttacks BossAttacks;
 	[SerializeField] public AudioClip RoarSoundClip;
 	public Transform Player;
 	public BossBaseState CurrentState;
 	public List<BossBaseState> States;
-	[HideInInspector] public int StateCounter = 0;
-	[HideInInspector] public bool Enemy = false;
-	[HideInInspector] public bool Charge;
+	public List<WeightedStates> WeightedValues;
 
-	private bool _isAlive = true;
-	public Animator BossAnimation;
+	[HideInInspector] public bool Enemy = false;
+
 	[HideInInspector] public Vector2 Movement;
 	[HideInInspector] public bool WaitForWalking = true;
 	public MovementDirection Direction;
 
+	private bool _isAlive = true;
+	private GameObject _target;
+	private Vector2 _oldMove;
+
+
+
 	void Start() {
+		_target = GameObject.FindWithTag("Player");
 		if (!_isAlive) {
 			gameObject.SetActive(false);
 		}
@@ -53,7 +60,6 @@ public class Boss : MonoBehaviour, ISaveable {
 		CurrentState?.EnterState();
 	}
 
-	Vector2 _oldMove;
 	void Update() {
 		CurrentState?.UpdateState();
 		if (Movement != _oldMove) {
@@ -89,21 +95,23 @@ public class Boss : MonoBehaviour, ISaveable {
 	}
 
 	public void CheckForPlayer() {
-		Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, Stats.ChargeRange, BossAttacks.EnemyLayer);
+		// Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, Stats.ChargeRange, BossAttacks.EnemyLayer);
 
-		if (hitEnemies.Length >= 1) {
+		// if (hitEnemies.Length >= 1) {
+		// 	Enemy = true;
+		// 	Charge = false;
+		// }
+		if (Vector2.Distance(transform.position, _target.transform.position) <= Stats.ChargeRange) {
 			Enemy = true;
-			Charge = false;
 		}
 	}
 
-	public IEnumerator FlashRed() {
+	public IEnumerator Flash() {
 		GetComponent<SpriteRenderer>().color = Color.magenta;
 		yield return new WaitForSeconds(0.5f);
 		GetComponent<SpriteRenderer>().color = Color.white;
 	}
 
-	public List<WeightedStates> WeightedValues;
 	public int GetRendomValue(List<WeightedStates> weightedValuesList) {
 		int output = 0;
 
@@ -123,16 +131,22 @@ public class Boss : MonoBehaviour, ISaveable {
 		}
 		return output;
 	}
+
+	public IEnumerator WaitForWalk() {
+		yield return new WaitForSeconds(4f);
+		WaitForWalking = false;
+	}
+
+
 	public void LoadData(GameData data) {
 		if (data.SceneData.ArbitraryTriggers.ContainsKey("BossDead")) {
 			data.SceneData.ArbitraryTriggers.TryGetValue("BossDead", out _isAlive);
 		}
 	}
+
 	public void SaveData(GameData data) {
 		data.SceneData.ArbitraryTriggers["BossDead"] = isActiveAndEnabled;
 	}
-	public IEnumerator WaitForWalk() {
-		yield return new WaitForSeconds(4f);
-		WaitForWalking = false;
-	}
+
+
 }

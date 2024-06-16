@@ -46,6 +46,10 @@ public class BarrelInteractable : BaseInteractable {
 		_shatterController.Shatter(interactor);
 		GetComponent<SpriteRenderer>().enabled = false;
 
+		if (VibrationManager.Instance) {
+			VibrationManager.Instance.GetOrAddLayer(VibrationLayerNames.ReceivePrimaryDamage, true).SetShakeThenStop(.1f, .1f, .2f);
+		}
+
 		if (DroppingItemPrefab != null && PickupPointInteractable != null && ItemToDrop != null) {
 			GameObject dip = Instantiate(DroppingItemPrefab, transform.position, Quaternion.identity);
 			dip.GetComponent<DroppingItemController>().PickupPointInteractable = PickupPointInteractable;

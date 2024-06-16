@@ -9,7 +9,9 @@ namespace BehaviorTree {
 		[Header("Settings")]
 		public ActorType ActorType;
 		public ActorStats Stats;
+		public bool RandomizeWaypoints = true;
 		public Transform[] Waypoints;
+		public GameObject NPCTransformPrefab;
 
 		[Header("Debug")]
 		public bool DisableAgression = false;
@@ -20,8 +22,9 @@ namespace BehaviorTree {
 		public Animator ActorAnimator { get; set; }
 		public Vector2 Movement { get; set; }
 		public float AttackCounter { get; set; } = 0;
-		public GameObject Target { get; set; } = null; //TF is this for? Should probable be replaced?
+		public GameObject Target { get; set; } = null; //TF is this for? Should probably be replaced?
 		public Vector3 SearchLocation { get; set; } = Vector3.zero;
+		public bool HalfwayTransitionAnimation { get; set; } = false;
 
 
 		protected void Awake() {
@@ -29,6 +32,8 @@ namespace BehaviorTree {
 
 			Agent = GetComponent<NavMeshAgent>();
 			ActorAnimator = GetComponent<Animator>();
+
+			Agent.speed = Stats.Speed;
 		}
 
 		protected void Start() {

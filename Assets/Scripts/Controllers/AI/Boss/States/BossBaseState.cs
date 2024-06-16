@@ -6,8 +6,7 @@ public class BossBaseState {
 		Boss = boss;
 		Name = name;
 	}
-	public virtual void EnterState() {
-	}
+	public virtual void EnterState() { }
 	public virtual void UpdateState() { }
 	public virtual void ExitState() { }
 

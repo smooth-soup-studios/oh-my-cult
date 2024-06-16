@@ -11,8 +11,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e87bab63041c1b438877dad8f723c19, type: 3}
   m_Name: BasicEnemyStats
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Speed: 2
+  ChargeSpeed: 5
   DetectionRange: 6
   AttackRange: 1.5
   ShootRange: 1

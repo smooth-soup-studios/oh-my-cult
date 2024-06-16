@@ -13,6 +13,7 @@ public class TaskRandomWalk : Node {
 
 	public override NodeState Evaluate(BaseBehaviourTree tree) {
 		ActorType _enemyState = tree.ActorType;
+		tree.Agent.speed = tree.Stats.Speed;
 		if (_randomTarget == Vector3.zero) {
 			_randomTarget = GetRandomPosition(tree.Agent.transform, _enemyState, tree);
 		}

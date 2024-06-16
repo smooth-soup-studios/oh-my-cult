@@ -14,7 +14,7 @@ public class Projectile : MonoBehaviour {
 		_target = GameObject.FindWithTag("Player");
 		_targetPosition = _target.transform.position;
 		_direction = (_targetPosition - (Vector2)transform.position).normalized;
-		StartCoroutine(WaitBeforeDestroy(_flytime));
+		Destroy(gameObject, _flytime);
 		RotateHitboxOnMove();
 	}
 
@@ -36,12 +36,7 @@ public class Projectile : MonoBehaviour {
 		Debug.Log(other.gameObject.name);
 		if (!other.CompareTag("Enemy") && other.gameObject.layer != LayerMask.NameToLayer("Ignore Raycast")) {
 			EnemyWeapon.PrimaryAction(gameObject);
-			StartCoroutine(WaitBeforeDestroy(0.1f));
+			Destroy(gameObject, 0.3f);
 		}
-	}
-
-	public IEnumerator WaitBeforeDestroy(float time) {
-		yield return new WaitForSeconds(time);
-		Destroy(gameObject);
 	}
 }

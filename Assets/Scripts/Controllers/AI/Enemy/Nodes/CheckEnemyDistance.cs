@@ -2,11 +2,10 @@ using BehaviorTree;
 using UnityEngine;
 
 
-public class CheckEnemyDistance : Node {
+public class CheckTargetInRetreatRange : Node {
 	private Transform _transform;
-	private static int _enemyLayerMask;
-	public CheckEnemyDistance(Transform transform) {
-		_enemyLayerMask = 1 << LayerMask.NameToLayer("Player");
+
+	public CheckTargetInRetreatRange(Transform transform) {
 		_transform = transform;
 	}
 

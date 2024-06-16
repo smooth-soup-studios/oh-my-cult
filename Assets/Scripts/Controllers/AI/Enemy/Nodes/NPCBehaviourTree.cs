@@ -40,7 +40,7 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 			new Sequence(new List<Node>
 			{
 				new CheckActorType(ActorType.RangedEnemy),
-				new CheckEnemyDistance(transform),
+				new CheckTargetInRetreatRange(transform),
 				new TaskRetreatFromEnemy(transform)
 			}),
 

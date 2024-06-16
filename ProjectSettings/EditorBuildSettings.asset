@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/2-KeybindInfoPage.unity
     guid: f071c88293b405745abac9b659f15e09
   - enabled: 1
-    path: Assets/Scenes/3-StoryTutorialPage.unity
-    guid: 51aee8ad44bf27b4d8b6f8521b635736
-  - enabled: 1
     path: Assets/Scenes/4-IntroCutscene.unity
     guid: 760826d5c5e66f444ad7eb14e4d2968b
   - enabled: 1

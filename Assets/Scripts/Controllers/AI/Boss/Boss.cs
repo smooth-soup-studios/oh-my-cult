@@ -20,7 +20,6 @@ public class Boss : MonoBehaviour, ISaveable {
 	[HideInInspector] public Vector2 Movement;
 	[HideInInspector] public bool WaitForWalking = true;
 	public MovementDirection Direction;
-
 	private bool _isAlive = true;
 	private GameObject _target;
 	private Vector2 _oldMove;
@@ -37,7 +36,7 @@ public class Boss : MonoBehaviour, ISaveable {
 			if (obj == gameObject) {
 				_isAlive = false;
 				gameObject.SetActive(false);
-				SceneManager.LoadScene(SceneDefs.EndingScreen);
+				SceneManager.LoadScene(SceneDefs.OutroCutscene);
 			}
 		});
 		StartCoroutine(WaitForWalk());

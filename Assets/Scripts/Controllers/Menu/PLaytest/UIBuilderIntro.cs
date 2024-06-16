@@ -17,6 +17,6 @@ public class UIBuilderIntro : MonoBehaviour
     }
 
     void OnStartButton(){
-        SceneManager.LoadSceneAsync(SceneDefs.VillageLevel);
+        SceneManager.LoadSceneAsync(SceneDefs.IntroCutscene);
     }
 }

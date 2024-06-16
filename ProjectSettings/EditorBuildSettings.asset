@@ -15,10 +15,16 @@ EditorBuildSettings:
     path: Assets/Scenes/3-StoryTutorialPage.unity
     guid: 51aee8ad44bf27b4d8b6f8521b635736
   - enabled: 1
-    path: Assets/Scenes/4-NewOverworld.unity
+    path: Assets/Scenes/4-IntroCutscene.unity
+    guid: 760826d5c5e66f444ad7eb14e4d2968b
+  - enabled: 1
+    path: Assets/Scenes/5-NewOverworld.unity
     guid: e4ab7c51ebda93a4c811db5b3fccf150
   - enabled: 1
-    path: Assets/Scenes/5-OutroMenu.unity
+    path: Assets/Scenes/6-OutroCutscene.unity
+    guid: 1288371b231c64c46be1bf072a65b408
+  - enabled: 1
+    path: Assets/Scenes/7-OutroMenu.unity
     guid: 24ba1b75f3014964ba5b591e90ec3d06
   - enabled: 1
     path: Assets/Scenes/98-NewHouseInteriors.unity

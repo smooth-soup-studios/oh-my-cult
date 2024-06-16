@@ -6,26 +6,29 @@ using UnityEngine.SceneManagement;
 
 public class Boss : MonoBehaviour, ISaveable {
 	public BossStatsSO Stats;
+	public Animator BossAnimation;
+
 	[SerializeField] public BossAttacks BossAttacks;
 	[SerializeField] public AudioClip RoarSoundClip;
 	public Transform Player;
 	public BossBaseState CurrentState;
 	public List<BossBaseState> States;
-	[HideInInspector] public int StateCounter = 0;
-	[HideInInspector] public bool Enemy = false;
-	[HideInInspector] public bool Charge;
+	public List<WeightedStates> WeightedValues;
 
-	private bool _isAlive = true;
-	public Animator BossAnimation;
+	[HideInInspector] public bool Enemy = false;
+
 	[HideInInspector] public Vector2 Movement;
 	[HideInInspector] public bool WaitForWalking = true;
 	public MovementDirection Direction;
-		private GameObject _target;
-		public Rigidbody2D Rigidbody2D;
+
+	private bool _isAlive = true;
+	private GameObject _target;
+	private Vector2 _oldMove;
+
+
 
 	void Start() {
 		_target = GameObject.FindWithTag("Player");
-		 Rigidbody2D = GetComponent<Rigidbody2D>();
 		if (!_isAlive) {
 			gameObject.SetActive(false);
 		}
@@ -57,7 +60,6 @@ public class Boss : MonoBehaviour, ISaveable {
 		CurrentState?.EnterState();
 	}
 
-	Vector2 _oldMove;
 	void Update() {
 		CurrentState?.UpdateState();
 		if (Movement != _oldMove) {
@@ -104,13 +106,12 @@ public class Boss : MonoBehaviour, ISaveable {
 		}
 	}
 
-	public IEnumerator FlashRed() {
+	public IEnumerator Flash() {
 		GetComponent<SpriteRenderer>().color = Color.magenta;
 		yield return new WaitForSeconds(0.5f);
 		GetComponent<SpriteRenderer>().color = Color.white;
 	}
 
-	public List<WeightedStates> WeightedValues;
 	public int GetRendomValue(List<WeightedStates> weightedValuesList) {
 		int output = 0;
 
@@ -130,16 +131,22 @@ public class Boss : MonoBehaviour, ISaveable {
 		}
 		return output;
 	}
+
+	public IEnumerator WaitForWalk() {
+		yield return new WaitForSeconds(4f);
+		WaitForWalking = false;
+	}
+
+
 	public void LoadData(GameData data) {
 		if (data.SceneData.ArbitraryTriggers.ContainsKey("BossDead")) {
 			data.SceneData.ArbitraryTriggers.TryGetValue("BossDead", out _isAlive);
 		}
 	}
+
 	public void SaveData(GameData data) {
 		data.SceneData.ArbitraryTriggers["BossDead"] = isActiveAndEnabled;
 	}
-	public IEnumerator WaitForWalk() {
-		yield return new WaitForSeconds(4f);
-		WaitForWalking = false;
-	}
+
+
 }

@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22e8892f72a7edb4f89d2181972e7a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boss: {fileID: 149644444053333856, guid: f347ef1b1acfc9f48badee766143504d, type: 3}
+  _cutScene: 3
 --- !u!1 &1258296194
 GameObject:
   m_ObjectHideFlags: 0

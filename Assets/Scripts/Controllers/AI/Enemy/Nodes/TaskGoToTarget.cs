@@ -11,6 +11,7 @@ public class TaskGoToTarget : Node {
 	public override NodeState Evaluate(BaseBehaviourTree tree) {
 		Transform ActorPos = tree.gameObject.transform;
 		Vector3 target = tree.Target.transform.position;
+		tree.Agent.speed = tree.Stats.ChargeSpeed;
 
 		tree.Movement = (tree.Target.transform.position - tree.Agent.transform.position).normalized;
 		tree.ActorAnimator.SetFloat("X", tree.Movement.x);

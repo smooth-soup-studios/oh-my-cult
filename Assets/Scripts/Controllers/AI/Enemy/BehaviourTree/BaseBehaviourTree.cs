@@ -9,6 +9,7 @@ namespace BehaviorTree {
 		[Header("Settings")]
 		public ActorType ActorType;
 		public ActorStats Stats;
+		public bool RandomizeWaypoints = true;
 		public Transform[] Waypoints;
 		public GameObject NPCTransformPrefab;
 
@@ -31,6 +32,8 @@ namespace BehaviorTree {
 
 			Agent = GetComponent<NavMeshAgent>();
 			ActorAnimator = GetComponent<Animator>();
+
+			Agent.speed = Stats.Speed;
 		}
 
 		protected void Start() {

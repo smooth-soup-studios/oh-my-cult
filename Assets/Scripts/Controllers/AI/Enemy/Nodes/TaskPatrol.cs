@@ -18,11 +18,12 @@ public class TaskPatrol : Node {
 
 	public override NodeState Evaluate(BaseBehaviourTree tree) {
 		// tree.EnemyAnimator.Play("EnemyWalk", MovementDirection);
+		tree.Agent.speed = tree.Stats.Speed;
 		tree.ActorAnimator.SetBool("IsNPC", false);
 		tree.Movement = (_waypoints[_currentWaypointIndex].transform.position - tree.Agent.transform.position).normalized;
 		tree.ActorAnimator.SetFloat("X", tree.Movement.x);
 		tree.ActorAnimator.SetFloat("Y", tree.Movement.y);
-		
+
 		if (_waiting) {
 			_waitCounter += Time.deltaTime;
 			if (_waitCounter >= _waitTime) {
@@ -36,13 +37,20 @@ public class TaskPatrol : Node {
 				tree.Agent.destination = _waypoints[_currentWaypointIndex].position;
 			}
 			else if (Vector2.Distance(tree.Agent.transform.position, _waypoints[_currentWaypointIndex].transform.position) < 0.01f) {
-				_waitCounter = 0;
-				_waiting = true;
-				_currentWaypointIndex = (_currentWaypointIndex + 1) % _waypoints.Length;
+				if (tree.RandomizeWaypoints) {
+					_currentWaypointIndex = Random.Range(0, _waypoints.Length);
+				}
+				else {
+					_waitCounter = 0;
+					_waiting = true;
+					_currentWaypointIndex = (_currentWaypointIndex + 1) % _waypoints.Length;
+				}
 				tree.Agent.destination = _waypoints[_currentWaypointIndex].position;
 			}
 			tree.Agent.destination = _waypoints[_currentWaypointIndex].position;
+
 		}
+
 		State = NodeState.RUNNING;
 		return State;
 	}

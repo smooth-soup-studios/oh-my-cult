@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 611465640628302}
   - component: {fileID: 6032906832402924645}
   - component: {fileID: 2306939559723431462}
+  - component: {fileID: 8567296391656282654}
   m_Layer: 0
   m_Name: BarrelInteractable
   m_TagString: Untagged
@@ -179,3 +180,19 @@ MonoBehaviour:
   Type: 1
   _smallKey: {fileID: 21300000, guid: cfdfcebd1e6bcac4f9891afc4a3e3c1e, type: 3}
   _bigKey: {fileID: 21300000, guid: d29e43eb5be7c0f448ee52d813ee532e, type: 3}
+--- !u!114 &8567296391656282654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5038953582178386077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa0352a4d56abd42ad2fc69deb72448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Size: {x: 1.3553613, y: 0.48038113, z: 4}
+  m_Center: {x: -0.024042308, y: -0.25980955, z: 0}
+  m_Area: 1
+  m_AffectedAgents: ffffffff

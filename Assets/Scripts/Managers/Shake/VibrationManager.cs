@@ -10,6 +10,8 @@ public class VibrationManager : MonoBehaviour {
 	public static bool VibrationEnabled = true;
 
 	protected List<ShakeLayer> Layers = new();
+	PlayerInput _playerInput;
+
 
 	void Awake() {
 		if (Instance == null) {
@@ -20,7 +22,21 @@ public class VibrationManager : MonoBehaviour {
 		}
 	}
 
+	private void GetRefs() {
+		EventBus busObject = FindObjectOfType<EventBus>();
+		if (busObject) {
+			_playerInput = busObject.GetComponent<PlayerInput>();
+		}
+;
+	}
 	void Update() {
+		if (_playerInput) {
+			VibrationEnabled = _playerInput.currentControlScheme.Contains("controller", System.StringComparison.InvariantCultureIgnoreCase);
+		}
+		else {
+			GetRefs();
+		}
+
 		CleanupLayers();
 		SetGamepadShake();
 	}

@@ -48,15 +48,9 @@ public class TaskRandomWalk : Node {
 
 	private Vector3 GetRandomPosition(Transform characterTransform, ActorType enemyState, BaseBehaviourTree tree) {
 		// Generate a random angle and distance
-		float randomAngle = 0;
-		float randomDistance = 0;
+		float randomAngle = Random.Range(0f, Mathf.PI * 2);
+		float randomDistance = Random.Range(_minDistance, _maxDistance);
 
-
-		if (enemyState != ActorType.NPC) {
-			tree.ActorAnimator.SetBool("IsNPC", false);
-			randomAngle = Random.Range(0f, Mathf.PI * 2);
-			randomDistance = Random.Range(_minDistance, _maxDistance);
-		}
 
 		// Calculate the position within the circle
 		float offsetX = Mathf.Cos(randomAngle) * randomDistance;

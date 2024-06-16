@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6969508211296229722
 Transform:
   m_ObjectHideFlags: 0
@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: 4849591457620503528}
   - component: {fileID: 3290768021699310593}
   - component: {fileID: 4520707863643151095}
+  - component: {fileID: 8708748621989641456}
   m_Layer: 7
   m_Name: RangedEnemy
   m_TagString: Enemy
@@ -284,7 +285,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActorType: 2
   Stats: {fileID: 11400000, guid: e583369200394cd42a7e0f31d2d8e3e8, type: 2}
+  RandomizeWaypoints: 1
   Waypoints: []
+  NPCTransformPrefab: {fileID: 0}
   DisableAgression: 0
 --- !u!114 &3900318808842322138
 MonoBehaviour:
@@ -298,7 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f0d07869b7ad747b46fdf13457c82e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: RangedEnemy-0,1013
+  <ObjectId>k__BackingField: RangedEnemy-0.1013
   _isInvulnerable: 0
   _maxHealth: 30
 --- !u!195 &7641483773983506728
@@ -423,3 +426,15 @@ MonoBehaviour:
   ShatterLifetime: 3
   ShatterFragments: {x: 8, y: 8}
   FragmentOffsetRandom: 2
+--- !u!114 &8708748621989641456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8507790943486014399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaaabe2768da9b140a5e4e7b6937b1bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

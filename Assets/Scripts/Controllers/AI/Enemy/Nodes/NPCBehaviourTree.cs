@@ -25,10 +25,10 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 	protected override Node SetupTree() {
 		Node root = new Selector(new List<Node>
 		{
-			// Update animator
+			// All - Update animator
 			new TaskUpdateAnimator(),
 
-			// Friendly NPC Behavior
+			// Friendly - Change to enemy when detecting player
 			new Sequence(new List<Node>
 			{
 				new CheckActorType(ActorType.NPC),
@@ -36,30 +36,13 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 				new TaskChangeToEnemy()
 			}),
 
+			// Ranged - Retreat if enemy too close
 			new Sequence(new List<Node>
 			{
 				new CheckActorType(ActorType.RangedEnemy),
 				new CheckEnemyDistance(transform),
 				new TaskRetreatFromEnemy(transform)
 			}),
-			new Sequence(new List<Node>
-			{
-				new CheckActorType(ActorType.RangedEnemy),
-				new CheckAgressionDisabled(),
-				new CheckTargetInAttackRange(),
-				new TaskAttack(),
-			}),
-
-			new Sequence(new List<Node>
-			{
-				new CheckActorType(ActorType.RangedEnemy),
-				new CheckPlayerInRange(),
-				new CheckTargetInShootRange(),
-				new TaskShoot()
-			}),
-
-
-
 
 			// Enemy - Attack when in range
 			new Sequence(new List<Node>
@@ -68,6 +51,14 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 				new CheckAgressionDisabled(),
 				new CheckTargetInAttackRange(),
 				new TaskAttack(),
+			}),
+
+			// Ranged - Shoot
+			new Sequence(new List<Node>
+			{
+				new CheckActorType(ActorType.RangedEnemy),
+				new CheckPlayerInRange(),
+				new TaskShoot()
 			}),
 
 			// Enemy - Move to target when in range but not attack range
@@ -94,6 +85,7 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 				new TaskPatrol(Waypoints)
 			}),
 
+			// All - Backup random walk
 			new TaskRandomWalk(),
 		});
 

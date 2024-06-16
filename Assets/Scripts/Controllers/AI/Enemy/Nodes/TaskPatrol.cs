@@ -31,26 +31,25 @@ public class TaskPatrol : Node {
 			}
 		}
 		else {
-			// if (Vector2.Distance(tree.Agent.transform.position, _waypoints[_waypoints.Length - 1].transform.position) < 0.01f) {
-			// 	_waypoints = _waypoints.Reverse().ToArray();
-			// 	_currentWaypointIndex = 1;
-			// 	tree.Agent.destination = _waypoints[_currentWaypointIndex].position;
-			// }
-			// else if (Vector2.Distance(tree.Agent.transform.position, _waypoints[_currentWaypointIndex].transform.position) < 0.01f) {
-			// 	_waitCounter = 0;
-			// 	_waiting = true;
-			// 	_currentWaypointIndex = (_currentWaypointIndex + 1) % _waypoints.Length;
-			// 	tree.Agent.destination = _waypoints[_currentWaypointIndex].position;
-			// }
-		if (tree.ActorType != ActorType.NPC || tree.ActorType != ActorType.MeleeEnemy) {
-
-			if (Vector2.Distance(tree.Agent.transform.position, _waypoints[_currentWaypointIndex].transform.position) < 0.01f) {
-				_currentWaypointIndex = Random.Range(0, _waypoints.Length);
+			if (Vector2.Distance(tree.Agent.transform.position, _waypoints[_waypoints.Length - 1].transform.position) < 0.01f) {
+				_waypoints = _waypoints.Reverse().ToArray();
+				_currentWaypointIndex = 1;
 				tree.Agent.destination = _waypoints[_currentWaypointIndex].position;
 			}
-			tree.Agent.destination = _waypoints[_currentWaypointIndex].position;
+			else if (Vector2.Distance(tree.Agent.transform.position, _waypoints[_currentWaypointIndex].transform.position) < 0.01f) {
+				if (tree.RandomizeWaypoints) {
+					_currentWaypointIndex = Random.Range(0, _waypoints.Length);
+				}
+				else {
+					_waitCounter = 0;
+					_waiting = true;
+					_currentWaypointIndex = (_currentWaypointIndex + 1) % _waypoints.Length;
+				}
+				tree.Agent.destination = _waypoints[_currentWaypointIndex].position;
+			}
+
 		}
-		}
+
 		State = NodeState.RUNNING;
 		return State;
 	}

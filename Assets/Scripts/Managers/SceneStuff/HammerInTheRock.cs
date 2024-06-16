@@ -9,10 +9,6 @@ public class HammerInTheRock : MonoBehaviour {
 		EventBus.Instance.Subscribe<(GameObject target, GameObject source)>(EventType.HIT, OnHit);
 	}
 
-	private void OnDisable() {
-		EventBus.Instance.Unsubscribe<(GameObject target, GameObject source)>(EventType.HIT, OnHit);
-	}
-
 
 
 	protected void OnHit((GameObject target, GameObject source) arg) {

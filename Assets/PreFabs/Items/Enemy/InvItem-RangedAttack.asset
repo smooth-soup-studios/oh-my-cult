@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c0e1789899e29448350646d58e3256, type: 3}
+  m_Name: InvItem-RangedAttack
+  m_EditorClassIdentifier: 
+  InvData:
+    Id: 26c16ae0-d0f9-4258-a195-445fbcbb2b4d
+    ItemName: 
+    ItemIcon: {fileID: 21300000, guid: f23962c24f1d5014d9735dec9959b68a, type: 3}
+    ItemPrefab: {fileID: 6458623882520386215, guid: 52131658ad7717049b957c492657bca4, type: 3}
+    MaxStackSize: 1
+    ItemType: 0
+    AnimationSet: Bird Attack
+    Description: 

@@ -54,6 +54,7 @@ public class WeaponItem : InteractableItem {
 		}
 	}
 
+
 	protected virtual void DoSecondaryDamage(HealthController enemy) {
 		if (ScreenShakeManager.Instance) {
 			ShakeLayer DamageShakeLayer = ScreenShakeManager.Instance.GetOrAddLayer("SecondaryDamage", true);

@@ -18,10 +18,16 @@ public class TaskUpdateAnimator : Node {
 				tree.ActorAnimator.SetBool("IsNPC", false);
 				tree.ActorAnimator.SetBool("IsBear", true);
 				break;
+			case ActorType.RangedEnemy:
+				tree.ActorAnimator.SetBool("IsNPC", false);
+				tree.ActorAnimator.SetBool("IsRanged", true);
+				break;
 			case ActorType.MeleeEnemy:
 				tree.ActorAnimator.SetBool("IsNPC", false);
 				tree.ActorAnimator.SetBool("IsBear", false);
+				tree.ActorAnimator.SetBool("IsRanged", false);
 				break;
+
 		}
 		return _returnSuccess ? NodeState.SUCCESS : NodeState.FAILURE;
 	}

@@ -25,15 +25,23 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 	protected override Node SetupTree() {
 		Node root = new Selector(new List<Node>
 		{
-			// Update animator
+			// All - Update animator
 			new TaskUpdateAnimator(),
 
-			// Friendly NPC Behavior
+			// Friendly - Change to enemy when detecting player
 			new Sequence(new List<Node>
 			{
 				new CheckActorType(ActorType.NPC),
 				new CheckPlayerInRange(),
 				new TaskChangeToEnemy()
+			}),
+
+			// Ranged - Retreat if enemy too close
+			new Sequence(new List<Node>
+			{
+				new CheckActorType(ActorType.RangedEnemy),
+				new CheckTargetInRetreatRange(transform),
+				new TaskRetreatFromEnemy(transform)
 			}),
 
 			// Enemy - Attack when in range
@@ -43,6 +51,14 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 				new CheckAgressionDisabled(),
 				new CheckTargetInAttackRange(),
 				new TaskAttack(),
+			}),
+
+			// Ranged - Shoot
+			new Sequence(new List<Node>
+			{
+				new CheckActorType(ActorType.RangedEnemy),
+				new CheckPlayerInRange(),
+				new TaskShoot()
 			}),
 
 			// Enemy - Move to target when in range but not attack range
@@ -69,6 +85,7 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 				new TaskPatrol(Waypoints)
 			}),
 
+			// All - Backup random walk
 			new TaskRandomWalk(),
 		});
 
@@ -76,9 +93,12 @@ public class NPCBehaviourTree : BaseBehaviourTree {
 	}
 
 	private void RotateHitboxOnMove(Vector2 movement) {
-		Transform HitContainer = GetComponentInChildren<WeaponHitbox>().transform.parent;
-		float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
-		HitContainer.transform.rotation = Quaternion.Euler(0, 0, angle);
+		WeaponHitbox hitbox = GetComponentInChildren<WeaponHitbox>();
+		if (hitbox) {
+			Transform HitContainer = hitbox.transform.parent;
+			float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
+			HitContainer.transform.rotation = Quaternion.Euler(0, 0, angle);
+		}
 	}
 
 

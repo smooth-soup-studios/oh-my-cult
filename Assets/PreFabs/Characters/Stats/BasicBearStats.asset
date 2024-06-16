@@ -11,10 +11,12 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e87bab63041c1b438877dad8f723c19, type: 3}
   m_Name: BasicBearStats
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Speed: 2
   ChargeSpeed: 5
   DetectionRange: 6
   AttackRange: 2
+  RetreatRange: 0
   AttackSpeed: 0.56
   EnemyWeapon: {fileID: -122712722624295829, guid: fc150004e1ef18e4ea82896d77aa39c7, type: 3}
+  EnemyProjectile: {fileID: 0}

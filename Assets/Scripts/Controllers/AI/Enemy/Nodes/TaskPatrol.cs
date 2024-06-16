@@ -47,6 +47,7 @@ public class TaskPatrol : Node {
 				}
 				tree.Agent.destination = _waypoints[_currentWaypointIndex].position;
 			}
+			tree.Agent.destination = _waypoints[_currentWaypointIndex].position;
 
 		}
 

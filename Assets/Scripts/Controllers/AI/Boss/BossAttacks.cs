@@ -26,6 +26,7 @@ public class BossAttacks : MonoBehaviour {
 		List<GameObject> Target = new();
 		GetComponentsInChildren<BossAttackHitbox>().Where(e => e != null).Where(e => e.Direction == currentDirection).Where(e => e.AttackType == attackType).ToList().ForEach(e => Target.AddRange(e.GetUniqueObjectsInCollider()));
 		Target.Distinct().ToList().ForEach(obj => {
+			EventBus.Instance.TriggerEvent(EventType.HIT, (obj, gameObject));
 			if (obj.TryGetComponent(out HealthController opponent)) {
 				opponent.TakeDamage(_weaponData.WeaponData.Damage);
 

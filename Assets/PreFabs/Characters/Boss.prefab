@@ -114,8 +114,6 @@ MonoBehaviour:
     Weight: 5
   - Value: 1
     Weight: 3
-  - Value: 2
-    Weight: 1
   Enemy: 0
   Movement: {x: 0, y: 0}
   WaitForWalking: 1
@@ -173,14 +171,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419892085652963985}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -204,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f0d07869b7ad747b46fdf13457c82e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: Boss-50140,49
+  <ObjectId>k__BackingField: Boss-50140.49
   _isInvulnerable: 0
   _maxHealth: 100
 --- !u!114 &5148443580798022672

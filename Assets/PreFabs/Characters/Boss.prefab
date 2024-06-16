@@ -105,16 +105,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stats: {fileID: 11400000, guid: 31ba062b28779dc41b17562ed19e959a, type: 2}
+  BossAnimation: {fileID: 4742239558171051814}
   BossAttacks: {fileID: 5148443580798022672}
   RoarSoundClip: {fileID: 8300000, guid: 46281be941a74f40b66310cf348f873c, type: 3}
   Player: {fileID: 0}
-  StateCounter: 0
-  Enemy: 0
-  Charge: 0
-  BossAnimation: {fileID: 4742239558171051814}
-  Movement: {x: 0, y: 0}
-  WaitForWalking: 1
-  Direction: 0
   WeightedValues:
   - Value: 0
     Weight: 5
@@ -122,6 +116,10 @@ MonoBehaviour:
     Weight: 3
   - Value: 2
     Weight: 1
+  Enemy: 0
+  Movement: {x: 0, y: 0}
+  WaitForWalking: 1
+  Direction: 0
 --- !u!61 &4848697707482886390
 BoxCollider2D:
   m_ObjectHideFlags: 0

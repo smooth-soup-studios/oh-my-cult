@@ -19,7 +19,7 @@ public class WeaponItem : InteractableItem {
 						DoPrimaryDamage(enemy);
 					}
 					if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
-						rb.AddForce(rb.mass * WeaponStats.WeaponData.Knockback * (obj.transform.position - source.transform.position).normalized, ForceMode2D.Impulse);
+						DoKnockBack(rb, source);
 					}
 				}
 			});
@@ -36,6 +36,13 @@ public class WeaponItem : InteractableItem {
 		enemy.TakeDamage(WeaponStats.WeaponData.Damage);
 	}
 
+	protected virtual void DoKnockBack(Rigidbody2D rb, GameObject source) {
+		if (rb.TryGetComponent<KnockbackModifier>(out KnockbackModifier kbm) && !kbm.AllowKnockback) {
+			return;
+		}
+		rb.AddForce(rb.mass * WeaponStats.WeaponData.Knockback * (rb.gameObject.transform.position - source.transform.position).normalized, ForceMode2D.Impulse);
+	}
+
 	public override void SecondaryAction(GameObject source) {
 		try {
 			source.GetComponentInChildren<WeaponHitbox>().GetUniqueObjectsInCollider().ForEach(obj => {
@@ -45,7 +52,7 @@ public class WeaponItem : InteractableItem {
 						DoSecondaryDamage(enemy);
 					}
 					if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
-						rb.AddForce(rb.mass * WeaponStats.WeaponData.Knockback * (obj.transform.position - source.transform.position).normalized, ForceMode2D.Impulse);
+						DoKnockBack(rb, source);
 					}
 				}
 			});

@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 5148443580798022672}
   - component: {fileID: 4742239558171051814}
   - component: {fileID: 7463597057282135637}
+  - component: {fileID: -341535255809674197}
   m_Layer: 7
   m_Name: Boss
   m_TagString: Enemy
@@ -278,6 +279,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0.029260159, y: -0.46816492}
   m_Size: {x: 3.7125425, y: 3.7125425}
   m_Direction: 0
+--- !u!114 &-341535255809674197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419892085652963985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f76b82dbb62c4f7cba0ca240bdc3fc75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AllowKnockback: 0
 --- !u!1 &659189620768421115
 GameObject:
   m_ObjectHideFlags: 0

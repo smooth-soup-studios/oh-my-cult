@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
 public class Boss : MonoBehaviour, ISaveable {
@@ -23,6 +24,7 @@ public class Boss : MonoBehaviour, ISaveable {
 	private bool _isAlive = true;
 	private GameObject _target;
 	private Vector2 _oldMove;
+	public NavMeshAgent Agent { get; set; }
 
 
 
@@ -43,9 +45,13 @@ public class Boss : MonoBehaviour, ISaveable {
 			new BossRoarState(this, "Roar"),
 			new BossMoveState(this,"Move"),
 			new BossIdleState(this, "Idle"),
-			new BossChargeAttack(this, "ChargeAttack")
+			new BossChargeAttack(this, "ChargeAttack"),
+			new BossDeathState(this, "Death")
 		};
 		SwitchState("Idle");
+		Agent = GetComponent<NavMeshAgent>();
+		Agent.updateRotation = false;
+		Agent.updateUpAxis = false;
 	}
 	public void SwitchState(string name) {
 		CurrentState?.ExitState();
@@ -88,22 +94,11 @@ public class Boss : MonoBehaviour, ISaveable {
 	}
 
 	public void CheckForPlayer() {
-		// Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, Stats.ChargeRange, BossAttacks.EnemyLayer);
-
-		// if (hitEnemies.Length >= 1) {
-		// 	Enemy = true;
-		// 	Charge = false;
-		// }
 		if (Vector2.Distance(transform.position, _target.transform.position) <= Stats.ChargeRange) {
 			Enemy = true;
 		}
 	}
 
-	public IEnumerator Flash() {
-		GetComponent<SpriteRenderer>().color = Color.magenta;
-		yield return new WaitForSeconds(0.5f);
-		GetComponent<SpriteRenderer>().color = Color.white;
-	}
 
 	public int GetRendomValue(List<WeightedStates> weightedValuesList) {
 		int output = 0;
@@ -133,8 +128,8 @@ public class Boss : MonoBehaviour, ISaveable {
 	private void OnDeath(GameObject objThatDied) {
 		if (objThatDied == gameObject) {
 			_isAlive = false;
-			gameObject.SetActive(false);
-			SceneManager.LoadScene(SceneDefs.OutroCutscene);
+			// gameObject.SetActive(false);
+			SwitchState("Death");
 		}
 	}
 
@@ -148,6 +143,7 @@ public class Boss : MonoBehaviour, ISaveable {
 	public void SaveData(GameData data) {
 		data.SceneData.ArbitraryTriggers["BossDead"] = isActiveAndEnabled;
 	}
+
 
 
 }

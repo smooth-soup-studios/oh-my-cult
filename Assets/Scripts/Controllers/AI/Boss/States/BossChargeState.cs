@@ -3,19 +3,19 @@ using UnityEngine;
 
 public class BossChargeState : BossBaseState {
 	public BossChargeState(Boss boss, string name) : base(boss, name) { }
-
+	private float _radius = 4f;
 
 	public override void EnterState() {
 		// Boss.StartCoroutine(ChargeTime());
 		Boss.BossAnimation.SetBool("IsWalking", true);
-
+		Boss.Agent.speed = Boss.Stats.ChargeSpeed;
 	}
 	public override void UpdateState() {
 		// Boss.CheckForPlayer();
 		// if (Boss.Charge == true) {
-			ChargeAttack();
+		ChargeAttack();
 		// }
-		 if (Boss.Enemy == true) {
+		if (Boss.Enemy == true) {
 			Boss.BossAttacks.FlashSlam(Boss.Direction, BossAttackType.SLAM);
 			Boss.SwitchState("ChargeAttack");
 		}
@@ -30,13 +30,9 @@ public class BossChargeState : BossBaseState {
 		Boss.BossAnimation.SetBool("IsWalking", false);
 	}
 	private void ChargeAttack() {
-		Boss.transform.position = Vector3.MoveTowards(Boss.transform.position, Boss.Player.position, Boss.Stats.ChargeSpeed * Time.deltaTime * 2);
+		Vector3 movePos = Boss.Player.position;
+		movePos = Vector3.MoveTowards(movePos, Boss.transform.position, _radius);
+		Boss.Agent.SetDestination(movePos);
 		Boss.CheckForPlayer();
 	}
-	// IEnumerator ChargeTime() {
-	// 	Boss.Charge = true;
-	// 	yield return new WaitForSeconds(Boss.Stats.ChargeTime);
-	// 	Boss.Charge = false;
-	// }
-
 }

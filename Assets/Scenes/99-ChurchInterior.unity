@@ -1479,7 +1479,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 149644444053333856, guid: f347ef1b1acfc9f48badee766143504d, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: Boss-154.5054
+      value: Boss-154,5054
       objectReference: {fileID: 0}
     - target: {fileID: 419892085652963985, guid: f347ef1b1acfc9f48badee766143504d, type: 3}
       propertyPath: m_Name
@@ -4306,7 +4306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2607886220727919282, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: Player-19.4791
+      value: Player-19,4791
       objectReference: {fileID: 0}
     - target: {fileID: 5190605175808683211, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
       propertyPath: m_LocalPosition.x

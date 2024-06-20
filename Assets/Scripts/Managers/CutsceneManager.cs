@@ -9,16 +9,16 @@ public class CutsceneManager : MonoBehaviour {
 
 	void Start() {
 		_animator = FindAnyObjectByType<Animator>();
-		VibrationManager.VibrationEnabled = false;
 		StartCoroutine(PlayCutscene());
 
 	}
 
 	public IEnumerator PlayCutscene() {
 		float duration = _animator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
+		VibrationManager.StopAllLayers();
+		VibrationManager.VibrationEnabled = false;
 		yield return new WaitForSeconds(duration);
 		VibrationManager.VibrationEnabled = true;
-		VibrationManager.StopAllLayers();
 		SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 

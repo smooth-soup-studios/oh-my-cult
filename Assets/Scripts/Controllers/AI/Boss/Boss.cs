@@ -43,7 +43,8 @@ public class Boss : MonoBehaviour, ISaveable {
 			new BossRoarState(this, "Roar"),
 			new BossMoveState(this,"Move"),
 			new BossIdleState(this, "Idle"),
-			new BossChargeAttack(this, "ChargeAttack")
+			new BossChargeAttack(this, "ChargeAttack"),
+			new BossDeathState(this, "Death")
 		};
 		SwitchState("Idle");
 	}
@@ -88,22 +89,11 @@ public class Boss : MonoBehaviour, ISaveable {
 	}
 
 	public void CheckForPlayer() {
-		// Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, Stats.ChargeRange, BossAttacks.EnemyLayer);
-
-		// if (hitEnemies.Length >= 1) {
-		// 	Enemy = true;
-		// 	Charge = false;
-		// }
 		if (Vector2.Distance(transform.position, _target.transform.position) <= Stats.ChargeRange) {
 			Enemy = true;
 		}
 	}
 
-	public IEnumerator Flash() {
-		GetComponent<SpriteRenderer>().color = Color.magenta;
-		yield return new WaitForSeconds(0.5f);
-		GetComponent<SpriteRenderer>().color = Color.white;
-	}
 
 	public int GetRendomValue(List<WeightedStates> weightedValuesList) {
 		int output = 0;
@@ -133,8 +123,8 @@ public class Boss : MonoBehaviour, ISaveable {
 	private void OnDeath(GameObject objThatDied) {
 		if (objThatDied == gameObject) {
 			_isAlive = false;
-			gameObject.SetActive(false);
-			SceneManager.LoadScene(SceneDefs.OutroCutscene);
+			// gameObject.SetActive(false);
+			SwitchState("Death");
 		}
 	}
 
@@ -148,6 +138,7 @@ public class Boss : MonoBehaviour, ISaveable {
 	public void SaveData(GameData data) {
 		data.SceneData.ArbitraryTriggers["BossDead"] = isActiveAndEnabled;
 	}
+
 
 
 }

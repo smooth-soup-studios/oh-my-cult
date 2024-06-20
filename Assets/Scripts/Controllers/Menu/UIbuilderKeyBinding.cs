@@ -54,6 +54,7 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 			_continueButton.clicked += OnContinue;
 			_continueButton.RegisterCallback<FocusInEvent>(OnFocusInContinueGame);
 			_continueButton.RegisterCallback<FocusOutEvent>(OnFocusOutContinueGame);
+			_backButton.focusable = false;
 		}
 
 		_leftButton.Q<Button>().clicked += OnLeftChange;

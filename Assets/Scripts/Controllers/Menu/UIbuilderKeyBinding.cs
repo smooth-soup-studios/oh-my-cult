@@ -52,6 +52,8 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 		_backButton.clicked += OnBack;
 		if (_continueButton != null) {
 			_continueButton.clicked += OnContinue;
+			_continueButton.RegisterCallback<FocusInEvent>(OnFocusInContinueGame);
+			_continueButton.RegisterCallback<FocusOutEvent>(OnFocusOutContinueGame);
 		}
 
 		_leftButton.Q<Button>().clicked += OnLeftChange;
@@ -63,6 +65,36 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 		_dashButton.Q<Button>().clicked += OnDashChange;
 
 		ReloadText("Keyboard");
+
+		_backButton.RegisterCallback<FocusInEvent>(OnFocusInBack);
+		_backButton.RegisterCallback<FocusOutEvent>(OnFocusOutBack);
+
+		_keyboard.RegisterCallback<FocusInEvent>(OnFocusInKeyboard);
+		_keyboard.RegisterCallback<FocusOutEvent>(OnFocusOutKeyboard);
+
+		_controller.RegisterCallback<FocusInEvent>(OnFocusInController);
+		_controller.RegisterCallback<FocusOutEvent>(OnFocusOutController);
+
+		_leftButton.RegisterCallback<FocusInEvent>(OnFocusInLeft);
+		_leftButton.RegisterCallback<FocusOutEvent>(OnFocusOutLeft);
+
+		_rightButton.RegisterCallback<FocusInEvent>(OnFocusInRight);
+		_rightButton.RegisterCallback<FocusOutEvent>(OnFocusOutRight);
+
+		_upButton.RegisterCallback<FocusInEvent>(OnFocusInUp);
+		_upButton.RegisterCallback<FocusOutEvent>(OnFocusOutUp);
+
+		_downButton.RegisterCallback<FocusInEvent>(OnFocusInDown);
+		_downButton.RegisterCallback<FocusOutEvent>(OnFocusOutDown);
+
+		_interactButton.RegisterCallback<FocusInEvent>(OnFocusInInteract);
+		_interactButton.RegisterCallback<FocusOutEvent>(OnFocusOutInteract);
+
+		_attackButton.RegisterCallback<FocusInEvent>(OnFocusInAttack);
+		_attackButton.RegisterCallback<FocusOutEvent>(OnFocusOutAttack);
+
+		_dashButton.RegisterCallback<FocusInEvent>(OnFocusInDash);
+		_dashButton.RegisterCallback<FocusOutEvent>(OnFocusOutDash);
 	}
 
 	void OnKeyboard(){
@@ -156,5 +188,93 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 
 	void OnDashChange() {
 		OnKeyChange("Dash", _dashButton);
+	}
+
+	private void OnFocusInContinueGame(FocusInEvent evt) {
+		_continueButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+	}
+
+	private void OnFocusOutContinueGame(FocusOutEvent evt) {
+		_continueButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+	}
+
+	private void OnFocusInBack(FocusInEvent evt) {
+		_backButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+	}
+
+	private void OnFocusOutBack(FocusOutEvent evt) {
+		_backButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+	}
+
+	private void OnFocusInKeyboard(FocusInEvent evt) {
+		_keyboard.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+	}
+
+	private void OnFocusOutKeyboard(FocusOutEvent evt) {
+		_keyboard.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+	}
+
+	private void OnFocusInController(FocusInEvent evt) {
+		_controller.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+	}
+
+	private void OnFocusOutController(FocusOutEvent evt) {
+		_controller.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+	}
+
+	private void OnFocusInLeft(FocusInEvent evt) {
+		_leftButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+	}
+
+	private void OnFocusOutLeft(FocusOutEvent evt) {
+		_leftButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+	}
+
+	private void OnFocusInRight(FocusInEvent evt) {
+		_rightButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+	}
+
+	private void OnFocusOutRight(FocusOutEvent evt) {
+		_rightButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+	}
+
+	private void OnFocusInUp(FocusInEvent evt) {
+		_upButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+	}
+
+	private void OnFocusOutUp(FocusOutEvent evt) {
+		_upButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+	}
+
+	private void OnFocusInDown(FocusInEvent evt) {
+		_downButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+	}
+
+	private void OnFocusOutDown(FocusOutEvent evt) {
+		_downButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+	}
+
+	private void OnFocusInInteract(FocusInEvent evt) {
+		_interactButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+	}
+
+	private void OnFocusOutInteract(FocusOutEvent evt) {
+		_interactButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+	}
+
+	private void OnFocusInAttack(FocusInEvent evt) {
+		_attackButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+	}
+
+	private void OnFocusOutAttack(FocusOutEvent evt) {
+		_attackButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+	}
+
+	private void OnFocusInDash(FocusInEvent evt) {
+		_dashButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+	}
+
+	private void OnFocusOutDash(FocusOutEvent evt) {
+		_dashButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
 	}
 }

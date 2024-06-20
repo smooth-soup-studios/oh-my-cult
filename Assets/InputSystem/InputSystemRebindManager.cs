@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
@@ -49,6 +51,9 @@ public class InputSystemRebindManager : MonoBehaviour {
 		// Cancel any existing rebinding operation
 		_rebindInProgress?.Cancel();
 
+		InputSystem.FindControls(currentControlScheme);
+		InputBinding prevBinding = _playerInput.actions[actionToRebind].bindings[bindingIndex];
+
 		_playerInput.actions[actionToRebind].Disable();
 		_rebindInProgress = _playerInput.actions[actionToRebind].PerformInteractiveRebinding(bindingIndex)
 			.WithBindingGroup(currentControlScheme)
@@ -57,10 +62,11 @@ public class InputSystemRebindManager : MonoBehaviour {
 			.WithCancelingThrough("<Keyboard>/escape")
 			.OnMatchWaitForAnother(0.1f)
 			.OnComplete(operation => {
-				string newText = GetBindingDisplayString(actionToRebind, currentControlScheme, bindingIndex);
-				TextChange(newText, container, currentControlScheme);
-				operation.Dispose();
-				_rebindInProgress = null;
+				finishRebinding(_rebindInProgress, _playerInput.actions[actionToRebind], prevBinding, bindingIndex, container, actionToRebind);
+				// string newText = GetBindingDisplayString(actionToRebind, currentControlScheme, bindingIndex);
+				// TextChange(newText, container, currentControlScheme);
+				// operation.Dispose();
+				// _rebindInProgress = null;
 			})
 			.Start();
 
@@ -123,5 +129,40 @@ public class InputSystemRebindManager : MonoBehaviour {
 			}
 		}
 		icon.style.backgroundImage = button.style.backgroundImage;
+	}
+
+	private void finishRebinding(InputActionRebindingExtensions.RebindingOperation operation, InputAction actionToRebind, InputBinding prevBinding, int bindingIndex, VisualElement container, String rebindaction)
+{
+    operation.Cancel();
+    actionToRebind.Enable();
+    operation.Dispose();
+ 
+    if (isBindingInUse(actionToRebind, bindingIndex))
+    {
+        actionToRebind.ChangeBinding(bindingIndex).To(prevBinding);
+		_rebindInProgress = null;
+    }else{
+		string newText = GetBindingDisplayString(rebindaction, _playerInput.currentControlScheme, bindingIndex);
+		TextChange(newText, container, _playerInput.currentControlScheme);
+		_rebindInProgress = null;
+	}
+}
+
+	private bool isBindingInUse(InputAction actionToRebind, int bindingIndex)
+	{
+		InputBinding newBinding = actionToRebind.bindings[bindingIndex];
+
+		UnityEngine.InputSystem.Utilities.ReadOnlyArray<InputBinding> bindings = actionToRebind.actionMap.bindings;
+		foreach (InputBinding binding in bindings)
+		{
+			Debug.Log(binding.effectivePath + " is not the same as " + newBinding.effectivePath);
+			if (binding.action == newBinding.action)
+				continue;
+			if (binding.effectivePath == newBinding.effectivePath)
+				return true;
+		}
+		
+	
+		return false;
 	}
 }

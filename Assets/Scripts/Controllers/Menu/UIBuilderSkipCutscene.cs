@@ -15,20 +15,9 @@ public class UIBuilderSkipCutscene : MonoBehaviour {
 		if (hud) {
 			hud.GetComponent<UIDocument>().rootVisualElement.visible = false;
 		}
-
-		_skipButton.RegisterCallback<FocusInEvent>(OnFocusInSkip);
-		_skipButton.RegisterCallback<FocusOutEvent>(OnFocusOutSkip);
 	}
 
 	public void SkipCutscene() {
 		SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
-	}
-
-	private void OnFocusInSkip(FocusInEvent evt) {
-		_skipButton.style.unityBackgroundImageTintColor = new Color(204f, 204f, 204f);
-	}
-
-	private void OnFocusOutSkip(FocusOutEvent evt) {
-		_skipButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f);
 	}
 }

@@ -6,6 +6,10 @@ Button:active {
     -unity-background-image-tint-color: rgb(170, 170, 170);
 }
 
+Button:focus {
+    -unity-background-image-tint-color: rgb(204, 204, 204);
+}
+
 Button{
     -unity-font: url("../../../Fonts/Nunito-Regular.ttf");
     -unity-font-definition: url("../../..//Fonts/Nunito-Regular SDF.asset"); 

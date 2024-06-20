@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class WeaponItem : InteractableItem {
@@ -11,26 +13,48 @@ public class WeaponItem : InteractableItem {
 	}
 
 	public override void PrimaryAction(GameObject source) {
-		try {
-			source.GetComponentInChildren<WeaponHitbox>().GetUniqueObjectsInCollider().ForEach(obj => {
-				if (IsTargetUnObstructed(source, obj)) {
-					EventBus.Instance.TriggerEvent(EventType.HIT, (obj, source));
-					if (obj.TryGetComponent<HealthController>(out HealthController enemy)) {
-						DoPrimaryDamage(enemy);
-					}
-					if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
-						DoKnockBack(rb, source);
-					}
+		List<GameObject> targets = GetTargets(source);
+		for (int i = 0; i < targets.Count; i++) {
+			GameObject obj = targets[i];
+			if (IsTargetUnObstructed(source, obj)) {
+				EventBus.Instance.TriggerEvent(EventType.HIT, (obj, source));
+				if (obj.TryGetComponent<HealthController>(out HealthController enemy)) {
+					DoPrimaryDamage(enemy);
 				}
-			});
-		}
-		catch (System.Exception) {
+				if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
+					DoKnockBack(rb, source);
+				}
+			}
 		}
 	}
 
 	protected virtual void DoPrimaryDamage(HealthController enemy) {
 		if (ScreenShakeManager.Instance) {
 			ShakeLayer DamageShakeLayer = ScreenShakeManager.Instance.GetOrAddLayer("PrimaryDamage", true);
+			DamageShakeLayer.SetShakeThenStop(2, 2);
+		}
+		enemy.TakeDamage(WeaponStats.WeaponData.Damage);
+	}
+
+	public override void SecondaryAction(GameObject source) {
+		List<GameObject> targets = GetTargets(source);
+		for (int i = 0; i < targets.Count; i++) {
+			GameObject obj = targets[i];
+			if (IsTargetUnObstructed(source, obj)) {
+				EventBus.Instance.TriggerEvent(EventType.HIT, (obj, source));
+				if (obj.TryGetComponent<HealthController>(out HealthController enemy)) {
+					DoSecondaryDamage(enemy);
+				}
+				if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
+					DoKnockBack(rb, source);
+				}
+			}
+		}
+	}
+
+	protected virtual void DoSecondaryDamage(HealthController enemy) {
+		if (ScreenShakeManager.Instance) {
+			ShakeLayer DamageShakeLayer = ScreenShakeManager.Instance.GetOrAddLayer("SecondaryDamage", true);
 			DamageShakeLayer.SetShakeThenStop(2, 2);
 		}
 		enemy.TakeDamage(WeaponStats.WeaponData.Damage);
@@ -43,31 +67,15 @@ public class WeaponItem : InteractableItem {
 		rb.AddForce(rb.mass * WeaponStats.WeaponData.Knockback * (rb.gameObject.transform.position - source.transform.position).normalized, ForceMode2D.Impulse);
 	}
 
-	public override void SecondaryAction(GameObject source) {
+
+	protected virtual List<GameObject> GetTargets(GameObject source) {
+		List<GameObject> targets = new();
 		try {
-			source.GetComponentInChildren<WeaponHitbox>().GetUniqueObjectsInCollider().ForEach(obj => {
-				if (IsTargetUnObstructed(source, obj)) {
-					EventBus.Instance.TriggerEvent(EventType.HIT, (obj, source));
-					if (obj.TryGetComponent<HealthController>(out HealthController enemy)) {
-						DoSecondaryDamage(enemy);
-					}
-					if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
-						DoKnockBack(rb, source);
-					}
-				}
-			});
+			targets = source.GetComponentInChildren<WeaponHitbox>().GetUniqueObjectsInCollider();
 		}
-		catch (System.Exception) {
-		}
-	}
+		catch (System.Exception) { }
+		return targets;
 
-
-	protected virtual void DoSecondaryDamage(HealthController enemy) {
-		if (ScreenShakeManager.Instance) {
-			ShakeLayer DamageShakeLayer = ScreenShakeManager.Instance.GetOrAddLayer("SecondaryDamage", true);
-			DamageShakeLayer.SetShakeThenStop(2, 2);
-		}
-		enemy.TakeDamage(WeaponStats.WeaponData.Damage);
 	}
 
 	protected bool IsTargetUnObstructed(GameObject source, GameObject target) {

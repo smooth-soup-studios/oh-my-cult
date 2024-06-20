@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
 public class Boss : MonoBehaviour, ISaveable {
@@ -23,6 +24,7 @@ public class Boss : MonoBehaviour, ISaveable {
 	private bool _isAlive = true;
 	private GameObject _target;
 	private Vector2 _oldMove;
+	public NavMeshAgent Agent { get; set; }
 
 
 
@@ -46,6 +48,9 @@ public class Boss : MonoBehaviour, ISaveable {
 			new BossChargeAttack(this, "ChargeAttack")
 		};
 		SwitchState("Idle");
+		Agent = GetComponent<NavMeshAgent>();
+		Agent.updateRotation = false;
+		Agent.updateUpAxis = false;
 	}
 	public void SwitchState(string name) {
 		CurrentState?.ExitState();

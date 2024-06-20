@@ -193,90 +193,90 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 	}
 
 	private void OnFocusInContinueGame(FocusInEvent evt) {
-		_continueButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+		_continueButton.style.unityBackgroundImageTintColor = new Color(204f, 204f, 204f);
 	}
 
 	private void OnFocusOutContinueGame(FocusOutEvent evt) {
-		_continueButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+		_continueButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f);
 	}
 
 	private void OnFocusInBack(FocusInEvent evt) {
-		_backButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+		_backButton.style.unityBackgroundImageTintColor = new Color(204f, 204f, 204f);
 	}
 
 	private void OnFocusOutBack(FocusOutEvent evt) {
-		_backButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+		_backButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f);
 	}
 
 	private void OnFocusInKeyboard(FocusInEvent evt) {
-		_keyboard.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+		_keyboard.style.unityBackgroundImageTintColor = new Color(204f, 204f, 204f);
 	}
 
 	private void OnFocusOutKeyboard(FocusOutEvent evt) {
-		_keyboard.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+		_keyboard.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f);
 	}
 
 	private void OnFocusInController(FocusInEvent evt) {
-		_controller.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+		_controller.style.unityBackgroundImageTintColor = new Color(204f, 204f, 204f);
 	}
 
 	private void OnFocusOutController(FocusOutEvent evt) {
-		_controller.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+		_controller.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f);
 	}
 
 	private void OnFocusInLeft(FocusInEvent evt) {
-		_leftButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+		_leftButton.style.unityBackgroundImageTintColor = new Color(204f, 204f, 204f);
 	}
 
 	private void OnFocusOutLeft(FocusOutEvent evt) {
-		_leftButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+		_leftButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f);
 	}
 
 	private void OnFocusInRight(FocusInEvent evt) {
-		_rightButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+		_rightButton.style.unityBackgroundImageTintColor = new Color(204f, 204f, 204f);
 	}
 
 	private void OnFocusOutRight(FocusOutEvent evt) {
-		_rightButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+		_rightButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f);
 	}
 
 	private void OnFocusInUp(FocusInEvent evt) {
-		_upButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+		_upButton.style.unityBackgroundImageTintColor = new Color(204f, 204f, 204f);
 	}
 
 	private void OnFocusOutUp(FocusOutEvent evt) {
-		_upButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+		_upButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f);
 	}
 
 	private void OnFocusInDown(FocusInEvent evt) {
-		_downButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+		_downButton.style.unityBackgroundImageTintColor = new Color(204f, 204f, 204f);
 	}
 
 	private void OnFocusOutDown(FocusOutEvent evt) {
-		_downButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+		_downButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f);
 	}
 
 	private void OnFocusInInteract(FocusInEvent evt) {
-		_interactButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+		_interactButton.style.unityBackgroundImageTintColor = new Color(204f, 204f, 204f);
 	}
 
 	private void OnFocusOutInteract(FocusOutEvent evt) {
-		_interactButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+		_interactButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f);
 	}
 
 	private void OnFocusInAttack(FocusInEvent evt) {
-		_attackButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+		_attackButton.style.unityBackgroundImageTintColor = new Color(204f, 204f, 204f);
 	}
 
 	private void OnFocusOutAttack(FocusOutEvent evt) {
-		_attackButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+		_attackButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f);
 	}
 
 	private void OnFocusInDash(FocusInEvent evt) {
-		_dashButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+		_dashButton.style.unityBackgroundImageTintColor = new Color(204f, 204f, 204f);
 	}
 
 	private void OnFocusOutDash(FocusOutEvent evt) {
-		_dashButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+		_dashButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f);
 	}
 }

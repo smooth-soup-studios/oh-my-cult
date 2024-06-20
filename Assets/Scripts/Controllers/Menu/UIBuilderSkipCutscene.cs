@@ -25,10 +25,10 @@ public class UIBuilderSkipCutscene : MonoBehaviour {
 	}
 
 	private void OnFocusInSkip(FocusInEvent evt) {
-		_skipButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+		_skipButton.style.unityBackgroundImageTintColor = new Color(204f, 204f, 204f);
 	}
 
 	private void OnFocusOutSkip(FocusOutEvent evt) {
-		_skipButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+		_skipButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f);
 	}
 }

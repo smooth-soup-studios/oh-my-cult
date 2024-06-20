@@ -37,18 +37,18 @@ public class UIBuilderQuitWarning : MonoBehaviour
     }
 
     private void OnFocusInYes(FocusInEvent evt) {
-		_yesButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+		_yesButton.style.unityBackgroundImageTintColor = new Color(204f, 204f, 204f);
 	}
 
 	private void OnFocusOutYes(FocusOutEvent evt) {
-		_yesButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+		_yesButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f);
 	}
 
     private void OnFocusInNo(FocusInEvent evt) {
-		_yesButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+		_yesButton.style.unityBackgroundImageTintColor = new Color(204f, 204f, 204f);
 	}
 
 	private void OnFocusOutNo(FocusOutEvent evt) {
-		_yesButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+		_yesButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f);
 	}
 }

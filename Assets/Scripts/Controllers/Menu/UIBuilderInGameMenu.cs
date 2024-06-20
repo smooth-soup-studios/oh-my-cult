@@ -99,34 +99,34 @@ public class UIBuilderInGameMenu : MonoBehaviour {
 	}
 
 	private void OnFocusInContinueGame(FocusInEvent evt) {
-		_continueButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+		_continueButton.style.unityBackgroundImageTintColor = new Color(204f, 204f, 204f);
 	}
 
 	private void OnFocusOutContinueGame(FocusOutEvent evt) {
-		_continueButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+		_continueButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f);
 	}
 
 	private void OnFocusInLoadGame(FocusInEvent evt) {
-		_loadGameButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+		_loadGameButton.style.unityBackgroundImageTintColor = new Color(204f, 204f, 204f);
 	}
 
 	private void OnFocusOutLoadGame(FocusOutEvent evt) {
-		_loadGameButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+		_loadGameButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f);
 	}
 
 	private void OnFocusInOptions(FocusInEvent evt) {
-		_optionsButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+		_optionsButton.style.unityBackgroundImageTintColor = new Color(204f, 204f, 204f);
 	}
 
 	private void OnFocusOutOptions(FocusOutEvent evt) {
-		_optionsButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+		_optionsButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f);
 	}
 
 	private void OnFocusInQuit(FocusInEvent evt) {
-		_quit.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+		_quit.style.unityBackgroundImageTintColor = new Color(204f, 204f, 204f);
 	}
 
 	private void OnFocusOutQuit(FocusOutEvent evt) {
-		_quit.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+		_quit.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f);
 	}
 }

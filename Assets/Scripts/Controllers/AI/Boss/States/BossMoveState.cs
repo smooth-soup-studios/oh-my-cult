@@ -5,7 +5,6 @@ public class BossMoveState : BossBaseState {
 
 	public override void EnterState() {
 		Boss.BossAnimation.SetBool("IsWalking", true);
-		Boss.StartCoroutine(Boss.Flash());
 	}
 	public override void UpdateState() {
 		Boss.transform.position = Vector3.MoveTowards(Boss.transform.position, Boss.Player.position, 1 * Time.deltaTime * 2);

@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 60454133}
   - component: {fileID: 60454132}
   - component: {fileID: 60454134}
+  - component: {fileID: 60454135}
   m_Layer: 5
   m_Name: Options
   m_TagString: OptionsMenu
@@ -189,6 +190,19 @@ MonoBehaviour:
   _keyBindingUI: {fileID: 1407111515}
   _optionsUI: {fileID: 60454131}
   _baseVolume: 0
+--- !u!114 &60454135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60454131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d504ca0c2480bc24a9466324aa2ec494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PanelSettings: {fileID: 11400000, guid: dc71905af099c6f419e95a4de31fafd7, type: 2}
 --- !u!1 &173152224
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +476,7 @@ GameObject:
   - component: {fileID: 1742622672}
   - component: {fileID: 1742622671}
   - component: {fileID: 1742622673}
+  - component: {fileID: 1742622674}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: MainMenu
@@ -514,6 +529,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mainMenuUI: {fileID: 1742622670}
   _optionsUI: {fileID: 60454131}
+--- !u!114 &1742622674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742622670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d504ca0c2480bc24a9466324aa2ec494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PanelSettings: {fileID: 11400000, guid: dc71905af099c6f419e95a4de31fafd7, type: 2}
 --- !u!1 &1787546531
 GameObject:
   m_ObjectHideFlags: 0

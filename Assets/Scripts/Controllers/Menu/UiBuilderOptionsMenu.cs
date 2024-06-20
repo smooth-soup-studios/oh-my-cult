@@ -168,10 +168,10 @@ public class UiBuilderOptionsMenu : MonoBehaviour, ISaveable {
 	}
 
 	private void OnFocusInBinding(FocusInEvent evt) {
-		_backButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+		_keyBindingButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
 	}
 
 	private void OnFocusOutBinding(FocusOutEvent evt) {
-		_backButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+		_keyBindingButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
 	}
 }

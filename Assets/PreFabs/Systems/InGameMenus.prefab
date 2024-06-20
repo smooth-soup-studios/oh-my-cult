@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1069334494583158469}
   - component: {fileID: 327956198668055248}
   - component: {fileID: 6539523062834748395}
+  - component: {fileID: 3608821719284192538}
   m_Layer: 0
   m_Name: KeyBindings
   m_TagString: Untagged
@@ -106,6 +107,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f105782f54cb357488029c8b50ed0150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3608821719284192538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368387762294613076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d504ca0c2480bc24a9466324aa2ec494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PanelSettings: {fileID: 11400000, guid: dc71905af099c6f419e95a4de31fafd7, type: 2}
 --- !u!1 &1696964228672438043
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,6 +131,7 @@ GameObject:
   - component: {fileID: 5594979846756468614}
   - component: {fileID: 8607835034823370506}
   - component: {fileID: 6502838238840852473}
+  - component: {fileID: 6938798177088928808}
   m_Layer: 0
   m_Name: QuitWarning
   m_TagString: Untagged
@@ -167,6 +182,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43c0c962f2838fe479c68f843f4aeb0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6938798177088928808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696964228672438043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d504ca0c2480bc24a9466324aa2ec494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PanelSettings: {fileID: 11400000, guid: dc71905af099c6f419e95a4de31fafd7, type: 2}
 --- !u!1 &2423326945998836256
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,6 +242,7 @@ GameObject:
   - component: {fileID: 2639206037462922362}
   - component: {fileID: 3192133037563389855}
   - component: {fileID: 7347683371704215353}
+  - component: {fileID: 5596767387785614292}
   m_Layer: 0
   m_Name: OptionsMenu
   m_TagString: Untagged
@@ -269,6 +298,19 @@ MonoBehaviour:
   _keyBindingUI: {fileID: 368387762294613076}
   _optionsUI: {fileID: 6390754601938785391}
   _baseVolume: 0
+--- !u!114 &5596767387785614292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6390754601938785391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d504ca0c2480bc24a9466324aa2ec494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PanelSettings: {fileID: 11400000, guid: dc71905af099c6f419e95a4de31fafd7, type: 2}
 --- !u!1 &8496823754376616959
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,6 +322,7 @@ GameObject:
   - component: {fileID: 3563685369915214984}
   - component: {fileID: 6234558266808735610}
   - component: {fileID: 4609453937455051604}
+  - component: {fileID: 5329387419735425512}
   m_Layer: 0
   m_Name: DeathMenu
   m_TagString: Untagged
@@ -330,6 +373,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b095eacc121d641a7b1f22ee347e9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5329387419735425512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8496823754376616959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d504ca0c2480bc24a9466324aa2ec494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PanelSettings: {fileID: 11400000, guid: dc71905af099c6f419e95a4de31fafd7, type: 2}
 --- !u!1 &9212975771173583087
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,6 +397,7 @@ GameObject:
   - component: {fileID: 1007792702632533320}
   - component: {fileID: 4061666572382282846}
   - component: {fileID: 3769228675354683550}
+  - component: {fileID: 1805242099123698479}
   m_Layer: 0
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -391,3 +448,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8dba80ea30d44349a1419c340e92490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1805242099123698479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9212975771173583087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d504ca0c2480bc24a9466324aa2ec494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PanelSettings: {fileID: 11400000, guid: dc71905af099c6f419e95a4de31fafd7, type: 2}

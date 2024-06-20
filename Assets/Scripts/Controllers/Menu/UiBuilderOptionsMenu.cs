@@ -44,6 +44,12 @@ public class UiBuilderOptionsMenu : MonoBehaviour, ISaveable {
 		_quality.RegisterValueChangedCallback((evt) => {
 			OnQuality(evt.newValue);
 		});
+
+		_backButton.RegisterCallback<FocusInEvent>(OnFocusInBack);
+		_backButton.RegisterCallback<FocusOutEvent>(OnFocusOutBack);
+
+		_keyBindingButton.RegisterCallback<FocusInEvent>(OnFocusInBinding);
+		_keyBindingButton.RegisterCallback<FocusOutEvent>(OnFocusOutBinding);
 	}
 
 	void initializeSettings() {
@@ -151,5 +157,21 @@ public class UiBuilderOptionsMenu : MonoBehaviour, ISaveable {
 		_audioMixer.GetFloat("soundFXVolume", out value);
 		data.PlayerSettings.VolumeValues[$"{_logname}-FXVolume"] = value;
 		data.PlayerSettings.QualityIndex = QualitySettings.GetQualityLevel();
+	}
+
+	private void OnFocusInBack(FocusInEvent evt) {
+		_backButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+	}
+
+	private void OnFocusOutBack(FocusOutEvent evt) {
+		_backButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+	}
+
+	private void OnFocusInBinding(FocusInEvent evt) {
+		_backButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+	}
+
+	private void OnFocusOutBinding(FocusOutEvent evt) {
+		_backButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
 	}
 }

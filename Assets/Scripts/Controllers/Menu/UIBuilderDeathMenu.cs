@@ -26,6 +26,12 @@ public class UIBuilderDeathMenu : MonoBehaviour {
 		_death = _root.Q<VisualElement>("Container");
 
 		_player = GameObject.Find("Player");
+
+		_yesButton.RegisterCallback<FocusInEvent>(OnFocusInYes);
+		_yesButton.RegisterCallback<FocusOutEvent>(OnFocusOutYes);
+
+		_noButton.RegisterCallback<FocusInEvent>(OnFocusInNo);
+		_noButton.RegisterCallback<FocusOutEvent>(OnFocusOutNo);
 	}
 
 	void OnDeath(GameObject target) {
@@ -61,5 +67,21 @@ public class UIBuilderDeathMenu : MonoBehaviour {
 		yield return new WaitForSeconds(1f);
 		_death.visible = true;
 		Time.timeScale = 0;
+	}
+
+	private void OnFocusInYes(FocusInEvent evt) {
+		_yesButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+	}
+
+	private void OnFocusOutYes(FocusOutEvent evt) {
+		_yesButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+	}
+
+    private void OnFocusInNo(FocusInEvent evt) {
+		_yesButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+	}
+
+	private void OnFocusOutNo(FocusOutEvent evt) {
+		_yesButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
 	}
 }

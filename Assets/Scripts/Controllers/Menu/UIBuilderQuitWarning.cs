@@ -21,6 +21,12 @@ public class UIBuilderQuitWarning : MonoBehaviour
         _yesButton.clicked += OnYesButton;
         _noButton = _root.Q<Button>("NoButton");
         _noButton.clicked += OnNoButton;
+
+        _yesButton.RegisterCallback<FocusInEvent>(OnFocusInYes);
+		_yesButton.RegisterCallback<FocusOutEvent>(OnFocusOutYes);
+
+		_noButton.RegisterCallback<FocusInEvent>(OnFocusInNo);
+		_noButton.RegisterCallback<FocusOutEvent>(OnFocusOutNo);
     }
 
     void OnYesButton(){
@@ -29,4 +35,20 @@ public class UIBuilderQuitWarning : MonoBehaviour
     void OnNoButton(){
         _quitWarning.visible = false;
     }
+
+    private void OnFocusInYes(FocusInEvent evt) {
+		_yesButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+	}
+
+	private void OnFocusOutYes(FocusOutEvent evt) {
+		_yesButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+	}
+
+    private void OnFocusInNo(FocusInEvent evt) {
+		_yesButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+	}
+
+	private void OnFocusOutNo(FocusOutEvent evt) {
+		_yesButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+	}
 }

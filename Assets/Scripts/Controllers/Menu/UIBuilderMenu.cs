@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 using System;
 using System.ComponentModel.Design.Serialization;
 using Managers;
@@ -19,6 +20,7 @@ public class UIBuilderMenu : MonoBehaviour {
 
 	private string _lastSceneLoaded = "level_0";
 	VisualElement _root;
+	EventSystem _system;
 
 	private void OnEnable() {
 		_root = GetComponent<UIDocument>().rootVisualElement;
@@ -36,9 +38,28 @@ public class UIBuilderMenu : MonoBehaviour {
 		_quit.clicked += QuitGame;
 		DisableButtons();
 
+		_newGameButton.RegisterCallback<FocusInEvent>(OnFocusInNewGame);
+		_newGameButton.RegisterCallback<FocusOutEvent>(OnFocusOutNewGame);
+
+		_continueButton.RegisterCallback<FocusInEvent>(OnFocusInContinueGame);
+		_continueButton.RegisterCallback<FocusOutEvent>(OnFocusOutContinueGame);
+
+		_loadGameButton.RegisterCallback<FocusInEvent>(OnFocusInLoadGame);
+		_loadGameButton.RegisterCallback<FocusOutEvent>(OnFocusOutLoadGame);
+
+		_optionsButton.RegisterCallback<FocusInEvent>(OnFocusInOptions);
+		_optionsButton.RegisterCallback<FocusOutEvent>(OnFocusOutOptions);
+
+		_quit.RegisterCallback<FocusInEvent>(OnFocusInQuit);
+		_quit.RegisterCallback<FocusOutEvent>(OnFocusOutQuit);
+
 	}
 
-
+	void Start ()
+    {
+        _system = EventSystem.current;
+         
+    }
 
 
 	void OnNewGame() {
@@ -71,7 +92,9 @@ public class UIBuilderMenu : MonoBehaviour {
 	public void DisableButtons() {
 		if (!SaveManager.Instance.HasGameData()) {
 			_loadGameButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .5f);
+			_loadGameButton.focusable = false;
 			_continueButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .5f);
+			_continueButton.focusable = false;
 		}
 	}
 
@@ -89,5 +112,45 @@ public class UIBuilderMenu : MonoBehaviour {
 		SaveManager.Instance.ChangeSelectedProfileId("1");
 		_mainMenuUI.GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container").visible = false;
 		_optionsUI.GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container").visible = true;
+	}
+
+	private void OnFocusInNewGame(FocusInEvent evt) {
+		_newGameButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+	}
+
+	private void OnFocusOutNewGame(FocusOutEvent evt) {
+		_newGameButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+	}
+
+	private void OnFocusInContinueGame(FocusInEvent evt) {
+		_continueButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+	}
+
+	private void OnFocusOutContinueGame(FocusOutEvent evt) {
+		_continueButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+	}
+
+	private void OnFocusInLoadGame(FocusInEvent evt) {
+		_loadGameButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+	}
+
+	private void OnFocusOutLoadGame(FocusOutEvent evt) {
+		_loadGameButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+	}
+
+	private void OnFocusInOptions(FocusInEvent evt) {
+		_optionsButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+	}
+
+	private void OnFocusOutOptions(FocusOutEvent evt) {
+		_optionsButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
+	}
+
+	private void OnFocusInQuit(FocusInEvent evt) {
+		_quit.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .8f);
+	}
+
+	private void OnFocusOutQuit(FocusOutEvent evt) {
+		_quit.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, 1f);
 	}
 }

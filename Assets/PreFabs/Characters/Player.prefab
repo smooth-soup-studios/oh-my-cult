@@ -147,7 +147,7 @@ MonoBehaviour:
   FrozenOnPlayer: 0
   ZoomInOnAction: 0
   ZoomSpeed: 1
-  MinZoom: 5
+  MinZoom: 4
   MaxZoom: 5
 --- !u!1 &6908342227108556609
 GameObject:

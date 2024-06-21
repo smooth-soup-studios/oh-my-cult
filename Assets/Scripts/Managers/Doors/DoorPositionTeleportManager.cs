@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorPositionTeleportManager : MonoBehaviour {
 	private static string _logName = "DoorPositionTeleportManager";
@@ -41,7 +42,11 @@ public class DoorPositionTeleportManager : MonoBehaviour {
 		Cinemachine.CinemachineVirtualCamera vcam = FindObjectOfType<Cinemachine.CinemachineVirtualCamera>();
 		Camera mainCam = FindObjectOfType<Camera>();
 
-		Transform target = foundCamPoint ? foundCamPoint.TrackingPoint : player.transform;
+		// Hacky way to set the zoom to active for expo :)
+		bool isOverworld = SceneManager.GetActiveScene().name.Contains("Overworld");
+		player.GetComponentInChildren<DynamicZoomController>().ZoomInOnAction = isOverworld;
+
+		Transform target = foundCamPoint ? foundCamPoint.TrackingPoint : isOverworld ? player.transform.Find("CombatCenterFollow") : player.transform;
 
 		if (vcam) {
 			vcam.Follow = target;

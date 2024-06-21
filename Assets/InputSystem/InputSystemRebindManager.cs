@@ -93,6 +93,10 @@ public class InputSystemRebindManager : MonoBehaviour {
 		}
 		else {
 			button = _buttoning.GetKeyboardButton(buttonText);
+
+			buttonText = buttonText.Replace("\u0001", "");
+			if (buttonText == " ") { buttonText = buttonText.Replace(" ", "Space"); }
+
 			container.Q<Button>().text = buttonText;
 		}
 		NewButton(container, button);

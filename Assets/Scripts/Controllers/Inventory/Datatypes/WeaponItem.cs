@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class WeaponItem : InteractableItem {
@@ -11,20 +13,18 @@ public class WeaponItem : InteractableItem {
 	}
 
 	public override void PrimaryAction(GameObject source) {
-		try {
-			source.GetComponentInChildren<WeaponHitbox>().GetUniqueObjectsInCollider().ForEach(obj => {
-				if (IsTargetUnObstructed(source, obj)) {
-					EventBus.Instance.TriggerEvent(EventType.HIT, (obj, source));
-					if (obj.TryGetComponent<HealthController>(out HealthController enemy)) {
-						DoPrimaryDamage(enemy);
-					}
-					if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
-						rb.AddForce(rb.mass * WeaponStats.WeaponData.Knockback * (obj.transform.position - source.transform.position).normalized, ForceMode2D.Impulse);
-					}
+		List<GameObject> targets = GetTargets(source);
+		for (int i = 0; i < targets.Count; i++) {
+			GameObject obj = targets[i];
+			if (IsTargetUnObstructed(source, obj)) {
+				EventBus.Instance.TriggerEvent(EventType.HIT, (obj, source));
+				if (obj.TryGetComponent<HealthController>(out HealthController enemy)) {
+					DoPrimaryDamage(enemy);
 				}
-			});
-		}
-		catch (System.Exception) {
+				if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
+					DoKnockBack(rb, source);
+				}
+			}
 		}
 	}
 
@@ -37,23 +37,20 @@ public class WeaponItem : InteractableItem {
 	}
 
 	public override void SecondaryAction(GameObject source) {
-		try {
-			source.GetComponentInChildren<WeaponHitbox>().GetUniqueObjectsInCollider().ForEach(obj => {
-				if (IsTargetUnObstructed(source, obj)) {
-					EventBus.Instance.TriggerEvent(EventType.HIT, (obj, source));
-					if (obj.TryGetComponent<HealthController>(out HealthController enemy)) {
-						DoSecondaryDamage(enemy);
-					}
-					if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
-						rb.AddForce(rb.mass * WeaponStats.WeaponData.Knockback * (obj.transform.position - source.transform.position).normalized, ForceMode2D.Impulse);
-					}
+		List<GameObject> targets = GetTargets(source);
+		for (int i = 0; i < targets.Count; i++) {
+			GameObject obj = targets[i];
+			if (IsTargetUnObstructed(source, obj)) {
+				EventBus.Instance.TriggerEvent(EventType.HIT, (obj, source));
+				if (obj.TryGetComponent<HealthController>(out HealthController enemy)) {
+					DoSecondaryDamage(enemy);
 				}
-			});
-		}
-		catch (System.Exception) {
+				if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
+					DoKnockBack(rb, source);
+				}
+			}
 		}
 	}
-
 
 	protected virtual void DoSecondaryDamage(HealthController enemy) {
 		if (ScreenShakeManager.Instance) {
@@ -61,6 +58,24 @@ public class WeaponItem : InteractableItem {
 			DamageShakeLayer.SetShakeThenStop(2, 2);
 		}
 		enemy.TakeDamage(WeaponStats.WeaponData.Damage);
+	}
+
+	protected virtual void DoKnockBack(Rigidbody2D rb, GameObject source) {
+		if (rb.TryGetComponent<KnockbackModifier>(out KnockbackModifier kbm) && !kbm.AllowKnockback) {
+			return;
+		}
+		rb.AddForce(rb.mass * WeaponStats.WeaponData.Knockback * (rb.gameObject.transform.position - source.transform.position).normalized, ForceMode2D.Impulse);
+	}
+
+
+	protected virtual List<GameObject> GetTargets(GameObject source) {
+		List<GameObject> targets = new();
+		try {
+			targets = source.GetComponentInChildren<WeaponHitbox>().GetUniqueObjectsInCollider();
+		}
+		catch (System.Exception) { }
+		return targets;
+
 	}
 
 	protected bool IsTargetUnObstructed(GameObject source, GameObject target) {

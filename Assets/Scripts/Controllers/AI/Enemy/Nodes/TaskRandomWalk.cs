@@ -1,5 +1,6 @@
 using BehaviorTree;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class TaskRandomWalk : Node {
 	// Config
@@ -15,7 +16,7 @@ public class TaskRandomWalk : Node {
 		ActorType _enemyState = tree.ActorType;
 		tree.Agent.speed = tree.Stats.Speed;
 		if (_randomTarget == Vector3.zero) {
-			_randomTarget = GetRandomPosition(tree.Agent.transform, _enemyState, tree);
+			_randomTarget = GetRandomPosition(tree.Agent);
 		}
 
 		tree.Agent.destination = _randomTarget;
@@ -46,7 +47,17 @@ public class TaskRandomWalk : Node {
 		_travelTime = 0f;
 	}
 
-	private Vector3 GetRandomPosition(Transform characterTransform, ActorType enemyState, BaseBehaviourTree tree) {
+	private Vector3 GetRandomPosition(NavMeshAgent agent) {
+		Vector3 randomPos = RandomPoint(agent.transform);
+		if (IsPathPossible(randomPos, agent)) {
+			return randomPos;
+		}
+		else {
+			return GetRandomPosition(agent);
+		}
+	}
+
+	private Vector3 RandomPoint(Transform characterTransform) {
 		// Generate a random angle and distance
 		float randomAngle = Random.Range(0f, Mathf.PI * 2);
 		float randomDistance = Random.Range(_minDistance, _maxDistance);
@@ -59,5 +70,11 @@ public class TaskRandomWalk : Node {
 		Vector2 randomPosition = new(characterTransform.position.x + offsetX,
 									 characterTransform.position.y + offsetY);
 		return randomPosition;
+	}
+
+	private bool IsPathPossible(Vector3 point, NavMeshAgent agent) {
+		NavMeshPath navMeshPath = new();
+		agent.CalculatePath(point, navMeshPath);
+		return navMeshPath.status == NavMeshPathStatus.PathComplete;
 	}
 }

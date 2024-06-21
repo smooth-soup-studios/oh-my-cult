@@ -19,7 +19,8 @@ public abstract class BaseItemPickupInteractable : BaseInteractable {
 
 
 	public override void Interact(GameObject interactor) {
-		if (interactor.TryGetComponent(out Inventory inventory) && !inventory.IsInventoryFull()) {
+		// Check if the target has an inventory and if so, check if the inventory is empty or the item stackable
+		if (interactor.TryGetComponent(out Inventory inventory) && (!inventory.IsInventoryFull() | inventory.IsItemInInventoryAndStackable(PickupStack))) {
 			DoPickupInteraction(inventory);
 			base.Interact(interactor);
 		}

@@ -196,6 +196,7 @@ GameObject:
   - component: {fileID: 8381264616294448403}
   - component: {fileID: 8858220036240824714}
   - component: {fileID: 2259212530515624718}
+  - component: {fileID: 2839363708085311998}
   m_Layer: 7
   m_Name: BearEnemy
   m_TagString: Enemy
@@ -306,7 +307,7 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 3
   m_BaseOffset: 1.16
-  m_WalkableMask: 4294967295
+  m_WalkableMask: 5
   m_ObstacleAvoidanceType: 4
 --- !u!95 &6520107498335623721
 Animator:
@@ -466,3 +467,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaaabe2768da9b140a5e4e7b6937b1bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2839363708085311998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7014223499463873009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32888b8cadb7975458d6ab0493428768, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShatterPiecePrefab: {fileID: 0}
+  ShatterForce: 2
+  ShatterLifetime: 3
+  ShatterFragments: {x: 8, y: 8}
+  FragmentOffsetRandom: 2

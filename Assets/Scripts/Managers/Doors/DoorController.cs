@@ -51,9 +51,11 @@ public class DoorController : MonoBehaviour {
 
 			IEnumerator _loadDoor() {
 				if (TransportTo == TransportDestination.Special) {
-					BlackFadeManager.Instance.Blacken(1.5f);
-					yield return new WaitForSeconds(1.5f);
-					BlackFadeManager.Instance.UnblackenOnLoad = true;
+					if (BlackFadeManager.Instance) {
+						BlackFadeManager.Instance.Blacken(1.5f);
+						yield return new WaitForSeconds(1.5f);
+						BlackFadeManager.Instance.UnblackenOnLoad = true;
+					}
 				}
 				else if (SceneWipeManager.Instance) {
 					SceneWipeManager.Instance.WipeIn();

@@ -439,7 +439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EchoGhostPrefab: {fileID: 5036995826059190279, guid: 16f811ba2291dad49a846047cacecc97, type: 3}
-  EchoDelay: 0.05
+  EchoDelay: 0.025
   EchoLifetime: 0.5
 --- !u!114 &8440669220791414699
 MonoBehaviour:
@@ -659,8 +659,8 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.5
-  m_Color: {r: 0.5, g: 0.33223683, b: 0, a: 1}
+  m_FalloffIntensity: 0.25
+  m_Color: {r: 0.509434, g: 0.3492346, b: 0, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -682,8 +682,8 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 50
-  m_PointLightOuterRadius: 150
+  m_PointLightInnerRadius: 1
+  m_PointLightOuterRadius: 7.5
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1

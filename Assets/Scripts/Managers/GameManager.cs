@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -53,16 +54,25 @@ namespace Managers {
 		}
 
 		public static void QuitGame() {
-			#if UNITY_WEBGL && !UNITY_EDITOR
+#if UNITY_WEBGL && !UNITY_EDITOR
 				Logger.Log(_logname,"WebGL build detected, redirecting to homepage");
 				Application.OpenURL("/");
-			#elif UNITY_EDITOR
-				Logger.Log(_logname, "Quitting Playmode..");
-				UnityEditor.EditorApplication.isPlaying = false;
-			#else
+#elif UNITY_EDITOR
+			Logger.Log(_logname, "Quitting Playmode..");
+			UnityEditor.EditorApplication.isPlaying = false;
+#else
 				Logger.Log(_logname, "Quitting Game..");
 				Application.Quit();
-			#endif
+#endif
+		}
+
+		public IEnumerator DoTheBossCutsceneThingHereBecauseTheBossWouldGetDisabled() {
+			yield return new WaitForSeconds(1f);
+			BlackFadeManager.Instance.Blacken(1f);
+			BlackFadeManager.Instance.UnblackenOnLoad = true;
+			yield return new WaitForSeconds(1f);
+
+			SceneManager.LoadScene(SceneDefs.OutroCutscene);
 		}
 	}
 }

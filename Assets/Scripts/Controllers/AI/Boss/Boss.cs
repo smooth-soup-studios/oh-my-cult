@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Managers;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
@@ -128,11 +129,9 @@ public class Boss : MonoBehaviour, ISaveable {
 	private void OnDeath(GameObject objThatDied) {
 		if (objThatDied == gameObject) {
 			_isAlive = false;
-			// gameObject.SetActive(false);
 			SwitchState("Death");
 		}
 	}
-
 
 	public void LoadData(GameData data) {
 		if (data.SceneData.ArbitraryTriggers.ContainsKey("BossDead")) {

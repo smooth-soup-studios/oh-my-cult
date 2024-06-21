@@ -19,6 +19,11 @@ public class CutsceneManager : MonoBehaviour {
 		VibrationManager.VibrationEnabled = false;
 		yield return new WaitForSeconds(duration);
 		VibrationManager.VibrationEnabled = true;
+
+		BlackFadeManager.Instance.Blacken(1f);
+		yield return new WaitForSeconds(1f);
+		BlackFadeManager.Instance.UnblackenOnLoad = true;
+
 		SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 

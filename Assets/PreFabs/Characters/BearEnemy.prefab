@@ -479,7 +479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32888b8cadb7975458d6ab0493428768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShatterPiecePrefab: {fileID: 0}
+  ShatterPiecePrefab: {fileID: 2709359368759553787, guid: 37b67c4f027b7f94d97ebcf16f44f863, type: 3}
   ShatterForce: 2
   ShatterLifetime: 3
   ShatterFragments: {x: 8, y: 8}

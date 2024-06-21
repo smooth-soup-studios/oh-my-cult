@@ -37,6 +37,11 @@ public class BlackFadeManager : MonoBehaviour {
 	}
 
 	private void OnLoad() {
+		GameObject _skip = GameObject.Find("SkipIntro");
+		if (_skip != null) {
+			_skip.GetComponent<UIDocument>().sortingOrder++;
+		}
+
 		if (UnblackenOnLoad) {
 			UnblackenOnLoad = false;
 			Unblacken(1);

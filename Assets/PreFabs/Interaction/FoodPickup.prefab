@@ -53,6 +53,7 @@ MonoBehaviour:
   PickupStack:
     Item: {fileID: 11400000, guid: e7eb8cf6a91e4914aad10412b2ac1c41, type: 2}
     Amount: 1
+  RespawnItem: 0
 --- !u!212 &-3746807699098805615
 SpriteRenderer:
   m_ObjectHideFlags: 0

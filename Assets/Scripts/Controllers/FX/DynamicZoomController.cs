@@ -34,7 +34,8 @@ public class DynamicZoomController : MonoBehaviour {
 			return;
 		}
 
-		float targetZoom = ZoomInOnAction ? MaxZoom : MinZoom;
+		// float targetZoom = ZoomInOnAction ? MaxZoom : MinZoom;
+		float targetZoom = MaxZoom;
 
 		if (FrozenOnPlayer) {
 			CombatCenterFollow.transform.localPosition = Vector2.zero;
@@ -44,7 +45,7 @@ public class DynamicZoomController : MonoBehaviour {
 			if (ZoomInOnAction)
 				targetZoom = Mathf.Clamp(Mathf.Lerp(MinZoom, MaxZoom, MaxDist().magnitude / _collider.radius), MinZoom, MaxZoom);
 			else {
-				targetZoom = Mathf.Clamp(Mathf.Lerp(MaxZoom, MinZoom, MaxDist().magnitude / _collider.radius), MinZoom, MaxZoom);
+				// targetZoom = Mathf.Clamp(Mathf.Lerp(MaxZoom, MinZoom, MaxDist().magnitude / _collider.radius), MinZoom, MaxZoom);
 			}
 		}
 

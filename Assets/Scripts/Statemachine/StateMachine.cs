@@ -25,6 +25,9 @@ public class StateMachine : MonoBehaviour, ISaveable {
 	public WeaponHitbox WeaponHitbox;
 	public GameObject HitContainer;
 
+	private GameObject _torch;
+	public bool HasTorch = false;
+
 	[HideInInspector] public EchoDashController EchoDashController { get; private set; }
 	[HideInInspector] public PlayerInteractionChecker PlayerInteractor { get; private set; }
 	[HideInInspector] public Inventory PlayerInventory { get; private set; }
@@ -40,6 +43,7 @@ public class StateMachine : MonoBehaviour, ISaveable {
 		PlayerAnimator = new(GetComponent<Animator>());
 		EchoDashController = GetComponent<EchoDashController>();
 		PlayerInteractor = GetComponent<PlayerInteractionChecker>();
+		_torch = transform.Find("Jed Light 2D").gameObject;
 
 		EventBus.Instance.Subscribe<Vector2>(EventType.MOVEMENT, SwitchSpriteOnMove);
 		EventBus.Instance.Subscribe<GameObject>(EventType.DEATH, HandleDeath);
@@ -62,6 +66,8 @@ public class StateMachine : MonoBehaviour, ISaveable {
 
 		UIManager.Instance.HasPlaytestKey = HasDoorKey;
 		UIManager.Instance.Health = GetComponent<HealthController>().GetCurrentHealth();
+
+		_torch.SetActive(HasTorch);
 	}
 
 	public void SwitchState(string name) {

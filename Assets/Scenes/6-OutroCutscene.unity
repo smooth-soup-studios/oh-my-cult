@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 1258296197}
   - component: {fileID: 1258296196}
   - component: {fileID: 1258296195}
+  - component: {fileID: 1258296198}
   m_Layer: 0
   m_Name: SkipIntro
   m_TagString: Untagged
@@ -361,6 +362,19 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88326275d222cd441b2d5bc41a297b02, type: 3}
+--- !u!114 &1258296198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258296194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d504ca0c2480bc24a9466324aa2ec494, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  PanelSettings: {fileID: 11400000, guid: dc71905af099c6f419e95a4de31fafd7, type: 2}
 --- !u!1 &1546058686
 GameObject:
   m_ObjectHideFlags: 0

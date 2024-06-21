@@ -42,15 +42,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Secondary",
-                    "type": "Button",
-                    "id": "255f03c4-1483-4ccf-995a-48f1d877a5c1",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "HotbarSelect",
                     "type": "Button",
                     "id": "219b41d6-f2f1-4897-a89c-ca143c106c14",
@@ -323,28 +314,6 @@
                 },
                 {
                     "name": "",
-                    "id": "b25fe9fc-446c-4eb4-9332-f8deff53dc77",
-                    "path": "<Keyboard>/ctrl",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Secondary",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "eb3a6b98-e3a4-405f-8994-d8b6fd47881e",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Secondary",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "2f8437b2-42f2-40a3-a15f-5e7dee6a136f",
                     "path": "<Keyboard>/1",
                     "interactions": "",
@@ -505,6 +474,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Tabbing",
+                    "type": "Button",
+                    "id": "fd7513f9-50a1-4672-a7ae-e2f75c08bb68",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -648,6 +626,28 @@
                     "processors": "",
                     "groups": "Controller",
                     "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "75754006-7b5f-412f-adb5-aac70da127cf",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Tabbing",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a6db17a4-b2de-495c-bebc-2e9e6c3f93a4",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Tabbing",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

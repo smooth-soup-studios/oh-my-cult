@@ -6,14 +6,18 @@ Button:active {
     -unity-background-image-tint-color: rgb(170, 170, 170);
 }
 
-Button{
-    -unity-font: url("../../../Fonts/Nunito-Regular.ttf");
-    -unity-font-definition: url("../../..//Fonts/Nunito-Regular SDF.asset"); 
+Button:focus {
+    -unity-background-image-tint-color: rgb(204, 204, 204);
 }
 
-field__label{
-    -unity-font: url("../../../Fonts/Nunito-Regular.ttf");
-    -unity-font-definition: url("../../..//Fonts/Nunito-Regular SDF.asset"); 
+Button {
+    -unity-font: url("project://database/Assets/Fonts/Nunito-Regular.ttf?fileID=12800000&guid=2e4a1ab2a69a2e840a2a0f0ead772453&type=3#Nunito-Regular");
+    -unity-font-definition: url("project://database/Assets/Fonts/Nunito-Regular%20SDF.asset?fileID=11400000&guid=567f51ed8cb86e248aab188637d932be&type=2#Nunito-Regular SDF");
+}
+
+field__label {
+    -unity-font: url("project://database/Assets/Fonts/Nunito-Regular.ttf?fileID=12800000&guid=2e4a1ab2a69a2e840a2a0f0ead772453&type=3#Nunito-Regular");
+    -unity-font-definition: url("project://database/Assets/Fonts/Nunito-Regular%20SDF.asset?fileID=11400000&guid=567f51ed8cb86e248aab188637d932be&type=2#Nunito-Regular SDF");
 }
 
 .unity-base-field__input {

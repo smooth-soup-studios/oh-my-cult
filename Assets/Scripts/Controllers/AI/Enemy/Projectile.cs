@@ -9,6 +9,7 @@ public class Projectile : MonoBehaviour {
 	private Vector2 _targetPosition;
 	private GameObject _target;
 	private Vector2 _direction;
+	public GameObject Origin;
 
 	void Start() {
 		_target = GameObject.FindWithTag("Player");
@@ -33,8 +34,7 @@ public class Projectile : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log(other.gameObject.name);
-		if (!other.CompareTag("Enemy") && other.gameObject.layer != LayerMask.NameToLayer("Ignore Raycast")) {
+		if (other.gameObject != Origin && other.gameObject.layer != LayerMask.NameToLayer("Ignore Raycast")) {
 			EnemyWeapon.PrimaryAction(gameObject);
 			Destroy(gameObject, 0.3f);
 		}

@@ -166,6 +166,14 @@ public class Inventory : MonoBehaviour, ISaveable {
 		return _maxInventorySize;
 	}
 
+	public bool IsItemInInventoryAndStackable(ItemStack stack) {
+		return IsItemInAnyStack(stack.Item) && stack.Item.InvData.MaxStackSize > 1;
+	}
+
+	public bool IsItemInInventoryAndStackable(InventoryItem item) {
+		return IsItemInAnyStack(item) && item.InvData.MaxStackSize > 1;
+	}
+
 	public bool IsInventoryFull() {
 		return !_currentInventory.Any(e => e.Amount == 0);
 	}

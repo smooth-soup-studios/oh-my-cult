@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 5148443580798022672}
   - component: {fileID: 4742239558171051814}
   - component: {fileID: 7463597057282135637}
+  - component: {fileID: -341535255809674197}
+  - component: {fileID: 8465568664483950820}
   m_Layer: 7
   m_Name: Boss
   m_TagString: Enemy
@@ -102,8 +104,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef03c7747a5e200429fbc785a8aa2249, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Stats: {fileID: 11400000, guid: 31ba062b28779dc41b17562ed19e959a, type: 2}
   BossAnimation: {fileID: 4742239558171051814}
   BossAttacks: {fileID: 5148443580798022672}
@@ -200,8 +202,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76f0d07869b7ad747b46fdf13457c82e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   <ObjectId>k__BackingField: Boss-50140,49
   _isInvulnerable: 0
   _maxHealth: 100
@@ -215,8 +217,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1924c666996d55d4b8952fb747f82425, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Stats: {fileID: 11400000, guid: 31ba062b28779dc41b17562ed19e959a, type: 2}
   EnemyLayer:
     serializedVersion: 2
@@ -238,7 +240,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -278,6 +280,35 @@ CapsuleCollider2D:
   m_Offset: {x: 0.029260159, y: -0.46816492}
   m_Size: {x: 3.7125425, y: 3.7125425}
   m_Direction: 0
+--- !u!114 &-341535255809674197
+MonoBehaviour:
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f76b82dbb62c4f7cba0ca240bdc3fc75, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  AllowKnockback: 0
+--- !u!195 &8465568664483950820
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419892085652963985}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 2.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 5
+  m_BaseOffset: 2.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &659189620768421115
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,8 +441,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5fdc4d590b6aca48bc9359529be597d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Direction: 0
   AttackType: 0
 --- !u!114 &6320108257795583120
@@ -424,8 +455,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26054e80b6f32d648a6b570e3ad67cfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   _weaponData: {fileID: 11400000, guid: 6e8620d507bf4a24d8a1b6b9991981be, type: 2}
   Direction: 0
   AttackType: 0
@@ -561,8 +592,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5fdc4d590b6aca48bc9359529be597d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Direction: 1
   AttackType: 0
 --- !u!114 &82860385706179587
@@ -575,8 +606,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26054e80b6f32d648a6b570e3ad67cfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   _weaponData: {fileID: 11400000, guid: 6e8620d507bf4a24d8a1b6b9991981be, type: 2}
   Direction: 1
   AttackType: 0
@@ -677,8 +708,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5fdc4d590b6aca48bc9359529be597d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Direction: 2
   AttackType: 1
 --- !u!60 &5633927640880218566
@@ -740,8 +771,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26054e80b6f32d648a6b570e3ad67cfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   _weaponData: {fileID: 11400000, guid: 6e8620d507bf4a24d8a1b6b9991981be, type: 2}
   Direction: 2
   AttackType: 1
@@ -877,8 +908,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26054e80b6f32d648a6b570e3ad67cfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   _weaponData: {fileID: 11400000, guid: 6e8620d507bf4a24d8a1b6b9991981be, type: 2}
   Direction: 3
   AttackType: 0
@@ -892,8 +923,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5fdc4d590b6aca48bc9359529be597d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Direction: 3
   AttackType: 0
 --- !u!1 &2508394438211949751
@@ -993,8 +1024,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5fdc4d590b6aca48bc9359529be597d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Direction: 3
   AttackType: 1
 --- !u!60 &1951800374657589337
@@ -1056,8 +1087,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26054e80b6f32d648a6b570e3ad67cfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   _weaponData: {fileID: 11400000, guid: 6e8620d507bf4a24d8a1b6b9991981be, type: 2}
   Direction: 3
   AttackType: 1
@@ -1158,8 +1189,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5fdc4d590b6aca48bc9359529be597d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Direction: 1
   AttackType: 1
 --- !u!60 &3040064506745112883
@@ -1221,8 +1252,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26054e80b6f32d648a6b570e3ad67cfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   _weaponData: {fileID: 11400000, guid: 6e8620d507bf4a24d8a1b6b9991981be, type: 2}
   Direction: 1
   AttackType: 1
@@ -1358,8 +1389,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5fdc4d590b6aca48bc9359529be597d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Direction: 1
   AttackType: 0
 --- !u!114 &144692775404384528
@@ -1372,8 +1403,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26054e80b6f32d648a6b570e3ad67cfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   _weaponData: {fileID: 11400000, guid: 6e8620d507bf4a24d8a1b6b9991981be, type: 2}
   Direction: 1
   AttackType: 0
@@ -1474,8 +1505,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5fdc4d590b6aca48bc9359529be597d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Direction: 0
   AttackType: 1
 --- !u!60 &3607534752835465280
@@ -1537,8 +1568,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26054e80b6f32d648a6b570e3ad67cfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   _weaponData: {fileID: 11400000, guid: 6e8620d507bf4a24d8a1b6b9991981be, type: 2}
   Direction: 0
   AttackType: 1
@@ -1674,8 +1705,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26054e80b6f32d648a6b570e3ad67cfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   _weaponData: {fileID: 11400000, guid: 6e8620d507bf4a24d8a1b6b9991981be, type: 2}
   Direction: 2
   AttackType: 0
@@ -1689,8 +1720,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5fdc4d590b6aca48bc9359529be597d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Direction: 2
   AttackType: 0
 --- !u!1 &8225840985117130543
@@ -1825,8 +1856,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5fdc4d590b6aca48bc9359529be597d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Direction: 0
   AttackType: 0
 --- !u!114 &6205842537079730351
@@ -1839,8 +1870,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26054e80b6f32d648a6b570e3ad67cfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   _weaponData: {fileID: 11400000, guid: 6e8620d507bf4a24d8a1b6b9991981be, type: 2}
   Direction: 0
   AttackType: 0

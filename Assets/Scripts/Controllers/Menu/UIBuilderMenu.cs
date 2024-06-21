@@ -32,23 +32,22 @@ public class UIBuilderMenu : MonoBehaviour {
 		_quit = _root.Q<Button>("QuitButton");
 
 		_newGameButton.clicked += OnNewGame;
-		//_continueButton.clicked += OnContinue;
+		_continueButton.clicked += OnContinue;
 		//_loadGameButton.clicked += LoadData;
 		_optionsButton.clicked += OnOptions;
 		_quit.clicked += QuitGame;
-		DisableButtons();
 
 	}
 
 	void Start ()
     {
         _system = EventSystem.current;
-         
+
     }
 
 
 	void OnNewGame() {
-		DisableButtons();
+
 		Logger.Log("MenuController", "Starting new game");
 
 		SaveManager.Instance.ChangeSelectedProfileId("1");
@@ -60,27 +59,13 @@ public class UIBuilderMenu : MonoBehaviour {
 	}
 
 	public void OnContinue() {
-		// DisableButtons();
-		// Logger.Log("MenuController", "Loading Savefile");
-
-		// SaveManager.Instance.ChangeSelectedProfileId("1");
-
-		// // Works w/ Savemanager OnSceneLoaded() to load the game.
-		// SaveManager.Instance.SaveGame();
-		// SceneManager.LoadSceneAsync(_lastSceneLoaded);
+		SaveManager.Instance.NewGame();
+		SaveManager.Instance.SaveGame();
+		SceneManager.LoadSceneAsync(SceneDefs.Shortcut);
 	}
 
 	public void QuitGame() {
 		GameManager.QuitGame();
-	}
-
-	public void DisableButtons() {
-		if (!SaveManager.Instance.HasGameData()) {
-			_loadGameButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .5f);
-			_loadGameButton.focusable = false;
-			_continueButton.style.unityBackgroundImageTintColor = new Color(255f, 255f, 255f, .5f);
-			_continueButton.focusable = false;
-		}
 	}
 
 	public void LoadData(GameData data) {

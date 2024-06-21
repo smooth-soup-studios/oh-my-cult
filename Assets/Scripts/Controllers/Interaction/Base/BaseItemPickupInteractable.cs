@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class BaseItemPickupInteractable : BaseInteractable {
 	[Header("Item settings")]
 	public ItemStack PickupStack;
+	public bool RespawnItem = false;
 
 	protected SpriteRenderer RendererOfSprites;
 	protected TooltipController TooltipController;
@@ -18,7 +19,8 @@ public abstract class BaseItemPickupInteractable : BaseInteractable {
 
 
 	public override void Interact(GameObject interactor) {
-		if (interactor.TryGetComponent(out Inventory inventory) && !inventory.IsInventoryFull()) {
+		// Check if the target has an inventory and if so, check if the inventory is empty or the item stackable
+		if (interactor.TryGetComponent(out Inventory inventory) && (!inventory.IsInventoryFull() | inventory.IsItemInInventoryAndStackable(PickupStack))) {
 			DoPickupInteraction(inventory);
 			base.Interact(interactor);
 		}
@@ -27,7 +29,9 @@ public abstract class BaseItemPickupInteractable : BaseInteractable {
 	// Split this into a different method for easier overriding of Interact behaviour
 	protected virtual void DoPickupInteraction(Inventory inventory) {
 		ItemStack switchedItem = inventory.AddItem(PickupStack);
-		PickupStack = switchedItem;
+		if (!RespawnItem) {
+			PickupStack = switchedItem;
+		}
 		UpdateSprite();
 		TooltipController.Select();
 		TooltipController.HideTooltip();

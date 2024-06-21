@@ -138,12 +138,14 @@ public class StateMachine : MonoBehaviour, ISaveable {
 			transform.position = savedPos;
 		}
 		HasDoorKey = data.PlayerData.HasDoorKey;
+		HasTorch = data.PlayerData.HasTorch;
 		LatestDoor = data.PlayerData.LatestDoor;
 	}
 
 	public void SaveData(GameData data) {
 		data.PlayerData.LatestDoor = LatestDoor;
 		data.PlayerData.HasDoorKey = HasDoorKey;
+		data.PlayerData.HasTorch = HasTorch;
 		data.PlayerData.PlayerPosition = transform.position;
 		data.PlayerData.SceneName = SceneManager.GetActiveScene().name;
 	}

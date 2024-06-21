@@ -17,6 +17,7 @@ public class PlayerData {
 	public bool BossDefeated = false;
 	public int LatestDoor = -1;
 	public bool HasDoorKey = false;
+	public bool HasTorch = false;
 	public Dict<string, InvData> InvItemVals = new();
 	public SerializableList<ItemDataStack> Inventory = new();
 	public int SelectedInvSlot = 0;

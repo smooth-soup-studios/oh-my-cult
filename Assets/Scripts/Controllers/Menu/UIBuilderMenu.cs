@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 using System;
 using System.ComponentModel.Design.Serialization;
 using Managers;
@@ -19,6 +20,7 @@ public class UIBuilderMenu : MonoBehaviour {
 
 	private string _lastSceneLoaded = "level_0";
 	VisualElement _root;
+	EventSystem _system;
 
 	private void OnEnable() {
 		_root = GetComponent<UIDocument>().rootVisualElement;
@@ -37,7 +39,11 @@ public class UIBuilderMenu : MonoBehaviour {
 
 	}
 
+	void Start ()
+    {
+        _system = EventSystem.current;
 
+    }
 
 
 	void OnNewGame() {
@@ -53,15 +59,6 @@ public class UIBuilderMenu : MonoBehaviour {
 	}
 
 	public void OnContinue() {
-
-		Logger.Log("MenuController", "Loading Savefile");
-
-		// SaveManager.Instance.ChangeSelectedProfileId("1");
-
-		// // Works w/ Savemanager OnSceneLoaded() to load the game.
-		// SaveManager.Instance.SaveGame();
-		// SceneManager.LoadSceneAsync(_lastSceneLoaded);
-
 		SaveManager.Instance.NewGame();
 		SaveManager.Instance.SaveGame();
 		SceneManager.LoadSceneAsync(SceneDefs.Shortcut);

@@ -54,6 +54,7 @@ public class InputSystemRebindManager : MonoBehaviour {
 			.WithBindingGroup(currentControlScheme)
 			// To avoid accidental input from mouse motion
 			.WithControlsExcluding("Mouse")
+			.WithControlsExcluding("<Gamepad>/A")
 			.WithCancelingThrough("<Keyboard>/escape")
 			.OnMatchWaitForAnother(0.1f)
 			.OnComplete(operation => {

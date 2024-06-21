@@ -16,7 +16,6 @@ public class UIBuilderInGameMenu : MonoBehaviour {
 	private string _lastSceneLoaded = "level_0";
 	VisualElement _root;
 	VisualElement _hud;
-	VisualElement _keyBindings;
 	VisualElement _optionsUI;
 	VisualElement _pauseMenu;
 	VisualElement _quitWarning;
@@ -25,7 +24,6 @@ public class UIBuilderInGameMenu : MonoBehaviour {
 		EventBus.Instance.Subscribe(EventType.PAUSE, OnPause);
 		_root = GetComponent<UIDocument>().rootVisualElement;
 		_hud = GameObject.Find("HUD").GetComponent<UIDocument>().rootVisualElement;
-		_keyBindings = GameObject.Find("KeyBindings").GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container");
 		_optionsUI = GameObject.Find("OptionsMenu").GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container");
 		_pauseMenu = GameObject.Find("PauseMenu").GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container");
 		_quitWarning = GameObject.Find("QuitWarning").GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("Container");

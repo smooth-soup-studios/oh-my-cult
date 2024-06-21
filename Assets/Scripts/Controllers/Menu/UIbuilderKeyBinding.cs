@@ -52,6 +52,8 @@ public class UIbuilderKeyBinding : MonoBehaviour {
 		_backButton.clicked += OnBack;
 		if (_continueButton != null) {
 			_continueButton.clicked += OnContinue;
+			_backButton.focusable = false;
+			_backButton.visible = false;
 		}
 
 		_leftButton.Q<Button>().clicked += OnLeftChange;

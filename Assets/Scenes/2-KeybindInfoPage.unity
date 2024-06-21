@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 341592719}
   - component: {fileID: 341592718}
   - component: {fileID: 341592720}
+  - component: {fileID: 341592721}
   m_Layer: 5
   m_Name: KeyBinding
   m_TagString: Untagged
@@ -229,6 +230,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _keyBindingUI: {fileID: 341592714}
   _optionsUI: {fileID: 0}
+--- !u!114 &341592721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341592714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d504ca0c2480bc24a9466324aa2ec494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PanelSettings: {fileID: 11400000, guid: dc71905af099c6f419e95a4de31fafd7, type: 2}
 --- !u!1 &641195403
 GameObject:
   m_ObjectHideFlags: 0

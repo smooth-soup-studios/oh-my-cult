@@ -268,6 +268,7 @@ MonoBehaviour:
   BaseSpeed: 5
   WeaponHitbox: {fileID: 3173601029828910364}
   HitContainer: {fileID: 3053537212863230237}
+  HasTorch: 0
   LatestDoor: -1
   HasDoorKey: 0
 --- !u!114 &7464427908449370601
@@ -627,7 +628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1689449188970856360
 Transform:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 
 public class Outro : MonoBehaviour, ISaveable {
 	Button _yesButton;
-	Button _noButton;
+	//Button _noButton;
 	VisualElement _root;
 	[SerializeField] private GameObject _deadUI;
 	[SerializeField] private GameObject _formUI;
@@ -17,17 +17,16 @@ public class Outro : MonoBehaviour, ISaveable {
 		}
 		_yesButton = _root.Q<Button>("YesButton");
 		_yesButton.clicked += OnYesButton;
-		_noButton = _root.Q<Button>("NoButton");
-		_noButton.clicked += OnNoButton;
+		// _noButton = _root.Q<Button>("NoButton");
+		// _noButton.clicked += OnNoButton;
 	}
 
 	void OnYesButton() {
 		SceneManager.LoadSceneAsync(0);
 	}
-	void OnNoButton() {
-		_deadUI.SetActive(false);
-		_formUI.SetActive(true);
-	}
+	// void OnNoButton() {
+	// 	SceneManager.LoadSceneAsync(0);
+	// }
 
 	public void LoadData(GameData data) {
 		if (!data.PlayerData.BossDefeated) {

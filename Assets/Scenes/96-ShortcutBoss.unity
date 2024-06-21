@@ -259,6 +259,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: db465ae006715db4c8c2cbadac3d2288, type: 3}
     - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
+      propertyPath: SingleUse
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
+      propertyPath: RespawnItem
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
       propertyPath: InteractionRange
       value: 1
       objectReference: {fileID: 0}
@@ -268,7 +276,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 828985ec2b3d6dd459ea928a06a988a8, type: 2}
     - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: FoodPickup (5)-3,46249
+      value: FoodPickup (5)-3.46249
       objectReference: {fileID: 0}
     - target: {fileID: 5892297606518876843, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
       propertyPath: m_LocalScale.x
@@ -345,7 +353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1625781803088781141, guid: bcf36efebb1722348b900b3210ec3517, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: WeaponPickup (2)-12,55917
+      value: WeaponPickup (2)-12.55917
       objectReference: {fileID: 0}
     - target: {fileID: 2601442356323300049, guid: bcf36efebb1722348b900b3210ec3517, type: 3}
       propertyPath: m_Name
@@ -562,12 +570,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
+      propertyPath: SingleUse
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
+      propertyPath: RespawnItem
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
       propertyPath: InteractionRange
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: FoodPickup (1)-27,8213
+      value: FoodPickup (1)-27.8213
       objectReference: {fileID: 0}
     - target: {fileID: 5892297606518876843, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
       propertyPath: m_LocalScale.x
@@ -747,6 +763,10 @@ PrefabInstance:
     - target: {fileID: 2122883596594477127, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: TransportTo
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313275134783585123, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
+      propertyPath: <ObjectId>k__BackingField
+      value: DoorInteractionPoint-3.24
       objectReference: {fileID: 0}
     - target: {fileID: 6036849210683475856, guid: 12c58fbfb139cc848b673d7012cf3195, type: 3}
       propertyPath: m_Name
@@ -958,7 +978,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: d43d7c4f032c34af2907ba70a41976c3, type: 2}
     - target: {fileID: 1625781803088781141, guid: bcf36efebb1722348b900b3210ec3517, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: WeaponPickup-18,4607
+      value: WeaponPickup-18.4607
       objectReference: {fileID: 0}
     - target: {fileID: 2601442356323300049, guid: bcf36efebb1722348b900b3210ec3517, type: 3}
       propertyPath: m_Name
@@ -1031,7 +1051,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2607886220727919282, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: Player-27,21776
+      value: Player-27.21776
       objectReference: {fileID: 0}
     - target: {fileID: 5190605175808683211, guid: 151aa2ddc3c94ff24a16441ce291ac44, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1161,6 +1181,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 3c2b078da2d02504aa75a40342871e23, type: 3}
     - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
+      propertyPath: SingleUse
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
+      propertyPath: RespawnItem
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
       propertyPath: InteractionRange
       value: 1
       objectReference: {fileID: 0}
@@ -1170,7 +1198,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: cdd8943ecfef2e64bb64b1848a9776ba, type: 2}
     - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: FoodPickup (4)-6,19378
+      value: FoodPickup (4)-6.19378
       objectReference: {fileID: 0}
     - target: {fileID: 5892297606518876843, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
       propertyPath: m_LocalScale.x
@@ -2329,7 +2357,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 5f8327a3a43d0d24a8e0b98c7b9c0beb, type: 2}
     - target: {fileID: 1625781803088781141, guid: bcf36efebb1722348b900b3210ec3517, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: WeaponPickup (1)-5,393
+      value: WeaponPickup (1)-10.2544
       objectReference: {fileID: 0}
     - target: {fileID: 2601442356323300049, guid: bcf36efebb1722348b900b3210ec3517, type: 3}
       propertyPath: m_Name
@@ -3863,6 +3891,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 0b3874bc217da1445b82dcfd0adfe97b, type: 3}
     - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
+      propertyPath: SingleUse
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
+      propertyPath: RespawnItem
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
       propertyPath: InteractionRange
       value: 1
       objectReference: {fileID: 0}
@@ -3872,7 +3908,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 1955f1c5ea5bd364597f384fd753c312, type: 2}
     - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: FoodPickup (6)-3,093125
+      value: FoodPickup (6)-3.093125
       objectReference: {fileID: 0}
     - target: {fileID: 5892297606518876843, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
       propertyPath: m_LocalScale.x
@@ -3948,6 +3984,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 2ebe7d2cbcf07af4b9fa4c4b72dd6064, type: 3}
     - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
+      propertyPath: SingleUse
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
+      propertyPath: RespawnItem
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
       propertyPath: InteractionRange
       value: 1
       objectReference: {fileID: 0}
@@ -3957,7 +4001,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: ebd5f9d768aa0044393b898dda38fb39, type: 2}
     - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: FoodPickup (2)-12,12721
+      value: FoodPickup (2)-12.12721
       objectReference: {fileID: 0}
     - target: {fileID: 5892297606518876843, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
       propertyPath: m_LocalScale.x
@@ -4033,6 +4077,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: c087fbc27dd89c342acaf4e96c6bd9b3, type: 3}
     - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
+      propertyPath: SingleUse
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
+      propertyPath: RespawnItem
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
       propertyPath: InteractionRange
       value: 1
       objectReference: {fileID: 0}
@@ -4042,7 +4094,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 0bc334bdb091c174793ea205e94ffdf6, type: 2}
     - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: FoodPickup (3)-14,40072
+      value: FoodPickup (3)-14.40072
       objectReference: {fileID: 0}
     - target: {fileID: 5892297606518876843, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
       propertyPath: m_LocalScale.x
@@ -4118,6 +4170,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 5d0a717872335c946bc141cf41ed62c7, type: 3}
     - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
+      propertyPath: SingleUse
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
+      propertyPath: RespawnItem
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
       propertyPath: InteractionRange
       value: 1
       objectReference: {fileID: 0}
@@ -4127,7 +4187,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: fd68926324acb28469c16eeef2fe82a0, type: 2}
     - target: {fileID: 2212882349735924432, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
       propertyPath: <ObjectId>k__BackingField
-      value: FoodPickup-29,5157
+      value: FoodPickup-29.5157
       objectReference: {fileID: 0}
     - target: {fileID: 5892297606518876843, guid: e173ee09d44830748bac38a40b3d7e0d, type: 3}
       propertyPath: m_LocalScale.x

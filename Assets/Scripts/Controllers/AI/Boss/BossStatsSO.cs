@@ -1,12 +1,11 @@
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "OhMyCult/Actor/BossStats")]
-public class BossStatsSO : ScriptableObject {
+public class BossStatsSO : ActorStats {
 	[Header("Idle State")]
 	public float SwitchTime;
 
 	[Header("Charge Attack")]
-	public float ChargeSpeed;
 	public float ChargeTime;
 	public float ChargeRange;
 	public float ChargeAttack;

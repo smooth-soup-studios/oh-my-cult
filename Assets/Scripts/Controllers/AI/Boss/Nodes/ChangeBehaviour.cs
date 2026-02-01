@@ -1,16 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using BehaviorTree;
 using BossBehaviourTree;
 using UnityEngine;
 
-public class ChangeBehaviour : BossNode 
+public class ChangeBehaviour : Node
 {
 
-    public override BossNodeState Evaluate(BossBaseBehaviourTree tree)
+    public override NodeState Evaluate(BaseBehaviourTree tree)
     {
-        
-
-        State = BossNodeState.FAILURE; 
-        return State; 
+        State = NodeState.FAILURE;
+        return State;
     }
 }
